@@ -1,0 +1,110 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "Your Name"
+theme = "PaperMod"
+paginate = 10
+
+[params]
+  author = "Your Name"
+  description = "Writing on Economics, Data Analytics, Computer Science & more."
+  defaultTheme = "dark"
+  disableThemeToggle = false
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = false
+  UseHugoToc = true
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = false
+
+  [params.homeInfoParams]
+    Title = "Hi, I'm [1697, 20747]* 👋"
+    Content = """
+Writing about Economics, Data Analytics, Computer Science, and whatever else catches my attention within my domains of interest (minimal exertise)
+I work with data, and the usual open source systems. These are my notes made public.  I hope the message is clear despite the informal phrasing, the text is not AI generated.
+* tokenizer joke if that is your thing. If its not, you are probably in the wrong place.....
+"""
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/yourusername"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/yourprofile"
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+  [params.assets]
+    favicon = "/images/favicon.ico"
+    disableHLJS = false
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    lineNumbersInTable = true
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[menu]
+  [[menu.main]]
+    identifier = "blog/economics"
+    name = "Economics"
+    url = "/blog/economics/"
+    weight = 10
+  [[menu.main]]
+    identifier = "blog/data-analytics"
+    name = "Data Analytics"
+    url = "/blog/data-analytics/"
+    weight = 20
+  [[menu.main]]
+    identifier = "blog/comp-science"
+    name = "Comp Science"
+    url = "/blog/comp-science/"
+    weight = 30
+  [[menu.main]]
+    identifier = "blog/other"
+    name = "Other"
+    url = "/blog/other/"
+    weight = 40
+  [[menu.main]]
+    identifier = "blog/philosophy"
+    name = "Philosophy"
+    url = "/blog/philosophy/"
+    weight = 50
+  [[menu.main]]
+    identifier = "blog/bjj"
+    name = "BJJ"
+    url = "/blog/bjj/"
+    weight = 60
+  [[menu.main]]
+    identifier = "blog/unhelpful-advice"
+    name = "Unhelpful Advice"
+    url = "/blog/unhelpful-advice/"
+    weight = 70
+  [[menu.main]]
+    identifier = "books"
+    name = "Books"
+    url = "/books/"
+    weight = 80
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 90
