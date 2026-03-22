@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Credit-Risk on [1697, 20747]</title>
+    <link>http://localhost:1313/categories/credit-risk/</link>
+    <description>Recent content in Credit-Risk on [1697, 20747]</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Mar 2026 11:16:02 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/credit-risk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Un consolidating Consolidated Accounting, or a day trip to the Casino</title>
+      <link>http://localhost:1313/blog/credit-risk/un-consolidating-consolidated-accounting/</link>
+      <pubDate>Sun, 22 Mar 2026 11:16:02 +0000</pubDate>
+      <guid>http://localhost:1313/blog/credit-risk/un-consolidating-consolidated-accounting/</guid>
+      <description>A short summary shown in post listings.</description>
+    </item>
+    <item>
+      <title>One Ring to Rule them All....</title>
+      <link>http://localhost:1313/blog/credit-risk/one-ring-to-rule-them-all/</link>
+      <pubDate>Sat, 21 Mar 2026 22:07:39 +0000</pubDate>
+      <guid>http://localhost:1313/blog/credit-risk/one-ring-to-rule-them-all/</guid>
+      <description>Mapping CRR exposures against legal entity heirarchy from legacy systems. A dynamic overlay approach to maintain full data integrity</description>
+    </item>
+    <item>
+      <title>Enron: A Look Back</title>
+      <link>http://localhost:1313/blog/credit-risk/enron-a-look-back/</link>
+      <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/credit-risk/enron-a-look-back/</guid>
+      <description>Enron did not collapse because of a few bad actors. It collapsed because an entire ecosystem of supposedly intelligent, well-paid professionals chose not to see what was in front of them.</description>
+    </item>
+  </channel>
+</rss>

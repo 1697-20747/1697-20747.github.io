@@ -1,8 +1,9 @@
 baseURL = "http://localhost:1313/"
 languageCode = "en-us"
-title = "Your Name"
+title = "[1697, 20747]"
 theme = "PaperMod"
 paginate = 10
+
 
 [params]
   author = "Your Name"
@@ -27,8 +28,13 @@ paginate = 10
   [params.homeInfoParams]
     Title = "Hi, I'm [1697, 20747]* 👋"
     Content = """
-Writing about Economics, Data Analytics, Computer Science, and whatever else catches my attention within my domains of interest (minimal exertise)
-I work with data, and the usual open source systems. These are my notes made public.  I hope the message is clear despite the informal phrasing, the text is not AI generated.
+This is my personal webpage where I write about Economics, Data Analytics, Computer Science, and whatever else catches my attention within my domains of interest (minimal exertise).
+I work with data across finance and comp science, and the usual open source systems. These are my notes made public.
+Whilst the day job is finance, all my comp science is for the most part in my own time. i like my freedom.  
+I hope the message is clear despite the informal phrasing, the text is not AI generated.
+I am a pretty average programmer, my chosed domain of frustration is low level programming on small devices. For which i need to know quite a bit of machine learning.
+You won't find me on social media, ever, this is it really unless you are on one of my very few whatsapp groups.
+
 * tokenizer joke if that is your thing. If its not, you are probably in the wrong place.....
 """
 
@@ -37,11 +43,15 @@ I work with data, and the usual open source systems. These are my notes made pub
     url = "https://github.com/yourusername"
   [[params.socialIcons]]
     name = "linkedin"
-    url = "https://linkedin.com/in/yourprofile"
+    url = "https://linkedin.com/in/bruce-schultz-19020039"
   [[params.socialIcons]]
     name = "rss"
     url = "/index.xml"
-
+  [params.profileMode]
+    enabled = true
+    imageUrl = "/images/avatar.png"
+    imageWidth = 120
+    imageHeight = 120
   [params.assets]
     favicon = "/images/favicon.ico"
     disableHLJS = false
@@ -55,8 +65,9 @@ I work with data, and the usual open source systems. These are my notes made pub
     guessSyntax = true
     lineNumbersInTable = true
     noClasses = false
-  [markup.goldmark.renderer]
-    unsafe = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [taxonomies]
   category = "categories"
@@ -79,32 +90,37 @@ I work with data, and the usual open source systems. These are my notes made pub
     url = "/blog/comp-science/"
     weight = 30
   [[menu.main]]
+    identifier = "blog/credit-risk"
+    name = "Credit Risk"
+    url = "/blog/credit-risk/"
+    weight = 40
+  [[menu.main]]
     identifier = "blog/other"
     name = "Other"
     url = "/blog/other/"
-    weight = 40
+    weight = 50
   [[menu.main]]
     identifier = "blog/philosophy"
     name = "Philosophy"
     url = "/blog/philosophy/"
-    weight = 50
+    weight = 60
   [[menu.main]]
     identifier = "blog/bjj"
     name = "BJJ"
     url = "/blog/bjj/"
-    weight = 60
+    weight = 70
   [[menu.main]]
     identifier = "blog/unhelpful-advice"
     name = "Unhelpful Advice"
     url = "/blog/unhelpful-advice/"
-    weight = 70
+    weight = 80
   [[menu.main]]
     identifier = "books"
     name = "Books"
     url = "/books/"
-    weight = 80
+    weight = 90
   [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 90
+    weight = 100

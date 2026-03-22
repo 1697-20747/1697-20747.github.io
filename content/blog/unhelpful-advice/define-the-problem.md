@@ -1,82 +1,12 @@
 ---
-title: "Definine the Problem Idiot"
-date: 2026-03-08T13:03:17Z
+title: "Define The Problem"
+date: 2026-03-22T00:00:00Z
 draft: false
-weight: 100
-categories: ["economics"]          # change to: data-analytics | comp-science | other
+categories: ["unhelpful-advice"]
 tags: []
-description: "A short summary shown in post listings."
-showToc: true
+description: ""
+showToc: false
 tocopen: false
-cover:
-  image: ""                        # optional: /images/your-cover.png
-  alt: ""
-  caption: ""
 ---
 
-## Overview
-
-Write your introduction here. Keep it punchy — one or two paragraphs max.
-
----
-
-## Section One
-
-Your content here. You can use **bold**, *italic*, and `inline code`.
-
-### Subsection
-
-More content.
-
----
-
-## Code Example
-
-```python
-# Python example — gets syntax highlighting + copy button automatically
-import pandas as pd
-import matplotlib.pyplot as plt
-
-df = pd.read_csv("data.csv")
-print(df.describe())
-```
-
-## CLI Command
-
-```bash
-python3 analysis.py --input data.csv --output results/
-```
-
-## Screenshot
-
-![Description of screenshot](/images/your-screenshot.png)
-
-## Python-Generated Graph
-
-> **Workflow:** Run your Python script, save to `static/images/`, reference below.
-
-```python
-import matplotlib.pyplot as plt
-import numpy as np
-
-x = np.linspace(0, 10, 100)
-plt.plot(x, np.sin(x))
-plt.title("Example")
-plt.savefig("static/images/my-graph.png", dpi=150, bbox_inches="tight")
-```
-
-![My graph](/images/my-graph.png)
-
----
-
-## Key Takeaways
-
-- Point one
-- Point two
-- Point three
-
----
-
-## References
-
-- [Source title](https://url.com)
+> To solve your perception of a stated problem you must define the actual problem statement. You should expect this task to be difficult.

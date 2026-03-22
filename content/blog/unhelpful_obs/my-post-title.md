@@ -1,9 +1,8 @@
 ---
-title: "Definitions Matter"
-date: 2026-03-08T13:02:20Z
+title: "My Post Title"
+date: 2026-02-23T20:44:26Z
 draft: true
-weight: 100
-categories: ["economics"]          # change to: data-analytics | comp-science | other
+categories: ["unhelpful-advice"]          # change to: data-analytics | comp-science | other
 tags: []
 description: "A short summary shown in post listings."
 showToc: true

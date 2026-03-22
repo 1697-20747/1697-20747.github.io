@@ -1,0 +1,86 @@
+/* ============================================================
+   Custom Typography Overrides — PaperMod Theme
+   File location: assets/css/extended/custom-fonts.css
+   ============================================================ */
+
+/* --- Import Ubuntu font family from Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* --- Apply Ubuntu as the global font --- */
+:root {
+    --font-family: 'Ubuntu', sans-serif;
+}
+
+body,
+.post-content,
+.post-description,
+.entry-content,
+p, li, td, th,
+.toc, .toc a,
+.post-meta,
+.breadcrumbs,
+.menu,
+nav,
+footer,
+.terms,
+.label,
+.archive-month-header,
+button, input, textarea, select {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* --- Body / paragraph text: soft grey --- */
+body {
+    color: #c9c9c9;
+}
+
+.post-content p,
+.post-content li,
+.post-content td,
+.post-content blockquote,
+.post-description,
+.entry-content,
+.toc a,
+.post-meta,
+.breadcrumbs a,
+.terms a,
+p {
+    color: #c9c9c9;
+}
+
+/* --- Headers: pure white --- */
+h1, h2, h3, h4, h5, h6,
+.post-title,
+.entry-header h1,
+.entry-header h2,
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6,
+.home-info h1,
+.profile h1 {
+    font-family: 'Ubuntu', sans-serif;
+    color: #ffffff;
+}
+
+/* --- Site title / logo text --- */
+.logo a,
+#site-header .logo,
+.header .logo {
+    font-family: 'Ubuntu', sans-serif;
+    color: #ffffff;
+}
+
+/* --- Nav menu links --- */
+#menu a,
+.menu a,
+nav ul li a {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* --- Code blocks: keep monospace but ensure surrounding text is Ubuntu --- */
+code, pre, kbd, samp {
+    font-family: 'Ubuntu Mono', 'Courier New', monospace;
+}
