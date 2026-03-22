@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Philosophy on [1697, 20747]</title>
+    <link>http://localhost:1313/tags/philosophy/</link>
+    <description>Recent content in Philosophy on [1697, 20747]</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/philosophy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Determined</title>
+      <link>http://localhost:1313/books/determined-sapolsky/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/determined-sapolsky/</guid>
+      <description>Sapolsky&amp;#39;s follow-up makes the full case against free will. Provocative, rigorous, and uncomfortable. Read Behave first.</description>
+    </item>
+    <item>
+      <title>Determined</title>
+      <link>http://localhost:1313/books/files/determined-sapolsky/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/files/determined-sapolsky/</guid>
+      <description>Sapolsky&amp;#39;s follow-up makes the full case against free will. Provocative, rigorous, and uncomfortable. Read Behave first.</description>
+    </item>
+    <item>
+      <title>Life Is Simple</title>
+      <link>http://localhost:1313/books/files/life-is-simple-mcfadden/</link>
+      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/files/life-is-simple-mcfadden/</guid>
+      <description>The story of Occam&amp;#39;s Razor and how the principle of simplicity drove scientific revolutions from Copernicus to Einstein to quantum mechanics.</description>
+    </item>
+    <item>
+      <title>Life Is Simple</title>
+      <link>http://localhost:1313/books/life-is-simple-mcfadden/</link>
+      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/life-is-simple-mcfadden/</guid>
+      <description>The story of Occam&amp;#39;s Razor and how the principle of simplicity drove scientific revolutions from Copernicus to Einstein to quantum mechanics.</description>
+    </item>
+    <item>
+      <title>The Divine Comedy</title>
+      <link>http://localhost:1313/books/divine-comedy/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/divine-comedy/</guid>
+      <description>Still the most ambitious thing anyone has ever written. Read it with a good commentary — Dorothy Sayers&amp;#39; translation and notes are an excellent entry point.</description>
+    </item>
+    <item>
+      <title>The Divine Comedy</title>
+      <link>http://localhost:1313/books/files/divine-comedy/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/files/divine-comedy/</guid>
+      <description>Still the most ambitious thing anyone has ever written. Read it with a good commentary — Dorothy Sayers&amp;#39; translation and notes are an excellent entry point.</description>
+    </item>
+  </channel>
+</rss>

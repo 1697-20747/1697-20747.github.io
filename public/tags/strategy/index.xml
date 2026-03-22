@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Strategy on [1697, 20747]</title>
+    <link>http://localhost:1313/tags/strategy/</link>
+    <description>Recent content in Strategy on [1697, 20747]</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/strategy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Mind of the Strategist</title>
+      <link>http://localhost:1313/books/files/mind-of-the-strategist-ohmae/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/files/mind-of-the-strategist-ohmae/</guid>
+      <description>How Japanese strategic thinking differs from Western frameworks. Ohmae argues strategy is more art than analysis.</description>
+    </item>
+    <item>
+      <title>The Mind of the Strategist</title>
+      <link>http://localhost:1313/books/mind-of-the-strategist-ohmae/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/mind-of-the-strategist-ohmae/</guid>
+      <description>How Japanese strategic thinking differs from Western frameworks. Ohmae argues strategy is more art than analysis.</description>
+    </item>
+    <item>
+      <title>On Competition</title>
+      <link>http://localhost:1313/books/files/on-competition-porter/</link>
+      <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/files/on-competition-porter/</guid>
+      <description>Porter&amp;#39;s collected essays on competitive strategy, clusters, and national competitiveness.</description>
+    </item>
+    <item>
+      <title>On Competition</title>
+      <link>http://localhost:1313/books/on-competition-porter/</link>
+      <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/on-competition-porter/</guid>
+      <description>Porter&amp;#39;s collected essays on competitive strategy, clusters, and national competitiveness.</description>
+    </item>
+    <item>
+      <title>A Concise History of Warfare</title>
+      <link>http://localhost:1313/books/concise-history-of-warfare/</link>
+      <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/concise-history-of-warfare/</guid>
+      <description>Montgomery&amp;#39;s own account of warfare from ancient times to the mid-twentieth century, written with the authority of a man who commanded armies across North Africa and Northwest Europe.</description>
+    </item>
+    <item>
+      <title>A Concise History of Warfare</title>
+      <link>http://localhost:1313/books/files/concise-history-of-warfare/</link>
+      <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/files/concise-history-of-warfare/</guid>
+      <description>Montgomery&amp;#39;s own account of warfare from ancient times to the mid-twentieth century, written with the authority of a man who commanded armies across North Africa and Northwest Europe.</description>
+    </item>
+  </channel>
+</rss>

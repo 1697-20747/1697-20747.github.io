@@ -1,26 +1,191 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Your Name</title>
+    <title>[1697, 20747]</title>
     <link>http://localhost:1313/blog/unhelpful-advice/</link>
-    <description>Recent content on Your Name</description>
+    <description>Recent content on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Mar 2026 13:03:17 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/unhelpful-advice/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Definine the Problem Idiot</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/define-the-problem/</link>
-      <pubDate>Sun, 08 Mar 2026 13:03:17 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/define-the-problem/</guid>
-      <description>A short summary shown in post listings.</description>
+      <title>Bowie On Work</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/bowie-on-work/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/bowie-on-work/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Games are a series of interesting choices. Never play to the gallery, but you never learn that until much later on. Never work for other people. Always remember that the reason you initially started working was that there was something inside yourself that you felt that if you could manifest it in some way, you would understand more about yourself and how you coexist with the rest of society. It is terribly dangerous for an artist to fulfil other people&amp;rsquo;s expectations. They generally produce their worst work when they do that. — David Bowie&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Definitions Matter</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/definitions-matter/</link>
-      <pubDate>Sun, 08 Mar 2026 13:02:20 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/definitions-matter/</guid>
-      <description>A short summary shown in post listings.</description>
+      <title>Constrained Distribution</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/constrained-distribution/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/constrained-distribution/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;You need a constrained distribution before you can manage risk. You can manage risk if you work at a casino. The rest of us are simply risk takers, trying to game fragility.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Curiosity Credit</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/curiosity-credit/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/curiosity-credit/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Curiosity may have killed the cat, but it has saved the skin of many a credit analyst.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Define The Problem</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/define-the-problem/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/define-the-problem/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;To solve your perception of a stated problem you must define the actual problem statement. You should expect this task to be difficult.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Duration Folly</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/duration-folly/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/duration-folly/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;I am increasingly uncomfortable with what I am paying on long term yields for my debt. &amp;lsquo;I know, I&amp;rsquo;ll shorten the duration to save money, then spend the difference! Problem solved.&amp;rsquo; Said nobody whose brain was bigger than a peanut. Given how often this game has been played.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Duty</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/duty/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/duty/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Duty. A cloak that covers many sins and secret inclinations.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Geniuses In Command</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/geniuses-in-command/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/geniuses-in-command/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;We are all just doing what the geniuses in command tell us. — Harry Bosch.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Goats And Sticks</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/goats-and-sticks/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/goats-and-sticks/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;You heard goats with a stick, you do not lead men with one.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Hindsight</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/hindsight/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/hindsight/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Hindsight. Fuel for hubris, or humility. You choose. Thereafter the consequences will choose for you.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Josephus On Drills</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/josephus-on-drills/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/josephus-on-drills/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Their drills are bloodless battles, and their battles bloody drills.&amp;rdquo; — Josephus, The Jewish War, 3.5.1. Their military exercises differ not at all from the real use of their arms, but every soldier is every day exercised, and that with great diligence, as if it were in time of war, which is the reason why they bear the fatigue of battles so easily.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Kafka On Soul</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/kafka-on-soul/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/kafka-on-soul/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Don&amp;rsquo;t bend; don&amp;rsquo;t water it down; don&amp;rsquo;t try to make it logical; don&amp;rsquo;t edit your own soul according to the fashion. Rather, follow your most intense obsessions mercilessly.&amp;rdquo; — Franz Kafka&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>La Geografia Manda</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/la-geografia-manda/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/la-geografia-manda/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;lsquo;La geografia manda.&amp;rsquo; Spanish proverb: geography rules everything. Best considered with some care before kicking off conflicts on the two way rifle range.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Morale And Material</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/morale-and-material/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/morale-and-material/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Morale is to material as ten is to one. Morals are to corporations as one is to ten. A person has the capacity for moral choice. A corporation does not, it is a conscienceless entity by its nature.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Rifle Vs War</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/rifle-vs-war/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/rifle-vs-war/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;A private suffers harsher punishment for losing his rifle than does a general for losing a war.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Sack Of Shite</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/sack-of-shite/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/sack-of-shite/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;One day it is likely your life will turn into a sack of shite. When this happens, reflect back on how you treated others. Hopefully with a clear conscience.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>The Meek</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/the-meek/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/the-meek/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;The meek will not inherit the earth, or anything else. Ever. You will get screwed over. The strong and humble can walk the earth with peace in their heart.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Things Must Change</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/things-must-change/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/things-must-change/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;If you want things to stay the same, things must change.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>War Is Sweet</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/war-is-sweet/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/war-is-sweet/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;War is sweet to the untried. An experienced warrior fears it with all his heart.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>What You Would Not</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/what-you-would-not/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/what-you-would-not/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Never send someone else to do what you would not. Note not what you could not do, but what you would not do. We all have mixed skills and experiences. Your credibility rests on the point of courage. No one respects a REMF.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Wrong General</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/wrong-general/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/wrong-general/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;No point being right in an argument with a wrong general.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,183 @@
+<div class="legal-widget-wrap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+.legal-widget-wrap{
+  --bg:#0d1117;--bg2:#161b22;--bg3:#21262d;
+  --text:#e6edf3;--text2:#8b949e;--text3:#484f58;
+  --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.15);
+  --radius:8px;--radius-lg:12px;
+  --font:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --mono:'SF Mono','Fira Mono','Consolas',monospace;
+}
+.legal-widget-wrap{font-family:var(--font);font-size:14px;line-height:1.5}
+.widget{max-width:1060px;margin:0 auto;border:0.5px solid var(--border2);border-radius:var(--radius-lg);overflow:hidden}
+.widget-header{padding:16px 20px 0;background:var(--bg);border-bottom:0.5px solid var(--border)}
+.widget-title{font-size:15px;font-weight:500;margin-bottom:12px}
+.widget-title span{font-size:12px;font-weight:400;color:var(--text3);margin-left:8px}
+.tabs{display:flex}
+.tab{padding:8px 16px;font-size:13px;font-family:var(--font);cursor:pointer;border:none;background:none;color:var(--text3);border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.tab:hover{color:var(--text2)}.tab.active{color:var(--text);border-bottom-color:var(--text);font-weight:500}
+.panel{display:none;padding:16px 20px;background:var(--bg)}.panel.active{display:block}
+table{width:100%;border-collapse:collapse;font-size:12px}
+thead th{text-align:left;padding:7px 10px;font-size:11px;font-weight:500;color:var(--text3);border-bottom:0.5px solid var(--border2);background:var(--bg2);position:sticky;top:0;z-index:1;white-space:nowrap}
+tbody td{padding:6px 10px;border-bottom:0.5px solid var(--border);white-space:nowrap}
+tbody tr:last-child td{border-bottom:none}tbody tr:hover td{background:var(--bg2)}
+.table-wrap{overflow-x:auto;max-height:520px;overflow-y:auto;border:0.5px solid var(--border);border-radius:var(--radius)}
+.filter-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;align-items:center}
+.filter-row select,.filter-row input{font-size:12px;font-family:var(--font);padding:5px 9px;border:0.5px solid var(--border2);border-radius:6px;background:var(--bg);color:var(--text);outline:none}
+.filter-row select:focus,.filter-row input:focus{border-color:#534AB7}
+.rcount{font-size:11px;color:var(--text3);margin-left:4px}
+.badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:500}
+.b-l0{background:#EEEDFE;color:#3C3489}.b-l1{background:#E1F5EE;color:#085041}
+.b-l2{background:#E6F1FB;color:#0C447C}.b-l3{background:#EAF3DE;color:#27500A}
+.b-l4{background:#FAEEDA;color:#633806}.b-l5{background:#FAECE7;color:#712B13}.b-l6{background:#FBEAF0;color:#72243E}
+.b-UK{background:#F1EFE8;color:#444441}.b-FR{background:#E6F1FB;color:#0C447C}
+.b-US{background:#E1F5EE;color:#085041}.b-SG{background:#FAEEDA;color:#633806}
+.b-JP{background:#FBEAF0;color:#72243E}.b-DE{background:#FCEBEB;color:#791F1F}
+.b-AU{background:#EAF3DE;color:#27500A}.b-CA{background:#E1F5EE;color:#0C447C}
+.b-BR{background:#FAECE7;color:#712B13}.b-HK{background:#FAEEDA;color:#854F0B}
+.b-RFB{background:#EEEDFE;color:#3C3489}.b-NRFB{background:#F1EFE8;color:#444441}
+.b-CORE{background:#E1F5EE;color:#085041}.b-NONCORE{background:#FAECE7;color:#712B13}
+.b-Hard{background:#E6F1FB;color:#0C447C}.b-Soft{background:#FAEEDA;color:#633806}
+.b-Traded{background:#EEEDFE;color:#3C3489}.b-Lending{background:#EAF3DE;color:#27500A}.b-Settlement{background:#FAECE7;color:#712B13}
+.b-RFBX{background:#EEEDFE;color:#3C3489}.b-NRFBX{background:#F1EFE8;color:#444441}
+.b-RFBI{background:#E6F1FB;color:#0C447C}.b-NRFBC{background:#F1EFE8;color:#5a5a56}
+.b-CORE2{background:#E1F5EE;color:#085041}.b-NONCORE2{background:#FAECE7;color:#712B13}.b-NRFB2{background:#F1EFE8;color:#444441}
+.neg{color:#993C1D;font-weight:500}.pos{color:#085041}
+.util-bar-wrap{width:72px;background:var(--bg3);border-radius:3px;height:6px;display:inline-block;vertical-align:middle;margin-right:5px}
+.util-bar{height:6px;border-radius:3px}
+#mapsvg{width:100%;display:block}
+.map-legend{display:flex;flex-wrap:wrap;gap:10px;font-size:11px;color:var(--text3);margin-top:10px}
+.leg-dot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:4px;vertical-align:middle}
+#tree-wrap{overflow-x:auto;overflow-y:auto;max-height:600px}
+#treesvg{display:block}
+.info-bar{font-size:11px;color:var(--text3);margin-bottom:8px}
+.stat-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:16px}
+.stat-card{background:var(--bg2);border-radius:var(--radius);padding:10px 14px}
+.stat-label{font-size:11px;color:var(--text3);margin-bottom:4px}
+.stat-val{font-size:16px;font-weight:500;color:var(--text)}
+.schema-box{border:0.5px solid var(--border);border-radius:var(--radius);padding:8px 12px;background:var(--bg2);margin-bottom:14px;font-size:11px;color:var(--text2)}
+.schema-box summary{font-size:12px;font-weight:500;cursor:pointer;color:var(--text2);margin-bottom:0}
+.schema-box[open] summary{margin-bottom:8px}
+.join-row{display:flex;gap:8px;align-items:center;margin-top:4px;font-family:var(--mono);font-size:11px}
+.join-key{background:#EEEDFE;color:#3C3489;padding:1px 6px;border-radius:3px}
+.join-arrow{color:var(--text3)}
+.widget-footer{padding:10px 20px;background:var(--bg2);border-top:0.5px solid var(--border);font-size:11px;color:var(--text3)}
+</style>
+</head>
+<body>
+<div class="widget">
+<div class="widget-header">
+  <div class="widget-title">Group Co — Legal Entity Structure
+    <span>df_legal_entity (62) · df_limit_type (7) · df_limits_exposures (300)</span>
+  </div>
+  <div class="tabs">
+    <button class="tab active" onclick="show('entity')">Legal entities</button>
+    <button class="tab" onclick="show('limtype')">Limit types</button>
+    <button class="tab" onclick="show('lim')">Limits &amp; exposures</button>
+    <button class="tab" onclick="show('map')">Geographic map</button>
+    <button class="tab" onclick="show('tree')">Entity structure</button>
+  </div>
+</div>
+
+<!-- ── Legal entity panel ── -->
+<div class="panel active" id="pf-entity">
+  <details class="schema-box">
+    <summary>df_legal_entity — schema &amp; joins</summary>
+    <div style="margin-top:6px;line-height:1.9">
+      <strong>PK:</strong> <span class="join-key">entity_id</span> &nbsp;·&nbsp;
+      <strong>Self-join:</strong> <span class="join-key">parent_id</span> <span class="join-arrow">→</span> <span class="join-key">entity_id</span>
+      &nbsp;·&nbsp; <strong>Referenced by:</strong> df_limits_exposures.<span class="join-key">creditor_entity_id</span> / <span class="join-key">debtor_entity_id</span>
+    </div>
+  </details>
+  <div class="filter-row">
+    <select id="f-level" onchange="renderEntities()"><option value="">All levels</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+    <select id="f-dom" onchange="renderEntities()"><option value="">All domiciles</option><option>UK</option><option>FR</option><option>US</option><option>SG</option><option>JP</option><option>DE</option><option>AU</option><option>CA</option><option>BR</option><option>HK</option></select>
+    <select id="f-rfi" onchange="renderEntities()"><option value="">All RFI</option><option>RFB</option><option>NRFB</option></select>
+    <select id="f-rf" onchange="renderEntities()"><option value="">All ring fence</option><option>CORE</option><option>NON CORE</option><option>NRFB</option></select>
+    <select id="f-l1e" onchange="renderEntities()"><option value="">All L1 groups</option><option>Bank Co</option><option>Property Co</option><option>Wealth Co</option><option>Market Co</option></select>
+    <input id="f-esearch" placeholder="Search name / ID…" oninput="renderEntities()" style="width:150px">
+    <span class="rcount" id="ecount"></span>
+  </div>
+  <div class="table-wrap">
+    <table><thead><tr><th>entity_id</th><th>name</th><th>level</th><th>parent_id</th><th>l1_group</th><th>country</th><th>city</th><th>rfi_status</th><th>ring_fence_status</th><th>crr_aggregation</th><th>address</th></tr></thead>
+    <tbody id="etbody"></tbody></table>
+  </div>
+</div>
+
+<!-- ── Limit type panel ── -->
+<div class="panel" id="pf-limtype">
+  <details class="schema-box">
+    <summary>df_limit_type — schema &amp; joins</summary>
+    <div style="margin-top:6px;line-height:1.9">
+      <strong>PK:</strong> <span class="join-key">product</span> &nbsp;·&nbsp;
+      <strong>Referenced by:</strong> df_limits_exposures.<span class="join-key">product</span>
+    </div>
+  </details>
+  <div class="table-wrap" style="max-height:320px">
+    <table><thead><tr><th>product</th><th>limit_type</th><th>limit_sub_type</th></tr></thead>
+    <tbody id="lttbody"></tbody></table>
+  </div>
+</div>
+
+<!-- ── Limits & exposures panel ── -->
+<div class="panel" id="pf-lim">
+  <details class="schema-box">
+    <summary>df_limits_exposures — schema &amp; joins</summary>
+    <div style="margin-top:6px;line-height:1.9">
+      <strong>PK:</strong> <span class="join-key">record_id</span>
+      &nbsp;·&nbsp;
+      <span class="join-key">product</span> <span class="join-arrow">→</span> df_limit_type.<span class="join-key">product</span>
+      &nbsp;·&nbsp;
+      <span class="join-key">creditor_entity_id</span> <span class="join-arrow">→</span> df_legal_entity.<span class="join-key">entity_id</span>
+      &nbsp;·&nbsp;
+      <span class="join-key">debtor_entity_id</span> <span class="join-arrow">→</span> df_legal_entity.<span class="join-key">entity_id</span>
+    </div>
+  </details>
+  <div class="stat-cards" id="stat-cards"></div>
+  <div class="filter-row">
+    <select id="lf-lt" onchange="renderLimits()"><option value="">All types</option><option>Hard</option><option>Soft</option></select>
+    <select id="lf-lst" onchange="renderLimits()"><option value="">All sub-types</option><option>Traded</option><option>Lending</option><option>Settlement</option></select>
+    <select id="lf-prod" onchange="renderLimits()"><option value="">All products</option><option>FX Forward</option><option>Committed Repo</option><option>Committed Loan</option><option>Overdraft</option><option>Bond Borrow</option><option>Xccy Swap</option><option>Payment Intraday</option></select>
+    <select id="lf-crr" onchange="renderLimits()"><option value="">All CRR treatments</option></select>
+    <select id="lf-crl" onchange="renderLimits()"><option value="">Creditor level</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+    <select id="lf-del" onchange="renderLimits()"><option value="">Debtor level</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+    <select id="lf-sign" onchange="renderLimits()"><option value="">All exposures</option><option value="pos">Positive only</option><option value="neg">Negative only</option></select>
+    <input id="lf-search" placeholder="Search entity / product / CRR…" oninput="renderLimits()" style="width:200px">
+    <span class="rcount" id="lcount"></span>
+  </div>
+  <div class="table-wrap">
+    <table><thead><tr>
+      <th>record_id</th><th>product</th><th>limit_type</th><th>limit_sub_type</th>
+      <th>creditor_entity_id</th><th>creditor name</th><th>cr. level</th>
+      <th>debtor_entity_id</th><th>debtor name</th><th>dr. level</th>
+      <th style="text-align:right">limit_gbp</th>
+      <th style="text-align:right">exposure_gbp</th>
+      <th>utilisation</th>
+      <th>crr_reg_treatment</th>
+    </tr></thead>
+    <tbody id="ltbody"></tbody></table>
+  </div>
+</div>
+
+<!-- ── Map panel ── -->
+<div class="panel" id="pf-map">
+  <div class="info-bar">Bubble size reflects entity count per city. Click a bubble to filter the entity table.</div>
+  <svg id="mapsvg" viewBox="0 0 680 400"></svg>
+  <div class="map-legend" id="map-legend"></div>
+</div>
+
+<!-- ── Tree panel ── -->
+<div class="panel" id="pf-tree">
+  <div class="info-bar">Full legal hierarchy. Colour encodes level. Click any node to search the entity table.</div>
+  <div id="tree-wrap"><svg id="treesvg"></svg></div>
+</div>
+
+<div class="widget-footer">
+  Data model: <strong>df_legal_entity</strong> (PK: entity_id) · <strong>df_limit_type</strong> (PK: product) · <strong>df_limits_exposures</strong> (PK: record_id; FK: product, creditor_entity_id, debtor_entity_id).
+  Ring-fencing: UK Banking Reform Act 2013 / PRA rules. CRR reg treatment applied per limit line. Source taxonomy: limit_types.csv.
+</div>
+</div>
+<script src="/js/legal-entity-widget.js"></script>
+
+</div>
