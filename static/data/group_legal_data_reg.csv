@@ -1,0 +1,63 @@
+entity_id,name,level,parent_id,l1_group,country,city,address,crr_aggregation,rfi_status,ring_fence_status
+E000,Group Co,0,,,UK,London,"5 Aldermanbury Sq, London EC2V 7HR",,NRFB,NRFB
+E001,Bank Co,1,E000,Bank Co,UK,London,"8 Cornhill, London EC3V 3ND",,RFB,CORE
+E002,Property Co,1,E000,Property Co,UK,London,"1 Poultry, London EC2R 8EJ",,NRFB,NRFB
+E003,Wealth Co,1,E000,Wealth Co,UK,London,"6 Lothbury, London EC2R 7HH",,NRFB,NRFB
+E004,Market Co,1,E000,Market Co,UK,London,"25 Old Broad St, London EC2N 1HQ",,NRFB,NRFB
+E005,Retail Co,2,E001,Bank Co,UK,London,"30 St Mary Axe, London EC3A 8EP",,RFB,CORE
+E006,Corp Co,2,E001,Bank Co,AU,Sydney,"1 Martin Pl, Sydney NSW 2000",,RFB,NON CORE
+E007,Fin Co,2,E001,Bank Co,UK,London,"1 Poultry, London EC2R 8EJ",,RFB,CORE
+E008,Lend Co,3,E005,Bank Co,UK,London,"1 London Wall, London EC2Y 5AB",,NRFB,NRFB
+E009,Deposit Co,3,E007,Bank Co,UK,London,"1 Leadenhall St, London EC3V 1PP",,NRFB,NRFB
+E010,FX Co,3,E005,Bank Co,UK,London,"6 Lothbury, London EC2R 7HH",,NRFB,NRFB
+E011,Trade Co,3,E007,Bank Co,UK,London,"20 Fenchurch St, London EC3M 3BY",,NRFB,NRFB
+E012,Credit Co,3,E007,Bank Co,UK,London,"1 Poultry, London EC2R 8EJ",,NRFB,NRFB
+E013,Issuer Co,3,E005,Bank Co,UK,London,"10 Gresham St, London EC2V 7JD",,NRFB,NRFB
+E014,Card Co,4,E010,Bank Co,UK,London,"10 Gresham St, London EC2V 7JD",,NRFB,NRFB
+E015,Repo Co,4,E008,Bank Co,UK,London,"8 Cornhill, London EC3V 3ND",,NRFB,NRFB
+E016,Settle Co,4,E010,Bank Co,DE,Berlin,"Unter den Linden 13, Berlin 10117",,NRFB,NRFB
+E017,Clear Co,4,E013,Bank Co,UK,London,"8 Cornhill, London EC3V 3ND",,NRFB,NRFB
+E018,Custody Co,4,E011,Bank Co,UK,London,"25 Old Broad St, London EC2N 1HQ",,NRFB,NRFB
+E019,Vox Co,5,E018,Bank Co,SG,Singapore,"8 Marina Blvd, Singapore 018981",,NRFB,NRFB
+E020,Virtus Co,5,E014,Bank Co,UK,London,"1 London Wall, London EC2Y 5AB",,NRFB,NRFB
+E021,Verus Co,5,E016,Bank Co,BR,Sao Paulo,"Av Paulista 1374, Sao Paulo SP 01310-100",,NRFB,NRFB
+E022,Victor Co,6,E020,Bank Co,UK,London,"5 Aldermanbury Sq, London EC2V 7HR",,NRFB,NRFB
+E023,Resi Co,2,E002,Property Co,US,New York,"11 Times Sq, New York NY 10036",,NRFB,NRFB
+E024,Comm Co,2,E002,Property Co,UK,London,"25 Old Broad St, London EC2N 1HQ",,NRFB,NRFB
+E025,Dev Co,3,E023,Property Co,UK,London,"30 St Mary Axe, London EC3A 8EP",,NRFB,NRFB
+E026,Lease Co,3,E023,Property Co,UK,London,"1 Angel Ct, London EC2R 7HJ",,NRFB,NRFB
+E027,Asset Co,3,E024,Property Co,AU,Sydney,"60 Margaret St, Sydney NSW 2000",,NRFB,NRFB
+E028,Land Co,3,E024,Property Co,CA,Toronto,"200 Bay St, Toronto ON M5J 2J2",,NRFB,NRFB
+E029,Build Co,3,E023,Property Co,JP,Tokyo,"1-1 Marunouchi 2-chome, Tokyo Chiyoda 100-0005",,NRFB,NRFB
+E030,Infra Co,4,E026,Property Co,DE,Berlin,"Potsdamer Pl 1, Berlin 10785",,NRFB,NRFB
+E031,Mgmt Co,4,E026,Property Co,UK,London,"1 Angel Ct, London EC2R 7HJ",,NRFB,NRFB
+E032,Hold Co,4,E028,Property Co,UK,London,"30 St Mary Axe, London EC3A 8EP",,NRFB,NRFB
+E033,REIT Co,4,E026,Property Co,DE,Berlin,"Kurfürstendamm 22, Berlin 10719",,NRFB,NRFB
+E034,Vita Co,5,E033,Property Co,UK,London,"30 St Mary Axe, London EC3A 8EP",,NRFB,NRFB
+E035,Valor Co,5,E033,Property Co,UK,London,"1 Poultry, London EC2R 8EJ",,NRFB,NRFB
+E036,Via Co,6,E034,Property Co,UK,London,"30 St Mary Axe, London EC3A 8EP",,NRFB,NRFB
+E037,Priv Co,2,E003,Wealth Co,JP,Tokyo,"1-1 Marunouchi 2-chome, Tokyo Chiyoda 100-0005",,NRFB,NRFB
+E038,Trust Co,2,E003,Wealth Co,UK,London,"100 Cheapside, London EC2V 6DT",,NRFB,NRFB
+E039,Fund Co,3,E038,Wealth Co,UK,London,"1 Leadenhall St, London EC3V 1PP",,NRFB,NRFB
+E040,Fisc Co,3,E037,Wealth Co,UK,London,"8 Cornhill, London EC3V 3ND",,NRFB,NRFB
+E041,Plan Co,3,E038,Wealth Co,SG,Singapore,"30 Raffles Pl, Singapore 048622",,NRFB,NRFB
+E042,Heir Co,3,E038,Wealth Co,UK,London,"1 Poultry, London EC2R 8EJ",,NRFB,NRFB
+E043,Endow Co,3,E038,Wealth Co,CA,Toronto,"100 King St W, Toronto ON M5X 1A9",,NRFB,NRFB
+E044,Invest Co,4,E041,Wealth Co,JP,Tokyo,"1-1 Marunouchi 2-chome, Tokyo Chiyoda 100-0005",,NRFB,NRFB
+E045,Annuity Co,4,E040,Wealth Co,UK,London,"30 St Mary Axe, London EC3A 8EP",,NRFB,NRFB
+E046,Pens Co,4,E043,Wealth Co,HK,Hong Kong,"1 Exchange Sq, Hong Kong Central HK",,NRFB,NRFB
+E047,Bond Co,4,E043,Wealth Co,UK,London,"1 Poultry, London EC2R 8EJ",,NRFB,NRFB
+E048,Vigor Co,5,E044,Wealth Co,BR,Sao Paulo,"Av Brigadeiro Faria Lima 3400, Sao Paulo SP 04538-132",,NRFB,NRFB
+E049,Visus Co,5,E045,Wealth Co,UK,London,"100 Cheapside, London EC2V 6DT",,NRFB,NRFB
+E050,Aqua Co,6,E048,Wealth Co,UK,London,"20 Fenchurch St, London EC3M 3BY",,NRFB,NRFB
+E051,Equit Co,2,E004,Market Co,HK,Hong Kong,"8 Finance St, Hong Kong Central HK",,NRFB,NRFB
+E052,Deriv Co,2,E004,Market Co,UK,London,"20 Fenchurch St, London EC3M 3BY",,NRFB,NRFB
+E053,Trading Co,3,E051,Market Co,US,New York,"245 Park Ave, New York NY 10167",,NRFB,NRFB
+E054,Securities Co,3,E052,Market Co,HK,Hong Kong,"8 Finance St, Hong Kong Central HK",,NRFB,NRFB
+E055,Broker Co,4,E053,Market Co,UK,London,"1 Angel Ct, London EC2R 7HJ",,NRFB,NRFB
+E056,Agency Co,4,E053,Market Co,AU,Sydney,"8 Chifley Sq, Sydney NSW 2000",,NRFB,NRFB
+E057,Exec Co,4,E054,Market Co,JP,Tokyo,"1-1 Marunouchi 2-chome, Tokyo Chiyoda 100-0005",,NRFB,NRFB
+E058,Report Co,4,E054,Market Co,UK,London,"10 Gresham St, London EC2V 7JD",,NRFB,NRFB
+E059,Aura Co,5,E055,Market Co,UK,London,"1 London Wall, London EC2Y 5AB",,NRFB,NRFB
+E060,Axis Co,5,E056,Market Co,UK,London,"6 Lothbury, London EC2R 7HH",,NRFB,NRFB
+E061,Alba Co,6,E059,Market Co,UK,London,"1 Poultry, London EC2R 8EJ",,NRFB,NRFB

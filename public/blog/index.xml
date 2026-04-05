@@ -5,15 +5,8 @@
     <link>http://localhost:1313/blog/</link>
     <description>Recent content in Blog on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 23 Feb 2026 20:44:26 +0000</lastBuildDate>
+    <language>en-gb</language>
+    <lastBuildDate></lastBuildDate>
     <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My Post Title</title>
-      <link>http://localhost:1313/blog/unhelpful_obs/my-post-title/</link>
-      <pubDate>Mon, 23 Feb 2026 20:44:26 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful_obs/my-post-title/</guid>
-      <description>A short summary shown in post listings.</description>
-    </item>
   </channel>
 </rss>

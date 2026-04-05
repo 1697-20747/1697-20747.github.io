@@ -5,21 +5,35 @@
     <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 22 Mar 2026 11:16:02 +0000</lastBuildDate>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 04 Apr 2026 12:10:09 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unhelpful-Advice</title>
+      <link>http://localhost:1313/categories/unhelpful-advice/</link>
+      <pubDate>Sat, 04 Apr 2026 12:10:09 +0000</pubDate>
+      <guid>http://localhost:1313/categories/unhelpful-advice/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Economics</title>
+      <link>http://localhost:1313/categories/economics/</link>
+      <pubDate>Fri, 03 Apr 2026 09:42:06 +0000</pubDate>
+      <guid>http://localhost:1313/categories/economics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Comp-Science</title>
+      <link>http://localhost:1313/categories/comp-science/</link>
+      <pubDate>Wed, 01 Apr 2026 17:05:11 +0000</pubDate>
+      <guid>http://localhost:1313/categories/comp-science/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Credit-Risk</title>
       <link>http://localhost:1313/categories/credit-risk/</link>
       <pubDate>Sun, 22 Mar 2026 11:16:02 +0000</pubDate>
       <guid>http://localhost:1313/categories/credit-risk/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Unhelpful-Advice</title>
-      <link>http://localhost:1313/categories/unhelpful-advice/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/unhelpful-advice/</guid>
       <description></description>
     </item>
     <item>
@@ -34,13 +48,6 @@
       <link>http://localhost:1313/categories/finance/</link>
       <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/categories/finance/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Economics</title>
-      <link>http://localhost:1313/categories/economics/</link>
-      <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/economics/</guid>
       <description></description>
     </item>
     <item>

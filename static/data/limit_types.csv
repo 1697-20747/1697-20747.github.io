@@ -1,0 +1,8 @@
+limit_type,limit_sub_type,product
+Hard,Traded,FX Forward
+Hard,Traded,Committed Repo
+Hard,Lending,Committed Loan
+Hard,Lending,Overdraft
+Hard,Traded,Bond Borrow
+Hard,Traded,Xccy Swap
+Soft,Settlement,Payment Intraday
