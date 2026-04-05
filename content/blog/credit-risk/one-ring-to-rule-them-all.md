@@ -40,7 +40,7 @@ IRL shall mean In Real Life for the rest of this post, and the rest of the site.
 
 All is well, you are happy. Then sometime later, Bob goes and moves, and your data goes to crap. Because you didn’t do it properly. The entity bob_house no longer applies, as Bob has gone and moved. So you delete it and create a new one bob2_house. Now you lose chunks of your network, and downstream history and data for bob_house. Because you screwed up.
 
-###The Right Way:
+### The Right Way:
 
 IRL there is one, and only one instance of you. Even if you are a biological identical twin, genes and environrment will have forged you in to a genetically identical, but biologically tweaked version of you. So the sample size of ‘you’ defined by all possible attributes is n=1.
 
@@ -48,7 +48,7 @@ So there is one of you.
 
 This leads to a couple of immediate questions. Who are you? As in how, in data are we going to adequately define you. Stated properly this is ‘how are you to be adequately defined using a combination of observable and deducible attributes?’. The presumption here is that you know the end use of your system. There is a lot of thinking required to get the problem statement correct here, as there will be inherent conflicts in all of these choices. For our purposes, a key requirement is going to be driven by KYC legislation, or Know Your Client. Over simplified, this means there can only be one instance of you, or as we move forward, the relevant legal entity.
 
->  "It's one of the better ones," said Beard. "It has a nice identity resonance ... A lot of the jokes play on the obviously quite problematic idea in Roman times of knowing who you are." Another "identity" joke sees a man meet an acquaintance and say "it's funny, I was told you were dead". He says "well, you can see I'm still alive." But the first man disputes this on the grounds that "the man who told me you were dead is much more reliable than you”. - Classicist Mary Beard. Refer 
+>  A lot of the jokes play on the obviously quite problematic idea in Roman times of knowing who you are. Another "identity" joke sees a man meet an acquaintance and say "it's funny, I was told you were dead". He says "well, you can see I'm still alive." But the first man disputes this on the grounds that "the man who told me you were dead is much more reliable than you”. - Classicist Mary Beard. Refer 
 Laughter in Ancient Rome: On Joking, Tickling, and Cracking Up (Sather Classical Lectures): 71
 
 Who knew the Roman’s were into data science?
@@ -84,9 +84,44 @@ To sort out this mess, we will need both of the above.
 
 Bogost says we should be ‘Writing code that mimics how an object interacts with others’. Could not agree more, and we are about to do all of that. The context of which will be the interaction of legal entities within a banking structure, layering on the multi dimensional aspects of regulatory treatment. The end game is being able to compressive answer ‘what is the…..’ type questions across the legal entity and regulatory credit risk landscape. Which needs a network data landscape that one on is going to give you, that aligns with the regulatory landscape in ways no one who designed KYC systems ever bothered to think about. To be fair, they could have, but someone would have cheaped out and not wanted to pay for it back in the day. This is the problem of someone who does not know what they are doing being pushed into making a decision they shouldn’t make.
 
+---
+## The Problem Statement re stated:
+
+Before moving onto solution paths, its worth reallty digging into the gritty details of the problem. I want this to be crystal clear. The broad idea is superordinance. The specifics we are going to dig into is just where and what we should apply the concept to. The answer is not where you first think.
+
+To strip things back to basics here is a simplified netwrok diagram of just 5 of the legal entities. For simplicity sake they have a notional 100 loan to each other.
+
+![£100 loan network — 5 entities](/images/network_mini_loan.png)
+
+Forgetting about code. Any exposure from Bank Co down to the non UK domcicled entity, for CRR has to be NON CORE.
+
+> The legal entity is just that, there is no CRR treatment for just the one entity. It is the relationship bewtween two entities, across a credit product, that drives CRR treatment.
+
+This is why we want to leave legal entities as they are.
+
+For the single loan it (lentity - exposure - entity) is NON CORE. That is fine. Now the Market Co lending to the Corp Co, that has to be a different CRR treatment. But wait, we have the Corp Co in NON CORE. But it cannot be that from the prespective of the Market Co. Condundrum! I know, I will create a new group name that is not a legal entity level. This will mirror Corp Co. So one instance of Corp Co for the NON CORE book of exposures, and then another instance of Corp Co for anthing that crosses the ring fence perimiter. I guess we can do that for each instance where we have a product from one legal entity to mulitple other legal entities, some of which will map the exposure into different CRR buckets.
+
+You can appreciate that in doing this you will:
+
+* have a lot of duplications
+* have lost the intregrity of you legal entity structure
+* run the risk of manual op errors in creating and linking the duplications
+* probably go mad eventually wit the mess you have made....
+
+---
+
+So how best to avoid the traps laid out? Apply the concept of superordinance of course! But.... apply it to each exposure, **not** the legal entities.
+
+
+
+---
 ## The Right(ish) Problem statement:
 
 Or the less wrong one if you want. We want to be able to answer question about our portfolio, about the legal structure, and regulatory aspects, and exposures, and often all three at once. Therefor the correct problem statement is something like ‘what is the minimum data and attribute set that will permit investigation of the portfolio across the legal and regulatory landscape to fulfil regulatory report requirements together with portfolio management obligations’. Bit of a word salad, but you get the drift. To do the job, what do I need as the minimum viable data set. Of which other bits I can derive later.
+
+CRR waiver letters, over simplified will list legal entities that extend exposusure, and a list of all legal entities that said exposure can have the noted CRR waivers in the letter applied to. What they really are in intent is two fold; (i) they identify what the new rules shall apply to; and (ii) the afford permission to apply 'different' regulatory treatment where permitted. This is probably why they are actually titled Permission letters IRL. The what, in the case of the letter is the identifed 'firm/s', or legal entities. From which exposures to any listed subsidiaries may recieve the diminished CRR treatment. At no point do the letters tell you there cannot be other exposures, or how to go about applying the reduced CRR regulations.
+
+**What the letter does not stipulate is that the legal entities may only have exposure to the listed entities. It says only the listed one's can benefit from the CRR waivers listed** In other words, the same legal entities at the top can, and probably do have many different exposures to other non listed legal entities. This is both necessary and expected for the group to function as whole. You just won't get the same CRR waiver or RWA adjustements. It is this critical aspect that tilts the logic of the solution away from treatment of the legal entity arrangement, to treatment of the exposures themselves. The path to the solution at this point should drive you away from static excel files of any kind.
 
 As per bobs_house, the mistake is that you abuse your legal entity structure by switching a legal aggregation level at L1 out for a regulatory classifier. Eg make up a name inside_ring_fence, and presumable outside_ring_fence. Then hey presto you can slice your portfolio by ring fencing attribute! Done. No, actually.
 
@@ -133,7 +168,9 @@ The following rules will be applied to the data:
 
 Now this is an abstraction of the IRL rules. But, all the actual CRR rules could be applied. Too much work for this mini project, but it is acheivable.
 
-See new files.
+This results in the decision tree as shown:
+
+
 
 Now to complete our pretend Bank we are going to add a bunch of random exposures across the entities. The products, limits and types will be as follows. This is of course grossly over simplified.
 
@@ -149,13 +186,145 @@ Now to complete our pretend Bank we are going to add a bunch of random exposures
 
 ---
 
+![CRR treatment decision tree](/images/crr_decision_tree.png)
+
+---
+
+The basics of the code snippet setting CRR treatment are below:
+
+```
+def crr_treatment(cred_id, deb_id):
+    """
+    Derive CRR regulatory treatment for a bilateral exposure.
+
+    Rules (applied in order):
+      RFB_X        : creditor inside Bank sub-group, debtor outside
+      NRFB_X       : creditor outside Bank sub-group, debtor inside
+      [L2]_CORE    : both in same L2 sub-group, L2 is CORE (UK-domiciled RFB)
+      [L2]_NON_CORE: both in same L2 sub-group, L2 is NON CORE (non-UK RFB)
+      RFB_INTERNAL : both inside Bank sub-group, different L2 sub-groups
+      NRFB_CROSS   : both outside Bank sub-group, different L2 sub-groups
+    """
+    cr_in_bank = cred_id in bank_subtree
+    de_in_bank = deb_id  in bank_subtree
+    cr_l2      = get_l2_ancestor(cred_id)
+    de_l2      = get_l2_ancestor(deb_id)
+
+    if cr_in_bank and not de_in_bank:
+        return 'RFB_X'
+
+    if not cr_in_bank and de_in_bank:
+        return 'NRFB_X'
+
+    if cr_l2 and de_l2 and cr_l2 == de_l2:
+        l2 = emap[cr_l2]
+        if l2['rf'] == 'CORE':     return f"{l2['name']}_CORE"
+        if l2['rf'] == 'NON CORE': return f"{l2['name']}_NON_CORE"
+
+    if cr_in_bank and de_in_bank:
+        return 'RFB_INTERNAL'
+
+    return 'NRFB_CROSS'
+```
+No, its not all the code, just the simplifed part. To do the whole thing you need to deploy the equivalent of recursive SQL techniques. This lets you walk back up from the exposure at whatever subsidiary, to the relevant grouping. This is akin to figuring who someone's parents are from family data. Common use cases of this technique include counting sequences and finding family tree ancestors using common table expressions (CTEs). In this manner say you started at an L6 subsidiary. You walk back up the hierarchy until you run out of options, or more eloquantly apply common table expression (CTE) as a query that continuously references a previous result until it returns an empty result. You can use panda's dataframes for this, or you can tell your favourite AI to use that tool suite. Code is irrelevant, concept is important.
+
+As an aside, don't knock old school SQL. It was invented in the 1970's to solve real world problems. If you write a bit of code or small language and someone is using it 60 years later, you probably did something smart. You also probably did it with pencil and paper. Development tools were largely no existant then. These people really were genuisus in their day. Que Ted Codd reference ....
+
+Read about the crazy early days here if you have the interest:
+
+https://archive.computerhistory.org/resources/access/text/2013/05/102702562-05-01-acc.pdf
+
+Best quote:
+
+> Ted looked at what was going on out there and saw what I like the call “higgledy-piggledy” systems. There was no abstraction; there was no mathematics. It was just write code and hope it works.
+
+Some things really don't change. The original vibe coders...... Now I will shut up or I'll have to move this to the Comp Science section, and I cannot be bothered.
+
+---
+
 ## The solution
 
 Now we have our standing assumptions. We have run the rules over the data to create the tables shown above. And if the rules change, we can change the tables of derived attributes as needed. That part is buried in the python. The tables used for below are static, as in the rules set out applied to the made up strucutre, with made up products and limits applied at subsidiary level. Note that aggregation is permitted. So at L3, exposure is all of the exposure at L4 and below aggregated.
 
 Brief pause, IRL there will be netting, and subadditivity problems all over the place. I am aware, but don't want this project to get out of control for scope. As presented is good enough, but its not complete or accurate to the nth degree.
 
-Now, wrapping the data tables up in a little widget, we now have a dynamic reporting tool. Anything you like in combination. If we have lost say L3 and used that as the regulatory bucket agggregator (eg NON CORE), then that would be a set aggregator. You could sum for that, but noting else. You would also have lost the ability to aggregate at L4 group for any other reason. By keeping the legal entity data pure, we have avoided that problem all together.
+Now, wrapping the data tables up in a little widget, we now have a dynamic reporting tool. Anything you like in combination. If we had made the decision to have lost say L3 and used that as the regulatory bucket agggregator (eg NON CORE), then that would be a set aggregator. You could sum for that, but noting else. You would also have lost the ability to aggregate at L4 group for any other reason. By keeping the legal entity data pure, we have avoided that problem all together.
+
+It is harder to establish regulatory risk attributes by applying a suite of rules at the product exposure level, but not as hard you might think. Once done, its set and forget until the position runs off. But the trouble is rewarded, as you can then report any entity, to any entity (or group), with or without the CRR lens applied.
+
+---
+Lets take our subset of the portfolio from the above image, and lay it out in table form. Same rules have been applied, nothing manual has been adjusted.
+
+## Regulatory Treatment — £100 Loan Matrix (5 Entities)
+
+
+---
+
+### NRFB_CROSS — both parties outside Bank sub-group (2 records)
+
+| Creditor | Domicile | Debtor | Domicile | Limit GBP | Exposure GBP |
+|---|---|---|---|---:|---:|
+| Group Co | UK | Market Co | UK | £100 | £100 |
+| Market Co | UK | Group Co | UK | £100 | £100 |
+
+---
+
+### NRFB_X — creditor outside Bank sub-group → debtor inside (6 records)
+
+| Creditor | Domicile | Debtor | Domicile | Limit GBP | Exposure GBP |
+|---|---|---|---|---:|---:|
+| Group Co | UK | Bank Co | UK | £100 | £100 |
+| Group Co | UK | Retail Co | UK | £100 | £100 |
+| Group Co | UK | Corp Co | AU | £100 | £100 |
+| Market Co | UK | Bank Co | UK | £100 | £100 |
+| Market Co | UK | Retail Co | UK | £100 | £100 |
+| Market Co | UK | Corp Co | AU | £100 | £100 |
+
+---
+
+### RFB_X — creditor inside Bank sub-group → debtor outside (6 records)
+
+| Creditor | Domicile | Debtor | Domicile | Limit GBP | Exposure GBP |
+|---|---|---|---|---:|---:|
+| Bank Co | UK | Group Co | UK | £100 | £100 |
+| Bank Co | UK | Market Co | UK | £100 | £100 |
+| Retail Co | UK | Group Co | UK | £100 | £100 |
+| Retail Co | UK | Market Co | UK | £100 | £100 |
+| Corp Co | AU | Group Co | UK | £100 | £100 |
+| Corp Co | AU | Market Co | UK | £100 | £100 |
+
+---
+
+### RFB_INTERNAL — both inside Bank sub-group, cross L2 boundary (6 records)
+
+#### CORE → CORE
+
+| Creditor | Domicile | Debtor | Domicile | Limit GBP | Exposure GBP |
+|---|---|---|---|---:|---:|
+| Bank Co | UK | Retail Co | UK | £100 | £100 |
+| Retail Co | UK | Bank Co | UK | £100 | £100 |
+
+#### CORE → NON CORE
+
+| Creditor | Domicile | Debtor | Domicile | Limit GBP | Exposure GBP |
+|---|---|---|---|---:|---:|
+| Bank Co | UK | Corp Co | AU | £100 | £100 |
+| Retail Co | UK | Corp Co | AU | £100 | £100 |
+
+#### NON CORE → CORE
+
+| Creditor | Domicile | Debtor | Domicile | Limit GBP | Exposure GBP |
+|---|---|---|---|---:|---:|
+| Corp Co | AU | Bank Co | UK | £100 | £100 |
+| Corp Co | AU | Retail Co | UK | £100 | £100 |
+
+---
+
+
+Note that RFB_INTERNAL covers cross-boundary flows within the Bank sub-group — Bank Co ↔ Retail Co and Bank Co ↔ Corp Co, as well as Retail Co ↔ Corp Co. These are intra-RFB but cross different L2 sub-groups, which is precisely the consolidation elimination problem the post is about: same ring fence, different legal entity, £100 each way that nets to zero at the group level but needs to be tracked individually at the entity level.
+
+---
+
 
 ### How the Widget Works
 The widget is a self-contained interactive data application built entirely in vanilla HTML, CSS and JavaScript — no frameworks, no external dependencies beyond the world map fetch.
@@ -242,4 +411,10 @@ https://www.legislation.gov.uk/uksi/2025/30/pdfs/uksiod_20250030_en_001.pdf
 
 ---
 
+## Data Files
 
+I mean they are all made up nonsene and you can see the content in the widget, but hey, why not.
+
+- [Legal entities](/data/df_legal_entity.csv)
+- [Limit types](/data/df_limit_type.csv)
+- [Limits and exposures](/data/df_limits_exposures.csv)

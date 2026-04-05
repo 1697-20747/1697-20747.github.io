@@ -6,13 +6,82 @@
     <lastmod>2026-02-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-03-22T11:16:02+00:00</lastmod>
+    <lastmod>2026-04-04T12:10:09+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unhelpful-advice/</loc>
+    <lastmod>2026-04-04T12:10:09+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2026-03-22T11:16:02+00:00</lastmod>
+    <lastmod>2026-04-04T12:10:09+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-03-22T11:16:02+00:00</lastmod>
+    <lastmod>2026-04-04T12:10:09+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unhelpful-advice/its-a-game/</loc>
+    <lastmod>2026-04-04T12:10:09+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/unhelpful-advice/</loc>
+    <lastmod>2026-04-04T12:10:09+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unhelpful-advice/life-is-tough/</loc>
+    <lastmod>2026-04-04T10:46:35+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unhelpful-advice/ppppppp/</loc>
+    <lastmod>2026-04-04T10:39:37+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unhelpful-advice/lemons/</loc>
+    <lastmod>2026-04-04T10:36:43+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unhelpful-advice/to-fail-is-to-fail/</loc>
+    <lastmod>2026-04-04T10:24:55+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unhelpful-advice/careful-what-you-measure-ptii/</loc>
+    <lastmod>2026-04-03T09:45:34+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/economics/</loc>
+    <lastmod>2026-04-03T09:42:06+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/economics/</loc>
+    <lastmod>2026-04-03T09:42:06+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/economics/interest-rates-are-interesting/</loc>
+    <lastmod>2026-04-03T09:42:06+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/comp-science/</loc>
+    <lastmod>2026-04-01T17:05:11+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/comp-science/</loc>
+    <lastmod>2026-04-01T17:05:11+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/comp-science/pacman/</loc>
+    <lastmod>2026-04-01T17:05:11+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unhelpful-advice/careful-what-you-measure/</loc>
+    <lastmod>2026-04-01T16:57:44+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unhelpful-advice/its-a-you-problem/</loc>
+    <lastmod>2026-03-29T11:16:09+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unhelpful-advice/approxmimately-right/</loc>
+    <lastmod>2026-03-27T16:59:03+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unhelpful-advice/the-cold-never-lasts/</loc>
+    <lastmod>2026-03-27T16:48:30+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unhelpful-advice/dont-start-what-you-cant-finish/</loc>
+    <lastmod>2026-03-26T07:35:14+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unhelpful-advice/not-all-relationships-are-positive/</loc>
+    <lastmod>2026-03-25T18:01:03+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unhelpful-advice/the-rise-of-the-machine/</loc>
+    <lastmod>2026-03-25T17:57:33+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unhelpful-advice/cult-of-personality/</loc>
+    <lastmod>2026-03-25T17:55:01+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unhelpful-advice/never-trust-a-spreadsheet/</loc>
+    <lastmod>2026-03-22T20:10:32+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/credit-risk/</loc>
     <lastmod>2026-03-22T11:16:02+00:00</lastmod>
@@ -22,9 +91,6 @@
   </url><url>
     <loc>http://localhost:1313/blog/credit-risk/un-consolidating-consolidated-accounting/</loc>
     <lastmod>2026-03-22T11:16:02+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/</loc>
-    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/unhelpful-advice/bowie-on-work/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
@@ -75,9 +141,6 @@
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/unhelpful-advice/things-must-change/</loc>
-    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/unhelpful-advice/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/unhelpful-advice/war-is-sweet/</loc>
@@ -137,16 +200,7 @@
     <loc>http://localhost:1313/books/the-signal-and-the-noise/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful_obs/my-post-title/</loc>
-    <lastmod>2026-02-23T20:44:26+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/economics/</loc>
-    <lastmod>2026-02-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/cpi/</loc>
-    <lastmod>2026-02-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/economics/</loc>
     <lastmod>2026-02-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/inflation/</loc>
@@ -569,8 +623,6 @@
     <loc>http://localhost:1313/about/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/bjj/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/comp-science/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/data-analytics/</loc>
   </url><url>

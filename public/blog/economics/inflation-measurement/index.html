@@ -10,7 +10,7 @@
 <meta name="description" content="The CPI is everywhere, but how it&#39;s actually constructed reveals some uncomfortable tradeoffs.">
 <meta name="author" content="Your Name">
 <link rel="canonical" href="http://localhost:1313/blog/economics/inflation-measurement/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.0ad45ae7af4be72cbb215a3aa1630a30599ee852a2b6c9c4fddf123cd08ee69c.css" integrity="sha256-CtRa569L5yy7IVo6oWMKMFme6FKitsnE/d8SPNCO5pw=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f008ada61313eee33ba760ef3adae6a8ad90031478c6c0312a8703b7ca1692ce.css" integrity="sha256-8AitphMT7uM7p2DvOtrmqK2QAxR4xsAxKocDt8oWks4=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -128,7 +128,9 @@
     <div class="post-description">
       The CPI is everywhere, but how it&#39;s actually constructed reveals some uncomfortable tradeoffs.
     </div>
-    <div class="post-meta"><span title='2026-02-23 00:00:00 +0000 UTC'>February 23, 2026</span>&nbsp;·&nbsp;<span>7 min</span>&nbsp;·&nbsp;<span>Your Name</span>
+    <div class="post-meta">
+<div class="post-meta"><span title='2026-02-23 00:00:00 +0000 UTC'>February 23, 2026</span>&nbsp;·&nbsp;16 min</div>
+
 
 </div>
   </header> <div class="toc">
@@ -145,8 +147,13 @@
     <li><a href="#the-substitution-bias-problem">The Substitution Bias Problem</a></li>
     <li><a href="#generating-the-comparison-chart">Generating the Comparison Chart</a></li>
     <li><a href="#the-sins-of-rpi">The Sins of RPI</a></li>
-    <li><a href="#this-begs-the-question-of-why-researchers-a-flawed-metric-if-calculated-using-a-consistent-method-can-still-inform-of-relative-price-changes-if-held-over-the-long-term">This begs the question of why researchers? A flawed metric, if calculated using a consistent method, can still inform of relative price changes if held over the long term.</a></li>
     <li><a href="#key-takeaways">Key Takeaways</a></li>
+    <li><a href="#in-the-long-run-we-are-all-dead">In the long run&hellip;. we are all dead.</a></li>
+    <li><a href="#türkiye-deep-dive">Türkiye Deep Dive</a>
+      <ul>
+        <li><a href="#the-governor-revolving-door">The Governor Revolving Door</a></li>
+      </ul>
+    </li>
     <li><a href="#references">References</a></li>
   </ul>
 </nav>
@@ -160,9 +167,9 @@
 <h2 id="out-with-the-old-and-in-with-the-old-again">Out with the old and in with the&hellip;.. old (again?)<a hidden class="anchor" aria-hidden="true" href="#out-with-the-old-and-in-with-the-old-again">#</a></h2>
 <p>Cast your mind back to circa 300CE. I did imply this was not a new problem, nor in fact are the attempted solutions that don&rsquo;t work.</p>
 <p>Diocletian&rsquo;s Edict on Maximum Prices (301 CE), or Edictum de Pretiis Rerum Venalium, was a sweeping, ultimately failed Roman law designed to curb rampant inflation. It established maximum legal prices and wages for over 1,400 goods, services, and labor types, with severe, often fatal, penalties for violation.</p>
-<p>Now, how do we know this? Because like all good dictums, this one was carved in stone. You can go and see it, in Greek, if you are not convinced. Please research the details yourself, there are many. For our purposes this is a strong edict that attempts to set the maxium price for goods. Using very strong words, effectively an &lsquo;or else&rsquo;. Now in his day Diocletion had some power. But not enough to quash inflation with mere words. Every wanna be tyrant whose crackpot policies has resulted in hyper inflation (hello Venezuala, Turykie, etc, etc).</p>
+<p>Now, how do we know this? Because like all good dictums, this one was carved in stone. You can go and see it, in Greek, if you are not convinced. Please research the details yourself, there are many. For our purposes this is a strong edict that attempts to set the maximum price for goods. Using very strong words, effectively an &lsquo;or else&rsquo;. Now in his day Diocletion had some power. But not enough to quash inflation with mere words. Every wanna be tyrant whose crackpot policies has resulted in hyper inflation (hello Venezuela, Turykie, etc, etc).</p>
 <p>During what is now called the Crisis of the Third Century, Roman coinage had been greatly debased by the numerous emperors and usurpers who minted their own coins. Gold coins were no longer all gold coins. This is false money creation. In modern parlance, their Treasurers liked to promise spending far above the level that the ability of the economy could sustain. In a way the fraud was a bit more honest back in the day. At least you could test the honesty of the coins yourself.</p>
-<p>Regardless the inevitable happend, people did not like taking less (debased) money for their products and goods, so the inevitable increasing prices (inflation spiral) resulted. Then, as is now, its quite hard to talk your way out this dilema unless you 1. promsie to reduce the supply of money; and 2. really (truly) mean it; and 3. people actually believe you. For reference, the death penalty was not enough of a threat to stop the tawdry behavior of coin debasement. In the same way that the death penalty seems not to stop people so inclined to murder people. How things don&rsquo;t change.</p>
+<p>Regardless the inevitable happened, people did not like taking less (debased) money for their products and goods, so the inevitable increasing prices (inflation spiral) resulted. Then, as is now, its quite hard to talk your way out this dilemma unless you 1. promise to reduce the supply of money; and 2. really (truly) mean it; and 3. people actually believe you. For reference, the death penalty was not enough of a threat to stop the tawdry behavior of coin debasement. In the same way that the death penalty seems not to stop people so inclined to murder people. How things don&rsquo;t change.</p>
 <p>Let us cherry pick some actual examples, with some context. First the currency structure, then an example:</p>
 <p>aureus – 1600 denarii
 argenteus = 100 denarii
@@ -170,10 +177,10 @@ follis = 20 denarii
 1/4 of follis = 4 denarii</p>
 <p>Legumes and grains
 Wheat – 100 denarii for about 17 liters</p>
-<p>Without agonizing over the math, a denarii comes out (via gold equivalent, using silver to gold ratio) as something like 1 denarius ≈ 0.28 g Au × £123 ≈ £34.4 today. With a healthy level of sceptisim on precision here, but good enough. This would price the wheat at £3,400 for 17 litres. A US Bushel is near enough 35 litres. So this prices wheat at £7,100 a bushell. This is of course, if true, insane. Today you can buy a bushell for less than £4.50. Now this was either one hell of an inflation cycle in gold terms, or something is off.</p>
+<p>Without agonizing over the math, a denarii comes out (via gold equivalent, using silver to gold ratio) as something like 1 denarius ≈ 0.28 g Au × £123 ≈ £34.4 today. With a healthy level of skepticism on precision here, but good enough. This would price the wheat at £3,400 for 17 litres. A US Bushel is near enough 35 litres. So this prices wheat at £7,100 a bushel. This is of course, if true, insane. Today you can buy a bushel for less than £4.50. Now this was either one hell of an inflation cycle in gold terms, or something is off.</p>
 <hr>
 <h2 id="what-the-cpi-actually-measures">What the CPI Actually Measures<a hidden class="anchor" aria-hidden="true" href="#what-the-cpi-actually-measures">#</a></h2>
-<p>CPI tracks the price of a fixed &ldquo;basket&rdquo; of goods over time. The Bureau of Labor Statistics surveys households to determine what goes in the basket, then tracks those prices monthly. All the relevant goverment entities go about this in variations of themes. They also tinker with substututions. A conspiracy theorist would be inclinded to think that this is to game the result down, while taking decisions that drive inflation higher.</p>
+<p>CPI tracks the price of a fixed &ldquo;basket&rdquo; of goods over time. The Bureau of Labor Statistics surveys households to determine what goes in the basket, then tracks those prices monthly. All the relevant government entities go about this in variations of themes. They also tinker with substitutions. A conspiracy theorist would be inclined to think that this is to game the result down, while taking decisions that drive inflation higher.</p>
 <p>Like the much vaunted boiling from model, inflation grinds you down over time, year on year you don&rsquo;t tend to be as aware.</p>
 <p>Simple in theory. Messier in practice.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Replicating a basic CPI calculation in Python</span>
@@ -224,12 +231,16 @@ Wheat – 100 denarii for about 17 liters</p>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&#34;static/images/cpi-comparison.png&#34;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&#34;tight&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><hr>
 <h2 id="the-sins-of-rpi">The Sins of RPI<a hidden class="anchor" aria-hidden="true" href="#the-sins-of-rpi">#</a></h2>
-<p>Whilst the RPI is fatally flawed, more on that in one moment, it has one very solid advantage if you are a price setter. You get to push your prices higher, every time. The reason that evey phone company or indexed biller who could read used the RPI as the inflator is not the prusuit of precision, it was greed, plain and simple. The cherry picked the index that would allow them to charge more, end of. The ONS has a good summary article, note the date of 2018: Shortcomings of the Retail Prices Index as a measure of inflation. Lets refer to their conclusion:</p>
+<p>Whilst the RPI is fatally flawed, more on that in one moment, it has one very solid advantage if you are a price setter. You get to push your prices higher, every time. The reason that every phone company or indexed biller who could read used the RPI as the inflator is not the pursuit of precision, it was greed, plain and simple. The cherry picked the index that would allow them to charge more, end of. The ONS has a good summary article, note the date of 2018: Shortcomings of the Retail Prices Index as a measure of inflation. Lets refer to their conclusion:</p>
 <blockquote>
-<p>In 2013, the RPI lost its status as a National Statistic. Our position on the RPI is clear: we do not think it is a good measure of inflation and discourage its use. There are other, better measures available and any use of RPI over these far superior alternatives should be closely scrutinised.</p>
+<p>In 2013, the RPI lost its status as a National Statistic. Our position on the RPI is clear: we do not think it is a good measure of inflation and discourage its use. There are other, better measures available and any use of RPI over these far superior alternatives should be closely scrutinized.</p>
 </blockquote>
-<p>2013 is the date of this comment. Now fast forward to 2026, and guess the meansure used to set student loan interest rates? Wait for it&hellip;.. RPI plus 3%. So the government, using the RPI that the producer of said index has admitted is flawed, still uses it. You can bet your last penny that if RPI was systemiaclly less, it would have died a long time ago. Now what is the impact of this, well its approximately 90bps per annum, compouding up if you are not paying off the loan. Thats not nothing, actually its about (1.009)^{25} or approx 1.251, so a 25% penalty. Now the other problem here is the 3%, that a hefty credit risk permium for government backed loans to student. Now if these are really loans or just punishment devices is a conversation for another day. No one, other than researchers, should be allowed to price from RPI.</p>
-<h2 id="this-begs-the-question-of-why-researchers-a-flawed-metric-if-calculated-using-a-consistent-method-can-still-inform-of-relative-price-changes-if-held-over-the-long-term">This begs the question of why researchers? A flawed metric, if calculated using a consistent method, can still inform of relative price changes if held over the long term.<a hidden class="anchor" aria-hidden="true" href="#this-begs-the-question-of-why-researchers-a-flawed-metric-if-calculated-using-a-consistent-method-can-still-inform-of-relative-price-changes-if-held-over-the-long-term">#</a></h2>
+<p>2013 is the date of this comment. Now fast forward to 2026, and guess the measure used to set student loan interest rates? Wait for it&hellip;.. RPI plus 3%. So the government, using the RPI that the producer of said index has admitted is flawed, still uses it. You can bet your last penny that if RPI was systemically less, it would have died a long time ago. Now what is the impact of this, well its approximately 90bps per annum, compounding up if you are not paying off the loan. Thats not nothing, actually its about (1.009)^{25} or approx 1.251, so a 25% penalty. Now the other problem here is the 3%, that a hefty credit risk premium for government backed loans to student. Now if these are really loans or just punishment devices is a conversation for another day. No one, other than researchers, should be allowed to price from RPI.</p>
+<p><img alt="Causes of the difference between the RPI and CPIH inflation rates 2006 to 2018" loading="lazy" src="/images/ons_rpi_cpih_wedge.png"></p>
+<p>Source: <a href="https://www.ons.gov.uk/chartimage?uri=/economy/inflationandpriceindices/articles/shortcomingsoftheretailpricesindexasameasureofinflation/2018-03-08/f921bcd3">https://www.ons.gov.uk/chartimage?uri=/economy/inflationandpriceindices/articles/shortcomingsoftheretailpricesindexasameasureofinflation/2018-03-08/f921bcd3</a></p>
+<p>This begs the question of why, researchers? Actually, there is decent reason. A flawed metric, if calculated using a consistent method, can still inform of relative price changes if held over the long term. It ceases to have absolute value though.</p>
+<p><strong>Other than for research, it should be prohibited for the government or any private entity to use this index to price anything. Those who game it should be fined.</strong></p>
+<hr>
 <h2 id="key-takeaways">Key Takeaways<a hidden class="anchor" aria-hidden="true" href="#key-takeaways">#</a></h2>
 <ul>
 <li>CPI is a useful approximation, not a precise measure</li>
@@ -238,10 +249,95 @@ Wheat – 100 denarii for about 17 liters</p>
 <li>Personal inflation varies enormously by income — rent-heavy budgets are hit harder</li>
 </ul>
 <hr>
+<hr>
+<h2 id="in-the-long-run-we-are-all-dead">In the long run&hellip;. we are all dead.<a hidden class="anchor" aria-hidden="true" href="#in-the-long-run-we-are-all-dead">#</a></h2>
+<p>Thankfully some studious persons at the Bank of England did my homework for me. I should pay them back update this, one day. Even more helpfully, the FRED team made the data usable. The BoE one is kind of a messy excel file.</p>
+<p>BoE original file text:</p>
+<blockquote>
+<p>The Bank of England&rsquo;s three centuries dataset originated from the 2010 Q4 Quarterly Bulletin article &lsquo;The UK recession in context — what do three centuries of data tell us?&rsquo; by Sally Hills, Ryland Thomas and Nicholas Dimsdale, based on an initial set of series for which the authors  were able to obtain permission from the publishers /authors to publish online .   Thanks to the kind co-operation and assistance of many academic  and central bank colleagues the spreadsheet has been updated and extended several times since that point.  The current version 3.1  has been extended further and is now the repository for some of the underlying data behind the recent study &lsquo;British Economic Growth 1270-1870&rsquo; by Steve Broadberry, Bruce Campbell, Alex Klein, Mark Overton and Bas van Leeuwen to whom we are extremely grateful.   This has been included as a standalone section of the database although many series in subsequent sections of the spreadsheet use these estimates in various ways to create series that go up to the present day.   Through the kind permission of Greg Clark, Nick Mayhew and Nuno Palma we have also been allowed to include wage, price and money supply  data stretching back to the C13th.  Some trade data have also been extended back to that time.  So the spreadsheet now contains time series covering three centuries of UK data and nearly seven and a half centuries of data for England.  We are also able  to provide some benchmark  estimates for money, GDP and population  for 1086 thanks to the work of Nick Mayhew and James Walker, so for these series broad comparisons can be made over nearly a thousand years of UK history.  In light of this and for the purposes of future proofing we have renamed (though not renumbered)  the spreadsheet given the time period it now covers.</p>
+</blockquote>
+<p>We should celebrate honest academic work like this. It informs our lives.</p>
+<p><img alt="BoE Long Run Inflation" loading="lazy" src="/images/uk_cpi_analysis.png"></p>
+<p>Top panel — 546 annual observations from 1270–2016. Blue bars show annual CPI inflation on the left axis; red bars denote deflation years. The coral line traces the cumulative price level on a log-scaled right axis (rebased to 100 at 1270). Six key episodes are annotated with callout arrows (Black Death, Tudor debasement, Civil War, Napoleonic Wars, post-WWI spike, 1970s crisis).</p>
+<p>Bottom panel — 97 non-overlapping 5-year periods, each independently rebased to 100. The green histogram shows the frequency distribution of 5-year cumulative inflation outcomes. The purple KDE curve on the right axis draws the implied continuous probability distribution. Reference lines mark zero net inflation (100), the median, and the mean. A stats box shows min/max/std dev and the share of deflationary 5-year periods.</p>
+<p>There are a couple of other ways of looking at this data, even as the horizontal format for the distribution is possibly the best. Here are other typical alternatives:</p>
+<p><img alt="BoE Long Run Inflation 5 year" loading="lazy" src="/images/boe_5yr_lineplot.png"></p>
+<p>and;</p>
+<p><img alt="BoE Long Run Inflation 5 year" loading="lazy" src="/images/boe_5yr_hist2d.png"></p>
+<p>Some take away thoughts.</p>
+<p>Why 5 years? Well, 1 year is not not enough in the main at least in modern developed emerged economies. But there is a case to refer to them as de merging given some on the insanity demonstrated of late. But after 5 years, cumulative inflation starts to bite. This is when you see all the cost of living crisis articles appears. We will test this in a moment. Also, it gives us a 100 or so time series. Enough to be useful.</p>
+<p>As to take aways, there is strong bias to the upside. We might not like inflation, but the people making the spending and borrowing decisions sure seem to. Inflation is to the upside. It if was random, it would be neutral. There is a skew. Which we will get to later.</p>
+<p>Data: Bank of England, Consumer Price Inflation in the United Kingdom [CPIIUKA], retrieved from FRED, Federal Reserve Bank of St. Louis; <a href="https://fred.stlouisfed.org/series/CPIIUKA">https://fred.stlouisfed.org/series/CPIIUKA</a>, March 27, 2026.</p>
+<p>Now, lets go to somewhere a little crazier, and we do try and unpick some of the why. Destination Türkiye:</p>
+<hr>
+<h2 id="türkiye-deep-dive">Türkiye Deep Dive<a hidden class="anchor" aria-hidden="true" href="#türkiye-deep-dive">#</a></h2>
+<p>First the data:</p>
+<p><img alt="Türkiye Long Run Inflation" loading="lazy" src="/images/turkey_uk.png"></p>
+<p>Key additions visible in the updated chart</p>
+<p>UK now runs to 2024, showing the 2022 post-COVID spike of 7.9% (UK&rsquo;s highest since 1991) alongside Türkiye&rsquo;s simultaneous 72.3% — same global shock, dramatically different magnitudes
+The histogram now captures the full matched sample (65 years each, 1960–2024) making the distributional comparison statistically fair
+The source notes box at the bottom explicitly documents the data lineage, splice rationale, and FRED series codes for both countries.</p>
+<p>Read that again until you understand the point of this. 7.9% (UK) alongside Türkiye&rsquo;s simultaneous 72.3% — same global shock. That is a withering inflation number, that will surely impoverish anyone who does not hold inflation proof assets. Which is everyone who is poor, or holds cash. This is insanity and delusion rolled into failed economic and fiscal policy.</p>
+<p>A quick note, I stitched these data sets together using AI, in this case Claude. All data is as specified. csv files below if you want to check it. It saved an enormous amount of time of writing methods, and left me more time for pondering. I guess that is the point.</p>
+<p>If inflation is bad in the UK, and it is, it is a whole world of pain worse for the poor (figurative and in this case literal) souls in Türkiye. Or Türkiye. Take your pick, no offense meant either way.</p>
+<h3 id="the-governor-revolving-door">The Governor Revolving Door<a hidden class="anchor" aria-hidden="true" href="#the-governor-revolving-door">#</a></h3>
+<p>Since 2016, several Governors of the Central Bank of the Republic of Türkiye (CBRT) have been dismissed from their positions via presidential decree, often following public disagreements with President Erdoğan over interest rate policies.
+Here is the list of governors since 2016, with notes on those forced to resign or dismissed:</p>
+<ul>
+<li>Fatih Karahan: 3 February 2024 – Present
+Appointed following the resignation of his predecessor NY Times.
+Hafize Gaye Erkan: 9 June 2023 – 2 February 2024
+Resigned: Officially requested to be &ldquo;pardoned from her duties&rdquo; Reuters.
+Reason: She cited a &ldquo;reputation assassination campaign&rdquo; against her family, though her departure was formalised by a presidential decree &ldquo;removing&rdquo; her from office after she posted her resignation YetkinReport.</li>
+<li>Şahap Kavcıoğlu: 20 March 2021 – 8 June 2023
+Replaced: Moved to head the Banking Regulation and Supervision Agency (BDDK) via presidential decree Central Banking. A former lawmaker for the ruling AK Party (AKP). Unlike many of his predecessors, he was a vocal supporter of Erdoğan&rsquo;s unorthodox economic view that high interest rates cause inflation.
+Unlike his predecessors, he aligned with the President&rsquo;s unorthodox view that high interest rates cause inflation The New Arab.</li>
+<li>Naci Ağbal: 7 November 2020 – 20 March 2021
+Forced to Resign/Dismissed: Removed by presidential decree. A former Finance Minister and a long-time member of the AK Party. Despite his party ties, he was dismissed after four months for implementing orthodox rate hikes that clashed with Erdoğan&rsquo;s preferences.
+Reason: His dismissal came just two days after he implemented a sharp 200-basis-point interest rate hike to 19% to combat inflation.</li>
+<li>Murat Uysal: 6 July 2019 – 7 November 2020
+Forced to Resign/Dismissed: Removed by presidential decree Al Jazeera.
+Reason: He was replaced as the Turkish lira hit record lows against the US dollar Al Jazeera.</li>
+<li>Murat Çetinkaya: 19 April 2016 – 6 July 2019
+Forced to Resign/Dismissed: Removed by presidential decree CNBC.
+Reason: He reportedly refused to resign voluntarily after resisting government pressure to cut interest rates to boost growth.</li>
+</ul>
+<p>There is a lot to unpack here. A lot. Eventually we will get to how cutting rates boots growth and lowers inflation. Shocker, it doesn&rsquo;t. But if you want to keep your job, the lesson here is don&rsquo;t raise rates. No matter what. If you have to fore an employee, it might be a them problem. Maybe, even then less times than you think. If you have to fire that many people on balance your starting assumption should be that you have a &lsquo;you&rsquo; problem.</p>
+<blockquote>
+<p>There are no poor soldiers. Only poor officers. - Napoleon (maybe).</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;In the British Army, there are no good battalions and no bad battalions, no good regiments and no bad regiments. There are only good and bad officers.&rdquo; - General Slim. Defeat into Victory is an account of the retaking of Burma by Allied forces during the Second World War by the British Field Marshal William Slim. (definitely)</p>
+</blockquote>
+<p>Pick either one, the point is the same. Skilled workers don&rsquo;t blame their tools for the own incompetence. The employee&rsquo;s ain&rsquo;t the problem here one suspects.</p>
+<p>The above list is evidence enough that there is no such thing as independent monetary policy as applied to Türkiye. Not even the pretense of any. So for all those clamouring with resentment about the BoE and Fed, be very careful what you wish for. Aligned delusions is likely a recipe for economic disaster. This is not to say that there is no case for the extent of independence, such as central banker deep love of Quantitative Easing running as proxy fiscal policy by people not voted or expressly empowered to do so as a pseudo treasury function.</p>
+<p>Key factor: Erdogan is openly averse to high interest rates, claiming high rates cause inflation, which stands in opposition to mainstream economic theory. And sanity for that matter. Lets hear it from the man himself:</p>
+<blockquote>
+<p>&ldquo;I have always opposed the distorted system that deepens inequalities, disrupts income justice, and turns billions of people into the slaves of a handful of capitalists. I oppose it again. I have often said that, no matter what, we cannot view as legitimate interest rates and an economic system based on interest rates,&rdquo;&hellip;</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;I will continue to voice my longing for an interest rate-free economy from now on too. We will not turn back from our battle for the economic order based on interest rates to change,&rdquo;&hellip;.</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;We are determined to implement our economic programme, with which we have made noteworthy progress over the past two years, until it reaches its goals,&rdquo;&hellip;..</p>
+</blockquote>
+<p><a href="https://www.reuters.com/world/middle-east/T%C3%BCrkiyes-erdogan-repeats-opposition-interest-rates-says-economic-plan-continue-2025-05-30/">Ergodan May 2025 Speaking at a Global Islamic Economy Summit in Istanbul</a></p>
+<p>Our chart pack so far suggests that the above is bonkers nonsense. If it were true, then inflation would not have run so hot. There appears directionally opposite causality to the theory embedded in the above statements. But lets dig into that accusation.</p>
+<p>Add lira to dollar chart
+Add inflation and interest rate chart
+add real gdp per population growth</p>
+<p>Keeping rates artificially low (more on how low later) has most likely contributed to the rise in domestic inflation. In some manner, if Türkiye wanted to be the world champion in domestic inflation, this is a decent path to follow. Argentina and/or Venezuela will most likely be very happy to hand over the championship cup.</p>
+<p>The challenge we face in this situation is that the alternative cannot be examined, or even known. This is akin to saying that, ceteris paribus, the UK is worse off after Brexit. Ceteris paribus translates from latin literally as all (things) equal. Ceteris = the rest/others/remaining. The phrase &rsquo;et cetera&rsquo; should spring to mind here, the root is the same. Paribus = equal/peer/companion. The phrase in full means everything else is assumed to be held constant. Which of course in a complex system is impossible. Easy to say, hard to prove. Very, very hard if you set aside your ideology.</p>
+<p>At this point we can conclude that each of the UK and Türkiye has suffered bouts of inflation. Türkiye has experienced far higher levels on inflation. From here, we will apply all the diagnostic tools available to see if we can diagnose the primary root causes of inflation in Türkiye.</p>
+<hr>
 <h2 id="references">References<a hidden class="anchor" aria-hidden="true" href="#references">#</a></h2>
 <ul>
 <li><a href="https://www.bls.gov/cpi/questions-and-answers.htm">BLS CPI Methodology</a></li>
 <li>Boskin Commission Report (1996) — foundational critique of CPI measurement</li>
+<li><a href="https://fred.stlouisfed.org/series/CPIIUKA">https://fred.stlouisfed.org/series/CPIIUKA</a></li>
+<li>[Bank of England Data set]https://www.bankofengland.co.uk/statistics/research-datasets</li>
+<li>[Shortcomings of the RPI] <a href="https://www.ons.gov.uk/economy/inflationandpriceindices/articles/shortcomingsoftheretailpricesindexasameasureofinflation/2018-03-08#:~:text=In%202013%2C%20the%20RPI%20lost,alternatives%20should%20be%20closely%20scrutinised">https://www.ons.gov.uk/economy/inflationandpriceindices/articles/shortcomingsoftheretailpricesindexasameasureofinflation/2018-03-08#:~:text=In%202013%2C%20the%20RPI%20lost,alternatives%20should%20be%20closely%20scrutinised</a>.</li>
+<li><a href="/data/boe_5yr_indexed_series.csv">BoE data 5 year buckets</a></li>
 </ul>
 
 

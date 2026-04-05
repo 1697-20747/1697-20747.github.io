@@ -1,5 +1,5 @@
-baseURL = "http://localhost:1313/"
-languageCode = "en-us"
+baseURL = "https://1697-20747.github.io/"
+languageCode = "en-gb"
 title = "[1697, 20747]"
 theme = "PaperMod"
 paginate = 10
@@ -24,6 +24,7 @@ paginate = 10
   hideSummary = false
   showtoc = true
   tocopen = false
+  math = true
 
   [params.homeInfoParams]
     Title = "Hi, I'm [1697, 20747]* 👋"
