@@ -21,7 +21,8 @@ Let us pause to see how that panned out....
 ![Enron Forensic Accounting Dashboard](/images/enron_share_price.png)
 
 ---
-Lets go to the source, being the last set of accounts before bankruptcy:
+
+Let us go to the source, being the last set of accounts before bankruptcy:
 
 | | 2000 | 1999 | 1998 | 1997 | 1996 |
 |---|---:|---:|---:|---:|---:|
@@ -55,11 +56,11 @@ Lets go to the source, being the last set of accounts before bankruptcy:
 
 ---
 
-## The Big picture
+## The Big Picture
 
 Let us take the book values in this table as fact, a stretch as we know, but at the time its different. The main point of this approach is that if even the best presented lies don't make sense, then surely there is rust beneath the shiny paint.
 
-lets look at just the growth rates as a sanity check:
+Let us look at just the growth rates as a sanity check:
 
 | Metric | 1996 | 2000 | CAGR (4yr) |
 |---|---:|---:|---:|
@@ -85,21 +86,21 @@ lets look at just the growth rates as a sanity check:
 
 <a href="/static/data/enron_2000_report.pdf" target="_blank">Enron Annual Report (2000)</a>
 
-The immediately obvious is that assets have gone from $16bn to $65bn in the space of 5 years. How is the question. Retained earnings from any sane business is inlikely to have covered the bill for this. In this manner, the needle in the haystack, or one of many, that we are looking for is leverage.
+The immediately obvious is that assets have gone from $16bn to $65bn in the space of 5 years. How is the question. Retained earnings from any sane business is unlikely to have covered the bill for this. In this manner, the needle in the haystack, or one of many, that we are looking for is leverage.
 
-Lets take a quick look at the numbers in chart form. Again this is shotgun analysis for now, we are looking for patterns, not isolating fact sets.
+Let us take a quick look at the numbers in chart form. Again this is shotgun analysis for now, we are looking for patterns, not isolating fact sets.
 
 ![Enron Forensic Accounting Dashboard](/images/enron_dashboard_v3.png)
 
-Also the growth rates are CAGR, so annual growth rates compounded. 66% is quite the benchmark for revenue. Unless there was a magic revenue stream on the same business, the answer must be material change in the assets and business profile, along with leverage. Its possible this is all fine, stratospheric growth has been achieved before. But at this stage we are skpetics until objective evidence substantiaties that this is realistic.
+Also the growth rates are CAGR, so annual growth rates compounded. 66% is quite the benchmark for revenue. Unless there was a magic revenue stream on the same business, the answer must be material change in the assets and business profile, along with leverage. Its possible this is all fine, stratospheric growth has been achieved before. But at this stage we are sceptics until objective evidence substantiates that this is realistic.
 
 Sharp observers will note comments about earnings above expectation. Well, whats the correct expectation you say? Good question! Find something similar, as similar as possible. Look at what the cash conversion rates were across the cycle, say rolling ten year averages. 
 
 > Now the average of an average, as a metric for comparison, is really rather average.
 
-These are rules of thumbs. Maybe this business is new, better and can carry a higher margin for years. Maybe not. A decent rule of thumb is that retail consumer conglomerates can convert at something like 8-12% percentages of revenue to op cash. How do you know this? Check. You have to be an expert in the underlying to be a good credit analyst. You can also read Buffets Berskhire letter for an examination on this point. I would tell you which one, but you will be lazy and read only that one. Go read them all and learn something. 
+These are rules of thumbs. Maybe this business is new, better and can carry a higher margin for years. Maybe not. A decent rule of thumb is that retail consumer conglomerates can convert at something like 8-12% percentages of revenue to op cash. How do you know this? Check. You have to be an expert in the underlying to be a good credit analyst. You can also read Buffets Berkshire letter for an examination on this point. I would tell you which one, but you will be lazy and read only that one. Go read them all and learn something. 
 
-On this point, Enron is a conglomeration of some very different business segments. An all in avearge really carries no meaning. We know where the majority of the income was booked in the segment analysis. So go find some peers for that. If no other business in the same mature segment was able to produce anyhting like the stated revuenue levels, then the logical propoistion is (i) Enron is speacial; or (ii) Enron is not that special and its returns will devolve to the average. It is your job to pick, so get off the fence. Both statements are unlikely to be concurrently true.
+On this point, Enron is a conglomeration of some very different business segments. An all in average really carries no meaning. We know where the majority of the income was booked in the segment analysis. So go find some peers for that. If no other business in the same mature segment was able to produce anything like the stated revenue levels, then the logical proposition is (i) Enron is special; or (ii) Enron is not that special and its returns will devolve to the average. It is your job to pick, so get off the fence. Both statements are unlikely to be concurrently true.
 
 Here is the key lesson on this entire web site.
 
@@ -122,7 +123,7 @@ gains associated with the securitization of non−merchant equity
 instruments. Equity losses reflect Energy Services' portion of
 losses of The New Power Company.
 
-Increase in the *value* of Eneregy Services contract portfolio. We now know, with the benefit of hindshight what this means. But at the time, this was a clue. A statement like that, left vaugue, is often an indication of potential sin. If it was so clear, you can assume management would shout about it and lay out the facts for the reader.
+Increase in the *value* of Energy Services contract portfolio. We now know, with the benefit of hindsight what this means. But at the time, this was a clue. A statement like that, left vague, is often an indication of potential sin. If it was so clear, you can assume management would shout about it and lay out the facts for the reader.
 
 ---
 
@@ -163,9 +164,9 @@ Now with percentages. Again, all data right from the 10-K noted.
 
 The concentration trend is stark in percentage form — Wholesale goes from 61% to 91% of total income in two years while every other productive segment shrinks as a share. By 2000 the entire business is being held up by one trading desk running on mark-to-market accounting, with Corporate and Other acting as a ($615m) black hole that nobody was asking enough questions about. But again, we don't know that yet. But the signs to look at there to be seen, if you want to see them.
 
-Lots of people, paid a lot of money to do so, did not want to see them. Inlcuding banks Debt Capital Market desks, not just Enron employees and uauditors who forgot what they were getting paid for. To audit. The hint of the task is there in the name. This point we will return to many, many, times, as this seems to a sin so hard to unlearn that it gets infintely repeated over time.
+Lots of people, paid a lot of money to do so, did not want to see them. Including banks Debt Capital Market desks, not just Enron employees and auditors who forgot what they were getting paid for. To audit. The hint of the task is there in the name. This point we will return to many, many, times, as this seems to be a sin so hard to unlearn that it gets infinitely repeated over time.
 
-As the money is coming from one place, at least we presume it is. Lets lift the lid on the key division:
+As the money is coming from one place, at least we presume it is. Let us lift the lid on the key division:
 
 | Wholesale Services Breakdown | 2000 | % of Total | 1999 | % of Total | 1998 | % of Total |
 |---|---:|---:|---:|---:|---:|---:|
@@ -213,7 +214,7 @@ There is the hint, without the number. Mark to Market accounting. We know one of
 The financing line is the tell tale line here. In 1998 and 1999 Enron raised $2.3–2.5bn in financing just to cover investing outflows — the business was not self-funding. In 2000 the reported operating cash jumps to $4.8bn, a possibly implausible increase which looks like the business finally generating real cash (maybe), but that figure is heavily distorted by the trading book being classified as operating rather than investing activity.
 
 
-The single most important tool in credit analysis is not the income statement. It is not the EBITDA multiple. It is the cash flow statement, and specifically the divergence between reported earnings and operating cash flow. Its not about 'accounting for the numbers', its being able to subjectively opine as to *if* the numbers as stated reflect reality, make sense, are *plausible*.....
+The single most important tool in credit analysis is not the income statement. It is not the EBITDA multiple. It is the cash flow statement, and specifically the divergence between reported earnings and operating cash flow. It's not about 'accounting for the numbers', its being able to subjectively opine as to *if* the numbers as stated reflect reality, make sense, are *plausible*.....
 
 Enron's profits grew like a clock — smooth, consistent, relentlessly upward. Operating cash flow did not. For years the two lines diverged. This divergence is not noise. It is signal. It is the market telling you, in plain arithmetic, that the economic profits being reported are not being confirmed by external counterparties willing to part with actual money. Refer Quality of Earnings book review. If a company always posts earnings that beat estimates by a penny every time, you should be scared.
 
@@ -237,7 +238,7 @@ Booking the PV of speculative future cash flows from assets not yet built, in de
 
 ## Symptomatic Evidence
 
-Lets list out the key sins here. Let us assume medical science as our guide. Even though we have poshumous knwoledge (Enron is definately dead, so that is the correct turn of phrase here), what symptoms were evident before the patients decline? And from just these evident facts, can we conclude a diagnosis?
+Let us list out the key sins here. Let us assume medical science as our guide. Even though we have posthumous knowledge (Enron is definitely dead, so that is the correct turn of phrase here), what symptoms were evident before the patients decline? And from just these evident facts, can we conclude a diagnosis?
 
 ### Key Evidence of Enron's Downfall from the Financials
 
@@ -330,9 +331,10 @@ The failure modes will recur. The names will be different. The structures will b
 Always follow the cash.
 
 ---
+
 ## Credit Ratings
 
-The above has left credit ratings alone. Suffice to say that it was rated Invesment Grade, until it wasn't. Not Bonds don't default, the just get down rated really, really fast just prior to imploding.
+The above has left credit ratings alone. Suffice to say that it was rated Investment Grade, until it wasn't. Bonds don't default, they just get down rated really, really fast just prior to imploding.
 
 This is the U.S. Senate Governmental Affairs Committee staff report from January 2003,
 investigating whether Enron's bankers — principally Citigroup — applied improper pressure
@@ -354,9 +356,11 @@ This is an excellent overview of ratings, the history, and what they really mean
 
 
 ---
-## Further readings:
 
-The Smartest Guys in the Room — Bethany McLean & Peter Elkind. For the accounting mechanics specifically, Financial Shenanigans — Howard Schilit.
+## Further Reading
+
+- **The Smartest Guys in the Room** — Bethany McLean & Peter Elkind. For the accounting mechanics specifically, **Financial Shenanigans** — Howard Schilit.
+ — Bethany McLean & Peter Elkind. For the accounting mechanics specifically, Financial Shenanigans — Howard Schilit.
 
 [From Enron to Here on In: Unravelling the mysteries of financial reporting and valuation — LSE Executive Education](https://www.lse.ac.uk/study-at-lse/executive-education/insights/articles/from-enron-to-here-on-in-unravelling-the-mysteries-of-financial-reporting-and-valuation)
 
