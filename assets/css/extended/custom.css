@@ -1,3 +1,5 @@
+/* ── Roboto Flex font ── */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,700&display=swap');
 
 /* ── Active nav link colour ── */
 #menu a span.active {
@@ -10,20 +12,30 @@
     color: #8FAC59 !important;
 }
 
+/* ── Entry/post titles in list pages ── */
+.entry-header h2,
+.entry-hint-parent {
+    color: #8FAC59 !important;
+}
+
 /* ── Post title colour ── */
 .post-title,
 .post-single .post-title {
     color: #8FAC59 !important;
 }
 
-
-/* ── Roboto Flex font ── */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,700&display=swap');
-
-body, p, li, a, span, div, h1, h2, h3, h4, h5, h6,
-.post-content, .entry-content, .post-single {
-    font-family: 'Roboto Flex', sans-serif !important;
+/* ── Active menu item override ── */
+#menu .active {
+    color: #8FAC59 !important;
+    border-bottom: 2px solid #8FAC59 !important;
+    font-weight: 600 !important;
 }
+
+#menu a span.active {
+    color: #8FAC59 !important;
+    font-weight: 600 !important;
+}
+
 
 /* ── Light mode text fix ── */
 [data-theme="light"] body,

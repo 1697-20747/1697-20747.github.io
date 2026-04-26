@@ -116,9 +116,9 @@ You won't find me on social media, ever, this is it really unless you are on one
     url = "/blog/unhelpful-advice/"
     weight = 80
   [[menu.main]]
-    identifier = "books"
+    identifier = "blog/books"
     name = "Books"
-    url = "/books/"
+    url = "/blog/books/"
     weight = 90
   [[menu.main]]
     identifier = "about"
