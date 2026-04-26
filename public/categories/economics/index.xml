@@ -6,7 +6,7 @@
     <description>Recent content in Economics on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 03 Apr 2026 09:42:06 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2026 17:32:43 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/economics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why Inflation Measurement Is Harder Than You Think</title>
@@ -14,6 +14,13 @@
       <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/economics/inflation-measurement/</guid>
       <description>The CPI is everywhere, but how it&amp;#39;s actually constructed reveals some uncomfortable tradeoffs.</description>
+    </item>
+    <item>
+      <title>Its All In The Tail</title>
+      <link>http://localhost:1313/blog/economics/its-all-in-the-tail/</link>
+      <pubDate>Sun, 12 Apr 2026 17:32:43 +0000</pubDate>
+      <guid>http://localhost:1313/blog/economics/its-all-in-the-tail/</guid>
+      <description>A short summary shown in post listings.</description>
     </item>
     <item>
       <title>Interest Rates Are Interesting</title>

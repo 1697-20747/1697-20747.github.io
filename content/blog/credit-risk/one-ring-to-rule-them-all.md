@@ -1,7 +1,7 @@
 ---
 title: "One Ring to Rule them All...."
 date: 2026-03-21T22:07:39Z
-draft: true
+draft: false
 categories: ["credit-risk"]
 tags: []
 description: "Mapping CRR exposures against legal entity heirarchy from legacy systems. A dynamic overlay approach to maintain full data integrity"

@@ -14,7 +14,7 @@ Finance. Primarily credit — analysis, structure, the forensics of how things f
 
 ## The rest of the time
 
-Low-level programming on small devices. Embedded systems, constrained hardware, the kind of work where every byte is a negotiation. This requires a working understanding of machine learning, which means most of the comp science writing here sits at that intersection — the plumbing beneath the tools everyone else uses without thinking about. Currently trying to build navigation from optical feed using 3d object tracking, and vector path determination. Its done in 3D, but working on 2D in the main. This is part of a wider project. Right now trying to run it all on a Luckfox Pico Ultra W, with a few bits and bobs added (position, camera, etc, etc).
+Low-level programming on small devices. Embedded systems, constrained hardware, the kind of work where the use of every byte is a negotiation. This requires a working understanding of machine learning, which means most of the comp science writing here sits at that intersection — the plumbing beneath the tools everyone else uses without thinking about. 
 
 None of the comp science is the day job. It is personal time, chosen freely. That distinction matters.
 
@@ -24,7 +24,7 @@ The text is not AI generated. The informal phrasing is deliberate — clarity do
 
 ## On social media
 
-No. This is it. There is a very small number of WhatsApp groups, and that is the full extent of it. If you want to get in touch, LinkedIn is in the footer.
+No. This is it. There is a very small number of WhatsApp groups, and that is the full extent of it. If you want to get in touch, LinkedIn is in the footer. But I am not particularly interested. There is no comments section here, that is not the intended purpse.
 
 ## The name
 
@@ -163,244 +163,60 @@ Worth reading alongside *Quality of Earnings* — both books are ultimately abou
 EOF
 ```
 
+I tend to use a lot of bash files for my work. So for say historical fx analysis from a csv file, I will take a look manually in VS Studio or Pycharm until I have a feel for the shape of the data. Then, lets say I want a basic stats dashboard, I wil almost always set up the workings in a stand alone bash file, all the code contained, all libraries referenced in a requirements file. Slow is fast. It is easier to go back to, cleaner. And faster, as if you need to you can just change the csv file with fresh data, then re run the analysis on one go by running the same bash.sh file, with no changes. If you are careful with your work and content in the bash scripts, I find it very helpful. Also, you back track to edit out errors. Good luck with that using AI. To be clear, I often use AI for methods within the bash files, but I keep the work in manner that I can replicate it as needs be. A lot of these larger post are iterations, they won't be finished for perhaps years as I get through he backlog. Each to their own.
+
+
 ---
 
 ## File Structure
 
-Here is the file structure of the page if you are looking to replicate the concept. I find basic web pages run this way are easy to manage, as you can edit file however you like. The site refreshes when you run hugo. There is back up shell script so that it copies (for the last 10 runs) each update. This can help you catch any errors.
+Here is the file structure of the page if you are looking to replicate the concept. I find basic web pages run this way are easy to manage, as you can edit file however you like. I do not like auto generators, you lose control very quickly. Its not fancy, but it works. I can strip out that data quite easily afterwards. The site refreshes when you run hugo. There is back up shell script so that it copies (for the last 10 runs) each update. This can help you catch any errors.
 
 ```
-
+.
 ├── archetypes
-│   └── blog.md
 ├── assets
 │   └── css
-│       └── extended
-│           └── custom-fonts.css
 ├── content
 │   ├── about
-│   │   ├── _index.md
-│   │   └── about_index.md
+│   └── blog
+├── layouts
 │   ├── blog
-│   │   ├── bjj
-│   │   │   └── _index.md
-│   │   ├── comp-science
-│   │   │   └── _index.md
-│   │   ├── credit-risk
-│   │   │   ├── _index.md
-│   │   │   └── enron-a-look-back.md
-│   │   ├── data-analytics
-│   │   │   └── _index.md
-│   │   ├── economics
-│   │   │   ├── _index.md
-│   │   │   └── inflation-measurement.md
-│   │   ├── other
-│   │   │   └── _index.md
-│   │   ├── philosophy
-│   │   │   └── _index.md
-│   │   ├── unhelpful_obs
-│   │   │   └── my-post-title.md
-│   │   ├── unhelpful-advice
-│   │   │   ├── _index.md
-│   │   │   ├── define-the-problem.md
-│   │   │   └── definitions-matter.md
-│   │   └── _index.md
+│   ├── partials
+│   └── shortcodes
+├── public
+│   ├── about
+│   ├── assets
+│   ├── blog
 │   ├── books
-│   │   ├── _index.md
-│   │   ├── art-of-doing-science-hamming.md
-│   │   ├── art-of-statistics-spiegelhalter.md
-│   │   ├── behave-sapolsky.md
-│   │   ├── books-index.md
-│   │   ├── brain-of-the-firm-beer.md
-│   │   ├── challenger-higginbotham.md
-│   │   ├── concise-history-of-warfare.md
-│   │   ├── crashed-tooze.md
-│   │   ├── debt-graeber.md
-│   │   ├── deep-learning-goodfellow.md
-│   │   ├── determined-sapolsky.md
-│   │   ├── divine-comedy.md
-│   │   ├── euro-stiglitz.md
-│   │   ├── financial-shenanigans.md
-│   │   ├── fm-22-100-army-leadership.md
-│   │   ├── growth-susskind.md
-│   │   ├── irrational-exuberance.md
-│   │   ├── keeping-at-it-volcker.md
-│   │   ├── life-is-simple-mcfadden.md
-│   │   ├── lombard-street-bagehot.md
-│   │   ├── mind-of-the-strategist-ohmae.md
-│   │   ├── money-ferguson.md
-│   │   ├── noise-kahneman.md
-│   │   ├── on-competition-porter.md
-│   │   ├── once-an-eagle.md
-│   │   ├── price-of-time-chancellor.md
-│   │   ├── quality-of-earnings.md
-│   │   ├── radical-uncertainty-king-kay.md
-│   │   ├── red-notice-browder.md
-│   │   ├── royal-charter-bank-of-england.md
-│   │   ├── smartest-guys-in-the-room.md
-│   │   ├── spqr-beard.md
-│   │   ├── stress-test-geithner.md
-│   │   ├── the-signal-and-the-noise.md
-│   │   ├── third-pillar-rajan.md
-│   │   └── three-body-problem.md
-│   └── _index.md
-├── static
+│   ├── categories
+│   ├── css
 │   ├── data
-│   │   ├── a-millennium-of-macroeconomic-data-for-the-uk.xlsx
-│   │   └── Untitled.csv
-│   └── images
-│       ├── avatar.png
-│       └── Figure 1_ Causes of the difference between the RPI and CPIH inflation rates, 2006 to 2018 .png
-├── themes
-│   └── PaperMod
-│       ├── assets
-│       │   ├── css
-│       │   │   ├── common
-│       │   │   │   ├── 404.css
-│       │   │   │   ├── archive.css
-│       │   │   │   ├── footer.css
-│       │   │   │   ├── header.css
-│       │   │   │   ├── main.css
-│       │   │   │   ├── post-entry.css
-│       │   │   │   ├── post-single.css
-│       │   │   │   ├── profile-mode.css
-│       │   │   │   ├── search.css
-│       │   │   │   └── terms.css
-│       │   │   ├── core
-│       │   │   │   ├── license.css
-│       │   │   │   ├── reset.css
-│       │   │   │   ├── theme-vars.css
-│       │   │   │   └── zmedia.css
-│       │   │   ├── extended
-│       │   │   │   └── blank.css
-│       │   │   └── includes
-│       │   │       ├── chroma-mod.css
-│       │   │       ├── chroma-styles.css
-│       │   │       └── scroll-bar.css
-│       │   └── js
-│       │       ├── fastsearch.js
-│       │       ├── fuse.basic.min.js
-│       │       └── license.js
-│       ├── i18n
-│       │   ├── ar.yaml
-│       │   ├── be.yaml
-│       │   ├── bg.yaml
-│       │   ├── bn.yaml
-│       │   ├── ca.yaml
-│       │   ├── ckb.yaml
-│       │   ├── cs.yaml
-│       │   ├── da.yaml
-│       │   ├── de.yaml
-│       │   ├── el.yaml
-│       │   ├── en.yaml
-│       │   ├── eo.yaml
-│       │   ├── es.yaml
-│       │   ├── fa.yaml
-│       │   ├── fi.yaml
-│       │   ├── fr.yaml
-│       │   ├── he.yaml
-│       │   ├── hi.yaml
-│       │   ├── hr.yaml
-│       │   ├── hu.yaml
-│       │   ├── id.yaml
-│       │   ├── it.yaml
-│       │   ├── ja.yaml
-│       │   ├── ko.yaml
-│       │   ├── ku.yaml
-│       │   ├── mn.yaml
-│       │   ├── ms.yaml
-│       │   ├── nl.yaml
-│       │   ├── no.yaml
-│       │   ├── oc.yaml
-│       │   ├── pa.yaml
-│       │   ├── pl.yaml
-│       │   ├── pnb.yaml
-│       │   ├── pt.yaml
-│       │   ├── ro.yaml
-│       │   ├── ru.yaml
-│       │   ├── sk.yaml
-│       │   ├── sv.yaml
-│       │   ├── sw.yaml
-│       │   ├── th.yaml
-│       │   ├── tr.yaml
-│       │   ├── uk.yaml
-│       │   ├── uz.yaml
-│       │   ├── vi.yaml
-│       │   ├── zh-tw.yaml
-│       │   └── zh.yaml
-│       ├── images
-│       │   ├── screenshot.png
-│       │   └── tn.png
-│       ├── layouts
-│       │   ├── _default
-│       │   │   ├── _markup
-│       │   │   │   └── render-image.html
-│       │   │   ├── archives.html
-│       │   │   ├── baseof.html
-│       │   │   ├── index.json
-│       │   │   ├── list.html
-│       │   │   ├── llms.txt
-│       │   │   ├── rss.xml
-│       │   │   ├── search.html
-│       │   │   ├── single.html
-│       │   │   └── terms.html
-│       │   ├── partials
-│       │   │   ├── templates
-│       │   │   │   ├── _funcs
-│       │   │   │   │   └── get-page-images.html
-│       │   │   │   ├── opengraph.html
-│       │   │   │   ├── schema_json.html
-│       │   │   │   └── twitter_cards.html
-│       │   │   ├── anchored_headings.html
-│       │   │   ├── author.html
-│       │   │   ├── breadcrumbs.html
-│       │   │   ├── comments.html
-│       │   │   ├── cover.html
-│       │   │   ├── edit_post.html
-│       │   │   ├── extend_footer.html
-│       │   │   ├── extend_head.html
-│       │   │   ├── footer.html
-│       │   │   ├── head.html
-│       │   │   ├── header.html
-│       │   │   ├── home_info.html
-│       │   │   ├── index_profile.html
-│       │   │   ├── post_canonical.html
-│       │   │   ├── post_meta.html
-│       │   │   ├── post_nav_links.html
-│       │   │   ├── share_icons.html
-│       │   │   ├── social_icons.html
-│       │   │   ├── svg.html
-│       │   │   ├── toc.html
-│       │   │   └── translation_list.html
-│       │   ├── shortcodes
-│       │   │   ├── collapse.html
-│       │   │   ├── figure.html
-│       │   │   ├── inTextImg.html
-│       │   │   ├── ltr.html
-│       │   │   ├── rawhtml.html
-│       │   │   └── rtl.html
-│       │   ├── 404.html
-│       │   └── robots.txt
-│       ├── go.mod
-│       ├── LICENSE
-│       ├── README.md
-│       └── theme.toml
-├── backup.sh
-├── bash script new book post.pages
-├── blog update bash format.pages
-├── config.toml
-├── graph_helper.py
-├── new-post.sh
-├── publish.sh
-└── README.md
+│   ├── economics
+│   ├── images
+│   ├── js
+│   ├── New Folder With Items
+│   ├── page
+│   ├── tags
+│   └── tools
+├── resources
+│   └── _gen
+├── static
+│   ├── css
+│   ├── data
+│   ├── images
+│   ├── js
+│   └── tools
+└── themes
+    └── PaperMod
 
 ```
 ---
 
-The two pages files are just script saved into a Mac pages files as reminder. They don't impact the actual web page generated in html in any way.
+
 
 ---
 
 *The views here are personal. They do not represent any employer, client, or institution.*
 
-© 2026 onwards. All rights reserved.
+© 2026 onwards to the Author. All rights reserved.

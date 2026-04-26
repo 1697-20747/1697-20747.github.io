@@ -1,0 +1,30 @@
+{{/* layouts/shortcodes/csvtable.html */}}
+{{ $file := .Get "file" }}
+{{ $content := readFile $file }}
+
+{{/* Split into lines, remove empty lines */}}
+{{ $lines := split (replace $content "\r\n" "\n") "\n" | where "len" "gt" 0 }}
+
+<table class="csv-table">
+  <thead>
+    <tr>
+      {{ $headerCells := split (index $lines 0) "," }}
+      {{ range $headerCells }}
+        <th>{{ . | safeHTML }}</th>
+      {{ end }}
+    </tr>
+  </thead>
+  <tbody>
+    {{ range $i, $line := $lines }}
+      {{ if gt $i 0 }}
+      <tr class="{{ if modBool $i 2 }}even{{ else }}odd{{ end }}">
+        {{/* Inline parse cells, simple comma split */}}
+        {{ $cells := split $line "," }}
+        {{ range $cells }}
+          <td>{{ . | safeHTML }}</td>
+        {{ end }}
+      </tr>
+      {{ end }}
+    {{ end }}
+  </tbody>
+</table>

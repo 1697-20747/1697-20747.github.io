@@ -10,30 +10,16 @@
     <atom:link href="http://localhost:1313/tags/behaviour/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Behave</title>
-      <link>http://localhost:1313/books/behave-sapolsky/</link>
+      <link>http://localhost:1313/blog/books/behave-sapolsky/</link>
       <pubDate>Tue, 30 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/behave-sapolsky/</guid>
-      <description>Why humans do what they do — from the neuroscience of a single moment of behaviour back through hormones, evolution, and culture.</description>
-    </item>
-    <item>
-      <title>Behave</title>
-      <link>http://localhost:1313/books/files/behave-sapolsky/</link>
-      <pubDate>Tue, 30 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/behave-sapolsky/</guid>
+      <guid>http://localhost:1313/blog/books/behave-sapolsky/</guid>
       <description>Why humans do what they do — from the neuroscience of a single moment of behaviour back through hormones, evolution, and culture.</description>
     </item>
     <item>
       <title>Noise: A Flaw in Human Judgment</title>
-      <link>http://localhost:1313/books/files/noise-kahneman/</link>
+      <link>http://localhost:1313/blog/books/noise-kahneman/</link>
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/noise-kahneman/</guid>
-      <description>Where bias is systematic error, noise is random scatter — and it&amp;#39;s everywhere in human decisions.</description>
-    </item>
-    <item>
-      <title>Noise: A Flaw in Human Judgment</title>
-      <link>http://localhost:1313/books/noise-kahneman/</link>
-      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/noise-kahneman/</guid>
+      <guid>http://localhost:1313/blog/books/noise-kahneman/</guid>
       <description>Where bias is systematic error, noise is random scatter — and it&amp;#39;s everywhere in human decisions.</description>
     </item>
   </channel>

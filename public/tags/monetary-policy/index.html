@@ -10,7 +10,7 @@
 <meta name="description" content="Writing on Economics, Data Analytics, Computer Science &amp; more.">
 <meta name="author" content="Your Name">
 <link rel="canonical" href="http://localhost:1313/tags/monetary-policy/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.f008ada61313eee33ba760ef3adae6a8ad90031478c6c0312a8703b7ca1692ce.css" integrity="sha256-8AitphMT7uM7p2DvOtrmqK2QAxR4xsAxKocDt8oWks4=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9fe76af3e1f68dd9b13cd48d1b58fa03bd04942e9cbfe5e1860137d2839c32e3.css" integrity="sha256-n&#43;dq8&#43;H2jdmxPNSNG1j6A70ElC6cv&#43;XhhgE30oOcMuM=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -137,22 +137,7 @@
   <footer class="entry-footer">
 <div class="post-meta"><span title='2024-01-11 00:00:00 +0000 UTC'>January 11, 2024</span>&nbsp;·&nbsp;1 min</div>
 </footer>
-  <a class="entry-link" aria-label="post link to The Price of Time" href="http://localhost:1313/books/files/price-of-time-chancellor/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">The Price of Time
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>A history of interest rates from ancient Mesopotamia to the post-2008 era of near-zero rates. Makes a compelling case that cheap money has deep and lasting consequences.
-</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2024-01-11 00:00:00 +0000 UTC'>January 11, 2024</span>&nbsp;·&nbsp;1 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to The Price of Time" href="http://localhost:1313/books/price-of-time-chancellor/"></a>
+  <a class="entry-link" aria-label="post link to The Price of Time" href="http://localhost:1313/blog/books/price-of-time-chancellor/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -167,22 +152,7 @@
   <footer class="entry-footer">
 <div class="post-meta"><span title='2024-01-09 00:00:00 +0000 UTC'>January 9, 2024</span>&nbsp;·&nbsp;2 min</div>
 </footer>
-  <a class="entry-link" aria-label="post link to Keeping At It: The Quest for Sound Money and Good Government" href="http://localhost:1313/books/files/keeping-at-it-volcker/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Keeping At It: The Quest for Sound Money and Good Government
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Paul Volcker’s memoir and reflection on public service, centered on his fight for “sound money” — stable currency, low inflation, and financial integrity — as a foundation for good government. Volcker is best known for his tenure as Chairman of the Federal Reserve (1979–1987), where he aggressively raised interest rates to break the back of 1970s inflation. The policy caused a deep recession but ultimately restored price stability and credibility to U.S. monetary policy.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2024-01-09 00:00:00 +0000 UTC'>January 9, 2024</span>&nbsp;·&nbsp;2 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to Keeping At It: The Quest for Sound Money and Good Government" href="http://localhost:1313/books/keeping-at-it-volcker/"></a>
+  <a class="entry-link" aria-label="post link to Keeping At It: The Quest for Sound Money and Good Government" href="http://localhost:1313/blog/books/keeping-at-it-volcker/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -197,22 +167,7 @@
   <footer class="entry-footer">
 <div class="post-meta"><span title='2024-01-08 00:00:00 +0000 UTC'>January 8, 2024</span>&nbsp;·&nbsp;1 min</div>
 </footer>
-  <a class="entry-link" aria-label="post link to Euro" href="http://localhost:1313/books/euro-stiglitz/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Euro
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>A rigorous critique of the eurozone’s structural flaws from a Nobel laureate. Whether you agree with his conclusions or not, the institutional analysis is excellent.
-</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2024-01-08 00:00:00 +0000 UTC'>January 8, 2024</span>&nbsp;·&nbsp;1 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to Euro" href="http://localhost:1313/books/files/euro-stiglitz/"></a>
+  <a class="entry-link" aria-label="post link to Euro" href="http://localhost:1313/blog/books/euro-stiglitz/"></a>
 </article>
     </main>
     
@@ -229,7 +184,25 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a>
+</a><script>
+function highlightMenu() {
+    const path = window.location.pathname;
+    console.log("PATH:", path);
+    document.querySelectorAll("#menu a").forEach(function (link) {
+        const href = link.getAttribute("href");
+        console.log("MENU HREF:", href, "MATCH:", href && href !== "/" && path.startsWith(href));
+        if (href && href !== "/" && path.startsWith(href)) {
+            const span = link.querySelector("span");
+            if (span) {
+                span.style.color = "#3ecf8e";
+                span.style.fontWeight = "600";
+            }
+        }
+    });
+}
+
+setTimeout(highlightMenu, 200);
+</script>
 
 <script>
     let menu = document.getElementById('menu');

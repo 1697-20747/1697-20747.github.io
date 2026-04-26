@@ -10,16 +10,9 @@
     <atom:link href="http://localhost:1313/tags/crisis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Stress Test: Reflections on Financial Crises</title>
-      <link>http://localhost:1313/books/files/stress-test-geithner/</link>
+      <link>http://localhost:1313/blog/books/stress-test-geithner/</link>
       <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/stress-test-geithner/</guid>
-      <description>The former U.S. Treasury Secretary&amp;#39;s candid account of navigating the 2008 financial crisis from the inside.</description>
-    </item>
-    <item>
-      <title>Stress Test: Reflections on Financial Crises</title>
-      <link>http://localhost:1313/books/stress-test-geithner/</link>
-      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/stress-test-geithner/</guid>
+      <guid>http://localhost:1313/blog/books/stress-test-geithner/</guid>
       <description>The former U.S. Treasury Secretary&amp;#39;s candid account of navigating the 2008 financial crisis from the inside.</description>
     </item>
   </channel>

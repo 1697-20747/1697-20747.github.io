@@ -10,30 +10,16 @@
     <atom:link href="http://localhost:1313/tags/fiction/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Three-Body Problem (series)</title>
-      <link>http://localhost:1313/books/files/three-body-problem/</link>
+      <link>http://localhost:1313/blog/books/three-body-problem/</link>
       <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/three-body-problem/</guid>
-      <description>Hard sci-fi on a grand scale. Starts with China&amp;#39;s Cultural Revolution and ends at the edge of the universe.</description>
-    </item>
-    <item>
-      <title>The Three-Body Problem (series)</title>
-      <link>http://localhost:1313/books/three-body-problem/</link>
-      <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/three-body-problem/</guid>
+      <guid>http://localhost:1313/blog/books/three-body-problem/</guid>
       <description>Hard sci-fi on a grand scale. Starts with China&amp;#39;s Cultural Revolution and ends at the edge of the universe.</description>
     </item>
     <item>
       <title>Once an Eagle</title>
-      <link>http://localhost:1313/books/files/once-an-eagle/</link>
+      <link>http://localhost:1313/blog/books/once-an-eagle/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/once-an-eagle/</guid>
-      <description>A sweeping military novel following two officers across decades of American wars. One of the finest studies of leadership, character, and moral compromise ever written.</description>
-    </item>
-    <item>
-      <title>Once an Eagle</title>
-      <link>http://localhost:1313/books/once-an-eagle/</link>
-      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/once-an-eagle/</guid>
+      <guid>http://localhost:1313/blog/books/once-an-eagle/</guid>
       <description>A sweeping military novel following two officers across decades of American wars. One of the finest studies of leadership, character, and moral compromise ever written.</description>
     </item>
   </channel>

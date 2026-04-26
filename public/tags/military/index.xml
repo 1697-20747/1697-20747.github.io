@@ -10,44 +10,23 @@
     <atom:link href="http://localhost:1313/tags/military/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The U.S. Army Leadership Field Manual (FM 22-100)</title>
-      <link>http://localhost:1313/books/files/fm-22-100-army-leadership/</link>
+      <link>http://localhost:1313/blog/books/fm-22-100-army-leadership/</link>
       <pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/fm-22-100-army-leadership/</guid>
-      <description>The official leadership doctrine used in every U.S. Army officer training programme for over fifty years. Built around the core principle of &amp;#39;Be, Know, Do&amp;#39;.</description>
-    </item>
-    <item>
-      <title>The U.S. Army Leadership Field Manual (FM 22-100)</title>
-      <link>http://localhost:1313/books/fm-22-100-army-leadership/</link>
-      <pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/fm-22-100-army-leadership/</guid>
+      <guid>http://localhost:1313/blog/books/fm-22-100-army-leadership/</guid>
       <description>The official leadership doctrine used in every U.S. Army officer training programme for over fifty years. Built around the core principle of &amp;#39;Be, Know, Do&amp;#39;.</description>
     </item>
     <item>
       <title>A Concise History of Warfare</title>
-      <link>http://localhost:1313/books/concise-history-of-warfare/</link>
+      <link>http://localhost:1313/blog/books/concise-history-of-warfare/</link>
       <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/concise-history-of-warfare/</guid>
-      <description>Montgomery&amp;#39;s own account of warfare from ancient times to the mid-twentieth century, written with the authority of a man who commanded armies across North Africa and Northwest Europe.</description>
-    </item>
-    <item>
-      <title>A Concise History of Warfare</title>
-      <link>http://localhost:1313/books/files/concise-history-of-warfare/</link>
-      <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/concise-history-of-warfare/</guid>
+      <guid>http://localhost:1313/blog/books/concise-history-of-warfare/</guid>
       <description>Montgomery&amp;#39;s own account of warfare from ancient times to the mid-twentieth century, written with the authority of a man who commanded armies across North Africa and Northwest Europe.</description>
     </item>
     <item>
       <title>Once an Eagle</title>
-      <link>http://localhost:1313/books/files/once-an-eagle/</link>
+      <link>http://localhost:1313/blog/books/once-an-eagle/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/once-an-eagle/</guid>
-      <description>A sweeping military novel following two officers across decades of American wars. One of the finest studies of leadership, character, and moral compromise ever written.</description>
-    </item>
-    <item>
-      <title>Once an Eagle</title>
-      <link>http://localhost:1313/books/once-an-eagle/</link>
-      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/once-an-eagle/</guid>
+      <guid>http://localhost:1313/blog/books/once-an-eagle/</guid>
       <description>A sweeping military novel following two officers across decades of American wars. One of the finest studies of leadership, character, and moral compromise ever written.</description>
     </item>
   </channel>

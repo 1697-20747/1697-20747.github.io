@@ -10,7 +10,7 @@
 <meta name="description" content=" - [1697, 20747]">
 <meta name="author" content="Your Name">
 <link rel="canonical" href="http://localhost:1313/blog/unhelpful-advice/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.f008ada61313eee33ba760ef3adae6a8ad90031478c6c0312a8703b7ca1692ce.css" integrity="sha256-8AitphMT7uM7p2DvOtrmqK2QAxR4xsAxKocDt8oWks4=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9fe76af3e1f68dd9b13cd48d1b58fa03bd04942e9cbfe5e1860137d2839c32e3.css" integrity="sha256-n&#43;dq8&#43;H2jdmxPNSNG1j6A70ElC6cv&#43;XhhgE30oOcMuM=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -144,6 +144,69 @@
 </div>
 
 <div id="posts-container">
+  <article class="post-entry" data-post>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">Hard Power
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p> “Before you step out of that circle give me a reply to lay before the senate” - Gaius Popillius Laenas, Consul of Rome
+Roman consul, Gaius Popillius Laenas drew the veritable line in the sand. That line being a circle. It was circa 168 BCE, and Antiochus IV Epiphanes was advancing on Alexandria,...</p>
+    </div>
+    <a class="entry-link" aria-label="post link to Hard Power" href="http://localhost:1313/blog/unhelpful-advice/hard-power/"></a>
+  </article>
+  <article class="post-entry" data-post>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">Power Absolute
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p> “I cannot accept your canon that we are to judge Pope and King unlike other men, with a favourable presumption that they did no wrong. If there is any presumption it is the other way against holders of power, increasing as the power increases. Historic responsibility has to make up for the want of...</p>
+    </div>
+    <a class="entry-link" aria-label="post link to Power Absolute" href="http://localhost:1313/blog/unhelpful-advice/power-absolute/"></a>
+  </article>
+  <article class="post-entry" data-post>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">Self Wareness
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p> “Bond, this may be too much for a blunt instrument to understand but arrogance and self awareness seldom go hand in hand.” - M to Bond. Casino Royale (2006). 24 m mark. The one with Daniel Craig as the new Bond in the gritty black and white opening scenes.
+</p>
+    </div>
+    <a class="entry-link" aria-label="post link to Self Wareness" href="http://localhost:1313/blog/unhelpful-advice/self-wareness/"></a>
+  </article>
+  <article class="post-entry" data-post>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">Agents Of Chaos
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p> “So I think the industry just has to reconfigure in so many ways that its like the customer is not the human any more. Its like gents who are acting on behalf of humans, and this industry refactoring may be substantial.” Andrej Karpathy. Source: https://youtu.be/kwSVtQ7dziU?si=TfZ3UdUDkt3J_8C_...</p>
+    </div>
+    <a class="entry-link" aria-label="post link to Agents Of Chaos" href="http://localhost:1313/blog/unhelpful-advice/agents-of-chaos/"></a>
+  </article>
+  <article class="post-entry" data-post>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">Canonical Failure
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p> “…….if that process goes wrong - if the implementation of a burst of investment opportunities in some sectors is not matched by a holding back of investment in other sectors and by restraint in current consumption by households and the government - too much spending will be brought forward from the...</p>
+    </div>
+    <a class="entry-link" aria-label="post link to Canonical Failure" href="http://localhost:1313/blog/unhelpful-advice/canonical-failure/"></a>
+  </article>
+  <article class="post-entry" data-post>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">Final Sin
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p> “In a world of thieves, the only final sin is stupidity.” Chris B
+</p>
+    </div>
+    <a class="entry-link" aria-label="post link to Final Sin" href="http://localhost:1313/blog/unhelpful-advice/final-sin/"></a>
+  </article>
   <article class="post-entry" data-post>
     <header class="entry-header">
       <h2 class="entry-hint-parent">Its A Game
@@ -514,7 +577,8 @@ Source: Cult of Personality, Living Colour. 2026, we live in the era of the...</
       </h2>
     </header>
     <div class="entry-content">
-      <p> No point being right in an argument with a wrong general.
+      <p> “No point being a right private in an argument with a wrong general.” - Anonymous
+This is akin to the arguing with an idiot makes you an idiot too, meme.
 </p>
     </div>
     <a class="entry-link" aria-label="post link to Wrong General" href="http://localhost:1313/blog/unhelpful-advice/wrong-general/"></a>
@@ -550,7 +614,25 @@ function shufflePosts() {
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a>
+</a><script>
+function highlightMenu() {
+    const path = window.location.pathname;
+    console.log("PATH:", path);
+    document.querySelectorAll("#menu a").forEach(function (link) {
+        const href = link.getAttribute("href");
+        console.log("MENU HREF:", href, "MATCH:", href && href !== "/" && path.startsWith(href));
+        if (href && href !== "/" && path.startsWith(href)) {
+            const span = link.querySelector("span");
+            if (span) {
+                span.style.color = "#3ecf8e";
+                span.style.fontWeight = "600";
+            }
+        }
+    });
+}
+
+setTimeout(highlightMenu, 200);
+</script>
 
 <script>
     let menu = document.getElementById('menu');

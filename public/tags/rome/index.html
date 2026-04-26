@@ -10,7 +10,7 @@
 <meta name="description" content="Writing on Economics, Data Analytics, Computer Science &amp; more.">
 <meta name="author" content="Your Name">
 <link rel="canonical" href="http://localhost:1313/tags/rome/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.f008ada61313eee33ba760ef3adae6a8ad90031478c6c0312a8703b7ca1692ce.css" integrity="sha256-8AitphMT7uM7p2DvOtrmqK2QAxR4xsAxKocDt8oWks4=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9fe76af3e1f68dd9b13cd48d1b58fa03bd04942e9cbfe5e1860137d2839c32e3.css" integrity="sha256-n&#43;dq8&#43;H2jdmxPNSNG1j6A70ElC6cv&#43;XhhgE30oOcMuM=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -138,23 +138,7 @@ Observations We have not changed, have we? Self-importance, misogyny, self-inter
   <footer class="entry-footer">
 <div class="post-meta"><span title='2024-02-01 00:00:00 +0000 UTC'>February 1, 2024</span>&nbsp;·&nbsp;1 min</div>
 </footer>
-  <a class="entry-link" aria-label="post link to SPQR" href="http://localhost:1313/books/files/spqr-beard/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">SPQR
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>A history of Rome that focuses on how Rome worked as a society rather than just the emperors and battles. Beard is a brilliant classicist and a sharp writer.
-Observations We have not changed, have we? Self-importance, misogyny, self-interest, fraud, the pursuit of power, murder. Etc. Oh well — hygiene and medicine are better one supposes. Not many Cincinnatus in the world from then until now. Can’t see any of the current lot giving back power without the pre-thrashing election result tossing them out on their backside.
-</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2024-02-01 00:00:00 +0000 UTC'>February 1, 2024</span>&nbsp;·&nbsp;1 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to SPQR" href="http://localhost:1313/books/spqr-beard/"></a>
+  <a class="entry-link" aria-label="post link to SPQR" href="http://localhost:1313/blog/books/spqr-beard/"></a>
 </article>
     </main>
     
@@ -171,7 +155,25 @@ Observations We have not changed, have we? Self-importance, misogyny, self-inter
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a>
+</a><script>
+function highlightMenu() {
+    const path = window.location.pathname;
+    console.log("PATH:", path);
+    document.querySelectorAll("#menu a").forEach(function (link) {
+        const href = link.getAttribute("href");
+        console.log("MENU HREF:", href, "MATCH:", href && href !== "/" && path.startsWith(href));
+        if (href && href !== "/" && path.startsWith(href)) {
+            const span = link.querySelector("span");
+            if (span) {
+                span.style.color = "#3ecf8e";
+                span.style.fontWeight = "600";
+            }
+        }
+    });
+}
+
+setTimeout(highlightMenu, 200);
+</script>
 
 <script>
     let menu = document.getElementById('menu');

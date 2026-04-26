@@ -6,7 +6,7 @@
     <description>Recent content in Unhelpful Advice on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 04 Apr 2026 12:10:09 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2026 09:10:22 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why Inflation Measurement Is Harder Than You Think</title>
@@ -14,6 +14,87 @@
       <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/economics/inflation-measurement/</guid>
       <description>The CPI is everywhere, but how it&amp;#39;s actually constructed reveals some uncomfortable tradeoffs.</description>
+    </item>
+    <item>
+      <title>Details Matter</title>
+      <link>http://localhost:1313/blog/credit-risk/details-matter/</link>
+      <pubDate>Sat, 25 Apr 2026 09:10:22 +0000</pubDate>
+      <guid>http://localhost:1313/blog/credit-risk/details-matter/</guid>
+      <description>A sovereign wealth fund paid $800 million for the Chrysler Building in 2008 and sold it a decade later for $150 million, largely because a punishing ground lease made the building structurally unprofitable for any owner. The buyers fared no better — one went bankrupt, the other defaulted on rent — and a New York court terminated their lease in 2024, leaving the building worth less than ever and the land owner, Cooper Union, back in control.</description>
+    </item>
+    <item>
+      <title>Its All In The Tail</title>
+      <link>http://localhost:1313/blog/economics/its-all-in-the-tail/</link>
+      <pubDate>Sun, 12 Apr 2026 17:32:43 +0000</pubDate>
+      <guid>http://localhost:1313/blog/economics/its-all-in-the-tail/</guid>
+      <description>A short summary shown in post listings.</description>
+    </item>
+    <item>
+      <title>Hard Power</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/hard-power/</link>
+      <pubDate>Sun, 12 Apr 2026 12:22:15 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/hard-power/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;“Before you step out of that circle give me a reply to lay before the senate” - Gaius Popillius Laenas, Consul of Rome&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Roman consul, Gaius Popillius Laenas drew the veritable line in the sand. That line being a circle. It was circa 168 BCE, and Antiochus IV Epiphanes was advancing on Alexandria, threatening to conquer Egypt. Rome was not impressed. One single man, with a small retinue, standing in front of an entire army, delivered quite the message. Antiochus IV pondered, and caved to the credible threat of Rome. He placed in his hand the Roman decree, or senatus-consultum ordering him to put an end at once to the war with Ptolemy, before stating the ultimatum as above. Source: Polybius, Greek historian. He was a contemporary of the time.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Power Absolute</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/power-absolute/</link>
+      <pubDate>Sun, 12 Apr 2026 12:02:21 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/power-absolute/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;I cannot accept your canon that we are to judge Pope and King unlike other men, with a favourable presumption that they did no wrong. If there is any presumption it is the other way against holders of power, increasing as the power increases. Historic responsibility has to make up for the want of legal responsibility. Power tends to corrupt and absolute power corrupts absolutely. Great men are almost always bad men, even when they exercise influence and not authority: still more when you superadd the tendency or the certainty of corruption by authority. There is no worse heresy than that the office sanctifies the holder of it. That is the point at which the negation of Catholicism and the negation of Liberalism meet and keep high festival, and the end learns to justify the means. You would hang a man of no position, like Ravaillac; but if what one hears is true, then Elizabeth asked the gaoler to murder Mary, and William III ordered his Scots minister to extirpate a clan. Here are the greater names coupled with the greater crimes. You would spare these criminals, for some mysterious reason. I would hang them, higher than Haman, for reasons of quite obvious justice; still more, still higher, for the sake of historical science.&amp;rdquo; - John Emerich Edward Dalberg, aka Lord Acton.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Self Wareness</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/self-wareness/</link>
+      <pubDate>Sun, 12 Apr 2026 10:37:22 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/self-wareness/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Bond, this may be too much for a blunt instrument to understand but arrogance and self awareness seldom go hand in hand.&amp;rdquo; - M to Bond. Casino Royale (2006). 24 m mark. The one with Daniel Craig as the new Bond in the gritty black and white opening scenes.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>The Big Give Away</title>
+      <link>http://localhost:1313/blog/comp-science/the-big-give-away/</link>
+      <pubDate>Sun, 12 Apr 2026 09:52:19 +0000</pubDate>
+      <guid>http://localhost:1313/blog/comp-science/the-big-give-away/</guid>
+      <description>A short summary shown in post listings.</description>
+    </item>
+    <item>
+      <title>Tree CLI</title>
+      <link>http://localhost:1313/blog/comp-science/tree-cli/</link>
+      <pubDate>Tue, 07 Apr 2026 10:04:08 +0000</pubDate>
+      <guid>http://localhost:1313/blog/comp-science/tree-cli/</guid>
+      <description>Quick reminder/overview on tree CLI tool.</description>
+    </item>
+    <item>
+      <title>Agents Of Chaos</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/agents-of-chaos/</link>
+      <pubDate>Mon, 06 Apr 2026 10:24:12 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/agents-of-chaos/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;So I think the industry just has to reconfigure in so many ways that its like the customer is not the human any more.  Its like gents who are acting on behalf of humans, and this industry refactoring may be substantial.&amp;rdquo; Andrej Karpathy. Source: &lt;a href=&#34;https://youtu.be/kwSVtQ7dziU?si=TfZ3UdUDkt3J_8C&#34;&gt;https://youtu.be/kwSVtQ7dziU?si=TfZ3UdUDkt3J_8C&lt;/a&gt;_ Timestamp: 14m12s&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Canonical Failure</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/canonical-failure/</link>
+      <pubDate>Mon, 06 Apr 2026 10:10:35 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/canonical-failure/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;“…&amp;hellip;.if that process goes wrong - if the implementation of a burst of investment opportunities in some sectors is not matched by a holding back of investment in other sectors and by restraint in current consumption by households and the government - too much spending will be brought forward from the future. Future spending will be insufficient to rake up all the output of the newly installed capital when the investment boom has subsided. &amp;quot; - Bernard Connolly. Source: Authors: Bernard Connolly Year Published: 2023 Country of Publication: United Kingdom Format: Hardback ISBN: 9781911397410 Number of Pages: 528 Publication Date: 07/09/2023. Page 20.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Final Sin</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/final-sin/</link>
+      <pubDate>Mon, 06 Apr 2026 10:07:17 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/final-sin/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;In a world of thieves, the only final sin is stupidity.&amp;rdquo; Chris B&lt;/p&gt;
+&lt;/blockquote&gt;</description>
     </item>
     <item>
       <title>Its A Game</title>
@@ -352,8 +433,9 @@ Oh, I&amp;rsquo;m the cult of personality&lt;/p&gt;
       <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/unhelpful-advice/wrong-general/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;No point being right in an argument with a wrong general.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;p&gt;&amp;ldquo;No point being a right private in an argument with a wrong general.&amp;rdquo; - Anonymous&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is akin to the arguing with an idiot makes you an idiot too, meme.&lt;/p&gt;</description>
     </item>
     <item>
       <title>One Ring to Rule them All....</title>
@@ -364,16 +446,16 @@ Oh, I&amp;rsquo;m the cult of personality&lt;/p&gt;
     </item>
     <item>
       <title>Quality of Earnings</title>
-      <link>http://localhost:1313/books/quality-of-earnings/</link>
+      <link>http://localhost:1313/blog/books/quality-of-earnings/</link>
       <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/quality-of-earnings/</guid>
+      <guid>http://localhost:1313/blog/books/quality-of-earnings/</guid>
       <description>The bible of forensic accounting. How to read what companies are actually telling you, versus what they want you to think.</description>
     </item>
     <item>
       <title>The Signal and the Noise</title>
-      <link>http://localhost:1313/books/the-signal-and-the-noise/</link>
+      <link>http://localhost:1313/blog/books/the-signal-and-the-noise/</link>
       <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/the-signal-and-the-noise/</guid>
+      <guid>http://localhost:1313/blog/books/the-signal-and-the-noise/</guid>
       <description>A tour through prediction across baseball, elections, finance and weather. The core argument is that most forecasters fail not from lack of data but from overconfidence in it.</description>
     </item>
     <item>
@@ -385,464 +467,233 @@ Oh, I&amp;rsquo;m the cult of personality&lt;/p&gt;
     </item>
     <item>
       <title>Red Notice</title>
-      <link>http://localhost:1313/books/files/red-notice-browder/</link>
+      <link>http://localhost:1313/blog/books/red-notice-browder/</link>
       <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/red-notice-browder/</guid>
-      <description>Part financial thriller, part human rights story. Browder built one of the largest hedge funds in Russia, then watched Putin&amp;#39;s system destroy it.</description>
-    </item>
-    <item>
-      <title>Red Notice</title>
-      <link>http://localhost:1313/books/red-notice-browder/</link>
-      <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/red-notice-browder/</guid>
+      <guid>http://localhost:1313/blog/books/red-notice-browder/</guid>
       <description>Part financial thriller, part human rights story. Browder built one of the largest hedge funds in Russia, then watched Putin&amp;#39;s system destroy it.</description>
     </item>
     <item>
       <title>SPQR</title>
-      <link>http://localhost:1313/books/files/spqr-beard/</link>
+      <link>http://localhost:1313/blog/books/spqr-beard/</link>
       <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/spqr-beard/</guid>
-      <description>A history of Rome that focuses on how Rome worked as a society rather than just the emperors and battles.</description>
-    </item>
-    <item>
-      <title>SPQR</title>
-      <link>http://localhost:1313/books/spqr-beard/</link>
-      <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/spqr-beard/</guid>
+      <guid>http://localhost:1313/blog/books/spqr-beard/</guid>
       <description>A history of Rome that focuses on how Rome worked as a society rather than just the emperors and battles.</description>
     </item>
     <item>
       <title>Determined</title>
-      <link>http://localhost:1313/books/determined-sapolsky/</link>
+      <link>http://localhost:1313/blog/books/determined-sapolsky/</link>
       <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/determined-sapolsky/</guid>
-      <description>Sapolsky&amp;#39;s follow-up makes the full case against free will. Provocative, rigorous, and uncomfortable. Read Behave first.</description>
-    </item>
-    <item>
-      <title>Determined</title>
-      <link>http://localhost:1313/books/files/determined-sapolsky/</link>
-      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/determined-sapolsky/</guid>
+      <guid>http://localhost:1313/blog/books/determined-sapolsky/</guid>
       <description>Sapolsky&amp;#39;s follow-up makes the full case against free will. Provocative, rigorous, and uncomfortable. Read Behave first.</description>
     </item>
     <item>
       <title>Behave</title>
-      <link>http://localhost:1313/books/behave-sapolsky/</link>
+      <link>http://localhost:1313/blog/books/behave-sapolsky/</link>
       <pubDate>Tue, 30 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/behave-sapolsky/</guid>
-      <description>Why humans do what they do — from the neuroscience of a single moment of behaviour back through hormones, evolution, and culture.</description>
-    </item>
-    <item>
-      <title>Behave</title>
-      <link>http://localhost:1313/books/files/behave-sapolsky/</link>
-      <pubDate>Tue, 30 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/behave-sapolsky/</guid>
+      <guid>http://localhost:1313/blog/books/behave-sapolsky/</guid>
       <description>Why humans do what they do — from the neuroscience of a single moment of behaviour back through hormones, evolution, and culture.</description>
     </item>
     <item>
       <title>Life Is Simple</title>
-      <link>http://localhost:1313/books/files/life-is-simple-mcfadden/</link>
+      <link>http://localhost:1313/blog/books/life-is-simple-mcfadden/</link>
       <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/life-is-simple-mcfadden/</guid>
-      <description>The story of Occam&amp;#39;s Razor and how the principle of simplicity drove scientific revolutions from Copernicus to Einstein to quantum mechanics.</description>
-    </item>
-    <item>
-      <title>Life Is Simple</title>
-      <link>http://localhost:1313/books/life-is-simple-mcfadden/</link>
-      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/life-is-simple-mcfadden/</guid>
+      <guid>http://localhost:1313/blog/books/life-is-simple-mcfadden/</guid>
       <description>The story of Occam&amp;#39;s Razor and how the principle of simplicity drove scientific revolutions from Copernicus to Einstein to quantum mechanics.</description>
     </item>
     <item>
       <title>The Art of Doing Science and Engineering</title>
-      <link>http://localhost:1313/books/art-of-doing-science-hamming/</link>
+      <link>http://localhost:1313/blog/books/art-of-doing-science-hamming/</link>
       <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/art-of-doing-science-hamming/</guid>
-      <description>Hamming spent decades at Bell Labs and asked himself: why do some people do great work and others don&amp;#39;t? This book is his answer.</description>
-    </item>
-    <item>
-      <title>The Art of Doing Science and Engineering</title>
-      <link>http://localhost:1313/books/files/art-of-doing-science-hamming/</link>
-      <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/art-of-doing-science-hamming/</guid>
+      <guid>http://localhost:1313/blog/books/art-of-doing-science-hamming/</guid>
       <description>Hamming spent decades at Bell Labs and asked himself: why do some people do great work and others don&amp;#39;t? This book is his answer.</description>
     </item>
     <item>
       <title>Brain of the Firm / Designing Freedom</title>
-      <link>http://localhost:1313/books/brain-of-the-firm-beer/</link>
+      <link>http://localhost:1313/blog/books/brain-of-the-firm-beer/</link>
       <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/brain-of-the-firm-beer/</guid>
-      <description>The foundational texts behind Beer&amp;#39;s concept of POSIWID — the purpose of a system is what it does.</description>
-    </item>
-    <item>
-      <title>Brain of the Firm / Designing Freedom</title>
-      <link>http://localhost:1313/books/files/brain-of-the-firm-beer/</link>
-      <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/brain-of-the-firm-beer/</guid>
+      <guid>http://localhost:1313/blog/books/brain-of-the-firm-beer/</guid>
       <description>The foundational texts behind Beer&amp;#39;s concept of POSIWID — the purpose of a system is what it does.</description>
     </item>
     <item>
       <title>The Art of Statistics</title>
-      <link>http://localhost:1313/books/art-of-statistics-spiegelhalter/</link>
+      <link>http://localhost:1313/blog/books/art-of-statistics-spiegelhalter/</link>
       <pubDate>Fri, 26 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/art-of-statistics-spiegelhalter/</guid>
-      <description>How to think with data rather than be misled by it. A guide to asking the right questions before trusting any number you are given.</description>
-    </item>
-    <item>
-      <title>The Art of Statistics</title>
-      <link>http://localhost:1313/books/files/art-of-statistics-spiegelhalter/</link>
-      <pubDate>Fri, 26 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/art-of-statistics-spiegelhalter/</guid>
+      <guid>http://localhost:1313/blog/books/art-of-statistics-spiegelhalter/</guid>
       <description>How to think with data rather than be misled by it. A guide to asking the right questions before trusting any number you are given.</description>
     </item>
     <item>
       <title>Deep Learning</title>
-      <link>http://localhost:1313/books/deep-learning-goodfellow/</link>
+      <link>http://localhost:1313/blog/books/deep-learning-goodfellow/</link>
       <pubDate>Thu, 25 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/deep-learning-goodfellow/</guid>
-      <description>THE textbook. Rigorous mathematical treatment of neural networks from first principles. Available free at deeplearningbook.org.</description>
-    </item>
-    <item>
-      <title>Deep Learning</title>
-      <link>http://localhost:1313/books/files/deep-learning-goodfellow/</link>
-      <pubDate>Thu, 25 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/deep-learning-goodfellow/</guid>
+      <guid>http://localhost:1313/blog/books/deep-learning-goodfellow/</guid>
       <description>THE textbook. Rigorous mathematical treatment of neural networks from first principles. Available free at deeplearningbook.org.</description>
     </item>
     <item>
       <title>Money: The Unauthorised Biography</title>
-      <link>http://localhost:1313/books/files/money-ferguson/</link>
+      <link>http://localhost:1313/blog/books/money-ferguson/</link>
       <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/money-ferguson/</guid>
-      <description>A sweeping history of money from ancient clay tablets to modern finance.</description>
-    </item>
-    <item>
-      <title>Money: The Unauthorised Biography</title>
-      <link>http://localhost:1313/books/money-ferguson/</link>
-      <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/money-ferguson/</guid>
+      <guid>http://localhost:1313/blog/books/money-ferguson/</guid>
       <description>A sweeping history of money from ancient clay tablets to modern finance.</description>
     </item>
     <item>
       <title>Radical Uncertainty: Decision-Making Beyond the Numbers</title>
-      <link>http://localhost:1313/books/files/radical-uncertainty-king-kay/</link>
+      <link>http://localhost:1313/blog/books/radical-uncertainty-king-kay/</link>
       <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/radical-uncertainty-king-kay/</guid>
-      <description>Two British economists argue that most real-world decisions can&amp;#39;t be reduced to probability and models.</description>
-    </item>
-    <item>
-      <title>Radical Uncertainty: Decision-Making Beyond the Numbers</title>
-      <link>http://localhost:1313/books/radical-uncertainty-king-kay/</link>
-      <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/radical-uncertainty-king-kay/</guid>
+      <guid>http://localhost:1313/blog/books/radical-uncertainty-king-kay/</guid>
       <description>Two British economists argue that most real-world decisions can&amp;#39;t be reduced to probability and models.</description>
     </item>
     <item>
       <title>Debt: The First 5,000 Years</title>
-      <link>http://localhost:1313/books/debt-graeber/</link>
+      <link>http://localhost:1313/blog/books/debt-graeber/</link>
       <pubDate>Mon, 22 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/debt-graeber/</guid>
-      <description>An anthropologist upends everything you thought you knew about money, barter, and debt.</description>
-    </item>
-    <item>
-      <title>Debt: The First 5,000 Years</title>
-      <link>http://localhost:1313/books/files/debt-graeber/</link>
-      <pubDate>Mon, 22 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/debt-graeber/</guid>
+      <guid>http://localhost:1313/blog/books/debt-graeber/</guid>
       <description>An anthropologist upends everything you thought you knew about money, barter, and debt.</description>
     </item>
     <item>
       <title>Noise: A Flaw in Human Judgment</title>
-      <link>http://localhost:1313/books/files/noise-kahneman/</link>
+      <link>http://localhost:1313/blog/books/noise-kahneman/</link>
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/noise-kahneman/</guid>
-      <description>Where bias is systematic error, noise is random scatter — and it&amp;#39;s everywhere in human decisions.</description>
-    </item>
-    <item>
-      <title>Noise: A Flaw in Human Judgment</title>
-      <link>http://localhost:1313/books/noise-kahneman/</link>
-      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/noise-kahneman/</guid>
+      <guid>http://localhost:1313/blog/books/noise-kahneman/</guid>
       <description>Where bias is systematic error, noise is random scatter — and it&amp;#39;s everywhere in human decisions.</description>
     </item>
     <item>
       <title>Growth: A Reckoning</title>
-      <link>http://localhost:1313/books/files/growth-susskind/</link>
+      <link>http://localhost:1313/blog/books/growth-susskind/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/growth-susskind/</guid>
-      <description>A rigorous challenge to the assumption that economic growth is always good or always necessary.</description>
-    </item>
-    <item>
-      <title>Growth: A Reckoning</title>
-      <link>http://localhost:1313/books/growth-susskind/</link>
-      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/growth-susskind/</guid>
+      <guid>http://localhost:1313/blog/books/growth-susskind/</guid>
       <description>A rigorous challenge to the assumption that economic growth is always good or always necessary.</description>
     </item>
     <item>
       <title>The Smartest Guys in the Room: The Amazing Rise and Scandalous Fall of Enron</title>
-      <link>http://localhost:1313/books/files/smartest-guys-in-the-room/</link>
+      <link>http://localhost:1313/blog/books/smartest-guys-in-the-room/</link>
       <pubDate>Fri, 19 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/smartest-guys-in-the-room/</guid>
-      <description>The definitive account of Enron&amp;#39;s collapse. A story of arrogance, fraud, and a culture where looking smart mattered more than being honest.</description>
-    </item>
-    <item>
-      <title>The Smartest Guys in the Room: The Amazing Rise and Scandalous Fall of Enron</title>
-      <link>http://localhost:1313/books/smartest-guys-in-the-room/</link>
-      <pubDate>Fri, 19 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/smartest-guys-in-the-room/</guid>
+      <guid>http://localhost:1313/blog/books/smartest-guys-in-the-room/</guid>
       <description>The definitive account of Enron&amp;#39;s collapse. A story of arrogance, fraud, and a culture where looking smart mattered more than being honest.</description>
     </item>
     <item>
       <title>Crashed: How a Decade of Financial Crises Changed the World</title>
-      <link>http://localhost:1313/books/crashed-tooze/</link>
+      <link>http://localhost:1313/blog/books/crashed-tooze/</link>
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/crashed-tooze/</guid>
-      <description>A sweeping global history of the 2008 crash and its long political aftershocks — from austerity in Europe to the rise of populism.</description>
-    </item>
-    <item>
-      <title>Crashed: How a Decade of Financial Crises Changed the World</title>
-      <link>http://localhost:1313/books/files/crashed-tooze/</link>
-      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/crashed-tooze/</guid>
+      <guid>http://localhost:1313/blog/books/crashed-tooze/</guid>
       <description>A sweeping global history of the 2008 crash and its long political aftershocks — from austerity in Europe to the rise of populism.</description>
     </item>
     <item>
       <title>Stress Test: Reflections on Financial Crises</title>
-      <link>http://localhost:1313/books/files/stress-test-geithner/</link>
+      <link>http://localhost:1313/blog/books/stress-test-geithner/</link>
       <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/stress-test-geithner/</guid>
-      <description>The former U.S. Treasury Secretary&amp;#39;s candid account of navigating the 2008 financial crisis from the inside.</description>
-    </item>
-    <item>
-      <title>Stress Test: Reflections on Financial Crises</title>
-      <link>http://localhost:1313/books/stress-test-geithner/</link>
-      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/stress-test-geithner/</guid>
+      <guid>http://localhost:1313/blog/books/stress-test-geithner/</guid>
       <description>The former U.S. Treasury Secretary&amp;#39;s candid account of navigating the 2008 financial crisis from the inside.</description>
     </item>
     <item>
       <title>Challenger: A True Story of Heroism and Disaster on the Edge of Space</title>
-      <link>http://localhost:1313/books/challenger-higginbotham/</link>
+      <link>http://localhost:1313/blog/books/challenger-higginbotham/</link>
       <pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/challenger-higginbotham/</guid>
-      <description>A gripping account of the 1986 Space Shuttle Challenger disaster, revealing the human failures and institutional pressure behind one of history&amp;#39;s most watched tragedies.</description>
-    </item>
-    <item>
-      <title>Challenger: A True Story of Heroism and Disaster on the Edge of Space</title>
-      <link>http://localhost:1313/books/files/challenger-higginbotham/</link>
-      <pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/challenger-higginbotham/</guid>
+      <guid>http://localhost:1313/blog/books/challenger-higginbotham/</guid>
       <description>A gripping account of the 1986 Space Shuttle Challenger disaster, revealing the human failures and institutional pressure behind one of history&amp;#39;s most watched tragedies.</description>
     </item>
     <item>
       <title>The Mind of the Strategist</title>
-      <link>http://localhost:1313/books/files/mind-of-the-strategist-ohmae/</link>
+      <link>http://localhost:1313/blog/books/mind-of-the-strategist-ohmae/</link>
       <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/mind-of-the-strategist-ohmae/</guid>
-      <description>How Japanese strategic thinking differs from Western frameworks. Ohmae argues strategy is more art than analysis.</description>
-    </item>
-    <item>
-      <title>The Mind of the Strategist</title>
-      <link>http://localhost:1313/books/mind-of-the-strategist-ohmae/</link>
-      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/mind-of-the-strategist-ohmae/</guid>
+      <guid>http://localhost:1313/blog/books/mind-of-the-strategist-ohmae/</guid>
       <description>How Japanese strategic thinking differs from Western frameworks. Ohmae argues strategy is more art than analysis.</description>
     </item>
     <item>
       <title>The Royal Charter of the Bank of England (1694)</title>
-      <link>http://localhost:1313/books/files/royal-charter-bank-of-england/</link>
+      <link>http://localhost:1313/blog/books/royal-charter-bank-of-england/</link>
       <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/royal-charter-bank-of-england/</guid>
-      <description>The founding document of modern public finance and central banking, establishing the world&amp;#39;s first funded national debt.</description>
-    </item>
-    <item>
-      <title>The Royal Charter of the Bank of England (1694)</title>
-      <link>http://localhost:1313/books/royal-charter-bank-of-england/</link>
-      <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/royal-charter-bank-of-england/</guid>
+      <guid>http://localhost:1313/blog/books/royal-charter-bank-of-england/</guid>
       <description>The founding document of modern public finance and central banking, establishing the world&amp;#39;s first funded national debt.</description>
     </item>
     <item>
       <title>Lombard Street</title>
-      <link>http://localhost:1313/books/files/lombard-street-bagehot/</link>
+      <link>http://localhost:1313/blog/books/lombard-street-bagehot/</link>
       <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/lombard-street-bagehot/</guid>
-      <description>The foundational text on central banking. Written in 1873, Bagehot explains how the Bank of England should act as lender of last resort.</description>
-    </item>
-    <item>
-      <title>Lombard Street</title>
-      <link>http://localhost:1313/books/lombard-street-bagehot/</link>
-      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/lombard-street-bagehot/</guid>
+      <guid>http://localhost:1313/blog/books/lombard-street-bagehot/</guid>
       <description>The foundational text on central banking. Written in 1873, Bagehot explains how the Bank of England should act as lender of last resort.</description>
     </item>
     <item>
       <title>On Competition</title>
-      <link>http://localhost:1313/books/files/on-competition-porter/</link>
+      <link>http://localhost:1313/blog/books/on-competition-porter/</link>
       <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/on-competition-porter/</guid>
-      <description>Porter&amp;#39;s collected essays on competitive strategy, clusters, and national competitiveness.</description>
-    </item>
-    <item>
-      <title>On Competition</title>
-      <link>http://localhost:1313/books/on-competition-porter/</link>
-      <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/on-competition-porter/</guid>
+      <guid>http://localhost:1313/blog/books/on-competition-porter/</guid>
       <description>Porter&amp;#39;s collected essays on competitive strategy, clusters, and national competitiveness.</description>
     </item>
     <item>
       <title>The Price of Time</title>
-      <link>http://localhost:1313/books/files/price-of-time-chancellor/</link>
+      <link>http://localhost:1313/blog/books/price-of-time-chancellor/</link>
       <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/price-of-time-chancellor/</guid>
-      <description>A history of interest rates from ancient Mesopotamia to the post-2008 era of near-zero rates.</description>
-    </item>
-    <item>
-      <title>The Price of Time</title>
-      <link>http://localhost:1313/books/price-of-time-chancellor/</link>
-      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/price-of-time-chancellor/</guid>
+      <guid>http://localhost:1313/blog/books/price-of-time-chancellor/</guid>
       <description>A history of interest rates from ancient Mesopotamia to the post-2008 era of near-zero rates.</description>
     </item>
     <item>
       <title>The Third Pillar</title>
-      <link>http://localhost:1313/books/files/third-pillar-rajan/</link>
+      <link>http://localhost:1313/blog/books/third-pillar-rajan/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/third-pillar-rajan/</guid>
-      <description>On the balance between state, market, and community. Rajan argues that economics has neglected the local community to its peril.</description>
-    </item>
-    <item>
-      <title>The Third Pillar</title>
-      <link>http://localhost:1313/books/third-pillar-rajan/</link>
-      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/third-pillar-rajan/</guid>
+      <guid>http://localhost:1313/blog/books/third-pillar-rajan/</guid>
       <description>On the balance between state, market, and community. Rajan argues that economics has neglected the local community to its peril.</description>
     </item>
     <item>
       <title>Keeping At It: The Quest for Sound Money and Good Government</title>
-      <link>http://localhost:1313/books/files/keeping-at-it-volcker/</link>
+      <link>http://localhost:1313/blog/books/keeping-at-it-volcker/</link>
       <pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/keeping-at-it-volcker/</guid>
-      <description>Paul Volcker&amp;#39;s memoir on his fight for sound money and the independence of central banks.</description>
-    </item>
-    <item>
-      <title>Keeping At It: The Quest for Sound Money and Good Government</title>
-      <link>http://localhost:1313/books/keeping-at-it-volcker/</link>
-      <pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/keeping-at-it-volcker/</guid>
+      <guid>http://localhost:1313/blog/books/keeping-at-it-volcker/</guid>
       <description>Paul Volcker&amp;#39;s memoir on his fight for sound money and the independence of central banks.</description>
     </item>
     <item>
       <title>Euro</title>
-      <link>http://localhost:1313/books/euro-stiglitz/</link>
+      <link>http://localhost:1313/blog/books/euro-stiglitz/</link>
       <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/euro-stiglitz/</guid>
-      <description>A rigorous critique of the eurozone&amp;#39;s structural flaws from a Nobel laureate.</description>
-    </item>
-    <item>
-      <title>Euro</title>
-      <link>http://localhost:1313/books/files/euro-stiglitz/</link>
-      <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/euro-stiglitz/</guid>
+      <guid>http://localhost:1313/blog/books/euro-stiglitz/</guid>
       <description>A rigorous critique of the eurozone&amp;#39;s structural flaws from a Nobel laureate.</description>
     </item>
     <item>
       <title>Financial Shenanigans</title>
-      <link>http://localhost:1313/books/files/financial-shenanigans/</link>
+      <link>http://localhost:1313/blog/books/financial-shenanigans/</link>
       <pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/financial-shenanigans/</guid>
-      <description>How companies manipulate earnings and cash flow statements. Forensic accounting made readable. Will permanently change how you read a 10-K.</description>
-    </item>
-    <item>
-      <title>Financial Shenanigans</title>
-      <link>http://localhost:1313/books/financial-shenanigans/</link>
-      <pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/financial-shenanigans/</guid>
+      <guid>http://localhost:1313/blog/books/financial-shenanigans/</guid>
       <description>How companies manipulate earnings and cash flow statements. Forensic accounting made readable. Will permanently change how you read a 10-K.</description>
     </item>
     <item>
       <title>Irrational Exuberance</title>
-      <link>http://localhost:1313/books/files/irrational-exuberance/</link>
+      <link>http://localhost:1313/blog/books/irrational-exuberance/</link>
       <pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/irrational-exuberance/</guid>
-      <description>The definitive account of speculative bubbles. Shiller called the dot-com peak and the housing crisis.</description>
-    </item>
-    <item>
-      <title>Irrational Exuberance</title>
-      <link>http://localhost:1313/books/irrational-exuberance/</link>
-      <pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/irrational-exuberance/</guid>
+      <guid>http://localhost:1313/blog/books/irrational-exuberance/</guid>
       <description>The definitive account of speculative bubbles. Shiller called the dot-com peak and the housing crisis.</description>
     </item>
     <item>
       <title>The Divine Comedy</title>
-      <link>http://localhost:1313/books/divine-comedy/</link>
+      <link>http://localhost:1313/blog/books/divine-comedy/</link>
       <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/divine-comedy/</guid>
-      <description>Still the most ambitious thing anyone has ever written. Read it with a good commentary — Dorothy Sayers&amp;#39; translation and notes are an excellent entry point.</description>
-    </item>
-    <item>
-      <title>The Divine Comedy</title>
-      <link>http://localhost:1313/books/files/divine-comedy/</link>
-      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/divine-comedy/</guid>
+      <guid>http://localhost:1313/blog/books/divine-comedy/</guid>
       <description>Still the most ambitious thing anyone has ever written. Read it with a good commentary — Dorothy Sayers&amp;#39; translation and notes are an excellent entry point.</description>
     </item>
     <item>
       <title>The Three-Body Problem (series)</title>
-      <link>http://localhost:1313/books/files/three-body-problem/</link>
+      <link>http://localhost:1313/blog/books/three-body-problem/</link>
       <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/three-body-problem/</guid>
-      <description>Hard sci-fi on a grand scale. Starts with China&amp;#39;s Cultural Revolution and ends at the edge of the universe.</description>
-    </item>
-    <item>
-      <title>The Three-Body Problem (series)</title>
-      <link>http://localhost:1313/books/three-body-problem/</link>
-      <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/three-body-problem/</guid>
+      <guid>http://localhost:1313/blog/books/three-body-problem/</guid>
       <description>Hard sci-fi on a grand scale. Starts with China&amp;#39;s Cultural Revolution and ends at the edge of the universe.</description>
     </item>
     <item>
       <title>The U.S. Army Leadership Field Manual (FM 22-100)</title>
-      <link>http://localhost:1313/books/files/fm-22-100-army-leadership/</link>
+      <link>http://localhost:1313/blog/books/fm-22-100-army-leadership/</link>
       <pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/fm-22-100-army-leadership/</guid>
-      <description>The official leadership doctrine used in every U.S. Army officer training programme for over fifty years. Built around the core principle of &amp;#39;Be, Know, Do&amp;#39;.</description>
-    </item>
-    <item>
-      <title>The U.S. Army Leadership Field Manual (FM 22-100)</title>
-      <link>http://localhost:1313/books/fm-22-100-army-leadership/</link>
-      <pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/fm-22-100-army-leadership/</guid>
+      <guid>http://localhost:1313/blog/books/fm-22-100-army-leadership/</guid>
       <description>The official leadership doctrine used in every U.S. Army officer training programme for over fifty years. Built around the core principle of &amp;#39;Be, Know, Do&amp;#39;.</description>
     </item>
     <item>
       <title>A Concise History of Warfare</title>
-      <link>http://localhost:1313/books/concise-history-of-warfare/</link>
+      <link>http://localhost:1313/blog/books/concise-history-of-warfare/</link>
       <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/concise-history-of-warfare/</guid>
-      <description>Montgomery&amp;#39;s own account of warfare from ancient times to the mid-twentieth century, written with the authority of a man who commanded armies across North Africa and Northwest Europe.</description>
-    </item>
-    <item>
-      <title>A Concise History of Warfare</title>
-      <link>http://localhost:1313/books/files/concise-history-of-warfare/</link>
-      <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/concise-history-of-warfare/</guid>
+      <guid>http://localhost:1313/blog/books/concise-history-of-warfare/</guid>
       <description>Montgomery&amp;#39;s own account of warfare from ancient times to the mid-twentieth century, written with the authority of a man who commanded armies across North Africa and Northwest Europe.</description>
     </item>
     <item>
       <title>Once an Eagle</title>
-      <link>http://localhost:1313/books/files/once-an-eagle/</link>
+      <link>http://localhost:1313/blog/books/once-an-eagle/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/once-an-eagle/</guid>
-      <description>A sweeping military novel following two officers across decades of American wars. One of the finest studies of leadership, character, and moral compromise ever written.</description>
-    </item>
-    <item>
-      <title>Once an Eagle</title>
-      <link>http://localhost:1313/books/once-an-eagle/</link>
-      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/once-an-eagle/</guid>
+      <guid>http://localhost:1313/blog/books/once-an-eagle/</guid>
       <description>A sweeping military novel following two officers across decades of American wars. One of the finest studies of leadership, character, and moral compromise ever written.</description>
     </item>
     <item>
@@ -856,9 +707,9 @@ Oh, I&amp;rsquo;m the cult of personality&lt;/p&gt;
     </item>
     <item>
       <title>Book Recommendations</title>
-      <link>http://localhost:1313/books/books-index/</link>
+      <link>http://localhost:1313/blog/books/books-index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/books-index/</guid>
+      <guid>http://localhost:1313/blog/books/books-index/</guid>
       <description>Books that shaped how I think — across economics, data, science, history, and beyond.</description>
     </item>
   </channel>

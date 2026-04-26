@@ -1,0 +1,73 @@
+{{- define "main" }}
+
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}
+  <div class="post-description">{{ . }}</div>
+  {{- end }}
+</header>
+
+<p style="margin-bottom: 1.25rem; color: #888; font-style: italic; font-size: 0.95rem;">
+  A living list. Updated when something genuinely earns a spot. And yes, I have read them all, at least twice each.
+</p>
+
+<div style="margin-bottom: 1.5rem;">
+  <button id="shuffle-btn" onclick="shufflePosts()" style="
+    font-family: monospace;
+    font-size: 0.82rem;
+    background: transparent;
+    color: #3ecf8e;
+    border: 1px solid #3ecf8e;
+    border-radius: 4px;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: all 0.15s;
+  "
+  onmouseover="this.style.background='#3ecf8e'; this.style.color='#0d0f14';"
+  onmouseout="this.style.background='transparent'; this.style.color='#3ecf8e';">
+    ⇄ Shuffle
+  </button>
+</div>
+
+<div id="posts-container">
+  {{- $pages := .Pages }}
+  {{- range $pages }}
+  <article class="post-entry" data-post>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">
+        {{- .Title }}
+        {{- if .Draft }}
+        <span class="entry-hint" title="Draft">
+          <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
+            <path d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z"/>
+          </svg>
+        </span>
+        {{- end }}
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p>{{- .Content | plainify | htmlUnescape | truncate 300 "..." }}</p>
+    </div>
+    <a class="entry-link" aria-label="post link to {{ .Title }}" href="{{ .Permalink }}"></a>
+  </article>
+  {{- end }}
+</div>
+
+<script>
+function shufflePosts() {
+  const container = document.getElementById('posts-container');
+  const posts = Array.from(container.querySelectorAll('[data-post]'));
+  
+  // Fisher-Yates shuffle
+  for (let i = posts.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    container.appendChild(posts[j]);
+    posts.splice(j, 1);
+    posts.splice(i, 0, container.children[container.children.length - 1]);
+  }
+}
+</script>
+
+{{- end }}

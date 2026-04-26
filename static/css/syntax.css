@@ -1,0 +1,45 @@
+/* VS Code Dark+ inspired syntax highlighting for Hugo */
+
+.chroma {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Comments */
+.chroma .c { color: #6a9955; font-style: italic }
+
+/* Keywords */
+.chroma .k { color: #569cd6 }
+
+/* Strings */
+.chroma .s { color: #ce9178 }
+
+/* Functions */
+.chroma .nf { color: #dcdcaa }
+
+/* Numbers */
+.chroma .m { color: #b5cea8 }
+
+/* Types */
+.chroma .kt { color: #4ec9b0 }
+
+/* Operators */
+.chroma .o { color: #d4d4d4 }
+
+/* Variables */
+.chroma .n { color: #9cdcfe }
+
+/* Builtins */
+.chroma .nb { color: #4ec9b0 }
+
+/* Line numbers */
+.chroma .ln {
+  color: #858585;
+  padding-right: 10px;
+}

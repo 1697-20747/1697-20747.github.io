@@ -10,16 +10,9 @@
     <atom:link href="http://localhost:1313/tags/europe/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Euro</title>
-      <link>http://localhost:1313/books/euro-stiglitz/</link>
+      <link>http://localhost:1313/blog/books/euro-stiglitz/</link>
       <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/euro-stiglitz/</guid>
-      <description>A rigorous critique of the eurozone&amp;#39;s structural flaws from a Nobel laureate.</description>
-    </item>
-    <item>
-      <title>Euro</title>
-      <link>http://localhost:1313/books/files/euro-stiglitz/</link>
-      <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/euro-stiglitz/</guid>
+      <guid>http://localhost:1313/blog/books/euro-stiglitz/</guid>
       <description>A rigorous critique of the eurozone&amp;#39;s structural flaws from a Nobel laureate.</description>
     </item>
   </channel>

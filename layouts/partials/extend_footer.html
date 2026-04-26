@@ -1,0 +1,19 @@
+<script>
+function highlightMenu() {
+    const path = window.location.pathname;
+    document.querySelectorAll("#menu a").forEach(function (link) {
+        const href = link.getAttribute("href");
+        if (!href) return;
+        const linkPath = new URL(href).pathname;
+        if (linkPath !== "/" && path.startsWith(linkPath)) {
+            const span = link.querySelector("span");
+            if (span) {
+                span.style.color = "#8FAC59";
+                span.style.fontWeight = "600";
+            }
+        }
+    });
+}
+
+setTimeout(highlightMenu, 200);
+</script>
