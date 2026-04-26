@@ -10,16 +10,9 @@
     <atom:link href="http://localhost:1313/tags/growth/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Growth: A Reckoning</title>
-      <link>http://localhost:1313/books/files/growth-susskind/</link>
+      <link>http://localhost:1313/blog/books/growth-susskind/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/growth-susskind/</guid>
-      <description>A rigorous challenge to the assumption that economic growth is always good or always necessary.</description>
-    </item>
-    <item>
-      <title>Growth: A Reckoning</title>
-      <link>http://localhost:1313/books/growth-susskind/</link>
-      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/growth-susskind/</guid>
+      <guid>http://localhost:1313/blog/books/growth-susskind/</guid>
       <description>A rigorous challenge to the assumption that economic growth is always good or always necessary.</description>
     </item>
   </channel>

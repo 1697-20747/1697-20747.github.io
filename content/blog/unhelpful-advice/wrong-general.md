@@ -9,4 +9,6 @@ showToc: false
 tocopen: false
 ---
 
-> No point being right in an argument with a wrong general.
+> "No point being a right private in an argument with a wrong general." - Anonymous
+
+This is akin to the arguing with an idiot makes you an idiot too, meme.

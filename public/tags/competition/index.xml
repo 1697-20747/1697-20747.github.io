@@ -10,16 +10,9 @@
     <atom:link href="http://localhost:1313/tags/competition/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>On Competition</title>
-      <link>http://localhost:1313/books/files/on-competition-porter/</link>
+      <link>http://localhost:1313/blog/books/on-competition-porter/</link>
       <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/on-competition-porter/</guid>
-      <description>Porter&amp;#39;s collected essays on competitive strategy, clusters, and national competitiveness.</description>
-    </item>
-    <item>
-      <title>On Competition</title>
-      <link>http://localhost:1313/books/on-competition-porter/</link>
-      <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/on-competition-porter/</guid>
+      <guid>http://localhost:1313/blog/books/on-competition-porter/</guid>
       <description>Porter&amp;#39;s collected essays on competitive strategy, clusters, and national competitiveness.</description>
     </item>
   </channel>

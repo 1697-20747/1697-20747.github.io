@@ -10,30 +10,16 @@
     <atom:link href="http://localhost:1313/tags/politics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Red Notice</title>
-      <link>http://localhost:1313/books/files/red-notice-browder/</link>
+      <link>http://localhost:1313/blog/books/red-notice-browder/</link>
       <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/red-notice-browder/</guid>
-      <description>Part financial thriller, part human rights story. Browder built one of the largest hedge funds in Russia, then watched Putin&amp;#39;s system destroy it.</description>
-    </item>
-    <item>
-      <title>Red Notice</title>
-      <link>http://localhost:1313/books/red-notice-browder/</link>
-      <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/red-notice-browder/</guid>
+      <guid>http://localhost:1313/blog/books/red-notice-browder/</guid>
       <description>Part financial thriller, part human rights story. Browder built one of the largest hedge funds in Russia, then watched Putin&amp;#39;s system destroy it.</description>
     </item>
     <item>
       <title>Crashed: How a Decade of Financial Crises Changed the World</title>
-      <link>http://localhost:1313/books/crashed-tooze/</link>
+      <link>http://localhost:1313/blog/books/crashed-tooze/</link>
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/crashed-tooze/</guid>
-      <description>A sweeping global history of the 2008 crash and its long political aftershocks — from austerity in Europe to the rise of populism.</description>
-    </item>
-    <item>
-      <title>Crashed: How a Decade of Financial Crises Changed the World</title>
-      <link>http://localhost:1313/books/files/crashed-tooze/</link>
-      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/crashed-tooze/</guid>
+      <guid>http://localhost:1313/blog/books/crashed-tooze/</guid>
       <description>A sweeping global history of the 2008 crash and its long political aftershocks — from austerity in Europe to the rise of populism.</description>
     </item>
   </channel>

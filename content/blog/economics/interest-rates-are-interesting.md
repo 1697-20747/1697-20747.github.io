@@ -106,6 +106,12 @@ There is a lot going on here, it will explained in good time. This is the shotgu
 
 <!-- {{< figure src="/images/economics/10_spot_curve_animation.gif" caption="Yield curve shape evolution animated" >}} -->
 
+### Historical Yield Curve in action
+
+I like this little animation, it give you a perspective you don't get from the data. The bottom segment is just the steepness factor. It might not be good for anything other than context, but it is one of my favorite ways of considering interest rate environments over time. You can see from both images that the term structure of rates has really flattened over time. There are two ways of flattening, a stable long term rate with a sharp pick up in the front end of the curve, caused by central banks doing their thing; or just a lower, flatter yield curve.
+
+The Bank Rate is the short end of the curve, this sets near term rates. In theory the long end of the curve is set by the market, who create the term structure of bond yields. But that concept got diluted by central banks discovering Quantitative Easing. This is where the central bank buys the longer end of the curve, thereby suppressing rates. That subject deserves a blog of its own, as its a pseudo fiscal policy framework run by an institution without a mandate for fiscal activity. Actually, that needs a couple of book, not just a post.
+
 <iframe 
   src="/tools/yield_curve_player.html"
   width="100%" 

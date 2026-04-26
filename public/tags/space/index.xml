@@ -10,16 +10,9 @@
     <atom:link href="http://localhost:1313/tags/space/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Challenger: A True Story of Heroism and Disaster on the Edge of Space</title>
-      <link>http://localhost:1313/books/challenger-higginbotham/</link>
+      <link>http://localhost:1313/blog/books/challenger-higginbotham/</link>
       <pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/challenger-higginbotham/</guid>
-      <description>A gripping account of the 1986 Space Shuttle Challenger disaster, revealing the human failures and institutional pressure behind one of history&amp;#39;s most watched tragedies.</description>
-    </item>
-    <item>
-      <title>Challenger: A True Story of Heroism and Disaster on the Edge of Space</title>
-      <link>http://localhost:1313/books/files/challenger-higginbotham/</link>
-      <pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/books/files/challenger-higginbotham/</guid>
+      <guid>http://localhost:1313/blog/books/challenger-higginbotham/</guid>
       <description>A gripping account of the 1986 Space Shuttle Challenger disaster, revealing the human failures and institutional pressure behind one of history&amp;#39;s most watched tragedies.</description>
     </item>
   </channel>

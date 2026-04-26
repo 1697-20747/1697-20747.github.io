@@ -12,7 +12,7 @@ I am increasingly uncomfortable with what I am paying on long term yields for my
 ">
 <meta name="author" content="Your Name">
 <link rel="canonical" href="http://localhost:1313/blog/unhelpful-advice/duration-folly/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.f008ada61313eee33ba760ef3adae6a8ad90031478c6c0312a8703b7ca1692ce.css" integrity="sha256-8AitphMT7uM7p2DvOtrmqK2QAxR4xsAxKocDt8oWks4=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9fe76af3e1f68dd9b13cd48d1b58fa03bd04942e9cbfe5e1860137d2839c32e3.css" integrity="sha256-n&#43;dq8&#43;H2jdmxPNSNG1j6A70ElC6cv&#43;XhhgE30oOcMuM=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -143,6 +143,18 @@ I am increasingly uncomfortable with what I am paying on long term yields for my
   <footer class="post-footer">
     <ul class="post-tags">
     </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/blog/unhelpful-advice/define-the-problem/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Define The Problem</span>
+  </a>
+  <a class="next" href="http://localhost:1313/blog/unhelpful-advice/duty/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Duty</span>
+  </a>
+</nav>
 
   </footer>
 </article>
@@ -161,7 +173,25 @@ I am increasingly uncomfortable with what I am paying on long term yields for my
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a>
+</a><script>
+function highlightMenu() {
+    const path = window.location.pathname;
+    console.log("PATH:", path);
+    document.querySelectorAll("#menu a").forEach(function (link) {
+        const href = link.getAttribute("href");
+        console.log("MENU HREF:", href, "MATCH:", href && href !== "/" && path.startsWith(href));
+        if (href && href !== "/" && path.startsWith(href)) {
+            const span = link.querySelector("span");
+            if (span) {
+                span.style.color = "#3ecf8e";
+                span.style.fontWeight = "600";
+            }
+        }
+    });
+}
+
+setTimeout(highlightMenu, 200);
+</script>
 
 <script>
     let menu = document.getElementById('menu');
