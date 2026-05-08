@@ -1,10 +1,62 @@
-/* ── Roboto Flex font ── */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,700&display=swap');
+/* ── Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap');
+
+/* ── Apply fonts site-wide ── */
+body,
+body * {
+    font-family: 'Syne', sans-serif !important;
+}
+
+code, pre, kbd, samp,
+.highlight, .chroma,
+.post-meta, .breadcrumbs {
+    font-family: 'DM Mono', monospace !important;
+}
+
+
+/* ── Large initial letter on headings ── */
+h1::first-letter,
+h2::first-letter,
+.page-header h1::first-letter,
+.post-title::first-letter,
+.entry-header h2::first-letter {
+    font-size: 1.2em !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+}
+
+/* ── Large heading style ── */
+h1, h2,
+.page-header h1,
+.post-title,
+.entry-header h2,
+.entry-hint-parent {
+    font-weight: 800 !important;
+    letter-spacing: -0.5px !important;
+}
+
+/* ── Gradient title ── */
+.post-title,
+.page-header h1,
+.entry-header h2 {
+    background: linear-gradient(120deg, #8FAC59 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 
 /* ── Active nav link colour ── */
+#menu a span.active,
 #menu a span.active {
     color: #8FAC59 !important;
-    font-weight: 600;
+    font-weight: 600 !important;
+}
+
+/* ── Active menu item override ── */
+#menu .active {
+    color: #8FAC59 !important;
+    border-bottom: 2px solid #8FAC59 !important;
+    font-weight: 600 !important;
 }
 
 /* ── Page header title colour ── */
@@ -24,18 +76,24 @@
     color: #8FAC59 !important;
 }
 
-/* ── Active menu item override ── */
-#menu .active {
-    color: #8FAC59 !important;
-    border-bottom: 2px solid #8FAC59 !important;
-    font-weight: 600 !important;
+/* ── Home info footnote ── */
+.home-info .entry-content small {
+    color: var(--secondary) !important;
+    font-size: 0.78rem !important;
+    font-style: italic !important;
 }
 
-#menu a span.active {
-    color: #8FAC59 !important;
-    font-weight: 600 !important;
+/* ── Profile image ── */
+.main.profile {
+    min-height: unset !important;
+    padding: 1rem 0 0.5rem 0 !important;
 }
 
+.profile img {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50%;
+}
 
 /* ── Light mode text fix ── */
 [data-theme="light"] body,

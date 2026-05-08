@@ -11,7 +11,7 @@
 <meta name="description" content="Posts that give advice on things you you probably shouldn’t blindly follow 😅">
 <meta name="author" content="Your Name">
 <link rel="canonical" href="http://localhost:1313/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.c96f384b9a5485caad5625c6e8791ac47ccb6d56594fd7fe5f8ba2bc503f61f8.css" integrity="sha256-yW84S5pUhcqtViXG6HkaxHzLbVZZT9f&#43;X4uivFA/Yfg=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.889f01c85f98280998710a1c16201f839e2d50fc411b5b73163ac32cabc2b5f6.css" integrity="sha256-iJ8ByF&#43;YKAmYcQocFiAfg54tUPxBG1tzFjrDLKvCtfY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -20,6 +20,7 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="rss">
+<link rel="alternate" type="application/json" href="http://localhost:1313/index.json" title="json">
 <link rel="alternate" hreflang="en" href="http://localhost:1313/">
 <noscript>
     <style>
@@ -41,6 +42,10 @@
     <header class="header">
     <nav class="nav">
         <div class="logo">
+    <a href="http://localhost:1313/">
+        <img src="/images/avatar.png" width="32" height="32" 
+             style="border-radius:50%;margin-right:8px;vertical-align:middle">
+    </a>
             <a href="http://localhost:1313/" accesskey="h" title="[1697, 20747] (Alt + H)">[1697, 20747]</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
@@ -112,6 +117,11 @@
                 </a>
             </li>
             <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
                 <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
@@ -119,44 +129,235 @@
         </ul>
     </nav>
 </header>
-<main class="main"><div class="profile">
+<main class="main">
+
+<div class="main profile">
     <div class="profile_inner">
-        <img draggable="false" src="http://localhost:1313/images/avatar.png" alt="profile image" title=""
-            height="120" width="120" />
-        <h1>[1697, 20747]</h1>
-        <span></span><div class="social-icons" >
-    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer me"
-        title="Github">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path
-        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-    </path>
-</svg>
-    </a>
-    <a href="https://linkedin.com/in/bruce-schultz-19020039" target="_blank" rel="noopener noreferrer me"
-        title="Linkedin">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-    <rect x="2" y="9" width="4" height="12"></rect>
-    <circle cx="4" cy="4" r="2"></circle>
-</svg>
-    </a>
-    <a href="/index.xml" target="_blank" rel="noopener noreferrer me"
-        title="Rss">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 11a9 9 0 0 1 9 9" />
-    <path d="M4 4a16 16 0 0 1 16 16" />
-    <circle cx="5" cy="19" r="1" />
-</svg>
-    </a>
+        <img src="/images/avatar.png" alt="profile image" width="140" height="140">
+    </div>
 </div>
+
+
+
+<div class="home-info">
+  <div class="entry-content">
+    <h1>Hi, I&#39;m [1697, 20747]* 👋</h1>
+    <p><p>This is my personal webpage where I write (dump random thoughts?) about Economics, Data Analytics, Credit Risk, Computer Science, and whatever else catches my attention within my domains of interest (minimal expertise).<br><br>
+I work with data across finance and comp science, and the usual open source systems. These are essentially my notes made public. Whilst the day job is finance, all my comp science is for the most part in my own time. I like my freedom.
+Source material is all public domain, or my own work, with or without data analytics added on top. See references if you want to check it.
+Some of the chunkier posts are quite technical and take me longer, so I often iterate through them, updating periodically. Errors are all mine!
+Most of the data analytics and charts are all python bash files set to run outside of any IDE. Some of the projects are a mix of languages. It is all open source now.<br><br>
+I hope the message is clear despite the informal phrasing, the text is not AI generated, although I am using it now more on markdown for tables from csv files. Also for methods in programming. I am a pretty average programmer, my chosen domain of frustration is low level programming on small devices, for which I need to know quite a bit of machine learning.<br><br>
+You won&rsquo;t find me on social media, ever. This is it really, unless you are on one of my very few WhatsApp groups.</p>
+<hr>
+<small>*token tokenizer joke, if that is your thing. If it's not, you are possibly in the wrong place....</small></p>
+  </div>
+</div>
+
+
+<style>
+.tiles-section {
+    margin: 2rem 0;
+}
+
+.tiles-section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    border-left: 3px solid #8FAC59;
+    padding-left: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.tiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.tile-card {
+    position: relative;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    overflow: hidden;
+}
+
+.tile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #8FAC59, transparent);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.tile-card:hover {
+    transform: translateY(-3px);
+    border-color: #8FAC59;
+    box-shadow: 0 4px 20px rgba(143, 172, 89, 0.15);
+}
+
+.tile-card:hover::before {
+    opacity: 1;
+}
+
+.tile-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.95rem;
+    font-weight: 800;
+    background: linear-gradient(120deg, #8FAC59 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.3px;
+}
+
+.tile-count {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--secondary);
+    letter-spacing: 0.05em;
+}
+
+.tile-arrow {
+    margin-top: auto;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: #8FAC59;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.tile-card:hover .tile-arrow {
+    opacity: 1;
+}
+
+ 
+.recent-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    border-left: 3px solid #8FAC59;
+    padding-left: 10px;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+</style>
+
+<div class="tiles-section">
+    <div class="tiles-section-title">Browse by Category</div>
+    <div class="tiles-grid">
+
+        
+        <a class="tile-card" href="/blog/">
+            <div class="tile-name">Blog</div>
+            <div class="tile-count">All categories</div>
+            <div class="tile-arrow">→ browse</div>
+        </a>
+
+        
+        <a class="tile-card" href="http://localhost:1313/blog/books/">
+            <div class="tile-name">Books</div>
+            <div class="tile-count">Reading list</div>
+            <div class="tile-arrow">→ browse</div>
+        </a>
+
+        <a class="tile-card" href="/about/">
+            <div class="tile-name">About</div>
+            <div class="tile-count">Who & why</div>
+            <div class="tile-arrow">→ read</div>
+        </a>
+
+        <a class="tile-card" href="/search/">
+            <div class="tile-name">Search</div>
+            <div class="tile-count">Find anything</div>
+            <div class="tile-arrow">→ search</div>
+        </a>
 
     </div>
 </div>
 
+
+<div class="recent-title">Recent Posts</div>
+    <article class="post-entry">
+        <header class="entry-header">
+            <h2 class="entry-hint-parent">Why Inflation Measurement Is Harder Than You Think
+            </h2>
+        </header>
+        <div class="entry-content"><p>The CPI is everywhere, but how it&#39;s actually constructed reveals some uncomfortable tradeoffs.</p></div>
+        <footer class="entry-footer">
+<div class="post-meta"><span title='2026-02-23 00:00:00 +0000 UTC'>February 23, 2026</span>&nbsp;·&nbsp;16 min</div>
+</footer>
+        <a class="entry-link" aria-label="post link to Why Inflation Measurement Is Harder Than You Think" href="http://localhost:1313/blog/economics/inflation-measurement/"></a>
+    </article>
+    <article class="post-entry">
+        <header class="entry-header">
+            <h2 class="entry-hint-parent">Equality
+            </h2>
+        </header>
+        <div class="entry-content"><p> “A society that puts equality…ahead of freedom will end up with neither equality nor freedom…a society that puts freedom first will, as a happy by...</p></div>
+        <footer class="entry-footer">
+<div class="post-meta"><span title='2026-05-06 19:20:14 +0000 UTC'>May 6, 2026</span>&nbsp;·&nbsp;1 min</div>
+</footer>
+        <a class="entry-link" aria-label="post link to Equality" href="http://localhost:1313/blog/unhelpful-advice/equality/"></a>
+    </article>
+    <article class="post-entry">
+        <header class="entry-header">
+            <h2 class="entry-hint-parent">To Fade
+            </h2>
+        </header>
+        <div class="entry-content"><p> “露と落ち
+露と消えにし
+我身かな
+難波のことも
+夢のまた夢”
+“Appearing like dew,
+Vanishing like dew
+Such is my life.
+All of Naniwa
+Is a dream within a dream.” - Toyotomi...</p></div>
+        <footer class="entry-footer">
+<div class="post-meta"><span title='2026-05-05 20:41:50 +0000 UTC'>May 5, 2026</span>&nbsp;·&nbsp;1 min</div>
+</footer>
+        <a class="entry-link" aria-label="post link to To Fade" href="http://localhost:1313/blog/unhelpful-advice/to-fade/"></a>
+    </article>
+    <article class="post-entry">
+        <header class="entry-header">
+            <h2 class="entry-hint-parent">Its Not Research
+            </h2>
+        </header>
+        <div class="entry-content"><p> “If we knew what it was we were doing, it would not be called research, would it?” - Albert Einstein. Except it wasn’t. Neither are a lot more...</p></div>
+        <footer class="entry-footer">
+<div class="post-meta"><span title='2026-05-05 20:15:24 +0000 UTC'>May 5, 2026</span>&nbsp;·&nbsp;1 min</div>
+</footer>
+        <a class="entry-link" aria-label="post link to Its Not Research" href="http://localhost:1313/blog/unhelpful-advice/its-not-research/"></a>
+    </article>
+    <article class="post-entry">
+        <header class="entry-header">
+            <h2 class="entry-hint-parent">No Great Mystery
+            </h2>
+        </header>
+        <div class="entry-content"><p> “There is no great mystery behind why some nations are wealthy and others are not. The policy mix varies very little and is well understood....</p></div>
+        <footer class="entry-footer">
+<div class="post-meta"><span title='2026-05-04 21:20:41 +0000 UTC'>May 4, 2026</span>&nbsp;·&nbsp;1 min</div>
+</footer>
+        <a class="entry-link" aria-label="post link to No Great Mystery" href="http://localhost:1313/blog/unhelpful-advice/no-great-mystery/"></a>
+    </article>
     </main>
     
 <footer class="footer">
@@ -191,6 +392,110 @@ function highlightMenu() {
 
 setTimeout(highlightMenu, 200);
 </script>
+
+
+<div id="avatar-lightbox" style="
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.9);
+    z-index:1000;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:1.5rem;
+    cursor:pointer;
+    overflow-y:auto;
+    padding:2rem;
+" onclick="this.style.display='none'">
+
+    
+    <img src="/images/avatar.png" style="
+        width:220px;
+        height:220px;
+        border-radius:50%;
+        border:3px solid #8FAC59;
+        box-shadow:0 0 40px rgba(143,172,89,0.3);
+    ">
+
+    
+    <p style="
+        color:#e2e8f0;
+        font-family:'Syne',sans-serif;
+        font-size:1rem;
+        text-align:center;
+        max-width:480px;
+        line-height:1.7;
+        padding:0 1rem;
+    ">
+        I use this image as my avatar, or if you like a visual nom de plume of sorts.<br>
+        It was a photo taken by myself, near the bridge crossing the Thames to go to Kew Gardens.<br>
+        At the time taken, it was residing under a Banksy art piece, of a mountain goat perched on a ledge, from 2024. 
+        This Ibex mountain goat in London perches on a plinth with falling rocks beneath it - a CCTV camera pointing up towards the goat. <br>
+        The Banksy is gone, but I hope the Bruce Lee image is still with us, which it is on Google maps. I'd love to know if it is your art!
+    </p>
+
+    
+    <img src="/images/IMG_3300_full.png" style="
+        width:320px;
+        border-radius:8px;
+        border:1px solid #8FAC59;
+    ">
+
+    
+    <p style="
+        color:var(--secondary);
+        font-family:'DM Mono',monospace;
+        font-size:0.8rem;
+        text-align:center;
+        max-width:400px;
+    ">
+        The full image, I suspect its an electrical junction cabinet. Regardless, its a great piece of art. 
+        Based on the Banksy images, it looks like the goat arrived first.
+    </p>
+
+   
+    <div onclick="event.stopPropagation()" style="
+        width:100%;
+        max-width:480px;
+        border-radius:8px;
+        overflow:hidden;
+        border:1px solid #8FAC59;
+    ">
+        <iframe
+            width="100%"
+            height="300"
+            frameborder="0"
+            style="border:0;display:block"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.2970%2C51.4824%2C-0.2771%2C51.4884&layer=mapnik&marker=51.4854%2C-0.2871"
+            allowfullscreen>
+        </iframe>
+    </div>
+    </div>
+
+    <p style="
+        color:#8FAC59;
+        font-family:'DM Mono',monospace;
+        font-size:0.75rem;
+    ">click outside map to close</p>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const avatarLink = document.querySelector('.logo a img');
+    if (avatarLink) {
+        avatarLink.style.cursor = 'pointer';
+        avatarLink.parentElement.addEventListener('click', function(e) {
+            e.preventDefault();
+            const lb = document.getElementById('avatar-lightbox');
+            lb.style.display = 'flex';
+        });
+    }
+});
+</script>
+
+
 
 <script>
     let menu = document.getElementById('menu');

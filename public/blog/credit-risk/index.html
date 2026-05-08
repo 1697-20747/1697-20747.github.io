@@ -10,7 +10,7 @@
 <meta name="description" content="Notes on credit analysis, corporate default, distressed debt, and the forensics of financial failure.">
 <meta name="author" content="Your Name">
 <link rel="canonical" href="http://localhost:1313/blog/credit-risk/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.c96f384b9a5485caad5625c6e8791ac47ccb6d56594fd7fe5f8ba2bc503f61f8.css" integrity="sha256-yW84S5pUhcqtViXG6HkaxHzLbVZZT9f&#43;X4uivFA/Yfg=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.889f01c85f98280998710a1c16201f839e2d50fc411b5b73163ac32cabc2b5f6.css" integrity="sha256-iJ8ByF&#43;YKAmYcQocFiAfg54tUPxBG1tzFjrDLKvCtfY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -40,6 +40,10 @@
     <header class="header">
     <nav class="nav">
         <div class="logo">
+    <a href="http://localhost:1313/">
+        <img src="/images/avatar.png" width="32" height="32" 
+             style="border-radius:50%;margin-right:8px;vertical-align:middle">
+    </a>
             <a href="http://localhost:1313/" accesskey="h" title="[1697, 20747] (Alt + H)">[1697, 20747]</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
@@ -111,6 +115,11 @@
                 </a>
             </li>
             <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
                 <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
@@ -118,86 +127,111 @@
         </ul>
     </nav>
 </header>
-<main class="main"> 
+<main class="main">
+
 <header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/blog/">Blog</a></div>
-  <h1>
-    Credit Risk
-  </h1>
-  <div class="post-description">
-    Notes on credit analysis, corporate default, distressed debt, and the forensics of financial failure.
-  </div>
+  <h1>Credit Risk</h1>
 </header>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Details Matter
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Overview Underwriting is time consuming, difficult, and sometimes mindless. It is also essential to prevent the destruction of capital.
-Sellers are at best honest participants who don’t disclose all relevant facts, and at worst liars. Buyers are sometimes fools. Often some combination of all three. This is a story about too much money, not enough sense, and the high cost of being blinded by an icon.
-The Building The Chrysler Building is an icon of industry and Art Deco design — but this is not about the building as architecture. It is about the building as a mechanism for losing money.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2026-04-25 09:10:22 +0000 UTC'>April 25, 2026</span>&nbsp;·&nbsp;13 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to Details Matter" href="http://localhost:1313/blog/credit-risk/details-matter/"></a>
-</article>
+<style>
+.tiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Un consolidating Consolidated Accounting, or a day trip to the Casino
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Overview Write your introduction here.
-Section One Your content here. You can use bold, italic, and inline code.
-Key Takeaways Point one Point two Point three References Source title </p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2026-03-22 11:16:02 +0000 UTC'>March 22, 2026</span>&nbsp;·&nbsp;1 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to Un consolidating Consolidated Accounting, or a day trip to the Casino" href="http://localhost:1313/blog/credit-risk/un-consolidating-consolidated-accounting/"></a>
-</article>
+.tile-card {
+    position: relative;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    overflow: hidden;
+}
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">One Ring to Rule them All....
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>The Problem This is a combined overview of credit, entity relationships, object oriented data sciences, all aligned to regulatory objectives. All items included are made up and functional, with the broad structure reflecting actual real world problems. The relevant bits of code will be provided, but this is about understanding the problem, defining the problem statement (properly), and learning the wrong ways so you don’t make mistakes.
-Assumptions Available systems are probably limited in scope, are circa 1990’s, and are designed around single instances. This means we will need to resolve the trickier aspects outside of limited core systems.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2026-03-21 22:07:39 +0000 UTC'>March 21, 2026</span>&nbsp;·&nbsp;29 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to One Ring to Rule them All...." href="http://localhost:1313/blog/credit-risk/one-ring-to-rule-them-all/"></a>
-</article>
+.tile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #8FAC59, transparent);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Enron: A Look Back
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>The Setup By the late 1990s, Enron was widely regarded as one of the most innovative companies in America. Fortune named it “America’s Most Innovative Company” six years in a row. Its stock price compounded at extraordinary rates. Analysts fell over themselves with buy ratings. The investment banks queued up for fees. The auditors signed off. The board nodded along.
-In December 2001, it filed for the largest bankruptcy in US history at the time. From investment grade to default in a matter of weeks. The speed alone should tell you something.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2024-03-01 00:00:00 +0000 UTC'>March 1, 2024</span>&nbsp;·&nbsp;21 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to Enron: A Look Back" href="http://localhost:1313/blog/credit-risk/enron-a-look-back/"></a>
-</article>
+.tile-card:hover {
+    transform: translateY(-3px);
+    border-color: #8FAC59;
+    box-shadow: 0 4px 20px rgba(143, 172, 89, 0.15);
+}
+
+.tile-card:hover::before {
+    opacity: 1;
+}
+
+.tile-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    background: linear-gradient(120deg, #8FAC59 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.3px;
+}
+
+.tile-count {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--secondary);
+    letter-spacing: 0.05em;
+}
+
+.tile-desc {
+    font-size: 0.82rem;
+    color: var(--secondary);
+    line-height: 1.5;
+    margin-top: 0.25rem;
+}
+
+.tile-arrow {
+    margin-top: auto;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: #8FAC59;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    padding-top: 0.5rem;
+}
+
+.tile-card:hover .tile-arrow {
+    opacity: 1;
+}
+
+.section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    border-left: 3px solid #8FAC59;
+    padding-left: 10px;
+    margin-bottom: 1.5rem;
+}
+</style>
+
+<div class="section-label">Browse Categories</div>
+
+<div class="tiles-grid">
+</div>
     </main>
     
 <footer class="footer">
@@ -232,6 +266,110 @@ function highlightMenu() {
 
 setTimeout(highlightMenu, 200);
 </script>
+
+
+<div id="avatar-lightbox" style="
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.9);
+    z-index:1000;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:1.5rem;
+    cursor:pointer;
+    overflow-y:auto;
+    padding:2rem;
+" onclick="this.style.display='none'">
+
+    
+    <img src="/images/avatar.png" style="
+        width:220px;
+        height:220px;
+        border-radius:50%;
+        border:3px solid #8FAC59;
+        box-shadow:0 0 40px rgba(143,172,89,0.3);
+    ">
+
+    
+    <p style="
+        color:#e2e8f0;
+        font-family:'Syne',sans-serif;
+        font-size:1rem;
+        text-align:center;
+        max-width:480px;
+        line-height:1.7;
+        padding:0 1rem;
+    ">
+        I use this image as my avatar, or if you like a visual nom de plume of sorts.<br>
+        It was a photo taken by myself, near the bridge crossing the Thames to go to Kew Gardens.<br>
+        At the time taken, it was residing under a Banksy art piece, of a mountain goat perched on a ledge, from 2024. 
+        This Ibex mountain goat in London perches on a plinth with falling rocks beneath it - a CCTV camera pointing up towards the goat. <br>
+        The Banksy is gone, but I hope the Bruce Lee image is still with us, which it is on Google maps. I'd love to know if it is your art!
+    </p>
+
+    
+    <img src="/images/IMG_3300_full.png" style="
+        width:320px;
+        border-radius:8px;
+        border:1px solid #8FAC59;
+    ">
+
+    
+    <p style="
+        color:var(--secondary);
+        font-family:'DM Mono',monospace;
+        font-size:0.8rem;
+        text-align:center;
+        max-width:400px;
+    ">
+        The full image, I suspect its an electrical junction cabinet. Regardless, its a great piece of art. 
+        Based on the Banksy images, it looks like the goat arrived first.
+    </p>
+
+   
+    <div onclick="event.stopPropagation()" style="
+        width:100%;
+        max-width:480px;
+        border-radius:8px;
+        overflow:hidden;
+        border:1px solid #8FAC59;
+    ">
+        <iframe
+            width="100%"
+            height="300"
+            frameborder="0"
+            style="border:0;display:block"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.2970%2C51.4824%2C-0.2771%2C51.4884&layer=mapnik&marker=51.4854%2C-0.2871"
+            allowfullscreen>
+        </iframe>
+    </div>
+    </div>
+
+    <p style="
+        color:#8FAC59;
+        font-family:'DM Mono',monospace;
+        font-size:0.75rem;
+    ">click outside map to close</p>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const avatarLink = document.querySelector('.logo a img');
+    if (avatarLink) {
+        avatarLink.style.cursor = 'pointer';
+        avatarLink.parentElement.addEventListener('click', function(e) {
+            e.preventDefault();
+            const lb = document.getElementById('avatar-lightbox');
+            lb.style.display = 'flex';
+        });
+    }
+});
+</script>
+
+
 
 <script>
     let menu = document.getElementById('menu');

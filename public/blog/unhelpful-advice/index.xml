@@ -1,13 +1,51 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>[1697, 20747]</title>
+    <title>Unhelpful Advice on [1697, 20747]</title>
     <link>http://localhost:1313/blog/unhelpful-advice/</link>
-    <description>Recent content on [1697, 20747]</description>
+    <description>Recent content in Unhelpful Advice on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 12 Apr 2026 12:22:15 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 19:20:14 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/unhelpful-advice/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Equality</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/equality/</link>
+      <pubDate>Wed, 06 May 2026 19:20:14 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/equality/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;“A society that puts equality…ahead of freedom will end up with neither equality nor freedom…a society that puts freedom first will, as a happy by product, end up with both greater freedom and greater equality.” - Milton Friedman&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>To Fade</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/to-fade/</link>
+      <pubDate>Tue, 05 May 2026 20:41:50 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/to-fade/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;露と落ち&lt;br&gt;露と消えにし&lt;br&gt;我身かな&lt;br&gt;難波のことも&lt;br&gt;夢のまた夢&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Appearing like dew,&lt;br&gt; Vanishing like dew&lt;br&gt;Such is my life.&lt;br&gt; All of Naniwa&lt;br&gt; Is a dream within a dream.&amp;rdquo; - Toyotomi Hideyoshi, the 16th-century Japanese samurai&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Its Not Research</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/its-not-research/</link>
+      <pubDate>Tue, 05 May 2026 20:15:24 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/its-not-research/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;If we knew what it was we were doing, it would not be called research, would it?&amp;rdquo; - Albert Einstein. Except it wasn&amp;rsquo;t. Neither are a lot more attributed to him. But it is pith life advice in a way.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>No Great Mystery</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/no-great-mystery/</link>
+      <pubDate>Mon, 04 May 2026 21:20:41 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/no-great-mystery/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;“There is no great mystery behind why some nations are wealthy and others are not. The policy mix varies very little and is well understood. Countries with lower, neutral tax systems, minimal regulations, the rule of law and openness to international trade and foreign investment are wealthier than countries with higher taxes, more complicated regulations, and which are closed off to the world. Economies are the sum of the countless decisions made by people on what to buy or sell, where to invest, or where to work.”&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hard Power</title>
       <link>http://localhost:1313/blog/unhelpful-advice/hard-power/</link>

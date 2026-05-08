@@ -1,0 +1,122 @@
+{{- define "main" }}
+
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+</header>
+
+<style>
+.tiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.tile-card {
+    position: relative;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    overflow: hidden;
+}
+
+.tile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #8FAC59, transparent);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.tile-card:hover {
+    transform: translateY(-3px);
+    border-color: #8FAC59;
+    box-shadow: 0 4px 20px rgba(143, 172, 89, 0.15);
+}
+
+.tile-card:hover::before {
+    opacity: 1;
+}
+
+.tile-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    background: linear-gradient(120deg, #8FAC59 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.3px;
+}
+
+.tile-count {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--secondary);
+    letter-spacing: 0.05em;
+}
+
+.tile-desc {
+    font-size: 0.82rem;
+    color: var(--secondary);
+    line-height: 1.5;
+    margin-top: 0.25rem;
+}
+
+.tile-arrow {
+    margin-top: auto;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: #8FAC59;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    padding-top: 0.5rem;
+}
+
+.tile-card:hover .tile-arrow {
+    opacity: 1;
+}
+
+.section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    border-left: 3px solid #8FAC59;
+    padding-left: 10px;
+    margin-bottom: 1.5rem;
+}
+</style>
+
+<div class="section-label">Browse Categories</div>
+
+<div class="tiles-grid">
+    {{- $sections := .Sections }}
+    {{- range $sections }}
+        {{- $pages := where .Pages "Draft" "ne" true }}
+        {{- $count := len $pages }}
+        <a class="tile-card" href="{{ .Permalink }}" {{- if eq $count 0 }} style="opacity:0.6" {{- end }}>
+            <div class="tile-name">{{ .Title }}</div>
+            <div class="tile-count">
+                {{- if eq $count 0 }}coming soon
+                {{- else }}{{ $count }} {{ if eq $count 1 }}post{{ else }}posts{{ end }}
+                {{- end }}
+            </div>
+            <div class="tile-arrow">→ browse</div>
+        </a>
+    {{- end }}
+</div>
+
+{{- end }}

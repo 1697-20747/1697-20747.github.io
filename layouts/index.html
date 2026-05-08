@@ -1,0 +1,197 @@
+{{- define "main" }}
+{{/* ── Profile image ── */}}
+{{- with site.Params.profileMode }}
+{{- if .enabled }}
+<div class="main profile">
+    <div class="profile_inner">
+        {{- with .imageUrl }}
+        <img src="{{ . }}" alt="profile image" width="{{ $.Site.Params.profileMode.imageWidth | default 120 }}" height="{{ $.Site.Params.profileMode.imageHeight | default 120 }}">
+        {{- end }}
+    </div>
+</div>
+{{- end }}
+{{- end }}
+
+
+{{/* ── Home info / intro block ── */}}
+{{- with site.Params.homeInfoParams }}
+<div class="home-info">
+  <div class="entry-content">
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Content | markdownify }}</p>
+  </div>
+</div>
+{{- end }}
+
+{{/* ── Category tiles ── */}}
+<style>
+.tiles-section {
+    margin: 2rem 0;
+}
+
+.tiles-section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    border-left: 3px solid #8FAC59;
+    padding-left: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.tiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.tile-card {
+    position: relative;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    overflow: hidden;
+}
+
+.tile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #8FAC59, transparent);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.tile-card:hover {
+    transform: translateY(-3px);
+    border-color: #8FAC59;
+    box-shadow: 0 4px 20px rgba(143, 172, 89, 0.15);
+}
+
+.tile-card:hover::before {
+    opacity: 1;
+}
+
+.tile-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.95rem;
+    font-weight: 800;
+    background: linear-gradient(120deg, #8FAC59 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.3px;
+}
+
+.tile-count {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--secondary);
+    letter-spacing: 0.05em;
+}
+
+.tile-arrow {
+    margin-top: auto;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: #8FAC59;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.tile-card:hover .tile-arrow {
+    opacity: 1;
+}
+
+/* ── Recent posts below tiles ── */
+.recent-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    border-left: 3px solid #8FAC59;
+    padding-left: 10px;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+</style>
+
+<div class="tiles-section">
+    <div class="tiles-section-title">Browse by Category</div>
+    <div class="tiles-grid">
+
+        {{/* ── Single Blog tile linking to /blog/ ── */}}
+        {{- $totalPosts := 0 }}
+        {{- range site.Sections }}
+            {{- if eq .Section "blog" }}
+                {{- $pages := where .Pages "Draft" "ne" true }}
+                {{- $totalPosts = add $totalPosts (len $pages) }}
+            {{- end }}
+        {{- end }}
+        <a class="tile-card" href="/blog/">
+            <div class="tile-name">Blog</div>
+            <div class="tile-count">All categories</div>
+            <div class="tile-arrow">→ browse</div>
+        </a>
+
+        {{/* ── Static tiles for Books, About, Search ── */}}
+        {{- with site.GetPage "blog/books" }}
+        <a class="tile-card" href="{{ .Permalink }}">
+            <div class="tile-name">Books</div>
+            <div class="tile-count">Reading list</div>
+            <div class="tile-arrow">→ browse</div>
+        </a>
+        {{- end }}
+
+        <a class="tile-card" href="/about/">
+            <div class="tile-name">About</div>
+            <div class="tile-count">Who & why</div>
+            <div class="tile-arrow">→ read</div>
+        </a>
+
+        <a class="tile-card" href="/search/">
+            <div class="tile-name">Search</div>
+            <div class="tile-count">Find anything</div>
+            <div class="tile-arrow">→ search</div>
+        </a>
+
+    </div>
+</div>
+
+{{/* ── Recent posts ── */}}
+<div class="recent-title">Recent Posts</div>
+
+{{- $pages := where site.RegularPages "Draft" "ne" true }}
+{{- $pages = $pages | first 5 }}
+{{- range $pages }}
+    <article class="post-entry">
+        <header class="entry-header">
+            <h2 class="entry-hint-parent">
+                {{- .Title }}
+            </h2>
+        </header>
+        {{- with .Description }}
+        <div class="entry-content"><p>{{ . }}</p></div>
+        {{- else }}
+        <div class="entry-content"><p>{{ .Summary | plainify | htmlUnescape | truncate 150 "..." }}</p></div>
+        {{- end }}
+        <footer class="entry-footer">
+            {{- partial "post_meta.html" . -}}
+        </footer>
+        <a class="entry-link" aria-label="post link to {{ .Title }}" href="{{ .Permalink }}"></a>
+    </article>
+{{- end }}
+
+{{- end }}

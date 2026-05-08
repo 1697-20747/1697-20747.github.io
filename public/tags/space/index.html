@@ -10,7 +10,7 @@
 <meta name="description" content="Writing on Economics, Data Analytics, Computer Science &amp; more.">
 <meta name="author" content="Your Name">
 <link rel="canonical" href="http://localhost:1313/tags/space/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.c96f384b9a5485caad5625c6e8791ac47ccb6d56594fd7fe5f8ba2bc503f61f8.css" integrity="sha256-yW84S5pUhcqtViXG6HkaxHzLbVZZT9f&#43;X4uivFA/Yfg=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.889f01c85f98280998710a1c16201f839e2d50fc411b5b73163ac32cabc2b5f6.css" integrity="sha256-iJ8ByF&#43;YKAmYcQocFiAfg54tUPxBG1tzFjrDLKvCtfY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -40,6 +40,10 @@
     <header class="header">
     <nav class="nav">
         <div class="logo">
+    <a href="http://localhost:1313/">
+        <img src="/images/avatar.png" width="32" height="32" 
+             style="border-radius:50%;margin-right:8px;vertical-align:middle">
+    </a>
             <a href="http://localhost:1313/" accesskey="h" title="[1697, 20747] (Alt + H)">[1697, 20747]</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
@@ -111,6 +115,11 @@
                 </a>
             </li>
             <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
                 <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
@@ -173,6 +182,110 @@ function highlightMenu() {
 
 setTimeout(highlightMenu, 200);
 </script>
+
+
+<div id="avatar-lightbox" style="
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.9);
+    z-index:1000;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:1.5rem;
+    cursor:pointer;
+    overflow-y:auto;
+    padding:2rem;
+" onclick="this.style.display='none'">
+
+    
+    <img src="/images/avatar.png" style="
+        width:220px;
+        height:220px;
+        border-radius:50%;
+        border:3px solid #8FAC59;
+        box-shadow:0 0 40px rgba(143,172,89,0.3);
+    ">
+
+    
+    <p style="
+        color:#e2e8f0;
+        font-family:'Syne',sans-serif;
+        font-size:1rem;
+        text-align:center;
+        max-width:480px;
+        line-height:1.7;
+        padding:0 1rem;
+    ">
+        I use this image as my avatar, or if you like a visual nom de plume of sorts.<br>
+        It was a photo taken by myself, near the bridge crossing the Thames to go to Kew Gardens.<br>
+        At the time taken, it was residing under a Banksy art piece, of a mountain goat perched on a ledge, from 2024. 
+        This Ibex mountain goat in London perches on a plinth with falling rocks beneath it - a CCTV camera pointing up towards the goat. <br>
+        The Banksy is gone, but I hope the Bruce Lee image is still with us, which it is on Google maps. I'd love to know if it is your art!
+    </p>
+
+    
+    <img src="/images/IMG_3300_full.png" style="
+        width:320px;
+        border-radius:8px;
+        border:1px solid #8FAC59;
+    ">
+
+    
+    <p style="
+        color:var(--secondary);
+        font-family:'DM Mono',monospace;
+        font-size:0.8rem;
+        text-align:center;
+        max-width:400px;
+    ">
+        The full image, I suspect its an electrical junction cabinet. Regardless, its a great piece of art. 
+        Based on the Banksy images, it looks like the goat arrived first.
+    </p>
+
+   
+    <div onclick="event.stopPropagation()" style="
+        width:100%;
+        max-width:480px;
+        border-radius:8px;
+        overflow:hidden;
+        border:1px solid #8FAC59;
+    ">
+        <iframe
+            width="100%"
+            height="300"
+            frameborder="0"
+            style="border:0;display:block"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.2970%2C51.4824%2C-0.2771%2C51.4884&layer=mapnik&marker=51.4854%2C-0.2871"
+            allowfullscreen>
+        </iframe>
+    </div>
+    </div>
+
+    <p style="
+        color:#8FAC59;
+        font-family:'DM Mono',monospace;
+        font-size:0.75rem;
+    ">click outside map to close</p>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const avatarLink = document.querySelector('.logo a img');
+    if (avatarLink) {
+        avatarLink.style.cursor = 'pointer';
+        avatarLink.parentElement.addEventListener('click', function(e) {
+            e.preventDefault();
+            const lb = document.getElementById('avatar-lightbox');
+            lb.style.display = 'flex';
+        });
+    }
+});
+</script>
+
+
 
 <script>
     let menu = document.getElementById('menu');
