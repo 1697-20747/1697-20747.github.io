@@ -6,7 +6,7 @@
     <description>Recent content in Unhelpful Advice on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 25 Apr 2026 09:10:22 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 19:20:14 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why Inflation Measurement Is Harder Than You Think</title>
@@ -14,6 +14,65 @@
       <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/economics/inflation-measurement/</guid>
       <description>The CPI is everywhere, but how it&amp;#39;s actually constructed reveals some uncomfortable tradeoffs.</description>
+    </item>
+    <item>
+      <title>Equality</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/equality/</link>
+      <pubDate>Wed, 06 May 2026 19:20:14 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/equality/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;“A society that puts equality…ahead of freedom will end up with neither equality nor freedom…a society that puts freedom first will, as a happy by product, end up with both greater freedom and greater equality.” - Milton Friedman&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Inflation Broad Money</title>
+      <link>http://localhost:1313/blog/economics/inflation-broad-money/</link>
+      <pubDate>Wed, 06 May 2026 19:13:38 +0000</pubDate>
+      <guid>http://localhost:1313/blog/economics/inflation-broad-money/</guid>
+      <description>A short summary shown in post listings.</description>
+    </item>
+    <item>
+      <title>To Fade</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/to-fade/</link>
+      <pubDate>Tue, 05 May 2026 20:41:50 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/to-fade/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;露と落ち&lt;br&gt;露と消えにし&lt;br&gt;我身かな&lt;br&gt;難波のことも&lt;br&gt;夢のまた夢&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Appearing like dew,&lt;br&gt; Vanishing like dew&lt;br&gt;Such is my life.&lt;br&gt; All of Naniwa&lt;br&gt; Is a dream within a dream.&amp;rdquo; - Toyotomi Hideyoshi, the 16th-century Japanese samurai&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Its Not Research</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/its-not-research/</link>
+      <pubDate>Tue, 05 May 2026 20:15:24 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/its-not-research/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;If we knew what it was we were doing, it would not be called research, would it?&amp;rdquo; - Albert Einstein. Except it wasn&amp;rsquo;t. Neither are a lot more attributed to him. But it is pith life advice in a way.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>No Great Mystery</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/no-great-mystery/</link>
+      <pubDate>Mon, 04 May 2026 21:20:41 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/no-great-mystery/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;“There is no great mystery behind why some nations are wealthy and others are not. The policy mix varies very little and is well understood. Countries with lower, neutral tax systems, minimal regulations, the rule of law and openness to international trade and foreign investment are wealthier than countries with higher taxes, more complicated regulations, and which are closed off to the world. Economies are the sum of the countless decisions made by people on what to buy or sell, where to invest, or where to work.”&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>G20 Sovereign Credit Spreads vs Debt/GDP — Historical Analysis 1970–2023</title>
+      <link>http://localhost:1313/blog/economics/g20-sovereign-credit-spreads/</link>
+      <pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/economics/g20-sovereign-credit-spreads/</guid>
+      <description>Does higher government debt reliably predict higher borrowing costs? 54 years of data across 19 countries says: it depends entirely on who you are.</description>
+    </item>
+    <item>
+      <title>Mfs Collapse</title>
+      <link>http://localhost:1313/blog/credit-risk/mfs-collapse/</link>
+      <pubDate>Tue, 28 Apr 2026 19:36:06 +0000</pubDate>
+      <guid>http://localhost:1313/blog/credit-risk/mfs-collapse/</guid>
+      <description>Low risk high return becomes no return high risk</description>
     </item>
     <item>
       <title>Details Matter</title>
@@ -442,7 +501,7 @@ Oh, I&amp;rsquo;m the cult of personality&lt;/p&gt;
       <link>http://localhost:1313/blog/credit-risk/one-ring-to-rule-them-all/</link>
       <pubDate>Sat, 21 Mar 2026 22:07:39 +0000</pubDate>
       <guid>http://localhost:1313/blog/credit-risk/one-ring-to-rule-them-all/</guid>
-      <description>Mapping CRR exposures against legal entity heirarchy from legacy systems. A dynamic overlay approach to maintain full data integrity</description>
+      <description>Mapping CRR exposures against legal entity hierarchy from legacy systems. A dynamic overlay approach to maintain full data integrity</description>
     </item>
     <item>
       <title>Quality of Earnings</title>

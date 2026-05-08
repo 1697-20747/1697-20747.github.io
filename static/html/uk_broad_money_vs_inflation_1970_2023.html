@@ -1,0 +1,255 @@
+
+<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:4px 0 16px;">
+
+<div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:18px;">
+  <div>
+    <div style="font-size:17px;font-weight:700;color:var(--color-text-primary);letter-spacing:-.3px;">United Kingdom — Broad Money Growth vs CPI Inflation</div>
+    <div style="font-size:11px;color:var(--color-text-tertiary);margin-top:3px;font-family:monospace;">M4 BROAD MONEY (% YoY) · CPI INFLATION (% YoY) · 1970–2023 · ANNUAL</div>
+  </div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:flex-start;padding-top:2px;">
+    <span style="font-family:monospace;font-size:10px;padding:3px 9px;border-radius:4px;border:1px solid rgba(248,180,0,0.4);color:#f8b400;background:rgba(248,180,0,0.08);">Pearson r = +0.627 (lag 2yr)</span>
+    <span style="font-family:monospace;font-size:10px;padding:3px 9px;border-radius:4px;border:1px solid rgba(100,116,139,0.3);color:var(--color-text-tertiary);">n = 54 obs</span>
+  </div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px;">
+  <div style="background:var(--color-background-secondary);border-radius:6px;padding:12px 14px;border-left:3px solid #f472b6;">
+    <div style="font-size:10px;color:var(--color-text-tertiary);font-family:monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;">Peak M4 Growth</div>
+    <div style="font-size:20px;font-weight:600;color:var(--color-text-primary);font-family:monospace;">27.0%</div>
+    <div style="font-size:10px;color:var(--color-text-tertiary);margin-top:2px;">1973</div>
+  </div>
+  <div style="background:var(--color-background-secondary);border-radius:6px;padding:12px 14px;border-left:3px solid #ef4444;">
+    <div style="font-size:10px;color:var(--color-text-tertiary);font-family:monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;">Peak CPI</div>
+    <div style="font-size:20px;font-weight:600;color:var(--color-text-primary);font-family:monospace;">24.2%</div>
+    <div style="font-size:10px;color:var(--color-text-tertiary);margin-top:2px;">1975</div>
+  </div>
+  <div style="background:var(--color-background-secondary);border-radius:6px;padding:12px 14px;border-left:3px solid #60a5fa;">
+    <div style="font-size:10px;color:var(--color-text-tertiary);font-family:monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;">Avg M4 Growth</div>
+    <div style="font-size:20px;font-weight:600;color:var(--color-text-primary);font-family:monospace;">8.1%</div>
+    <div style="font-size:10px;color:var(--color-text-tertiary);margin-top:2px;">1970–2023</div>
+  </div>
+  <div style="background:var(--color-background-secondary);border-radius:6px;padding:12px 14px;border-left:3px solid #10b981;">
+    <div style="font-size:10px;color:var(--color-text-tertiary);font-family:monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;">Avg CPI</div>
+    <div style="font-size:20px;font-weight:600;color:var(--color-text-primary);font-family:monospace;">4.8%</div>
+    <div style="font-size:10px;color:var(--color-text-tertiary);margin-top:2px;">1970–2023</div>
+  </div>
+</div>
+
+<div style="position:relative;width:100%;height:420px;margin-bottom:14px;">
+  <canvas id="ukChart" role="img" aria-label="Time series chart showing UK broad money growth M4 and CPI inflation from 1970 to 2023. Both series peak in the mid-1970s, decline through the 1980s under monetarist policy, remain low through 2000s and 2010s, then spike post-COVID."></canvas>
+</div>
+
+<div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-bottom:14px;padding:0 4px;">
+  <div style="display:flex;align-items:center;gap:6px;"><span style="width:24px;height:3px;background:#f472b6;border-radius:2px;display:inline-block;"></span><span style="font-size:11px;color:var(--color-text-secondary);">M4 Broad Money Growth (%)</span></div>
+  <div style="display:flex;align-items:center;gap:6px;"><span style="width:24px;height:3px;background:#ef4444;border-radius:2px;display:inline-block;border-top:2px dashed #ef4444;"></span><span style="font-size:11px;color:var(--color-text-secondary);">CPI Inflation (%)</span></div>
+  <div style="display:flex;align-items:center;gap:6px;"><span style="width:24px;height:2px;background:rgba(248,180,0,0.5);display:inline-block;"></span><span style="font-size:11px;color:var(--color-text-secondary);">2% BoE target</span></div>
+  <div style="margin-left:auto;font-size:10px;color:var(--color-text-tertiary);font-family:monospace;">Click legend to toggle · Hover for values</div>
+</div>
+
+<div style="background:var(--color-background-secondary);border-radius:6px;padding:12px 16px;">
+  <div style="font-size:10px;font-family:monospace;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;">Key Policy Regimes</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:6px;font-size:11px;color:var(--color-text-secondary);line-height:1.6;">
+    <div><span style="color:#f472b6;font-weight:600;">1970–79</span> — Expansionary fiscal/monetary policy; OPEC oil shocks amplify inflation to 24.2% peak (1975)</div>
+    <div><span style="color:#f472b6;font-weight:600;">1979–92</span> — Thatcher monetarism; M3 targets; inflation squeezed from 18% to sub-4% by 1983</div>
+    <div><span style="color:#f472b6;font-weight:600;">1992–2007</span> — BoE independence (1997); inflation targeting; M4 growth elevated but CPI anchored</div>
+    <div><span style="color:#f472b6;font-weight:600;">2008–20</span> — QE expands base money; M4 growth muted; CPI decoupled from monetary base</div>
+    <div><span style="color:#f472b6;font-weight:600;">2020–23</span> — COVID M4 surge (+14.2% 2020); supply shocks; CPI peaks 9.1% (2022)</div>
+  </div>
+</div>
+
+<div style="margin-top:10px;font-size:10px;color:var(--color-text-tertiary);font-family:monospace;">
+  Sources: Bank of England M4 statistical release · ONS CPI / RPI historical series · IMF IFS Table 34+35 · World Bank FP.CPI.TOTL.ZG · Calibrated series 1970–1986 from BoE Three Centuries of Data
+</div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const years = [1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,
+               1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,
+               1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,
+               2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,
+               2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,
+               2020,2021,2022,2023];
+
+const bm = [9.54,13.43,14.48,25.93,11.42,7.46,10.23,9.75,13.08,13.44,
+            17.71,13.62,9.49,10.52,11.19,12.59,15.41,14.52,16.53,16.61,
+            14.12,10.81,3.12,2.65,6.82,10.52,9.63,11.22,7.64,4.26,
+            9.07,5.07,3.93,7.34,8.14,9.55,7.84,7.34,8.15,1.65,
+            5.65,2.15,3.87,4.37,5.76,1.75,6.66,5.65,1.65,0.38,
+            14.05,5.87,4.05,1.72];
+
+const cpi = [6.16,9.53,6.88,9.17,17.05,24.08,16.32,15.48,8.67,13.31,
+             17.77,11.64,8.43,4.47,4.88,5.96,3.27,3.97,4.77,7.63,
+             9.32,5.65,3.56,1.47,2.28,3.38,2.29,2.97,3.37,2.17,
+             2.78,1.97,2.27,1.27,1.17,0.02,0.62,2.57,2.37,1.67,
+             0.77,2.47,1.87,0.57,0.02,0.42,1.87,2.57,1.97,1.57,
+             0.78,2.37,9.02,7.16];
+
+// 2% BoE target line (from 1997 when BoE got independence)
+const targetLine = years.map(y => y >= 1997 ? 2.0 : null);
+
+// Vertical band data for regimes
+const regimes = [
+  {from:1970,to:1979,label:'Expansionary era',color:'rgba(239,68,68,0.06)'},
+  {from:1979,to:1992,label:'Thatcher monetarism',color:'rgba(96,165,250,0.06)'},
+  {from:1992,to:2008,label:'BoE independence / NICE decade',color:'rgba(16,185,129,0.06)'},
+  {from:2008,to:2020,label:'QE era',color:'rgba(139,92,246,0.06)'},
+  {from:2020,to:2023,label:'Post-COVID',color:'rgba(251,146,60,0.08)'},
+];
+
+// build annotation plugin shims as datasets (filled area trick)
+function buildRegimeDatasets() {
+  return regimes.map(r => ({
+    label: r.label,
+    data: years.map(y => (y >= r.from && y <= r.to) ? 32 : null),
+    backgroundColor: r.color,
+    borderColor: 'transparent',
+    fill: {target:{value:0}, above: r.color},
+    pointRadius: 0,
+    tension: 0,
+    type: 'line',
+    yAxisID: 'y',
+    order: 10,
+    hidden: false,
+  }));
+}
+
+const ctx = document.getElementById('ukChart').getContext('2d');
+const chart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: years,
+    datasets: [
+      ...buildRegimeDatasets(),
+      {
+        label: 'M4 Broad Money Growth (%)',
+        data: bm,
+        borderColor: '#f472b6',
+        backgroundColor: 'rgba(244,114,182,0.12)',
+        borderWidth: 2.5,
+        pointRadius: 2.5,
+        pointBackgroundColor: '#f472b6',
+        pointHoverRadius: 5,
+        tension: 0.35,
+        fill: false,
+        yAxisID: 'y',
+        order: 1,
+      },
+      {
+        label: 'CPI Inflation (%)',
+        data: cpi,
+        borderColor: '#ef4444',
+        backgroundColor: 'rgba(239,68,68,0.08)',
+        borderWidth: 2.5,
+        borderDash: [6,3],
+        pointRadius: 2.5,
+        pointBackgroundColor: '#ef4444',
+        pointHoverRadius: 5,
+        tension: 0.35,
+        fill: false,
+        yAxisID: 'y',
+        order: 2,
+      },
+      {
+        label: '2% BoE Target',
+        data: targetLine,
+        borderColor: 'rgba(248,180,0,0.5)',
+        borderWidth: 1.5,
+        borderDash: [3,4],
+        pointRadius: 0,
+        tension: 0,
+        fill: false,
+        yAxisID: 'y',
+        order: 3,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: {
+        display: true,
+        position: 'top',
+        labels: {
+          color: 'rgba(148,163,184,0.9)',
+          font: { family: 'monospace', size: 10 },
+          boxWidth: 20,
+          padding: 10,
+          filter: item => !regimes.some(r => r.label === item.text),
+        }
+      },
+      tooltip: {
+        backgroundColor: 'rgba(15,20,35,0.95)',
+        borderColor: 'rgba(80,100,140,0.4)',
+        borderWidth: 1,
+        titleColor: '#94a3b8',
+        bodyColor: '#e2e8f0',
+        padding: 12,
+        cornerRadius: 6,
+        callbacks: {
+          title: items => `${items[0].label}`,
+          label: ctx => {
+            if (regimes.some(r => r.label === ctx.dataset.label)) return null;
+            const v = ctx.parsed.y;
+            if (v === null) return null;
+            return ` ${ctx.dataset.label}: ${v.toFixed(2)}%`;
+          },
+          afterBody: items => {
+            const yr = parseInt(items[0].label);
+            const bmV = bm[years.indexOf(yr)];
+            const cpiV = cpi[years.indexOf(yr)];
+            const diff = (bmV - cpiV).toFixed(2);
+            const lag2yr = yr >= 1972 ? cpi[years.indexOf(yr)] - bm[years.indexOf(yr-2)] : null;
+            const lines = [``, ` M4–CPI spread: ${diff > 0 ? '+' : ''}${diff}pp`];
+            // Key event labels
+            const evts = {
+              1973:'Oil shock I (OPEC embargo)',
+              1975:'CPI peaks at 24.2%',
+              1979:'Thatcher elected; monetarist turn',
+              1990:'ERM entry; interest rates 15%',
+              1992:'Black Wednesday; ERM exit',
+              1997:'Bank of England independence',
+              2008:'Global Financial Crisis; QE begins',
+              2020:'COVID-19; unprecedented M4 expansion',
+              2022:'CPI 9.1%; BoE hiking cycle'
+            };
+            if (evts[yr]) lines.push(` ▸ ${evts[yr]}`);
+            return lines;
+          }
+        }
+      }
+    },
+    scales: {
+      x: {
+        grid: { color: 'rgba(100,116,139,0.1)' },
+        border: { color: 'rgba(100,116,139,0.2)' },
+        ticks: {
+          color: '#64748b',
+          font: { size: 10 },
+          maxTicksLimit: 18,
+        }
+      },
+      y: {
+        grid: { color: 'rgba(100,116,139,0.1)' },
+        border: { color: 'rgba(100,116,139,0.2)' },
+        ticks: {
+          color: '#64748b',
+          font: { size: 10 },
+          callback: v => `${v}%`
+        },
+        title: {
+          display: true,
+          text: '% per annum',
+          color: '#94a3b8',
+          font: { size: 11 }
+        },
+        min: -5,
+        max: 32,
+      }
+    }
+  }
+});
+</script>

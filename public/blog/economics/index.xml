@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>[1697, 20747]</title>
+    <title>Economics on [1697, 20747]</title>
     <link>http://localhost:1313/blog/economics/</link>
-    <description>Recent content on [1697, 20747]</description>
+    <description>Recent content in Economics on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 12 Apr 2026 17:32:43 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 19:13:38 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/economics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why Inflation Measurement Is Harder Than You Think</title>
@@ -14,6 +14,20 @@
       <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/economics/inflation-measurement/</guid>
       <description>The CPI is everywhere, but how it&amp;#39;s actually constructed reveals some uncomfortable tradeoffs.</description>
+    </item>
+    <item>
+      <title>Inflation Broad Money</title>
+      <link>http://localhost:1313/blog/economics/inflation-broad-money/</link>
+      <pubDate>Wed, 06 May 2026 19:13:38 +0000</pubDate>
+      <guid>http://localhost:1313/blog/economics/inflation-broad-money/</guid>
+      <description>A short summary shown in post listings.</description>
+    </item>
+    <item>
+      <title>G20 Sovereign Credit Spreads vs Debt/GDP — Historical Analysis 1970–2023</title>
+      <link>http://localhost:1313/blog/economics/g20-sovereign-credit-spreads/</link>
+      <pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/economics/g20-sovereign-credit-spreads/</guid>
+      <description>Does higher government debt reliably predict higher borrowing costs? 54 years of data across 19 countries says: it depends entirely on who you are.</description>
     </item>
     <item>
       <title>Its All In The Tail</title>

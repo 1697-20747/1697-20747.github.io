@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>[1697, 20747]</title>
+    <title>Comp Science on [1697, 20747]</title>
     <link>http://localhost:1313/blog/comp-science/</link>
-    <description>Recent content on [1697, 20747]</description>
+    <description>Recent content in Comp Science on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
     <lastBuildDate>Sun, 12 Apr 2026 09:52:19 +0000</lastBuildDate>
