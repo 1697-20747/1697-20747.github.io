@@ -6,34 +6,52 @@
     <lastmod>2026-02-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-05-06T19:20:14+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/</loc>
-    <lastmod>2026-05-06T19:20:14+00:00</lastmod>
+    <lastmod>2026-05-09T11:29:26+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2026-05-06T19:20:14+00:00</lastmod>
+    <lastmod>2026-05-09T11:29:26+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-05-06T19:20:14+00:00</lastmod>
+    <lastmod>2026-05-09T11:29:26+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/economics/</loc>
+    <lastmod>2026-05-09T11:29:26+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/economics/</loc>
+    <lastmod>2026-05-09T11:29:26+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/fx/</loc>
+    <lastmod>2026-05-09T11:29:26+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/economics/fx-rate-efficiency-calculator/</loc>
+    <lastmod>2026-05-09T11:29:26+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-05-09T11:29:26+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/credit-risk/</loc>
+    <lastmod>2026-05-09T07:51:37+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/groupthink/</loc>
+    <lastmod>2026-05-09T07:51:37+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unhelpful-advice/its-lonely-at-the-bottom/</loc>
+    <lastmod>2026-05-09T07:51:37+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/mfs/</loc>
+    <lastmod>2026-05-09T07:51:37+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unhelpful-advice/</loc>
+    <lastmod>2026-05-09T07:51:37+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/unhelpful-advice/</loc>
+    <lastmod>2026-05-09T07:51:37+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/unhelpful-advice/equality/</loc>
     <lastmod>2026-05-06T19:20:14+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/equality/</loc>
     <lastmod>2026-05-06T19:20:14+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-05-06T19:20:14+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/unhelpful-advice/</loc>
-    <lastmod>2026-05-06T19:20:14+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/economics/</loc>
-    <lastmod>2026-05-06T19:13:38+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/economics/</loc>
-    <lastmod>2026-05-06T19:13:38+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/economics/inflation-broad-money/</loc>
     <lastmod>2026-05-06T19:13:38+00:00</lastmod>
@@ -173,6 +191,12 @@
     <loc>http://localhost:1313/blog/unhelpful-advice/never-trust-a-spreadsheet/</loc>
     <lastmod>2026-03-22T20:10:32+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/fraud/</loc>
+    <lastmod>2026-03-22T11:16:02+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/the-con-of-consolidated-accounting/</loc>
+    <lastmod>2026-03-22T11:16:02+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/blog/credit-risk/un-consolidating-consolidated-accounting/</loc>
     <lastmod>2026-03-22T11:16:02+00:00</lastmod>
   </url><url>
@@ -296,13 +320,7 @@
     <loc>http://localhost:1313/tags/corporate-failure/</loc>
     <lastmod>2024-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/credit-risk/</loc>
-    <lastmod>2024-03-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/blog/credit-risk/enron-a-look-back/</loc>
-    <lastmod>2024-03-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/fraud/</loc>
     <lastmod>2024-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/history/</loc>
@@ -598,17 +616,17 @@
   </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
+    <loc>http://localhost:1313/about/about_index/</loc>
+  </url><url>
     <loc>http://localhost:1313/blog/bjj/</loc>
+  </url><url>
+    <loc>http://localhost:1313/blog/books/books-index/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/data-analytics/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/other/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/philosophy/</loc>
-  </url><url>
-    <loc>http://localhost:1313/about/about_index/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/books/books-index/</loc>
   </url><url>
     <loc>http://localhost:1313/search/</loc>
   </url>

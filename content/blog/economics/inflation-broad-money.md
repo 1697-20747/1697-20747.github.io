@@ -1,7 +1,7 @@
 ---
 title: "Inflation Broad Money"
 date: 2026-05-06T19:13:38Z
-draft: true
+draft: false
 categories: ["economics"]
 tags: []
 description: "A short summary shown in post listings."
@@ -21,6 +21,11 @@ As Friedman.
 
  Later he clarified that he was referring to episodes of persistent inflation. In the short run, supply shocks can impact the price level.
 
+This post is all about assessing broad money supply on inflation. Just the facts if you please. I am not suggesting exogenous shocks don't matter. The current oil price shock in may 2026 is definitely going to wash a wave of inflation through the west. But I am not assessing this, just the concept of government actions expanding money relating to subsequent inflation.
+
+For a more wider discussion, read what an actual economic thinks. What the hell do I know, I'm just applying some math here. This is a good overview.
+
+[Paul Krugman on wider Inflation](https://paulkrugman.substack.com/p/money-isnt-everything)
 ---
 
 # Broad Money Supply and Inflation: A Cross-Country Analysis of G20 Economies, 1970–2023
@@ -65,6 +70,33 @@ Outlook (indicator PCPIPCH), the World Bank (FP.CPI.TOTL.ZG), and the
 OECD Main Economic Indicators. All series are calibrated to annual
 frequency. Thanks AI for the slog in doing this.
 
+Broad Money is a measure of liquidity within the economy, including    
+* cash
+* bank deposits
+* near-money financial assets
+
+M2 is the measure, roughly, of cash plus savings. It is a narrow measure, retail in nature. You could expect M2 to respond rapidly.
+
+M4 comprises:
+
+* sterling notes and coin
+* sterling bank and building society deposits
+* certificates of deposit
+* short-term bank paper and similar sterling instruments
+* certain repo claims and money-market liabilities held by the UK private sector.
+
+But excludes:
+* central bank reserves
+* government money printing alone
+
+The latter actions will show up in M2 and M4 though.
+
+> The Broad money aggregate M4 is a measure of the quantity UK money supply.
+>
+> Bank of England   
+
+[M4 Bank of England](https://www.bankofengland.co.uk/statistics/details/further-details-about-m4-data?utm_source=chatgpt.com)
+
 ### 2.2 Stationarity
 
 Prior to correlation analysis, Augmented Dickey-Fuller (ADF) tests confirm
@@ -73,6 +105,8 @@ inflation (ADF statistic = −9.42; p < 0.0001) are integrated of order zero
 — I(0) — in their first-difference (growth-rate) representations. The
 analysis is therefore conducted on stationary series, mitigating the risk of
 spurious correlation.
+
+In plain english this means regression analysis should provide some meaningful results. This is because before checking whether money growth and inflation move together, we verified the data behave properly statistically. After converting them into growth rates, both series became stable over time, so the correlation results are much more trustworthy.
 
 ### 2.3 Lag Structure
 
@@ -91,28 +125,23 @@ legibility. Their inclusion amplifies the pooled correlation coefficient;
 sensitivity analysis excluding these observations yields r = +0.52 and
 R² = 0.27, still economically and statistically significant.
 
+Much more on these problem children in other posts.
+
 ---
 
 ## 3. Empirical Results
 
 ### 3.1 Pooled Cross-Country Correlation
 
-The pooled Pearson correlation between broad money growth and CPI inflation
-across all 1,026 country-year observations is r = +0.751 (p < 0.0001),
-with a Spearman rank correlation of ρ = +0.636. The OLS regression of CPI
-on M2 growth yields a slope coefficient of β = 0.527 (s.e. ≈ 0.018;
-p < 0.0001) and an R² of 0.564, indicating that broad money growth explains
-approximately 56 per cent of the variance in CPI inflation across the full
-panel. The intercept of 1.84 per cent is consistent with a baseline
-structural inflation rate attributable to demand-pull and supply-side factors
-independent of monetary expansion.
+Across all 1,026 country-year observations, broad money growth and CPI inflation show a fairly strong positive relationship. The Pearson correlation is +0.751, while the Spearman rank correlation is +0.636, both highly statistically significant (p < 0.0001).
 
-These results are broadly consistent with McCandless and Weber (1995) and
-De Grauwe and Polan (2005) for the full sample, though the slope coefficient
-of 0.527 falls short of the theoretical unity prediction, reflecting
-financial deepening effects and velocity instability (see Section 4).
+The regression results suggest that, on average, a 1 percentage point increase in broad money growth is associated with roughly a 0.53 percentage point increase in CPI inflation. The model explains about 56% of the variation in inflation across the sample (R² = 0.564), indicating that money growth is an important — though not exclusive — driver of inflation outcomes.
 
-Stated otherwise, Milton is looking rather good about now for causation, not just correlation.
+The regression intercept of 1.84% suggests there is also a baseline level of inflation that exists even without strong monetary expansion, likely reflecting structural, demand-side, and supply-side pressures within economies.
+
+Overall, the findings are broadly in line with earlier studies such as Warren McCandless and Weber (1995), and Paul De Grauwe and Magdalena Polan (2005). However, the estimated relationship is weaker than the one-for-one relationship predicted by simple monetary theory, likely because of changes in financial systems and instability in money velocity over time.
+
+Stated otherwise, Milton is looking rather good about now for causation, not just correlation. Not perfect, but decent.
 
 ### 3.2 Country-Level Heterogeneity
 
@@ -121,7 +150,7 @@ are recorded for Argentina (r = +0.926 at lag 0), France (r = +0.827 at lag
 2), Italy (r = +0.873 at lag 2), Indonesia (r = +0.749 at lag 0), and
 Brazil (r = +0.716 at lag 0). In these economies, monetary expansion has
 historically been tightly associated with inflationary outcomes, consistent
-with fiscal dominance and commodity-price pass-through mechanisms.
+with fiscal dominance and commodity-price pass-through mechanisms. This is expected, sadly, as interventionist play games with inflation for short term politics. This tyranny has destroyed the long term prosperity of the Lat Am regions.
 
 The weakest associations are found for the United States (best-lag r = +0.367
 at lag 2), India (r = +0.234 at lag 2), and Saudi Arabia (r = +0.458 at lag
@@ -130,14 +159,20 @@ expansion of central bank reserves that remained sequestered within the
 banking system rather than entering broad circulation, as well as the secular
 decline in monetary velocity (V) associated with quantitative easing. 
 
-Lets see if running 8% constant deficits comes back to bite them.
+This make sense, we intrinsically expect different behaviors from G8 economy's. Lets see if running 8% constant deficits comes back to bite the US as they play currency deflation. As at May 2026, its looking like it might in the midst of the Iran conflict. I'll leave this comment for prosperity's sake and revisit in a year or two's time.
 
 ### 3.3 Lag Structure of Monetary Transmission
 
 A pronounced heterogeneity in lag structure is evident between advanced and
-emerging market economies. Back to science on this one for a bit, with some greek thrown in.
-homogenous milk, means milk that has been agitated and filtered such that the particles are approximately uniform in size. Homo, from the greek, means same or alike. Heteros, being the alternate greek pre fix, implies some fundamental oppositeness. I can't recall seeing hetero milk for sale in a supermarket, maybe that is just me. Right, back to economics. But before that, economics is also greek, for the management of households. 
-If only Western governments could manage their house prudently; it seems a forgotten skill. A task, in Japan for the wife, not the Samurai lord. Regardless, onto the schisms which are expected:
+emerging market economies. Back to science on this one for a bit, with some greek thrown in. 
+
+> Homogenous milk (if you have ever lived in North America this will resonate), means milk that has been agitated and filtered such that the particles are approximately uniform in size. Homo, from the greek, means same or alike. 
+
+> Heteros, being the alternate greek pre fix, implies some fundamental oppositeness. I can't recall seeing hetero milk for sale in a supermarket, maybe that is just me. Right, back to economics. But before that, economics is also greek, for the management of households.
+
+If only Western governments could manage their house prudently; it seems a forgotten skill. A task, in the Japan Sengoko and later Edo period for the wife, not the Samurai lord. 
+
+Regardless, back to the schisms which are expected:
 
 **Advanced economies** (USA, DEU, GBR, JPN, FRA, ITA, CAN, AUS, KOR) exhibit
 peak correlations at lags of 1–2 years, consistent with longer transmission
@@ -169,7 +204,9 @@ to over 320 per cent by 2023; China's from 45 per cent to 245 per cent,
 driven by state-directed credit expansion; advanced European economies
 converge in the 140–175 per cent range.
 
-A story for later, but Japan is a natural buyer of Japanese debt. This luxury is a concept that the UK is suffering from amnesia on, as the worlds market no longer really needs Gilt. My oh my, the UK needs the marginal buyer now though.
+A story for later, but Japan is a natural buyer of Japanese debt. This luxury is a concept that the UK is suffering from amnesia on, as the worlds market no longer really needs Gilt. My oh my, the UK needs the marginal buyer now though. Japan Post Bank, for example, holds enormous amounts of Yen. Before the left and MMT advocates get excited about this, you have to have a highly productive export economy to generate surplus cash before you get to this point. Borrowing like a mad person and claiming it will be fine like Japan, is nonsense without all the other aspects.
+
+[JGB Holders](https://www.mof.go.jp/english/policy/jgbs/reference/Others/holdings01.pdf)
 
 This secular trend has material implications for the QTM: a rising M/PQ ratio
 implies that monetary expansion is partially absorbed by the demand for money

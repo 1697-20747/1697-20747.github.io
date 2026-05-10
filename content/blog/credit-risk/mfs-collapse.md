@@ -1,7 +1,7 @@
 ---
 title: "Mfs Collapse"
 date: 2026-04-28T19:36:06Z
-draft: true
+draft: false
 categories: ["credit-risk"]
 tags: []
 description: "Low risk high return becomes no return high risk"
@@ -52,6 +52,7 @@ This, for those in doubt, should be impossible. Not merely implausible. Accident
 |---|---|
 | Barclays | ~£500 million |
 | Apollo / Atlas SP Partners | ~£400 million |
+| HSBC | ~£293 million |
 | Elliott Investment Management | ~£200 million |
 | Jefferies | £103 million (disclosed) |
 | SMBC | ~£100 million |
@@ -61,6 +62,34 @@ This, for those in doubt, should be impossible. Not merely implausible. Accident
 | Castlelake | Undisclosed |
 
 Barclays and Apollo are not minnows. They have the capacity, and in theory the institutional memory to understand basic diligence. With Barclays most recent disclosures, we know how naked they were when the tide went out. Now there are risks that don't pan out, pun intended gold seekers, but basic diligence and fraud are not desired risks. I wish litigation would bring forth the internal credit memo's, especially the senior supporting rationale.
+
+To the above, in May 2026, we can append HSBC to this list of regret, albeit the exposure is indirect.
+
+HSBC disclosed it expects a $400 million loss linked to alleged fraud involving collapsed UK mortgage broker Market Financial Solutions (MFS).
+* HSBC’s exposure came indirectly through a “back leverage” structure involving lending to a division of Apollo Global Management.
+* The structure involved multiple layers of:
+    * special-purpose vehicles (SPVs),
+    * credit lines,
+    * and intermediary companies,
+        distancing HSBC from the underlying property loans.
+
+The delightfully helpful quote in the earnings announcement was:
+
+> "...ECL of $1.3bn were $0.4bn higher compared with 1Q25. The charge in 1Q26 primarily reflected a $0.4bn fraud-related, secondary, securitisation exposure with a financial sponsor in the UK in our Corporate and Institutional Banking (‘CIB‘) business..."
+>
+> Source: [HSBC Q1 2026](https://www.hsbc.com/investors/results-and-announcements)
+
+The earnings call transcript offers us a little more, but no one was in full confession mode over this. Too soon perhaps, the sting of embarrassment a touch fresh still.
+
+> "We also include $0.4 billion for fraud-related secondary securitisation exposure with a financial sponsor in the UK. I will emphasise that we regard the stage 3 charge this quarter as idiosyncratic and not representative of the risks in the wider portfolio. We have completed a full review of the highest risk areas in our portfolio and have not identified any comparable fraud concerns. We have updated our risk appetite and are incorporating lessons in our due diligence processes. This remains an area in which we are comfortable, but it is not a significant growth driver in our plan."
+>
+> - Q1 Results Analyst and Investor Call 5 May 2026, 7.45am BST PAM KAUR, GROUP CHIEF FINANCIAL OFFICER, as per link above.
+
+The press has some interesting observations about cross linkage, however I won't repeat here. It does appear that HSBC was sold a dud here, in terms of the underwriting bearing no relation to the actual mechanics of the lending and economics.
+
+The lesson here, as always, is that you don't lend to written summaries and analysis. You lend against real world economics, and if its not aligned to the underwriting, you don't get to extract the value/cash that will pay back.
+
+> Lending is more about the return of capital that the return on capital. An extra 30 bps margin will be slim comfort when you lost 50% of your loan, which when you are leveraged is more than 100% of the capital that back stopped the loan.
 
 ### Regulatory background
 
@@ -92,7 +121,7 @@ Whilst we complain about regulation, sometimes with cause, most regulation is th
 | 24 April 2026 | Paresh Raja faces £1.3 billion creditor claim |
 | 28 April 2026 | Barclays Q1 2026 results published: £228 million single-name impairment booked against MFS |
 
-For the sake of interest, let us peruse just the headlines of some of the press related to above. In date order.
+For the sake of interest, let us peruse just the headlines of some of the press related to above. In date order from the ever trusty Telegraph:
 
 | Date        | Headline                                                                 | Author        |
 |-------------|--------------------------------------------------------------------------|---------------|
@@ -104,13 +133,11 @@ For the sake of interest, let us peruse just the headlines of some of the press 
 | 05 Apr 2026 | Shadow banking tycoon's company wrongly claimed FCA approval             | Tom Saunders  |
 | 28 Apr 2026 | Barclays suffers £230m hit from shadow bank collapse                     | Tom Saunders  |
 
-This is not a great read. If you were sitting on this position as risk owner, reading these headlines live as they come out, you would and should be expecting a very difficult 'please explain' meeting with your normally friendly Chief Risk Owner. Props to the quality journalism as well. Good press is better than a regulator for sorting out system problems in some ways. The press is less afraid of ripping off the band aid.
+Just skimming the headlines alone tells quite the story. This is not a great read if you are the lender. Discomforting if you wrote the credit paper. If you were sitting on this position as risk owner, reading these headlines live as they come out, you would and should be expecting a very difficult 'please explain' meeting with your normally friendly Chief Risk Owner. Props to the quality journalism as well. Good press is better than a regulator for sorting out system problems in some ways. The press is less afraid of ripping off the band aid.
 
 The rest of the this text is superfluous, you can figure it out from just the above. Which is the embarrassing part, as rookie questions or bothering to even go meet them should have shaken these issues out of the tree.
 
 ---
-
-
 
 
 ## 4. The Barclays £228 Million Impairment
@@ -126,7 +153,7 @@ Barclays published its Q1 2026 results on 28 April 2026. Key findings:
 
 The £228 million impairment is a provision, not a write-off. Yet. Barclays' total exposure to MFS entities is estimated at approximately **£500 million**, meaning further charges remain possible depending on recovery proceedings. or it gets worse. Provisioning at this level post default tends to be sensibly conservative. But this will be far outside the Loss Given Default argued at the time of the loan for loans that would have been seen as protected by collateral. 
 
-> 'Hey, its prime London real estate, fully secured, stop asking questions you crazy over conservative conservative credit person, what can go wrong. The yields here are great, why cant we do more????'
+> 'Hey, its prime London real estate, fully secured, stop asking questions you crazy over conservative conservative credit person, what can go wrong. The high yields here are great, why can't we do more????'
 
 CEO CS Venkatakrishnan acknowledged the seriousness of the situation, stating: *"This is very serious, we have to understand the implication of it for our bank and for other banks."* The bank announced it is now "constraining lending to certain structured finance counterparties who operate more vulnerable business models." Its serious because they have been found to screw up embarrassingly. This is rookie lending mistakes, not an *operational anvil falling from the sky.*
 
@@ -159,7 +186,7 @@ A now infamous series of early and excellent Telegraph analysis of Companies Hou
 - **More than half** of Magus-linked companies received loans from different MFS lenders on the **same day**, secured against the **same property** — consistent with the double-pledging allegations
 - Six of the eight companies placed into administration in March 2026 are owned by two individuals connected to Magus
 
-Public court filings by creditors Zircon and Amber additionally allege that several of the companies they placed into administration shared the same registered address as MFS and used the same accountancy firm.
+Public court filings by creditors Zircon and Amber additionally allege that several of the companies they placed into administration shared the same registered address as MFS and used the same accountancy firm. Arms length is not the turn of phrase the is springing to mind here...
 
 ### Assessment
 
@@ -182,8 +209,11 @@ Finance and forensic accounting experts have described the reliance on small acc
 - Analysts have termed MFS a **"cockroach event"** — suggesting where one failure is found, others may follow in the private credit and asset-backed lending markets. After the event. Probably the very same analysts who might have suggested it was a great idea.
 
 
-> On the downfall of subprime auto lender Tricolor Holdings, saying, "I shouldn't say this, but when you see one cockroach, there's probably more. Everyone should be forewarned on this one," - JPMorgan Chase (JPM) CEO Jamie Dimon, Oct 2025 on Analyst calls.
+> On the downfall of subprime auto lender Tricolor Holdings, saying, "I shouldn't say this, but when you see one cockroach, there's probably more. Everyone should be forewarned on this one,"
+>
+> JPMorgan Chase (JPM) CEO Jamie Dimon, Oct 2025 on Analyst calls.
 
+Depending on how the private debt market fallout eventuates, this might end up being the quote of the decade. To be fair, other than the odd issue JPM runs a pretty clean loan book in the main.
 ---
 
 ## 7. Legal Status (as of 28 April 2026)
@@ -204,7 +234,8 @@ At some point litigation and the FCA will lay the facts on the table, in a coupl
 ## Key Takeaways
 
 - Not much else to say here, don't be stupid, check the basics.
-- Don't lend to something you don't understand.
+- Don't lend to something you don't understand. Ever.
+- Not all borrowers are liars. But some are.
 
 
 ---

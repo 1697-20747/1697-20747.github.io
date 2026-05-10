@@ -19,13 +19,13 @@ cover:
 
 ---
 
-## 📚 Documentation
+## Documentation
 - Official-style guide: https://cmdbox.mikihands.com/en/tree/  
 - Linux manual overview: https://www.systutorials.com/docs/linux/man/1-tree/  
 
 ---
 
-## ⚙️ Basic Usage
+## Basic Usage
 
 ```bash
 tree [options] [directory]
@@ -44,7 +44,7 @@ tree -L 2
 
 ---
 
-## 🔑 Most Useful Commands
+## Most Useful Commands
 
 | Command | Description |
 |--------|------------|
@@ -56,31 +56,45 @@ tree -L 2
 | `tree -I pattern` | Exclude files/dirs matching pattern |
 | `tree --help` | Show all options |
 
-`tree - d -L 2` is one I use all the time.
+`tree -d -L 2` is one I use all the time. Watch the spaces, syntax matters.
 
 ---
 
-## 🧠 Key Concepts
+## Key Concepts
 
 - Recursively traverses directories  
 - Displays structure visually (like branches of a tree)  
 - Useful for:
   - Exploring projects
   - Documentation
-  - Debugging file layouts  
+  - Debugging file layouts
+  - Adjusting scale of branching to reduce noise 
 
 ---
 
-## ⚡ Install (if missing)
+## Install (if missing)
 
 ```bash
 # Ubuntu / Debian
 sudo apt install tree
 ```
+On mac's, use Homebrew. Sudo stands for “superuser do”. It’s a command on macOS (and Linux) that lets you run other commands with administrator (root) privileges. Sudo can be (potentially) more dangerous if you don't *really* know what you are doing.
 
+What it does:
+* Runs commands as root user
+* Can modify any file on your system
+* Can bypass macOS protections (partially)
+
+```bash
+# Homebrew is used, checks if it is installed or not. Skip if you don't want to use homebrew.
+which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && \
+brew install tree && \
+tree --version && \
+tree -L 2
+```
 ---
 
-## ✅ When to Use
+## When to Use Tree
 
 - Understanding unfamiliar codebases  
 - Generating quick documentation  

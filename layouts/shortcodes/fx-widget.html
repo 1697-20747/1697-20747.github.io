@@ -1,0 +1,522 @@
+<div id="fx-widget">
+
+  <style>
+
+#fx-widget {
+background: #121212;
+color: #eaeaea;
+padding: 16px;
+border-radius: 14px;
+width: 100%;
+max-width: 100%;
+min-width: 0;
+margin: 20px auto;
+border: 1px solid #333;
+font-family: inherit;
+
+}
+
+#fx-widget h2 {
+
+    margin-top: 0;
+
+    color: #ffffff;
+
+}
+
+#fx-widget p {
+
+    color: #bbbbbb;
+
+    line-height: 1.5;
+
+}
+
+#fx-widget table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+table-layout: fixed;
+}
+
+#fx-widget th,
+
+#fx-widget td {
+
+    border: 1px solid #333;
+
+    padding: 10px;
+
+    text-align: center;
+
+}
+
+#fx-widget th {
+
+    background: #1e1e1e;
+
+}
+
+#fx-widget input,
+
+#fx-widget select {
+
+background: #1e1e1e;
+
+color: white;
+
+border: 1px solid #444;
+
+padding: 8px;
+
+border-radius: 6px;
+
+width: 100%;
+
+box-sizing: border-box;
+
+}
+
+#fx-widget button {
+font-family: monospace;
+font-size: 0.82rem;
+background: transparent;
+color: #8FAC59;
+border: 1px solid #8FAC59;
+border-radius: 4px;
+padding: 0.4rem 1rem;
+cursor: pointer;
+}
+
+#fx-widget button:hover {
+
+    opacity: 0.9;
+
+}
+
+#fx-widget .controls {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+#fx-widget .reset-btn {
+
+    background: #444;
+
+}
+
+#fx-widget .best {
+
+    color: #6cff8f;
+
+    font-weight: bold;
+
+}
+
+#fx-widget .warning {
+
+    color: #ff9090;
+
+    font-size: 13px;
+
+    margin-top: 12px;
+
+}
+
+@media (max-width: 768px) {
+
+#fx-widget {
+
+    padding: 10px;
+
+}
+
+#fx-widget table {
+
+    font-size: 10px;
+
+}
+
+#fx-widget th,
+
+#fx-widget td {
+
+    padding: 6px;
+
+}
+
+#fx-widget input,
+#fx-widget select {
+
+background: #1e1e1e;
+color: white;
+border: 1px solid #444;
+padding: 6px;
+border-radius: 6px;
+width: 100%;
+min-width: 0;
+box-sizing: border-box;
+font-size: 10px;
+font-family: monospace;
+}
+}
+
+#fx-widget button {
+width: 100%;
+}
+
+#fx-widget .bid,
+#fx-widget .ask {
+font-size: 10px;
+font-family: monospace;
+}
+
+#fx-widget th,
+#fx-widget td {
+padding: 5px;
+}
+
+#fx-widget input.bid,
+#fx-widget input.ask {
+font-size: 10px !important;
+font-family: monospace;
+padding: 4px;
+}
+
+#fx-widget .amount {
+font-size: 10px;
+}
+
+#fx-widget th {
+font-size: 10px;
+font-family: monospace;
+}
+
+  }
+
+  </style>
+
+  <h2>FX Spread Exhaustion Simulator</h2>
+
+  <p>
+
+    Simulates repeated FX conversions using directional bid/ask spreads.
+
+    The score represents how many full conversion cycles occur before
+
+    the starting capital is effectively exhausted by spread decay.
+
+  </p>
+
+  <table id="fxTable">
+
+    <thead>
+
+      <tr>
+
+        <th>#</th>
+
+        <th>FX Pair</th>
+
+        <th>Bid</th>
+
+        <th>Ask</th>
+
+        <th>Initial Amount</th>
+
+        <th>Decay Factor</th>
+
+        <th>Cycles Until Exhaustion</th>
+
+        <th>Rank</th>
+
+      </tr>
+
+    </thead>
+
+    <tbody></tbody>
+
+  </table>
+
+  <div class="controls">
+
+    <button onclick="calculateScores()">
+
+      Calculate Rankings
+
+    </button>
+
+    <button class="reset-btn" onclick="resetWidget()">
+
+      Reset
+
+    </button>
+
+  </div>
+
+  <div class="warning">
+
+    Lower spread friction produces larger survival counts.
+
+    Best rank = highest number of cycles before exhaustion.
+
+  </div>
+
+</div>
+
+<script>
+
+(function() {
+
+  const PAIRS = [
+
+    "EUR/USD",
+
+    "GBP/USD",
+
+    "USD/JPY",
+
+    "USD/CHF",
+
+    "AUD/USD",
+
+    "NZD/USD",
+
+    "USD/CAD",
+
+    "EUR/GBP",
+
+    "EUR/JPY",
+
+    "GBP/JPY"
+
+  ];
+
+  const tbody = document.querySelector("#fxTable tbody");
+
+  for (let i = 0; i < 5; i++) {
+
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+
+      <td>${i + 1}</td>
+
+      <td>
+
+        <select class="pair">
+
+          ${PAIRS.map(p => `<option>${p}</option>`).join("")}
+
+        </select>
+
+      </td>
+
+      <td>
+
+        <input
+
+          type="number"
+
+          class="bid"
+
+          step="0.0001"
+
+          value="1.0990">
+
+      </td>
+
+      <td>
+
+        <input
+
+          type="number"
+
+          class="ask"
+
+          step="0.0001"
+
+          value="1.1010">
+
+      </td>
+
+      <td>
+
+        <input
+
+          type="number"
+
+          class="amount"
+
+          step="0.01"
+
+          value="1000">
+
+      </td>
+
+      <td class="decay">-</td>
+
+      <td class="score">-</td>
+
+      <td class="rank">-</td>
+
+    `;
+
+    tbody.appendChild(row);
+
+  }
+
+  window.calculateScores = function() {
+
+    const rows = document.querySelectorAll("#fxTable tbody tr");
+
+    let results = [];
+
+    rows.forEach((row, index) => {
+
+      const bid =
+
+        parseFloat(row.querySelector(".bid").value);
+
+      const ask =
+
+        parseFloat(row.querySelector(".ask").value);
+
+      const amount =
+
+        parseFloat(row.querySelector(".amount").value);
+
+      if (!bid || !ask || !amount || ask <= bid) {
+
+        row.querySelector(".score").textContent = "Invalid";
+
+        row.querySelector(".decay").textContent = "-";
+
+        row.querySelector(".rank").textContent = "-";
+
+        return;
+
+      }
+
+      /*
+
+        One full cycle:
+
+        EUR -> USD at bid
+
+        USD -> EUR at ask
+
+        Remaining fraction after cycle:
+
+      */
+
+      const decayFactor = bid / ask;
+
+      /*
+
+        We define exhaustion threshold:
+
+        remaining EUR < 0.0001
+
+      */
+
+      const threshold = 0.0001;
+
+      /*
+
+        Analytical solution:
+
+        amount * decayFactor^n = threshold
+
+        n = log(threshold/amount) / log(decayFactor)
+
+      */
+
+      const cycles =
+
+        Math.log(threshold / amount) /
+
+        Math.log(decayFactor);
+
+      row.querySelector(".decay").textContent =
+
+        decayFactor.toFixed(8);
+
+      row.querySelector(".score").textContent =
+
+        cycles.toFixed(0);
+
+      results.push({
+
+        index,
+
+        score: cycles
+
+      });
+
+    });
+
+    results.sort((a, b) => b.score - a.score);
+
+    results.forEach((r, idx) => {
+
+      const row = rows[r.index];
+
+      row.querySelector(".rank").textContent =
+
+        idx + 1;
+
+      row.querySelector(".score")
+
+        .classList.remove("best");
+
+      if (idx === 0) {
+
+        row.querySelector(".score")
+
+          .classList.add("best");
+
+      }
+
+    });
+
+  };
+
+  window.resetWidget = function() {
+
+    const rows =
+
+      document.querySelectorAll("#fxTable tbody tr");
+
+    rows.forEach((row) => {
+
+      row.querySelector(".bid").value = "";
+
+      row.querySelector(".ask").value = "";
+
+      row.querySelector(".amount").value = "";
+
+      row.querySelector(".score").textContent = "-";
+
+      row.querySelector(".decay").textContent = "-";
+
+      row.querySelector(".rank").textContent = "-";
+
+      row.querySelector(".score")
+
+        .classList.remove("best");
+
+    });
+
+  };
+
+})();
+
+</script>
