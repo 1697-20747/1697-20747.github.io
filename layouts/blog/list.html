@@ -1,10 +1,5 @@
 {{- define "main" }}
 
-<header class="page-header">
-  {{- partial "breadcrumbs.html" . }}
-  <h1>{{ .Title }}</h1>
-</header>
-
 <style>
 .tiles-grid {
     display: grid;
@@ -67,13 +62,6 @@
     letter-spacing: 0.05em;
 }
 
-.tile-desc {
-    font-size: 0.82rem;
-    color: var(--secondary);
-    line-height: 1.5;
-    margin-top: 0.25rem;
-}
-
 .tile-arrow {
     margin-top: auto;
     font-family: 'DM Mono', monospace;
@@ -100,14 +88,21 @@
 }
 </style>
 
+{{- if .Sections }}
+{{/* ── Top level /blog/ page — show category tiles ── */}}
+
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+</header>
+
 <div class="section-label">Browse Categories</div>
 
 <div class="tiles-grid">
-    {{- $sections := .Sections }}
-    {{- range $sections }}
+    {{- range .Sections }}
         {{- $pages := where .Pages "Draft" "ne" true }}
         {{- $count := len $pages }}
-        <a class="tile-card" href="{{ .Permalink }}" {{- if eq $count 0 }} style="opacity:0.6" {{- end }}>
+        <a class="tile-card" href="{{ .Permalink }}"{{- if eq $count 0 }} style="opacity:0.6"{{- end }}>
             <div class="tile-name">{{ .Title }}</div>
             <div class="tile-count">
                 {{- if eq $count 0 }}coming soon
@@ -118,5 +113,35 @@
         </a>
     {{- end }}
 </div>
+
+{{- else }}
+{{/* ── Category page eg /blog/economics/ — show posts normally ── */}}
+
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}
+  <div class="post-description">{{ . }}</div>
+  {{- end }}
+</header>
+
+{{- range (where .Pages "Draft" "ne" true) }}
+<article class="post-entry">
+    <header class="entry-header">
+        <h2 class="entry-hint-parent">{{ .Title }}</h2>
+    </header>
+    {{- with .Description }}
+    <div class="entry-content"><p>{{ . }}</p></div>
+    {{- else }}
+    <div class="entry-content"><p>{{ .Summary | plainify | htmlUnescape | truncate 150 "..." }}</p></div>
+    {{- end }}
+    <footer class="entry-footer">
+        {{- partial "post_meta.html" . -}}
+    </footer>
+    <a class="entry-link" aria-label="post link to {{ .Title }}" href="{{ .Permalink }}"></a>
+</article>
+{{- end }}
+
+{{- end }}
 
 {{- end }}

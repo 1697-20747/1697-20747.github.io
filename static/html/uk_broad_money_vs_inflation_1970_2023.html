@@ -1,37 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UK Broad Money vs Inflation 1970–2023</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{
+  background:#090c14;
+  color:#e2e8f0;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  min-height:100vh;
+}
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:
+    linear-gradient(rgba(59,130,246,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(59,130,246,.03) 1px,transparent 1px);
+  background-size:60px 60px;pointer-events:none;z-index:0;
+}
+.page-wrap{
+  position:relative;z-index:1;
+  max-width:1100px;margin:0 auto;padding:28px 22px 60px;
+}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+<div style="
+
+  --color-text-primary:#e2e8f0;
+
+  --color-text-secondary:#94a3b8;
+
+  --color-text-tertiary:#64748b;
+
+  --color-background-secondary:#161e2e;
+
+  --color-border-tertiary:#1e2d42;
+
+  background:#0f172a;
+
+  color:#e2e8f0;
+
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+
+  padding:4px 0 16px;
+
+">
 
 <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:4px 0 16px;">
 
 <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:18px;">
   <div>
-    <div style="font-size:17px;font-weight:700;color:var(--color-text-primary);letter-spacing:-.3px;">United Kingdom — Broad Money Growth vs CPI Inflation</div>
-    <div style="font-size:11px;color:var(--color-text-tertiary);margin-top:3px;font-family:monospace;">M4 BROAD MONEY (% YoY) · CPI INFLATION (% YoY) · 1970–2023 · ANNUAL</div>
+    <div style="font-size:17px;font-weight:700;color:#e2e8f0;letter-spacing:-.3px;">United Kingdom — Broad Money Growth vs CPI Inflation</div>
+    <div style="font-size:11px;color:#64748b;margin-top:3px;font-family:monospace;">M4 BROAD MONEY (% YoY) · CPI INFLATION (% YoY) · 1970–2023 · ANNUAL</div>
   </div>
   <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:flex-start;padding-top:2px;">
     <span style="font-family:monospace;font-size:10px;padding:3px 9px;border-radius:4px;border:1px solid rgba(248,180,0,0.4);color:#f8b400;background:rgba(248,180,0,0.08);">Pearson r = +0.627 (lag 2yr)</span>
-    <span style="font-family:monospace;font-size:10px;padding:3px 9px;border-radius:4px;border:1px solid rgba(100,116,139,0.3);color:var(--color-text-tertiary);">n = 54 obs</span>
+    <span style="font-family:monospace;font-size:10px;padding:3px 9px;border-radius:4px;border:1px solid rgba(100,116,139,0.3);color:#64748b;">n = 54 obs</span>
   </div>
 </div>
 
 <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px;">
-  <div style="background:var(--color-background-secondary);border-radius:6px;padding:12px 14px;border-left:3px solid #f472b6;">
-    <div style="font-size:10px;color:var(--color-text-tertiary);font-family:monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;">Peak M4 Growth</div>
-    <div style="font-size:20px;font-weight:600;color:var(--color-text-primary);font-family:monospace;">27.0%</div>
-    <div style="font-size:10px;color:var(--color-text-tertiary);margin-top:2px;">1973</div>
+  <div style="background:#161e2e;border-radius:6px;padding:12px 14px;border-left:3px solid #f472b6;">
+    <div style="font-size:10px;color:#64748b;font-family:monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;">Peak M4 Growth</div>
+    <div style="font-size:20px;font-weight:600;color:#e2e8f0;font-family:monospace;">27.0%</div>
+    <div style="font-size:10px;color:#64748b;margin-top:2px;">1973</div>
   </div>
-  <div style="background:var(--color-background-secondary);border-radius:6px;padding:12px 14px;border-left:3px solid #ef4444;">
-    <div style="font-size:10px;color:var(--color-text-tertiary);font-family:monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;">Peak CPI</div>
-    <div style="font-size:20px;font-weight:600;color:var(--color-text-primary);font-family:monospace;">24.2%</div>
-    <div style="font-size:10px;color:var(--color-text-tertiary);margin-top:2px;">1975</div>
+  <div style="background:#161e2e;border-radius:6px;padding:12px 14px;border-left:3px solid #ef4444;">
+    <div style="font-size:10px;color:#64748b;font-family:monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;">Peak CPI</div>
+    <div style="font-size:20px;font-weight:600;color:#e2e8f0;font-family:monospace;">24.2%</div>
+    <div style="font-size:10px;color:#64748b;margin-top:2px;">1975</div>
   </div>
-  <div style="background:var(--color-background-secondary);border-radius:6px;padding:12px 14px;border-left:3px solid #60a5fa;">
-    <div style="font-size:10px;color:var(--color-text-tertiary);font-family:monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;">Avg M4 Growth</div>
-    <div style="font-size:20px;font-weight:600;color:var(--color-text-primary);font-family:monospace;">8.1%</div>
-    <div style="font-size:10px;color:var(--color-text-tertiary);margin-top:2px;">1970–2023</div>
+  <div style="background:#161e2e;border-radius:6px;padding:12px 14px;border-left:3px solid #60a5fa;">
+    <div style="font-size:10px;color:#64748b;font-family:monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;">Avg M4 Growth</div>
+    <div style="font-size:20px;font-weight:600;color:#e2e8f0;font-family:monospace;">8.1%</div>
+    <div style="font-size:10px;color:#64748b;margin-top:2px;">1970–2023</div>
   </div>
-  <div style="background:var(--color-background-secondary);border-radius:6px;padding:12px 14px;border-left:3px solid #10b981;">
-    <div style="font-size:10px;color:var(--color-text-tertiary);font-family:monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;">Avg CPI</div>
-    <div style="font-size:20px;font-weight:600;color:var(--color-text-primary);font-family:monospace;">4.8%</div>
-    <div style="font-size:10px;color:var(--color-text-tertiary);margin-top:2px;">1970–2023</div>
+  <div style="background:#161e2e;border-radius:6px;padding:12px 14px;border-left:3px solid #10b981;">
+    <div style="font-size:10px;color:#64748b;font-family:monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;">Avg CPI</div>
+    <div style="font-size:20px;font-weight:600;color:#e2e8f0;font-family:monospace;">4.8%</div>
+    <div style="font-size:10px;color:#64748b;margin-top:2px;">1970–2023</div>
   </div>
 </div>
 
@@ -40,15 +91,15 @@
 </div>
 
 <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-bottom:14px;padding:0 4px;">
-  <div style="display:flex;align-items:center;gap:6px;"><span style="width:24px;height:3px;background:#f472b6;border-radius:2px;display:inline-block;"></span><span style="font-size:11px;color:var(--color-text-secondary);">M4 Broad Money Growth (%)</span></div>
-  <div style="display:flex;align-items:center;gap:6px;"><span style="width:24px;height:3px;background:#ef4444;border-radius:2px;display:inline-block;border-top:2px dashed #ef4444;"></span><span style="font-size:11px;color:var(--color-text-secondary);">CPI Inflation (%)</span></div>
-  <div style="display:flex;align-items:center;gap:6px;"><span style="width:24px;height:2px;background:rgba(248,180,0,0.5);display:inline-block;"></span><span style="font-size:11px;color:var(--color-text-secondary);">2% BoE target</span></div>
-  <div style="margin-left:auto;font-size:10px;color:var(--color-text-tertiary);font-family:monospace;">Click legend to toggle · Hover for values</div>
+  <div style="display:flex;align-items:center;gap:6px;"><span style="width:24px;height:3px;background:#f472b6;border-radius:2px;display:inline-block;"></span><span style="font-size:11px;color:#94a3b8;">M4 Broad Money Growth (%)</span></div>
+  <div style="display:flex;align-items:center;gap:6px;"><span style="width:24px;height:3px;background:#ef4444;border-radius:2px;display:inline-block;border-top:2px dashed #ef4444;"></span><span style="font-size:11px;color:#94a3b8;">CPI Inflation (%)</span></div>
+  <div style="display:flex;align-items:center;gap:6px;"><span style="width:24px;height:2px;background:rgba(248,180,0,0.5);display:inline-block;"></span><span style="font-size:11px;color:#94a3b8;">2% BoE target</span></div>
+  <div style="margin-left:auto;font-size:10px;color:#64748b;font-family:monospace;">Click legend to toggle · Hover for values</div>
 </div>
 
-<div style="background:var(--color-background-secondary);border-radius:6px;padding:12px 16px;">
-  <div style="font-size:10px;font-family:monospace;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;">Key Policy Regimes</div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:6px;font-size:11px;color:var(--color-text-secondary);line-height:1.6;">
+<div style="background:#161e2e;border-radius:6px;padding:12px 16px;">
+  <div style="font-size:10px;font-family:monospace;color:#64748b;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;">Key Policy Regimes</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:6px;font-size:11px;color:#94a3b8;line-height:1.6;">
     <div><span style="color:#f472b6;font-weight:600;">1970–79</span> — Expansionary fiscal/monetary policy; OPEC oil shocks amplify inflation to 24.2% peak (1975)</div>
     <div><span style="color:#f472b6;font-weight:600;">1979–92</span> — Thatcher monetarism; M3 targets; inflation squeezed from 18% to sub-4% by 1983</div>
     <div><span style="color:#f472b6;font-weight:600;">1992–2007</span> — BoE independence (1997); inflation targeting; M4 growth elevated but CPI anchored</div>
@@ -57,7 +108,7 @@
   </div>
 </div>
 
-<div style="margin-top:10px;font-size:10px;color:var(--color-text-tertiary);font-family:monospace;">
+<div style="margin-top:10px;font-size:10px;color:#64748b;font-family:monospace;">
   Sources: Bank of England M4 statistical release · ONS CPI / RPI historical series · IMF IFS Table 34+35 · World Bank FP.CPI.TOTL.ZG · Calibrated series 1970–1986 from BoE Three Centuries of Data
 </div>
 
@@ -253,3 +304,6 @@ const chart = new Chart(ctx, {
   }
 });
 </script>
+</div>
+</body>
+</html>

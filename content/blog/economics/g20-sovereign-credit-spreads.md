@@ -17,7 +17,11 @@ The conventional assumption is straightforward: more debt means higher borrowing
 
 But please don't get excited please Modern Monetary Theorists (that delusion still needs to die). The turkey's life outlook is not correlated to Christmas either, until such time as it is. Debt still matters. Like falling from great heights, its not the fall that hurts, it is the sudden inevitable stop that does the damage.
 
-> “Annual income twenty pounds, annual expenditure nineteen nineteen and six, result happiness. Annual income twenty pounds, annual expenditure twenty pounds ought and six, result misery.” - Wilkins Micawber, David Copperfield, Charles Dickens, c. 1850. It should be noted he fails to heed his own advice and ends in debtors prison. Take note chancellors of the West who seem unable to ever balance a budget. That means you too Mr Carney, you lack the excuse of not knowing better.
+> “Annual income twenty pounds, annual expenditure nineteen nineteen and six, result happiness. Annual income twenty pounds, annual expenditure twenty pounds ought and six, result misery.”
+>
+> Wilkins Micawber, David Copperfield, Charles Dickens, c. 1850. 
+
+It should be noted he fails to heed his own advice and ends in debtors prison. Take note chancellors of the West who seem unable to ever balance a budget. That means you too Mr Carney, you lack the excuse of not knowing better.
 
 The dashboard below explores why. At least I hope it does. yes, I know its flawed, all such analysis is. USD yields are not such an objective benchmark, but it is good enough for the purpose at hand.
 
@@ -158,4 +162,3 @@ coincided with meaningful growth slowdowns.
 
 ## References
 
-- [Source title](https://url.com)
