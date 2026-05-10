@@ -1,16 +1,5 @@
 {{- define "main" }}
-{{/* ── Profile image ── */}}
-{{- with site.Params.profileMode }}
-{{- if .enabled }}
-<div class="main profile">
-    <div class="profile_inner">
-        {{- with .imageUrl }}
-        <img src="{{ . }}" alt="profile image" width="{{ $.Site.Params.profileMode.imageWidth | default 120 }}" height="{{ $.Site.Params.profileMode.imageHeight | default 120 }}">
-        {{- end }}
-    </div>
-</div>
-{{- end }}
-{{- end }}
+
 
 
 {{/* ── Home info / intro block ── */}}
