@@ -1,3 +1,15 @@
+---
+title: "API Reference"
+weight: 3
+description: "REST API reference for the RMBS modeling system."
+summary: "REST API reference for the RMBS modeling system."
+ShowToc: false
+disableAnchoredHeadings: true
+---
+<!--more-->
+
+<!--more-->
+
 # RMBS API Documentation
 
 Complete REST API for secure access to RMBS reports and dashboards.
@@ -11,12 +23,12 @@ The RMBS API provides secure, authenticated access to:
 
 ### Key Features
 
-✅ **Authentication**: Secure API key-based authentication  
-✅ **Authorization**: Fine-grained permissions (read_reports, read_dashboards)  
-✅ **Rate Limiting**: Protect against abuse  
-✅ **Audit Logging**: Track all access  
-✅ **RESTful**: Standard HTTP methods and status codes  
-✅ **Documentation**: Self-documenting API with OpenAPI support  
+[OK] **Authentication**: Secure API key-based authentication  
+[OK] **Authorization**: Fine-grained permissions (read_reports, read_dashboards)  
+[OK] **Rate Limiting**: Protect against abuse  
+[OK] **Audit Logging**: Track all access  
+[OK] **RESTful**: Standard HTTP methods and status codes  
+[OK] **Documentation**: Self-documenting API with OpenAPI support  
 
 ---
 

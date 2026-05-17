@@ -6,8 +6,64 @@
     <description>Recent content in Unhelpful Advice on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 17 May 2026 07:13:28 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 07:13:29 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RMBS Technical Architecture</title>
+      <link>http://localhost:1313/docs/rmbs/rmbs-technical-architecture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/rmbs/rmbs-technical-architecture/</guid>
+      <description>Technical architecture and system documentation for TGT-RMBS-2025-001.</description>
+    </item>
+    <item>
+      <title>API Reference</title>
+      <link>http://localhost:1313/docs/rmbs/api-reference/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/rmbs/api-reference/</guid>
+      <description>REST API reference for the RMBS modeling system.</description>
+    </item>
+    <item>
+      <title>API Setup Guide</title>
+      <link>http://localhost:1313/docs/rmbs/api-setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/rmbs/api-setup/</guid>
+      <description>Setup guide for the RMBS REST API server.</description>
+    </item>
+    <item>
+      <title>Dashboards Guide</title>
+      <link>http://localhost:1313/docs/rmbs/dashboards-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/rmbs/dashboards-guide/</guid>
+      <description>Interactive dashboard guide for RMBS pool and tranche reporting.</description>
+    </item>
+    <item>
+      <title>Sample Mortgage and Pool Data</title>
+      <link>http://localhost:1313/docs/rmbs/sample-mortgage-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/rmbs/sample-mortgage-data/</guid>
+      <description>Example mortgage loan and pool-level data from TGT-RMBS-2025-001.</description>
+    </item>
+    <item>
+      <title>Sample Investor Report</title>
+      <link>http://localhost:1313/docs/rmbs/sample-reports/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/rmbs/sample-reports/</guid>
+      <description>Sample monthly investor report for TGT-RMBS-2025-001.</description>
+    </item>
+    <item>
+      <title>Reporting Guide</title>
+      <link>http://localhost:1313/docs/rmbs/reporting-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/rmbs/reporting-guide/</guid>
+      <description>Guide to RMBS investor reporting and dashboard generation.</description>
+    </item>
+    <item>
+      <title>Geographic Mortgage Map</title>
+      <link>http://localhost:1313/docs/rmbs/geographic-mortgage-map/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/rmbs/geographic-mortgage-map/</guid>
+      <description>Interactive map showing mortgage pool distribution across UK regions.</description>
+    </item>
     <item>
       <title>Why Inflation Measurement Is Harder Than You Think</title>
       <link>http://localhost:1313/blog/economics/inflation-measurement/</link>
@@ -16,46 +72,18 @@
       <description>The CPI is everywhere, but how it&amp;#39;s actually constructed reveals some uncomfortable tradeoffs.</description>
     </item>
     <item>
-      <title>RMBS Technical Architecture &amp; Implementation</title>
-      <link>http://localhost:1313/docs/rmbs/technical-architecture/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/rmbs/technical-architecture/</guid>
-      <description>Complete technical documentation for RMBS system architecture, codebase, and integration</description>
-    </item>
-    <item>
-      <title>Sample Mortgage &amp; Pool Data</title>
-      <link>http://localhost:1313/docs/rmbs/sample-mortgage-data/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/rmbs/sample-mortgage-data/</guid>
-      <description>Example mortgage loan and pool-level data from the TGT-RMBS-2025-001 securitization</description>
-    </item>
-    <item>
-      <title>Geographic Distribution Map</title>
-      <link>http://localhost:1313/docs/rmbs/geographic-mortgage-map/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/rmbs/geographic-mortgage-map/</guid>
-      <description>Interactive map showing mortgage pool distribution across UK regions</description>
-    </item>
-    <item>
-      <title>Sample Reports</title>
-      <link>http://localhost:1313/docs/rmbs/sample-reports/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/rmbs/sample-reports/</guid>
-      <description>Example investor reports and performance metrics from TGT-RMBS-2025-001</description>
-    </item>
-    <item>
-      <title>Securitisation 101</title>
-      <link>http://localhost:1313/blog/comp-science/securitisation-101-final/</link>
-      <pubDate>Sun, 17 May 2026 07:13:28 +0000</pubDate>
-      <guid>http://localhost:1313/blog/comp-science/securitisation-101-final/</guid>
-      <description>A complete start-to-finish guide to securitisation with real-world examples and working code</description>
+      <title>Securitisation 101: Party Roles and Waterfall</title>
+      <link>http://localhost:1313/blog/comp-science/securitisation-101-part-2/</link>
+      <pubDate>Sun, 17 May 2026 07:13:29 +0000</pubDate>
+      <guid>http://localhost:1313/blog/comp-science/securitisation-101-part-2/</guid>
+      <description>Entity roles, responsibilities and payment waterfall mechanics in RMBS securitisation.</description>
     </item>
     <item>
       <title>Securitisation 101</title>
       <link>http://localhost:1313/blog/comp-science/securitisation-101/</link>
       <pubDate>Sun, 17 May 2026 07:13:28 +0000</pubDate>
       <guid>http://localhost:1313/blog/comp-science/securitisation-101/</guid>
-      <description>A start to finish guide to securitisation</description>
+      <description>A complete start-to-finish guide to securitisation with real-world examples and working code</description>
     </item>
     <item>
       <title>Fx Rate Efficiency Calculator</title>
@@ -814,119 +842,6 @@ Oh, I&amp;rsquo;m the cult of personality&lt;/p&gt;
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/books/once-an-eagle/</guid>
       <description>A sweeping military novel following two officers across decades of American wars. One of the finest studies of leadership, character, and moral compromise ever written.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/docs/rmbs/api-reference/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/rmbs/api-reference/</guid>
-      <description>&lt;h1 id=&#34;rmbs-api-documentation&#34;&gt;RMBS API Documentation&lt;/h1&gt;
-&lt;p&gt;Complete REST API for secure access to RMBS reports and dashboards.&lt;/p&gt;
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;The RMBS API provides secure, authenticated access to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;RMBS Investor Reports (CSV &amp;amp; Parquet)&lt;/li&gt;
-&lt;li&gt;Interactive Dashboards (HTML)&lt;/li&gt;
-&lt;li&gt;Report metadata and summaries&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;key-features&#34;&gt;Key Features&lt;/h3&gt;
-&lt;p&gt;✅ &lt;strong&gt;Authentication&lt;/strong&gt;: Secure API key-based authentication&lt;br&gt;
-✅ &lt;strong&gt;Authorization&lt;/strong&gt;: Fine-grained permissions (read_reports, read_dashboards)&lt;br&gt;
-✅ &lt;strong&gt;Rate Limiting&lt;/strong&gt;: Protect against abuse&lt;br&gt;
-✅ &lt;strong&gt;Audit Logging&lt;/strong&gt;: Track all access&lt;br&gt;
-✅ &lt;strong&gt;RESTful&lt;/strong&gt;: Standard HTTP methods and status codes&lt;br&gt;
-✅ &lt;strong&gt;Documentation&lt;/strong&gt;: Self-documenting API with OpenAPI support&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/docs/rmbs/api-setup/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/rmbs/api-setup/</guid>
-      <description>&lt;h1 id=&#34;rmbs-api-server---setup--deployment-guide&#34;&gt;RMBS API Server - Setup &amp;amp; Deployment Guide&lt;/h1&gt;
-&lt;p&gt;Complete guide to deploy and manage the RMBS API server.&lt;/p&gt;
-&lt;h2 id=&#34;quick-start&#34;&gt;Quick Start&lt;/h2&gt;
-&lt;h3 id=&#34;1-install-dependencies&#34;&gt;1. Install Dependencies&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -r rmbs_api_requirements.txt
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-set-environment-variables&#34;&gt;2. Set Environment Variables&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;RMBS_MASTER_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;your_secure_master_key_here&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;FLASK_ENV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;production&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3-run-server-development&#34;&gt;3. Run Server (Development)&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python rmbs_api_server.py
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Server will start on &lt;code&gt;http://localhost:5000&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;4-run-server-production&#34;&gt;4. Run Server (Production)&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gunicorn --bind 0.0.0.0:5000 --workers &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; rmbs_api_server:app
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;api-key-management&#34;&gt;API Key Management&lt;/h2&gt;
-&lt;h3 id=&#34;create-api-key&#34;&gt;Create API Key&lt;/h3&gt;
-&lt;p&gt;Admin creates key for a client:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -X POST http://localhost:5000/api/v1/admin/keys/create &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;X-Master-Key: your_secure_master_key_here&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;{
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    &amp;#34;client_name&amp;#34;: &amp;#34;Investment Bank XYZ&amp;#34;,
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    &amp;#34;permissions&amp;#34;: [&amp;#34;read_reports&amp;#34;, &amp;#34;read_dashboards&amp;#34;],
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    &amp;#34;expires_days&amp;#34;: 365
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  }&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Response&lt;/strong&gt;:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/docs/rmbs/dashboards-guide/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/rmbs/dashboards-guide/</guid>
-      <description>&lt;h1 id=&#34;rmbs-interactive-dashboards&#34;&gt;RMBS Interactive Dashboards&lt;/h1&gt;
-&lt;p&gt;Complete dark-mode dashboard system for RMBS reporting with interactive visualizations and static PNG exports.&lt;/p&gt;
-&lt;h2 id=&#34;quick-start&#34;&gt;Quick Start&lt;/h2&gt;
-&lt;h3 id=&#34;generate-dashboards&#34;&gt;Generate Dashboards&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bash generate_dashboards.sh &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2021&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Creates three interactive HTML dashboards in timestamped folder:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;dashboard_pool_202105.html&lt;/code&gt; — Pool overview&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;dashboard_tranches_202105.html&lt;/code&gt; — Tranche structure&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;dashboard_summary_202105.html&lt;/code&gt; — Executive summary&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;view-dashboards&#34;&gt;View Dashboards&lt;/h3&gt;
-&lt;p&gt;Open in web browser (any modern browser):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;file:///path/to/logs/2021-05_TIMESTAMP/dashboard_pool_202105.html
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;file:///path/to/logs/2021-05_TIMESTAMP/dashboard_tranches_202105.html
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;file:///path/to/logs/2021-05_TIMESTAMP/dashboard_summary_202105.html
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;dashboard-overview&#34;&gt;Dashboard Overview&lt;/h2&gt;
-&lt;h3 id=&#34;1-pool-dashboard-dashboard_pool_html&#34;&gt;1. Pool Dashboard (&lt;code&gt;dashboard_pool_*.html&lt;/code&gt;)&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Key Sections:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Pool balance &amp;amp; loan count&lt;/li&gt;
-&lt;li&gt;Average/median loan sizes&lt;/li&gt;
-&lt;li&gt;LTV statistics&lt;/li&gt;
-&lt;li&gt;Interest rates&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Visualizations:&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/docs/rmbs/reporting-guide/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/rmbs/reporting-guide/</guid>
-      <description>&lt;h1 id=&#34;rmbs-investor-reporting-system&#34;&gt;RMBS INVESTOR REPORTING SYSTEM&lt;/h1&gt;
-&lt;p&gt;Complete system for generating monthly investor reports from RMBS pool data.&lt;/p&gt;
-&lt;h2 id=&#34;quick-start&#34;&gt;Quick Start&lt;/h2&gt;
-&lt;h3 id=&#34;generate-single-report&#34;&gt;Generate Single Report&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bash generate_rmbs_report.sh &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2021&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Output:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;logs/2021-05_TIMESTAMP/investor_report_2021-05.parquet&lt;/code&gt;  (Full report)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;logs/2021-05_TIMESTAMP/investor_report_2021-05.csv&lt;/code&gt;      (Summary)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;logs/2021-05_TIMESTAMP/manifest.txt&lt;/code&gt;                     (Metadata)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;generate-multiple-reports&#34;&gt;Generate Multiple Reports&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bash generate_multi_reports.sh &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2021&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2021&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Generates reports for May-December 2021 with dated subfolders.&lt;/p&gt;
-&lt;h3 id=&#34;list-all-reports&#34;&gt;List All Reports&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bash list_reports.sh
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Shows all generated reports with dates and file counts.&lt;/p&gt;
-&lt;h3 id=&#34;export-combined-summary&#34;&gt;Export Combined Summary&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bash export_all_reports.sh all_reports.csv
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Combines all monthly reports into single CSV for analysis.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>

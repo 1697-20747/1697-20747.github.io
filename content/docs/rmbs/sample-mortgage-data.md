@@ -1,8 +1,14 @@
 ---
-title: "Sample Mortgage & Pool Data"
-description: "Example mortgage loan and pool-level data from the TGT-RMBS-2025-001 securitization"
-weight: 20
+title: "Sample Mortgage and Pool Data"
+weight: 6
+description: "Example mortgage loan and pool-level data from TGT-RMBS-2025-001."
+summary: "Sample mortgage pool data and statistics for TGT-RMBS-2025-001."
+ShowToc: false
+disableAnchoredHeadings: true
 ---
+<!--more-->
+
+<!--more-->
 
 ## Sample Mortgage Loan
 
@@ -11,11 +17,11 @@ Here's an example of a single mortgage in the 10,000 loan pool:
 | Field | Value |
 |-------|-------|
 | **Loan ID** | LOAN-0001 |
-| **Original Balance** | £125,000 |
-| **Current Balance** | £118,500 |
+| **Original Balance** | GBP 125,000 |
+| **Current Balance** | GBP 118,500 |
 | **Interest Rate** | 4.65% |
 | **Maturity (years)** | 25 |
-| **Monthly Payment** | £631.42 |
+| **Monthly Payment** | GBP 631.42 |
 | **Loan-to-Value (LTV)** | 78.5% |
 | **Credit Score** | 745 |
 | **Region** | London |
@@ -30,11 +36,11 @@ Here's an example of a single mortgage in the 10,000 loan pool:
 | Metric | Value |
 |--------|-------|
 | **Total Loans** | 10,000 |
-| **Pool Balance** | £733,087,150 |
-| **Average Loan** | £73,309 |
-| **Median Loan** | £42,883 |
-| **Min Loan** | £10,000 |
-| **Max Loan** | £500,000 |
+| **Pool Balance** | GBP 733,087,150 |
+| **Average Loan** | GBP 73,309 |
+| **Median Loan** | GBP 42,883 |
+| **Min Loan** | GBP 10,000 |
+| **Max Loan** | GBP 500,000 |
 | **Average LTV** | 78.5% |
 | **Weighted Average Rate** | 4.65% |
 | **Average Credit Score** | 715 |
@@ -46,12 +52,12 @@ Here's an example of a single mortgage in the 10,000 loan pool:
 
 | Region | Count | % | Balance |
 |--------|-------|---|---------|
-| **London** | 6,450 | 64.5% | £473.2m |
-| **South East** | 1,550 | 15.5% | £113.7m |
-| **East Anglia** | 800 | 8.0% | £58.6m |
-| **Midlands** | 600 | 6.0% | £43.9m |
-| **North** | 600 | 6.0% | £43.6m |
-| **TOTAL** | **10,000** | **100%** | **£733.1m** |
+| **London** | 6,450 | 64.5% | GBP 473.2m |
+| **South East** | 1,550 | 15.5% | GBP 113.7m |
+| **East Anglia** | 800 | 8.0% | GBP 58.6m |
+| **Midlands** | 600 | 6.0% | GBP 43.9m |
+| **North** | 600 | 6.0% | GBP 43.6m |
+| **TOTAL** | **10,000** | **100%** | **GBP 733.1m** |
 
 ---
 
@@ -84,11 +90,11 @@ For a typical month (e.g., May 2026) with normal performance:
 
 | Component | Amount | Notes |
 |-----------|--------|-------|
-| **Mortgage Payments** | £8,537,240 | Principal + Interest collected |
-| **Scheduled Principal** | £6,105,300 | Amortization |
-| **Scheduled Interest** | £2,431,940 | At weighted rate |
-| **Admin Fees** | £500,835 | 82 bps annually = ~£500k/month |
-| **Available to Investors** | £8,036,405 | After fees |
+| **Mortgage Payments** | GBP 8,537,240 | Principal + Interest collected |
+| **Scheduled Principal** | GBP 6,105,300 | Amortization |
+| **Scheduled Interest** | GBP 2,431,940 | At weighted rate |
+| **Admin Fees** | GBP 500,835 | 82 bps annually = ~GBP 500k/month |
+| **Available to Investors** | GBP 8,036,405 | After fees |
 
 ---
 
@@ -104,16 +110,16 @@ For a typical month (e.g., May 2026) with normal performance:
 
 ---
 
-## Tranche Structure (£733.1m Pool)
+## Tranche Structure (GBP 733.1m Pool)
 
 | Class | Notional | % | Rating | Spread | WAL* |
 |-------|----------|---|--------|--------|-----|
-| **Class A** | £219,932,450 | 30% | AAA | 50 bps | 3.2 yrs |
-| **Class B** | £146,621,630 | 20% | AA | 100 bps | 4.1 yrs |
-| **Class C** | £146,621,630 | 20% | A | 150 bps | 5.3 yrs |
-| **Class D** | £146,621,630 | 20% | BBB | 250 bps | 6.8 yrs |
-| **Class Z** | £73,310,810 | 10% | NR | Residual | 12.5 yrs |
-| **TOTAL** | **£733,108,150** | **100%** | | | |
+| **Class A** | GBP 219,932,450 | 30% | AAA | 50 bps | 3.2 yrs |
+| **Class B** | GBP 146,621,630 | 20% | AA | 100 bps | 4.1 yrs |
+| **Class C** | GBP 146,621,630 | 20% | A | 150 bps | 5.3 yrs |
+| **Class D** | GBP 146,621,630 | 20% | BBB | 250 bps | 6.8 yrs |
+| **Equity** | GBP 22,329,000 | 3.0% | NR | Residual | 12.5 yrs |
+| **TOTAL** | **GBP 733,108,150** | **100%** | | | |
 
 *WAL = Weighted Average Life
 
@@ -123,12 +129,12 @@ For a typical month (e.g., May 2026) with normal performance:
 
 | Item | Amount |
 |------|--------|
-| **Mortgage Pool Purchase Price** | £733,100,000 |
-| **Note Issuance Amount** | £733,100,000 |
-| **Issuance Costs** | £4,400,000 (59.5 bps) |
+| **Mortgage Pool Purchase Price** | GBP 733,100,000 |
+| **Note Issuance Amount** | GBP 733,100,000 |
+| **Issuance Costs** | GBP 4,400,000 (59.5 bps) |
 | **Note Pricing** | 100.59% |
-| **Markup** | £4,360,000 |
-| **Sources & Uses Balance** | £737,465,000 (balanced) |
+| **Markup** | GBP 4,360,000 |
+| **Sources & Uses Balance** | GBP 737,465,000 (balanced) |
 
 ---
 
@@ -138,12 +144,12 @@ Based on base case assumptions:
 
 | Class | Interest/Month | Principal/Month | Total/Month |
 |-------|---|---|---|
-| **Class A** | £1,099,600 | £3,000,000 | £4,099,600 |
-| **Class B** | £733,100 | £1,500,000 | £2,233,100 |
-| **Class C** | £733,100 | £750,000 | £1,483,100 |
-| **Class D** | £733,100 | £500,000 | £1,233,100 |
-| **Class Z** | £0 | £256,300 | £256,300 |
-| **TOTAL** | **£3,299,000** | **£6,006,300** | **£9,305,300** |
+| **Class A** | GBP 1,099,600 | GBP 3,000,000 | GBP 4,099,600 |
+| **Class B** | GBP 733,100 | GBP 1,500,000 | GBP 2,233,100 |
+| **Class C** | GBP 733,100 | GBP 750,000 | GBP 1,483,100 |
+| **Class D** | GBP 733,100 | GBP 500,000 | GBP 1,233,100 |
+| **Equity** | GBP 0 | GBP 256,300 | GBP 256,300 |
+| **TOTAL** | **GBP 3,299,000** | **GBP 6,006,300** | **GBP 9,305,300** |
 
 (Note: Subject to cash flow availability and waterfall priority)
 
