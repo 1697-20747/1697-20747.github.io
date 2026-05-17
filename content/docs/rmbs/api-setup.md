@@ -1,3 +1,15 @@
+---
+title: "API Setup Guide"
+weight: 4
+description: "Setup guide for the RMBS REST API server."
+summary: "Setup guide for the RMBS REST API server."
+ShowToc: false
+disableAnchoredHeadings: true
+---
+<!--more-->
+
+<!--more-->
+
 # RMBS API Server - Setup & Deployment Guide
 
 Complete guide to deploy and manage the RMBS API server.
@@ -61,7 +73,7 @@ curl -X POST http://localhost:5000/api/v1/admin/keys/create \
 }
 ```
 
-**⚠️ IMPORTANT**: The `api_key` is only shown once on creation. Save it securely!
+**?? IMPORTANT**: The `api_key` is only shown once on creation. Save it securely!
 
 ### List All API Keys
 

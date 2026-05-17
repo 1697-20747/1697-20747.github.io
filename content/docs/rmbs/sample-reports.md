@@ -1,183 +1,142 @@
 ---
-title: "Sample Reports"
-description: "Example investor reports and performance metrics from TGT-RMBS-2025-001"
-weight: 30
+title: "Sample Investor Report"
+weight: 7
+description: "Sample monthly investor report for TGT-RMBS-2025-001."
+summary: "Sample monthly investor report for TGT-RMBS-2025-001."
+ShowToc: false
+disableAnchoredHeadings: true
+---
+<!--more-->
+
+<!--more-->
+
+# TGT-RMBS-2025-001: Monthly Investor Report
+**Reporting Period:** May 2025 | **Report Date:** 15 June 2025
+
 ---
 
-## Sample Monthly Investor Report
-
-This is an example of the monthly investor report generated for May 2026:
-
-### Pool Performance Summary
+## 1. Pool Performance Summary
 
 | Metric | Value |
 |--------|-------|
-| **Reporting Date** | 2026-05-31 |
-| **Pool Balance** | £733,087,150 |
+| **Pool Balance (Opening)** | GBP 733,090,000 |
+| **Pool Balance (Closing)** | GBP 672,001,000 |
 | **Number of Loans** | 10,000 |
-| **Average Loan** | £73,309 |
-| **Weighted Average Rate** | 4.65% |
-| **Weighted Average LTV** | 78.5% |
+| **Average Loan Size** | GBP 73,309 |
+| **Pool WAC** | 4.65% |
+| **Reserve Fund** | GBP 10,996,000 |
+| **Reserve as % of Pool** | 1.500% |
+| **Interest Rate Swap** | None (floating rate transaction) |
 
 ---
 
-### Monthly Cash Collections
+## 2. Monthly Collections
 
 | Item | Amount |
 |------|--------|
-| **Principal Collected** | £6,105,300 |
-| **Interest Collected** | £2,431,940 |
-| **Total Mortgage Payments** | £8,537,240 |
-| **Admin Fees** | £500,835 |
-| **Net Available to Investors** | £8,036,405 |
+| **Principal Collected** | GBP 61,090,000 |
+| **Interest Collected** | GBP 2,840,000 |
+| **Total Mortgage Payments** | GBP 63,930,000 |
+| **Operational Fees (monthly)** | GBP 51,667 |
+| **Net Available to Investors** | GBP 63,878,333 |
 
 ---
 
-### Interest & Principal Distributions (Waterfall)
+## 3. Tranche Payment Summary
 
-| Tranche | Interest Due | Interest Paid | Principal Paid |
-|---------|---|---|---|
-| **Class A (AAA)** | £1,099,600 | £1,099,600 | £3,000,000 |
-| **Class B (AA)** | £733,100 | £733,100 | £1,500,000 |
-| **Class C (A)** | £733,100 | £733,100 | £750,000 |
-| **Class D (BBB)** | £733,100 | £733,100 | £500,000 |
-| **Class Z (NR)** | £0 | £0 | £256,300 |
-| **TOTAL** | **£3,299,000** | **£3,299,000** | **£6,006,300** |
-
----
-
-### Delinquency & Default Metrics
-
-| Metric | Value | % |
-|--------|-------|---|
-| **30-Day Arrears** | 45 loans | 0.45% |
-| **60-Day Arrears** | 28 loans | 0.28% |
-| **90-Day Arrears** | 18 loans | 0.18% |
-| **In Foreclosure** | 8 loans | 0.08% |
-| **Total Delinquent** | 99 loans | 0.99% |
-| **Current/Paid to Date** | 9,901 loans | 99.01% |
+| Tranche | Rating | Opening Balance | Coupon | Interest Paid | Principal Paid | Closing Balance |
+|---------|--------|----------------|--------|---------------|----------------|----------------|
+| **Class A** | AAA | GBP 595,445,000 | 4.25% | GBP 2,088,500 | GBP 55,272,000 | GBP 540,173,000 |
+| **Class B** | AA | GBP 59,544,000 | 4.75% | GBP 235,800 | GBP 2,328,000 | GBP 57,216,000 |
+| **Class C** | A | GBP 37,215,000 | 5.75% | GBP 178,500 | GBP 1,768,000 | GBP 35,447,000 |
+| **Class D** | BBB | GBP 29,772,000 | 7.50% | GBP 186,100 | GBP 1,722,000 | GBP 28,050,000 |
+| **Equity** | NR | GBP 22,329,000 | Variable | GBP 0 | GBP 0 | GBP 11,313,000 |
+| **TOTAL** | | **GBP 744,305,000** | | **GBP 2,688,900** | **GBP 61,090,000** | **GBP 672,199,000** |
 
 ---
 
-### Prepayment & Loss Metrics
+## 4. Waterfall Distribution (Month 1, Base Case)
 
-| Metric | Value | Status |
-|--------|-------|--------|
-| **CPR (Prepayment)** | 5.8% | In line with assumptions |
-| **CDR (Default)** | 0.24% | Within expected range |
-| **Current Losses** | £156,400 | Expected loss level |
-| **Cumulative Losses (YTD)** | £892,300 | Normal |
-| **Loss Severity** | 16.5% | Stable |
+### Sources
+| Item | Amount |
+|------|--------|
+| Principal Collections | GBP 61,090,000 |
+| Interest Collections | GBP 2,840,000 |
+| **Total Available** | **GBP 63,930,000** |
 
----
-
-### Reserve Account Status
-
-| Reserve | Balance | Target | % of Target |
-|---------|---------|--------|-------------|
-| **Interest Reserve** | £2,431,940 | £2,400,000 | 101% ✅ |
-| **Principal Reserve** | £1,200,000 | £1,000,000 | 120% ✅ |
-| **Total Reserve** | **£3,631,940** | **£3,400,000** | **107% ✅** |
-
----
-
-### Class-by-Class Summary
-
-#### **Class A (AAA) - Senior Most**
-- **Notional**: £219,932,450
-- **Interest Rate**: SONIA + 50 bps = 5.00%
-- **Monthly Interest**: £1,099,600
-- **YTD Principal Reduction**: £18,000,000
-- **Current Balance**: £201,932,450
-- **Status**: ✅ Fully paid, well-protected
-
-#### **Class B (AA)**
-- **Notional**: £146,621,630
-- **Interest Rate**: SONIA + 100 bps = 5.50%
-- **Monthly Interest**: £733,100
-- **YTD Principal Reduction**: £9,000,000
-- **Current Balance**: £137,621,630
-- **Status**: ✅ Paid in full, protected
-
-#### **Class C (A)**
-- **Notional**: £146,621,630
-- **Interest Rate**: SONIA + 150 bps = 6.00%
-- **Monthly Interest**: £733,100
-- **YTD Principal Reduction**: £4,500,000
-- **Current Balance**: £142,121,630
-- **Status**: ✅ Paid in full, moderate protection
-
-#### **Class D (BBB)**
-- **Notional**: £146,621,630
-- **Interest Rate**: SONIA + 250 bps = 7.00%
-- **Monthly Interest**: £733,100
-- **YTD Principal Reduction**: £3,000,000
-- **Current Balance**: £143,621,630
-- **Status**: ✅ Paid in full, absorbs some losses
-
-#### **Class Z (Unrated - Equity)**
-- **Notional**: £73,310,810
-- **Interest Rate**: Residual (0% until seniors paid)
-- **Monthly Interest**: £0
-- **YTD Principal Reduction**: £1,536,300
-- **Current Balance**: £71,774,510
-- **Status**: ✅ Absorbs losses first
+### Uses (Priority Order)
+| Priority | Item | Amount |
+|----------|------|--------|
+| 1 | Trustee Fees | GBP 16,667 |
+| 1 | Servicer Fees | GBP 25,000 |
+| 1 | Rating Agency Fees | GBP 4,167 |
+| 1 | Legal & Accounting Fees | GBP 4,583 |
+| 1 | Paying Agent Fees | GBP 1,250 |
+| **1** | **Total Operating Fees** | **GBP 51,667** |
+| 2 | Class A Interest (4.25%) | GBP 2,088,500 |
+| 2 | Class A Principal | GBP 55,272,000 |
+| 2 | Class B Interest (4.75%) | GBP 235,800 |
+| 2 | Class B Principal | GBP 2,328,000 |
+| 2 | Class C Interest (5.75%) | GBP 178,500 |
+| 2 | Class C Principal | GBP 1,768,000 |
+| 2 | Class D Interest (7.50%) | GBP 186,100 |
+| 2 | Class D Principal | GBP 1,722,000 |
+| 3 | Reserve Replenishment | GBP 0 |
+| 4 | Equity Distribution | GBP 99,433 |
+| | **TOTAL** | **GBP 63,930,000** |
 
 ---
 
-## Performance Comparison vs. Assumptions
+## 5. Reserve Fund Status
 
-| Metric | Assumption | Actual | Variance |
-|--------|-----------|--------|----------|
-| **CPR** | 6.0% | 5.8% | -3% (better) |
-| **CDR** | 0.25% | 0.24% | -4% (better) |
-| **Delinquency Rate** | 1.0% | 0.99% | In line |
-| **Loss Severity** | 85% | 16.5% expected | In line |
-| **Interest Collections** | 100% | 100% | On target |
-
----
-
-## Key Observations
-
-✅ **Collections on track** — Pool collecting as expected  
-✅ **Delinquencies stable** — Low and manageable  
-✅ **Reserves adequate** — Exceeding targets  
-✅ **Senior classes protected** — AAA & AA fully paid  
-✅ **Performance vs model** — Better than base assumptions  
+| Reserve Component | Balance | Minimum Required | Coverage |
+|-------------------|---------|-----------------|----------|
+| Reserve Fund | GBP 10,996,000 | GBP 10,996,000 (Moody's 1.5%) | 100% [OK] |
+| Moody's Minimum (1.5%) | GBP 10,996,000 | GBP 10,996,000 | 100% [OK] |
+| S&P Minimum (1.2%) | GBP 10,996,000 | GBP 8,797,000 | 125% [OK] |
+| Fitch Minimum (1.0%) | GBP 10,996,000 | GBP 7,331,000 | 150% [OK] |
+| 3-Month OpEx Coverage | GBP 10,996,000 | GBP 155,001 | 7,094% [OK] |
 
 ---
 
-## Available Report Formats
+## 6. Credit Enhancement
 
-This data is available in two formats:
-
-### **CSV Format**
-- Human-readable spreadsheet format
-- Compatible with Excel, Google Sheets
-- File: `investor_report_202605.csv`
-
-### **Parquet Format**
-- Optimized for data analysis
-- Used by data scientists & analysts
-- File: `investor_report_202605.parquet`
+| Tranche | Current Balance | Cushion Below | Cushion % |
+|---------|----------------|---------------|-----------|
+| Class A | GBP 595,445,000 | GBP 148,861,000 | 20.00% |
+| Class B | GBP 59,544,000 | GBP 89,316,000 | 12.00% |
+| Class C | GBP 37,215,000 | GBP 52,101,000 | 7.00% |
+| Class D | GBP 29,772,000 | GBP 22,329,000 | 3.00% |
+| Equity | GBP 22,329,000 | GBP 0 | 0.00% |
 
 ---
 
-## Historical Reports
+## 7. Collateral Performance
 
-Monthly reports are generated for all periods:
-- May 2026 (current example)
-- April 2026
-- March 2026
-- February 2026
-- (Going back to origination)
+| Metric | Current Month | YTD | Notes |
+|--------|-------------|-----|-------|
+| 30+ Day Delinquencies | 0.42% | 0.42% | Within expected range |
+| 90+ Day Delinquencies | 0.08% | 0.08% | Monitoring |
+| Defaults This Month | GBP 176,000 | GBP 176,000 | 0.024% of pool |
+| Cumulative Losses | GBP 35,200 | GBP 35,200 | 0.005% of pool |
+| CPR (Prepayment Rate) | 5.8% | 5.8% | Normal range |
 
 ---
 
-## Next Steps
+## 8. Interest & Spread Summary
 
-For:
-- **Interactive dashboards** showing this data visually: See [Dashboard Guide](/docs/rmbs/dashboards-guide/)
-- **Complete technical details**: See [Technical Architecture](/docs/rmbs/technical-architecture/)
-- **Raw mortgage & pool data**: See [Sample Data](/docs/rmbs/sample-mortgage-data/)
+| Item | Annual | Monthly |
+|------|--------|---------|
+| Pool Interest Income (4.65%) | GBP 34,089,000 | GBP 2,840,750 |
+| Class A Coupon (4.25%) | GBP 25,306,000 | GBP 2,108,833 |
+| Class B Coupon (4.75%) | GBP 2,828,000 | GBP 235,667 |
+| Class C Coupon (5.75%) | GBP 2,140,000 | GBP 178,333 |
+| Class D Coupon (7.50%) | GBP 2,233,000 | GBP 186,083 |
+| **Total Coupon Expense** | **GBP 32,507,000** | **GBP 2,708,917** |
+| **Annual Spread** | **GBP 1,582,000** | **GBP 131,833** |
+| Operational Costs | GBP 620,000 | GBP 51,667 |
+| **Net to Equity** | **GBP 962,000** | **GBP 80,167** |
 
+---
+
+*This report is produced by the Cash Manager for TGT-RMBS-2025-001 in accordance with the Offering Circular dated 30 April 2025. All figures are unaudited.*

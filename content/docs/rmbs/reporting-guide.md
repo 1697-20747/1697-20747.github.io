@@ -1,3 +1,15 @@
+---
+title: "Reporting Guide"
+weight: 8
+description: "Guide to RMBS investor reporting and dashboard generation."
+summary: "Guide to RMBS investor reporting and dashboard generation."
+ShowToc: false
+disableAnchoredHeadings: true
+---
+<!--more-->
+
+<!--more-->
+
 # RMBS INVESTOR REPORTING SYSTEM
 
 Complete system for generating monthly investor reports from RMBS pool data.
@@ -41,25 +53,25 @@ Combines all monthly reports into single CSV for analysis.
 
 ```
 /outputs/
-├── generate_rmbs_report.sh           ← Single report generator
-├── generate_multi_reports.sh         ← Batch report generator
-├── list_reports.sh                   ← Report listing utility
-├── export_all_reports.sh             ← Combined CSV export
-├── rmbs_report_generator.py          ← Python report engine
-│
-└── logs/                             ← All generated reports
-    ├── 2021-05_20260517_075456/      ← May 2021 (run at 07:54:56)
-    │   ├── investor_report_2021-05.parquet
-    │   ├── investor_report_2021-05.csv
-    │   ├── generate_report.py         (script used)
-    │   └── manifest.txt               (metadata)
-    │
-    ├── 2021-06_20260517_080102/      ← June 2021
-    │   ├── investor_report_2021-06.parquet
-    │   ├── investor_report_2021-06.csv
-    │   └── ...
-    │
-    └── [more months...]
+??? generate_rmbs_report.sh           <- Single report generator
+??? generate_multi_reports.sh         <- Batch report generator
+??? list_reports.sh                   <- Report listing utility
+??? export_all_reports.sh             <- Combined CSV export
+??? rmbs_report_generator.py          <- Python report engine
+?
+??? logs/                             <- All generated reports
+    ??? 2021-05_20260517_075456/      <- May 2021 (run at 07:54:56)
+    ?   ??? investor_report_2021-05.parquet
+    ?   ??? investor_report_2021-05.csv
+    ?   ??? generate_report.py         (script used)
+    ?   ??? manifest.txt               (metadata)
+    ?
+    ??? 2021-06_20260517_080102/      <- June 2021
+    ?   ??? investor_report_2021-06.parquet
+    ?   ??? investor_report_2021-06.csv
+    ?   ??? ...
+    ?
+    ??? [more months...]
 ```
 
 ---
@@ -71,12 +83,12 @@ Combines all monthly reports into single CSV for analysis.
 Key metrics for each reporting month:
 
 - **Reporting Date**: Report date (YYYY-MM-01)
-- **Pool Balance**: Total outstanding pool balance (£)
+- **Pool Balance**: Total outstanding pool balance (GBP )
 - **Number of Loans**: Loan count in pool
 - **Loan Statistics**: Average, median sizes
-- **Tranche Sizes**: Notional per Class A/B/C/D/Z (£)
-- **Monthly Cashflows**: Interest received, principal received, admin fees (£)
-- **Arrears**: Count of delinquent loans, total arrears balance (£)
+- **Tranche Sizes**: Notional per Class A/B/C/D/Z (GBP )
+- **Monthly Cashflows**: Interest received, principal received, admin fees (GBP )
+- **Arrears**: Count of delinquent loans, total arrears balance (GBP )
 
 ### Parquet Report (investor_report_YYYY-MM.parquet)
 
@@ -106,10 +118,10 @@ bash generate_rmbs_report.sh 5 2021 rmbs_pool_10000_hpi_adjusted.parquet
 Creates:
 ```
 logs/2021-05_20260517_075456/
-├── investor_report_2021-05.csv
-├── investor_report_2021-05.parquet
-├── generate_report.py
-└── manifest.txt
+??? investor_report_2021-05.csv
+??? investor_report_2021-05.parquet
+??? generate_report.py
+??? manifest.txt
 ```
 
 ### Example 2: Generate Full Year 2021
@@ -145,22 +157,22 @@ head master_report.csv
 ### Pool Balance
 Total outstanding principal balance of all mortgages in the pool.
 
-**Example**: £733.1m pool balance across 10,000 loans
+**Example**: GBP 733.1m pool balance across 10,000 loans
 
 ### Tranche Sizes
 Principal amount issued in each credit class:
-- **Class A** (30%): £219.9m - AAA rated, most senior
-- **Class B** (20%): £146.6m - AA rated
-- **Class C** (20%): £146.6m - A rated
-- **Class D** (20%): £146.6m - BBB rated
-- **Class Z** (10%): £73.3m - Equity/first-loss
+- **Class A** (80.0%): GBP 595.4m - AAA rated, most senior
+- **Class B** (8.0%): GBP 59.5m - AA rated
+- **Class C** (5.0%): GBP 37.2m - A rated
+- **Class D** (4.0%): GBP 29.8m - BBB rated
+- **Equity** (3.0%): GBP 22.3m - Equity/first-loss
 
 ### Monthly Cashflows
-**Interest Received**: Monthly interest paid by borrowers (4% annual on £733.1m = £2.44m/month)
+**Interest Received**: Monthly interest paid by borrowers (4% annual on GBP 733.1m = GBP 2.44m/month)
 
 **Principal Received**: Monthly principal from loan repayments plus prepayments
 
-**Admin Fees**: Operating costs (82 bps annually = £200k/month on £733.1m)
+**Admin Fees**: Operating costs (82 bps annually = GBP 200k/month on GBP 733.1m)
 
 ### Arrears
 - **Arrears Count**: Number of loans with payments 30+ days late
@@ -199,34 +211,34 @@ Metric,Value
 Reporting Date,2021-05-01
 Month,5
 Year,2021
-Pool Balance (£),733087150.25
+Pool Balance (GBP ),733087150.25
 Number of Loans,10000
-Average Loan (£),73308.72
-Median Loan (£),42882.73
-Class A Notional (£),219926145.08
-Class B Notional (£),146617430.05
-Class C Notional (£),146617430.05
-Class D Notional (£),146617430.05
-Class Z Notional (£),73308715.03
-Monthly Interest (£),2443623.83
-Monthly Principal (£),6109059.59
-Admin Fees (£),200377.15
+Average Loan (GBP ),73308.72
+Median Loan (GBP ),42882.73
+Class A Notional (GBP ),219926145.08
+Class B Notional (GBP ),146617430.05
+Class C Notional (GBP ),146617430.05
+Class D Notional (GBP ),146617430.05
+Equity Notional (GBP ),73308715.03
+Monthly Interest (GBP ),2443623.83
+Monthly Principal (GBP ),6109059.59
+Admin Fees (GBP ),200377.15
 Loans in Arrears,100
-Arrears Balance (£),7330871.50
+Arrears Balance (GBP ),7330871.50
 ```
 
 ### Parquet Schema
 
 Column types (Arrow/Parquet):
-- `Reporting Date` → string
-- `Pool Balance (£)` → double
-- `Number of Loans` → int64
-- `[Tranche] Notional (£)` → double
-- `Monthly Interest (£)` → double
-- `Monthly Principal (£)` → double
-- `Admin Fees (£)` → double
-- `Loans in Arrears` → int64
-- `Arrears Balance (£)` → double
+- `Reporting Date` -> string
+- `Pool Balance (GBP )` -> double
+- `Number of Loans` -> int64
+- `[Tranche] Notional (GBP )` -> double
+- `Monthly Interest (GBP )` -> double
+- `Monthly Principal (GBP )` -> double
+- `Admin Fees (GBP )` -> double
+- `Loans in Arrears` -> int64
+- `Arrears Balance (GBP )` -> double
 
 ---
 
@@ -269,7 +281,7 @@ python3 -m pip install pandas pyarrow
 
 - **Report Generation**: <1 second per month
 - **File Sizes**: CSV ~600B, Parquet ~12KB per month
-- **Storage**: 12 months of reports ≈ 15MB
+- **Storage**: 12 months of reports ? 15MB
 - **Suitable for**: Real-time generation, batch processing, CI/CD pipelines
 
 ---
@@ -286,6 +298,6 @@ python3 -m pip install pandas pyarrow
 ---
 
 **Date**: May 17, 2026  
-**Status**: ✅ Production Ready  
+**Status**: [OK] Production Ready  
 **Result**: Complete RMBS reporting system with timestamped folders and CSV/Parquet output
 

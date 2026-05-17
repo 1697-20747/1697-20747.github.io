@@ -1,8 +1,14 @@
 ---
-title: "RMBS Technical Architecture & Implementation"
-description: "Complete technical documentation for RMBS system architecture, codebase, and integration"
-weight: 10
+title: "RMBS Technical Architecture"
+weight: 2
+description: "Technical architecture and system documentation for TGT-RMBS-2025-001."
+summary: "Technical architecture and system documentation for TGT-RMBS-2025-001."
+ShowToc: false
+disableAnchoredHeadings: true
 ---
+<!--more-->
+
+<!--more-->
 
 # RMBS Technical Documentation: Architecture, Code Solutions & Integration
 
@@ -13,7 +19,7 @@ Complete technical guide to the RMBS modeling and reporting system architecture,
 ## Executive Summary
 
 This RMBS system consists of:
-- **1 Python pool generator** (10,000 mortgages → £733.1m)
+- **1 Python pool generator** (10,000 mortgages -> GBP 733.1m)
 - **5 financial models** (CPR, CDR/LGD, loss cascading, sources & uses, tranching)
 - **1 reporting engine** (investor reports in CSV + Parquet)
 - **1 dashboard system** (3 interactive dark-mode HTML dashboards)
@@ -21,7 +27,7 @@ This RMBS system consists of:
 - **6+ bash scripts** (orchestration and automation)
 - **3,700+ lines of documentation**
 
-All components work together in a modular pipeline: **Pool → Models → Reports → Dashboards/API → Distribution**
+All components work together in a modular pipeline: **Pool -> Models -> Reports -> Dashboards/API -> Distribution**
 
 ---
 
@@ -31,78 +37,78 @@ All components work together in a modular pipeline: **Pool → Models → Report
 ### High-Level System Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                     RMBS SYSTEM ARCHITECTURE                     │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                   │
-│  INPUT                                                            │
-│  ├─ Pool Parameters (10k loans, £733.1m)                        │
-│  ├─ HPI Data (House Price Index adjustments)                    │
-│  └─ Assumptions (CPR, CDR, LGD, fees, rates)                    │
-│                ↓                                                  │
-│  GENERATION LAYER                                                │
-│  ├─ generate_rmbs_pool.py (creates 10k loans)                   │
-│  └─ → rmbs_pool_10000_hpi_adjusted.parquet (733.1m)             │
-│                ↓                                                  │
-│  MODELING LAYER                                                  │
-│  ├─ prepayment_model.py (CPR seasonality)                       │
-│  ├─ default_model.py (CDR by credit score)                      │
-│  ├─ fee_loader.py (82 bps admin fees)                           │
-│  ├─ sources_and_uses.py (59.5 bps costs)                        │
-│  └─ rmbs_tranching_model_complete.py (Monte Carlo)              │
-│                ↓                                                  │
-│  CALCULATION LAYER                                               │
-│  ├─ calculate_amortisation_with_fees.py (schedules)             │
-│  └─ loss_cascading.py (waterfall)                               │
-│                ↓                                                  │
-│  REPORTING LAYER                                                 │
-│  ├─ rmbs_report_generator.py (CSV + Parquet)                    │
-│  └─ generate_rmbs_report.sh (orchestrator)                      │
-│                ↓                                                  │
-│  OUTPUT LAYER                                                    │
-│  ├─ Dashboard: rmbs_dashboard_generator.py (3 HTML)             │
-│  ├─ API: rmbs_api_server.py (REST endpoints)                    │
-│  ├─ Client: rmbs_api_client.py (Python library)                 │
-│  └─ Bash: generate_dashboards.sh, run_all_standalone.sh         │
-│                ↓                                                  │
-│  DISTRIBUTION                                                    │
-│  ├─ HTML Dashboards (browser viewing)                           │
-│  ├─ API Endpoints (secure access)                               │
-│  ├─ CSV Reports (spreadsheet import)                            │
-│  ├─ Parquet Files (data science)                                │
-│  └─ PNG Diagrams (visual reference)                             │
-│                                                                   │
-└─────────────────────────────────────────────────────────────────┘
+???????????????????????????????????????????????????????????????????
+?                     RMBS SYSTEM ARCHITECTURE                     ?
+???????????????????????????????????????????????????????????????????
+?                                                                   ?
+?  INPUT                                                            ?
+?  ?? Pool Parameters (10k loans, GBP 733.1m)                        ?
+?  ?? HPI Data (House Price Index adjustments)                    ?
+?  ?? Assumptions (CPR, CDR, LGD, fees, rates)                    ?
+?                v                                                  ?
+?  GENERATION LAYER                                                ?
+?  ?? generate_rmbs_pool.py (creates 10k loans)                   ?
+?  ?? -> rmbs_pool_10000_hpi_adjusted.parquet (733.1m)             ?
+?                v                                                  ?
+?  MODELING LAYER                                                  ?
+?  ?? prepayment_model.py (CPR seasonality)                       ?
+?  ?? default_model.py (CDR by credit score)                      ?
+?  ?? fee_loader.py (82 bps admin fees)                           ?
+?  ?? sources_and_uses.py (59.5 bps costs)                        ?
+?  ?? rmbs_tranching_model_complete.py (Monte Carlo)              ?
+?                v                                                  ?
+?  CALCULATION LAYER                                               ?
+?  ?? calculate_amortisation_with_fees.py (schedules)             ?
+?  ?? loss_cascading.py (waterfall)                               ?
+?                v                                                  ?
+?  REPORTING LAYER                                                 ?
+?  ?? rmbs_report_generator.py (CSV + Parquet)                    ?
+?  ?? generate_rmbs_report.sh (orchestrator)                      ?
+?                v                                                  ?
+?  OUTPUT LAYER                                                    ?
+?  ?? Dashboard: rmbs_dashboard_generator.py (3 HTML)             ?
+?  ?? API: rmbs_api_server.py (REST endpoints)                    ?
+?  ?? Client: rmbs_api_client.py (Python library)                 ?
+?  ?? Bash: generate_dashboards.sh, run_all_standalone.sh         ?
+?                v                                                  ?
+?  DISTRIBUTION                                                    ?
+?  ?? HTML Dashboards (browser viewing)                           ?
+?  ?? API Endpoints (secure access)                               ?
+?  ?? CSV Reports (spreadsheet import)                            ?
+?  ?? Parquet Files (data science)                                ?
+?  ?? PNG Diagrams (visual reference)                             ?
+?                                                                   ?
+???????????????????????????????????????????????????????????????????
 ```
 
 ### Data Flow
 
 ```
 Pool Generator
-    ↓
-[rmbs_pool_10000_hpi_adjusted.parquet] ← 10k loans, £733.1m
-    ↓
+    v
+[rmbs_pool_10000_hpi_adjusted.parquet] <- 10k loans, GBP 733.1m
+    v
 Loan Scheduler
-    ↓
-[loan_schedules_10000.parquet] ← 2.3m rows, monthly amortization
-    ↓
+    v
+[loan_schedules_10000.parquet] <- 2.3m rows, monthly amortization
+    v
 Financial Models (CPR, CDR, LGD)
-    ↓
+    v
 Tranching Model (Monte Carlo)
-    ↓
-[tranche_results_*.parquet] ← Class A-Z cash flows
-    ↓
+    v
+[tranche_results_*.parquet] <- Class A-D + Equity cash flows
+    v
 Reporting Engine
-    ├─ investor_report_YYYY-MM.csv
-    └─ investor_report_YYYY-MM.parquet
-    ↓
+    ?? investor_report_YYYY-MM.csv
+    ?? investor_report_YYYY-MM.parquet
+    v
 Dashboard Generator
-    ├─ dashboard_pool_YYYYMM.html
-    ├─ dashboard_tranches_YYYYMM.html
-    └─ dashboard_summary_YYYYMM.html
-    ↓
+    ?? dashboard_pool_YYYYMM.html
+    ?? dashboard_tranches_YYYYMM.html
+    ?? dashboard_summary_YYYYMM.html
+    v
 API Server
-    └─ REST endpoints (secured with API keys)
+    ?? REST endpoints (secured with API keys)
 ```
 
 </details>
@@ -119,7 +125,7 @@ API Server
 
 **What it does:**
 - Generates 10,000 synthetic mortgages with realistic parameters
-- Assigns loan amounts (£10k-£500k range)
+- Assigns loan amounts (GBP 10k-GBP 500k range)
 - Calculates LTV ratios (60%-100%+)
 - Assigns credit scores (300-850 range)
 - Sets interest rates based on credit quality
@@ -131,16 +137,16 @@ API Server
 **Output:**
 ```
 rmbs_pool_10000_hpi_adjusted.parquet (733.1 million pounds)
-├─ 10,000 rows (one per mortgage)
-├─ Columns: loan_id, original_balance, current_balance, ltv, 
-│           interest_rate, credit_score, region, hpi_adjustment, etc.
-└─ Size: ~1.5 MB
+?? 10,000 rows (one per mortgage)
+?? Columns: loan_id, original_balance, current_balance, ltv, 
+?           interest_rate, credit_score, region, hpi_adjustment, etc.
+?? Size: ~1.5 MB
 ```
 
 **Key Parameters:**
-- Pool size: £733.1m
+- Pool size: GBP 733.1m
 - Loan count: 10,000
-- Average loan: £73,309
+- Average loan: GBP 73,309
 - Average LTV: 78.5%
 - Weighted avg rate: 4.65%
 - Regions: London (64.5%), SE (15.5%), EA (8%), Midlands (6%), North (6%)
@@ -166,17 +172,17 @@ rmbs_pool_10000_hpi_adjusted.parquet (733.1 million pounds)
 **Output:**
 ```
 loan_schedules_10000.parquet (2,363,988 rows)
-├─ One row per loan per month
-├─ Columns: loan_id, month, payment, principal, interest, 
-│           remaining_balance, etc.
-└─ Size: ~150 MB
+?? One row per loan per month
+?? Columns: loan_id, month, payment, principal, interest, 
+?           remaining_balance, etc.
+?? Size: ~150 MB
 ```
 
 **Logic:**
 ```
 For each loan over 360 months:
-  Monthly Payment = Loan Balance × (Rate × (1+Rate)^n) / ((1+Rate)^n - 1)
-  Interest = Remaining Balance × Monthly Rate
+  Monthly Payment = Loan Balance x (Rate x (1+Rate)^n) / ((1+Rate)^n - 1)
+  Interest = Remaining Balance x Monthly Rate
   Principal = Payment - Interest
   New Balance = Previous Balance - Principal
 ```
@@ -198,7 +204,7 @@ For each loan over 360 months:
 **What it does:**
 - Implements SeasonedCPRModel class
 - Base CPR: 6% (seasonally adjusted pool)
-- Seasoning curve: 3% → 12% (peak at month 30) → 3%
+- Seasoning curve: 3% -> 12% (peak at month 30) -> 3%
 - Refi incentive: 0.3x to 3.0x multiplier based on rates
 - Seasonal factors: Jul-Aug 1.20x, Dec 0.80x
 - Applies to each loan monthly
@@ -240,10 +246,10 @@ cpr = model.calculate_cpr(
 
 **Formula:**
 ```
-Monthly CDR = Base CDR × LTV Stress × HPI Stress × Unemployment / 12
+Monthly CDR = Base CDR x LTV Stress x HPI Stress x Unemployment / 12
 LGD = 85% (rising HPI) or 75% (falling HPI)
-Recoverable Amount = Loan Balance × (1 - LGD)
-Loss Amount = Loan Balance × LGD
+Recoverable Amount = Loan Balance x (1 - LGD)
+Loss Amount = Loan Balance x LGD
 ```
 
 **Outputs:**
@@ -273,8 +279,8 @@ Loss Amount = Loan Balance × LGD
 
 **Monthly Calculation:**
 ```
-Annual Admin Fee = £733.1m × 0.0082 = £6.0m
-Monthly Admin Fee = £6.0m / 12 = £500k
+Annual Admin Fee = GBP 733.1m x 0.0082 = GBP 6.0m
+Monthly Admin Fee = GBP 6.0m / 12 = GBP 500k
 ```
 
 **Outputs:**
@@ -291,31 +297,31 @@ Monthly Admin Fee = £6.0m / 12 = £500k
 
 **What it does:**
 - **SOURCES:**
-  - Mortgage pool: £733.1m
+  - Mortgage pool: GBP 733.1m
   - Note premium/discount: adjusts pricing
-  - **Total: £733.1m to £737.5m**
+  - **Total: GBP 733.1m to GBP 737.5m**
 
 - **USES:**
-  - Class A notes: £219.9m
-  - Class B notes: £146.6m
-  - Class C notes: £146.6m
-  - Class D notes: £146.6m
-  - Class Z notes: £73.3m
-  - Issuance costs: £4.4m (59.5 bps)
-  - **Total: £737.5m**
+  - Class A notes: GBP 595.4m
+  - Class B notes: GBP 59.5m
+  - Class C notes: GBP 37.2m
+  - Class D notes: GBP 29.8m
+  - Equity notes: GBP 22.3m
+  - Issuance costs: GBP 4.4m (59.5 bps)
+  - **Total: GBP 737.5m**
 
 - Pricing: Notes = 100.59% (1% premium)
-- Markup: £4.36m
-- Issuance costs: £4.4m
-- Balance: £0 (self-funding)
+- Markup: GBP 4.36m
+- Issuance costs: GBP 4.4m
+- Balance: GBP 0 (self-funding)
 
 **Outputs:**
 ```
 sources_and_uses_ledger_balanced.json
-├─ Mortgage purchase price: £733.1m
-├─ Note issuance amounts (A-Z)
-├─ Cost allocation
-└─ Pricing matrices
+?? Mortgage purchase price: GBP 733.1m
+?? Note issuance amounts (A-Z)
+?? Cost allocation
+?? Pricing matrices
 ```
 
 </details>
@@ -341,7 +347,7 @@ For each month:
   1. Apply CPR to get prepayments
   2. Apply CDR to get defaults
   3. Apply LGD to calculate losses
-  4. Cascade losses through tranches (Z→D→C→B→A)
+  4. Cascade losses through tranches (Z->D->C->B->A)
   5. Calculate available cash flow
   6. Implement waterfall distribution:
      - Operating fees
@@ -349,7 +355,7 @@ For each month:
      - Class B interest
      - Class C interest
      - Class D interest
-     - Principal paydown (A→B→C→D→Z)
+     - Principal paydown (A->B->C->D->Z)
   7. Update tranche balances
   8. Record outputs
 ```
@@ -363,12 +369,12 @@ For each month:
 **Outputs:**
 ```
 tranche_results_scenario.parquet
-├─ Month-by-month flows
-├─ Class A-Z principal balances
-├─ Class A-Z interest received
-├─ Total losses realized
-├─ Cumulative defaults
-└─ Performance metrics
+?? Month-by-month flows
+?? Class A-D + Equity principal balances
+?? Class A-D + Equity interest received
+?? Total losses realized
+?? Cumulative defaults
+?? Performance metrics
 ```
 
 </details>
@@ -431,7 +437,7 @@ CPR, CDR, Weighted_Avg_Rate, ...
 - Chart.js visualizations
 
 **2. Tranches Dashboard** (9.5 KB)
-- Waterfall diagram (Class A-Z boxes)
+- Waterfall diagram (Class A-D + Equity boxes)
 - Tranche economics table
 - Monthly interest/principal
 - Class A coupon display
@@ -456,9 +462,9 @@ CPR, CDR, Weighted_Avg_Rate, ...
 **Output:**
 ```
 logs/YYYY-MM_HHMMSS/
-├─ dashboard_pool_YYYYMM.html (8.3 KB)
-├─ dashboard_tranches_YYYYMM.html (9.5 KB)
-└─ dashboard_summary_YYYYMM.html (9.9 KB)
+?? dashboard_pool_YYYYMM.html (8.3 KB)
+?? dashboard_tranches_YYYYMM.html (9.5 KB)
+?? dashboard_summary_YYYYMM.html (9.9 KB)
 ```
 
 </details>
@@ -486,34 +492,34 @@ logs/YYYY-MM_HHMMSS/
 
 **Public Endpoints:**
 ```
-GET /api/v1/health                  → Health check
-GET /api/v1/docs                    → API documentation
+GET /api/v1/health                  -> Health check
+GET /api/v1/docs                    -> API documentation
 ```
 
 **Authentication:**
 ```
-GET /api/v1/auth/key-info           → Get current key info
+GET /api/v1/auth/key-info           -> Get current key info
 ```
 
 **Reports:**
 ```
-GET /api/v1/reports/list            → List all reports
-GET /api/v1/reports/summary         → Get summary stats
-GET /api/v1/reports/download/{date}/{file} → Download report
+GET /api/v1/reports/list            -> List all reports
+GET /api/v1/reports/summary         -> Get summary stats
+GET /api/v1/reports/download/{date}/{file} -> Download report
 ```
 
 **Dashboards:**
 ```
-GET /api/v1/dashboards/list         → List dashboards
-GET /api/v1/dashboards/download/{date}/{file} → Download
-GET /api/v1/view/dashboard/{date}/{file} → View HTML
+GET /api/v1/dashboards/list         -> List dashboards
+GET /api/v1/dashboards/download/{date}/{file} -> Download
+GET /api/v1/view/dashboard/{date}/{file} -> View HTML
 ```
 
 **Admin (Master key required):**
 ```
-POST /api/v1/admin/keys/create      → Create API key
-GET /api/v1/admin/keys/list         → List all keys
-POST /api/v1/admin/keys/revoke      → Revoke key
+POST /api/v1/admin/keys/create      -> Create API key
+GET /api/v1/admin/keys/list         -> List all keys
+POST /api/v1/admin/keys/revoke      -> Revoke key
 ```
 
 **Features:**
@@ -595,12 +601,12 @@ bash generate_dashboards.sh 5 2021
 **Output:**
 ```
 logs/2021-05_20260517_080204/
-├─ dashboard_pool_202105.html
-├─ dashboard_tranches_202105.html
-├─ dashboard_summary_202105.html
-├─ investor_report_2021-05.csv
-├─ investor_report_2021-05.parquet
-└─ manifest.txt
+?? dashboard_pool_202105.html
+?? dashboard_tranches_202105.html
+?? dashboard_summary_202105.html
+?? investor_report_2021-05.csv
+?? investor_report_2021-05.parquet
+?? manifest.txt
 ```
 
 </details>
@@ -618,9 +624,9 @@ bash generate_rmbs_report.sh 5 2021
 **Output:**
 ```
 logs/2021-05_HHMMSS/
-├─ investor_report_2021-05.csv
-├─ investor_report_2021-05.parquet
-└─ manifest.txt
+?? investor_report_2021-05.csv
+?? investor_report_2021-05.parquet
+?? manifest.txt
 ```
 
 </details>
@@ -730,13 +736,13 @@ bash run_all_standalone.sh
 
 ### System Status
 
-✅ 11 Python files (production-ready)
-✅ 9 Bash orchestration scripts
-✅ 3 Interactive dark-mode dashboards
-✅ REST API with key management
-✅ Python client library
-✅ 3,700+ lines of documentation
-✅ Modular, tested architecture
+[OK] 11 Python files (production-ready)
+[OK] 9 Bash orchestration scripts
+[OK] 3 Interactive dark-mode dashboards
+[OK] REST API with key management
+[OK] Python client library
+[OK] 3,700+ lines of documentation
+[OK] Modular, tested architecture
 
 **Complete RMBS modeling and reporting platform** ready for deployment.
 
@@ -749,9 +755,9 @@ bash run_all_standalone.sh
 `/mnt/user-data/outputs/RMBS_TECHNICAL_DOCUMENTATION_COLLAPSIBLE.md`
 
 This version uses HTML `<details>` and `<summary>` tags which allow:
-- ✅ Click to expand/collapse sections
-- ✅ Works in GitHub, modern markdown viewers
-- ✅ Nested collapsible sections
-- ✅ Preserves all content
-- ✅ Clean visual hierarchy
+- [OK] Click to expand/collapse sections
+- [OK] Works in GitHub, modern markdown viewers
+- [OK] Nested collapsible sections
+- [OK] Preserves all content
+- [OK] Clean visual hierarchy
 

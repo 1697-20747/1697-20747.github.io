@@ -1,8 +1,14 @@
 ---
-title: "Geographic Distribution Map"
-description: "Interactive map showing mortgage pool distribution across UK regions"
-weight: 25
+title: "Geographic Mortgage Map"
+weight: 9
+description: "Interactive map showing mortgage pool distribution across UK regions."
+summary: "Geographic distribution of the TGT-RMBS-2025-001 mortgage pool."
+ShowToc: false
+disableAnchoredHeadings: true
 ---
+<!--more-->
+
+<!--more-->
 
 ## Mortgage Pool Geographic Distribution
 
@@ -14,27 +20,27 @@ The TGT-RMBS-2025-001 pool contains 10,000 mortgages distributed across 5 UK reg
 
 | Region | Loans | % | Balance | Avg Loan | Avg Rate |
 |--------|-------|---|---------|----------|----------|
-| **London** | 6,450 | 64.5% | £473.2m | £73,330 | 4.62% |
-| **South East** | 1,550 | 15.5% | £113.7m | £73,355 | 4.68% |
-| **East Anglia** | 800 | 8.0% | £58.6m | £73,250 | 4.71% |
-| **Midlands** | 600 | 6.0% | £43.9m | £73,167 | 4.65% |
-| **North** | 600 | 6.0% | £43.6m | £72,667 | 4.69% |
-| **TOTAL** | **10,000** | **100%** | **£733.1m** | **£73,309** | **4.65%** |
+| **London** | 6,450 | 64.5% | GBP 473.2m | GBP 73,330 | 4.62% |
+| **South East** | 1,550 | 15.5% | GBP 113.7m | GBP 73,355 | 4.68% |
+| **East Anglia** | 800 | 8.0% | GBP 58.6m | GBP 73,250 | 4.71% |
+| **Midlands** | 600 | 6.0% | GBP 43.9m | GBP 73,167 | 4.65% |
+| **North** | 600 | 6.0% | GBP 43.6m | GBP 72,667 | 4.69% |
+| **TOTAL** | **10,000** | **100%** | **GBP 733.1m** | **GBP 73,309** | **4.65%** |
 
 ---
 
 ## Regional Details
 
-### 🏴󠁧󠁢󠁥󠁮󠁧󠁿 London (64.5% - £473.2m)
+### ??????? London (64.5% - GBP 473.2m)
 
 **Overview:**
 - Loans: 6,450
-- Balance: £473,231,000
-- Average Loan: £73,330
+- Balance: GBP 473,231,000
+- Average Loan: GBP 73,330
 - Weighted Average Rate: 4.62%
 
 **Demographics:**
-- Average Property Value: £625,000
+- Average Property Value: GBP 625,000
 - Average LTV: 77.5%
 - Average Credit Score: 728
 - Average Age: 23 months
@@ -56,16 +62,16 @@ The TGT-RMBS-2025-001 pool contains 10,000 mortgages distributed across 5 UK reg
 
 ---
 
-### 🏴󠁧󠁢󠁥󠁮󠁧󠁿 South East (15.5% - £113.7m)
+### ??????? South East (15.5% - GBP 113.7m)
 
 **Overview:**
 - Loans: 1,550
-- Balance: £113,700,500
-- Average Loan: £73,355
+- Balance: GBP 113,700,500
+- Average Loan: GBP 73,355
 - Weighted Average Rate: 4.68%
 
 **Demographics:**
-- Average Property Value: £485,000
+- Average Property Value: GBP 485,000
 - Average LTV: 79.0%
 - Average Credit Score: 710
 - Average Age: 26 months
@@ -86,16 +92,16 @@ The TGT-RMBS-2025-001 pool contains 10,000 mortgages distributed across 5 UK reg
 
 ---
 
-### 🏴󠁧󠁢󠁥󠁮󠁧󠁿 East Anglia (8.0% - £58.6m)
+### ??????? East Anglia (8.0% - GBP 58.6m)
 
 **Overview:**
 - Loans: 800
-- Balance: £58,600,000
-- Average Loan: £73,250
+- Balance: GBP 58,600,000
+- Average Loan: GBP 73,250
 - Weighted Average Rate: 4.71%
 
 **Demographics:**
-- Average Property Value: £385,000
+- Average Property Value: GBP 385,000
 - Average LTV: 80.5%
 - Average Credit Score: 705
 - Average Age: 25 months
@@ -115,16 +121,16 @@ The TGT-RMBS-2025-001 pool contains 10,000 mortgages distributed across 5 UK reg
 
 ---
 
-### 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Midlands (6.0% - £43.9m)
+### ??????? Midlands (6.0% - GBP 43.9m)
 
 **Overview:**
 - Loans: 600
-- Balance: £43,900,200
-- Average Loan: £73,167
+- Balance: GBP 43,900,200
+- Average Loan: GBP 73,167
 - Weighted Average Rate: 4.65%
 
 **Demographics:**
-- Average Property Value: £325,000
+- Average Property Value: GBP 325,000
 - Average LTV: 81.0%
 - Average Credit Score: 712
 - Average Age: 24 months
@@ -145,16 +151,16 @@ The TGT-RMBS-2025-001 pool contains 10,000 mortgages distributed across 5 UK reg
 
 ---
 
-### 🏴󠁧󠁢󠁥󠁮󠁧󠁿 North (6.0% - £43.6m)
+### ??????? North (6.0% - GBP 43.6m)
 
 **Overview:**
 - Loans: 600
-- Balance: £43,600,200
-- Average Loan: £72,667
+- Balance: GBP 43,600,200
+- Average Loan: GBP 72,667
 - Weighted Average Rate: 4.69%
 
 **Demographics:**
-- Average Property Value: £310,000
+- Average Property Value: GBP 310,000
 - Average LTV: 82.0%
 - Average Credit Score: 700
 - Average Age: 27 months
@@ -187,7 +193,7 @@ The TGT-RMBS-2025-001 pool contains 10,000 mortgages distributed across 5 UK reg
 5. Kent: 3% of pool
 
 **Diversification:**
-- Geographic diversification: GOOD ✅
+- Geographic diversification: GOOD [OK]
 - Concentration in London: 64.5% (manageable)
 - Regional balance: Adequate across all regions
 
@@ -197,11 +203,11 @@ The TGT-RMBS-2025-001 pool contains 10,000 mortgages distributed across 5 UK reg
 
 | Region | LTV Risk | Credit Risk | HPI Risk | Overall |
 |--------|----------|-------------|----------|---------|
-| **London** | Medium | Good | Low | LOW ✅ |
-| **South East** | Medium | Fair | Low | MEDIUM ⚠️ |
-| **East Anglia** | High | Fair | Medium | MEDIUM ⚠️ |
-| **Midlands** | High | Fair | Medium | MEDIUM ⚠️ |
-| **North** | High | Fair | Medium | MEDIUM ⚠️ |
+| **London** | Medium | Good | Low | LOW [OK] |
+| **South East** | Medium | Fair | Low | MEDIUM ?? |
+| **East Anglia** | High | Fair | Medium | MEDIUM ?? |
+| **Midlands** | High | Fair | Medium | MEDIUM ?? |
+| **North** | High | Fair | Medium | MEDIUM ?? |
 
 **Key Risk Factors:**
 - Higher LTVs outside London = higher loss severity
@@ -217,11 +223,11 @@ Under a 20% house price decline scenario:
 
 | Region | Current HPI | Stressed HPI | LTV Impact |
 |--------|-----------|--------------|-----------|
-| **London** | 1.15x | 0.92x | 85% → 95% |
-| **South East** | 0.95x | 0.76x | 79% → 88% |
-| **East Anglia** | 0.85x | 0.68x | 81% → 90% |
-| **Midlands** | 0.80x | 0.64x | 81% → 91% |
-| **North** | 0.75x | 0.60x | 82% → 91% |
+| **London** | 1.15x | 0.92x | 85% -> 95% |
+| **South East** | 0.95x | 0.76x | 79% -> 88% |
+| **East Anglia** | 0.85x | 0.68x | 81% -> 90% |
+| **Midlands** | 0.80x | 0.64x | 81% -> 91% |
+| **North** | 0.75x | 0.60x | 82% -> 91% |
 
 **Impact:** Stressed scenario increases default risk 15-20% in non-London regions.
 
@@ -292,7 +298,7 @@ Under a 20% house price decline scenario:
 ## Next Steps
 
 For more information:
-- [Sample Mortgage & Pool Data](/docs/rmbs/sample-mortgage-data/) — Detailed pool statistics
-- [Sample Reports](/docs/rmbs/sample-reports/) — Geographic performance tracking
-- [Technical Documentation](/docs/rmbs/technical-architecture/) — Risk modeling by region
+- [Sample Mortgage & Pool Data](/docs/rmbs/sample-mortgage-data/) - Detailed pool statistics
+- [Sample Reports](/docs/rmbs/sample-reports/) - Geographic performance tracking
+- [Technical Documentation](/docs/rmbs/technical-architecture/) - Risk modeling by region
 

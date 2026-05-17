@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stress Case Waterfall — TGT-RMBS-2025-001</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:linear-gradient(135deg,#0f0f0f,#1a1a1a);color:#fff;line-height:1.6}
+.container{max-width:1100px;margin:0 auto;padding:40px 20px}
+h1{font-size:2.2em;text-align:center;margin-bottom:8px;
+  background:linear-gradient(135deg,#ff6b6b,#ffa502);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.subtitle{text-align:center;color:#aaa;margin-bottom:40px}
+.section{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);
+  border-radius:12px;padding:28px;margin-bottom:28px}
+h2{font-size:1.5em;color:#ff6b6b;border-bottom:2px solid #ff6b6b;padding-bottom:8px;margin-bottom:18px}
+h3{font-size:1.1em;color:#ffa502;margin:18px 0 12px}
+table{width:100%;border-collapse:collapse;font-size:0.91em;margin:12px 0}
+th{background:rgba(255,107,107,0.2);color:#ff6b6b;padding:10px 14px;text-align:right;
+  border-bottom:2px solid #ff6b6b}
+th:first-child,th:nth-child(2){text-align:left}
+td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.08);text-align:right}
+td:first-child,td:nth-child(2){text-align:left}
+tr:hover{background:rgba(255,107,107,0.04)}
+.val{color:#4a9eff;font-weight:700}
+.loss{color:#ff6b6b;font-weight:700}
+.pass{color:#4edc78;font-weight:700}
+.dim{color:#888;font-size:0.88em}
+.section-hdr{background:rgba(255,107,107,0.15);font-weight:700;color:#ff6b6b}
+.sub-hdr{background:rgba(255,165,2,0.1);font-weight:700;color:#ffa502}
+.a-row{background:rgba(255,107,107,0.05)}
+.b-row{background:rgba(78,205,196,0.05)}
+.c-row{background:rgba(69,183,209,0.05)}
+.d-row{background:rgba(247,183,49,0.05)}
+.e-row{background:rgba(162,155,254,0.05)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+.kpi{background:rgba(255,107,107,0.1);border:1px solid #ff6b6b;border-radius:8px;
+  padding:16px;text-align:center}
+.kpi .v{font-size:1.8em;font-weight:700;color:#ff6b6b}
+.kpi .l{color:#888;font-size:0.82em;margin-top:4px}
+.note{background:rgba(255,193,7,0.1);border-left:4px solid #ffc107;
+  padding:14px;margin:16px 0;border-radius:4px}
+.note strong{color:#ffc107}
+.disclaimer{background:rgba(255,107,107,0.1);border:1px solid #ff6b6b;
+  border-radius:8px;padding:16px;margin-top:24px;font-size:0.88em;color:#ccc}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Stress Case Cash Flow Waterfall</h1>
+<p class="subtitle">TGT-RMBS-2025-001 · Month 1 Under Adverse Scenario · No Interest Rate Swap</p>
+
+<div class="section">
+<h2>Stress Scenario Assumptions</h2>
+<div class="grid2">
+  <div class="kpi"><div class="v">2.50%</div><div class="l">Annual Default Rate (10× base)</div></div>
+  <div class="kpi"><div class="v">35%</div><div class="l">Loss Severity (LGD)</div></div>
+  <div class="kpi"><div class="v">15% CPR</div><div class="l">Prepayment Speed (3× base)</div></div>
+  <div class="kpi"><div class="v">6 months</div><div class="l">Recovery Lag</div></div>
+</div>
+<div class="note">
+<strong>Base case assumptions:</strong> 0.24% annual default, 20% LGD, 5.8% CPR.
+Stress scenario applies 10× default multiplier. No interest rate swap on this transaction.
+</div>
+</div>
+
+<div class="section">
+<h2>Month 1 Collections</h2>
+<table>
+<thead><tr><th>Item</th><th>Amount</th><th>Notes</th></tr></thead>
+<tbody>
+<tr class="section-hdr"><td colspan="3">SOURCES OF CASH</td></tr>
+<tr><td>Scheduled Principal</td><td class="val">£61.09m</td><td class="dim">Regular amortisation (month 1)</td></tr>
+<tr><td>Scheduled Interest (4.65% WAC)</td><td class="val">£2.84m</td><td class="dim">£733.09m × 4.65% ÷ 12</td></tr>
+<tr><td>CPR Prepayment Proceeds</td><td class="val">£0.91m</td><td class="dim">15% CPR on outstanding</td></tr>
+<tr class="sub-hdr"><td colspan="2">Gross Collections</td><td class="val">£64.84m</td></tr>
+<tr class="section-hdr"><td colspan="3">CREDIT LOSSES</td></tr>
+<tr><td>Defaults This Month (2.50% annual)</td><td class="loss">−£18.33m</td><td class="dim">£733.09m × 2.5% ÷ 12 principal at risk</td></tr>
+<tr><td>Loss Given Default (35%)</td><td class="loss">−£6.42m</td><td class="dim">35% × £18.33m — actual loss</td></tr>
+<tr><td>Recovery Proceeds</td><td class="dim">£0.00m</td><td class="dim">6-month lag — received month 7</td></tr>
+<tr class="sub-hdr"><td colspan="2">Net Available for Distribution</td><td class="val">£58.42m</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="section">
+<h2>Payment Waterfall — Priority of Payments</h2>
+<table>
+<thead><tr><th>Priority</th><th>Item</th><th>Due</th><th>Paid</th><th>Shortfall</th></tr></thead>
+<tbody>
+<tr class="section-hdr"><td colspan="5">1 — OPERATING FEES (Senior, paid first)</td></tr>
+<tr><td>1.1</td><td>Trustee Fees</td><td class="val">£16,667</td><td class="val">£16,667</td><td class="pass">—</td></tr>
+<tr><td>1.2</td><td>Servicer Fees</td><td class="val">£25,000</td><td class="val">£25,000</td><td class="pass">—</td></tr>
+<tr><td>1.3</td><td>Rating Agency Fees</td><td class="val">£4,167</td><td class="val">£4,167</td><td class="pass">—</td></tr>
+<tr><td>1.4</td><td>Legal & Accounting</td><td class="val">£4,583</td><td class="val">£4,583</td><td class="pass">—</td></tr>
+<tr><td>1.5</td><td>Paying Agent Fees</td><td class="val">£1,250</td><td class="val">£1,250</td><td class="pass">—</td></tr>
+<tr class="sub-hdr"><td colspan="3">Subtotal — Fees</td><td class="val">£51,667</td><td class="pass">—</td></tr>
+<tr class="sub-hdr"><td colspan="4">Available after Priority 1</td><td class="val">£58.368m</td></tr>
+
+<tr class="section-hdr"><td colspan="5">2 — INVESTOR PAYMENTS (Sequential senior → junior)</td></tr>
+<tr class="a-row"><td>2.1</td><td><strong>Class A Interest</strong> (AAA, 4.25%)</td><td class="val">£2.110m</td><td class="val">£2.110m</td><td class="pass">—</td></tr>
+<tr class="a-row"><td>2.2</td><td><strong>Class A Principal</strong></td><td class="val">£55.272m</td><td class="val">£55.272m</td><td class="pass">—</td></tr>
+<tr class="sub-hdr a-row"><td colspan="4">Available after Class A</td><td class="val">£0.986m</td></tr>
+<tr class="b-row"><td>2.3</td><td><strong>Class B Interest</strong> (AA, 4.75%)</td><td class="val">£0.236m</td><td class="val">£0.236m</td><td class="pass">—</td></tr>
+<tr class="b-row"><td>2.4</td><td><strong>Class B Principal</strong></td><td class="val">£0.200m</td><td class="val">£0.200m</td><td class="pass">—</td></tr>
+<tr class="sub-hdr b-row"><td colspan="4">Available after Class B</td><td class="val">£0.550m</td></tr>
+<tr class="c-row"><td>2.5</td><td><strong>Class C Interest</strong> (A, 5.75%)</td><td class="val">£0.179m</td><td class="val">£0.179m</td><td class="pass">—</td></tr>
+<tr class="c-row"><td>2.6</td><td><strong>Class C Principal</strong></td><td class="val">£0.148m</td><td class="val">£0.148m</td><td class="pass">—</td></tr>
+<tr class="sub-hdr c-row"><td colspan="4">Available after Class C</td><td class="val">£0.223m</td></tr>
+<tr class="d-row"><td>2.7</td><td><strong>Class D Interest</strong> (BBB, 7.50%)</td><td class="val">£0.186m</td><td class="val">£0.186m</td><td class="pass">—</td></tr>
+<tr class="d-row"><td>2.8</td><td><strong>Class D Principal</strong></td><td class="val">£0.037m</td><td class="val">£0.037m</td><td class="pass">—</td></tr>
+<tr class="sub-hdr d-row"><td colspan="4">Available after Class D</td><td class="val">£0.000m</td></tr>
+
+<tr class="section-hdr"><td colspan="5">3 — RESERVE REPLENISHMENT</td></tr>
+<tr><td>3.1</td><td>Reserve Rebuild (if drawn)</td><td class="val">£0.000m</td><td class="val">£0.000m</td><td class="pass">—</td></tr>
+
+<tr class="section-hdr"><td colspan="5">4 — EQUITY DISTRIBUTION</td></tr>
+<tr class="e-row"><td>4.1</td><td><strong>Equity Residual</strong></td><td class="val">£0.000m</td><td class="val">£0.000m</td><td class="loss">Exhausted by losses</td></tr>
+
+<tr class="sub-hdr"><td colspan="3"><strong>TOTAL DISTRIBUTED</strong></td><td class="val"><strong>£58.368m</strong></td><td class="pass">✓</td></tr>
+</tbody>
+</table>
+<div class="note">
+<strong>Note on Class A principal:</strong> Under stress CPR of 15%, the large principal payment (£55.3m) to Class A reflects accelerated prepayments flowing sequentially to the senior tranche first.
+</div>
+</div>
+
+<div class="section">
+<h2>Loss Cascade — Bottom-Up Absorption</h2>
+<table>
+<thead><tr><th>Tranche</th><th>Opening Balance</th><th>Loss Absorbed</th><th>Closing Balance</th><th>Depletion</th></tr></thead>
+<tbody>
+<tr class="e-row"><td><strong>Equity (First Loss)</strong></td><td class="val">£22.329m</td><td class="loss">−£6.42m</td><td class="val">£15.909m</td><td class="loss">28.8%</td></tr>
+<tr><td colspan="5" style="text-align:center;padding:12px;color:#888">↑ Losses stop here — no losses reach rated tranches ↑</td></tr>
+<tr class="d-row"><td><strong>Class D (BBB)</strong></td><td class="val">£29.772m</td><td class="pass">£0.000m</td><td class="val">£29.772m</td><td class="pass">0.0%</td></tr>
+<tr class="c-row"><td><strong>Class C (A)</strong></td><td class="val">£37.215m</td><td class="pass">£0.000m</td><td class="val">£37.215m</td><td class="pass">0.0%</td></tr>
+<tr class="b-row"><td><strong>Class B (AA)</strong></td><td class="val">£59.544m</td><td class="pass">£0.000m</td><td class="val">£59.544m</td><td class="pass">0.0%</td></tr>
+<tr class="a-row"><td><strong>Class A (AAA)</strong></td><td class="val">£595.445m</td><td class="pass">£0.000m</td><td class="val">£595.445m</td><td class="pass">0.0%</td></tr>
+</tbody>
+</table>
+<div class="note">
+<strong>Key insight:</strong> Even at 10× the base default rate (2.5% vs 0.24%), and 35% loss severity,
+the £22.3m equity cushion absorbs all £6.42m of losses. All four rated tranches receive 100% of due
+interest and principal. Equity is depleted 28.8% but rated tranches are completely protected.
+The equity tranche can sustain approximately 34.7× base-case losses before Class D is touched
+(£22.3m equity ÷ £0.642m monthly stress loss).
+</div>
+</div>
+
+<div class="section">
+<h2>Balance Sheet — Opening vs Closing (Month 1, Stress)</h2>
+<table>
+<thead><tr><th>Tranche</th><th>Opening Balance</th><th>Principal Paid</th><th>Loss Absorbed</th><th>Closing Balance</th></tr></thead>
+<tbody>
+<tr class="a-row"><td>Class A (AAA)</td><td class="val">£595.445m</td><td class="val">£55.272m</td><td class="pass">£0.000m</td><td class="val">£540.173m</td></tr>
+<tr class="b-row"><td>Class B (AA)</td><td class="val">£59.544m</td><td class="val">£0.200m</td><td class="pass">£0.000m</td><td class="val">£59.344m</td></tr>
+<tr class="c-row"><td>Class C (A)</td><td class="val">£37.215m</td><td class="val">£0.148m</td><td class="pass">£0.000m</td><td class="val">£37.067m</td></tr>
+<tr class="d-row"><td>Class D (BBB)</td><td class="val">£29.772m</td><td class="val">£0.037m</td><td class="pass">£0.000m</td><td class="val">£29.735m</td></tr>
+<tr class="e-row"><td>Equity</td><td class="val">£22.329m</td><td class="val">£0.000m</td><td class="loss">£6.420m</td><td class="val">£15.909m</td></tr>
+<tr class="sub-hdr"><td><strong>TOTAL</strong></td><td class="val">£744.305m</td><td class="val">£55.657m</td><td class="loss">£6.420m</td><td class="val">£682.228m</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="disclaimer">
+<strong>Disclaimer:</strong> This is a hypothetical stress scenario for educational purposes. Actual default rates,
+loss severities, and prepayment speeds may differ materially. This does not constitute investment advice.
+All figures derive from the TGT-RMBS-2025-001 validated model.
+</div>
+
+</div>
+</body>
+</html>

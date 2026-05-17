@@ -1,3 +1,15 @@
+---
+title: "Dashboards Guide"
+weight: 5
+description: "Interactive dashboard guide for RMBS pool and tranche reporting."
+summary: "Interactive dashboard guide for RMBS pool and tranche reporting."
+ShowToc: false
+disableAnchoredHeadings: true
+---
+<!--more-->
+
+<!--more-->
+
 # RMBS Interactive Dashboards
 
 Complete dark-mode dashboard system for RMBS reporting with interactive visualizations and static PNG exports.
@@ -10,9 +22,9 @@ bash generate_dashboards.sh 5 2021
 ```
 
 Creates three interactive HTML dashboards in timestamped folder:
-- `dashboard_pool_202105.html` — Pool overview
-- `dashboard_tranches_202105.html` — Tranche structure
-- `dashboard_summary_202105.html` — Executive summary
+- `dashboard_pool_202105.html` - Pool overview
+- `dashboard_tranches_202105.html` - Tranche structure
+- `dashboard_summary_202105.html` - Executive summary
 
 ### View Dashboards
 Open in web browser (any modern browser):
@@ -127,28 +139,28 @@ Displays critical model inputs:
 ## Data Included
 
 ### Pool Dashboard
-- Pool Balance: £733.1m
+- Pool Balance: GBP 733.1m
 - Number of Loans: 10,000
-- Average Loan: £73,309
-- Median Loan: £42,883
+- Average Loan: GBP 73,309
+- Median Loan: GBP 42,883
 - Average LTV: 78.5%
 - Max LTV: 98.5%
 - Weighted Avg Rate: 4.65%
 
 ### Tranches Dashboard
-- Class A: £219.9m (AAA, 50 bps)
-- Class B: £146.6m (AA, 100 bps)
-- Class C: £146.6m (A, 150 bps)
-- Class D: £146.6m (BBB, 250 bps)
-- Class Z: £73.3m (NR, 0 bps)
+- Class A: GBP 595.4m (AAA, 4.25%)
+- Class B: GBP 59.5m (AA, 4.75%)
+- Class C: GBP 37.2m (A, 5.75%)
+- Class D: GBP 29.8m (BBB, 7.50%)
+- Equity:  GBP 22.3m (Unrated, variable)
 
 ### Executive Summary
 - All pool & tranche metrics
-- Monthly interest: £2.44m
-- Monthly principal: £6.11m
-- Admin fees: £200k/month
-- Equity buffer: £73.3m
-- AAA protection: £513.2m
+- Monthly interest: GBP 2.44m
+- Monthly principal: GBP 6.11m
+- Admin fees: GBP 200k/month
+- Equity buffer: GBP 73.3m
+- AAA protection: GBP 513.2m
 
 ---
 
@@ -156,13 +168,13 @@ Displays critical model inputs:
 
 ```
 logs/
-└── 2021-05_20260517_080204/          ← Timestamped folder
-    ├── dashboard_pool_202105.html    ← Pool overview (8.3 KB)
-    ├── dashboard_tranches_202105.html ← Tranches (9.5 KB)
-    ├── dashboard_summary_202105.html  ← Executive summary (9.9 KB)
-    ├── investor_report_2021-05.csv   (from reporting system)
-    ├── investor_report_2021-05.parquet
-    └── manifest.txt
+??? 2021-05_20260517_080204/          <- Timestamped folder
+    ??? dashboard_pool_202105.html    <- Pool overview (8.3 KB)
+    ??? dashboard_tranches_202105.html <- Tranches (9.5 KB)
+    ??? dashboard_summary_202105.html  <- Executive summary (9.9 KB)
+    ??? investor_report_2021-05.csv   (from reporting system)
+    ??? investor_report_2021-05.parquet
+    ??? manifest.txt
 ```
 
 ---
@@ -177,9 +189,9 @@ bash generate_dashboards.sh 5 2021
 Result:
 ```
 logs/2021-05_20260517_080204/
-├── dashboard_pool_202105.html
-├── dashboard_tranches_202105.html
-└── dashboard_summary_202105.html
+??? dashboard_pool_202105.html
+??? dashboard_tranches_202105.html
+??? dashboard_summary_202105.html
 ```
 
 ### Example 2: View in Browser
@@ -205,17 +217,17 @@ file:///mnt/user-data/outputs/logs/2021-05_20260517_080204/dashboard_summary_202
 ## Technical Specifications
 
 ### Technology Stack
-- **HTML5** — Markup
-- **CSS3** — Dark theme, responsive grid
-- **Chart.js** — Interactive visualizations
+- **HTML5** - Markup
+- **CSS3** - Dark theme, responsive grid
+- **Chart.js** - Interactive visualizations
 - **CDN**: cdnjs.cloudflare.com (Chart.js 3.9.1)
 
 ### Browser Compatibility
-- Chrome/Chromium: ✅ Full support
-- Firefox: ✅ Full support
-- Safari: ✅ Full support
-- Edge: ✅ Full support
-- Internet Explorer: ❌ Not supported
+- Chrome/Chromium: [OK] Full support
+- Firefox: [OK] Full support
+- Safari: [OK] Full support
+- Edge: [OK] Full support
+- Internet Explorer: ? Not supported
 
 ### File Sizes
 - Pool Dashboard: ~8 KB
@@ -272,7 +284,7 @@ import -window root dashboard_pool.png
 
 ### Using Browser
 1. Open HTML in browser
-2. Print → Save as PDF
+2. Print -> Save as PDF
 3. Open PDF, export as PNG
 
 ---
@@ -283,14 +295,14 @@ Dashboards integrate seamlessly with RMBS reporting:
 
 ```
 Pool Data (Parquet)
-    ↓
+    v
 Report Generator (CSV + Parquet)
-    ↓
+    v
 Dashboard Generator (HTML)
-    ├── Pool Dashboard
-    ├── Tranches Dashboard
-    └── Executive Summary
-    ↓
+    ??? Pool Dashboard
+    ??? Tranches Dashboard
+    ??? Executive Summary
+    v
 Browser Display / PDF Export
 ```
 
@@ -351,7 +363,7 @@ aws s3 cp logs/ s3://rmbs-dashboards/
 
 ---
 
-**Status**: ✅ Production Ready  
+**Status**: [OK] Production Ready  
 **Date**: May 17, 2026  
 **Format**: Interactive HTML with Chart.js  
 
