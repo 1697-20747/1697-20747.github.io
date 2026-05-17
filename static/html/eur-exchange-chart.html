@@ -1,0 +1,179 @@
+{{ $isDark := false }}
+
+<div style="padding: 1.5rem 0;">
+  <div style="position: relative; width: 100%; height: 380px;">
+    <canvas id="exchangeChart" role="img" aria-label="Decline of Brazilian Real and Colombian Peso relative to EUR from 1999 to 2026, inverted index showing purchasing power loss with negative percentage change scale"></canvas>
+  </div>
+</div>
+
+<div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--color-text-secondary);">
+  <span style="display: flex; align-items: center; gap: 6px;">
+    <span style="width: 12px; height: 2px; background: #60a5fa;"></span>
+    BRL decline vs EUR
+  </span>
+  <span style="display: flex; align-items: center; gap: 6px;">
+    <span style="width: 12px; height: 2px; background: #f97316;"></span>
+    COP decline vs EUR
+  </span>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+(function() {
+  const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const data = [
+    {date: '1999-01', brl: 100.0000, cop: 100.0000},
+    {date: '1999-02', brl: 103.4210, cop: 101.8820},
+    {date: '1999-03', brl: 105.9980, cop: 103.4410},
+    {date: '1999-04', brl: 108.1150, cop: 104.2070},
+    {date: '1999-05', brl: 109.7440, cop: 105.8930},
+    {date: '1999-06', brl: 111.5530, cop: 106.9920},
+    {date: '1999-07', brl: 114.0020, cop: 108.6640},
+    {date: '1999-08', brl: 116.7750, cop: 110.2270},
+    {date: '1999-09', brl: 118.6420, cop: 111.8710},
+    {date: '1999-10', brl: 120.8880, cop: 113.5590},
+    {date: '1999-11', brl: 123.1140, cop: 115.2000},
+    {date: '1999-12', brl: 124.9010, cop: 116.8410},
+    {date: '2000-01', brl: 126.5500, cop: 118.2270},
+    {date: '2001-01', brl: 138.4400, cop: 128.9910},
+    {date: '2002-01', brl: 157.8820, cop: 145.2200},
+    {date: '2003-01', brl: 181.7740, cop: 163.5510},
+    {date: '2004-01', brl: 176.4430, cop: 159.1140},
+    {date: '2005-01', brl: 164.2210, cop: 151.0040},
+    {date: '2006-01', brl: 151.8830, cop: 143.7780},
+    {date: '2007-01', brl: 142.9920, cop: 138.4410},
+    {date: '2008-01', brl: 158.5510, cop: 151.8820},
+    {date: '2009-01', brl: 196.3370, cop: 183.7740},
+    {date: '2010-01', brl: 183.9920, cop: 176.5510},
+    {date: '2011-01', brl: 171.2280, cop: 168.9940},
+    {date: '2012-01', brl: 182.1190, cop: 174.5510},
+    {date: '2013-01', brl: 199.2280, cop: 188.7710},
+    {date: '2014-01', brl: 221.5510, cop: 205.1180},
+    {date: '2015-01', brl: 267.4410, cop: 243.9920},
+    {date: '2016-01', brl: 318.8820, cop: 286.5510},
+    {date: '2017-01', brl: 337.1190, cop: 301.7740},
+    {date: '2018-01', brl: 351.0020, cop: 316.5510},
+    {date: '2019-01', brl: 378.4410, cop: 331.9920},
+    {date: '2020-01', brl: 455.8820, cop: 401.2270},
+    {date: '2021-01', brl: 512.7710, cop: 438.5510},
+    {date: '2022-01', brl: 548.0020, cop: 471.8820},
+    {date: '2023-01', brl: 535.8820, cop: 463.1140},
+    {date: '2024-01', brl: 557.2280, cop: 481.5510},
+    {date: '2025-01', brl: 581.4410, cop: 503.8820},
+    {date: '2026-01', brl: 592.1180, cop: 514.7710}
+  ];
+
+  const brlDecline = data.map(d => parseFloat((10000 / d.brl).toFixed(2)));
+  const copDecline = data.map(d => parseFloat((10000 / d.cop).toFixed(2)));
+
+  new Chart(document.getElementById('exchangeChart'), {
+    type: 'line',
+    data: {
+      labels: data.map(d => d.date),
+      datasets: [
+        {
+          label: 'BRL decline vs EUR',
+          data: brlDecline,
+          borderColor: isDark ? '#60a5fa' : '#1e40af',
+          backgroundColor: isDark ? 'rgba(96, 165, 250, 0.08)' : 'rgba(30, 64, 175, 0.05)',
+          borderWidth: 2.5,
+          fill: true,
+          pointRadius: 0,
+          pointHoverRadius: 6,
+          pointBackgroundColor: isDark ? '#60a5fa' : '#1e40af',
+          tension: 0.3,
+          spanGaps: true,
+          yAxisID: 'y'
+        },
+        {
+          label: 'COP decline vs EUR',
+          data: copDecline,
+          borderColor: isDark ? '#f97316' : '#d97706',
+          backgroundColor: isDark ? 'rgba(249, 115, 22, 0.08)' : 'rgba(217, 119, 6, 0.05)',
+          borderWidth: 2.5,
+          fill: true,
+          pointRadius: 0,
+          pointHoverRadius: 6,
+          pointBackgroundColor: isDark ? '#f97316' : '#d97706',
+          tension: 0.3,
+          spanGaps: true,
+          yAxisID: 'y'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: isDark ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.75)',
+          titleColor: isDark ? '#f1f5f9' : '#ffffff',
+          bodyColor: isDark ? '#e2e8f0' : '#ffffff',
+          borderColor: isDark ? 'rgba(255, 255, 255, 0.2)' : 'rgba(255, 255, 255, 0.3)',
+          borderWidth: 1,
+          padding: 10,
+          titleFont: { size: 13, weight: '500' },
+          bodyFont: { size: 12 },
+          callbacks: {
+            title: (context) => context[0].label,
+            label: (context) => {
+              const label = context.dataset.label || '';
+              const value = Math.round(context.parsed.y * 100) / 100;
+              const pctChange = Math.round((100 - context.parsed.y) * 100) / 100;
+              return `${label}: ${value} (${-pctChange}%)`;
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          type: 'category',
+          ticks: {
+            autoSkip: true,
+            maxRotation: 0,
+            color: isDark ? 'rgba(148, 163, 184, 0.7)' : 'rgba(100, 116, 139, 0.7)',
+            font: { size: 12 }
+          },
+          grid: {
+            display: false,
+            drawBorder: false
+          }
+        },
+        y: {
+          position: 'left',
+          beginAtZero: false,
+          min: 16,
+          max: 100,
+          ticks: {
+            color: isDark ? 'rgba(148, 163, 184, 0.7)' : 'rgba(100, 116, 139, 0.7)',
+            font: { size: 12 },
+            callback: (value) => Math.round(value)
+          },
+          grid: {
+            color: isDark ? 'rgba(148, 163, 184, 0.1)' : 'rgba(100, 116, 139, 0.1)',
+            drawBorder: false,
+            lineWidth: 0.5
+          }
+        },
+        y1: {
+          type: 'linear',
+          position: 'right',
+          min: -84,
+          max: 0,
+          ticks: {
+            color: isDark ? 'rgba(148, 163, 184, 0.7)' : 'rgba(100, 116, 139, 0.7)',
+            font: { size: 12 },
+            callback: (value) => Math.round(value) + '%'
+          },
+          grid: {
+            display: false,
+            drawBorder: false
+          }
+        }
+      }
+    }
+  });
+})();
+</script>

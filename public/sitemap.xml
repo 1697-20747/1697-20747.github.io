@@ -5,14 +5,52 @@
     <loc>http://localhost:1313/blog/economics/inflation-measurement/</loc>
     <lastmod>2026-02-23T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/docs/rmbs/technical-architecture/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/rmbs/sample-mortgage-data/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/rmbs/geographic-mortgage-map/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/rmbs/sample-reports/</loc>
+  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-05-09T11:29:26+00:00</lastmod>
+    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2026-05-09T11:29:26+00:00</lastmod>
+    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-05-09T11:29:26+00:00</lastmod>
+    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/comp-science/</loc>
+    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/comp-science/</loc>
+    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/finance/</loc>
+    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/mortgages/</loc>
+    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/rmbs/</loc>
+    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/securitisation/</loc>
+    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/comp-science/securitisation-101-final/</loc>
+    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/comp-science/securitisation-101/</loc>
+    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tranching/</loc>
+    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/economics/</loc>
     <lastmod>2026-05-09T11:29:26+00:00</lastmod>
@@ -24,9 +62,6 @@
     <lastmod>2026-05-09T11:29:26+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/economics/fx-rate-efficiency-calculator/</loc>
-    <lastmod>2026-05-09T11:29:26+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2026-05-09T11:29:26+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/credit-risk/</loc>
@@ -118,12 +153,6 @@
   </url><url>
     <loc>http://localhost:1313/blog/unhelpful-advice/self-wareness/</loc>
     <lastmod>2026-04-12T10:37:22+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/comp-science/</loc>
-    <lastmod>2026-04-12T09:52:19+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/comp-science/</loc>
-    <lastmod>2026-04-12T09:52:19+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/comp-science/the-big-give-away/</loc>
     <lastmod>2026-04-12T09:52:19+00:00</lastmod>
@@ -279,9 +308,6 @@
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/finance/</loc>
-    <lastmod>2026-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/finance/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/forecasting/</loc>
@@ -616,6 +642,14 @@
   </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/rmbs/api-reference/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/rmbs/api-setup/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/rmbs/dashboards-guide/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/rmbs/reporting-guide/</loc>
+  </url><url>
     <loc>http://localhost:1313/about/about_index/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/bjj/</loc>
@@ -624,9 +658,13 @@
   </url><url>
     <loc>http://localhost:1313/blog/data-analytics/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/</loc>
+  </url><url>
     <loc>http://localhost:1313/blog/other/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/philosophy/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/rmbs/</loc>
   </url><url>
     <loc>http://localhost:1313/search/</loc>
   </url>

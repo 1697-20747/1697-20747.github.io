@@ -225,6 +225,12 @@
 <div class="section-label">Browse Categories</div>
 
 <div class="tiles-grid">
+        <a class="tile-card" href="http://localhost:1313/blog/comp-science/">
+            <div class="tile-name">Comp Science</div>
+            <div class="tile-count">2 posts
+            </div>
+            <div class="tile-arrow">→ browse</div>
+        </a>
         <a class="tile-card" href="http://localhost:1313/blog/economics/">
             <div class="tile-name">Economics</div>
             <div class="tile-count">4 posts
@@ -240,12 +246,6 @@
         <a class="tile-card" href="http://localhost:1313/blog/credit-risk/">
             <div class="tile-name">Credit Risk</div>
             <div class="tile-count">4 posts
-            </div>
-            <div class="tile-arrow">→ browse</div>
-        </a>
-        <a class="tile-card" href="http://localhost:1313/blog/comp-science/">
-            <div class="tile-name">Comp Science</div>
-            <div class="tile-count">1 post
             </div>
             <div class="tile-arrow">→ browse</div>
         </a>
@@ -322,13 +322,12 @@ setTimeout(highlightMenu, 200);
     inset:0;
     background:rgba(0,0,0,0.9);
     z-index:1000;
-    align-items:center;
-    justify-content:center;
     flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
     gap:1.5rem;
     cursor:pointer;
     overflow-y:scroll;
-    max-height:100vh;
     padding:2rem 2rem 4rem 2rem;
 " onclick="this.style.display='none'">
 
