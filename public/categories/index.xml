@@ -6,8 +6,15 @@
     <description>Recent content in Categories on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 09 May 2026 11:29:26 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 07:13:28 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comp-Science</title>
+      <link>http://localhost:1313/categories/comp-science/</link>
+      <pubDate>Sun, 17 May 2026 07:13:28 +0000</pubDate>
+      <guid>http://localhost:1313/categories/comp-science/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Economics</title>
       <link>http://localhost:1313/categories/economics/</link>
@@ -27,13 +34,6 @@
       <link>http://localhost:1313/categories/credit-risk/</link>
       <pubDate>Tue, 28 Apr 2026 19:36:06 +0000</pubDate>
       <guid>http://localhost:1313/categories/credit-risk/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Comp-Science</title>
-      <link>http://localhost:1313/categories/comp-science/</link>
-      <pubDate>Sun, 12 Apr 2026 09:52:19 +0000</pubDate>
-      <guid>http://localhost:1313/categories/comp-science/</guid>
       <description></description>
     </item>
     <item>

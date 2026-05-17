@@ -47,14 +47,133 @@ The rest of this post is going to posthumously unpick the how of the above, in e
 
 For this we can just focus on one element, being the GPA holding. Unpicking that is enough. For this, I have copies of the GPA and Group Casino financials referenced below. The rest is links.
 
+## Share price as evidence
+
+First a moan. Capital markets rely on facts, and those facts being available. There seems to be a trend now where historical stock prices are being increasingly put behind pay walls, even for API access. This is a disgrace at the industry level, especially for stale historical data. Regulators take not, market participants should be obligated to provide historical data in open source format. Or better, the mandate be set federally and a common funded statistical service be established to provide quality curated data. The cost of this is minimal. ANother example is fallen angels, try getting historic data on survival rates for companies over the last century, i.e. de listed or bought out companies. Capital markets cannot thrive in the absence of high quality, open sourced data.
+
+Here is the share price chart. This took far too much work, because of the above. The chart is self evident of the results. We know who was telling the truth now. Again stating that at the time is was not so easy as the post hoc analysis permits.
+
+FT and Muddy Waters 1: Groupe Casino nil points. That is the score of what was a very hard fought contest. More on that later. Probably in the psychology section!
 
 
+Side note, then companies remove the share price chart from their web site, you kind of know things are grim. They meet the obligations with the number, but strip the hsitorical aspects.
+
+# Casino Guichard Perrachon SA (EPA:CO) — Status as of May 16, 2026
+
+## Overview
+
+As of May 16, 2026, Casino Guichard Perrachon is navigating a period of financial stabilization following a major restructuring.
+
+The group is now primarily focused on:
+- French urban convenience retail:
+  - Monoprix
+  - Franprix
+- Digital commerce:
+  - Cdiscount
+
+---
+
+# Market Performance & Snapshot
+
+Casino shares have remained highly volatile.
+
+While the stock closed at **€0.22** on May 15, 2026, it declined **15.38%** in the latest trading session.
+
+| Metric | Value (May 15/16, 2026) |
+|---|---|
+| Last Price | €0.22 |
+| Market Capitalization | ~€90.13 million |
+| 52-Week High | €0.7565 |
+| 52-Week Low | €0.1490 |
+| Trading Volume | 980,445 |
+| EPS (TTM) | -€1.36 |
+
+---
+
+# Financial Highlights
+
+The group’s FY2025 and Q1 2026 results showed improving operating profitability despite continued net losses.
+
+| Financial Category | FY2025 Performance | Q1 2026 Performance |
+|---|---|---|
+| Net Sales | €8.26bn (-2.5% YoY) | ~€1.9bn (estimated) |
+| Adjusted EBITDA | €655m (+13.7% YoY) | €110.1m (+10.4% YoY) |
+| Trading Profit | €64m (vs -€49m in 2024) | Not explicitly reported |
+| Consolidated Net Loss | -€402m | Not explicitly reported |
+| Liquidity | €1.002bn (Dec 31 2025) | €0.8bn (Mar 31 2026) |
+
+---
+
+# Summary of Recent Activity
+
+## Operational Recovery
+
+The group’s **“Renouveau 2028”** turnaround plan has contributed to:
+- positive like-for-like sales growth,
+- improved profitability in core urban retail formats.
+
+Monoprix remained a key earnings driver, with:
+- adjusted EBITDA increasing 15.7% in Q1 2026.
+
+---
+
+## Debt & Restructuring
+
+As of late March 2026:
+
+| Item | Amount |
+|---|---|
+| Net Debt | ~€1.5bn |
+| Liquidity | ~€0.8bn |
+
+Casino also secured:
+- an extension from creditors for operational financing through May 28, 2026,
+- while seeking a broader refinancing agreement targeted for end-June 2026.
+
+---
+
+#
+---
+
+# Overall Position
+
+Casino appears to be:
+- operationally stabilizing,
+- materially smaller than historically,
+- still highly leveraged,
+- and reliant on ongoing creditor support during restructuring negotiations.
 ---
 
 # GPA: Economic ownership vs voting control
 
-GPA historically had a dual-class share structure that created a **significant mismatch between economic ownership and voting control** for Casino.
+GPA, for you North American readers, does not mean grade point average in this context. GPA is a Latin American retailer.
 
+
+
+> GPA, formerly Grupo Pão de Açúcar, is one of Brazil’s largest food retailers, founded in São Paulo in 1948 by Valentim Diniz. The company operates more than 800 stores across supermarket and convenience formats including Pão de Açúcar and Extra. GPA generated roughly R$19.1 billion (US$3.7 billion) in 2025 revenue. French retailer Groupe Casino acquired a stake in 1999, gained control in 2012, and later reduced ownership during its restructuring. Casino now holds about 20–22.5% of GPA after relinquishing control in 2024. 
+
+GPA is what it is, we won't really get into it that much. How GPA was reflected in Group Casino accounts is the task at hand. In particular *why* is where we are aiming at here. This is because GPA historically had a dual-class share structure that created a **significant mismatch between economic ownership and voting control** for Casino.
+
+Groupe Casino first acquired a stake in the Brazilian retail group GPA in 1999, when it purchased a 26% share of the company's capital. The exact financial price paid for this initial 1999 acquisition is not widely detailed. Over the following years, Groupe Casino significantly expanded its position in GPA, eventually becoming the sole controlling shareholder alongside the Diniz family in 2012.
+
+Refer foreign exchange reserving discussion later. For now consider that GPA operates in Latin America, with assets and thus revenues in Brazilan Real and Columbian Peso's. This is neither good, nor necessarily bad. However the following FX charts highlights some of the challenges arising out of this investment. You cannot hedge for ever. No matter how you cut it, this cycle of purchase and reinvestment would have been economically damaging. Even if you adjust for purchase power as you chase the decline, at some point you need the FX rates to stop the decline, or ideally reverse. This aspect is intrinsic to the story of the Group Casino. Carrying these economics hits in the debt stack is a part of the overall decline of Group Casino.
+
+---
+title: "EUR Exchange Rate Decline"
+date: 2026-05-16
+---
+
+## Currency Depreciation Analysis
+
+The Brazilian Real and Colombian Peso have experienced significant depreciation against the Euro since 1999.
+
+{{< eur-chart >}}
+
+### Key Findings
+
+- BRL lost 83% of value
+- COP lost 81% of value
+- Steepest declines post-2008
 ---
 
 # 1. Core distinction
@@ -79,8 +198,91 @@ At GPA, these diverged materially.
 
 The divergence arose from dual-class share structures and control vehicles.
 
----
+Divisional split:
 
+| Segment | Metric | 2017 | 2018 | 2018 % of Total |
+|---|---|---:|---:|---:|
+| France Retail | Net Sales (€m) | 18,799 | 19,061 | 49.9% |
+| France Retail | EBITDA (€m) | 882 | 914 | 48.9% |
+| France Retail | Trading Profit (€m) | 536 | 579 | 46.4% |
+| E-Commerce (Cdiscount) | GMV (€m) | 3,304 | 3,646 | 9.6% |
+| E-Commerce (Cdiscount) | EBITDA (€m) | (10) | 19 | 1.0% |
+| Latam Retail | Net Sales (€m) | 16,782 | 15,577 | 40.8% |
+| Latam Retail | EBITDA (€m) | 1,029 | 932 | 49.9% |
+| Latam Retail | Trading Profit (€m) | 713 | 644 | 51.6% |
+| **Total** | **Net Sales (€m)** | **38,885** | **38,284** | **100%** |
+| **Total** | **EBITDA (€m)** | **1,901** | **1,865** | **100%** |
+| **Total** | **Trading Profit (€m)** | **1,249** | **1,242** | **100%** |
+
+From this we can observe that roughly 50% of the business is Latam, or offshore. With, presumably a hefty component of FX buried in those numbers. We don't have to look this up, its enough to be able to conclude just from the region and a basic understanding of Latam FX history. In this case we are talking about Brazilian Real and Columbian Peso. With presumable USD exposure though conversion. Native currency is EUR.
+---
+## Debt stack
+
+Straight from financial statements:
+
+> Most of the Group's debt is carried by Casino, Guichard-Perrachon and is not secured by collateral or any secured assets. Financing is managed by the Corporate Finance department. The main subsidiaries (GPA, Monoprix and Éxito) also have their own financing facilities, which are not secured by collateral or any security interests in assets and are not guaranteed by Casino (except for GPA loans granted by BNDES totalling €8 million as at 31 December2018 that are secured by assets).
+
+Group accounts pg 106.
+
+Now keep in mind the divisional split. Most debt at top co in France, but roughly half of operating assets and thus cash on other side of the world.
+
+| Covenant Ratio | Threshold | Debt Facilities Subject to Covenant | Test Frequency | Ratio at 31 Dec 2018 |
+|---|---|---|---|---:|
+| Consolidated Net Debt (i) / Consolidated EBITDA (iii) | < 3.5x | €1.2bn syndicated credit line | Annually | 2.74x |
+| Consolidated Net Debt (i) / Consolidated EBITDA (iii) | < 3.7x | €350m bilateral credit lines | Annually | 2.74x |
+| Consolidated Net Debt (ii) / Consolidated EBITDA (iii) | < 3.5x | €50m bilateral credit line | Annually | 1.84x |
+| Consolidated Net Debt (ii) / Consolidated EBITDA (iii) | < 3.5x | USD 750m syndicated credit line | Annually | 1.84x |
+| Consolidated Net Debt (ii) / Consolidated EBITDA (iii) | < 3.5x | €40m bilateral credit line | Annually | 1.84x |
+
+(i) Net debt as defined in the loan agreements may differ from net debt presented in the consolidated financial statements
+(Note 11.2). It corresponds to borrowings and financial liabilities including hedging instruments with a negative fair value, less (i)
+cash and cash equivalents, (ii) financial assets held for cash management purposes and short-term financial investments,
+(iii) derivatives with a positive fair value classified as hedges of debt and (iv) financial assets arising from a significant disposal
+of non-current assets.
+(ii) For these facilities, the definition of net debt includes the net assets held for sale attributable to owners of the parent.
+(iii) EBITDA (earnings before interest, taxes, depreciation and amortisation) corresponds to trading profit plus recurring net
+depreciation and amortisation expense.
+
+## Embedded FX
+
+| Country | Owners of Parent 1 Jan 2018 | Movement 2018 | Owners of Parent 31 Dec 2018 | Non-Controlling Interests 1 Jan 2018 | Movement 2018 | Non-Controlling Interests 31 Dec 2018 | Total 31 Dec 2018 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Brazil | (1,571) | (280) | (1,852) | (2,492) | (418) | (2,909) | (4,761) |
+| Argentina | (156) | (20) | (175) | (13) | (2) | (15) | (190) |
+| Colombia | (282) | (15) | (296) | (320) | (34) | (355) | (651) |
+| Uruguay | (17) | (17) | (34) | (31) | (15) | (46) | (80) |
+| United States | 19 | - | 20 | 1 | - | 1 | 20 |
+| Poland | 17 | (4) | 13 | - | - | - | 14 |
+| Indian Ocean | (8) | (1) | (9) | (3) | - | (3) | (12) |
+| Hong Kong | 1 | - | 1 | - | - | - | 1 |
+| **Total Foreign Currency Translation Reserves** | **(1,997)** | **(335)** | **(2,332)** | **(2,858)** | **(468)** | **(3,326)** | **(5,658)** |
+
+Key points:
+
+* Assets and liabilities of subsidiaries in Brazil, Colombia, Argentina and other countries are carried in local currency on subsidiary balance sheets.
+* When consolidated into Casino’s EUR reporting currency, exchange-rate movements change the EUR-equivalent carrying value.
+* Depreciation of local currencies against the euro creates negative translation reserves.
+* These movements are recorded in equity through OCI (Other Comprehensive Income), not directly through EBITDA or trading profit.
+
+The large negative reserve for Brazil indicates substantial BRL depreciation versus EUR over time, materially reducing the euro-denominated carrying value of Casino’s Brazilian assets despite underlying local-currency operations remaining intact.
+
+Economically:
+
+* local operations may still perform strongly in BRL terms,
+* while reported EUR net assets decline materially.
+
+This creates a disconnect between:
+
+* operational performance in local currency,
+* and consolidated EUR balance sheet valuations.
+
+The negative carry is EUR5.6bn. We can debate free cash flow generation (and I will), noting that Group Casino must distrubte to carry on debt service across the debt stack. Realistically, unless FX reverses, it would take something like the better part of 10 years to generate surplus cash to unwind the negative carry. To get back to zero, not to profit, to fill the hole of carried losses. Tp suggest that this is only problematic is a huge understatement. Any credit analysis that does not dig into is likely fatally flawed.
+
+> There are embedded hedge arrangements supporting EUR balance sheet values that cannot last for ever, and or they have taken a bath on valuation in EUR over a long time. Either way, that is an amount of pain that will one day arrive. Does not make Latam assets 'bad', but does mean they are bad value in EUR terms over the long run.
+> Under ceteris paribus conditions going forward, being flat relative FX rates, this negative carry is going to have to be unwound. The source of value to unwind this can only be operational cash flow in the long run, or asset disposals in the medium term. The absence of discussion in the accounts of this aspect reflects poorly.
+> Yes under disclosure the purported facts are there. But the consequences are avoided, presumably deliberately.
+
+---
 # 3. Why this matters economically
 
 Casino:
@@ -90,6 +292,20 @@ Casino:
 ➡️ Result: GPA was **fully consolidated** in Casino accounts.
 
 ---
+
+## Ill iquidity....
+
+From the 2018 accounts, verbatim:
+
+> As at 31 December 2018, Casino in France(2) had €5 billion in liquidity, composed of a gross cash position of €2.1 billion and confirmed undrawn lines of credit of €2.9 billion with an average maturity of 2.4 years that easily cover upcoming debt repayments. Casino Group consolidated net debt stood at €3.4 billion at year-end 2018 versus €4.1 billion at year-end 2017. For Casino in France(2), net debt came to €2.7 billion at year-end 2018, versus €3.7 billion at year-end 2017, due to the impact of the asset disposal plan. Free cash flow from continuing operations amounted to €1.2 billion before dividends and financial expenses.
+
+2018 Group Accounts, pg 6. Footnote 2 reads:
+
+> (2) Casino Group holding company scope, including the French businesses and the wholly-owned holding companies.
+
+Lets assume the facts are just that, but explode them past the intended implication.
+
+
 
 # 4. IFRS accounting consequence
 

@@ -135,6 +135,26 @@
 </header>
 
 <article class="post-entry tag-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/images/comp-science/rmbs_legal_structure.png" alt="RMBS Legal Structure and Mortgage Transfer Flow">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Securitisation 101
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Overview This is about the dark art of securitisation (securitization?!), what it is, how it works, the concepts behind it and how it works IRL.
+A few notes before we proceed:
+This is based on real processes, actual credit concepts, and done at scale. The data set is made up of course, but the loans are all realistic in nature. Data tape standards as per BoE have been adopted. The code does a few things: Creates random portfolio of loans (10,000 mortgages, £733.1m pool) Creates loan level cash flows for P&amp;I Creates pool level aggregation of cash flows (all loans together into monthly schedules) Incorporates recent real world transaction and prospectus (see references) Full reporting is properly generated from data using stand alone scripts, output onto log files This approach is based on stand alone bash scripts, so you can run from CLI and don’t need any IDE It is stable and lean, but to change best you know how to read code (code on github) From this applies stress and credit methodologies to tranche the loans (this is the key functional task here) The tranching model is stand alone, can be applied at scale to any pool of mortgages Reporting dashboard and summary statistics for the mortgage pool and the tranches Key assumptions are in stand alone files and read in as needed (change them and model still works) These are big data sets, CSV is poor choice. For key tables Apache Parquet is used for good reason (computational efficiency on the Monte Carlo runs) ⚠️ Warning: The tranching model is complex, but is highly realistic. It is based on open source data sets and features all of the key aspects required. The Monte Carlo process is set for n runs (10,000 is good enough). Test. The variance and correlation assumptions are based on real world data, historical interest rates, HPI data, etc. It adopts rating agency concepts based on public domain methodologies. It is about 90% complete—you can definitely use this for tranching purposes when assessing mortgage pools to give you realistic results. But it is not 100%. Do not use in production environment. The last 10% needs use of brain cells. If you don’t know what you are doing, do not use this in production. The 100% version is not going on my git hub for lots of reasons. The last parts are not so easy. There is enough here you should be able to tweak this to your own choices, which is part of the last 10%—your assumptions and mine not the same.
+...</p>
+  </div>
+  <footer class="entry-footer">
+<div class="post-meta"><span title='2026-05-17 07:13:28 +0000 UTC'>May 17, 2026</span>&nbsp;·&nbsp;21 min</div>
+</footer>
+  <a class="entry-link" aria-label="post link to Securitisation 101" href="http://localhost:1313/blog/comp-science/securitisation-101-final/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
     <h2 class="entry-hint-parent">Quality of Earnings
     </h2>
@@ -299,13 +319,12 @@ setTimeout(highlightMenu, 200);
     inset:0;
     background:rgba(0,0,0,0.9);
     z-index:1000;
-    align-items:center;
-    justify-content:center;
     flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
     gap:1.5rem;
     cursor:pointer;
     overflow-y:scroll;
-    max-height:100vh;
     padding:2rem 2rem 4rem 2rem;
 " onclick="this.style.display='none'">
 
