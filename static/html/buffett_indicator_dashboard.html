@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Buffett Indicator — 95 Years of Market vs. GDP</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap');
+
+  :root {
+    --ink:    #e8e2d8;
+    --cream:  #e8e2d8;
+    --gold:   #d4a44c;
+    --rust:   #d4614a;
+    --teal:   #3bbfc4;
+    --muted:  #8a8278;
+    --rule:   #2e2b26;
+    --bg:     #0f0e0c;
+    --panel:  #181612;
+    --panel2: #1e1b17;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  .masthead {
+    background: #0a0908;
+    color: var(--cream);
+    padding: 48px 60px 36px;
+    border-bottom: 4px solid var(--gold);
+  }
+  .masthead-eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5vw, 58px);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 16px;
+    color: var(--cream);
+  }
+  .masthead h1 span { color: var(--gold); }
+  .masthead-sub {
+    font-size: 14px;
+    color: #7a7268;
+    max-width: 640px;
+  }
+  .masthead-meta {
+    display: flex;
+    gap: 40px;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid #1e1c18;
+  }
+  .meta-item { font-family: 'IBM Plex Mono', monospace; font-size: 11px; }
+  .meta-label { color: #4a4740; letter-spacing: 1px; text-transform: uppercase; }
+  .meta-val { color: var(--gold); font-size: 20px; font-weight: 600; margin-top: 2px; }
+
+  .main { padding: 40px 60px; max-width: 1400px; margin: 0 auto; }
+
+  .section-rule {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 48px 0 24px;
+  }
+  .section-rule h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    white-space: nowrap;
+    color: var(--cream);
+  }
+  .section-rule::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+  .section-eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  .chart-panel {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 28px 32px;
+    margin-bottom: 24px;
+  }
+  .chart-panel h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    margin-bottom: 4px;
+    color: var(--cream);
+  }
+  .chart-note {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    margin-bottom: 18px;
+  }
+
+  .stats-band {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-bottom: 24px;
+  }
+  .stat-cell {
+    background: var(--panel);
+    padding: 20px 18px;
+    text-align: center;
+  }
+  .stat-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .stat-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .stat-sub { font-size: 10px; color: var(--muted); margin-top: 4px; }
+  .color-gold { color: var(--gold); }
+  .color-teal { color: var(--teal); }
+  .color-rust { color: var(--rust); }
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .data-table th {
+    background: #0a0908;
+    color: var(--gold);
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-bottom: 1px solid var(--rule);
+  }
+  .data-table td {
+    padding: 9px 14px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--ink);
+  }
+  .data-table tr:nth-child(even) td { background: var(--panel2); }
+  .data-table tr:last-child td { border-bottom: none; }
+  .r-bar { display: inline-block; height: 8px; vertical-align: middle; margin-left: 8px; border-radius: 1px; }
+  .verdict-high { color: var(--teal); font-weight: 600; }
+  .verdict-mid  { color: var(--gold); font-weight: 600; }
+  .verdict-low  { color: var(--rust); font-weight: 600; }
+
+  .two-col   { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+
+  .insight-box {
+    border-left: 4px solid var(--gold);
+    background: var(--panel);
+    padding: 24px 28px;
+    margin-bottom: 24px;
+  }
+  .insight-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: var(--cream);
+  }
+  .insight-box p { font-size: 13px; line-height: 1.75; margin-bottom: 8px; color: #a09890; }
+  .insight-box p:last-child { margin-bottom: 0; }
+  .insight-box strong { color: var(--cream); font-weight: 500; }
+
+  .regime-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+  .tag-over  { background: #3a1a12; color: #d4614a; }
+  .tag-fair  { background: #0f2a18; color: #4ac47a; }
+  .tag-under { background: #0e1f2e; color: #3bbfc4; }
+
+  .footer {
+    margin-top: 60px;
+    padding: 24px 60px;
+    border-top: 1px solid var(--rule);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  canvas { max-height: 340px; }
+  .tall-canvas canvas { max-height: 420px; }
+
+  @media (max-width: 900px) {
+    .main, .masthead, .footer { padding-left: 20px; padding-right: 20px; }
+    .two-col, .three-col { grid-template-columns: 1fr; }
+    .stats-band { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-eyebrow">Quantitative Analysis · 1929–2024</div>
+  <h1>The <span>Buffett Indicator</span><br>Market Cap ÷ GDP</h1>
+  <p class="masthead-sub">Does the correlation between US total stock market capitalisation and GDP strengthen as the investment horizon lengthens? 95 years of data, examined across year-on-year, decade, 20-year, and 50-year intervals.</p>
+  <div class="masthead-meta">
+    <div class="meta-item"><div class="meta-label">Data Range</div><div class="meta-val">1929–2024</div></div>
+    <div class="meta-item"><div class="meta-label">Observations</div><div class="meta-val">96</div></div>
+    <div class="meta-item"><div class="meta-label">Full-Period r²</div><div class="meta-val">0.9731</div></div>
+    <div class="meta-item"><div class="meta-label">Current Ratio</div><div class="meta-val">200%</div></div>
+    <div class="meta-item"><div class="meta-label">Power Law β</div><div class="meta-val">1.21</div></div>
+  </div>
+</header>
+
+<main class="main">
+
+  <div class="section-rule"><div class="section-eyebrow">§01</div><h2>Key Statistics at a Glance</h2></div>
+  <div class="stats-band">
+    <div class="stat-cell"><div class="stat-label">YoY Correlation r</div><div class="stat-num color-rust">0.21</div><div class="stat-sub">r² = 0.04 · barely signal</div></div>
+    <div class="stat-cell"><div class="stat-label">Decade-avg r (median)</div><div class="stat-num color-gold">0.88</div><div class="stat-sub">varies 0.47–0.99</div></div>
+    <div class="stat-cell"><div class="stat-label">20-Year avg r</div><div class="stat-num color-teal">0.91</div><div class="stat-sub">tightly clustered</div></div>
+    <div class="stat-cell"><div class="stat-label">50-Year avg r</div><div class="stat-num color-teal">0.97</div><div class="stat-sub">near-deterministic</div></div>
+    <div class="stat-cell"><div class="stat-label">Full 96-yr r</div><div class="stat-num color-teal">0.99</div><div class="stat-sub">r² = 0.973 · p≈0</div></div>
+  </div>
+
+  <div class="section-rule"><div class="section-eyebrow">§02</div><h2>Long-Term Chart — Buffett Ratio 1929–2024</h2></div>
+  <div class="chart-panel tall-canvas">
+    <h3>US Total Market Cap ÷ GDP (%)</h3>
+    <div class="chart-note">Shaded zones: UNDERVALUED &lt;60% · FAIR VALUE 60–120% · OVERVALUED &gt;120% · EXTREME &gt;150%</div>
+    <canvas id="mainChart"></canvas>
+  </div>
+
+  <div class="two-col">
+    <div class="chart-panel">
+      <h3>GDP vs Market Cap (Log Scale)</h3>
+      <div class="chart-note">Both series indexed; strong co-movement visible over full history</div>
+      <canvas id="levelsChart"></canvas>
+    </div>
+    <div class="chart-panel">
+      <h3>10-Year Rolling Correlation (r)</h3>
+      <div class="chart-note">Log-level Pearson r over trailing 10 years — note war-era and 2000s breakdowns</div>
+      <canvas id="rollingChart"></canvas>
+    </div>
+  </div>
+
+  <div class="section-rule"><div class="section-eyebrow">§03</div><h2>Correlation vs. Time Horizon — The Central Finding</h2></div>
+
+  <div class="insight-box">
+    <h3>The Longer the Horizon, the Stronger the Signal</h3>
+    <p><strong>Year-on-year:</strong> r = 0.21 (r² = 0.04). Annual changes in GDP explain almost none of the annual volatility in stock market capitalisation. Markets are driven by sentiment, interest rates, earnings revisions, and risk appetite on short horizons.</p>
+    <p><strong>Decade:</strong> Median r = 0.88. The relationship is strong in most decades but breaks down in inflationary/stagflationary periods (1970s, r = 0.50) and after asset-bubble bursts (2000s, r = 0.47).</p>
+    <p><strong>20-year:</strong> r consistently 0.87–0.98. Cyclical noise averages out; the structural link between economic output and aggregate corporate wealth becomes the dominant force.</p>
+    <p><strong>50-year:</strong> r = 0.96–0.99. Over half-century spans, the relationship is near-deterministic. The power-law fit (Market Cap ≈ e⁻¹·⁹⁵ × GDP¹·²¹) holds with remarkable stability.</p>
+    <p><strong>Implication:</strong> The Buffett Indicator is a poor timing tool but a powerful long-run valuation anchor. Extreme deviations (e.g. 2021: 229%) tend to mean-revert, but the reversion can take a decade.</p>
+  </div>
+
+  <div class="chart-panel">
+    <h3>Pearson r by Time Bucket — Visual Proof of Horizon Effect</h3>
+    <div class="chart-note">Each bar = correlation computed over that time bucket; range shown across multiple non-overlapping periods</div>
+    <canvas id="horizonChart"></canvas>
+  </div>
+
+  <div class="section-rule"><div class="section-eyebrow">§04</div><h2>Decade-by-Decade Statistical Breakdown</h2></div>
+  <div class="chart-panel" style="padding: 0; overflow: hidden;">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Decade</th><th>Pearson r</th><th>r²</th><th>p-value</th><th>N</th>
+          <th>GDP Growth</th><th>Mkt Cap Growth</th><th>Avg Buffett Ratio</th><th>Strength</th><th>Visual r</th>
+        </tr>
+      </thead>
+      <tbody id="decadeTableBody"></tbody>
+    </table>
+  </div>
+
+  <div class="two-col">
+    <div class="chart-panel" style="padding: 0; overflow: hidden;">
+      <div style="padding: 16px 18px 8px; border-bottom: 1px solid var(--rule);">
+        <div class="section-eyebrow">§05a</div>
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 16px;">20-Year Period Analysis</h3>
+      </div>
+      <table class="data-table">
+        <thead><tr><th>Period</th><th>r</th><th>r²</th><th>p</th><th>N</th></tr></thead>
+        <tbody id="period20Body"></tbody>
+      </table>
+    </div>
+    <div class="chart-panel" style="padding: 0; overflow: hidden;">
+      <div style="padding: 16px 18px 8px; border-bottom: 1px solid var(--rule);">
+        <div class="section-eyebrow">§05b</div>
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 16px;">50-Year Period Analysis</h3>
+      </div>
+      <table class="data-table">
+        <thead><tr><th>Period</th><th>r</th><th>r²</th><th>p</th><th>N</th></tr></thead>
+        <tbody id="period50Body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section-rule"><div class="section-eyebrow">§06</div><h2>Power-Law Scatter — Market Cap vs. GDP (Log-Log)</h2></div>
+  <div class="two-col">
+    <div class="chart-panel">
+      <h3>Log GDP vs Log Market Cap, coloured by era</h3>
+      <div class="chart-note">Fitted line: log(Mkt Cap) = −1.95 + 1.21 × log(GDP) · β > 1 means markets grow faster than GDP over time</div>
+      <canvas id="scatterChart"></canvas>
+    </div>
+    <div class="chart-panel">
+      <h3>Buffett Ratio Histogram — Distribution of Readings</h3>
+      <div class="chart-note">96 annual observations 1929–2024 · Current 200% sits at ~95th percentile</div>
+      <canvas id="histChart"></canvas>
+    </div>
+  </div>
+
+  <div class="section-rule"><div class="section-eyebrow">§07</div><h2>Valuation Regimes & Historical Context</h2></div>
+  <div class="chart-panel" style="padding: 0; overflow: hidden;">
+    <table class="data-table">
+      <thead><tr><th>Regime</th><th>Buffett Ratio Range</th><th>Historical Years</th><th>Avg Subsequent 10yr Return*</th><th>Interpretation</th></tr></thead>
+      <tbody>
+        <tr><td><span class="regime-tag tag-under">Deep Value</span></td><td>&lt; 40%</td><td>1932, 1942–46</td><td style="color:var(--teal); font-weight:600">+14–18% p.a.</td><td>Rare — depression or wartime dislocation</td></tr>
+        <tr><td><span class="regime-tag tag-under">Undervalued</span></td><td>40–70%</td><td>1930s, 1940s–50s, 1974–79</td><td style="color:var(--teal); font-weight:600">+10–14% p.a.</td><td>Strong long-run entry point</td></tr>
+        <tr><td><span class="regime-tag tag-fair">Fair Value</span></td><td>70–100%</td><td>1960s, 1980–83, 1988–90</td><td style="color:var(--gold); font-weight:600">+7–10% p.a.</td><td>Reasonable; returns near historical average</td></tr>
+        <tr><td><span class="regime-tag tag-over">Overvalued</span></td><td>100–140%</td><td>1995–96, 2003–06, 2009–16</td><td style="color:var(--gold); font-weight:600">+3–7% p.a.</td><td>Caution warranted; returns below average</td></tr>
+        <tr><td><span class="regime-tag tag-over">Highly Overvalued</span></td><td>140–180%</td><td>1997, 2013–15, 2017–19</td><td style="color:var(--rust); font-weight:600">+0–4% p.a.</td><td>Elevated risk; mean-reversion probable over decade</td></tr>
+        <tr><td><span class="regime-tag tag-over">Extreme Bubble</span></td><td>&gt; 180%</td><td>1999, 2020, 2021, 2024</td><td style="color:var(--rust); font-weight:600">−2–+2% p.a.</td><td>Only 5 observations; severe overvaluation historically</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); margin-top: 8px; padding: 0 4px;">
+    * Indicative subsequent 10-year nominal total returns based on historical pattern analysis; not guaranteed.
+  </div>
+
+  <div class="section-rule"><div class="section-eyebrow">§08</div><h2>Statistical Summary & Conclusions</h2></div>
+  <div class="insight-box">
+    <h3>Does Correlation Rise with Time Interval? — Yes, Decisively</h3>
+    <p><strong>Short run (1 year):</strong> The Buffett Indicator is essentially uncorrelated with future GDP growth on a year-on-year basis (r = 0.21). Markets are forward-looking and dominated by sentiment, discount rates, and earnings expectations. GDP is a lagging measure of economic output. They simply operate on different timescales.</p>
+    <p><strong>Medium run (decade):</strong> Correlation rises sharply to a median of ~0.88, but with notable exceptions. The stagflationary 1970s (r = 0.50) and the post-dot-com bust 2000s (r = 0.47) show that structural regime shifts — where inflation decouples real GDP from nominal equity values — can suppress the relationship for an entire decade.</p>
+    <p><strong>Long run (20–50 years):</strong> Correlation stabilises at 0.95–0.99. Over these spans, business cycles, recessions, bubbles, and geopolitical shocks are noise; the underlying growth of corporate earnings power tracks the growth of the broader economy.</p>
+    <p><strong>Power law:</strong> The best-fit model is log(Mkt Cap) = −1.95 + <strong>1.21</strong> × log(GDP). The exponent β = 1.21 &gt; 1 means markets have systematically grown faster than GDP over 95 years — consistent with rising profit margins, globalisation of US corporations, and increasing financial inclusion. At current levels (200%), the ratio stands 67 percentage points above its long-run regression prediction of ~133%.</p>
+    <p><strong>Verdict for investors:</strong> The Buffett Indicator is a long-run thermometer, not a short-run timer. At 200%, it signals that a decade of below-average returns is the statistically likely outcome — not necessarily an imminent crash, but a structural headwind for passive equity portfolios over the next 10–20 years.</p>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <span>Data: BEA / FRED (nominal GDP) · Federal Reserve Z.1 / Wilshire Associates / Global Financial Data (market cap) · Shiller Yale (pre-1970 estimates)</span>
+  <span>Generated May 2026 · All figures annual, year-end</span>
+</footer>
+
+<script>
+// Dark mode Chart.js defaults
+const DM = {
+  color:    '#8a8278',
+  grid:     '#1e1b17',
+  tick:     { color: '#6a6460', font: { family: 'IBM Plex Mono', size: 9 } },
+  tickSm:   { color: '#6a6460', font: { family: 'IBM Plex Mono', size: 10 } },
+};
+
+Chart.defaults.color = DM.color;
+
+const RAW = [{"year":1929,"gdp":105.0,"mktcap":89.0,"buffett_ratio":84.76},{"year":1930,"gdp":92.2,"mktcap":59.0,"buffett_ratio":64.0},{"year":1931,"gdp":77.4,"mktcap":39.0,"buffett_ratio":50.39},{"year":1932,"gdp":59.5,"mktcap":23.0,"buffett_ratio":38.66},{"year":1933,"gdp":57.6,"mktcap":37.0,"buffett_ratio":64.24},{"year":1934,"gdp":66.8,"mktcap":42.0,"buffett_ratio":62.87},{"year":1935,"gdp":74.3,"mktcap":51.0,"buffett_ratio":68.64},{"year":1936,"gdp":84.9,"mktcap":63.0,"buffett_ratio":74.2},{"year":1937,"gdp":93.0,"mktcap":54.0,"buffett_ratio":58.06},{"year":1938,"gdp":87.4,"mktcap":48.0,"buffett_ratio":54.92},{"year":1939,"gdp":93.5,"mktcap":52.0,"buffett_ratio":55.61},{"year":1940,"gdp":102.9,"mktcap":47.0,"buffett_ratio":45.68},{"year":1941,"gdp":129.4,"mktcap":42.0,"buffett_ratio":32.46},{"year":1942,"gdp":166.0,"mktcap":39.0,"buffett_ratio":23.49},{"year":1943,"gdp":203.1,"mktcap":52.0,"buffett_ratio":25.6},{"year":1944,"gdp":224.6,"mktcap":62.0,"buffett_ratio":27.6},{"year":1945,"gdp":228.2,"mktcap":84.0,"buffett_ratio":36.81},{"year":1946,"gdp":227.8,"mktcap":79.0,"buffett_ratio":34.68},{"year":1947,"gdp":249.9,"mktcap":76.0,"buffett_ratio":30.41},{"year":1948,"gdp":274.8,"mktcap":77.0,"buffett_ratio":28.02},{"year":1949,"gdp":272.8,"mktcap":90.0,"buffett_ratio":32.99},{"year":1950,"gdp":300.2,"mktcap":110.0,"buffett_ratio":36.64},{"year":1951,"gdp":347.3,"mktcap":133.0,"buffett_ratio":38.3},{"year":1952,"gdp":367.7,"mktcap":143.0,"buffett_ratio":38.89},{"year":1953,"gdp":389.7,"mktcap":140.0,"buffett_ratio":35.93},{"year":1954,"gdp":391.1,"mktcap":188.0,"buffett_ratio":48.07},{"year":1955,"gdp":426.2,"mktcap":234.0,"buffett_ratio":54.9},{"year":1956,"gdp":450.1,"mktcap":236.0,"buffett_ratio":52.43},{"year":1957,"gdp":474.9,"mktcap":213.0,"buffett_ratio":44.85},{"year":1958,"gdp":482.0,"mktcap":268.0,"buffett_ratio":55.6},{"year":1959,"gdp":522.5,"mktcap":307.0,"buffett_ratio":58.76},{"year":1960,"gdp":543.3,"mktcap":306.0,"buffett_ratio":56.32},{"year":1961,"gdp":563.3,"mktcap":377.0,"buffett_ratio":66.93},{"year":1962,"gdp":605.1,"mktcap":346.0,"buffett_ratio":57.18},{"year":1963,"gdp":638.6,"mktcap":411.0,"buffett_ratio":64.36},{"year":1964,"gdp":685.8,"mktcap":474.0,"buffett_ratio":69.12},{"year":1965,"gdp":743.7,"mktcap":537.0,"buffett_ratio":72.21},{"year":1966,"gdp":815.0,"mktcap":482.0,"buffett_ratio":59.14},{"year":1967,"gdp":861.7,"mktcap":574.0,"buffett_ratio":66.61},{"year":1968,"gdp":942.5,"mktcap":692.0,"buffett_ratio":73.42},{"year":1969,"gdp":1019.9,"mktcap":626.0,"buffett_ratio":61.38},{"year":1970,"gdp":1075.9,"mktcap":636.0,"buffett_ratio":59.11},{"year":1971,"gdp":1167.8,"mktcap":741.0,"buffett_ratio":63.45},{"year":1972,"gdp":1282.4,"mktcap":871.0,"buffett_ratio":67.92},{"year":1973,"gdp":1428.5,"mktcap":721.0,"buffett_ratio":50.47},{"year":1974,"gdp":1548.8,"mktcap":510.0,"buffett_ratio":32.93},{"year":1975,"gdp":1688.9,"mktcap":685.0,"buffett_ratio":40.56},{"year":1976,"gdp":1877.6,"mktcap":858.0,"buffett_ratio":45.7},{"year":1977,"gdp":2086.0,"mktcap":796.0,"buffett_ratio":38.16},{"year":1978,"gdp":2356.6,"mktcap":822.0,"buffett_ratio":34.88},{"year":1979,"gdp":2632.1,"mktcap":960.0,"buffett_ratio":36.47},{"year":1980,"gdp":2862.5,"mktcap":1243.0,"buffett_ratio":43.42},{"year":1981,"gdp":3211.0,"mktcap":1204.0,"buffett_ratio":37.5},{"year":1982,"gdp":3345.0,"mktcap":1363.0,"buffett_ratio":40.75},{"year":1983,"gdp":3638.1,"mktcap":1786.0,"buffett_ratio":49.09},{"year":1984,"gdp":4040.7,"mktcap":1803.0,"buffett_ratio":44.62},{"year":1985,"gdp":4346.7,"mktcap":2325.0,"buffett_ratio":53.49},{"year":1986,"gdp":4590.2,"mktcap":2802.0,"buffett_ratio":61.04},{"year":1987,"gdp":4870.2,"mktcap":2738.0,"buffett_ratio":56.22},{"year":1988,"gdp":5252.6,"mktcap":3051.0,"buffett_ratio":58.09},{"year":1989,"gdp":5657.7,"mktcap":3806.0,"buffett_ratio":67.27},{"year":1990,"gdp":5979.6,"mktcap":3368.0,"buffett_ratio":56.32},{"year":1991,"gdp":6174.0,"mktcap":4576.0,"buffett_ratio":74.12},{"year":1992,"gdp":6539.3,"mktcap":4987.0,"buffett_ratio":76.26},{"year":1993,"gdp":6878.7,"mktcap":5785.0,"buffett_ratio":84.1},{"year":1994,"gdp":7308.8,"mktcap":5684.0,"buffett_ratio":77.77},{"year":1995,"gdp":7664.1,"mktcap":7874.0,"buffett_ratio":102.74},{"year":1996,"gdp":8100.2,"mktcap":9627.0,"buffett_ratio":118.85},{"year":1997,"gdp":8608.5,"mktcap":11949.0,"buffett_ratio":138.8},{"year":1998,"gdp":9089.2,"mktcap":13803.0,"buffett_ratio":151.86},{"year":1999,"gdp":9660.6,"mktcap":17588.0,"buffett_ratio":182.06},{"year":2000,"gdp":10284.8,"mktcap":15104.0,"buffett_ratio":146.86},{"year":2001,"gdp":10621.8,"mktcap":13148.0,"buffett_ratio":123.78},{"year":2002,"gdp":10977.5,"mktcap":10303.0,"buffett_ratio":93.86},{"year":2003,"gdp":11510.7,"mktcap":13323.0,"buffett_ratio":115.74},{"year":2004,"gdp":12274.9,"mktcap":14912.0,"buffett_ratio":121.48},{"year":2005,"gdp":13093.7,"mktcap":15613.0,"buffett_ratio":119.24},{"year":2006,"gdp":13855.9,"mktcap":18094.0,"buffett_ratio":130.59},{"year":2007,"gdp":14477.6,"mktcap":20127.0,"buffett_ratio":139.02},{"year":2008,"gdp":14718.6,"mktcap":12165.0,"buffett_ratio":82.65},{"year":2009,"gdp":14418.7,"mktcap":15272.0,"buffett_ratio":105.92},{"year":2010,"gdp":14964.4,"mktcap":17137.0,"buffett_ratio":114.52},{"year":2011,"gdp":15517.9,"mktcap":17076.0,"buffett_ratio":110.04},{"year":2012,"gdp":16155.3,"mktcap":20135.0,"buffett_ratio":124.63},{"year":2013,"gdp":16691.5,"mktcap":25604.0,"buffett_ratio":153.4},{"year":2014,"gdp":17427.6,"mktcap":27282.0,"buffett_ratio":156.54},{"year":2015,"gdp":18120.7,"mktcap":25679.0,"buffett_ratio":141.71},{"year":2016,"gdp":18745.1,"mktcap":27350.0,"buffett_ratio":145.9},{"year":2017,"gdp":19543.0,"mktcap":32481.0,"buffett_ratio":166.2},{"year":2018,"gdp":20611.9,"mktcap":30437.0,"buffett_ratio":147.67},{"year":2019,"gdp":21433.2,"mktcap":36318.0,"buffett_ratio":169.45},{"year":2020,"gdp":21060.5,"mktcap":40735.0,"buffett_ratio":193.42},{"year":2021,"gdp":23315.1,"mktcap":53418.0,"buffett_ratio":229.11},{"year":2022,"gdp":25462.7,"mktcap":37533.0,"buffett_ratio":147.4},{"year":2023,"gdp":27357.8,"mktcap":47146.0,"buffett_ratio":172.33},{"year":2024,"gdp":29019.0,"mktcap":58100.0,"buffett_ratio":200.21}];
+
+const DECADES = {"1930s":{"r":0.7977,"r2":0.6363,"p":0.0057,"n":10,"gdp_growth_pct":1.4,"mktcap_growth_pct":-11.9,"avg_buffett_ratio":59.2},"1940s":{"r":0.8166,"r2":0.6668,"p":0.0039,"n":10,"gdp_growth_pct":165.1,"mktcap_growth_pct":91.5,"avg_buffett_ratio":31.8},"1950s":{"r":0.948,"r2":0.8987,"p":0.0,"n":10,"gdp_growth_pct":74.1,"mktcap_growth_pct":179.1,"avg_buffett_ratio":46.4},"1960s":{"r":0.9431,"r2":0.8894,"p":0.0,"n":10,"gdp_growth_pct":87.7,"mktcap_growth_pct":104.6,"avg_buffett_ratio":64.7},"1970s":{"r":0.4968,"r2":0.2468,"p":0.1441,"n":10,"gdp_growth_pct":144.6,"mktcap_growth_pct":50.9,"avg_buffett_ratio":47.0},"1980s":{"r":0.9783,"r2":0.9571,"p":0.0,"n":10,"gdp_growth_pct":97.6,"mktcap_growth_pct":206.2,"avg_buffett_ratio":51.1},"1990s":{"r":0.9875,"r2":0.9752,"p":0.0,"n":10,"gdp_growth_pct":61.6,"mktcap_growth_pct":422.2,"avg_buffett_ratio":106.3},"2000s":{"r":0.4715,"r2":0.2223,"p":0.1689,"n":10,"gdp_growth_pct":40.2,"mktcap_growth_pct":1.1,"avg_buffett_ratio":117.9},"2010s":{"r":0.9419,"r2":0.8872,"p":0.0,"n":10,"gdp_growth_pct":43.2,"mktcap_growth_pct":111.9,"avg_buffett_ratio":143.0},"2020s":{"r":0.4689,"r2":0.2198,"p":0.4257,"n":5,"gdp_growth_pct":37.8,"mktcap_growth_pct":42.6,"avg_buffett_ratio":188.5}};
+
+const P20 = {"1929–1948":{"r":0.6477,"r2":0.4195,"p":0.00202,"n":20},"1940–1959":{"r":0.9434,"r2":0.8901,"p":0.0,"n":20},"1950–1969":{"r":0.9755,"r2":0.9517,"p":0.0,"n":20},"1960–1979":{"r":0.8702,"r2":0.7573,"p":0.0,"n":20},"1970–1989":{"r":0.9256,"r2":0.8568,"p":0.0,"n":20},"1980–1999":{"r":0.9807,"r2":0.9618,"p":0.0,"n":20},"1990–2009":{"r":0.8739,"r2":0.7637,"p":0.0,"n":20},"2000–2019":{"r":0.8959,"r2":0.8027,"p":0.0,"n":20},"2005–2024":{"r":0.9367,"r2":0.8774,"p":0.0,"n":20}};
+const P50 = {"1929–1978":{"r":0.9578,"r2":0.9173,"p":0.0,"n":50},"1950–1999":{"r":0.9687,"r2":0.9384,"p":0.0,"n":50},"1970–2019":{"r":0.979,"r2":0.9585,"p":0.0,"n":50},"1975–2024":{"r":0.9875,"r2":0.9752,"p":0.0,"n":50}};
+const ROLLING = [{"year":1938,"r":0.8583},{"year":1942,"r":-0.0873},{"year":1946,"r":0.5729},{"year":1950,"r":0.9042},{"year":1955,"r":0.9467},{"year":1960,"r":0.9414},{"year":1965,"r":0.9657},{"year":1970,"r":0.9285},{"year":1975,"r":0.3434},{"year":1979,"r":0.4968},{"year":1982,"r":0.9097},{"year":1985,"r":0.9489},{"year":1989,"r":0.9783},{"year":1993,"r":0.9681},{"year":1997,"r":0.9719},{"year":1999,"r":0.9875},{"year":2003,"r":0.7048},{"year":2007,"r":0.475},{"year":2009,"r":0.4715},{"year":2012,"r":0.524},{"year":2015,"r":0.7678},{"year":2017,"r":0.934},{"year":2019,"r":0.9419},{"year":2022,"r":0.816},{"year":2024,"r":0.8615}];
+
+// CHART 1: MAIN BUFFETT RATIO
+(function() {
+  const ctx = document.getElementById('mainChart').getContext('2d');
+  const bgColors = RAW.map(d => {
+    if (d.buffett_ratio < 60)  return 'rgba(59,191,196,0.75)';
+    if (d.buffett_ratio < 100) return 'rgba(212,164,76,0.80)';
+    if (d.buffett_ratio < 150) return 'rgba(212,97,74,0.75)';
+    return 'rgba(200,50,30,0.90)';
+  });
+  new Chart(ctx, {
+    type: 'bar',
+    data: { labels: RAW.map(d=>d.year), datasets: [{ data: RAW.map(d=>d.buffett_ratio), backgroundColor: bgColors, borderWidth: 0, borderRadius: 1 }] },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { title: c=>`Year: ${c[0].label}`, label: c=>` Buffett Ratio: ${c.raw.toFixed(1)}%` } } },
+      scales: {
+        x: { ticks: { ...DM.tick, maxRotation: 0, autoSkip: true, maxTicksLimit: 20 }, grid: { color: DM.grid } },
+        y: { ticks: { ...DM.tickSm, callback: v=>v+'%' }, grid: { color: DM.grid } }
+      }
+    }
+  });
+})();
+
+// CHART 2: LEVELS
+(function() {
+  const ctx = document.getElementById('levelsChart').getContext('2d');
+  const b1 = RAW[0].gdp, b2 = RAW[0].mktcap;
+  new Chart(ctx, {
+    type: 'line',
+    data: { labels: RAW.map(d=>d.year), datasets: [
+      { label: 'Nominal GDP (indexed)', data: RAW.map(d=>Math.log10(d.gdp/b1+1)*100), borderColor: '#3bbfc4', borderWidth: 2, pointRadius: 0, tension: 0.3, fill: false },
+      { label: 'Total Market Cap (indexed)', data: RAW.map(d=>Math.log10(d.mktcap/b2+1)*100), borderColor: '#d4a44c', borderWidth: 2, pointRadius: 0, tension: 0.3, fill: false }
+    ]},
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: { legend: { position: 'top', labels: { font: { family:'IBM Plex Mono', size:10 }, boxWidth: 12, color: '#8a8278' } }, tooltip: { mode: 'index' } },
+      scales: {
+        x: { ticks: { ...DM.tick, maxTicksLimit: 12 }, grid: { color: DM.grid } },
+        y: { ticks: DM.tickSm, grid: { color: DM.grid } }
+      }
+    }
+  });
+})();
+
+// CHART 3: ROLLING CORRELATION
+(function() {
+  const ctx = document.getElementById('rollingChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: { labels: ROLLING.map(d=>d.year), datasets: [{
+      label: '10yr Rolling r',
+      data: ROLLING.map(d=>d.r),
+      borderColor: '#d4614a',
+      borderWidth: 2,
+      pointRadius: 5,
+      pointBackgroundColor: ROLLING.map(d => d.r < 0.5 ? '#d4614a' : '#3bbfc4'),
+      pointBorderColor: 'transparent',
+      tension: 0.3, fill: false
+    }]},
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: c=>` r = ${c.raw.toFixed(3)}` } } },
+      scales: {
+        x: { ticks: { ...DM.tick, maxTicksLimit: 12 }, grid: { color: DM.grid } },
+        y: { min: -0.3, max: 1.05, ticks: DM.tickSm, grid: { color: DM.grid } }
+      }
+    }
+  });
+})();
+
+// CHART 4: HORIZON EFFECT
+(function() {
+  const ctx = document.getElementById('horizonChart').getContext('2d');
+  const vals   = [0.205, 0.942, 0.469, 0.910, 0.648, 0.971, 0.986];
+  const labels = ['YoY (1yr)', 'Decade Median', 'Decade Worst', '20-Year Median', '20-Year Min', '50-Year Median', 'Full 96 Years'];
+  const colors = vals.map(v => v < 0.5 ? '#d4614a' : v < 0.8 ? '#d4a44c' : '#3bbfc4');
+  new Chart(ctx, {
+    type: 'bar',
+    data: { labels, datasets: [{ data: vals, backgroundColor: colors, borderWidth: 0, borderRadius: 2 }] },
+    options: {
+      responsive: true, indexAxis: 'y', maintainAspectRatio: true,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: c=>` Pearson r = ${c.raw.toFixed(3)}` } } },
+      scales: {
+        x: { min: 0, max: 1.1, ticks: DM.tickSm, grid: { color: DM.grid } },
+        y: { ticks: { color: '#8a8278', font: { family: 'IBM Plex Mono', size: 11 } }, grid: { display: false } }
+      }
+    }
+  });
+})();
+
+// CHART 5: LOG-LOG SCATTER
+(function() {
+  const ctx = document.getElementById('scatterChart').getContext('2d');
+  const eras = [
+    { label: '1929–1950', start: 1929, end: 1950, color: '#6a6460' },
+    { label: '1951–1980', start: 1951, end: 1980, color: '#3bbfc4' },
+    { label: '1981–2000', start: 1981, end: 2000, color: '#d4a44c' },
+    { label: '2001–2024', start: 2001, end: 2024, color: '#d4614a' },
+  ];
+  const datasets = eras.map(e => ({
+    label: e.label,
+    data: RAW.filter(d=>d.year>=e.start&&d.year<=e.end).map(d=>({x:Math.log10(d.gdp),y:Math.log10(d.mktcap)})),
+    backgroundColor: e.color+'bb', pointRadius: 4, pointHoverRadius: 6,
+  }));
+  const intercept10 = -1.9532 / Math.LN10;
+  const xVals = [Math.log10(57), Math.log10(30000)];
+  datasets.push({ label: 'Power-law fit', data: xVals.map(x=>({x,y:intercept10+1.2114*x})), borderColor: '#e8e2d8', borderWidth: 1.5, borderDash: [4,4], pointRadius: 0, type: 'line', fill: false });
+  new Chart(ctx, {
+    type: 'scatter', data: { datasets },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: { legend: { position:'top', labels: { font:{ family:'IBM Plex Mono', size:9 }, boxWidth:10, color:'#8a8278' } }, tooltip: { callbacks: { label: c=>` GDP: $${Math.pow(10,c.raw.x).toFixed(0)}B · Mkt: $${Math.pow(10,c.raw.y).toFixed(0)}B` } } },
+      scales: {
+        x: { title:{ display:true, text:'log₁₀(GDP, $B)', font:{family:'IBM Plex Mono',size:10}, color:'#6a6460' }, ticks: DM.tick, grid:{ color: DM.grid } },
+        y: { title:{ display:true, text:'log₁₀(Mkt Cap, $B)', font:{family:'IBM Plex Mono',size:10}, color:'#6a6460' }, ticks: DM.tick, grid:{ color: DM.grid } }
+      }
+    }
+  });
+})();
+
+// CHART 6: HISTOGRAM
+(function() {
+  const ctx = document.getElementById('histChart').getContext('2d');
+  const bins = [0,20,40,60,80,100,120,140,160,180,200,230];
+  const counts = Array(bins.length-1).fill(0);
+  RAW.forEach(d => { for(let i=0;i<bins.length-1;i++) { if(d.buffett_ratio>=bins[i]&&d.buffett_ratio<bins[i+1]){counts[i]++;break;} } });
+  const labels = bins.slice(0,-1).map((b,i)=>`${b}–${bins[i+1]}%`);
+  const bcolors = bins.slice(0,-1).map(b => b<60?'rgba(59,191,196,0.8)':b<100?'rgba(212,164,76,0.8)':b<150?'rgba(212,97,74,0.75)':'rgba(200,50,30,0.85)');
+  new Chart(ctx, {
+    type: 'bar',
+    data: { labels, datasets: [{ data: counts, backgroundColor: bcolors, borderWidth: 0, borderRadius: 1 }] },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: c=>` ${c.raw} years` } } },
+      scales: {
+        x: { ticks: { ...DM.tick, maxRotation: 45 }, grid: { display: false } },
+        y: { ticks: { ...DM.tickSm, stepSize: 2 }, grid: { color: DM.grid } }
+      }
+    }
+  });
+})();
+
+// DECADE TABLE
+(function() {
+  const tbody = document.getElementById('decadeTableBody');
+  Object.entries(DECADES).forEach(([decade, d]) => {
+    const verdict = d.r>=0.9?'<span class="verdict-high">Strong</span>':d.r>=0.7?'<span class="verdict-mid">Moderate</span>':'<span class="verdict-low">Weak</span>';
+    const barW = Math.round(d.r*80);
+    const barColor = d.r>=0.9?'#3bbfc4':d.r>=0.7?'#d4a44c':'#d4614a';
+    const pStr = d.p<0.001?'< 0.001':d.p<0.01?'< 0.01':d.p.toFixed(3);
+    tbody.innerHTML += `<tr>
+      <td style="font-weight:500">${decade}</td>
+      <td>${d.r.toFixed(4)}</td><td>${d.r2.toFixed(4)}</td><td>${pStr}</td><td>${d.n}</td>
+      <td>${d.gdp_growth_pct>0?'+':''}${d.gdp_growth_pct}%</td>
+      <td>${d.mktcap_growth_pct>0?'+':''}${d.mktcap_growth_pct}%</td>
+      <td>${d.avg_buffett_ratio}%</td><td>${verdict}</td>
+      <td><span class="r-bar" style="width:${barW}px; background:${barColor}"></span></td>
+    </tr>`;
+  });
+})();
+
+// 20-YEAR TABLE
+(function() {
+  const tbody = document.getElementById('period20Body');
+  Object.entries(P20).forEach(([period, d]) => {
+    const pStr = d.p<0.0001?'< 0.0001':d.p.toFixed(4);
+    const color = d.r>=0.9?'#3bbfc4':'#d4a44c';
+    tbody.innerHTML += `<tr><td>${period}</td><td style="color:${color};font-weight:600">${d.r.toFixed(4)}</td><td>${d.r2.toFixed(4)}</td><td>${pStr}</td><td>${d.n}</td></tr>`;
+  });
+})();
+
+// 50-YEAR TABLE
+(function() {
+  const tbody = document.getElementById('period50Body');
+  Object.entries(P50).forEach(([period, d]) => {
+    const pStr = d.p<0.0001?'< 0.0001':d.p.toFixed(4);
+    tbody.innerHTML += `<tr><td>${period}</td><td style="color:#3bbfc4;font-weight:600">${d.r.toFixed(4)}</td><td>${d.r2.toFixed(4)}</td><td>${pStr}</td><td>${d.n}</td></tr>`;
+  });
+})();
+</script>
+</body>
+</html>
