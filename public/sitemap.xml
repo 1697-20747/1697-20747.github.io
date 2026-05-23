@@ -2,61 +2,126 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog/economics/inflation-measurement/</loc>
-    <lastmod>2026-02-23T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/docs/rmbs/rmbs-technical-architecture/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/rmbs/technical-architecture/</loc>
+    <loc>http://localhost:1313/docs/rmbs/api-reference/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/rmbs/api-setup/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/rmbs/dashboards-guide/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/rmbs/sample-mortgage-data/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/rmbs/geographic-mortgage-map/</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/rmbs/sample-reports/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/rmbs/reporting-guide/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/rmbs/geographic-mortgage-map/</loc>
+  </url><url>
+    <loc>http://localhost:1313/blog/economics/inflation-measurement/</loc>
+    <lastmod>2026-02-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+    <lastmod>2026-05-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+    <lastmod>2026-05-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+    <lastmod>2026-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/credit-scoring/</loc>
+    <lastmod>2026-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/economics/</loc>
+    <lastmod>2026-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/economics--finance/</loc>
+    <lastmod>2026-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/fairness/</loc>
+    <lastmod>2026-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/financial-analysis/</loc>
+    <lastmod>2026-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/fintech/</loc>
+    <lastmod>2026-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/gender-equality/</loc>
+    <lastmod>2026-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/machine-learning/</loc>
+    <lastmod>2026-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/machine-learning/</loc>
+    <lastmod>2026-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/regional-analysis/</loc>
+    <lastmod>2026-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/economics/socio-economic-credit-models/</loc>
+    <lastmod>2026-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/economics/</loc>
+    <lastmod>2026-05-21T21:05:35+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/economics/socio-credit-models/</loc>
+    <lastmod>2026-05-21T21:05:35+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser-part-2/</loc>
+    <lastmod>2026-05-20T07:28:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/comp-science/</loc>
-    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+    <lastmod>2026-05-20T07:28:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/comp-science/</loc>
-    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+    <lastmod>2026-05-20T07:28:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/finance/</loc>
-    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+    <loc>http://localhost:1313/tags/optimisation/</loc>
+    <lastmod>2026-05-20T07:28:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/mortgages/</loc>
-    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+    <loc>http://localhost:1313/tags/python/</loc>
+    <lastmod>2026-05-20T07:28:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/rmbs/</loc>
-    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+    <lastmod>2026-05-20T07:28:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/securitisation/</loc>
-    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+    <lastmod>2026-05-20T07:28:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/comp-science/securitisation-101-final/</loc>
-    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
+    <loc>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser/</loc>
+    <lastmod>2026-05-20T07:27:29+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/credit-risk/</loc>
+    <lastmod>2026-05-19T14:33:03+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/credit-risk/</loc>
+    <lastmod>2026-05-19T14:33:03+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ebita/</loc>
+    <lastmod>2026-05-19T14:33:03+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/credit-risk/ebitda-or-ebitdont/</loc>
+    <lastmod>2026-05-19T14:33:03+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/finance/</loc>
+    <lastmod>2026-05-17T07:13:29+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/mortgages/</loc>
+    <lastmod>2026-05-17T07:13:29+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/comp-science/securitisation-101-part-2/</loc>
+    <lastmod>2026-05-17T07:13:29+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tranching/</loc>
+    <lastmod>2026-05-17T07:13:29+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/comp-science/securitisation-101/</loc>
     <lastmod>2026-05-17T07:13:28+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/tranching/</loc>
-    <lastmod>2026-05-17T07:13:28+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/economics/</loc>
-    <lastmod>2026-05-09T11:29:26+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/economics/</loc>
-    <lastmod>2026-05-09T11:29:26+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/fx/</loc>
     <lastmod>2026-05-09T11:29:26+00:00</lastmod>
@@ -129,12 +194,6 @@
   </url><url>
     <loc>http://localhost:1313/tags/spreads/</loc>
     <lastmod>2026-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/credit-risk/</loc>
-    <lastmod>2026-04-28T19:36:06+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/credit-risk/</loc>
-    <lastmod>2026-04-28T19:36:06+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/credit-risk/mfs-collapse/</loc>
     <lastmod>2026-04-28T19:36:06+00:00</lastmod>
@@ -463,9 +522,6 @@
     <loc>http://localhost:1313/blog/books/deep-learning-goodfellow/</loc>
     <lastmod>2024-01-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/machine-learning/</loc>
-    <lastmod>2024-01-25T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/neural-networks/</loc>
     <lastmod>2024-01-25T00:00:00+00:00</lastmod>
   </url><url>
@@ -641,14 +697,6 @@
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/rmbs/api-reference/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/rmbs/api-setup/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/rmbs/dashboards-guide/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/rmbs/reporting-guide/</loc>
   </url><url>
     <loc>http://localhost:1313/about/about_index/</loc>
   </url><url>

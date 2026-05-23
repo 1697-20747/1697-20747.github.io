@@ -6,8 +6,22 @@
     <description>Recent content in Comp Science on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 17 May 2026 07:13:29 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 07:28:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/comp-science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a Securitisation Pool Optimiser -- Part 2: Code, Design and Deal Structure</title>
+      <link>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser-part-2/</link>
+      <pubDate>Wed, 20 May 2026 07:28:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser-part-2/</guid>
+      <description>Code inventory, IRS swap, BoE compliance, Fitch alignment, and the full RMBS deal structure.</description>
+    </item>
+    <item>
+      <title>Building a Securitisation Pool Optimiser -- Part 1: Architecture and Pipeline</title>
+      <link>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser/</link>
+      <pubDate>Wed, 20 May 2026 07:27:29 +0000</pubDate>
+      <guid>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser/</guid>
+      <description>How we built an ML-driven pool selection engine that maximises Class A note issuance from a 20,000-loan warehouse using simulated annealing and adaptive Monte Carlo.</description>
+    </item>
     <item>
       <title>Securitisation 101: Party Roles and Waterfall</title>
       <link>http://localhost:1313/blog/comp-science/securitisation-101-part-2/</link>
