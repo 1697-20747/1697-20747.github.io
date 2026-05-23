@@ -30,13 +30,6 @@
       <description></description>
     </item>
     <item>
-      <title>Economics</title>
-      <link>http://localhost:1313/categories/economics/</link>
-      <pubDate>Thu, 21 May 2026 21:05:35 +0000</pubDate>
-      <guid>http://localhost:1313/categories/economics/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Comp-Science</title>
       <link>http://localhost:1313/categories/comp-science/</link>
       <pubDate>Wed, 20 May 2026 07:28:00 +0000</pubDate>
@@ -48,6 +41,13 @@
       <link>http://localhost:1313/categories/credit-risk/</link>
       <pubDate>Tue, 19 May 2026 14:33:03 +0000</pubDate>
       <guid>http://localhost:1313/categories/credit-risk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Economics</title>
+      <link>http://localhost:1313/categories/economics/</link>
+      <pubDate>Sat, 09 May 2026 11:29:26 +0000</pubDate>
+      <guid>http://localhost:1313/categories/economics/</guid>
       <description></description>
     </item>
     <item>

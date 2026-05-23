@@ -6,6 +6,21 @@
     <description>Recent content in Data Analytics on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
+    <lastBuildDate>Sat, 23 May 2026 17:24:34 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/data-analytics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Downloading Historical Stock Price Data with Python &amp; Bash</title>
+      <link>http://localhost:1313/blog/data-analytics/share-price-data-correct/</link>
+      <pubDate>Sat, 23 May 2026 17:24:34 +0000</pubDate>
+      <guid>http://localhost:1313/blog/data-analytics/share-price-data-correct/</guid>
+      <description>A practical guide to automatically downloading 30&#43; years of historical stock price data using a bash script, Python virtual environments, and the yfinance library.</description>
+    </item>
+    <item>
+      <title>Share Price Data</title>
+      <link>http://localhost:1313/blog/data-analytics/share-price-data/</link>
+      <pubDate>Sat, 23 May 2026 17:24:34 +0000</pubDate>
+      <guid>http://localhost:1313/blog/data-analytics/share-price-data/</guid>
+      <description>A short summary shown in post listings.</description>
+    </item>
   </channel>
 </rss>

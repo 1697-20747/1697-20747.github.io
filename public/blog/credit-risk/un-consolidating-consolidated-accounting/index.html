@@ -133,18 +133,12 @@
     <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/blog/">Blog</a>&nbsp;»&nbsp;<a href="http://localhost:1313/blog/credit-risk/">Credit Risk</a></div>
     <h1 class="post-title entry-hint-parent">
       Un consolidating Consolidated Accounting, or a day trip to the Casino
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
     </h1>
     <div class="post-description">
       Accounting tricks to be wary of
     </div>
     <div class="post-meta">
-<div class="post-meta"><span title='2026-03-22 11:16:02 +0000 UTC'>March 22, 2026</span>&nbsp;·&nbsp;15 min</div>
+<div class="post-meta"><span title='2026-03-22 11:16:02 +0000 UTC'>March 22, 2026</span>&nbsp;·&nbsp;18 min</div>
 
 
 </div>
@@ -157,7 +151,11 @@
         <div class="inner"><nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#share-price-as-evidence">Share price as evidence</a></li>
+    <li><a href="#share-price-as-evidence">Share price as evidence</a>
+      <ul>
+        <li><a href="#casino-share-price-chart-2000-2026">Casino Share Price Chart (2000-2026)</a></li>
+      </ul>
+    </li>
   </ul>
 
   <ul>
@@ -209,6 +207,7 @@ date: 2026-05-16</a></li>
   </ul>
 
   <ul>
+    <li><a href="#detailed-analysis-deconsolidation--muddy-waters-comparison">Detailed Analysis: Deconsolidation &amp; Muddy Waters Comparison</a></li>
     <li><a href="#key-takeaways">Key Takeaways</a></li>
     <li><a href="#references">References</a></li>
   </ul>
@@ -244,7 +243,35 @@ date: 2026-05-16</a></li>
 <p>For this we can just focus on one element, being the GPA holding. Unpicking that is enough. For this, I have copies of the GPA and Group Casino financials referenced below. The rest is links.</p>
 <h2 id="share-price-as-evidence">Share price as evidence<a hidden class="anchor" aria-hidden="true" href="#share-price-as-evidence">#</a></h2>
 <p>First a moan. Capital markets rely on facts, and those facts being available. There seems to be a trend now where historical stock prices are being increasingly put behind pay walls, even for API access. This is a disgrace at the industry level, especially for stale historical data. Regulators take not, market participants should be obligated to provide historical data in open source format. Or better, the mandate be set federally and a common funded statistical service be established to provide quality curated data. The cost of this is minimal. ANother example is fallen angels, try getting historic data on survival rates for companies over the last century, i.e. de listed or bought out companies. Capital markets cannot thrive in the absence of high quality, open sourced data.</p>
-<p>Here is the share price chart. This took far too much work, because of the above. The chart is self evident of the results. We know who was telling the truth now. Again stating that at the time is was not so easy as the post hoc analysis permits.</p>
+<p>Here is the share price chart. This took far too much work, because of the above. The chart is self evident of the results. We know who was telling the truth now. Again stating that at the time is was not so easy as the post hoc analysis permits. The web sites block scrapers and API calls (damn them!). To solve this I ran a bash script to call up yfinance API and run in venv environment, this dumped data in csv file. The only drama being data set cuts of at 2000. I really wanted to show the massive decline from GPA purchase back in 1994 onwards. it should not be this hard.</p>
+<blockquote>
+<p>Regulators do something useful please and mandate good quality curated open source public historical data sets. It cannot be that hard. Or government mandate ONS to do it. It would cost peanuts!</p>
+</blockquote>
+<h3 id="casino-share-price-chart-2000-2026">Casino Share Price Chart (2000-2026)<a hidden class="anchor" aria-hidden="true" href="#casino-share-price-chart-2000-2026">#</a></h3>
+<p><img alt="Groupe Casino (CO.PA) Share Price History 2000-2026" loading="lazy" src="/images/credit-risk/casino_share_price_chart_1994_2026.png"></p>
+<p><strong>Chart Overview:</strong>
+This chart visualizes Groupe Casino&rsquo;s dramatic decline from a €380 peak in July 2014 to €0.24 in May 2026. Key inflection points include:</p>
+<ul>
+<li><strong>2000-2014</strong>: Gradual appreciation (€4 → €380)</li>
+<li><strong>2014 Peak</strong>: €380 (14-year high, Rallye leverage peak)</li>
+<li><strong>2015-2022</strong>: Structural deterioration (-86% from peak)</li>
+<li><strong>2023-2024</strong>: Accelerated collapse (-99.9%)</li>
+<li><strong>2026</strong>: Share trading at €0.24 (penny stock territory)</li>
+</ul>
+<p>The secondary axis shows estimated market capitalization in billions of euros, illustrating how the company&rsquo;s enterprise value contracted from ~€80B (2014) to near-zero by 2026.</p>
+<p><strong>Key Events Marked:</strong></p>
+<ul>
+<li>2000: Dot-com crash recovery</li>
+<li>2008: Financial crisis impact</li>
+<li>2014: Leverage-driven peak</li>
+<li>2015: Rallye acquisition consequences</li>
+<li>2020: COVID-19 disruption</li>
+<li>2022: Covenant pressure mounting</li>
+<li>2023: Retail store closure crisis</li>
+<li>2024: Restructuring/bankruptcy proceedings</li>
+</ul>
+<p><strong>Data Source:</strong> Yahoo Finance (CO.PA), 2000-2026 daily closing prices (6,780 trading days)</p>
+<p><strong>Note:</strong> Data is euro-denominated from 2000 onwards. Pre-2000 (1994-1999) historical data in French Francs is not available in modern financial databases.</p>
 <p>FT and Muddy Waters 1: Groupe Casino nil points. That is the score of what was a very hard fought contest. More on that later. Probably in the psychology section!</p>
 <p>Side note, then companies remove the share price chart from their web site, you kind of know things are grim. They meet the obligations with the number, but strip the hsitorical aspects.</p>
 <h1 id="casino-guichard-perrachon-sa-epaco--status-as-of-may-16-2026">Casino Guichard Perrachon SA (EPA:CO) — Status as of May 16, 2026<a hidden class="anchor" aria-hidden="true" href="#casino-guichard-perrachon-sa-epaco--status-as-of-may-16-2026">#</a></h1>
@@ -1142,13 +1169,31 @@ Yes under disclosure the purported facts are there. But the consequences are avo
 <li>materially larger reported scale than economic ownership alone would imply,</li>
 <li>and significant minority interest adjustments below net income.</li>
 </ul>
+<p>This, presumably purposeful structuring device enabled Group Casino to report headline revenue and EBITDA that was simply never present at the French entity level. Why? To make consolidated debt service metrics look far better than op cash flow would suggest.</p>
+<h1 id="the-gory-details">The gory details<a hidden class="anchor" aria-hidden="true" href="#the-gory-details">#</a></h1>
+<h2 id="detailed-analysis-deconsolidation--muddy-waters-comparison">Detailed Analysis: Deconsolidation &amp; Muddy Waters Comparison<a hidden class="anchor" aria-hidden="true" href="#detailed-analysis-deconsolidation--muddy-waters-comparison">#</a></h2>
+<p>For a detailed forensic analysis comparing Casino&rsquo;s 2018 consolidated figures to actual cash available at the parent company level, and how this validates Muddy Waters&rsquo; 2015 short thesis:</p>
+<p><strong><a href="./casino_2018_vs_muddy_waters_inclusion.md">→ Read: 2018 Financial Reality - Deconsolidated Cash Analysis vs. Muddy Waters</a></strong></p>
+<p>This deep dive reveals:</p>
+<ul>
+<li>How €36.6B consolidated revenue translates to only €4.3B actual cash revenue (-88% adjustment)</li>
+<li>How €1.87B consolidated EBITDA becomes €22M parent-level cash EBITDA (-99% adjustment)</li>
+<li>Why the parent company&rsquo;s 0.26x DSCR made restructuring inevitable</li>
+<li>Point-by-point validation of Muddy Waters&rsquo; 2015 thesis through 2024 outcomes</li>
+</ul>
 <hr>
 <h2 id="key-takeaways">Key Takeaways<a hidden class="anchor" aria-hidden="true" href="#key-takeaways">#</a></h2>
 <ul>
-<li>Point one</li>
-<li>Point two</li>
-<li>Point three</li>
+<li>Unless you face a borrower group with a full General Security Agreement that features top co debt and fully secured subsidiaries with no debt and neg pledge on subsidiary indebtedness; you should:</li>
+<li>Identify the economic value generating assets.</li>
+<li>Break the structure down to match where the key operating assets are broadly contained in logical accounting groups.</li>
+<li>Look very hard for lock up mechanisms.</li>
+<li>Consolidate into economic groupings.</li>
+<li>Run debt analysis on deconsolidated basis and test assumptions buried in consolidated accounts.</li>
 </ul>
+<p>Now, if it all pans out, and there are no key structural issues then you can stop and go back to overall consolidation approach. But you can&rsquo;t assume this to be the case until you know.</p>
+<p>This is a lot of work, an AD, D and supervising MD. Full time for something like 6 weeks minimum. Its a lot cheaper than losing your shirt though&hellip;&hellip;.</p>
+<p>Newplan excel is another poster child for what not to do. That is a story for another day.</p>
 <hr>
 <h2 id="references">References<a hidden class="anchor" aria-hidden="true" href="#references">#</a></h2>
 <ul>

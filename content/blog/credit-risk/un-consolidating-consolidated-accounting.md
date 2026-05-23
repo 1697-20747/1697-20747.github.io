@@ -1,7 +1,7 @@
 ---
 title: "Un consolidating Consolidated Accounting, or a day trip to the Casino"
 date: 2026-03-22T11:16:02Z
-draft: true
+draft: false
 categories: ["credit-risk"]
 tags: [credit-risk, fraud, the Con of Consolidated accounting]
 description: "Accounting tricks to be wary of"
@@ -51,7 +51,38 @@ For this we can just focus on one element, being the GPA holding. Unpicking that
 
 First a moan. Capital markets rely on facts, and those facts being available. There seems to be a trend now where historical stock prices are being increasingly put behind pay walls, even for API access. This is a disgrace at the industry level, especially for stale historical data. Regulators take not, market participants should be obligated to provide historical data in open source format. Or better, the mandate be set federally and a common funded statistical service be established to provide quality curated data. The cost of this is minimal. ANother example is fallen angels, try getting historic data on survival rates for companies over the last century, i.e. de listed or bought out companies. Capital markets cannot thrive in the absence of high quality, open sourced data.
 
-Here is the share price chart. This took far too much work, because of the above. The chart is self evident of the results. We know who was telling the truth now. Again stating that at the time is was not so easy as the post hoc analysis permits.
+Here is the share price chart. This took far too much work, because of the above. The chart is self evident of the results. We know who was telling the truth now. Again stating that at the time is was not so easy as the post hoc analysis permits. The web sites block scrapers and API calls (damn them!). To solve this I ran a bash script to call up yfinance API and run in venv environment, this dumped data in csv file. The only drama being data set cuts of at 2000. I really wanted to show the massive decline from GPA purchase back in 1994 onwards. it should not be this hard. 
+
+> Regulators do something useful please and mandate good quality curated open source public historical data sets. It cannot be that hard. Or government mandate ONS to do it. It would cost peanuts!
+
+### Casino Share Price Chart (2000-2026)
+
+![Groupe Casino (CO.PA) Share Price History 2000-2026](/images/credit-risk/casino_share_price_chart_1994_2026.png)
+
+**Chart Overview:**
+This chart visualizes Groupe Casino's dramatic decline from a €380 peak in July 2014 to €0.24 in May 2026. Key inflection points include:
+
+- **2000-2014**: Gradual appreciation (€4 → €380)
+- **2014 Peak**: €380 (14-year high, Rallye leverage peak)
+- **2015-2022**: Structural deterioration (-86% from peak)
+- **2023-2024**: Accelerated collapse (-99.9%)
+- **2026**: Share trading at €0.24 (penny stock territory)
+
+The secondary axis shows estimated market capitalization in billions of euros, illustrating how the company's enterprise value contracted from ~€80B (2014) to near-zero by 2026.
+
+**Key Events Marked:**
+- 2000: Dot-com crash recovery
+- 2008: Financial crisis impact
+- 2014: Leverage-driven peak
+- 2015: Rallye acquisition consequences
+- 2020: COVID-19 disruption
+- 2022: Covenant pressure mounting
+- 2023: Retail store closure crisis
+- 2024: Restructuring/bankruptcy proceedings
+
+**Data Source:** Yahoo Finance (CO.PA), 2000-2026 daily closing prices (6,780 trading days)
+
+**Note:** Data is euro-denominated from 2000 onwards. Pre-2000 (1994-1999) historical data in French Francs is not available in modern financial databases.
 
 FT and Muddy Waters 1: Groupe Casino nil points. That is the score of what was a very hard fought contest. More on that later. Probably in the psychology section!
 
@@ -426,13 +457,38 @@ leading to:
 - materially larger reported scale than economic ownership alone would imply,
 - and significant minority interest adjustments below net income.
 
+This, presumably purposeful structuring device enabled Group Casino to report headline revenue and EBITDA that was simply never present at the French entity level. Why? To make consolidated debt service metrics look far better than op cash flow would suggest.
+
+# The gory details
+
+## Detailed Analysis: Deconsolidation & Muddy Waters Comparison
+
+For a detailed forensic analysis comparing Casino's 2018 consolidated figures to actual cash available at the parent company level, and how this validates Muddy Waters' 2015 short thesis:
+
+**[→ Read: 2018 Financial Reality - Deconsolidated Cash Analysis vs. Muddy Waters](./casino_2018_vs_muddy_waters_inclusion.md)**
+
+This deep dive reveals:
+- How €36.6B consolidated revenue translates to only €4.3B actual cash revenue (-88% adjustment)
+- How €1.87B consolidated EBITDA becomes €22M parent-level cash EBITDA (-99% adjustment)  
+- Why the parent company's 0.26x DSCR made restructuring inevitable
+- Point-by-point validation of Muddy Waters' 2015 thesis through 2024 outcomes
+
 ---
 
 ## Key Takeaways
 
-- Point one
-- Point two
-- Point three
+- Unless you face a borrower group with a full General Security Agreement that features top co debt and fully secured subsidiaries with no debt and neg pledge on subsidiary indebtedness; you should:
+- Identify the economic value generating assets. 
+- Break the structure down to match where the key operating assets are broadly contained in logical accounting groups.
+- Look very hard for lock up mechanisms.
+- Consolidate into economic groupings.
+- Run debt analysis on deconsolidated basis and test assumptions buried in consolidated accounts.
+
+Now, if it all pans out, and there are no key structural issues then you can stop and go back to overall consolidation approach. But you can't assume this to be the case until you know.
+
+This is a lot of work, an AD, D and supervising MD. Full time for something like 6 weeks minimum. Its a lot cheaper than losing your shirt though.......
+
+Newplan excel is another poster child for what not to do. That is a story for another day.
 
 ---
 
