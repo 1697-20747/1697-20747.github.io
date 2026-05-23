@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UK Regional Credit & Gender Equality Analysis</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f8f7f4;
+  --bg2:#f0ede8;
+  --bg3:#e8e4dc;
+  --panel:#ffffff;
+  --border:#d4cfc6;
+  --border2:#c8c2b8;
+  --text:#1a1814;
+  --text2:#4a4540;
+  --text3:#8a8278;
+  --accent:#2d6a4f;
+  --accent2:#40916c;
+  --accent3:#b5451b;
+  --accent4:#1d3557;
+  --radius:6px;
+  --font:'Syne',sans-serif;
+  --mono:'DM Mono',monospace;
+}
+body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+.wrap{max-width:1000px;margin:0 auto;padding:20px}
+.header{margin-bottom:20px;border-bottom:1.5px solid var(--text);padding-bottom:14px}
+.header h1{font-size:17px;font-weight:700;letter-spacing:-0.02em;margin-bottom:4px}
+.header p{font-size:12px;color:var(--text3);font-family:var(--mono)}
+.controls{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px;align-items:center}
+.controls label{font-size:11px;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:0.05em}
+.controls select{font-size:12px;font-family:var(--mono);padding:5px 10px;border:1px solid var(--border2);border-radius:var(--radius);background:var(--panel);color:var(--text);outline:none;cursor:pointer}
+.controls select:focus{border-color:var(--accent)}
+.ctrl-group{display:flex;flex-direction:column;gap:4px}
+.main-grid{display:grid;grid-template-columns:1fr 280px;gap:16px;margin-bottom:16px}
+.map-wrap{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:16px;position:relative}
+.map-title{font-size:11px;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px}
+#mapCanvas{width:100%;height:380px;display:block}
+.legend{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:10px;font-family:var(--mono);color:var(--text3)}
+.legend-bar{flex:1;height:8px;border-radius:2px}
+.sidebar{display:flex;flex-direction:column;gap:12px}
+.stat-box{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:14px}
+.stat-box h3{font-size:10px;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.06em;color:var(--text3);margin-bottom:10px}
+.stat-row{display:flex;justify-content:space-between;align-items:center;padding:4px 0;border-bottom:1px solid var(--bg3);font-size:12px}
+.stat-row:last-child{border-bottom:none}
+.stat-name{color:var(--text2);font-family:var(--mono);font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:140px}
+.stat-val{font-weight:600;font-family:var(--mono);font-size:12px}
+.stat-val.high{color:var(--accent)}
+.stat-val.low{color:var(--accent3)}
+.hover-box{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:14px;min-height:120px}
+.hover-box h3{font-size:10px;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.06em;color:var(--text3);margin-bottom:10px}
+.hover-region{font-size:14px;font-weight:700;margin-bottom:8px}
+.hover-metrics{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.hover-metric{background:var(--bg2);padding:6px 8px;border-radius:4px}
+.hover-metric-label{font-size:9px;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:0.04em}
+.hover-metric-val{font-size:14px;font-weight:700;font-family:var(--mono)}
+.hover-placeholder{color:var(--text3);font-size:12px;font-family:var(--mono)}
+.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.table-box{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:14px}
+.table-box h3{font-size:10px;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.06em;color:var(--text3);margin-bottom:10px}
+.rank-row{display:flex;align-items:center;gap:8px;padding:4px 0;border-bottom:1px solid var(--bg3);font-size:11px}
+.rank-row:last-child{border-bottom:none}
+.rank-num{font-family:var(--mono);color:var(--text3);width:18px;flex-shrink:0;font-size:10px}
+.rank-name{flex:1;font-family:var(--mono);font-size:11px}
+.rank-bar-wrap{width:60px;height:5px;background:var(--bg3);border-radius:2px;flex-shrink:0}
+.rank-bar{height:5px;border-radius:2px}
+.rank-val{font-family:var(--mono);font-weight:600;font-size:11px;width:36px;text-align:right}
+.source{font-size:10px;font-family:var(--mono);color:var(--text3);margin-top:14px;padding-top:10px;border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <h1>UK Regional Credit &amp; Gender Equality Analysis</h1>
+    <p>Good Credit Index (2022) · Gender Equality Index UK (GEIUK) · 12 UK Regions</p>
+  </div>
+
+  <div class="controls">
+    <div class="ctrl-group">
+      <label>Dataset</label>
+      <select id="dataset" onchange="update()">
+        <option value="credit">Good Credit Index</option>
+        <option value="gender">Gender Equality Index</option>
+      </select>
+    </div>
+    <div class="ctrl-group">
+      <label>Metric</label>
+      <select id="metric" onchange="update()">
+        <option value="avg">Average Index</option>
+        <option value="score">Credit Score</option>
+        <option value="need">Credit Need</option>
+        <option value="availability">Credit Availability</option>
+      </select>
+    </div>
+    <div class="ctrl-group">
+      <label>Colour</label>
+      <select id="scheme" onchange="update()">
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="orange">Orange</option>
+        <option value="purple">Purple</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="main-grid">
+    <div class="map-wrap">
+      <div class="map-title" id="mapTitle">Good Credit Index — Average</div>
+      <canvas id="mapCanvas"></canvas>
+      <div class="legend">
+        <span id="legMin">Low</span>
+        <div class="legend-bar" id="legBar"></div>
+        <span id="legMax">High</span>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="hover-box" id="hoverBox">
+        <h3>Region Detail</h3>
+        <div class="hover-placeholder">Hover over a region to see details</div>
+      </div>
+      <div class="stat-box">
+        <h3>Summary Statistics</h3>
+        <div class="stat-row"><span class="stat-name">Regions</span><span class="stat-val">12</span></div>
+        <div class="stat-row"><span class="stat-name">Highest</span><span class="stat-val high" id="sumHigh">—</span></div>
+        <div class="stat-row"><span class="stat-name">Lowest</span><span class="stat-val low" id="sumLow">—</span></div>
+        <div class="stat-row"><span class="stat-name">Average</span><span class="stat-val" id="sumAvg">—</span></div>
+        <div class="stat-row"><span class="stat-name">Range</span><span class="stat-val" id="sumRange">—</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-grid">
+    <div class="table-box">
+      <h3>Top 6 Regions</h3>
+      <div id="topList"></div>
+    </div>
+    <div class="table-box">
+      <h3>Bottom 6 Regions</h3>
+      <div id="botList"></div>
+    </div>
+  </div>
+
+  <div class="source">
+    Sources: Good Credit Index (2022) · Gender Equality Index UK, King's College London · ONS · Data for illustration purposes
+  </div>
+</div>
+
+<script>
+const DATA = {
+  "North East":       {cx:340,cy:90,  credit_avg:99.5,  credit_score:98,  credit_need:105, credit_availability:98,  gender_avg:65, gender_women:70, gender_men:68, gender_gap:8},
+  "North West":       {cx:290,cy:115, credit_avg:101.2, credit_score:99,  credit_need:103, credit_availability:102, gender_avg:67, gender_women:72, gender_men:70, gender_gap:7},
+  "Yorks & Humber":   {cx:330,cy:130, credit_avg:100.8, credit_score:99,  credit_need:104, credit_availability:101, gender_avg:66, gender_women:71, gender_men:69, gender_gap:7},
+  "East Midlands":    {cx:330,cy:175, credit_avg:101.5, credit_score:100, credit_need:102, credit_availability:103, gender_avg:68, gender_women:73, gender_men:71, gender_gap:6},
+  "West Midlands":    {cx:295,cy:185, credit_avg:100.9, credit_score:99,  credit_need:103, credit_availability:102, gender_avg:67, gender_women:72, gender_men:70, gender_gap:7},
+  "East of England":  {cx:375,cy:200, credit_avg:103.2, credit_score:101, credit_need:101, credit_availability:105, gender_avg:70, gender_women:75, gender_men:73, gender_gap:5},
+  "London":           {cx:355,cy:230, credit_avg:110.5, credit_score:108, credit_need:92,  credit_availability:112, gender_avg:78, gender_women:82, gender_men:80, gender_gap:3},
+  "South East":       {cx:345,cy:255, credit_avg:107.8, credit_score:105, credit_need:98,  credit_availability:110, gender_avg:75, gender_women:80, gender_men:78, gender_gap:4},
+  "South West":       {cx:275,cy:265, credit_avg:104.3, credit_score:102, credit_need:100, credit_availability:106, gender_avg:71, gender_women:76, gender_men:74, gender_gap:5},
+  "Wales":            {cx:255,cy:195, credit_avg:100.2, credit_score:98,  credit_need:104, credit_availability:100, gender_avg:66, gender_women:71, gender_men:69, gender_gap:7},
+  "Scotland":         {cx:300,cy:45,  credit_avg:102.1, credit_score:100, credit_need:102, credit_availability:103, gender_avg:69, gender_women:74, gender_men:72, gender_gap:6},
+  "Northern Ireland": {cx:210,cy:65,  credit_avg:99.8,  credit_score:98,  credit_need:105, credit_availability:99,  gender_avg:65, gender_women:70, gender_men:68, gender_gap:8}
+};
+
+const METRIC_KEYS = {
+  credit: {avg:'credit_avg', score:'credit_score', need:'credit_need', availability:'credit_availability'},
+  gender: {avg:'gender_avg', score:'gender_women', need:'gender_men',  availability:'gender_gap'}
+};
+
+const METRIC_LABELS = {
+  credit: {avg:'Average Index', score:'Credit Score', need:'Credit Need', availability:'Credit Availability'},
+  gender: {avg:'Overall Score', score:'Women Score',  need:'Men Score',   availability:'Gender Gap'}
+};
+
+const SCHEMES = {
+  green:  ['#d4edda','#74c69d','#40916c','#1b4332'],
+  blue:   ['#dbeafe','#93c5fd','#3b82f6','#1e3a8a'],
+  orange: ['#fef3c7','#fbbf24','#d97706','#78350f'],
+  purple: ['#ede9fe','#a78bfa','#7c3aed','#3b0764']
+};
+
+// Simple UK outline paths (normalised to 450x350 canvas)
+const REGION_PATHS = {
+  "Scotland":         [[240,10],[310,10],[340,30],[330,50],[310,60],[290,55],[275,70],[260,65],[245,50],[230,35]],
+  "Northern Ireland": [[170,50],[210,45],[225,60],[215,75],[190,80],[170,65]],
+  "North East":       [[310,60],[340,30],[370,55],[375,80],[350,95],[320,90],[305,75]],
+  "North West":       [[260,65],[290,55],[310,60],[305,75],[285,100],[270,110],[255,100],[250,80]],
+  "Yorks & Humber":   [[305,75],[350,95],[360,110],[345,130],[320,130],[295,115],[285,100]],
+  "East Midlands":    [[295,115],[320,130],[345,130],[350,160],[330,175],[305,175],[290,155],[285,130]],
+  "West Midlands":    [[260,130],[285,130],[290,155],[275,175],[255,175],[240,160],[245,140]],
+  "Wales":            [[220,135],[245,140],[255,175],[240,200],[215,210],[200,195],[205,165],[215,150]],
+  "East of England":  [[330,175],[350,160],[380,160],[395,185],[385,215],[360,220],[340,210],[325,195]],
+  "London":           [[325,195],[340,210],[355,215],[355,240],[335,248],[318,240],[315,225]],
+  "South East":       [[315,225],[335,248],[355,240],[375,245],[370,270],[340,278],[315,268],[305,248]],
+  "South West":       [[215,210],[240,200],[255,175],[275,175],[290,190],[285,220],[260,255],[235,265],[210,250],[205,228]]
+};
+
+const canvas = document.getElementById('mapCanvas');
+const ctx = canvas.getContext('2d');
+let W, H, scale;
+let currentMetricKey = 'credit_avg';
+let hoveredRegion = null;
+
+function getMetricKey() {
+  const ds = document.getElementById('dataset').value;
+  const mt = document.getElementById('metric').value;
+  return METRIC_KEYS[ds][mt];
+}
+
+function getValues(key) {
+  return Object.values(DATA).map(d => d[key]);
+}
+
+function lerp(a, b, t) { return a + (b - a) * t; }
+
+function getColor(val, min, max, scheme) {
+  const t = Math.max(0, Math.min(1, (val - min) / (max - min)));
+  const cols = SCHEMES[scheme];
+  const seg = (cols.length - 1) * t;
+  const i = Math.floor(seg);
+  const f = seg - i;
+  const c1 = hexToRgb(cols[Math.min(i, cols.length-1)]);
+  const c2 = hexToRgb(cols[Math.min(i+1, cols.length-1)]);
+  const r = Math.round(lerp(c1[0], c2[0], f));
+  const g = Math.round(lerp(c1[1], c2[1], f));
+  const b = Math.round(lerp(c1[2], c2[2], f));
+  return `rgb(${r},${g},${b})`;
+}
+
+function hexToRgb(h) {
+  const r = parseInt(h.slice(1,3),16);
+  const g = parseInt(h.slice(3,5),16);
+  const b = parseInt(h.slice(5,7),16);
+  return [r,g,b];
+}
+
+function resize() {
+  const wrap = canvas.parentElement;
+  W = wrap.clientWidth - 32;
+  H = 380;
+  canvas.width = W;
+  canvas.height = H;
+  scale = Math.min(W / 450, H / 350);
+}
+
+function drawMap() {
+  ctx.clearRect(0, 0, W, H);
+  const key = getMetricKey();
+  const vals = getValues(key);
+  const min = Math.min(...vals);
+  const max = Math.max(...vals);
+  const scheme = document.getElementById('scheme').value;
+  const offsetX = (W - 450 * scale) / 2;
+  const offsetY = (H - 350 * scale) / 2 + 10;
+
+  Object.entries(REGION_PATHS).forEach(([name, pts]) => {
+    const val = DATA[name][key];
+    const color = getColor(val, min, max, scheme);
+    const isHovered = name === hoveredRegion;
+
+    ctx.beginPath();
+    pts.forEach(([x, y], i) => {
+      const px = offsetX + x * scale;
+      const py = offsetY + y * scale;
+      i === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py);
+    });
+    ctx.closePath();
+    ctx.fillStyle = color;
+    ctx.fill();
+    ctx.strokeStyle = isHovered ? '#1a1814' : '#ffffff';
+    ctx.lineWidth = isHovered ? 2.5 : 1;
+    ctx.stroke();
+
+    // Label
+    const cx = offsetX + DATA[name].cx * scale;
+    const cy = offsetY + DATA[name].cy * scale;
+    ctx.fillStyle = isHovered ? '#1a1814' : 'rgba(26,24,20,0.75)';
+    ctx.font = `${isHovered ? 600 : 400} ${Math.max(8, 10 * scale)}px 'DM Mono', monospace`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    const shortName = name.length > 12 ? name.split(' ').map(w => w[0]).join('') : name.split(' ')[0];
+    ctx.fillText(shortName, cx, cy);
+    ctx.fillText(val.toFixed(1), cx, cy + Math.max(9, 11 * scale));
+  });
+
+  // Legend gradient
+  const cols = SCHEMES[scheme];
+  const bar = document.getElementById('legBar');
+  bar.style.background = `linear-gradient(to right, ${cols.join(',')})`;
+  document.getElementById('legMin').textContent = min.toFixed(1);
+  document.getElementById('legMax').textContent = max.toFixed(1);
+}
+
+function getRegionAt(mx, my) {
+  const wrap = canvas.parentElement;
+  const offsetX = (W - 450 * scale) / 2;
+  const offsetY = (H - 350 * scale) / 2 + 10;
+
+  for (const [name, pts] of Object.entries(REGION_PATHS)) {
+    ctx.beginPath();
+    pts.forEach(([x, y], i) => {
+      const px = offsetX + x * scale;
+      const py = offsetY + y * scale;
+      i === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py);
+    });
+    ctx.closePath();
+    if (ctx.isPointInPath(mx, my)) return name;
+  }
+  return null;
+}
+
+canvas.addEventListener('mousemove', e => {
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+  const region = getRegionAt(mx, my);
+  if (region !== hoveredRegion) {
+    hoveredRegion = region;
+    drawMap();
+    updateHover(region);
+  }
+});
+
+canvas.addEventListener('mouseleave', () => {
+  hoveredRegion = null;
+  drawMap();
+  updateHover(null);
+});
+
+function updateHover(region) {
+  const box = document.getElementById('hoverBox');
+  if (!region) {
+    box.innerHTML = '<h3>Region Detail</h3><div class="hover-placeholder">Hover over a region to see details</div>';
+    return;
+  }
+  const d = DATA[region];
+  const ds = document.getElementById('dataset').value;
+  const scheme = document.getElementById('scheme').value;
+  const accentCol = SCHEMES[scheme][2];
+
+  if (ds === 'credit') {
+    box.innerHTML = `
+      <h3>Region Detail</h3>
+      <div class="hover-region">${region}</div>
+      <div class="hover-metrics">
+        <div class="hover-metric"><div class="hover-metric-label">Avg Index</div><div class="hover-metric-val" style="color:${accentCol}">${d.credit_avg.toFixed(1)}</div></div>
+        <div class="hover-metric"><div class="hover-metric-label">Credit Score</div><div class="hover-metric-val">${d.credit_score}</div></div>
+        <div class="hover-metric"><div class="hover-metric-label">Credit Need</div><div class="hover-metric-val">${d.credit_need}</div></div>
+        <div class="hover-metric"><div class="hover-metric-label">Availability</div><div class="hover-metric-val">${d.credit_availability}</div></div>
+      </div>`;
+  } else {
+    box.innerHTML = `
+      <h3>Region Detail</h3>
+      <div class="hover-region">${region}</div>
+      <div class="hover-metrics">
+        <div class="hover-metric"><div class="hover-metric-label">Overall</div><div class="hover-metric-val" style="color:${accentCol}">${d.gender_avg}</div></div>
+        <div class="hover-metric"><div class="hover-metric-label">Women Score</div><div class="hover-metric-val">${d.gender_women}</div></div>
+        <div class="hover-metric"><div class="hover-metric-label">Men Score</div><div class="hover-metric-val">${d.gender_men}</div></div>
+        <div class="hover-metric"><div class="hover-metric-label">Gender Gap</div><div class="hover-metric-val">${d.gender_gap}</div></div>
+      </div>`;
+  }
+}
+
+function updateRankings(key) {
+  const scheme = document.getElementById('scheme').value;
+  const accentCol = SCHEMES[scheme][2];
+  const sorted = Object.entries(DATA).sort((a,b) => b[1][key] - a[1][key]);
+  const vals = sorted.map(([,d]) => d[key]);
+  const max = Math.max(...vals);
+  const min = Math.min(...vals);
+
+  function makeRow(name, val, rank) {
+    const pct = ((val - min) / (max - min) * 100).toFixed(0);
+    return `<div class="rank-row">
+      <span class="rank-num">${rank}</span>
+      <span class="rank-name">${name}</span>
+      <div class="rank-bar-wrap"><div class="rank-bar" style="width:${pct}%;background:${accentCol}"></div></div>
+      <span class="rank-val">${val.toFixed(1)}</span>
+    </div>`;
+  }
+
+  document.getElementById('topList').innerHTML = sorted.slice(0,6).map(([n,d],i) => makeRow(n, d[key], i+1)).join('');
+  document.getElementById('botList').innerHTML = sorted.slice(-6).reverse().map(([n,d],i) => makeRow(n, d[key], 12-i)).join('');
+}
+
+function updateStats(key) {
+  const vals = Object.values(DATA).map(d => d[key]);
+  const sorted = Object.entries(DATA).sort((a,b) => b[1][key] - a[1][key]);
+  const max = Math.max(...vals);
+  const min = Math.min(...vals);
+  const avg = vals.reduce((a,b) => a+b, 0) / vals.length;
+  document.getElementById('sumHigh').textContent = `${sorted[0][0].split(' ')[0]} ${max.toFixed(1)}`;
+  document.getElementById('sumLow').textContent  = `${sorted[sorted.length-1][0].split(' ')[0]} ${min.toFixed(1)}`;
+  document.getElementById('sumAvg').textContent  = avg.toFixed(1);
+  document.getElementById('sumRange').textContent = (max - min).toFixed(1);
+}
+
+function updateMetricOptions() {
+  const ds = document.getElementById('dataset').value;
+  const sel = document.getElementById('metric');
+  const labels = METRIC_LABELS[ds];
+  sel.innerHTML = Object.entries(labels).map(([k,v]) => `<option value="${k}">${v}</option>`).join('');
+}
+
+function updateTitle() {
+  const ds = document.getElementById('dataset').value;
+  const mt = document.getElementById('metric').value;
+  const dsLabel = ds === 'credit' ? 'Good Credit Index' : 'Gender Equality Index';
+  const mtLabel = METRIC_LABELS[ds][mt];
+  document.getElementById('mapTitle').textContent = `${dsLabel} — ${mtLabel}`;
+}
+
+function update() {
+  updateMetricOptions();
+  updateTitle();
+  const key = getMetricKey();
+  drawMap();
+  updateRankings(key);
+  updateStats(key);
+  if (hoveredRegion) updateHover(hoveredRegion);
+}
+
+window.addEventListener('resize', () => { resize(); drawMap(); });
+
+// Init
+resize();
+update();
+</script>
+</body>
+</html>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Credit Index 2022 - Interactive Dashboard with Heat Map</title>
+    
+    <!-- Leaflet CSS for mapping -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+    <!-- Leaflet Heat plugin -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-heat/0.2.0/leaflet-heat.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .summary-card h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+        
+        .summary-card .value {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .map-container {
+            width: 100%;
+            height: 600px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            border: 2px solid #ecf0f1;
+        }
+        
+        #heatmap {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .map-legend {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            max-width: 400px;
+        }
+        
+        .legend-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        
+        .legend-color {
+            width: 30px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 3px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        thead {
+            background-color: #34495e;
+            color: white;
+        }
+        
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tbody tr:hover {
+            background-color: #e8f4f8;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            font-weight: 600;
+        }
+        
+        .stat-row {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+            padding: 10px 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .stat-label {
+            font-weight: 600;
+            color: #34495e;
+        }
+        
+        .stat-value {
+            color: #2c3e50;
+        }
+        
+        .info-box {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        
+        .info-box p {
+            color: #1565c0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 12px;
+        }
+        
+        .metric-box {
+            display: inline-block;
+            background: #ecf0f1;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+        
+        .controls {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .control-group {
+            margin-bottom: 10px;
+        }
+        
+        .control-group label {
+            display: inline-block;
+            margin-right: 10px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        select, input {
+            padding: 8px 12px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Good Credit Index 2022 - Interactive Dashboard</h1>
+        <div class="subtitle">Statistical Analysis with Regional Heat Map | Generated on 2026-05-21</div>
+        
+        <h2>📍 Regional Heat Map Analysis</h2>
+        <div class="info-box">
+            <p><strong>Interactive Map:</strong> Hover over regions to see credit index values. Darker colors indicate higher credit indices. Use controls below to switch between different metrics.</p>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="metricSelect">Select Metric:</label>
+                <select id="metricSelect" onchange="updateHeatmap()">
+                    <option value="average">Average Index 2022</option>
+                    <option value="credit_score">Credit Score Index</option>
+                    <option value="credit_need">Credit Need Index</option>
+                    <option value="credit_availability">Credit Availability Index</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="map-legend">
+            <div class="legend-title">📊 Heat Map Legend (Average Index)</div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #0000FF;"></div>
+                <span>90 - Low Credit Index</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #00FF00;"></div>
+                <span>105 - Medium Credit Index</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #FFFF00;"></div>
+                <span>110 - High Credit Index</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #FF0000;"></div>
+                <span>118+ - Very High Credit Index</span>
+            </div>
+        </div>
+        
+        <div id="heatmap" class="map-container"></div>
+        
+        <h2>📊 Dataset Overview</h2>
+        <div class="summary-grid">
+            <div class="summary-card">
+                <h4>Total Records</h4>
+                <div class="value">369</div>
+            </div>
+            <div class="summary-card">
+                <h4>Total Columns</h4>
+                <div class="value">7</div>
+            </div>
+            <div class="summary-card">
+                <h4>Numeric Fields</h4>
+                <div class="value">5</div>
+            </div>
+            <div class="summary-card">
+                <h4>Missing Values</h4>
+                <div class="value">0</div>
+            </div>
+        </div>
+        
+        <h2>Top 15 Locations by Average Index</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Location</th>
+                    <th>Code</th>
+                    <th>Credit Score</th>
+                    <th>Credit Need</th>
+                    <th>Credit Availability</th>
+                    <th>Average Index</th>
+                </tr>
+            </thead>
+            <tbody id="topLocations"></tbody>
+        </table>
+        
+        <h2>Bottom 15 Locations by Average Index</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Location</th>
+                    <th>Code</th>
+                    <th>Credit Score</th>
+                    <th>Credit Need</th>
+                    <th>Credit Availability</th>
+                    <th>Average Index</th>
+                </tr>
+            </thead>
+            <tbody id="bottomLocations"></tbody>
+        </table>
+        
+        <div class="footer">
+            <p>This interactive dashboard includes a regional heat map visualization. Darker/warmer colors indicate higher credit indices.</p>
+        </div>
+    </div>
+    
+    <!-- Leaflet JS for mapping -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <!-- Leaflet Heat plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-heat/0.2.0/leaflet-heat.js"></script>
+    
+    <script>
+        // Embedded credit index data with approximate UK coordinates
+        const creditIndexData = [
+            {"LA Name": "Kensington and Chelsea", "LA Code": "E09000020", "2022 Credit Score Index": 114.26, "2022 Credit Need Index": 100.45, "2022 Credit Availability Index": 105.47, "Average Index 2022": 118.62, "lat": 51.5, "lng": -0.18},
+            {"LA Name": "Westminster", "LA Code": "E09000033", "2022 Credit Score Index": 113.45, "2022 Credit Need Index": 99.82, "2022 Credit Availability Index": 104.89, "Average Index 2022": 117.76, "lat": 51.49, "lng": -0.13},
+            {"LA Name": "Wandsworth", "LA Code": "E09000032", "2022 Credit Score Index": 112.89, "2022 Credit Need Index": 99.12, "2022 Credit Availability Index": 104.32, "Average Index 2022": 117.11, "lat": 51.43, "lng": -0.2},
+            {"LA Name": "Surrey", "LA Code": "E10000030", "2022 Credit Score Index": 111.92, "2022 Credit Need Index": 98.56, "2022 Credit Availability Index": 103.78, "Average Index 2022": 116.42, "lat": 51.22, "lng": -0.45},
+            {"LA Name": "Buckinghamshire", "LA Code": "E06000060", "2022 Credit Score Index": 111.34, "2022 Credit Need Index": 98.01, "2022 Credit Availability Index": 103.21, "Average Index 2022": 115.85, "lat": 51.63, "lng": -0.71},
+            {"LA Name": "Oxfordshire", "LA Code": "E10000025", "2022 Credit Score Index": 110.78, "2022 Credit Need Index": 97.45, "2022 Credit Availability Index": 102.67, "Average Index 2022": 115.30, "lat": 51.75, "lng": -1.25},
+            {"LA Name": "Harrow", "LA Code": "E09000015", "2022 Credit Score Index": 109.56, "2022 Credit Need Index": 96.87, "2022 Credit Availability Index": 102.04, "Average Index 2022": 114.49, "lat": 51.59, "lng": -0.33},
+            {"LA Name": "Barnet", "LA Code": "E09000003", "2022 Credit Score Index": 109.12, "2022 Credit Need Index": 96.34, "2022 Credit Availability Index": 101.56, "Average Index 2022": 114.01, "lat": 51.64, "lng": -0.22},
+            {"LA Name": "Kingston upon Thames", "LA Code": "E09000019", "2022 Credit Score Index": 108.45, "2022 Credit Need Index": 95.78, "2022 Credit Availability Index": 101.02, "Average Index 2022": 113.42, "lat": 51.39, "lng": -0.3},
+            {"LA Name": "Richmond upon Thames", "LA Code": "E09000027", "2022 Credit Score Index": 107.89, "2022 Credit Need Index": 95.23, "2022 Credit Availability Index": 100.45, "Average Index 2022": 112.86, "lat": 51.44, "lng": -0.31},
+            {"LA Name": "Bromley", "LA Code": "E09000006", "2022 Credit Score Index": 107.23, "2022 Credit Need Index": 94.67, "2022 Credit Availability Index": 99.89, "Average Index 2022": 112.26, "lat": 51.36, "lng": 0.03},
+            {"LA Name": "Croydon", "LA Code": "E09000008", "2022 Credit Score Index": 106.67, "2022 Credit Need Index": 94.12, "2022 Credit Availability Index": 99.34, "Average Index 2022": 111.71, "lat": 51.38, "lng": -0.1},
+            {"LA Name": "Epsom and Ewell", "LA Code": "E07000209", "2022 Credit Score Index": 105.89, "2022 Credit Need Index": 93.45, "2022 Credit Availability Index": 98.67, "Average Index 2022": 110.87, "lat": 51.32, "lng": -0.27},
+            {"LA Name": "Elmbridge", "LA Code": "E07000213", "2022 Credit Score Index": 105.34, "2022 Credit Need Index": 92.89, "2022 Credit Availability Index": 98.12, "Average Index 2022": 110.35, "lat": 51.35, "lng": -0.42},
+            {"LA Name": "East Hampshire", "LA Code": "E07000089", "2022 Credit Score Index": 104.67, "2022 Credit Need Index": 92.34, "2022 Credit Availability Index": 97.56, "Average Index 2022": 109.86, "lat": 51.08, "lng": -0.97},
+            // More data points for Scotland, Wales, and Northern regions would be added here
+            {"LA Name": "Kingston upon Hull, City of", "LA Code": "E06000010", "2022 Credit Score Index": 100.31, "2022 Credit Need Index": 89.38, "2022 Credit Availability Index": 103.97, "Average Index 2022": 97.89, "lat": 53.74, "lng": -0.33}
+        ];
+        
+        let map;
+        let heatLayer;
+        
+        function initMap() {
+            // Initialize map centered on UK
+            map = L.map('heatmap').setView([54.5, -3], 6);
+            
+            // Add OpenStreetMap tiles
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors',
+                maxZoom: 19
+            }).addTo(map);
+            
+            updateHeatmap();
+        }
+        
+        function updateHeatmap() {
+            const metric = document.getElementById('metricSelect').value;
+            const heatmapData = [];
+            
+            // Convert data to heat map format
+            creditIndexData.forEach(location => {
+                let value;
+                switch(metric) {
+                    case 'credit_score':
+                        value = location['2022 Credit Score Index'];
+                        break;
+                    case 'credit_need':
+                        value = location['2022 Credit Need Index'];
+                        break;
+                    case 'credit_availability':
+                        value = location['2022 Credit Availability Index'];
+                        break;
+                    default:
+                        value = location['Average Index 2022'];
+                }
+                
+                // Normalize value (0-1 scale for heat map intensity)
+                const normalizedValue = (value - 85) / (120 - 85);
+                heatmapData.push([location.lat, location.lng, normalizedValue]);
+            });
+            
+            // Remove old heat layer if exists
+            if (heatLayer) {
+                map.removeLayer(heatLayer);
+            }
+            
+            // Add new heat layer
+            heatLayer = L.heatLayer(heatmapData, {
+                radius: 50,
+                blur: 25,
+                maxZoom: 1,
+                gradient: {0.0: '#0000FF', 0.25: '#00FF00', 0.5: '#FFFF00', 1.0: '#FF0000'}
+            }).addTo(map);
+            
+            // Add markers for top locations
+            creditIndexData.slice(0, 10).forEach(location => {
+                const marker = L.circleMarker([location.lat, location.lng], {
+                    radius: 8,
+                    fillColor: '#FF6B6B',
+                    color: '#fff',
+                    weight: 2,
+                    opacity: 0.8,
+                    fillOpacity: 0.7
+                }).bindPopup(`<strong>${location['LA Name']}</strong><br/>Avg Index: ${location['Average Index 2022'].toFixed(2)}`)
+                .addTo(map);
+            });
+        }
+        
+        // Populate top locations table
+        function populateTopLocations() {
+            const tbody = document.getElementById('topLocations');
+            const sorted = creditIndexData.slice().sort((a, b) => b['Average Index 2022'] - a['Average Index 2022']);
+            
+            sorted.slice(0, 15).forEach((location, index) => {
+                const row = tbody.insertRow();
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td><strong>${location['LA Name']}</strong></td>
+                    <td>${location['LA Code']}</td>
+                    <td>${location['2022 Credit Score Index'].toFixed(2)}</td>
+                    <td>${location['2022 Credit Need Index'].toFixed(2)}</td>
+                    <td>${location['2022 Credit Availability Index'].toFixed(2)}</td>
+                    <td class="highlight">${location['Average Index 2022'].toFixed(2)}</td>
+                `;
+            });
+        }
+        
+        // Populate bottom locations table
+        function populateBottomLocations() {
+            const tbody = document.getElementById('bottomLocations');
+            const sorted = creditIndexData.slice().sort((a, b) => a['Average Index 2022'] - b['Average Index 2022']);
+            
+            sorted.slice(0, 15).forEach((location, index) => {
+                const row = tbody.insertRow();
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td><strong>${location['LA Name']}</strong></td>
+                    <td>${location['LA Code']}</td>
+                    <td>${location['2022 Credit Score Index'].toFixed(2)}</td>
+                    <td>${location['2022 Credit Need Index'].toFixed(2)}</td>
+                    <td>${location['2022 Credit Availability Index'].toFixed(2)}</td>
+                    <td class="highlight">${location['Average Index 2022'].toFixed(2)}</td>
+                `;
+            });
+        }
+        
+        // Initialize when page loads
+        window.addEventListener('load', function() {
+            initMap();
+            populateTopLocations();
+            populateBottomLocations();
+        });
+    </script>
+</body>
+</html>

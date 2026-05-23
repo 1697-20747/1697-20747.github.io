@@ -6,20 +6,48 @@
     <description>Recent content in Categories on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 17 May 2026 07:13:28 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Comp-Science</title>
-      <link>http://localhost:1313/categories/comp-science/</link>
-      <pubDate>Sun, 17 May 2026 07:13:28 +0000</pubDate>
-      <guid>http://localhost:1313/categories/comp-science/</guid>
+      <title>Economics--Finance</title>
+      <link>http://localhost:1313/categories/economics--finance/</link>
+      <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/economics--finance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Financial Analysis</title>
+      <link>http://localhost:1313/categories/financial-analysis/</link>
+      <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/financial-analysis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine Learning</title>
+      <link>http://localhost:1313/categories/machine-learning/</link>
+      <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/machine-learning/</guid>
       <description></description>
     </item>
     <item>
       <title>Economics</title>
       <link>http://localhost:1313/categories/economics/</link>
-      <pubDate>Sat, 09 May 2026 11:29:26 +0000</pubDate>
+      <pubDate>Thu, 21 May 2026 21:05:35 +0000</pubDate>
       <guid>http://localhost:1313/categories/economics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Comp-Science</title>
+      <link>http://localhost:1313/categories/comp-science/</link>
+      <pubDate>Wed, 20 May 2026 07:28:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/comp-science/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Credit-Risk</title>
+      <link>http://localhost:1313/categories/credit-risk/</link>
+      <pubDate>Tue, 19 May 2026 14:33:03 +0000</pubDate>
+      <guid>http://localhost:1313/categories/credit-risk/</guid>
       <description></description>
     </item>
     <item>
@@ -27,13 +55,6 @@
       <link>http://localhost:1313/categories/unhelpful-advice/</link>
       <pubDate>Sat, 09 May 2026 07:51:37 +0000</pubDate>
       <guid>http://localhost:1313/categories/unhelpful-advice/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Credit-Risk</title>
-      <link>http://localhost:1313/categories/credit-risk/</link>
-      <pubDate>Tue, 28 Apr 2026 19:36:06 +0000</pubDate>
-      <guid>http://localhost:1313/categories/credit-risk/</guid>
       <description></description>
     </item>
     <item>

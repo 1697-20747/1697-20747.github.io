@@ -6,7 +6,7 @@
     <description>Recent content in Unhelpful Advice on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 17 May 2026 07:13:29 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RMBS Technical Architecture</title>
@@ -70,6 +70,41 @@
       <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/economics/inflation-measurement/</guid>
       <description>The CPI is everywhere, but how it&amp;#39;s actually constructed reveals some uncomfortable tradeoffs.</description>
+    </item>
+    <item>
+      <title>Socio-Economic Credit Models: The Future of Fair Lending</title>
+      <link>http://localhost:1313/blog/economics/socio-economic-credit-models/</link>
+      <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/economics/socio-economic-credit-models/</guid>
+      <description>How integrating gender equality and regional context data can improve credit scoring, expand market access, and demonstrate fair lending practices.</description>
+    </item>
+    <item>
+      <title>Socio Credit Models</title>
+      <link>http://localhost:1313/blog/economics/socio-credit-models/</link>
+      <pubDate>Thu, 21 May 2026 21:05:35 +0000</pubDate>
+      <guid>http://localhost:1313/blog/economics/socio-credit-models/</guid>
+      <description>A short summary shown in post listings.</description>
+    </item>
+    <item>
+      <title>Building a Securitisation Pool Optimiser -- Part 2: Code, Design and Deal Structure</title>
+      <link>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser-part-2/</link>
+      <pubDate>Wed, 20 May 2026 07:28:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser-part-2/</guid>
+      <description>Code inventory, IRS swap, BoE compliance, Fitch alignment, and the full RMBS deal structure.</description>
+    </item>
+    <item>
+      <title>Building a Securitisation Pool Optimiser -- Part 1: Architecture and Pipeline</title>
+      <link>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser/</link>
+      <pubDate>Wed, 20 May 2026 07:27:29 +0000</pubDate>
+      <guid>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser/</guid>
+      <description>How we built an ML-driven pool selection engine that maximises Class A note issuance from a 20,000-loan warehouse using simulated annealing and adaptive Monte Carlo.</description>
+    </item>
+    <item>
+      <title>EBITDA Or EBITDont</title>
+      <link>http://localhost:1313/blog/credit-risk/ebitda-or-ebitdont/</link>
+      <pubDate>Tue, 19 May 2026 14:33:03 +0000</pubDate>
+      <guid>http://localhost:1313/blog/credit-risk/ebitda-or-ebitdont/</guid>
+      <description>The potential perils of a mis understood metric</description>
     </item>
     <item>
       <title>Securitisation 101: Party Roles and Waterfall</title>
