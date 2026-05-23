@@ -31,6 +31,7 @@ Explore the data interactively with our UK regional heat maps below. You can sel
 
 {{< rawhtml >}}
 <iframe src="/html/uk-regional-heatmap.html" width="100%" height="700px" frameborder="0" scrolling="yes" style="border: 1px solid #1e2d42; border-radius: 8px;"></iframe>
+<p style="font-size:11px;font-family:'DM Mono',monospace;margin-top:6px;"><a href="/html/uk-regional-heatmap.html" target="_blank">Open full screen ↗</a></p>
 {{< /rawhtml >}}
 
 ---
@@ -193,6 +194,7 @@ Interpretation: Ability to handle unemployment, health crisis, etc.
 
 {{< rawhtml >}}
 <iframe src="/html/good-credit-index-dashboard.html" width="100%" height="700px" frameborder="0" scrolling="yes" style="border: 1px solid #1e2d42; border-radius: 8px;"></iframe>
+<p style="font-size:11px;font-family:'DM Mono',monospace;margin-top:6px;"><a href="/html/good-credit-index-dashboard.html" target="_blank">Open full screen ↗</a></p>
 {{< /rawhtml >}}
 
 This dashboard shows the Good Credit Index across 369 UK local authorities, including:
@@ -207,6 +209,7 @@ This dashboard shows the Good Credit Index across 369 UK local authorities, incl
 
 {{< rawhtml >}}
 <iframe src="/html/geiuk-dashboard.html" width="100%" height="700px" frameborder="0" scrolling="yes" style="border: 1px solid #1e2d42; border-radius: 8px;"></iframe>
+<p style="font-size:11px;font-family:'DM Mono',monospace;margin-top:6px;"><a href="/html/geiuk-dashboard.html" target="_blank">Open full screen ↗</a></p>
 {{< /rawhtml >}}
 
 This dashboard displays the Gender Equality Index UK (GEIUK) across 372 UK regions, showing:
@@ -535,6 +538,7 @@ Compare credit patterns with gender equality metrics across UK regions:
 
 {{< rawhtml >}}
 <iframe src="/html/good-credit-index-dashboard.html" width="100%" height="700px" frameborder="0" scrolling="yes" style="border: 1px solid #1e2d42; border-radius: 8px;"></iframe>
+<p style="font-size:11px;font-family:'DM Mono',monospace;margin-top:6px;"><a href="/html/good-credit-index-dashboard.html" target="_blank">Open full screen ↗</a></p>
 {{< /rawhtml >}}
 
 ---
@@ -621,6 +625,7 @@ View gender equality patterns across UK regions - a key indicator of financial s
 
 {{< rawhtml >}}
 <iframe src="/html/geiuk-dashboard.html" width="100%" height="700px" frameborder="0" scrolling="yes" style="border: 1px solid #1e2d42; border-radius: 8px;"></iframe>
+<p style="font-size:11px;font-family:'DM Mono',monospace;margin-top:6px;"><a href="/html/geiuk-dashboard.html" target="_blank">Open full screen ↗</a></p>
 {{< /rawhtml >}}
 
 ---
