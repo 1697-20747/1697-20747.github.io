@@ -133,6 +133,27 @@
   <h1>Unhelpful Advice</h1>
 </header>
 
+<style>
+[data-pinned] {
+    border: 1.5px solid #8FAC59 !important;
+    box-shadow: 0 0 12px rgba(143,172,89,0.15);
+}
+
+[data-pinned] .entry-content p {
+    font-size: 1.05rem !important;
+    line-height: 1.8 !important;
+    color: var(--content) !important;
+    -webkit-line-clamp: unset !important;
+    display: block !important;
+}
+
+[data-pinned] .entry-content {
+    overflow: visible !important;
+    display: block !important;
+    -webkit-line-clamp: unset !important;
+}
+</style>
+
 <div style="margin-bottom: 1.5rem;">
   <button id="shuffle-btn" onclick="shufflePosts()" style="
     font-family: monospace;
@@ -153,6 +174,18 @@
 </div>
 
 <div id="posts-container">
+  <article class="post-entry" data-post data-pinned>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">Feynman On Understanding
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p> “What I cannot create, I do not understand.”
+— Richard Feynman, Nobel Laureate in Physics (1965), found written on his blackboard at the time of his death in 1988. Feynman received the prize for his work developing quantum electrodynamics.
+</p>
+    </div>
+    <a class="entry-link" aria-label="post link to Feynman On Understanding" href="http://localhost:1313/blog/unhelpful-advice/feynman-on-understanding/"></a>
+  </article>
   <article class="post-entry" data-post>
     <header class="entry-header">
       <h2 class="entry-hint-parent">Its Lonely At The Bottom
@@ -164,6 +197,17 @@ John Maynard Keynes
 Except of course that he probably never said it, or if he did it was not recorded as a direct quote. What he did say was below. The motto of Bankers everywhere. We should not be churlish about this, its good advice. In theory the odds of a colossal...</p>
     </div>
     <a class="entry-link" aria-label="post link to Its Lonely At The Bottom" href="http://localhost:1313/blog/unhelpful-advice/its-lonely-at-the-bottom/"></a>
+  </article>
+  <article class="post-entry" data-post>
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">Hokusai On Mastery
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p> From the age of six I had a mania for drawing the forms of things. By the time I was fifty I had published a universe of designs, but all that I have produced before the age of seventy is not worth taking into account.
+At seventy-three I partially understood the structure of birds, animals,...</p>
+    </div>
+    <a class="entry-link" aria-label="post link to Hokusai On Mastery" href="http://localhost:1313/blog/unhelpful-advice/hokusai-on-mastery/"></a>
   </article>
   <article class="post-entry" data-post>
     <header class="entry-header">
@@ -660,16 +704,18 @@ This is akin to the arguing with an idiot makes you an idiot too, meme.
 
 <script>
 function shufflePosts() {
-  const container = document.getElementById('posts-container');
-  const posts = Array.from(container.querySelectorAll('[data-post]'));
-  
-  
-  for (let i = posts.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    container.appendChild(posts[j]);
-    posts.splice(j, 1);
-    posts.splice(i, 0, container.children[container.children.length - 1]);
-  }
+    const container = document.getElementById('posts-container');
+    const pinned = Array.from(container.querySelectorAll('[data-post][data-pinned]'));
+    const posts  = Array.from(container.querySelectorAll('[data-post]:not([data-pinned])'));
+
+    
+    for (let i = posts.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [posts[i], posts[j]] = [posts[j], posts[i]];
+    }
+
+    
+    [...pinned, ...posts].forEach(p => container.appendChild(p));
 }
 </script>
     </main>
