@@ -6,8 +6,15 @@
     <description>Recent content in Comp Science on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 20 May 2026 07:28:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 18:02:38 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/comp-science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Llm Credit Paper Generator</title>
+      <link>http://localhost:1313/blog/comp-science/llm-credit-paper-generator/</link>
+      <pubDate>Mon, 25 May 2026 18:02:38 +0000</pubDate>
+      <guid>http://localhost:1313/blog/comp-science/llm-credit-paper-generator/</guid>
+      <description>Credit paper by LLM. Easy??? Well, not so much as it turns out.</description>
+    </item>
     <item>
       <title>Building a Securitisation Pool Optimiser -- Part 2: Code, Design and Deal Structure</title>
       <link>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser-part-2/</link>

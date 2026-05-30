@@ -1,12 +1,15 @@
 ---
+draft: false
 title: "SPQR"
 author: "Mary Beard"
 date: 2024-02-01
-categories: ["History"]
+categories: ["blog/books"]
 tags: ["history", "rome", "classics", "society"]
 description: "A history of Rome that focuses on how Rome worked as a society rather than just the emperors and battles."
 showToc: false
 ---
+
+{{< bookcover title="SPQR" author="Mary Beard" year="2024" tags="history, rome, classics, society" >}}
 
 A history of Rome that focuses on how Rome worked as a society rather than just the emperors and battles. Beard is a brilliant classicist and a sharp writer.
 

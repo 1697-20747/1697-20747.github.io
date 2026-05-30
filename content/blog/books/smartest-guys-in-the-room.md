@@ -1,12 +1,15 @@
 ---
+draft: false
 title: "The Smartest Guys in the Room: The Amazing Rise and Scandalous Fall of Enron"
 author: "Bethany McLean & Peter Elkind"
 date: 2024-01-19
-categories: ["Non-Fiction"]
+categories: ["blog/books"]
 tags: ["finance", "fraud", "accounting", "corporate-failure"]
 description: "The definitive account of Enron's collapse. A story of arrogance, fraud, and a culture where looking smart mattered more than being honest."
 showToc: false
 ---
+
+{{< bookcover title="The Smartest Guys in the Room: The Amazing Rise and Scandalous Fall of Enron" author="Bethany McLean & Peter Elkind" year="2024" tags="finance, fraud, accounting, corporate-failure" >}}
 
 The definitive account of Enron's collapse. A story of arrogance, fraud, and a culture where looking smart mattered more than being honest. Still feels relevant.
 

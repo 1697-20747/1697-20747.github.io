@@ -6,8 +6,22 @@
     <description>Recent content in AI on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 25 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 18:02:38 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Llm Credit Paper Generator</title>
+      <link>http://localhost:1313/blog/comp-science/llm-credit-paper-generator/</link>
+      <pubDate>Mon, 25 May 2026 18:02:38 +0000</pubDate>
+      <guid>http://localhost:1313/blog/comp-science/llm-credit-paper-generator/</guid>
+      <description>Credit paper by LLM. Easy??? Well, not so much as it turns out.</description>
+    </item>
+    <item>
+      <title>The Infinity Machine: Demis Hassabis, DeepMind and the Quest for Superintelligence</title>
+      <link>http://localhost:1313/blog/books/the-infinity-machine/</link>
+      <pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/books/the-infinity-machine/</guid>
+      <description>Sebastian Mallaby&amp;#39;s account of Demis Hassabis and the race to build machine intelligence. The biography the subject actually wanted written.</description>
+    </item>
     <item>
       <title>Deep Learning</title>
       <link>http://localhost:1313/blog/books/deep-learning-goodfellow/</link>

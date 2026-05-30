@@ -6,8 +6,29 @@
     <description>Recent content in Categories on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 22 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 18:02:38 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comp-Science</title>
+      <link>http://localhost:1313/categories/comp-science/</link>
+      <pubDate>Mon, 25 May 2026 18:02:38 +0000</pubDate>
+      <guid>http://localhost:1313/categories/comp-science/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Economics</title>
+      <link>http://localhost:1313/categories/economics/</link>
+      <pubDate>Sat, 23 May 2026 20:58:26 +0000</pubDate>
+      <guid>http://localhost:1313/categories/economics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data-Analytics</title>
+      <link>http://localhost:1313/categories/data-analytics/</link>
+      <pubDate>Sat, 23 May 2026 17:24:34 +0000</pubDate>
+      <guid>http://localhost:1313/categories/data-analytics/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Economics--Finance</title>
       <link>http://localhost:1313/categories/economics--finance/</link>
@@ -30,24 +51,10 @@
       <description></description>
     </item>
     <item>
-      <title>Comp-Science</title>
-      <link>http://localhost:1313/categories/comp-science/</link>
-      <pubDate>Wed, 20 May 2026 07:28:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/comp-science/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Credit-Risk</title>
       <link>http://localhost:1313/categories/credit-risk/</link>
       <pubDate>Tue, 19 May 2026 14:33:03 +0000</pubDate>
       <guid>http://localhost:1313/categories/credit-risk/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Economics</title>
-      <link>http://localhost:1313/categories/economics/</link>
-      <pubDate>Sat, 09 May 2026 11:29:26 +0000</pubDate>
-      <guid>http://localhost:1313/categories/economics/</guid>
       <description></description>
     </item>
     <item>
@@ -58,80 +65,10 @@
       <description></description>
     </item>
     <item>
-      <title>Data &amp; Statistics</title>
-      <link>http://localhost:1313/categories/data--statistics/</link>
-      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/data--statistics/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Finance</title>
-      <link>http://localhost:1313/categories/finance/</link>
-      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/finance/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>History</title>
-      <link>http://localhost:1313/categories/history/</link>
-      <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/history/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Biology &amp; Behaviour</title>
-      <link>http://localhost:1313/categories/biology--behaviour/</link>
-      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/biology--behaviour/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Science &amp; Engineering</title>
-      <link>http://localhost:1313/categories/science--engineering/</link>
-      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/science--engineering/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Non-Fiction</title>
-      <link>http://localhost:1313/categories/non-fiction/</link>
-      <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/non-fiction/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Strategy</title>
-      <link>http://localhost:1313/categories/strategy/</link>
-      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/strategy/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Economics &amp; Finance</title>
-      <link>http://localhost:1313/categories/economics--finance/</link>
-      <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/economics--finance/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Life</title>
-      <link>http://localhost:1313/categories/life/</link>
-      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/life/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Random Fiction</title>
-      <link>http://localhost:1313/categories/random-fiction/</link>
-      <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/random-fiction/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Military History &amp; Leadership</title>
-      <link>http://localhost:1313/categories/military-history--leadership/</link>
-      <pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/military-history--leadership/</guid>
+      <title>Blog/Books</title>
+      <link>http://localhost:1313/categories/blog/books/</link>
+      <pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/blog/books/</guid>
       <description></description>
     </item>
   </channel>

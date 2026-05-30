@@ -1,12 +1,15 @@
 ---
+draft: false
 title: "Quality of Earnings"
 author: "Thornton L. O'Glove"
 date: 2026-03-15
-categories: ["Finance"]
+categories: ["blog/books"]
 tags: ["finance", "investing", "accounting", "forensic-accounting"]
 description: "The bible of forensic accounting. How to read what companies are actually telling you, versus what they want you to think."
 showToc: false
 ---
+
+{{< bookcover title="Quality of Earnings" author="Thornton L. O'Glove" year="2026" tags="finance, investing, accounting, forensic-accounting" >}}
 
 Published in 1987 and still required reading, this is a practical guide to interrogating corporate financial statements rather than accepting them at face value. O'Glove's central argument is simple but important: reported earnings are a construction, and the gap between what a company tells its shareholders and what it tells the IRS is often where the truth lives. He walks through the mechanics of how earnings get inflated — accounting policy changes, aggressive revenue recognition, inventory manipulation, weak cash flow masked by strong net income — and gives you a repeatable framework for spotting it. The examples are dated but the logic is not, and in an era of adjusted EBITDA and non-GAAP everything, the core discipline feels more relevant than ever.
 

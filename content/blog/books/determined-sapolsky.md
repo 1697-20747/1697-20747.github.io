@@ -1,12 +1,15 @@
 ---
+draft: false
 title: "Determined"
 author: "Robert Sapolsky"
 date: 2024-01-31
-categories: ["Biology & Behaviour"]
+categories: ["blog/books"]
 tags: ["neuroscience", "free-will", "philosophy", "psychology"]
 description: "Sapolsky's follow-up makes the full case against free will. Provocative, rigorous, and uncomfortable. Read Behave first."
 showToc: false
 ---
+
+{{< bookcover title="Determined" author="Robert Sapolsky" year="2024" tags="neuroscience, free-will, philosophy, psychology" >}}
 
 Sapolsky's follow-up makes the full case against free will. Provocative, rigorous, and uncomfortable. Read *Behave* first.
 

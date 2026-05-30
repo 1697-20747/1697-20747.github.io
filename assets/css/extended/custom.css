@@ -106,3 +106,23 @@ h1, h2,
 [data-theme="light"] main li {
     color: #1a1a2e !important;
 }
+
+/* ── Book cover tag text fix ── */
+.bookcover-tag {
+    -webkit-text-fill-color: #8FAC59 !important;
+    color: #8FAC59 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+}
+
+/* ── Book cover overrides ── */
+div.bookcover-wrap,
+div.bookcover-wrap *,
+div.bookcover-wrap p,
+div.bookcover-wrap span {
+    -webkit-text-fill-color: unset !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    background-image: none !important;
+}
