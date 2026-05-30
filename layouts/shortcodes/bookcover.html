@@ -1,0 +1,31 @@
+{{- $title  := .Get "title"  | default "Book Title" -}}
+{{- $author := .Get "author" | default "Author" -}}
+{{- $year   := .Get "year"   | default "" -}}
+{{- $tags   := .Page.Params.tags -}}
+
+<div class="bookcover-wrap" style="float:left;margin:0 1.5rem 1.5rem 0;width:180px;line-height:1.4;">
+  <div style="background:#0d1117 !important;border:1px solid rgba(143,172,89,0.25) !important;border-radius:8px;overflow:hidden;width:180px;">
+    <div style="height:260px;background:#0d1117 !important;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.5rem 1rem;position:relative;border-bottom:1px solid rgba(143,172,89,0.15) !important;">
+      <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(90deg,transparent,transparent 3px,rgba(143,172,89,0.03) 3px,rgba(143,172,89,0.03) 4px);pointer-events:none;"></div>
+      <div style="width:48px;height:48px;border:1.5px solid #8FAC59;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;position:relative;flex-shrink:0;">
+        <div style="width:28px;height:28px;border:1px solid rgba(143,172,89,0.4);border-radius:50%;"></div>
+        <div style="position:absolute;width:2px;height:22px;background:#8FAC59;top:50%;left:50%;transform:translate(-50%,-50%) rotate(45deg);"></div>
+      </div>
+      <p style="font-size:10px !important;color:#8FAC59 !important;-webkit-text-fill-color:#8FAC59 !important;background:none !important;-webkit-background-clip:unset !important;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 0.75rem !important;text-align:center;word-break:break-word;">{{ $title }}</p>
+      <p style="font-size:15px !important;font-weight:800 !important;color:#e2e8f0 !important;-webkit-text-fill-color:#e2e8f0 !important;background:none !important;-webkit-background-clip:unset !important;text-align:center;line-height:1.25;margin:0 !important;letter-spacing:-0.3px;">{{ $author }}</p>
+      <div style="width:40px;height:1px;background:rgba(143,172,89,0.4);margin:0.75rem auto !important;"></div>
+      {{ if $year }}
+      <p style="font-size:9px !important;color:rgba(143,172,89,0.7) !important;-webkit-text-fill-color:rgba(143,172,89,0.7) !important;background:none !important;-webkit-background-clip:unset !important;letter-spacing:0.1em;text-align:center;margin:0 !important;text-transform:uppercase;">{{ $year }}</p>
+      {{ end }}
+    </div>
+    {{ if $tags }}
+    <div style="padding:0.6rem 0.75rem;background:#0d1117 !important;">
+      <div style="display:flex;gap:4px;flex-wrap:wrap;">
+        {{ range $tags }}
+        <span style="font-size:9px !important;color:#8FAC59 !important;-webkit-text-fill-color:#8FAC59 !important;background:none !important;-webkit-background-clip:unset !important;border:1px solid rgba(143,172,89,0.45);border-radius:3px;padding:2px 6px;letter-spacing:0.04em;white-space:nowrap;display:inline-block;">{{ . }}</span>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>

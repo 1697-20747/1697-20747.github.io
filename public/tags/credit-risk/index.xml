@@ -6,8 +6,15 @@
     <description>Recent content in Credit-Risk on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 09 May 2026 07:51:37 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 18:02:38 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/credit-risk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Llm Credit Paper Generator</title>
+      <link>http://localhost:1313/blog/comp-science/llm-credit-paper-generator/</link>
+      <pubDate>Mon, 25 May 2026 18:02:38 +0000</pubDate>
+      <guid>http://localhost:1313/blog/comp-science/llm-credit-paper-generator/</guid>
+      <description>Credit paper by LLM. Easy??? Well, not so much as it turns out.</description>
+    </item>
     <item>
       <title>Its Lonely At The Bottom</title>
       <link>http://localhost:1313/blog/unhelpful-advice/its-lonely-at-the-bottom/</link>

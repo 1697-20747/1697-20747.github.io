@@ -1,12 +1,15 @@
 ---
+draft: false
 title: "Financial Shenanigans"
 author: "Howard Schilit"
 date: 2024-01-07
-categories: ["Economics & Finance"]
+categories: ["blog/books"]
 tags: ["finance", "accounting", "fraud", "credit-analysis"]
 description: "How companies manipulate earnings and cash flow statements. Forensic accounting made readable. Will permanently change how you read a 10-K."
 showToc: false
 ---
+
+{{< bookcover title="Financial Shenanigans" author="Howard Schilit" year="2024" tags="finance, accounting, fraud, credit-analysis" >}}
 
 How companies manipulate earnings and cash flow statements. Forensic accounting made readable. Will permanently change how you read a 10-K.
 

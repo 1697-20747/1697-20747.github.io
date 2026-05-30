@@ -1,12 +1,15 @@
 ---
+draft: false
 title: "Red Notice"
 author: "Bill Browder"
 date: 2024-02-02
-categories: ["History"]
+categories: ["blog/books"]
 tags: ["russia", "finance", "politics", "human-rights"]
 description: "Part financial thriller, part human rights story. Browder built one of the largest hedge funds in Russia, then watched Putin's system destroy it."
 showToc: false
 ---
+
+{{< bookcover title="Red Notice" author="Bill Browder" year="2024" tags="russia, finance, politics, human-rights" >}}
 
 Part financial thriller, part human rights story. Browder built one of the largest hedge funds in Russia, then watched Putin's system destroy it. The backstory to the Magnitsky Act.
 

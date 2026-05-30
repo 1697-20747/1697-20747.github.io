@@ -1,12 +1,15 @@
 ---
+draft: false
 title: "The Divine Comedy"
 author: "Dante Alighieri"
 date: 2024-01-05
-categories: ["Life"]
+categories: ["blog/books"]
 tags: ["philosophy", "classic", "poetry"]
 description: "Still the most ambitious thing anyone has ever written. Read it with a good commentary — Dorothy Sayers' translation and notes are an excellent entry point."
 showToc: false
 ---
+
+{{< bookcover title="The Divine Comedy" author="Dante Alighieri" year="2024" tags="philosophy, classic, poetry" >}}
 
 Still the most ambitious thing anyone has ever written. Read it with a good commentary — Dorothy Sayers' translation and notes are an excellent entry point.
 
