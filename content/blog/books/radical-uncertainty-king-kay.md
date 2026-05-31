@@ -9,6 +9,6 @@ description: "Two British economists argue that most real-world decisions can't 
 showToc: false
 ---
 
-{{< bookcover title="Radical Uncertainty: Decision-Making Beyond the Numbers" author="Mervyn King & John Kay" year="2024" tags="economics, decision-making, policy, statistics" >}}
+{{< bookcover title="Radical Uncertainty: Decision-Making Beyond the Numbers" author="Mervyn King & John Kay" year="2024" img="/images/book_img.png" >}}
 
 Two British economists argue that most real-world decisions can't be reduced to probability and models. A thoughtful pushback against false precision in economics and policymaking.

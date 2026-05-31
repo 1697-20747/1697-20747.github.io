@@ -9,7 +9,7 @@ description: "Still the most ambitious thing anyone has ever written. Read it wi
 showToc: false
 ---
 
-{{< bookcover title="The Divine Comedy" author="Dante Alighieri" year="2024" tags="philosophy, classic, poetry" >}}
+{{< bookcover title="The Divine Comedy" author="Dante Alighieri" year="2024" img="/images/book_img.png" >}}
 
 Still the most ambitious thing anyone has ever written. Read it with a good commentary — Dorothy Sayers' translation and notes are an excellent entry point.
 

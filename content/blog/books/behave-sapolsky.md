@@ -9,7 +9,7 @@ description: "Why humans do what they do — from the neuroscience of a single m
 showToc: false
 ---
 
-{{< bookcover title="Behave" author="Robert Sapolsky" year="2024" tags="neuroscience, behaviour, psychology, evolution" >}}
+{{< bookcover title="Behave" author="Robert Sapolsky" year="2024" img="/images/book_img.png" >}}
 
 Why humans do what they do — from the neuroscience of a single moment of behaviour back through hormones, evolution, and culture. The most comprehensive synthesis of human behaviour I've read.
 

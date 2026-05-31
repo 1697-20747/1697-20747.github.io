@@ -2,736 +2,757 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/docs/rmbs/rmbs-technical-architecture/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/feynman-on-understanding/</loc>
+    <lastmod>2026-05-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/rmbs/api-reference/</loc>
+    <loc>http://localhost:63630/docs/camels-llm/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/rmbs/api-setup/</loc>
+    <loc>http://localhost:63630/docs/camels-llm/training-pairs/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/rmbs/dashboards-guide/</loc>
+    <loc>http://localhost:63630/docs/rmbs/rmbs-technical-architecture/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/rmbs/sample-mortgage-data/</loc>
+    <loc>http://localhost:63630/docs/rmbs/api-reference/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/rmbs/sample-reports/</loc>
+    <loc>http://localhost:63630/docs/camels-llm/data-sources/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/rmbs/reporting-guide/</loc>
+    <loc>http://localhost:63630/docs/rmbs/api-setup/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/rmbs/geographic-mortgage-map/</loc>
+    <loc>http://localhost:63630/docs/rmbs/dashboards-guide/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/economics/inflation-measurement/</loc>
+    <loc>http://localhost:63630/docs/rmbs/sample-mortgage-data/</loc>
+  </url><url>
+    <loc>http://localhost:63630/docs/rmbs/sample-reports/</loc>
+  </url><url>
+    <loc>http://localhost:63630/docs/rmbs/reporting-guide/</loc>
+  </url><url>
+    <loc>http://localhost:63630/docs/rmbs/geographic-mortgage-map/</loc>
+  </url><url>
+    <loc>http://localhost:63630/blog/economics/inflation-measurement/</loc>
     <lastmod>2026-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:63630/</loc>
     <lastmod>2026-05-25T18:02:38+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ai/</loc>
+    <loc>http://localhost:63630/tags/ai/</loc>
     <lastmod>2026-05-25T18:02:38+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/banks/</loc>
+    <loc>http://localhost:63630/tags/banks/</loc>
     <lastmod>2026-05-25T18:02:38+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>http://localhost:63630/blog/</loc>
     <lastmod>2026-05-25T18:02:38+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:63630/categories/</loc>
     <lastmod>2026-05-25T18:02:38+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/comp-science/</loc>
+    <loc>http://localhost:63630/blog/comp-science/</loc>
     <lastmod>2026-05-25T18:02:38+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/comp-science/</loc>
+    <loc>http://localhost:63630/categories/comp-science/</loc>
     <lastmod>2026-05-25T18:02:38+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/credit-risk/</loc>
+    <loc>http://localhost:63630/tags/credit-risk/</loc>
     <lastmod>2026-05-25T18:02:38+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/llm/</loc>
+    <loc>http://localhost:63630/tags/llm/</loc>
     <lastmod>2026-05-25T18:02:38+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/comp-science/llm-credit-paper-generator/</loc>
+    <loc>http://localhost:63630/blog/comp-science/llm-credit-paper-generator/</loc>
     <lastmod>2026-05-25T18:02:38+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/post-training/</loc>
+    <loc>http://localhost:63630/tags/post-training/</loc>
     <lastmod>2026-05-25T18:02:38+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:63630/tags/</loc>
     <lastmod>2026-05-25T18:02:38+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/economics/buffett-ratio/</loc>
+    <loc>http://localhost:63630/blog/economics/buffett-ratio/</loc>
     <lastmod>2026-05-23T20:58:26+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/economics/</loc>
+    <loc>http://localhost:63630/blog/economics/</loc>
     <lastmod>2026-05-23T20:58:26+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/economics/</loc>
+    <loc>http://localhost:63630/categories/economics/</loc>
     <lastmod>2026-05-23T20:58:26+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/automation/</loc>
+    <loc>http://localhost:63630/tags/automation/</loc>
     <lastmod>2026-05-23T17:24:34+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/bash/</loc>
+    <loc>http://localhost:63630/tags/bash/</loc>
     <lastmod>2026-05-23T17:24:34+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/data-analytics/</loc>
+    <loc>http://localhost:63630/blog/data-analytics/</loc>
     <lastmod>2026-05-23T17:24:34+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/data-analytics/</loc>
+    <loc>http://localhost:63630/categories/data-analytics/</loc>
     <lastmod>2026-05-23T17:24:34+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/data-analytics/</loc>
+    <loc>http://localhost:63630/tags/data-analytics/</loc>
     <lastmod>2026-05-23T17:24:34+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/data-analytics/share-price-data-correct/</loc>
+    <loc>http://localhost:63630/blog/data-analytics/share-price-data-correct/</loc>
     <lastmod>2026-05-23T17:24:34+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/historical-data/</loc>
+    <loc>http://localhost:63630/tags/historical-data/</loc>
     <lastmod>2026-05-23T17:24:34+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/python/</loc>
+    <loc>http://localhost:63630/tags/python/</loc>
     <lastmod>2026-05-23T17:24:34+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/data-analytics/share-price-data/</loc>
+    <loc>http://localhost:63630/blog/data-analytics/share-price-data/</loc>
     <lastmod>2026-05-23T17:24:34+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/stock-data/</loc>
+    <loc>http://localhost:63630/tags/stock-data/</loc>
     <lastmod>2026-05-23T17:24:34+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/yfinance/</loc>
+    <loc>http://localhost:63630/tags/yfinance/</loc>
     <lastmod>2026-05-23T17:24:34+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/credit-scoring/</loc>
+    <loc>http://localhost:63630/tags/credit-scoring/</loc>
     <lastmod>2026-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/economics--finance/</loc>
+    <loc>http://localhost:63630/categories/economics--finance/</loc>
     <lastmod>2026-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/fairness/</loc>
+    <loc>http://localhost:63630/tags/fairness/</loc>
     <lastmod>2026-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/financial-analysis/</loc>
+    <loc>http://localhost:63630/categories/financial-analysis/</loc>
     <lastmod>2026-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/fintech/</loc>
+    <loc>http://localhost:63630/tags/fintech/</loc>
     <lastmod>2026-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gender-equality/</loc>
+    <loc>http://localhost:63630/tags/gender-equality/</loc>
     <lastmod>2026-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/machine-learning/</loc>
+    <loc>http://localhost:63630/categories/machine-learning/</loc>
     <lastmod>2026-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/machine-learning/</loc>
+    <loc>http://localhost:63630/tags/machine-learning/</loc>
     <lastmod>2026-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/regional-analysis/</loc>
+    <loc>http://localhost:63630/tags/regional-analysis/</loc>
     <lastmod>2026-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/economics/socio-economic-credit-models/</loc>
+    <loc>http://localhost:63630/blog/economics/socio-economic-credit-models/</loc>
     <lastmod>2026-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser-part-2/</loc>
+    <loc>http://localhost:63630/blog/comp-science/securitisation-pool-optomiser-part-2/</loc>
     <lastmod>2026-05-20T07:28:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/optimisation/</loc>
+    <loc>http://localhost:63630/tags/optimisation/</loc>
     <lastmod>2026-05-20T07:28:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/rmbs/</loc>
+    <loc>http://localhost:63630/tags/rmbs/</loc>
     <lastmod>2026-05-20T07:28:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/securitisation/</loc>
+    <loc>http://localhost:63630/tags/securitisation/</loc>
     <lastmod>2026-05-20T07:28:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser/</loc>
+    <loc>http://localhost:63630/blog/comp-science/securitisation-pool-optomiser/</loc>
     <lastmod>2026-05-20T07:27:29+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/credit-risk/</loc>
+    <loc>http://localhost:63630/blog/credit-risk/</loc>
     <lastmod>2026-05-19T14:33:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/credit-risk/</loc>
+    <loc>http://localhost:63630/categories/credit-risk/</loc>
     <lastmod>2026-05-19T14:33:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ebita/</loc>
+    <loc>http://localhost:63630/tags/ebita/</loc>
     <lastmod>2026-05-19T14:33:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/credit-risk/ebitda-or-ebitdont/</loc>
+    <loc>http://localhost:63630/blog/credit-risk/ebitda-or-ebitdont/</loc>
     <lastmod>2026-05-19T14:33:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/finance/</loc>
+    <loc>http://localhost:63630/tags/finance/</loc>
     <lastmod>2026-05-17T07:13:29+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/mortgages/</loc>
+    <loc>http://localhost:63630/tags/mortgages/</loc>
     <lastmod>2026-05-17T07:13:29+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/comp-science/securitisation-101-part-2/</loc>
+    <loc>http://localhost:63630/blog/comp-science/securitisation-101-part-2/</loc>
     <lastmod>2026-05-17T07:13:29+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tranching/</loc>
+    <loc>http://localhost:63630/tags/tranching/</loc>
     <lastmod>2026-05-17T07:13:29+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/comp-science/securitisation-101/</loc>
+    <loc>http://localhost:63630/blog/comp-science/securitisation-101/</loc>
     <lastmod>2026-05-17T07:13:28+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/fx/</loc>
+    <loc>http://localhost:63630/tags/fx/</loc>
     <lastmod>2026-05-09T11:29:26+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/economics/fx-rate-efficiency-calculator/</loc>
+    <loc>http://localhost:63630/blog/economics/fx-rate-efficiency-calculator/</loc>
     <lastmod>2026-05-09T11:29:26+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/groupthink/</loc>
+    <loc>http://localhost:63630/tags/groupthink/</loc>
     <lastmod>2026-05-09T07:51:37+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/its-lonely-at-the-bottom/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/its-lonely-at-the-bottom/</loc>
     <lastmod>2026-05-09T07:51:37+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/mfs/</loc>
+    <loc>http://localhost:63630/tags/mfs/</loc>
     <lastmod>2026-05-09T07:51:37+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/</loc>
     <lastmod>2026-05-09T07:51:37+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/unhelpful-advice/</loc>
+    <loc>http://localhost:63630/categories/unhelpful-advice/</loc>
     <lastmod>2026-05-09T07:51:37+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/biography/</loc>
+    <loc>http://localhost:63630/tags/history/</loc>
+    <lastmod>2026-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:63630/blog/economics/its-time-for-a-change/</loc>
+    <lastmod>2026-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:63630/tags/rate-of-change/</loc>
+    <lastmod>2026-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:63630/tags/technology/</loc>
+    <lastmod>2026-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:63630/tags/biography/</loc>
     <lastmod>2026-05-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/blog/books/</loc>
+    <loc>http://localhost:63630/categories/blog/books/</loc>
     <lastmod>2026-05-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/</loc>
+    <loc>http://localhost:63630/blog/books/</loc>
     <lastmod>2026-05-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/deepmind/</loc>
+    <loc>http://localhost:63630/tags/deepmind/</loc>
     <lastmod>2026-05-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/the-infinity-machine/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/hokusai-on-mastery/</loc>
     <lastmod>2026-05-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/equality/</loc>
+    <loc>http://localhost:63630/blog/books/the-infinity-machine/</loc>
+    <lastmod>2026-05-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:63630/blog/unhelpful-advice/equality/</loc>
     <lastmod>2026-05-06T19:20:14+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/equality/</loc>
+    <loc>http://localhost:63630/tags/equality/</loc>
     <lastmod>2026-05-06T19:20:14+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/economics/inflation-broad-money/</loc>
+    <loc>http://localhost:63630/blog/economics/inflation-broad-money/</loc>
     <lastmod>2026-05-06T19:13:38+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/death-poem/</loc>
+    <loc>http://localhost:63630/tags/death-poem/</loc>
     <lastmod>2026-05-05T20:41:50+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/japan/</loc>
+    <loc>http://localhost:63630/tags/japan/</loc>
     <lastmod>2026-05-05T20:41:50+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/to-fade/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/to-fade/</loc>
     <lastmod>2026-05-05T20:41:50+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/einstein/</loc>
+    <loc>http://localhost:63630/tags/einstein/</loc>
     <lastmod>2026-05-05T20:15:24+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/fake/</loc>
+    <loc>http://localhost:63630/tags/fake/</loc>
     <lastmod>2026-05-05T20:15:24+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/its-not-research/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/its-not-research/</loc>
     <lastmod>2026-05-05T20:15:24+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/no-great-mystery/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/no-great-mystery/</loc>
     <lastmod>2026-05-04T21:20:41+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/debt/</loc>
+    <loc>http://localhost:63630/tags/debt/</loc>
     <lastmod>2026-05-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/g20/</loc>
+    <loc>http://localhost:63630/tags/g20/</loc>
     <lastmod>2026-05-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/economics/g20-sovereign-credit-spreads/</loc>
+    <loc>http://localhost:63630/blog/economics/g20-sovereign-credit-spreads/</loc>
     <lastmod>2026-05-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/interest-rates/</loc>
+    <loc>http://localhost:63630/tags/interest-rates/</loc>
     <lastmod>2026-05-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/sovereign-credit/</loc>
+    <loc>http://localhost:63630/tags/sovereign-credit/</loc>
     <lastmod>2026-05-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/spreads/</loc>
+    <loc>http://localhost:63630/tags/spreads/</loc>
     <lastmod>2026-05-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/credit-risk/mfs-collapse/</loc>
+    <loc>http://localhost:63630/blog/credit-risk/mfs-collapse/</loc>
     <lastmod>2026-04-28T19:36:06+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/credit-risk/details-matter/</loc>
+    <loc>http://localhost:63630/blog/credit-risk/details-matter/</loc>
     <lastmod>2026-04-25T09:10:22+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/economics/its-all-in-the-tail/</loc>
+    <loc>http://localhost:63630/blog/economics/its-all-in-the-tail/</loc>
     <lastmod>2026-04-12T17:32:43+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/hard-power/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/hard-power/</loc>
     <lastmod>2026-04-12T12:22:15+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/power-absolute/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/power-absolute/</loc>
     <lastmod>2026-04-12T12:02:21+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/self-wareness/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/self-wareness/</loc>
     <lastmod>2026-04-12T10:37:22+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/comp-science/the-big-give-away/</loc>
+    <loc>http://localhost:63630/blog/comp-science/the-big-give-away/</loc>
     <lastmod>2026-04-12T09:52:19+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/comp-science/tree-cli/</loc>
+    <loc>http://localhost:63630/blog/comp-science/tree-cli/</loc>
     <lastmod>2026-04-07T10:04:08+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/agents-of-chaos/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/agents-of-chaos/</loc>
     <lastmod>2026-04-06T10:24:12+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/canonical-failure/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/canonical-failure/</loc>
     <lastmod>2026-04-06T10:10:35+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/final-sin/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/final-sin/</loc>
     <lastmod>2026-04-06T10:07:17+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/its-a-game/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/its-a-game/</loc>
     <lastmod>2026-04-04T12:10:09+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/life-is-tough/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/life-is-tough/</loc>
     <lastmod>2026-04-04T10:46:35+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/ppppppp/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/ppppppp/</loc>
     <lastmod>2026-04-04T10:39:37+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/lemons/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/lemons/</loc>
     <lastmod>2026-04-04T10:36:43+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/to-fail-is-to-fail/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/to-fail-is-to-fail/</loc>
     <lastmod>2026-04-04T10:24:55+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/careful-what-you-measure-ptii/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/careful-what-you-measure-ptii/</loc>
     <lastmod>2026-04-03T09:45:34+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/economics/interest-rates-are-interesting/</loc>
+    <loc>http://localhost:63630/blog/economics/interest-rates-are-interesting/</loc>
     <lastmod>2026-04-03T09:42:06+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/comp-science/pacman/</loc>
+    <loc>http://localhost:63630/blog/comp-science/pacman/</loc>
     <lastmod>2026-04-01T17:05:11+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/careful-what-you-measure/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/careful-what-you-measure/</loc>
     <lastmod>2026-04-01T16:57:44+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/its-a-you-problem/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/its-a-you-problem/</loc>
     <lastmod>2026-03-29T11:16:09+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/approxmimately-right/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/approxmimately-right/</loc>
     <lastmod>2026-03-27T16:59:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/the-cold-never-lasts/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/the-cold-never-lasts/</loc>
     <lastmod>2026-03-27T16:48:30+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/dont-start-what-you-cant-finish/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/dont-start-what-you-cant-finish/</loc>
     <lastmod>2026-03-26T07:35:14+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/not-all-relationships-are-positive/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/not-all-relationships-are-positive/</loc>
     <lastmod>2026-03-25T18:01:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/the-rise-of-the-machine/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/the-rise-of-the-machine/</loc>
     <lastmod>2026-03-25T17:57:33+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/cult-of-personality/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/cult-of-personality/</loc>
     <lastmod>2026-03-25T17:55:01+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/never-trust-a-spreadsheet/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/never-trust-a-spreadsheet/</loc>
     <lastmod>2026-03-22T20:10:32+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/fraud/</loc>
+    <loc>http://localhost:63630/tags/fraud/</loc>
     <lastmod>2026-03-22T11:16:02+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/the-con-of-consolidated-accounting/</loc>
+    <loc>http://localhost:63630/tags/the-con-of-consolidated-accounting/</loc>
     <lastmod>2026-03-22T11:16:02+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/credit-risk/un-consolidating-consolidated-accounting/</loc>
+    <loc>http://localhost:63630/blog/credit-risk/un-consolidating-consolidated-accounting/</loc>
     <lastmod>2026-03-22T11:16:02+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/bowie-on-work/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/bowie-on-work/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/constrained-distribution/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/constrained-distribution/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/curiosity-credit/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/curiosity-credit/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/define-the-problem/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/define-the-problem/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/duration-folly/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/duration-folly/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/duty/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/duty/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/geniuses-in-command/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/geniuses-in-command/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/goats-and-sticks/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/goats-and-sticks/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/hindsight/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/hindsight/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/josephus-on-drills/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/josephus-on-drills/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/kafka-on-soul/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/kafka-on-soul/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/la-geografia-manda/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/la-geografia-manda/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/morale-and-material/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/morale-and-material/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/rifle-vs-war/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/rifle-vs-war/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/sack-of-shite/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/sack-of-shite/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/the-meek/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/the-meek/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/things-must-change/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/things-must-change/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/war-is-sweet/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/war-is-sweet/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/what-you-would-not/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/what-you-would-not/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/unhelpful-advice/wrong-general/</loc>
+    <loc>http://localhost:63630/blog/unhelpful-advice/wrong-general/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/credit-risk/one-ring-to-rule-them-all/</loc>
+    <loc>http://localhost:63630/blog/credit-risk/one-ring-to-rule-them-all/</loc>
     <lastmod>2026-03-21T22:07:39+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/accounting/</loc>
+    <loc>http://localhost:63630/tags/accounting/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/bayesian/</loc>
+    <loc>http://localhost:63630/tags/bayesian/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/forecasting/</loc>
+    <loc>http://localhost:63630/tags/forecasting/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/forensic-accounting/</loc>
+    <loc>http://localhost:63630/tags/forensic-accounting/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/investing/</loc>
+    <loc>http://localhost:63630/tags/investing/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/probability/</loc>
+    <loc>http://localhost:63630/tags/probability/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/quality-of-earnings/</loc>
+    <loc>http://localhost:63630/blog/books/quality-of-earnings/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/statistics/</loc>
+    <loc>http://localhost:63630/tags/statistics/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/the-signal-and-the-noise/</loc>
+    <loc>http://localhost:63630/blog/books/the-signal-and-the-noise/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cpi/</loc>
+    <loc>http://localhost:63630/tags/cpi/</loc>
     <lastmod>2026-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/inflation/</loc>
+    <loc>http://localhost:63630/tags/inflation/</loc>
     <lastmod>2026-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/macroeconomics/</loc>
+    <loc>http://localhost:63630/tags/macroeconomics/</loc>
     <lastmod>2026-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/case-study/</loc>
+    <loc>http://localhost:63630/tags/case-study/</loc>
     <lastmod>2024-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/corporate-failure/</loc>
+    <loc>http://localhost:63630/tags/corporate-failure/</loc>
     <lastmod>2024-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/credit-risk/enron-a-look-back/</loc>
+    <loc>http://localhost:63630/blog/credit-risk/enron-a-look-back/</loc>
     <lastmod>2024-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/human-rights/</loc>
+    <loc>http://localhost:63630/tags/human-rights/</loc>
     <lastmod>2024-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/politics/</loc>
+    <loc>http://localhost:63630/tags/politics/</loc>
     <lastmod>2024-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/red-notice-browder/</loc>
+    <loc>http://localhost:63630/blog/books/red-notice-browder/</loc>
     <lastmod>2024-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/russia/</loc>
+    <loc>http://localhost:63630/tags/russia/</loc>
     <lastmod>2024-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/classics/</loc>
+    <loc>http://localhost:63630/tags/classics/</loc>
     <lastmod>2024-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/history/</loc>
+    <loc>http://localhost:63630/tags/rome/</loc>
     <lastmod>2024-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/rome/</loc>
+    <loc>http://localhost:63630/tags/society/</loc>
     <lastmod>2024-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/society/</loc>
+    <loc>http://localhost:63630/blog/books/spqr-beard/</loc>
     <lastmod>2024-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/spqr-beard/</loc>
-    <lastmod>2024-02-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/books/determined-sapolsky/</loc>
+    <loc>http://localhost:63630/blog/books/determined-sapolsky/</loc>
     <lastmod>2024-01-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/free-will/</loc>
+    <loc>http://localhost:63630/tags/free-will/</loc>
     <lastmod>2024-01-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/neuroscience/</loc>
+    <loc>http://localhost:63630/tags/neuroscience/</loc>
     <lastmod>2024-01-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/philosophy/</loc>
+    <loc>http://localhost:63630/tags/philosophy/</loc>
     <lastmod>2024-01-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/psychology/</loc>
+    <loc>http://localhost:63630/tags/psychology/</loc>
     <lastmod>2024-01-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/behave-sapolsky/</loc>
+    <loc>http://localhost:63630/blog/books/behave-sapolsky/</loc>
     <lastmod>2024-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/behaviour/</loc>
+    <loc>http://localhost:63630/tags/behaviour/</loc>
     <lastmod>2024-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/evolution/</loc>
+    <loc>http://localhost:63630/tags/evolution/</loc>
     <lastmod>2024-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/life-is-simple-mcfadden/</loc>
+    <loc>http://localhost:63630/blog/books/life-is-simple-mcfadden/</loc>
     <lastmod>2024-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/science/</loc>
+    <loc>http://localhost:63630/tags/science/</loc>
     <lastmod>2024-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/simplicity/</loc>
+    <loc>http://localhost:63630/tags/simplicity/</loc>
     <lastmod>2024-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/career/</loc>
+    <loc>http://localhost:63630/tags/career/</loc>
     <lastmod>2024-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/engineering/</loc>
+    <loc>http://localhost:63630/tags/engineering/</loc>
     <lastmod>2024-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/research/</loc>
+    <loc>http://localhost:63630/tags/research/</loc>
     <lastmod>2024-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/art-of-doing-science-hamming/</loc>
+    <loc>http://localhost:63630/blog/books/art-of-doing-science-hamming/</loc>
     <lastmod>2024-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/brain-of-the-firm-beer/</loc>
+    <loc>http://localhost:63630/blog/books/brain-of-the-firm-beer/</loc>
     <lastmod>2024-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cybernetics/</loc>
+    <loc>http://localhost:63630/tags/cybernetics/</loc>
     <lastmod>2024-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/management/</loc>
+    <loc>http://localhost:63630/tags/management/</loc>
     <lastmod>2024-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/organisations/</loc>
+    <loc>http://localhost:63630/tags/organisations/</loc>
     <lastmod>2024-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/systems-thinking/</loc>
+    <loc>http://localhost:63630/tags/systems-thinking/</loc>
     <lastmod>2024-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/data/</loc>
+    <loc>http://localhost:63630/tags/data/</loc>
     <lastmod>2024-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/decision-making/</loc>
+    <loc>http://localhost:63630/tags/decision-making/</loc>
     <lastmod>2024-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/mathematics/</loc>
+    <loc>http://localhost:63630/tags/mathematics/</loc>
     <lastmod>2024-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/art-of-statistics-spiegelhalter/</loc>
+    <loc>http://localhost:63630/blog/books/art-of-statistics-spiegelhalter/</loc>
     <lastmod>2024-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/deep-learning-goodfellow/</loc>
+    <loc>http://localhost:63630/blog/books/deep-learning-goodfellow/</loc>
     <lastmod>2024-01-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/neural-networks/</loc>
+    <loc>http://localhost:63630/tags/neural-networks/</loc>
     <lastmod>2024-01-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/economics/</loc>
+    <loc>http://localhost:63630/tags/economics/</loc>
     <lastmod>2024-01-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/money/</loc>
+    <loc>http://localhost:63630/tags/money/</loc>
     <lastmod>2024-01-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/money-ferguson/</loc>
+    <loc>http://localhost:63630/blog/books/money-ferguson/</loc>
     <lastmod>2024-01-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/policy/</loc>
+    <loc>http://localhost:63630/tags/policy/</loc>
     <lastmod>2024-01-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/radical-uncertainty-king-kay/</loc>
+    <loc>http://localhost:63630/blog/books/radical-uncertainty-king-kay/</loc>
     <lastmod>2024-01-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/anthropology/</loc>
+    <loc>http://localhost:63630/tags/anthropology/</loc>
     <lastmod>2024-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/debt-graeber/</loc>
+    <loc>http://localhost:63630/blog/books/debt-graeber/</loc>
     <lastmod>2024-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/noise-kahneman/</loc>
+    <loc>http://localhost:63630/blog/books/noise-kahneman/</loc>
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/growth/</loc>
+    <loc>http://localhost:63630/tags/growth/</loc>
     <lastmod>2024-01-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/growth-susskind/</loc>
+    <loc>http://localhost:63630/blog/books/growth-susskind/</loc>
     <lastmod>2024-01-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/smartest-guys-in-the-room/</loc>
+    <loc>http://localhost:63630/blog/books/smartest-guys-in-the-room/</loc>
     <lastmod>2024-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/crashed-tooze/</loc>
+    <loc>http://localhost:63630/blog/books/crashed-tooze/</loc>
     <lastmod>2024-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/crisis/</loc>
+    <loc>http://localhost:63630/tags/crisis/</loc>
     <lastmod>2024-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/stress-test-geithner/</loc>
+    <loc>http://localhost:63630/blog/books/stress-test-geithner/</loc>
     <lastmod>2024-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/challenger-higginbotham/</loc>
+    <loc>http://localhost:63630/blog/books/challenger-higginbotham/</loc>
     <lastmod>2024-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/leadership/</loc>
+    <loc>http://localhost:63630/tags/leadership/</loc>
     <lastmod>2024-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/space/</loc>
+    <loc>http://localhost:63630/tags/space/</loc>
     <lastmod>2024-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/business/</loc>
+    <loc>http://localhost:63630/tags/business/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/strategy/</loc>
+    <loc>http://localhost:63630/tags/strategy/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/mind-of-the-strategist-ohmae/</loc>
+    <loc>http://localhost:63630/blog/books/mind-of-the-strategist-ohmae/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/central-banking/</loc>
+    <loc>http://localhost:63630/tags/central-banking/</loc>
     <lastmod>2024-01-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/public-finance/</loc>
+    <loc>http://localhost:63630/tags/public-finance/</loc>
     <lastmod>2024-01-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/royal-charter-bank-of-england/</loc>
+    <loc>http://localhost:63630/blog/books/royal-charter-bank-of-england/</loc>
     <lastmod>2024-01-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/uk/</loc>
+    <loc>http://localhost:63630/tags/uk/</loc>
     <lastmod>2024-01-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/classic/</loc>
+    <loc>http://localhost:63630/tags/classic/</loc>
     <lastmod>2024-01-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/lombard-street-bagehot/</loc>
+    <loc>http://localhost:63630/blog/books/lombard-street-bagehot/</loc>
     <lastmod>2024-01-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/competition/</loc>
+    <loc>http://localhost:63630/tags/competition/</loc>
     <lastmod>2024-01-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/on-competition-porter/</loc>
+    <loc>http://localhost:63630/blog/books/on-competition-porter/</loc>
     <lastmod>2024-01-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/monetary-policy/</loc>
+    <loc>http://localhost:63630/tags/monetary-policy/</loc>
     <lastmod>2024-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/price-of-time-chancellor/</loc>
+    <loc>http://localhost:63630/blog/books/price-of-time-chancellor/</loc>
     <lastmod>2024-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/banking/</loc>
+    <loc>http://localhost:63630/tags/banking/</loc>
     <lastmod>2024-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/community/</loc>
+    <loc>http://localhost:63630/tags/community/</loc>
     <lastmod>2024-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/third-pillar-rajan/</loc>
+    <loc>http://localhost:63630/blog/books/third-pillar-rajan/</loc>
     <lastmod>2024-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/keeping-at-it-volcker/</loc>
+    <loc>http://localhost:63630/blog/books/keeping-at-it-volcker/</loc>
     <lastmod>2024-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/euro-stiglitz/</loc>
+    <loc>http://localhost:63630/blog/books/euro-stiglitz/</loc>
     <lastmod>2024-01-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/europe/</loc>
+    <loc>http://localhost:63630/tags/europe/</loc>
     <lastmod>2024-01-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/credit-analysis/</loc>
+    <loc>http://localhost:63630/tags/credit-analysis/</loc>
     <lastmod>2024-01-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/financial-shenanigans/</loc>
+    <loc>http://localhost:63630/blog/books/financial-shenanigans/</loc>
     <lastmod>2024-01-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/bubbles/</loc>
+    <loc>http://localhost:63630/tags/bubbles/</loc>
     <lastmod>2024-01-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/irrational-exuberance/</loc>
+    <loc>http://localhost:63630/blog/books/irrational-exuberance/</loc>
     <lastmod>2024-01-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/poetry/</loc>
+    <loc>http://localhost:63630/tags/poetry/</loc>
     <lastmod>2024-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/divine-comedy/</loc>
+    <loc>http://localhost:63630/blog/books/divine-comedy/</loc>
     <lastmod>2024-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/fiction/</loc>
+    <loc>http://localhost:63630/tags/fiction/</loc>
     <lastmod>2024-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/physics/</loc>
+    <loc>http://localhost:63630/tags/physics/</loc>
     <lastmod>2024-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/sci-fi/</loc>
+    <loc>http://localhost:63630/tags/sci-fi/</loc>
     <lastmod>2024-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/three-body-problem/</loc>
+    <loc>http://localhost:63630/blog/books/three-body-problem/</loc>
     <lastmod>2024-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/doctrine/</loc>
+    <loc>http://localhost:63630/tags/doctrine/</loc>
     <lastmod>2024-01-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/military/</loc>
+    <loc>http://localhost:63630/tags/military/</loc>
     <lastmod>2024-01-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/fm-22-100-army-leadership/</loc>
+    <loc>http://localhost:63630/blog/books/fm-22-100-army-leadership/</loc>
     <lastmod>2024-01-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/concise-history-of-warfare/</loc>
+    <loc>http://localhost:63630/blog/books/concise-history-of-warfare/</loc>
     <lastmod>2024-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/books/once-an-eagle/</loc>
+    <loc>http://localhost:63630/blog/books/once-an-eagle/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://localhost:63630/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/casino/casino_2018_vs_muddy_waters_inclusion/</loc>
+    <loc>http://localhost:63630/docs/casino/casino_2018_vs_muddy_waters_inclusion/</loc>
   </url><url>
-    <loc>http://localhost:1313/about/about_index/</loc>
+    <loc>http://localhost:63630/about/about_index/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/bjj/</loc>
+    <loc>http://localhost:63630/blog/bjj/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/books/books-index/</loc>
+    <loc>http://localhost:63630/blog/books/books-index/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/</loc>
+    <loc>http://localhost:63630/docs/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/other/</loc>
+    <loc>http://localhost:63630/blog/other/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/philosophy/</loc>
+    <loc>http://localhost:63630/blog/philosophy/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/rmbs/</loc>
+    <loc>http://localhost:63630/docs/rmbs/</loc>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>http://localhost:63630/search/</loc>
   </url>
 </urlset>

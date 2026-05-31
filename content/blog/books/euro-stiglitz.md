@@ -9,6 +9,6 @@ description: "A rigorous critique of the eurozone's structural flaws from a Nobe
 showToc: false
 ---
 
-{{< bookcover title="Euro" author="Joseph Stiglitz" year="2024" tags="economics, europe, monetary-policy" >}}
+{{< bookcover title="Euro" author="Joseph Stiglitz" year="2024" img="/images/book_img.png" >}}
 
 A rigorous critique of the eurozone's structural flaws from a Nobel laureate. Whether you agree with his conclusions or not, the institutional analysis is excellent.

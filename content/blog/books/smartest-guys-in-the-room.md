@@ -9,7 +9,7 @@ description: "The definitive account of Enron's collapse. A story of arrogance, 
 showToc: false
 ---
 
-{{< bookcover title="The Smartest Guys in the Room: The Amazing Rise and Scandalous Fall of Enron" author="Bethany McLean & Peter Elkind" year="2024" tags="finance, fraud, accounting, corporate-failure" >}}
+{{< bookcover title="The Smartest Guys in the Room: The Amazing Rise and Scandalous Fall of Enron" author="Bethany McLean & Peter Elkind" year="2024" img="/images/book_img.png" >}}
 
 The definitive account of Enron's collapse. A story of arrogance, fraud, and a culture where looking smart mattered more than being honest. Still feels relevant.
 
@@ -21,7 +21,7 @@ Read it if you did not live through it. I still have a stash of equity analyst r
 
 As a proper credit analyst, the giveaway here is the hockey stick. Profits grew like a clock, exponentially. Operating cash flow did not. How can economic profit outstrip cash flow? Easy — when your economic profits arise from selling things to yourself at inflated prices. Always follow the cash flow. Why? Because cash is what an external counterparty was willing to pay. It is a more honest measure of value creation. Value you create but cannot sell is not value.
 
-Just PV all the deep value future earnings from things not even built — which, by the way, are in developing countries — and then voilà, sell it to yourself at the inflated PV value. The number of disgraceful idiots in this book who permitted rampant fraud is enough to make you want to be an index hugger. DCM fees, audit fees, or really any income stream above target will buy you a lot of liars at a senior level so long as it flows into their bonus.
+Just PV all the deep value future earnings from things not even built — which, by the way, are in developing countries — and then voila, sell it to yourself at the inflated PV value. The number of disgraceful idiots in this book who permitted rampant fraud is enough to make you want to be an index hugger. DCM fees, audit fees, or really any income stream above target will buy you a lot of liars at a senior level so long as it flows into their bonus.
 
 > "It is difficult to get a man to understand something, when his salary depends on his not understanding it."
 

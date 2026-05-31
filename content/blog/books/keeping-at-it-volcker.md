@@ -9,7 +9,7 @@ description: "Paul Volcker's memoir on his fight for sound money and the indepen
 showToc: false
 ---
 
-{{< bookcover title="Keeping At It: The Quest for Sound Money and Good Government" author="Paul A. Volcker & Christine Harper" year="2024" tags="economics, monetary-policy, central-banking, inflation" >}}
+{{< bookcover title="Keeping At It: The Quest for Sound Money and Good Government" author="Paul A. Volcker & Christine Harper" year="2024" img="/images/book_img.png" >}}
 
 Paul Volcker's memoir and reflection on public service, centered on his fight for "sound money" — stable currency, low inflation, and financial integrity — as a foundation for good government. Volcker is best known for his tenure as Chairman of the Federal Reserve (1979–1987), where he aggressively raised interest rates to break the back of 1970s inflation. The policy caused a deep recession but ultimately restored price stability and credibility to U.S. monetary policy.
 

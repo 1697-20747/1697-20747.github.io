@@ -9,7 +9,7 @@ description: "The foundational texts behind Beer's concept of POSIWID — the pu
 showToc: false
 ---
 
-{{< bookcover title="Brain of the Firm / Designing Freedom" author="Stafford Beer" year="2024" tags="systems-thinking, management, cybernetics, organisations" >}}
+{{< bookcover title="Brain of the Firm / Designing Freedom" author="Stafford Beer" year="2024" img="/images/book_img.png" >}}
 
 The foundational texts behind Beer's concept of POSIWID — the purpose of a system is what it does. A British cybernetician and management theorist, Beer argued that you cannot understand an organisation by reading its mission statement; you understand it by observing its outputs. Organisations, like all systems, do exactly what they are designed to do — even when that is the opposite of what they claim. Applies with uncomfortable precision to governments, corporations, and bureaucracies everywhere.
 

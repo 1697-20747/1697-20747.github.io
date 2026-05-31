@@ -9,6 +9,6 @@ description: "A sweeping global history of the 2008 crash and its long political
 showToc: false
 ---
 
-{{< bookcover title="Crashed: How a Decade of Financial Crises Changed the World" author="Adam Tooze" year="2024" tags="economics, finance, history, politics" >}}
+{{< bookcover title="Crashed: How a Decade of Financial Crises Changed the World" author="Adam Tooze" year="2024" img="/images/book_img.png" >}}
 
 A sweeping global history of the 2008 crash and its long political aftershocks — from austerity in Europe to the rise of populism. Dense but rewarding.

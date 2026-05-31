@@ -9,6 +9,6 @@ description: "Porter's collected essays on competitive strategy, clusters, and n
 showToc: false
 ---
 
-{{< bookcover title="On Competition" author="Michael Porter" year="2024" tags="strategy, economics, competition" >}}
+{{< bookcover title="On Competition" author="Michael Porter" year="2024" img="/images/book_img.png" >}}
 
 Porter's collected essays on competitive strategy, clusters, and national competitiveness. Denser than the airport book version of strategy writing — in a good way.

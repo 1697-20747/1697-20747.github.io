@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Policy on [1697, 20747]</title>
-    <link>http://localhost:1313/tags/policy/</link>
+    <link>http://localhost:63630/tags/policy/</link>
     <description>Recent content in Policy on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
     <lastBuildDate>Tue, 23 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/policy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:63630/tags/policy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Radical Uncertainty: Decision-Making Beyond the Numbers</title>
-      <link>http://localhost:1313/blog/books/radical-uncertainty-king-kay/</link>
+      <link>http://localhost:63630/blog/books/radical-uncertainty-king-kay/</link>
       <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/radical-uncertainty-king-kay/</guid>
+      <guid>http://localhost:63630/blog/books/radical-uncertainty-king-kay/</guid>
       <description>Two British economists argue that most real-world decisions can&amp;#39;t be reduced to probability and models.</description>
     </item>
     <item>
       <title>Growth: A Reckoning</title>
-      <link>http://localhost:1313/blog/books/growth-susskind/</link>
+      <link>http://localhost:63630/blog/books/growth-susskind/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/growth-susskind/</guid>
+      <guid>http://localhost:63630/blog/books/growth-susskind/</guid>
       <description>A rigorous challenge to the assumption that economic growth is always good or always necessary.</description>
     </item>
     <item>
       <title>Stress Test: Reflections on Financial Crises</title>
-      <link>http://localhost:1313/blog/books/stress-test-geithner/</link>
+      <link>http://localhost:63630/blog/books/stress-test-geithner/</link>
       <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/stress-test-geithner/</guid>
+      <guid>http://localhost:63630/blog/books/stress-test-geithner/</guid>
       <description>The former U.S. Treasury Secretary&amp;#39;s candid account of navigating the 2008 financial crisis from the inside.</description>
     </item>
     <item>
       <title>The Third Pillar</title>
-      <link>http://localhost:1313/blog/books/third-pillar-rajan/</link>
+      <link>http://localhost:63630/blog/books/third-pillar-rajan/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/third-pillar-rajan/</guid>
+      <guid>http://localhost:63630/blog/books/third-pillar-rajan/</guid>
       <description>On the balance between state, market, and community. Rajan argues that economics has neglected the local community to its peril.</description>
     </item>
   </channel>

@@ -9,6 +9,6 @@ description: "A history of interest rates from ancient Mesopotamia to the post-2
 showToc: false
 ---
 
-{{< bookcover title="The Price of Time" author="Edward Chancellor" year="2024" tags="economics, interest-rates, monetary-policy, history" >}}
+{{< bookcover title="The Price of Time" author="Edward Chancellor" year="2024" img="/images/book_img.png" >}}
 
 A history of interest rates from ancient Mesopotamia to the post-2008 era of near-zero rates. Makes a compelling case that cheap money has deep and lasting consequences.

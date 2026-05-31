@@ -8,7 +8,7 @@ description: "Sebastian Mallaby's account of Demis Hassabis and the race to buil
 showToc: false
 ---
 
-{{< bookcover title="The Infinity Machine: Demis Hassabis, DeepMind and the Quest for Superintelligence" author="Sebastian Mallaby" year="2025" tags="AI, machine-learning, biography, DeepMind" >}}
+{{< bookcover title="The Infinity Machine: Demis Hassabis, DeepMind and the Quest for Superintelligence" author="Sebastian Mallaby" year="2025" img="/images/book_img.png" >}}
 
 Sebastian Mallaby — the same writer who gave us the best account of the hedge fund industry in *More Money Than God* — turns his attention to Demis Hassabis and DeepMind. Mallaby had three years of unprecedented access, which in practice means Hassabis wanted this book written. That is itself an interesting data point.
 
@@ -21,6 +21,8 @@ What makes this worth reading is Mallaby's framing. This is a book about intelli
 Read alongside *Determined* by Sapolsky for a useful corrective on what intelligence actually is.
 
 I was working on repeating the famous Atari machine learning project from scratch. I was aware of it, and was trying to DIY it from scratch. Not so easy as it turns out. Well, if I had managed it in 2016, I'd be up $150m. I didn't so bad luck. But the book covers the back story of this in detail. I am glad I read this book just for the impact on that little project. They were geniuses, and had a lot of compute. I have neither. I feel less bad about my simplified version now.
+
+We are living through the change in an era, which is not always obvious at the time. Topic for another post.
 
 *Key Observations:*
 - Its a great snapshot of a key moment in time. In decades to come this will be a reference text.

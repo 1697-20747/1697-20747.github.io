@@ -9,7 +9,7 @@ description: "Hard sci-fi on a grand scale. Starts with China's Cultural Revolut
 showToc: false
 ---
 
-{{< bookcover title="The Three-Body Problem (series)" author="Liu Cixin" year="2024" tags="sci-fi, fiction, physics" >}}
+{{< bookcover title="The Three-Body Problem (series)" author="Liu Cixin" year="2024" img="/images/book_img.png" >}}
 
 Hard sci-fi on a grand scale. Starts with China's Cultural Revolution and ends at the edge of the universe. The second book, *The Dark Forest*, is the best of the three. Patience pays off.
 

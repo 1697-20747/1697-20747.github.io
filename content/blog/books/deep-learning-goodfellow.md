@@ -9,7 +9,7 @@ description: "THE textbook. Rigorous mathematical treatment of neural networks f
 showToc: false
 ---
 
-{{< bookcover title="Deep Learning" author="Ian Goodfellow, Yoshua Bengio & Aaron Courville" year="2024" tags="machine-learning, AI, mathematics, neural-networks" >}}
+{{< bookcover title="Deep Learning" author="Ian Goodfellow, Yoshua Bengio & Aaron Courville" year="2024" img="/images/book_img.png" >}}
 
 THE textbook. Rigorous mathematical treatment of neural networks from first principles. Not a tutorial — a foundation. Available free at [deeplearningbook.org](https://www.deeplearningbook.org).
 

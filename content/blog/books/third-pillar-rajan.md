@@ -9,7 +9,7 @@ description: "On the balance between state, market, and community. Rajan argues 
 showToc: false
 ---
 
-{{< bookcover title="The Third Pillar" author="Raghuram Rajan" year="2024" tags="economics, banking, community, policy" >}}
+{{< bookcover title="The Third Pillar" author="Raghuram Rajan" year="2024" img="/images/book_img.png" >}}
 
 On the balance between state, market, and community. Rajan argues that economics has neglected the local community to its peril. Thoughtful and underread.
 

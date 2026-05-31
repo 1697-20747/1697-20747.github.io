@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>[1697, 20747]</title>
-    <link>http://localhost:1313/about/</link>
+    <link>http://localhost:63630/about/</link>
     <description>Recent content on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <atom:link href="http://localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:63630/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>http://localhost:1313/about/about_index/</link>
+      <link>http://localhost:63630/about/about_index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/about_index/</guid>
+      <guid>http://localhost:63630/about/about_index/</guid>
       <description>&lt;p&gt;This is a personal site. The writing here covers economics, data analytics, computer science, credit risk, philosophy, and whatever else earns a place. The posts are notes made public — working through ideas, not finished arguments.&lt;/p&gt;
 &lt;h2 id=&#34;the-day-job&#34;&gt;The day job&lt;/h2&gt;
 &lt;p&gt;Finance. Primarily credit — analysis, structure, the forensics of how things fail. If you have spent time reading financial statements with genuine scepticism rather than confirmation bias, you will find some common ground here.&lt;/p&gt;</description>

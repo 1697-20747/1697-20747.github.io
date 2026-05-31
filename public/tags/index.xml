@@ -205,6 +205,27 @@
       <description></description>
     </item>
     <item>
+      <title>History</title>
+      <link>http://localhost:1313/tags/history/</link>
+      <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/history/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rate-of-Change</title>
+      <link>http://localhost:1313/tags/rate-of-change/</link>
+      <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/rate-of-change/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Technology</title>
+      <link>http://localhost:1313/tags/technology/</link>
+      <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/technology/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Biography</title>
       <link>http://localhost:1313/tags/biography/</link>
       <pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate>
@@ -412,13 +433,6 @@
       <link>http://localhost:1313/tags/classics/</link>
       <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/classics/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>History</title>
-      <link>http://localhost:1313/tags/history/</link>
-      <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/history/</guid>
       <description></description>
     </item>
     <item>
@@ -755,6 +769,20 @@
       <link>http://localhost:1313/tags/military/</link>
       <pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/military/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Learning</title>
+      <link>http://localhost:1313/tags/learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Thought</title>
+      <link>http://localhost:1313/tags/thought/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/thought/</guid>
       <description></description>
     </item>
   </channel>

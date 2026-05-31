@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Crisis on [1697, 20747]</title>
-    <link>http://localhost:1313/tags/crisis/</link>
+    <link>http://localhost:63630/tags/crisis/</link>
     <description>Recent content in Crisis on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
     <lastBuildDate>Wed, 17 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/crisis/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:63630/tags/crisis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Stress Test: Reflections on Financial Crises</title>
-      <link>http://localhost:1313/blog/books/stress-test-geithner/</link>
+      <link>http://localhost:63630/blog/books/stress-test-geithner/</link>
       <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/stress-test-geithner/</guid>
+      <guid>http://localhost:63630/blog/books/stress-test-geithner/</guid>
       <description>The former U.S. Treasury Secretary&amp;#39;s candid account of navigating the 2008 financial crisis from the inside.</description>
     </item>
   </channel>

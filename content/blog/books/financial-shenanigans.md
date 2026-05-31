@@ -9,7 +9,7 @@ description: "How companies manipulate earnings and cash flow statements. Forens
 showToc: false
 ---
 
-{{< bookcover title="Financial Shenanigans" author="Howard Schilit" year="2024" tags="finance, accounting, fraud, credit-analysis" >}}
+{{< bookcover title="Financial Shenanigans" author="Howard Schilit" year="2024" img="/images/book_img.png" >}}
 
 How companies manipulate earnings and cash flow statements. Forensic accounting made readable. Will permanently change how you read a 10-K.
 

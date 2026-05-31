@@ -9,7 +9,7 @@ description: "Montgomery's own account of warfare from ancient times to the mid-
 showToc: false
 ---
 
-{{< bookcover title="A Concise History of Warfare" author="Field Marshal Montgomery" year="2024" tags="leadership, military, strategy, history" >}}
+{{< bookcover title="A Concise History of Warfare" author="Field Marshal Montgomery" year="2024" img="/images/book_img.png" >}}
 
 Montgomery's own account of warfare from ancient times to the mid-twentieth century, written with the authority of a man who commanded armies across North Africa and Northwest Europe. Clear-eyed on strategy, leadership, and the recurring mistakes that commanders make across centuries.
 

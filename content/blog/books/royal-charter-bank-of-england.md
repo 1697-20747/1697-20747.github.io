@@ -9,7 +9,7 @@ description: "The founding document of modern public finance and central banking
 showToc: false
 ---
 
-{{< bookcover title="The Royal Charter of the Bank of England (1694)" author="William III / Parliament" year="2024" tags="central-banking, history, public-finance, UK" >}}
+{{< bookcover title="The Royal Charter of the Bank of England (1694)" author="William III / Parliament" year="2024" img="/images/book_img.png" >}}
 
 The Bank of England was constituted by Royal Charter granted by William III in 1694. The Charter emerged from a straightforward transaction — a syndicate of merchants led by William Paterson agreed to lend £1.2 million to a cash-strapped Crown at 8% interest, and in return received the right to incorporate as a bank with the power to issue notes, hold deposits, and extend credit.
 

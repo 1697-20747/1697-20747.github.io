@@ -9,7 +9,7 @@ description: "The foundational text on central banking. Written in 1873, Bagehot
 showToc: false
 ---
 
-{{< bookcover title="Lombard Street" author="Walter Bagehot" year="2024" tags="central-banking, economics, history, classic" >}}
+{{< bookcover title="Lombard Street" author="Walter Bagehot" year="2024" img="/images/book_img.png" >}}
 
 The foundational text on central banking. Written in 1873, Bagehot explains how the Bank of England should act as lender of last resort during financial panics — lend freely, at high rates, against good collateral. Every financial crisis since has been measured against whether policymakers followed his prescription.
 

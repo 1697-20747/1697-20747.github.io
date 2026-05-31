@@ -2,80 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>History on [1697, 20747]</title>
-    <link>http://localhost:1313/tags/history/</link>
+    <link>http://localhost:63630/tags/history/</link>
     <description>Recent content in History on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 01 Feb 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/history/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:63630/tags/history/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>It&#39;s Time for a Change</title>
+      <link>http://localhost:63630/blog/economics/its-time-for-a-change/</link>
+      <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:63630/blog/economics/its-time-for-a-change/</guid>
+      <description>The rate of change across human history is not linear. It is accelerating. Two tables tell the story better than most essays.</description>
+    </item>
     <item>
       <title>SPQR</title>
-      <link>http://localhost:1313/blog/books/spqr-beard/</link>
+      <link>http://localhost:63630/blog/books/spqr-beard/</link>
       <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/spqr-beard/</guid>
+      <guid>http://localhost:63630/blog/books/spqr-beard/</guid>
       <description>A history of Rome that focuses on how Rome worked as a society rather than just the emperors and battles.</description>
     </item>
     <item>
       <title>Life Is Simple</title>
-      <link>http://localhost:1313/blog/books/life-is-simple-mcfadden/</link>
+      <link>http://localhost:63630/blog/books/life-is-simple-mcfadden/</link>
       <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/life-is-simple-mcfadden/</guid>
+      <guid>http://localhost:63630/blog/books/life-is-simple-mcfadden/</guid>
       <description>The story of Occam&amp;#39;s Razor and how the principle of simplicity drove scientific revolutions from Copernicus to Einstein to quantum mechanics.</description>
     </item>
     <item>
       <title>Money: The Unauthorised Biography</title>
-      <link>http://localhost:1313/blog/books/money-ferguson/</link>
+      <link>http://localhost:63630/blog/books/money-ferguson/</link>
       <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/money-ferguson/</guid>
+      <guid>http://localhost:63630/blog/books/money-ferguson/</guid>
       <description>A sweeping history of money from ancient clay tablets to modern finance.</description>
     </item>
     <item>
       <title>Debt: The First 5,000 Years</title>
-      <link>http://localhost:1313/blog/books/debt-graeber/</link>
+      <link>http://localhost:63630/blog/books/debt-graeber/</link>
       <pubDate>Mon, 22 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/debt-graeber/</guid>
+      <guid>http://localhost:63630/blog/books/debt-graeber/</guid>
       <description>An anthropologist upends everything you thought you knew about money, barter, and debt.</description>
     </item>
     <item>
       <title>Crashed: How a Decade of Financial Crises Changed the World</title>
-      <link>http://localhost:1313/blog/books/crashed-tooze/</link>
+      <link>http://localhost:63630/blog/books/crashed-tooze/</link>
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/crashed-tooze/</guid>
+      <guid>http://localhost:63630/blog/books/crashed-tooze/</guid>
       <description>A sweeping global history of the 2008 crash and its long political aftershocks — from austerity in Europe to the rise of populism.</description>
     </item>
     <item>
       <title>Challenger: A True Story of Heroism and Disaster on the Edge of Space</title>
-      <link>http://localhost:1313/blog/books/challenger-higginbotham/</link>
+      <link>http://localhost:63630/blog/books/challenger-higginbotham/</link>
       <pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/challenger-higginbotham/</guid>
+      <guid>http://localhost:63630/blog/books/challenger-higginbotham/</guid>
       <description>A gripping account of the 1986 Space Shuttle Challenger disaster, revealing the human failures and institutional pressure behind one of history&amp;#39;s most watched tragedies.</description>
     </item>
     <item>
       <title>The Royal Charter of the Bank of England (1694)</title>
-      <link>http://localhost:1313/blog/books/royal-charter-bank-of-england/</link>
+      <link>http://localhost:63630/blog/books/royal-charter-bank-of-england/</link>
       <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/royal-charter-bank-of-england/</guid>
+      <guid>http://localhost:63630/blog/books/royal-charter-bank-of-england/</guid>
       <description>The founding document of modern public finance and central banking, establishing the world&amp;#39;s first funded national debt.</description>
     </item>
     <item>
       <title>Lombard Street</title>
-      <link>http://localhost:1313/blog/books/lombard-street-bagehot/</link>
+      <link>http://localhost:63630/blog/books/lombard-street-bagehot/</link>
       <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/lombard-street-bagehot/</guid>
+      <guid>http://localhost:63630/blog/books/lombard-street-bagehot/</guid>
       <description>The foundational text on central banking. Written in 1873, Bagehot explains how the Bank of England should act as lender of last resort.</description>
     </item>
     <item>
       <title>The Price of Time</title>
-      <link>http://localhost:1313/blog/books/price-of-time-chancellor/</link>
+      <link>http://localhost:63630/blog/books/price-of-time-chancellor/</link>
       <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/price-of-time-chancellor/</guid>
+      <guid>http://localhost:63630/blog/books/price-of-time-chancellor/</guid>
       <description>A history of interest rates from ancient Mesopotamia to the post-2008 era of near-zero rates.</description>
     </item>
     <item>
       <title>A Concise History of Warfare</title>
-      <link>http://localhost:1313/blog/books/concise-history-of-warfare/</link>
+      <link>http://localhost:63630/blog/books/concise-history-of-warfare/</link>
       <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/concise-history-of-warfare/</guid>
+      <guid>http://localhost:63630/blog/books/concise-history-of-warfare/</guid>
       <description>Montgomery&amp;#39;s own account of warfare from ancient times to the mid-twentieth century, written with the authority of a man who commanded armies across North Africa and Northwest Europe.</description>
     </item>
   </channel>

@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Machine-Learning on [1697, 20747]</title>
-    <link>http://localhost:1313/tags/machine-learning/</link>
+    <link>http://localhost:63630/tags/machine-learning/</link>
     <description>Recent content in Machine-Learning on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
     <lastBuildDate>Fri, 22 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:63630/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Socio-Economic Credit Models: The Future of Fair Lending</title>
-      <link>http://localhost:1313/blog/economics/socio-economic-credit-models/</link>
+      <link>http://localhost:63630/blog/economics/socio-economic-credit-models/</link>
       <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/economics/socio-economic-credit-models/</guid>
+      <guid>http://localhost:63630/blog/economics/socio-economic-credit-models/</guid>
       <description>How integrating gender equality and regional context data can improve credit scoring, expand market access, and demonstrate fair lending practices.</description>
     </item>
     <item>
       <title>Building a Securitisation Pool Optimiser -- Part 2: Code, Design and Deal Structure</title>
-      <link>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser-part-2/</link>
+      <link>http://localhost:63630/blog/comp-science/securitisation-pool-optomiser-part-2/</link>
       <pubDate>Wed, 20 May 2026 07:28:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser-part-2/</guid>
+      <guid>http://localhost:63630/blog/comp-science/securitisation-pool-optomiser-part-2/</guid>
       <description>Code inventory, IRS swap, BoE compliance, Fitch alignment, and the full RMBS deal structure.</description>
     </item>
     <item>
       <title>Building a Securitisation Pool Optimiser -- Part 1: Architecture and Pipeline</title>
-      <link>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser/</link>
+      <link>http://localhost:63630/blog/comp-science/securitisation-pool-optomiser/</link>
       <pubDate>Wed, 20 May 2026 07:27:29 +0000</pubDate>
-      <guid>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser/</guid>
+      <guid>http://localhost:63630/blog/comp-science/securitisation-pool-optomiser/</guid>
       <description>How we built an ML-driven pool selection engine that maximises Class A note issuance from a 20,000-loan warehouse using simulated annealing and adaptive Monte Carlo.</description>
     </item>
     <item>
       <title>The Infinity Machine: Demis Hassabis, DeepMind and the Quest for Superintelligence</title>
-      <link>http://localhost:1313/blog/books/the-infinity-machine/</link>
+      <link>http://localhost:63630/blog/books/the-infinity-machine/</link>
       <pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/the-infinity-machine/</guid>
+      <guid>http://localhost:63630/blog/books/the-infinity-machine/</guid>
       <description>Sebastian Mallaby&amp;#39;s account of Demis Hassabis and the race to build machine intelligence. The biography the subject actually wanted written.</description>
     </item>
     <item>
       <title>Deep Learning</title>
-      <link>http://localhost:1313/blog/books/deep-learning-goodfellow/</link>
+      <link>http://localhost:63630/blog/books/deep-learning-goodfellow/</link>
       <pubDate>Thu, 25 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/deep-learning-goodfellow/</guid>
+      <guid>http://localhost:63630/blog/books/deep-learning-goodfellow/</guid>
       <description>THE textbook. Rigorous mathematical treatment of neural networks from first principles. Available free at deeplearningbook.org.</description>
     </item>
   </channel>

@@ -9,7 +9,7 @@ description: "The story of Occam's Razor and how the principle of simplicity dro
 showToc: false
 ---
 
-{{< bookcover title="Life Is Simple" author="Johnjoe McFadden" year="2024" tags="science, history, philosophy, simplicity" >}}
+{{< bookcover title="Life Is Simple" author="Johnjoe McFadden" year="2024" img="/images/book_img.png" >}}
 
 The story of Occam's Razor and how the principle of simplicity drove scientific revolutions from Copernicus to Einstein to quantum mechanics. Beautifully written.
 
