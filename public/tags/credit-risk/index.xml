@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Credit-Risk on [1697, 20747]</title>
-    <link>http://localhost:1313/tags/credit-risk/</link>
+    <link>http://localhost:63630/tags/credit-risk/</link>
     <description>Recent content in Credit-Risk on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
     <lastBuildDate>Mon, 25 May 2026 18:02:38 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/credit-risk/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:63630/tags/credit-risk/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Llm Credit Paper Generator</title>
-      <link>http://localhost:1313/blog/comp-science/llm-credit-paper-generator/</link>
+      <link>http://localhost:63630/blog/comp-science/llm-credit-paper-generator/</link>
       <pubDate>Mon, 25 May 2026 18:02:38 +0000</pubDate>
-      <guid>http://localhost:1313/blog/comp-science/llm-credit-paper-generator/</guid>
+      <guid>http://localhost:63630/blog/comp-science/llm-credit-paper-generator/</guid>
       <description>Credit paper by LLM. Easy??? Well, not so much as it turns out.</description>
     </item>
     <item>
       <title>Its Lonely At The Bottom</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/its-lonely-at-the-bottom/</link>
+      <link>http://localhost:63630/blog/unhelpful-advice/its-lonely-at-the-bottom/</link>
       <pubDate>Sat, 09 May 2026 07:51:37 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/its-lonely-at-the-bottom/</guid>
+      <guid>http://localhost:63630/blog/unhelpful-advice/its-lonely-at-the-bottom/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;Never be wrong on your own&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;John Maynard Keynes&lt;/p&gt;
@@ -28,16 +28,16 @@
     </item>
     <item>
       <title>Un consolidating Consolidated Accounting, or a day trip to the Casino</title>
-      <link>http://localhost:1313/blog/credit-risk/un-consolidating-consolidated-accounting/</link>
+      <link>http://localhost:63630/blog/credit-risk/un-consolidating-consolidated-accounting/</link>
       <pubDate>Sun, 22 Mar 2026 11:16:02 +0000</pubDate>
-      <guid>http://localhost:1313/blog/credit-risk/un-consolidating-consolidated-accounting/</guid>
+      <guid>http://localhost:63630/blog/credit-risk/un-consolidating-consolidated-accounting/</guid>
       <description>Accounting tricks to be wary of</description>
     </item>
     <item>
       <title>Enron: A Look Back</title>
-      <link>http://localhost:1313/blog/credit-risk/enron-a-look-back/</link>
+      <link>http://localhost:63630/blog/credit-risk/enron-a-look-back/</link>
       <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/credit-risk/enron-a-look-back/</guid>
+      <guid>http://localhost:63630/blog/credit-risk/enron-a-look-back/</guid>
       <description>Enron did not collapse because of a few bad actors. It collapsed because an entire ecosystem of supposedly intelligent, well-paid professionals chose not to see what was in front of them.</description>
     </item>
   </channel>

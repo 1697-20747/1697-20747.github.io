@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Economics on [1697, 20747]</title>
-    <link>http://localhost:1313/tags/economics/</link>
+    <link>http://localhost:63630/tags/economics/</link>
     <description>Recent content in Economics on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
     <lastBuildDate>Wed, 24 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/economics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:63630/tags/economics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Money: The Unauthorised Biography</title>
-      <link>http://localhost:1313/blog/books/money-ferguson/</link>
+      <link>http://localhost:63630/blog/books/money-ferguson/</link>
       <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/money-ferguson/</guid>
+      <guid>http://localhost:63630/blog/books/money-ferguson/</guid>
       <description>A sweeping history of money from ancient clay tablets to modern finance.</description>
     </item>
     <item>
       <title>Radical Uncertainty: Decision-Making Beyond the Numbers</title>
-      <link>http://localhost:1313/blog/books/radical-uncertainty-king-kay/</link>
+      <link>http://localhost:63630/blog/books/radical-uncertainty-king-kay/</link>
       <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/radical-uncertainty-king-kay/</guid>
+      <guid>http://localhost:63630/blog/books/radical-uncertainty-king-kay/</guid>
       <description>Two British economists argue that most real-world decisions can&amp;#39;t be reduced to probability and models.</description>
     </item>
     <item>
       <title>Debt: The First 5,000 Years</title>
-      <link>http://localhost:1313/blog/books/debt-graeber/</link>
+      <link>http://localhost:63630/blog/books/debt-graeber/</link>
       <pubDate>Mon, 22 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/debt-graeber/</guid>
+      <guid>http://localhost:63630/blog/books/debt-graeber/</guid>
       <description>An anthropologist upends everything you thought you knew about money, barter, and debt.</description>
     </item>
     <item>
       <title>Growth: A Reckoning</title>
-      <link>http://localhost:1313/blog/books/growth-susskind/</link>
+      <link>http://localhost:63630/blog/books/growth-susskind/</link>
       <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/growth-susskind/</guid>
+      <guid>http://localhost:63630/blog/books/growth-susskind/</guid>
       <description>A rigorous challenge to the assumption that economic growth is always good or always necessary.</description>
     </item>
     <item>
       <title>Crashed: How a Decade of Financial Crises Changed the World</title>
-      <link>http://localhost:1313/blog/books/crashed-tooze/</link>
+      <link>http://localhost:63630/blog/books/crashed-tooze/</link>
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/crashed-tooze/</guid>
+      <guid>http://localhost:63630/blog/books/crashed-tooze/</guid>
       <description>A sweeping global history of the 2008 crash and its long political aftershocks — from austerity in Europe to the rise of populism.</description>
     </item>
     <item>
       <title>Stress Test: Reflections on Financial Crises</title>
-      <link>http://localhost:1313/blog/books/stress-test-geithner/</link>
+      <link>http://localhost:63630/blog/books/stress-test-geithner/</link>
       <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/stress-test-geithner/</guid>
+      <guid>http://localhost:63630/blog/books/stress-test-geithner/</guid>
       <description>The former U.S. Treasury Secretary&amp;#39;s candid account of navigating the 2008 financial crisis from the inside.</description>
     </item>
     <item>
       <title>Lombard Street</title>
-      <link>http://localhost:1313/blog/books/lombard-street-bagehot/</link>
+      <link>http://localhost:63630/blog/books/lombard-street-bagehot/</link>
       <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/lombard-street-bagehot/</guid>
+      <guid>http://localhost:63630/blog/books/lombard-street-bagehot/</guid>
       <description>The foundational text on central banking. Written in 1873, Bagehot explains how the Bank of England should act as lender of last resort.</description>
     </item>
     <item>
       <title>On Competition</title>
-      <link>http://localhost:1313/blog/books/on-competition-porter/</link>
+      <link>http://localhost:63630/blog/books/on-competition-porter/</link>
       <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/on-competition-porter/</guid>
+      <guid>http://localhost:63630/blog/books/on-competition-porter/</guid>
       <description>Porter&amp;#39;s collected essays on competitive strategy, clusters, and national competitiveness.</description>
     </item>
     <item>
       <title>The Price of Time</title>
-      <link>http://localhost:1313/blog/books/price-of-time-chancellor/</link>
+      <link>http://localhost:63630/blog/books/price-of-time-chancellor/</link>
       <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/price-of-time-chancellor/</guid>
+      <guid>http://localhost:63630/blog/books/price-of-time-chancellor/</guid>
       <description>A history of interest rates from ancient Mesopotamia to the post-2008 era of near-zero rates.</description>
     </item>
     <item>
       <title>The Third Pillar</title>
-      <link>http://localhost:1313/blog/books/third-pillar-rajan/</link>
+      <link>http://localhost:63630/blog/books/third-pillar-rajan/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/third-pillar-rajan/</guid>
+      <guid>http://localhost:63630/blog/books/third-pillar-rajan/</guid>
       <description>On the balance between state, market, and community. Rajan argues that economics has neglected the local community to its peril.</description>
     </item>
     <item>
       <title>Keeping At It: The Quest for Sound Money and Good Government</title>
-      <link>http://localhost:1313/blog/books/keeping-at-it-volcker/</link>
+      <link>http://localhost:63630/blog/books/keeping-at-it-volcker/</link>
       <pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/keeping-at-it-volcker/</guid>
+      <guid>http://localhost:63630/blog/books/keeping-at-it-volcker/</guid>
       <description>Paul Volcker&amp;#39;s memoir on his fight for sound money and the independence of central banks.</description>
     </item>
     <item>
       <title>Euro</title>
-      <link>http://localhost:1313/blog/books/euro-stiglitz/</link>
+      <link>http://localhost:63630/blog/books/euro-stiglitz/</link>
       <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/euro-stiglitz/</guid>
+      <guid>http://localhost:63630/blog/books/euro-stiglitz/</guid>
       <description>A rigorous critique of the eurozone&amp;#39;s structural flaws from a Nobel laureate.</description>
     </item>
     <item>
       <title>Irrational Exuberance</title>
-      <link>http://localhost:1313/blog/books/irrational-exuberance/</link>
+      <link>http://localhost:63630/blog/books/irrational-exuberance/</link>
       <pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/books/irrational-exuberance/</guid>
+      <guid>http://localhost:63630/blog/books/irrational-exuberance/</guid>
       <description>The definitive account of speculative bubbles. Shiller called the dot-com peak and the housing crisis.</description>
     </item>
   </channel>

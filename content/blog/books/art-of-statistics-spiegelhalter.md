@@ -9,7 +9,7 @@ description: "How to think with data rather than be misled by it. A guide to ask
 showToc: false
 ---
 
-{{< bookcover title="The Art of Statistics" author="David Spiegelhalter" year="2024" tags="statistics, data, mathematics, decision-making" >}}
+{{< bookcover title="The Art of Statistics" author="David Spiegelhalter" year="2024" img="/images/book_img.png" >}}
 
 How to think with data rather than be misled by it. Cambridge statistician Spiegelhalter walks through the essential principles of statistical reasoning using real-world cases — serial killers, cancer screening, hospital survival rates — to show where statistics illuminate and where they deceive. Less a technical manual than a guide to asking the right questions before trusting any number you are given.
 

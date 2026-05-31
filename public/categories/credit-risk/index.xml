@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Credit-Risk on [1697, 20747]</title>
-    <link>http://localhost:1313/categories/credit-risk/</link>
+    <link>http://localhost:63630/categories/credit-risk/</link>
     <description>Recent content in Credit-Risk on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
     <lastBuildDate>Tue, 19 May 2026 14:33:03 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/credit-risk/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:63630/categories/credit-risk/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>EBITDA Or EBITDont</title>
-      <link>http://localhost:1313/blog/credit-risk/ebitda-or-ebitdont/</link>
+      <link>http://localhost:63630/blog/credit-risk/ebitda-or-ebitdont/</link>
       <pubDate>Tue, 19 May 2026 14:33:03 +0000</pubDate>
-      <guid>http://localhost:1313/blog/credit-risk/ebitda-or-ebitdont/</guid>
+      <guid>http://localhost:63630/blog/credit-risk/ebitda-or-ebitdont/</guid>
       <description>The potential perils of a mis understood metric</description>
     </item>
     <item>
       <title>Mfs Collapse</title>
-      <link>http://localhost:1313/blog/credit-risk/mfs-collapse/</link>
+      <link>http://localhost:63630/blog/credit-risk/mfs-collapse/</link>
       <pubDate>Tue, 28 Apr 2026 19:36:06 +0000</pubDate>
-      <guid>http://localhost:1313/blog/credit-risk/mfs-collapse/</guid>
+      <guid>http://localhost:63630/blog/credit-risk/mfs-collapse/</guid>
       <description>Low risk high return becomes no return high risk</description>
     </item>
     <item>
       <title>Details Matter</title>
-      <link>http://localhost:1313/blog/credit-risk/details-matter/</link>
+      <link>http://localhost:63630/blog/credit-risk/details-matter/</link>
       <pubDate>Sat, 25 Apr 2026 09:10:22 +0000</pubDate>
-      <guid>http://localhost:1313/blog/credit-risk/details-matter/</guid>
+      <guid>http://localhost:63630/blog/credit-risk/details-matter/</guid>
       <description>A sovereign wealth fund paid $800 million for the Chrysler Building in 2008 and sold it a decade later for $150 million, largely because a punishing ground lease made the building structurally unprofitable for any owner. The buyers fared no better — one went bankrupt, the other defaulted on rent — and a New York court terminated their lease in 2024, leaving the building worth less than ever and the land owner, Cooper Union, back in control.</description>
     </item>
     <item>
       <title>Un consolidating Consolidated Accounting, or a day trip to the Casino</title>
-      <link>http://localhost:1313/blog/credit-risk/un-consolidating-consolidated-accounting/</link>
+      <link>http://localhost:63630/blog/credit-risk/un-consolidating-consolidated-accounting/</link>
       <pubDate>Sun, 22 Mar 2026 11:16:02 +0000</pubDate>
-      <guid>http://localhost:1313/blog/credit-risk/un-consolidating-consolidated-accounting/</guid>
+      <guid>http://localhost:63630/blog/credit-risk/un-consolidating-consolidated-accounting/</guid>
       <description>Accounting tricks to be wary of</description>
     </item>
     <item>
       <title>One Ring to Rule them All....</title>
-      <link>http://localhost:1313/blog/credit-risk/one-ring-to-rule-them-all/</link>
+      <link>http://localhost:63630/blog/credit-risk/one-ring-to-rule-them-all/</link>
       <pubDate>Sat, 21 Mar 2026 22:07:39 +0000</pubDate>
-      <guid>http://localhost:1313/blog/credit-risk/one-ring-to-rule-them-all/</guid>
+      <guid>http://localhost:63630/blog/credit-risk/one-ring-to-rule-them-all/</guid>
       <description>Mapping CRR exposures against legal entity hierarchy from legacy systems. A dynamic overlay approach to maintain full data integrity</description>
     </item>
     <item>
       <title>Enron: A Look Back</title>
-      <link>http://localhost:1313/blog/credit-risk/enron-a-look-back/</link>
+      <link>http://localhost:63630/blog/credit-risk/enron-a-look-back/</link>
       <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/credit-risk/enron-a-look-back/</guid>
+      <guid>http://localhost:63630/blog/credit-risk/enron-a-look-back/</guid>
       <description>Enron did not collapse because of a few bad actors. It collapsed because an entire ecosystem of supposedly intelligent, well-paid professionals chose not to see what was in front of them.</description>
     </item>
   </channel>

@@ -9,6 +9,6 @@ description: "A rigorous challenge to the assumption that economic growth is alw
 showToc: false
 ---
 
-{{< bookcover title="Growth: A Reckoning" author="Daniel Susskind" year="2024" tags="economics, policy, growth" >}}
+{{< bookcover title="Growth: A Reckoning" author="Daniel Susskind" year="2024" img="/images/book_img.png" >}}
 
 A rigorous challenge to the assumption that economic growth is always good or always necessary. Susskind asks what we actually want from our economies — and whether growth is still the right answer.

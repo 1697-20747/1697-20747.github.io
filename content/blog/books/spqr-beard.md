@@ -9,7 +9,7 @@ description: "A history of Rome that focuses on how Rome worked as a society rat
 showToc: false
 ---
 
-{{< bookcover title="SPQR" author="Mary Beard" year="2024" tags="history, rome, classics, society" >}}
+{{< bookcover title="SPQR" author="Mary Beard" year="2024" img="/images/book_img.png" >}}
 
 A history of Rome that focuses on how Rome worked as a society rather than just the emperors and battles. Beard is a brilliant classicist and a sharp writer.
 

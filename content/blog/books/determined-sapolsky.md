@@ -9,7 +9,7 @@ description: "Sapolsky's follow-up makes the full case against free will. Provoc
 showToc: false
 ---
 
-{{< bookcover title="Determined" author="Robert Sapolsky" year="2024" tags="neuroscience, free-will, philosophy, psychology" >}}
+{{< bookcover title="Determined" author="Robert Sapolsky" year="2024" img="/images/book_img.png" >}}
 
 Sapolsky's follow-up makes the full case against free will. Provocative, rigorous, and uncomfortable. Read *Behave* first.
 

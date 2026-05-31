@@ -9,6 +9,6 @@ description: "A gripping account of the 1986 Space Shuttle Challenger disaster, 
 showToc: false
 ---
 
-{{< bookcover title="Challenger: A True Story of Heroism and Disaster on the Edge of Space" author="Adam Higginbotham" year="2024" tags="history, space, engineering, leadership" >}}
+{{< bookcover title="Challenger: A True Story of Heroism and Disaster on the Edge of Space" author="Adam Higginbotham" year="2024" img="/images/book_img.png" >}}
 
 A gripping account of the 1986 Space Shuttle Challenger disaster. Draws on decades of interviews and records to reveal the human failures, institutional pressure, and quiet heroism behind one of history's most watched tragedies.

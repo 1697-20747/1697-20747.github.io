@@ -9,6 +9,6 @@ description: "The definitive account of speculative bubbles. Shiller called the 
 showToc: false
 ---
 
-{{< bookcover title="Irrational Exuberance" author="Robert Shiller" year="2024" tags="economics, finance, investing, bubbles" >}}
+{{< bookcover title="Irrational Exuberance" author="Robert Shiller" year="2024" img="/images/book_img.png" >}}
 
 The definitive account of speculative bubbles. Shiller called the dot-com peak and the housing crisis. The third edition adds bond markets. Essential reading before any investment decision.

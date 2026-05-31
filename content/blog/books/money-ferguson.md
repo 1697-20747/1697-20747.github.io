@@ -9,6 +9,6 @@ description: "A sweeping history of money from ancient clay tablets to modern fi
 showToc: false
 ---
 
-{{< bookcover title="Money: The Unauthorised Biography" author="Niall Ferguson" year="2024" tags="economics, history, money, finance" >}}
+{{< bookcover title="Money: The Unauthorised Biography" author="Niall Ferguson" year="2024" img="/images/book_img.png" >}}
 
 A sweeping history of money from ancient clay tablets to modern finance. Ferguson is a fluent guide — opinionated, fast-moving, and never dull.

@@ -9,6 +9,6 @@ description: "An anthropologist upends everything you thought you knew about mon
 showToc: false
 ---
 
-{{< bookcover title="Debt: The First 5,000 Years" author="David Graeber" year="2024" tags="economics, history, anthropology, money" >}}
+{{< bookcover title="Debt: The First 5,000 Years" author="David Graeber" year="2024" img="/images/book_img.png" >}}
 
 An anthropologist upends everything you thought you knew about money, barter, and debt. Provocative, wide-ranging, and impossible to put down once it gets going.

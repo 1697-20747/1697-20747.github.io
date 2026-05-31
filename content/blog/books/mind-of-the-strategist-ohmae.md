@@ -9,6 +9,6 @@ description: "How Japanese strategic thinking differs from Western frameworks. O
 showToc: false
 ---
 
-{{< bookcover title="The Mind of the Strategist" author="Kenichi Ohmae" year="2024" tags="strategy, business, management" >}}
+{{< bookcover title="The Mind of the Strategist" author="Kenichi Ohmae" year="2024" img="/images/book_img.png" >}}
 
 How Japanese strategic thinking differs from Western frameworks. Ohmae argues strategy is more art than analysis. Short, sharp, and still relevant decades after publication.

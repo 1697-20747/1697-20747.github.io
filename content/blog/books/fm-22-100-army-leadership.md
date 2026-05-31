@@ -9,7 +9,7 @@ description: "The official leadership doctrine used in every U.S. Army officer t
 showToc: false
 ---
 
-{{< bookcover title="The U.S. Army Leadership Field Manual (FM 22-100)" author="Department of the Army" year="2024" tags="leadership, military, doctrine" >}}
+{{< bookcover title="The U.S. Army Leadership Field Manual (FM 22-100)" author="Department of the Army" year="2024" img="/images/book_img.png" >}}
 
 The official leadership doctrine used in every U.S. Army officer training programme for over fifty years. Built around the core principle of "Be, Know, Do" — character first, then competence, then action — it covers leadership at every level from squad to strategic command, illustrated with historical vignettes from Marshall to Schwarzkopf. Surprisingly applicable well beyond the military.
 

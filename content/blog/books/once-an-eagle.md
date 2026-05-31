@@ -9,7 +9,7 @@ description: "A sweeping military novel following two officers across decades of
 showToc: false
 ---
 
-{{< bookcover title="Once an Eagle" author="Anton Myrer" year="2024" tags="leadership, military, fiction" >}}
+{{< bookcover title="Once an Eagle" author="Anton Myrer" year="2024" img="/images/book_img.png" >}}
 
 A sweeping military novel following two officers across decades of American wars. One of the finest studies of leadership, character, and moral compromise ever written. Required reading at several US war colleges for good reason.
 
