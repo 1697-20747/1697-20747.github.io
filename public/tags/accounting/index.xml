@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Accounting on [1697, 20747]</title>
-    <link>http://localhost:63630/tags/accounting/</link>
+    <link>http://localhost:1313/tags/accounting/</link>
     <description>Recent content in Accounting on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
     <lastBuildDate>Sun, 15 Mar 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:63630/tags/accounting/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/accounting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Quality of Earnings</title>
-      <link>http://localhost:63630/blog/books/quality-of-earnings/</link>
+      <link>http://localhost:1313/blog/books/quality-of-earnings/</link>
       <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63630/blog/books/quality-of-earnings/</guid>
+      <guid>http://localhost:1313/blog/books/quality-of-earnings/</guid>
       <description>The bible of forensic accounting. How to read what companies are actually telling you, versus what they want you to think.</description>
     </item>
     <item>
       <title>Enron: A Look Back</title>
-      <link>http://localhost:63630/blog/credit-risk/enron-a-look-back/</link>
+      <link>http://localhost:1313/blog/credit-risk/enron-a-look-back/</link>
       <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63630/blog/credit-risk/enron-a-look-back/</guid>
+      <guid>http://localhost:1313/blog/credit-risk/enron-a-look-back/</guid>
       <description>Enron did not collapse because of a few bad actors. It collapsed because an entire ecosystem of supposedly intelligent, well-paid professionals chose not to see what was in front of them.</description>
     </item>
     <item>
       <title>The Smartest Guys in the Room: The Amazing Rise and Scandalous Fall of Enron</title>
-      <link>http://localhost:63630/blog/books/smartest-guys-in-the-room/</link>
+      <link>http://localhost:1313/blog/books/smartest-guys-in-the-room/</link>
       <pubDate>Fri, 19 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63630/blog/books/smartest-guys-in-the-room/</guid>
+      <guid>http://localhost:1313/blog/books/smartest-guys-in-the-room/</guid>
       <description>The definitive account of Enron&amp;#39;s collapse. A story of arrogance, fraud, and a culture where looking smart mattered more than being honest.</description>
     </item>
     <item>
       <title>Financial Shenanigans</title>
-      <link>http://localhost:63630/blog/books/financial-shenanigans/</link>
+      <link>http://localhost:1313/blog/books/financial-shenanigans/</link>
       <pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63630/blog/books/financial-shenanigans/</guid>
+      <guid>http://localhost:1313/blog/books/financial-shenanigans/</guid>
       <description>How companies manipulate earnings and cash flow statements. Forensic accounting made readable. Will permanently change how you read a 10-K.</description>
     </item>
   </channel>

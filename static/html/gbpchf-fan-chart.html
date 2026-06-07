@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GBP/CHF Fan Chart 1987–2007</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background-color: #0f1117;
+    color: #e2e8f0;
+    font-family: 'Georgia', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 24px;
+  }
+  .chart-container {
+    width: 100%;
+    max-width: 820px;
+    background: #1a1d2e;
+    border: 1px solid #2d3155;
+    border-radius: 4px;
+    padding: 28px 28px 20px 28px;
+  }
+  h2 {
+    font-size: 1.05rem;
+    font-weight: normal;
+    color: #c8d0e0;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-family: 'Georgia', serif;
+  }
+  .subtitle {
+    font-size: 0.78rem;
+    color: #6b7a9e;
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+  }
+  canvas { display: block; }
+  .source-note {
+    font-size: 0.68rem;
+    color: #4a556b;
+    margin-top: 12px;
+    text-align: right;
+  }
+  .annotation {
+    font-size: 0.72rem;
+    color: #7b8aaa;
+    margin-top: 8px;
+    text-align: center;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+<div class="chart-container">
+  <h2>GBP / CHF — 5-Year Period Fan Chart</h2>
+  <p class="subtitle">CHF per GBP, indexed to 100 at start of each 5-year window &nbsp;|&nbsp; 1987–2007 &nbsp;|&nbsp; IMF/IFS Annual Data</p>
+  <canvas id="fanChart" height="380"></canvas>
+  <p class="annotation">Each fan arm shows how GBP moved against CHF over successive 5-year windows. Converging fans signal increasing CHF strength — visible long before 2007.</p>
+  <p class="source-note">Source: IMF/IFS via UBC Pacific Exchange Rate Service &nbsp;|&nbsp; Annual averages</p>
+</div>
+
+<script>
+// Annual GBP/CHF data (CHF per 1 GBP), IMF/IFS
+// Year: rate
+const annualData = {
+  1987: 2.6369,
+  1988: 2.4369,
+  1989: 2.6029,
+  1990: 2.6767,
+  1991: 2.4666,
+  1992: 2.5290,
+  1993: 2.2161,
+  1994: 2.0931,
+  1995: 1.8661,
+  1996: 1.9284,
+  1997: 2.3759,
+  1998: 2.4011,
+  1999: 2.4304,
+  2000: 2.5552,
+  2001: 2.4294,
+  2002: 2.3360,
+  2003: 2.1987,
+  2004: 2.2767,
+  2005: 2.2640,
+  2006: 2.3070,
+  2007: 2.4018
+};
+
+// Define 5-year windows starting from 1987
+const windows = [
+  { label: '1987–1992', start: 1987, end: 1992, color: '#5c7cfa' },
+  { label: '1992–1997', start: 1992, end: 1997, color: '#4ecdc4' },
+  { label: '1997–2002', start: 1997, end: 2002, color: '#f7c59f' },
+  { label: '2002–2007', start: 2002, end: 2007, color: '#ff6b6b' },
+];
+
+// Build datasets — each window indexed to 100 at its start year
+const xLabels = ['Year 0', 'Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'];
+
+const datasets = windows.map(w => {
+  const base = annualData[w.start];
+  const points = [];
+  for (let y = w.start; y <= w.end; y++) {
+    const val = annualData[y];
+    points.push(val !== undefined ? parseFloat(((val / base) * 100).toFixed(2)) : null);
+  }
+  return {
+    label: w.label,
+    data: points,
+    borderColor: w.color,
+    backgroundColor: w.color + '22',
+    borderWidth: 2.5,
+    pointRadius: 5,
+    pointHoverRadius: 7,
+    pointBackgroundColor: w.color,
+    tension: 0.3,
+    fill: false
+  };
+});
+
+const ctx = document.getElementById('fanChart').getContext('2d');
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: xLabels,
+    datasets: datasets
+  },
+  options: {
+    responsive: true,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: {
+        display: true,
+        position: 'top',
+        labels: {
+          color: '#a0aec0',
+          font: { size: 11, family: 'Georgia' },
+          padding: 14,
+          boxWidth: 14,
+          usePointStyle: true
+        }
+      },
+      tooltip: {
+        backgroundColor: '#1e2130',
+        borderColor: '#3d4570',
+        borderWidth: 1,
+        titleColor: '#c8d0e0',
+        bodyColor: '#8898aa',
+        callbacks: {
+          label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y.toFixed(1)} (indexed)`
+        }
+      }
+    },
+    scales: {
+      x: {
+        grid: { color: '#1e2335', lineWidth: 1 },
+        ticks: {
+          color: '#6b7a9e',
+          font: { size: 11, family: 'Georgia' }
+        },
+        title: {
+          display: true,
+          text: 'Years from period start',
+          color: '#4a556b',
+          font: { size: 11 }
+        }
+      },
+      y: {
+        grid: { color: '#1e2335', lineWidth: 1 },
+        ticks: {
+          color: '#6b7a9e',
+          font: { size: 11, family: 'Georgia' },
+          callback: v => v.toFixed(0)
+        },
+        title: {
+          display: true,
+          text: 'GBP/CHF indexed (base = 100)',
+          color: '#4a556b',
+          font: { size: 11 }
+        },
+        min: 60,
+        max: 130
+      }
+    }
+  }
+});
+</script>
+</body>
+</html>

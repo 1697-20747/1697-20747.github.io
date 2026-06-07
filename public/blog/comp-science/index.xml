@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Comp Science on [1697, 20747]</title>
-    <link>http://localhost:63630/blog/comp-science/</link>
+    <link>http://localhost:1313/blog/comp-science/</link>
     <description>Recent content in Comp Science on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
     <lastBuildDate>Mon, 25 May 2026 18:02:38 +0000</lastBuildDate>
-    <atom:link href="http://localhost:63630/blog/comp-science/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/comp-science/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Llm Credit Paper Generator</title>
-      <link>http://localhost:63630/blog/comp-science/llm-credit-paper-generator/</link>
+      <title>LLM Credit Paper Generator</title>
+      <link>http://localhost:1313/blog/comp-science/llm-credit-paper-generator/</link>
       <pubDate>Mon, 25 May 2026 18:02:38 +0000</pubDate>
-      <guid>http://localhost:63630/blog/comp-science/llm-credit-paper-generator/</guid>
-      <description>Credit paper by LLM. Easy??? Well, not so much as it turns out.</description>
+      <guid>http://localhost:1313/blog/comp-science/llm-credit-paper-generator/</guid>
+      <description>Building a domain-grounded AI bank credit analyst — what worked, what didn&amp;#39;t, and why fine-tuning was not the answer.</description>
     </item>
     <item>
       <title>Building a Securitisation Pool Optimiser -- Part 2: Code, Design and Deal Structure</title>
-      <link>http://localhost:63630/blog/comp-science/securitisation-pool-optomiser-part-2/</link>
+      <link>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser-part-2/</link>
       <pubDate>Wed, 20 May 2026 07:28:00 +0000</pubDate>
-      <guid>http://localhost:63630/blog/comp-science/securitisation-pool-optomiser-part-2/</guid>
+      <guid>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser-part-2/</guid>
       <description>Code inventory, IRS swap, BoE compliance, Fitch alignment, and the full RMBS deal structure.</description>
     </item>
     <item>
       <title>Building a Securitisation Pool Optimiser -- Part 1: Architecture and Pipeline</title>
-      <link>http://localhost:63630/blog/comp-science/securitisation-pool-optomiser/</link>
+      <link>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser/</link>
       <pubDate>Wed, 20 May 2026 07:27:29 +0000</pubDate>
-      <guid>http://localhost:63630/blog/comp-science/securitisation-pool-optomiser/</guid>
+      <guid>http://localhost:1313/blog/comp-science/securitisation-pool-optomiser/</guid>
       <description>How we built an ML-driven pool selection engine that maximises Class A note issuance from a 20,000-loan warehouse using simulated annealing and adaptive Monte Carlo.</description>
     </item>
     <item>
       <title>Securitisation 101: Party Roles and Waterfall</title>
-      <link>http://localhost:63630/blog/comp-science/securitisation-101-part-2/</link>
+      <link>http://localhost:1313/blog/comp-science/securitisation-101-part-2/</link>
       <pubDate>Sun, 17 May 2026 07:13:29 +0000</pubDate>
-      <guid>http://localhost:63630/blog/comp-science/securitisation-101-part-2/</guid>
+      <guid>http://localhost:1313/blog/comp-science/securitisation-101-part-2/</guid>
       <description>Entity roles, responsibilities and payment waterfall mechanics in RMBS securitisation.</description>
     </item>
     <item>
       <title>Securitisation 101</title>
-      <link>http://localhost:63630/blog/comp-science/securitisation-101/</link>
+      <link>http://localhost:1313/blog/comp-science/securitisation-101/</link>
       <pubDate>Sun, 17 May 2026 07:13:28 +0000</pubDate>
-      <guid>http://localhost:63630/blog/comp-science/securitisation-101/</guid>
+      <guid>http://localhost:1313/blog/comp-science/securitisation-101/</guid>
       <description>A complete start-to-finish guide to securitisation with real-world examples and working code</description>
     </item>
     <item>
       <title>The Big Give Away</title>
-      <link>http://localhost:63630/blog/comp-science/the-big-give-away/</link>
+      <link>http://localhost:1313/blog/comp-science/the-big-give-away/</link>
       <pubDate>Sun, 12 Apr 2026 09:52:19 +0000</pubDate>
-      <guid>http://localhost:63630/blog/comp-science/the-big-give-away/</guid>
+      <guid>http://localhost:1313/blog/comp-science/the-big-give-away/</guid>
       <description>A short summary shown in post listings.</description>
     </item>
     <item>
       <title>Tree CLI</title>
-      <link>http://localhost:63630/blog/comp-science/tree-cli/</link>
+      <link>http://localhost:1313/blog/comp-science/tree-cli/</link>
       <pubDate>Tue, 07 Apr 2026 10:04:08 +0000</pubDate>
-      <guid>http://localhost:63630/blog/comp-science/tree-cli/</guid>
+      <guid>http://localhost:1313/blog/comp-science/tree-cli/</guid>
       <description>Quick reminder/overview on tree CLI tool.</description>
     </item>
     <item>
       <title>Pacman</title>
-      <link>http://localhost:63630/blog/comp-science/pacman/</link>
+      <link>http://localhost:1313/blog/comp-science/pacman/</link>
       <pubDate>Wed, 01 Apr 2026 17:05:11 +0000</pubDate>
-      <guid>http://localhost:63630/blog/comp-science/pacman/</guid>
+      <guid>http://localhost:1313/blog/comp-science/pacman/</guid>
       <description>A short summary shown in post listings.</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Systems-Thinking on [1697, 20747]</title>
-    <link>http://localhost:63630/tags/systems-thinking/</link>
+    <link>http://localhost:1313/tags/systems-thinking/</link>
     <description>Recent content in Systems-Thinking on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
     <lastBuildDate>Sat, 27 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:63630/tags/systems-thinking/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/systems-thinking/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Brain of the Firm / Designing Freedom</title>
-      <link>http://localhost:63630/blog/books/brain-of-the-firm-beer/</link>
+      <link>http://localhost:1313/blog/books/brain-of-the-firm-beer/</link>
       <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63630/blog/books/brain-of-the-firm-beer/</guid>
+      <guid>http://localhost:1313/blog/books/brain-of-the-firm-beer/</guid>
       <description>The foundational texts behind Beer&amp;#39;s concept of POSIWID — the purpose of a system is what it does.</description>
     </item>
   </channel>

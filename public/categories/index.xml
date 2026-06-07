@@ -6,8 +6,15 @@
     <description>Recent content in Categories on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 25 May 2026 18:02:38 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 08:28:14 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Credit-Risk</title>
+      <link>http://localhost:1313/categories/credit-risk/</link>
+      <pubDate>Sun, 07 Jun 2026 08:28:14 +0000</pubDate>
+      <guid>http://localhost:1313/categories/credit-risk/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Comp-Science</title>
       <link>http://localhost:1313/categories/comp-science/</link>
@@ -48,13 +55,6 @@
       <link>http://localhost:1313/categories/machine-learning/</link>
       <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/categories/machine-learning/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Credit-Risk</title>
-      <link>http://localhost:1313/categories/credit-risk/</link>
-      <pubDate>Tue, 19 May 2026 14:33:03 +0000</pubDate>
-      <guid>http://localhost:1313/categories/credit-risk/</guid>
       <description></description>
     </item>
     <item>
