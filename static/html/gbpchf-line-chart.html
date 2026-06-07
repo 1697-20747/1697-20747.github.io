@@ -14,9 +14,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 24px;
+    justify-content: flex-start;
+    padding: 20px;
   }
   .chart-container {
     width: 100%;
@@ -223,6 +222,16 @@ chart.draw = function() {
 };
 
 chart.draw();
+
+function sendHeight() {
+  var el = document.querySelector('.chart-container');
+  if (el) {
+    var h = Math.ceil(el.getBoundingClientRect().bottom) + 20;
+    window.parent.postMessage({ iframeHeight: h }, '*');
+  }
+}
+setTimeout(sendHeight, 150);
+window.addEventListener('resize', sendHeight);
 </script>
 </body>
 </html>
