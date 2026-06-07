@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Physics on [1697, 20747]</title>
-    <link>http://localhost:63630/tags/physics/</link>
+    <link>http://localhost:1313/tags/physics/</link>
     <description>Recent content in Physics on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
     <lastBuildDate>Thu, 04 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:63630/tags/physics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/physics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Three-Body Problem (series)</title>
-      <link>http://localhost:63630/blog/books/three-body-problem/</link>
+      <link>http://localhost:1313/blog/books/three-body-problem/</link>
       <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63630/blog/books/three-body-problem/</guid>
+      <guid>http://localhost:1313/blog/books/three-body-problem/</guid>
       <description>Hard sci-fi on a grand scale. Starts with China&amp;#39;s Cultural Revolution and ends at the edge of the universe.</description>
     </item>
   </channel>
