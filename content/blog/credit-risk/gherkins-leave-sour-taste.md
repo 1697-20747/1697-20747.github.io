@@ -52,7 +52,22 @@ This is currency risk. It is not exotic. It is GCSE economics. You borrow in a c
 The chart below shows what GBP/CHF looked like across the 20 years prior to the 2007 deal. Each fan arm tracks how the exchange rate moved over successive 5-year windows, indexed to 100 at the start of each period.
 
 {{< rawhtml >}}
-<iframe src="/html/gbpchf-fan-chart.html" width="100%" height="460" style="border:none; background:#0f1117;" scrolling="no"></iframe>
+<script>
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.iframeHeight) {
+    var iframes = document.querySelectorAll('iframe');
+    for (var i = 0; i < iframes.length; i++) {
+      try {
+        if (iframes[i].contentWindow === e.source) {
+          iframes[i].style.height = (e.data.iframeHeight + 4) + 'px';
+          break;
+        }
+      } catch(x) {}
+    }
+  }
+});
+</script>
+<iframe src="/html/gbpchf-fan-chart.html" width="100%" height="200" style="border:none; background:#0f1117;" scrolling="no"></iframe>
 {{< /rawhtml >}}
 
 The fan is not pointing uniformly in one direction. But look at the 1992–1997 window: sterling fell about 25% against the franc at one point (Black Wednesday 1992 is baked into that chart whether the labels say so or not), before recovering. The 1997–2002 window saw relatively stable rates as carry trades flourished. By 2002–2007, the rate was sitting at a moderately comfortable 2.4 CHF per pound — up from the low 2.2s of 2003–2004. The franc looked weak. Swiss rates were low. The deal looked cheap to finance.
@@ -70,8 +85,31 @@ The effect on the IVG tranche of the debt was mechanical and brutal. If you borr
 The chart below shows the full GBP/CHF trajectory from 2005 to 2015, with key events marked.
 
 {{< rawhtml >}}
-<iframe src="/html/gbpchf-line-chart.html" width="100%" height="520" style="border:none; background:#0f1117;" scrolling="no"></iframe>
+<iframe src="/html/gbpchf-line-chart.html" width="100%" height="200" style="border:none; background:#0f1117;" scrolling="no"></iframe>
 {{< /rawhtml >}}
+
+---
+
+## Quantifying the Risk: PFE at 99th Percentile
+
+Potential Future Exposure (PFE) is the standard credit risk tool for asking: *how bad could this get, at a given confidence level, over a given horizon?* For an unhedged CHF liability on a sterling-income asset, the calculation is straightforward — and the answer is uncomfortable.
+
+Using the historical GBP/CHF annual volatility derived from 1987–2007 data (σ ≈ 7.6% per annum) and a lognormal model with zero drift (the conservative assumption — no assumed trend), the 99th percentile worst-case increase in the sterling equivalent of the CHF debt builds as follows over a five-year horizon:
+
+{{< rawhtml >}}
+<iframe src="/html/gbpchf-pfe-chart.html" width="100%" height="200" style="border:none; background:#0f1117;" scrolling="no"></iframe>
+{{< /rawhtml >}}
+
+At five years, the 99th percentile PFE is approximately 51% of the original sterling notional. That is: in a 1-in-100 scenario, a £200 million CHF debt tranche grows to approximately £300 million in sterling terms — purely through exchange rate movement, with no additional borrowing.
+
+The red line is the actual outcome. By 2009 (Year 2), reality had already exceeded the 99th percentile model. By 2011 (Year 4), GBP/CHF had reached approximately 1.42 — implying a 69% increase in the sterling value of the CHF liability. The model's five-year 99th percentile was ~51%. The actual four-year outcome was ~69%. A once-in-a-hundred-years event arrived in four years.
+
+> "Consider a turkey that is fed every day. Every single feeding will firm up the bird's belief that it is the general rule of life to be fed every day by friendly members of the human race. On the Wednesday before Thanksgiving, something unexpected will happen to the turkey. It will incur a revision of belief."
+> — Nassim Nicholas Taleb, *The Black Swan* (2007)
+
+The twenty years of GBP/CHF data used to calibrate σ contained Black Wednesday, a period of franc weakness during the carry trade era, and a modest appreciation cycle through the early 2000s. What it did not contain was a synchronised global financial crisis followed immediately by a European sovereign debt crisis — two sequential safe-haven flights into CHF, compounding each other over four years. The historical sample was not wrong. It was simply a sample — one path through a distribution whose tails were wider than the data suggested. Taleb's point is not that models are useless. It is that the past, by definition, cannot show you what has not yet happened.
+
+This is not a criticism of the model. Models are approximations. The point is that even a simple, well-parameterised PFE calculation at the time of the 2007 deal would have shown that the unhedged CHF exposure was capable of adding tens or hundreds of millions of pounds to the liability stack in a stress scenario. Whether that analysis was done, and what was done with the result, is a separate question.
 
 The loan first defaulted in 2009. By the time receivers were appointed five years later, the IVG tranche's sterling value had inflated to the point where IVG's LTV covenant — 67% — had been obliterated, with actual LTV reportedly running above 90%. The building was not to blame. The pound was.
 
