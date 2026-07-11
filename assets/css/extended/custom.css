@@ -126,3 +126,12 @@ div.bookcover-wrap span {
     background-clip: unset !important;
     background-image: none !important;
 }
+
+/* ── Uniform cover image size (single post page only, not list thumbnails) ── */
+.post-single .entry-cover img {
+    width: 700px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+}

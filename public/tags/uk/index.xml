@@ -6,8 +6,15 @@
     <description>Recent content in UK on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 14 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Price of Power</title>
+      <link>http://localhost:1313/blog/economics/the-price-of-power/</link>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/economics/the-price-of-power/</guid>
+      <description>UK industrial electricity prices are the highest in the developed world. UK productivity growth is among the lowest in the G7. This post asks whether the two are connected, does the data, and finds the answer is: probably, but not in the way you might think.</description>
+    </item>
     <item>
       <title>The Royal Charter of the Bank of England (1694)</title>
       <link>http://localhost:1313/blog/books/royal-charter-bank-of-england/</link>

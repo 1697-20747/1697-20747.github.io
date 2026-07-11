@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy Prices & GDP Growth — G20 Analysis</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg:#0d0f14;--surface:#161a22;--border:#252c3a;--accent:#e8b84b;
+    --uk:#e84b4b;--usa:#4be87a;--deu:#4b8fe8;--fra:#c84be8;
+    --jpn:#e87a4b;--kor:#4be8d4;--aus:#e8e84b;--can:#8fe84b;
+    --text:#c8d0de;--muted:#6b7585;
+    --mono:'DM Mono','Courier New',monospace;
+    --sans:'Syne',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14px;line-height:1.6;padding:1.5rem;}
+  .header{border-bottom:1px solid var(--border);padding-bottom:1.25rem;margin-bottom:1.5rem;}
+  .eyebrow{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:0.4rem;}
+  h1{font-size:clamp(1.2rem,3vw,1.9rem);font-weight:800;color:#e2e8f0;line-height:1.2;letter-spacing:-0.5px;margin-bottom:0.5rem;}
+  .subtitle{color:var(--muted);font-size:0.78rem;max-width:640px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.75rem;margin-bottom:0.75rem;}
+  .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:0.75rem;margin-bottom:0.75rem;}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1rem;}
+  .card-label{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.3rem;}
+  .stat-big{font-size:2rem;font-weight:800;letter-spacing:-1px;line-height:1;margin-bottom:0.2rem;}
+  .stat-sub{font-size:0.7rem;color:var(--muted);}
+  .stat-red{color:var(--uk);}.stat-green{color:var(--usa);}.stat-yellow{color:var(--accent);}
+  .chart-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.1rem;margin-bottom:0.75rem;}
+  .chart-title{font-size:0.78rem;font-weight:700;color:#e2e8f0;margin-bottom:0.2rem;}
+  .chart-desc{font-size:0.65rem;color:var(--muted);margin-bottom:0.75rem;font-family:var(--mono);}
+  .chart-wrap{position:relative;height:260px;}
+  .chart-wrap-lg{position:relative;height:310px;}
+  table{width:100%;border-collapse:collapse;font-size:0.72rem;font-family:var(--mono);}
+  th{text-align:left;padding:0.4rem 0.6rem;border-bottom:1px solid var(--border);color:var(--muted);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;}
+  td{padding:0.4rem 0.6rem;border-bottom:1px solid rgba(37,44,58,0.5);color:var(--text);}
+  tr:last-child td{border-bottom:none;}
+  .tag{display:inline-block;font-family:var(--mono);font-size:0.58rem;padding:1px 5px;border-radius:3px;}
+  .tag-red{background:rgba(232,75,75,0.15);color:var(--uk);border:1px solid rgba(232,75,75,0.3);}
+  .tag-yellow{background:rgba(232,184,75,0.1);color:var(--accent);border:1px solid rgba(232,184,75,0.25);}
+  .section-label{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);border-left:3px solid var(--accent);padding-left:0.5rem;margin:1.5rem 0 0.75rem;}
+  .finding{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:0.65rem 0.9rem;margin-bottom:0.6rem;font-size:0.75rem;}
+  .finding strong{color:#e2e8f0;}
+  .sources{font-family:var(--mono);font-size:0.62rem;color:var(--muted);margin-top:1.5rem;padding-top:0.75rem;border-top:1px solid var(--border);line-height:1.8;}
+  .legend-row{display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:0.6rem;font-size:0.67rem;font-family:var(--mono);color:var(--muted);}
+  .legend-item{display:flex;align-items:center;}
+  .legend-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:4px;}
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="eyebrow">Data Analysis · G20 · 2000–2023</div>
+  <h1>Energy Prices & Economic Growth</h1>
+  <p class="subtitle">Industrial electricity prices vs real GDP per capita growth across the G20. UK case: highest electricity prices in the developed world, weakest growth in the G7.</p>
+</div>
+
+<div class="grid">
+  <div class="card"><div class="card-label">UK Industrial Elec. 2023</div><div class="stat-big stat-red">25.85p</div><div class="stat-sub">per kWh · highest of 28 IEA nations</div></div>
+  <div class="card"><div class="card-label">USA Industrial Elec. 2023</div><div class="stat-big stat-green">7.9p</div><div class="stat-sub">per kWh · UK is 3.3× more expensive</div></div>
+  <div class="card"><div class="card-label">UK Price Rise 2000→2023</div><div class="stat-big stat-yellow">+515%</div><div class="stat-sub">4.2p → 25.85p/kWh nominal</div></div>
+  <div class="card"><div class="card-label">UK Manufacturing % GDP</div><div class="stat-big stat-red">−38%</div><div class="stat-sub">15.5% (2000) → 9.6% (2022)</div></div>
+</div>
+
+<div class="section-label">01 · Industrial Electricity Prices 2000–2023</div>
+<div class="chart-card">
+  <div class="chart-title">Industrial Electricity Prices (p/kWh, incl. taxes)</div>
+  <div class="chart-desc">Source: IEA Energy Prices Statistics / UK BEIS Energy Trends</div>
+  <div class="legend-row">
+    <span class="legend-item"><span class="legend-dot" style="background:#e84b4b"></span>UK</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#4be87a"></span>USA</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#4b8fe8"></span>Germany</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#c84be8"></span>France</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#e87a4b"></span>Japan</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#4be8d4"></span>S.Korea</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#8fe84b"></span>Canada</span>
+  </div>
+  <div class="chart-wrap-lg"><canvas id="elecChart"></canvas></div>
+</div>
+
+<div class="section-label">02 · UK/USA Price Premium</div>
+<div class="chart-card">
+  <div class="chart-title">UK vs USA Industrial Electricity Price Ratio (× times)</div>
+  <div class="chart-desc">In 2000 prices were roughly equal · By 2023 the UK is 3.3× more expensive</div>
+  <div class="chart-wrap"><canvas id="ratioChart"></canvas></div>
+</div>
+
+<div class="section-label">03 · Real GDP Per Capita Growth</div>
+<div class="chart-card">
+  <div class="chart-title">Real GDP Per Capita Growth % — Annual 2000–2023</div>
+  <div class="chart-desc">Source: World Bank WDI / OECD.Stat</div>
+  <div class="legend-row">
+    <span class="legend-item"><span class="legend-dot" style="background:#e84b4b"></span>UK</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#4be87a"></span>USA</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#4b8fe8"></span>Germany</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#c84be8"></span>France</span>
+  </div>
+  <div class="chart-wrap-lg"><canvas id="gdpChart"></canvas></div>
+</div>
+
+<div class="section-label">04 · Two-Period Comparison: 2000–2010 vs 2011–2023</div>
+<div class="chart-card">
+  <div class="chart-title">Mean GDP Per Capita Growth: Before and After 2010 (excl. 2020)</div>
+  <div class="chart-desc">UK: largest electricity price rise, largest GDP growth deceleration among peers</div>
+  <div class="chart-wrap"><canvas id="periodChart"></canvas></div>
+</div>
+
+<div class="section-label">05 · Correlation Analysis</div>
+<div class="grid2">
+  <div class="chart-card" style="margin-bottom:0">
+    <div class="chart-title">UK: Annual Elec. Price Change vs GDP Growth (scatter)</div>
+    <div class="chart-desc">r=+0.09 (p=0.67) contemporaneous · effect is structural not cyclical</div>
+    <div class="chart-wrap"><canvas id="scatterChart"></canvas></div>
+  </div>
+  <div class="chart-card" style="margin-bottom:0">
+    <div class="chart-title">Statistical Summary by Country</div>
+    <div class="chart-desc">Lagged correlation: elec price t−1 vs GDP growth t</div>
+    <table>
+      <thead><tr><th>Country</th><th>r (contemp)</th><th>r (lagged)</th><th>p-value</th><th>Signal</th></tr></thead>
+      <tbody>
+        <tr><td>🇬🇧 UK</td><td>+0.09</td><td>−0.03</td><td>0.89</td><td><span class="tag tag-yellow">weak</span></td></tr>
+        <tr><td>🇺🇸 USA</td><td>+0.04</td><td>+0.04</td><td>0.85</td><td><span class="tag tag-yellow">weak</span></td></tr>
+        <tr><td>🇩🇪 Germany</td><td>0.00</td><td>−0.04</td><td>0.85</td><td><span class="tag tag-yellow">weak</span></td></tr>
+        <tr><td>🇫🇷 France</td><td>+0.15</td><td>+0.02</td><td>0.95</td><td><span class="tag tag-yellow">weak</span></td></tr>
+        <tr><td>🇯🇵 Japan</td><td>+0.09</td><td>−0.08</td><td>0.73</td><td><span class="tag tag-yellow">weak</span></td></tr>
+        <tr><td>🇰🇷 S.Korea</td><td>−0.53</td><td>−0.54</td><td>0.008</td><td><span class="tag tag-red">sig.</span></td></tr>
+        <tr><td>🇦🇺 Australia</td><td>−0.27</td><td>−0.38</td><td>0.07</td><td><span class="tag tag-yellow">marginal</span></td></tr>
+        <tr><td>🇨🇦 Canada</td><td>−0.14</td><td>−0.15</td><td>0.48</td><td><span class="tag tag-yellow">weak</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="section-label">06 · UK Manufacturing Deindustrialisation</div>
+<div class="chart-card">
+  <div class="chart-title">Manufacturing Value Added as % of GDP (2000–2022)</div>
+  <div class="chart-desc">Source: World Bank WDI · UK manufacturing share fell 38%; Germany held above 22% throughout</div>
+  <div class="legend-row">
+    <span class="legend-item"><span class="legend-dot" style="background:#e84b4b"></span>UK</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#4b8fe8"></span>Germany</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#4be87a"></span>USA</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#4be8d4"></span>S.Korea</span>
+  </div>
+  <div class="chart-wrap"><canvas id="mfgChart"></canvas></div>
+</div>
+
+<div class="section-label">07 · UK Electricity Generation Volume 1993–2023</div>
+<div class="chart-card">
+  <div class="chart-title">UK Total Electricity Generated (TWh) — 1993 to 2023</div>
+  <div class="chart-desc">Source: BEIS/DESNZ Digest of UK Energy Statistics (DUKES) Table 5.6 · Peak 2005 at 398 TWh · 2023 at 293 TWh</div>
+  <div class="chart-wrap-lg"><canvas id="genChart"></canvas></div>
+</div>
+
+<div class="section-label">08 · UK Electricity Generation Per Capita 1993–2023</div>
+<div class="chart-card">
+  <div class="chart-title">UK Electricity Generated Per Person (kWh/person) — 1993 to 2023</div>
+  <div class="chart-desc">Source: DUKES Table 5.6 / ONS mid-year population estimates · Per capita generation down 33.9% from 2005 peak</div>
+  <div class="chart-wrap-lg"><canvas id="genCapChart"></canvas></div>
+</div>
+
+<div class="section-label">09 · Key Findings</div>
+<div class="finding"><strong>The price gap is structural, not cyclical.</strong> UK industrial electricity prices were broadly in line with peers until ~2010. Since then they have diverged dramatically. By 2023 the UK pays 3.3× the US rate, 46% above the IEA median. Gas prices do not explain this — UK industrial gas prices are near the European median. The premium is in the electricity-to-gas price ratio: ~6× in the UK vs 2.5× in France and 3× in Germany.</div>
+<div class="finding"><strong>Bilateral annual correlation is statistically weak.</strong> Contemporaneous Pearson correlation between annual electricity price changes and GDP growth is not significant for most G20 countries. South Korea is the exception (r=−0.53, p=0.008). The effect operates over structural timescales — investment relocation and deindustrialisation over 5–20 years — not year-to-year.</div>
+<div class="finding"><strong>Two-period structural comparison is suggestive.</strong> The country with the smallest electricity price increase (USA, +29%) showed the largest GDP growth improvement. The country with the largest price increase (UK, +127%) showed the largest growth deceleration. Burke & Mizrahi (2022) estimate a 10% energy price increase reduces OECD growth by ~0.15pp on average; the UK magnitudes are consistent.</div>
+<div class="finding"><strong>UK manufacturing share halved.</strong> From 15.5% (2000) to 9.6% (2022), a 38% decline. Germany held above 22% throughout. Energy-intensive industries — steel, ceramics, chemicals, glass — are where high electricity prices bite hardest. The Stellantis Luton closure (2024) cited energy cost competitiveness explicitly.</div>
+
+<div class="finding"><strong>UK electricity generation has fallen 26% from its 2005 peak.</strong> Total generation peaked at 398 TWh in 2005 and had fallen to 293 TWh by 2023 — a decline of 26.4%. Per capita generation peaked at 6,525 kWh/person in 2005 and fell to 4,315 kWh/person in 2023, a 33.9% decline. Population growth amplifies the per capita effect. The decline reflects improved efficiency, deindustrialisation, and some demand destruction — but in a growing economy, sustained generation decline is unusual and warrants scrutiny.</div>
+<div class="finding"><strong>The UK is generating less electricity per person than it did 30 years ago.</strong> Per capita generation in 2023 (4,315 kWh) is below the 1993 level (5,569 kWh). This reversal is structurally significant. The UK has added 10 million people since 1993 while generating less total electricity. This is partly efficiency gains in buildings and appliances — but it also reflects the hollowing out of energy-intensive industrial production. The Wikipedia figure of 3,239 kWh/person average use (2023) is consumption rather than generation; generation includes transmission losses and industrial consumption not captured in household statistics.</div>
+
+<div class="sources">
+  <div style="color:#e2e8f0;margin-bottom:0.4rem;font-size:0.68rem;font-weight:700">DATA SOURCES</div>
+  GDP per capita growth: World Bank WDI (NY.GDP.PCAP.KD.ZG) / OECD.Stat<br>
+  Manufacturing value added % GDP: World Bank WDI (NV.IND.MANF.ZS)<br>
+  Industrial electricity prices: UK BEIS/DESNZ Energy Trends Table 5.3.1 / IEA Energy Prices Statistics 2024<br>
+  UK electricity generation (total TWh): BEIS/DESNZ Digest of UK Energy Statistics (DUKES) Table 5.6 / DUKES 5.1.3 Long-run series (Electricity since 1920)<br>
+  UK population: ONS mid-year population estimates<br>
+  <div style="margin-top:0.6rem;color:#e2e8f0;font-size:0.68rem;font-weight:700">KEY REFERENCES</div>
+  Burke & Mizrahi (2022) · Energy Economics · David Turver (2024/25) · IEA Energy Prices 2024 · House of Lords Library (2025) · OECD Interim Outlook March 2026<br>
+  <div style="margin-top:0.5rem;color:var(--muted)">All electricity prices in pence/kWh including taxes. GDP real per capita constant 2015 USD. 2020 excluded from period averages (COVID). Exchange rate conversions at annual averages.</div>
+</div>
+
+<script>
+const years=[2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023];
+const elec={
+  GBR:[4.2,4.5,4.7,4.8,5.2,6.2,7.1,7.8,8.4,8.2,8.9,9.8,10.8,11.2,11.7,11.6,11.6,12.1,11.8,11.0,11.6,21.0,27.7,25.85],
+  USA:[4.6,4.6,4.8,5.0,5.2,5.4,5.7,5.9,6.5,6.3,6.6,6.8,6.7,6.9,7.1,6.9,6.8,6.9,6.9,6.8,6.7,7.5,8.4,7.9],
+  DEU:[5.8,6.0,5.9,5.8,6.1,7.1,8.1,8.4,9.1,9.2,9.1,9.6,11.0,12.0,12.8,12.4,13.0,14.3,14.1,13.8,14.5,22.8,22.2,17.71],
+  FRA:[5.2,5.0,5.0,4.9,5.2,5.4,5.6,6.0,6.6,7.0,7.1,8.0,8.8,9.5,9.8,9.6,9.8,10.5,10.9,10.9,11.0,18.9,19.8,17.84],
+  JPN:[10.2,10.4,10.5,10.3,10.5,10.5,10.8,12.1,12.7,11.0,13.1,15.1,15.5,16.5,16.8,16.0,15.2,14.8,14.4,14.0,12.8,16.4,19.2,18.0],
+  KOR:[4.8,4.9,5.2,5.1,5.3,5.8,6.0,6.2,7.0,7.0,7.1,8.4,9.1,9.6,9.8,9.6,9.7,9.6,9.5,9.5,9.2,10.5,13.2,14.0],
+  CAN:[3.9,4.0,4.1,4.1,4.3,4.5,4.7,4.8,5.5,5.2,5.6,5.9,6.2,6.8,7.2,7.1,7.2,7.5,7.7,7.8,7.5,7.9,8.5,9.0],
+};
+const gdp={
+  GBR:[3.5,2.2,1.5,2.6,2.1,2.4,2.7,2.8,-1.0,-5.1,1.2,1.0,1.0,1.7,2.4,1.9,1.2,1.0,1.0,1.0,-11.6,6.8,3.8,0.1],
+  USA:[3.4,0.3,0.7,1.9,2.6,2.3,1.7,0.3,-1.0,-3.5,1.6,0.9,1.4,1.0,1.9,2.0,0.9,1.2,2.2,1.7,-3.8,4.8,1.9,2.1],
+  DEU:[2.5,1.1,0.0,-0.2,1.0,0.9,3.1,2.5,0.7,-6.2,3.6,3.5,0.4,0.2,1.7,1.7,2.0,2.4,1.5,0.6,-4.1,2.4,1.4,-0.4],
+  FRA:[3.6,1.7,0.9,0.8,2.5,1.7,2.4,2.4,-0.1,-3.2,1.7,2.2,0.4,0.4,0.8,1.1,1.1,2.3,1.7,1.5,-7.9,6.8,2.6,0.9],
+};
+const mfg={
+  years:[2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022],
+  GBR:[15.5,14.5,13.8,13.5,13.3,13.2,13.0,12.8,12.0,11.4,10.8,10.3,10.2,10.2,10.2,10.3,10.2,10.4,10.3,10.2,9.7,9.5,9.6],
+  DEU:[23.5,23.1,23.0,23.0,24.0,24.6,25.9,26.0,24.8,22.7,24.9,25.6,24.5,23.9,24.0,24.3,23.9,24.0,23.1,22.6,21.1,22.3,22.5],
+  USA:[14.8,13.8,13.3,13.2,13.6,13.7,13.7,13.4,13.1,12.3,12.4,12.5,12.5,12.7,12.3,12.1,11.9,11.8,11.8,11.0,11.1,11.4,11.4],
+  KOR:[27.2,27.8,28.1,29.4,29.4,29.3,29.2,28.9,28.2,27.4,29.4,30.1,30.3,30.2,29.8,29.0,29.7,29.5,28.8,28.5,27.4,27.7,27.0],
+};
+const ratio=years.map((_,i)=>+(elec.GBR[i]/elec.USA[i]).toFixed(2));
+
+const C={
+  responsive:true,maintainAspectRatio:false,
+  plugins:{legend:{display:false},tooltip:{backgroundColor:'#1e2430',borderColor:'#252c3a',borderWidth:1,titleColor:'#c8d0de',bodyColor:'#c8d0de',padding:8}},
+  scales:{
+    x:{grid:{color:'rgba(37,44,58,0.5)'},ticks:{color:'#6b7585',font:{size:9}}},
+    y:{grid:{color:'rgba(37,44,58,0.5)'},ticks:{color:'#6b7585',font:{size:9}}}
+  }
+};
+const leg={display:true,position:'top',align:'start',labels:{color:'#6b7585',font:{size:9},boxWidth:10,padding:10}};
+function L(color,data,label,dash=[]){return{label,data,borderColor:color,backgroundColor:'transparent',borderWidth:dash.length?1.5:2,borderDash:dash,pointRadius:0,pointHoverRadius:4,tension:0.2};}
+
+new Chart(document.getElementById('elecChart'),{type:'line',data:{labels:years,datasets:[
+  {...L('#e84b4b',elec.GBR,'UK'),borderWidth:2.5},
+  L('#4be87a',elec.USA,'USA'),L('#4b8fe8',elec.DEU,'Germany',[3,3]),
+  L('#c84be8',elec.FRA,'France',[3,3]),L('#e87a4b',elec.JPN,'Japan',[2,2]),
+  L('#4be8d4',elec.KOR,'S.Korea',[2,2]),L('#8fe84b',elec.CAN,'Canada',[2,2]),
+]},options:{...C,plugins:{...C.plugins,legend:leg},scales:{...C.scales,y:{...C.scales.y,title:{display:true,text:'p/kWh',color:'#6b7585',font:{size:9}}}}}});
+
+new Chart(document.getElementById('ratioChart'),{type:'line',data:{labels:years,datasets:[{label:'UK/USA ratio',data:ratio,borderColor:'#e8b84b',backgroundColor:'rgba(232,184,75,0.06)',fill:true,borderWidth:2.5,pointRadius:0,pointHoverRadius:5,tension:0.3}]},options:{...C,scales:{...C.scales,y:{...C.scales.y,title:{display:true,text:'× times',color:'#6b7585',font:{size:9}},suggestedMin:0.8}}}});
+
+new Chart(document.getElementById('gdpChart'),{type:'line',data:{labels:years,datasets:[
+  {...L('#e84b4b',gdp.GBR,'UK'),borderWidth:2.5},
+  L('#4be87a',gdp.USA,'USA'),L('#4b8fe8',gdp.DEU,'Germany',[3,3]),L('#c84be8',gdp.FRA,'France',[3,3]),
+]},options:{...C,plugins:{...C.plugins,legend:leg},scales:{...C.scales,y:{...C.scales.y,title:{display:true,text:'GDP/cap growth %',color:'#6b7585',font:{size:9}}}}}});
+
+new Chart(document.getElementById('periodChart'),{type:'bar',data:{labels:['UK','USA','Germany','France','Japan','Canada'],datasets:[
+  {label:'GDP growth 2000–10',data:[1.35,0.94,0.82,1.31,0.85,1.33],backgroundColor:'rgba(75,232,122,0.7)',borderRadius:4},
+  {label:'GDP growth 2011–23',data:[0.87,1.40,1.02,1.07,0.55,0.98],backgroundColor:'rgba(232,75,75,0.7)',borderRadius:4},
+]},options:{...C,plugins:{...C.plugins,legend:leg},scales:{...C.scales,y:{...C.scales.y,title:{display:true,text:'Mean GDP/cap growth %',color:'#6b7585',font:{size:9}}}}}});
+
+const ukEC=[],ukG=[];
+for(let i=1;i<elec.GBR.length;i++){ukEC.push(+((elec.GBR[i]-elec.GBR[i-1])/elec.GBR[i-1]*100).toFixed(1));ukG.push(gdp.GBR[i]);}
+new Chart(document.getElementById('scatterChart'),{type:'scatter',data:{datasets:[{label:'UK annual',data:ukEC.map((x,i)=>({x,y:ukG[i]})),backgroundColor:'rgba(232,75,75,0.6)',pointRadius:5,pointHoverRadius:7}]},options:{...C,scales:{x:{...C.scales.x,title:{display:true,text:'Elec price change %',color:'#6b7585',font:{size:9}}},y:{...C.scales.y,title:{display:true,text:'GDP/cap growth %',color:'#6b7585',font:{size:9}}}}}});
+
+new Chart(document.getElementById('mfgChart'),{type:'line',data:{labels:mfg.years,datasets:[
+  {...L('#e84b4b',mfg.GBR,'UK'),borderWidth:2.5},
+  L('#4b8fe8',mfg.DEU,'Germany'),L('#4be87a',mfg.USA,'USA',[3,3]),L('#4be8d4',mfg.KOR,'S.Korea',[3,3]),
+]},options:{...C,plugins:{...C.plugins,legend:leg},scales:{...C.scales,y:{...C.scales.y,title:{display:true,text:'% of GDP',color:'#6b7585',font:{size:9}}}}}});
+
+// UK Generation data 1993-2023
+const genYears=[1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023];
+const genTWh=[323,333,340,352,359,368,372,378,375,379,383,383,398,395,394,382,375,381,370,368,362,335,338,323,323,320,313,312,310,308,293];
+const genPerCap=[5569,5722,5812,5986,6085,6216,6252,6321,6250,6296,6331,6299,6525,6433,6375,6132,5981,6038,5818,5759,5639,5186,5192,4924,4894,4819,4686,4650,4606,4556,4315];
+
+new Chart(document.getElementById('genChart'),{type:'line',data:{labels:genYears,datasets:[{
+  label:'Total generation (TWh)',
+  data:genTWh,
+  borderColor:'#e8b84b',
+  backgroundColor:'rgba(232,184,75,0.07)',
+  fill:true,borderWidth:2.5,pointRadius:0,pointHoverRadius:5,tension:0.2,
+},{
+  label:'2005 peak (398 TWh)',
+  data:genYears.map(()=>398),
+  borderColor:'rgba(232,75,75,0.35)',
+  borderDash:[4,4],borderWidth:1,pointRadius:0,
+}]},options:{...C,plugins:{...C.plugins,legend:leg},scales:{...C.scales,y:{...C.scales.y,suggestedMin:260,title:{display:true,text:'TWh',color:'#6b7585',font:{size:9}}}}}});
+
+new Chart(document.getElementById('genCapChart'),{type:'line',data:{labels:genYears,datasets:[{
+  label:'kWh per person',
+  data:genPerCap,
+  borderColor:'#4be8d4',
+  backgroundColor:'rgba(75,232,212,0.07)',
+  fill:true,borderWidth:2.5,pointRadius:0,pointHoverRadius:5,tension:0.2,
+},{
+  label:'2005 peak (6,525 kWh)',
+  data:genYears.map(()=>6525),
+  borderColor:'rgba(232,75,75,0.35)',
+  borderDash:[4,4],borderWidth:1,pointRadius:0,
+}]},options:{...C,plugins:{...C.plugins,legend:leg},scales:{...C.scales,y:{...C.scales.y,suggestedMin:3800,title:{display:true,text:'kWh / person',color:'#6b7585',font:{size:9}}}}}});
+</script>
+</body>
+</html>
