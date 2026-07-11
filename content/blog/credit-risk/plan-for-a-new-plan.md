@@ -353,13 +353,28 @@ The irony is complete: the underlying businesses on both sides of the Pacific su
 
 ---
 
+# Fast Forward
+
+CER limped along, posting  accounting loss of $2.7bn in FY09 (on $7bn of assets, ouch), and positive $113 for FY10. Dealing with the debt pile was the main task. By this stage the assets were split across Australia, with US split between Super LLC and Non Super LCC. The split is as below, source CEP:
+
+|                                  | 2010 $ million | Capitalisation Rate | 2009 $ million | Capitalisation Rate |
+|----------------------------------|----------------|---------------------|----------------|---------------------|
+| Australian Investment Portfolio  | A$1,633        | 7.47%               | A$1,670        | 7.25%               |
+| US Non Super LLC Portfolio     | US$1,848       | 8.42%               | US$2,011       | 8.32%               |
+| US Super LLC Portfolio           | US$2,308       | 8.64%               | US$2,422       | 8.17%               |
+
+Super LLC was the US JV arrangement between Centro, CER and CEntro MCS 40. Critically, the debt was cross collateralised, with each JV partner entitled to economic benefits of identified properties. The driver was likely to avoid a CER downstream guarantee to Super LCC, which was helpful as the US situation deteriorated, but the downside was lock-up at the asset level. CER's investment in Super LLC was fully impaired, held at nil value. This at the time of the debt pile at CER needing to be rolled, which means some kind of paydown to keep creditors at bay. It was a liquidity squeeze in the classic sense.
+
+---
 ## Key Takeaways
 
 The Centro/NXL case is useful precisely because the underlying assets did not fail. This makes it a clean study in structural credit failure rather than an operational failure. The shopping centres kept trading. The mortgages kept being serviced. The problem was entirely architectural.
 
+CER’s investment in Super LLC is generating positive net cash flow, none of this cash flow is currently able to be distributed back to CER due to the cross collateralisation and high leverage within Super LLC. So the cash from NOI was theoretical in nature from the perspective of CER, in that it could not be paid out. The book value of the assets declined at a rate far higher than the NOI, so the equitable investment went to zero (liabilities exceeded net assets) as debt stayed static, while commercial real estate valuations were marked down. The leverage and the lock up rights destroyed the economic value of Super LLC assets from CER's perspective. Without the distributions, CER debt load was unsustainable as too much rolled in the near term.
+
 If you are analysing a consolidated entity that owns assets through multiple layers of subsidiary structure, the consolidated income statement is a starting point, not an answer. The questions that matter are:
 
-- Where in the structure is the cash generated? Deconsolidate to this!
+- Where in the structure is the cash generated? De consolidate to this!
 - What creditors rank ahead of the entity you are lending to?
 - What legal and contractual restrictions govern upward cash flow?
 - What is the refinancing profile of the HoldCo debt, and under what market conditions would it fail?

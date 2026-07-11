@@ -6,7 +6,7 @@
     <description>Recent content in Unhelpful Advice on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 07 Jun 2026 08:28:14 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2026 06:40:16 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Feynman On Understanding</title>
@@ -103,11 +103,67 @@
       <description>The CPI is everywhere, but how it&amp;#39;s actually constructed reveals some uncomfortable tradeoffs.</description>
     </item>
     <item>
+      <title>Win To Lose</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/win-to-lose/</link>
+      <pubDate>Mon, 06 Jul 2026 06:40:16 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/win-to-lose/</guid>
+      <description>one right does make at least one wrong</description>
+    </item>
+    <item>
+      <title>WeWork: The Floor Worth More Than the Building</title>
+      <link>http://localhost:1313/blog/credit-risk/wework-valuation-scandal/</link>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/credit-risk/wework-valuation-scandal/</guid>
+      <description>How a landlord became a tech company, and how one professor&amp;#39;s arithmetic exposed the most expensive fiction in recent capital markets history.</description>
+    </item>
+    <item>
+      <title>The 48 Laws of Power</title>
+      <link>http://localhost:1313/blog/books/48-laws-of-power-greene/</link>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/books/48-laws-of-power-greene/</guid>
+      <description>Greene distills centuries of court intrigue and military history into 48 rules for accumulating and keeping power. Compelling stories, shaky scholarship.</description>
+    </item>
+    <item>
+      <title>Round 5: Training a 7B Credit Analyst</title>
+      <link>http://localhost:1313/blog/credit-risk/round-5-training/</link>
+      <pubDate>Sat, 20 Jun 2026 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/credit-risk/round-5-training/</guid>
+      <description>Training results from Round 5 QLoRA fine-tuning of Qwen2.5-7B for automated bank credit analysis. 6,359 training pairs, 3 epochs on an A100 80GB, and what the loss curve reveals about when to stop training.</description>
+    </item>
+    <item>
+      <title>The Price of Power</title>
+      <link>http://localhost:1313/blog/economics/the-price-of-power/</link>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/economics/the-price-of-power/</guid>
+      <description>UK industrial electricity prices are the highest in the developed world. UK productivity growth is among the lowest in the G7. This post asks whether the two are connected, does the data, and finds the answer is: probably, but not in the way you might think.</description>
+    </item>
+    <item>
+      <title>When Doctrine And Culture Clash</title>
+      <link>http://localhost:1313/blog/philosophy/when-doctrine-and-culture-clash/</link>
+      <pubDate>Sun, 14 Jun 2026 12:06:02 +0000</pubDate>
+      <guid>http://localhost:1313/blog/philosophy/when-doctrine-and-culture-clash/</guid>
+      <description>Stated moral authority versus actual authority. No amoral actor self-regulates — and no internal process can make them.</description>
+    </item>
+    <item>
+      <title>Carry The Stone Alone</title>
+      <link>http://localhost:1313/blog/unhelpful-advice/carry-the-stone-alone/</link>
+      <pubDate>Sat, 13 Jun 2026 18:42:57 +0000</pubDate>
+      <guid>http://localhost:1313/blog/unhelpful-advice/carry-the-stone-alone/</guid>
+      <description>Die on the hill alone or play the team sport</description>
+    </item>
+    <item>
+      <title>Alberta and the Federal Fiscal Balance: Fifty Years of Transfers</title>
+      <link>http://localhost:1313/blog/economics/alberta-separatist-drivers/</link>
+      <pubDate>Mon, 08 Jun 2026 10:29:52 +0000</pubDate>
+      <guid>http://localhost:1313/blog/economics/alberta-separatist-drivers/</guid>
+      <description>What provinces pay into the federal system and what they receive back — and why the numbers matter for the Alberta sovereignty debate.</description>
+    </item>
+    <item>
       <title>Gherkins Leave Sour Taste</title>
       <link>http://localhost:1313/blog/credit-risk/gherkins-leave-sour-taste/</link>
       <pubDate>Sun, 07 Jun 2026 08:28:14 +0000</pubDate>
       <guid>http://localhost:1313/blog/credit-risk/gherkins-leave-sour-taste/</guid>
-      <description>A short summary shown in post listings.</description>
+      <description>How London&amp;#39;s most desirable office building ended up in receivership — not because the building failed, but because the financing did.</description>
     </item>
     <item>
       <title>Plan For A New Plan</title>
@@ -991,7 +1047,7 @@ Oh, I&amp;rsquo;m the cult of personality&lt;/p&gt;
       <guid>http://localhost:1313/about/about_index/</guid>
       <description>&lt;p&gt;This is a personal site. The writing here covers economics, data analytics, computer science, credit risk, philosophy, and whatever else earns a place. The posts are notes made public — working through ideas, not finished arguments.&lt;/p&gt;
 &lt;h2 id=&#34;the-day-job&#34;&gt;The day job&lt;/h2&gt;
-&lt;p&gt;Finance. Primarily credit — analysis, structure, the forensics of how things fail. If you have spent time reading financial statements with genuine scepticism rather than confirmation bias, you will find some common ground here.&lt;/p&gt;</description>
+&lt;p&gt;Finance. Primarily credit — analysis, structure, the forensics of how things fail to enable an effective fiter for what good looks like. If you have spent time reading financial statements with genuine scepticism rather than confirmation bias, you will find some common ground here.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Book Recommendations</title>

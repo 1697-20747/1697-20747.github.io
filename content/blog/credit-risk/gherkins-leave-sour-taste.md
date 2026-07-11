@@ -8,14 +8,15 @@ description: "How London's most desirable office building ended up in receiversh
 showToc: true
 tocopen: false
 cover:
-  image: ""
-  alt: ""
-  caption: ""
+  image: "/images/credit-risk/gherkin_img.png"
+  alt: "30 St Mary Axe (The Gherkin)"
+  caption: "30 St Mary Axe ('The Gherkin'), London"
 ---
+
 
 ## Overview
 
-If you want a textbook example of an asset-liability mismatch, the Gherkin is it. Not a failing building. Not empty floors. Not even particularly reckless leverage by the standards of 2007. What killed it was a currency bet hiding inside a capital structure — one that got dramatically worse every time the Swiss franc strengthened, which, post-2008, it did with depressing regularity.
+If you want a textbook example of an asset-liability mismatch, the Gherkin is it. Not a failing building. Not empty floors. Not even particularly reckless leverage by the standards of 2007. What killed it was a currency bet hiding inside a capital structure — one that got dramatically worse every time the Swiss franc strengthened, which, post-2008, it did with depressing regularity. Well, depressing if you are Swiss watch maker protecting your export market. Helpful is you are Swiss and actually want your wealth protected and your currency not debased. It is all about perspective, really.
 
 This is a story about a £600 million building that was 99% occupied, collecting rent from blue-chip tenants, and still ended up in receivership. The building didn't fail. The financing did.
 

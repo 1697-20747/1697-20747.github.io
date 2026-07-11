@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WeWork: Valuation &amp; Share Price Collapse</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 0; padding: 20px 24px 16px; background: #141413; color: #e8e8e0; }
+  h3 { font-size: 14px; font-weight: 600; margin: 0 0 2px; letter-spacing: 0.01em; color: #e8e8e0; }
+  .subtitle { font-size: 12px; color: #898781; margin: 0 0 12px; }
+  .chart-section { margin-bottom: 28px; }
+  .chart-wrap { position: relative; width: 100%; height: 240px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 8px; font-size: 11px; color: #898781; }
+  .legend span { display: flex; align-items: center; gap: 5px; }
+  .swatch { width: 9px; height: 9px; border-radius: 2px; display: inline-block; flex-shrink: 0; }
+  .events { display: flex; flex-direction: column; gap: 2px; margin-top: 8px; font-size: 11px; color: #898781; border-left: 2px solid #2c2c2a; padding-left: 8px; }
+  .events strong { color: #c3c2b7; }
+  .note { font-size: 10px; color: #5a5a56; margin-top: 5px; }
+  .divider { border: none; border-top: 0.5px solid #2c2c2a; margin: 4px 0 20px; }
+</style>
+</head>
+<body>
+
+<div class="chart-section">
+  <h3>Implied valuation and market cap, 2012–2023 ($B)</h3>
+  <p class="subtitle">Private round marks (2012–2021) → public market cap post-SPAC (Oct 2021–Nov 2023)</p>
+  <div class="legend">
+    <span><span class="swatch" style="background:#2a78d6;"></span>Valuation / market cap ($B)</span>
+  </div>
+  <div class="chart-wrap">
+    <canvas id="valuationChart" role="img" aria-label="Line chart showing WeWork valuation rising from near zero in 2012 to a peak of $47 billion in January 2019, then collapsing after the failed IPO and eventual bankruptcy in November 2023.">WeWork valuation peaked at $47B (Jan 2019), collapsed to $8B after IPO withdrawal, went public via SPAC at $9B (Oct 2021), filed for bankruptcy with a market cap of ~$45M (Nov 2023).</canvas>
+  </div>
+  <div class="events">
+    <div><strong>Jan 2019 — $47B:</strong> SoftBank peak mark. IPO planned.</div>
+    <div><strong>Sep 2019:</strong> S-1 withdrawn. Valuation slashed to ~$8B.</div>
+    <div><strong>Oct 2021:</strong> SPAC IPO via BowX at ~$9B. Stock opens $10.44.</div>
+    <div><strong>Nov 2023:</strong> Chapter 11 filed. Market cap ~$45M.</div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chart-section">
+  <h3>Share price (NYSE: WE), Oct 2021 – Jan 2024</h3>
+  <p class="subtitle">Pre-split equivalent prices throughout &nbsp;·&nbsp; 1-for-40 reverse split occurred Sep 2023</p>
+  <div class="legend">
+    <span><span class="swatch" style="background:#e34948;"></span>Share price (USD)</span>
+    <span><span class="swatch" style="background:#898781; width:18px; height:2px; border-radius:0;"></span>$1.00 NYSE minimum bid</span>
+  </div>
+  <div class="chart-wrap">
+    <canvas id="priceChart" role="img" aria-label="Line chart showing WeWork share price falling from a peak of $13.18 in October 2021 to near zero by bankruptcy in November 2023.">WeWork share price fell from $13.18 peak (Oct 2021) to $0.48 at NYSE non-compliance notice (Apr 2023), then to near zero before the November 2023 bankruptcy filing.</canvas>
+  </div>
+  <div class="events">
+    <div><strong>Oct 2021 — $13.18:</strong> Post-SPAC peak.</div>
+    <div><strong>Apr 2023 — $0.48:</strong> NYSE non-compliance notice (below $1 for 30 consecutive days).</div>
+    <div><strong>Sep 2023:</strong> 1-for-40 reverse split. Fails to maintain listing.</div>
+    <div><strong>Nov 2023:</strong> Chapter 11 filed. Delisted Jan 2024.</div>
+  </div>
+  <p class="note">Pre-split equivalent prices used throughout for consistency. Reverse split (1:40) occurred September 2023.</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const textMuted = '#898781';
+const gridColor = '#252523';
+const surface = '#141413';
+const textPrimary = '#e8e8e0';
+
+const baseOpts = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: { display: false },
+    tooltip: {
+      backgroundColor: '#1e1e1c',
+      borderColor: '#2c2c2a',
+      borderWidth: 1,
+      titleColor: textPrimary,
+      bodyColor: textMuted,
+      padding: 8,
+      cornerRadius: 4
+    }
+  },
+  scales: {
+    x: {
+      grid: { color: gridColor, lineWidth: 0.5 },
+      ticks: { color: textMuted, font: { size: 10 }, maxRotation: 45 }
+    },
+    y: {
+      grid: { color: gridColor, lineWidth: 0.5 },
+      ticks: { color: textMuted, font: { size: 10 } },
+      beginAtZero: true
+    }
+  }
+};
+
+new Chart(document.getElementById('valuationChart'), {
+  type: 'line',
+  data: {
+    labels: ['2012','2013','2014','2015','2016','2017','2018',"Jan '19","Sep '19",'2020',"Oct '21",'2022',"Nov '23"],
+    datasets: [{
+      label: 'Valuation ($B)',
+      data: [0.1, 0.4, 1.5, 5, 16, 20, 20, 47, 8, 2.9, 9, 3.5, 0.045],
+      borderColor: '#2a78d6',
+      backgroundColor: 'rgba(42,120,214,0.08)',
+      borderWidth: 2,
+      fill: true,
+      tension: 0.35,
+      pointRadius: 5,
+      pointHoverRadius: 7,
+      pointBackgroundColor: '#2a78d6',
+      pointBorderColor: surface,
+      pointBorderWidth: 2
+    }]
+  },
+  options: {
+    ...baseOpts,
+    plugins: { ...baseOpts.plugins, tooltip: { ...baseOpts.plugins.tooltip, callbacks: { label: c => '$' + c.parsed.y.toFixed(1) + 'B' } } },
+    scales: { ...baseOpts.scales, y: { ...baseOpts.scales.y, ticks: { ...baseOpts.scales.y.ticks, callback: v => '$' + v + 'B' } } }
+  }
+});
+
+new Chart(document.getElementById('priceChart'), {
+  type: 'line',
+  data: {
+    labels: ["Oct '21","Nov '21","Dec '21","Jan '22","Feb '22","Mar '22","Apr '22","May '22","Jun '22","Jul '22","Aug '22","Sep '22","Oct '22","Nov '22","Dec '22","Jan '23","Feb '23","Mar '23","Apr '23","May '23","Jun '23","Jul '23","Aug '23","Sep '23","Oct '23","Nov '23","Jan '24"],
+    datasets: [
+      {
+        label: 'Share price',
+        data: [11.78,8.20,7.50,6.10,6.80,5.60,5.40,4.40,3.50,3.90,3.40,2.40,1.90,1.50,1.15,1.05,0.85,0.68,0.48,0.44,0.32,0.28,0.18,0.13,0.12,0.04,0.02],
+        borderColor: '#e34948',
+        backgroundColor: 'rgba(227,73,72,0.07)',
+        borderWidth: 2,
+        fill: true,
+        tension: 0.25,
+        pointRadius: 3,
+        pointHoverRadius: 6,
+        pointBackgroundColor: '#e34948',
+        pointBorderColor: surface,
+        pointBorderWidth: 2
+      },
+      {
+        label: 'NYSE $1 minimum',
+        data: Array(27).fill(1),
+        borderColor: '#898781',
+        borderWidth: 1,
+        borderDash: [5,4],
+        pointRadius: 0,
+        fill: false,
+        tension: 0
+      }
+    ]
+  },
+  options: {
+    ...baseOpts,
+    plugins: { ...baseOpts.plugins, tooltip: { ...baseOpts.plugins.tooltip, callbacks: { label: c => c.datasetIndex === 0 ? '$' + c.parsed.y.toFixed(2) : '$1.00 NYSE minimum' } } },
+    scales: {
+      ...baseOpts.scales,
+      x: { ...baseOpts.scales.x, ticks: { ...baseOpts.scales.x.ticks, autoSkip: true, maxTicksLimit: 11 } },
+      y: { ...baseOpts.scales.y, ticks: { ...baseOpts.scales.y.ticks, callback: v => '$' + v.toFixed(2) } }
+    }
+  }
+});
+</script>
+</body>
+</html>

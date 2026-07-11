@@ -10,21 +10,19 @@ This is a personal site. The writing here covers economics, data analytics, comp
 
 ## The day job
 
-Finance. Primarily credit — analysis, structure, the forensics of how things fail. If you have spent time reading financial statements with genuine scepticism rather than confirmation bias, you will find some common ground here.
+Finance. Primarily credit — analysis, structure, the forensics of how things fail to enable an effective fiter for what good looks like. If you have spent time reading financial statements with genuine scepticism rather than confirmation bias, you will find some common ground here.
 
 ## The rest of the time
 
-Low-level programming on small devices. Embedded systems, constrained hardware, the kind of work where the use of every byte is a negotiation. This requires a working understanding of machine learning, which means most of the comp science writing here sits at that intersection — the plumbing beneath the tools everyone else uses without thinking about. 
-
-None of the comp science is the day job. It is personal time, chosen freely. That distinction matters.
+Low-level programming on small devices. Embedded systems, constrained hardware, the kind of work where the use of every byte is a negotiation. Some of this requires a working understanding of machine learning, which means most of the comp science writing here sits at that intersection — the plumbing beneath the tools everyone else uses without thinking about. I have spent a lot of time on machine learning in the last few years. None of the comp science is the day job. It is personal time, chosen freely. That distinction matters.
 
 ## On writing style
 
-The text is not AI generated. The informal phrasing is deliberate — clarity does not require formality, and pretension is its own form of obscurity. If a sentence is clumsy it is because the thought behind it was still being worked out, not because a language model hallucinated it into existence.
+The text, thought process and commentary in the main is not AI generated. The informal phrasing is deliberate — clarity does not require formality, and pretension is its own form of obscurity. If a sentence is clumsy it is because the thought behind it was still being worked out, not because a language model hallucinated it into existence. But, a caveat. For boiler plate analysis bits I am using AI more now, it saves a lot of pain. For example file naming conventions for corpus for LLM training. File names on the internet are generally awful. Getting AI to write a quick python script to apply naming conventions for a few hundred files is a joy. Compared to the alternative. I'll have to ponder an honest way to flag AI wording, eg one paragraph article summary and the like.
 
 ## On social media
 
-No. This is it. There is a very small number of WhatsApp groups, and that is the full extent of it. If you want to get in touch, LinkedIn is in the footer. But I am not particularly interested. There is no comments section here, that is not the intended purpse.
+No. This is it. I post nonsense is a very small number of WhatsApp groups, and that is the full extent of it. If you want to get in touch, LinkedIn is in the footer. But I am not particularly interested. There is no comments section here, that is not the intended purpose.
 
 ## The name
 
@@ -34,7 +32,7 @@ A tokenizer output. Run the name through a BPE tokenizer — GPT-family, if you 
 
 ## Why?
 
-As stated elsewhere, don't do anything without a problem statement that has been developed. There are a couple of reasons why for this site. One is a repository to use, much later, to post train a smaller LLM. It requires structured text, so by default I can scrape this site to use for curated training data. Second, a reminder for myself. Third, the discipline of writing things down. Clear writing requires clear thinking. I generally suck at writing. Fourth, it serves a practical purpose. With a varied background, I have always struggled with have a CV that actually covers my skill set. This site acts as a very expanded skill set description. You can infer what I am good at, or not, from the contents, in a manner impossible in a short form CV. Lastly, in some manner for my kids. Hopefully some life lessons buried in here somewhere. They have heard them all, but it might be a reminder one day. Books, as much as I love them, are not for everyone. This is in essence a book, split across a few subjects. But easier to contain.
+As stated elsewhere, don't do anything without a problem statement that has been developed. There are a couple of reasons why for this site. One is a repository to use, much later, to post train a smaller LLM. It requires structured text, so by default I can scrape this site to use for curated training data. Second, a reminder for myself. Third, the discipline of writing things down. Clear writing requires clear thinking. Shame about my writing, I am not too horrible on the thinking aspect. Fourth, it serves a practical purpose. With a varied background, I have always struggled with have a CV that actually covers my skill set. This site acts as a very expanded skill set description. You can infer what I am good at, or not, from the contents, in a manner impossible in a short form CV. Lastly, in some manner for my kids. Hopefully some life lessons buried in here somewhere. They have heard them all, but it might be a reminder one day. Books, as much as I love them, are not for everyone. This is in essence a book, split across a few subjects. But easier to contain.
 
 I hope the traditional CV dies, and gets replaced with actual skills framework. I have a lot of respect for those who can do the doing.
 
@@ -163,7 +161,7 @@ Worth reading alongside *Quality of Earnings* — both books are ultimately abou
 EOF
 ```
 
-I tend to use a lot of bash files for my work. So for say historical fx analysis from a csv file, I will take a look manually in VS Studio or Pycharm until I have a feel for the shape of the data. Then, lets say I want a basic stats dashboard, I wil almost always set up the workings in a stand alone bash file, all the code contained, all libraries referenced in a requirements file. Slow is fast. It is easier to go back to, cleaner. And faster, as if you need to you can just change the csv file with fresh data, then re run the analysis on one go by running the same bash.sh file, with no changes. If you are careful with your work and content in the bash scripts, I find it very helpful. Also, you back track to edit out errors. Good luck with that using AI. To be clear, I often use AI for methods within the bash files, but I keep the work in manner that I can replicate it as needs be. A lot of these larger post are iterations, they won't be finished for perhaps years as I get through he backlog. Each to their own.
+I tend to use a lot of bash files for my work. So for say historical fx analysis from a csv file, I will take a look manually in VS Studio or Pycharm until I have a feel for the shape of the data. Then, lets say I want a basic stats dashboard, I will almost always set up the workings in a stand alone bash file, all the code contained, all libraries referenced in a requirements file. Slow is fast. It is easier to go back to, cleaner. And faster, as if you need to you can just change the csv or other file with fresh data, then re run the analysis on one go by running the same bash.sh file, with no changes. If you are careful with your work and content in the bash scripts, I find it very helpful. Also, you back track to edit out errors. Good luck with that using AI. To be clear, I often use AI for methods within the bash files, but I keep the work in manner that I can replicate it as needs be. AI for writing slabs of python? Yes. Running the numbers, bash scripts in the main. It gives you repeatability with no hallucination risk. A lot of these larger post are iterations, they won't be finished for perhaps years as I get through the backlog.
 
 
 ---
