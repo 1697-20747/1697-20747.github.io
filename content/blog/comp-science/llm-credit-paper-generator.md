@@ -15,6 +15,9 @@ cover:
 
 ## Overview
 
+*Second post in a series — start with [Not a Specification](/blog/comp-science/not-a-specification/)
+for the problem statement this project actually set out to solve.*
+
 This is a project to generate bank credit papers using AI. Easier said than done.
 Project teams trying this with off-the-shelf LLMs tend to get stuck in a rut, and
 not without reason — generic LLMs do not know what a CAMELS analysis is, do not
@@ -429,3 +432,27 @@ Technical documentation: [/docs/camels-llm/](/docs/camels-llm/)
 - [Technical Documentation](/docs/camels-llm/)
 - [Fine-Tuning Retrospective](https://github.com/1697-20747/llm_credit_paper/blob/main/FINE_TUNING_RETROSPECTIVE.md)
 - [Project Repository](https://github.com/1697-20747/llm_credit_paper)
+
+---
+
+**Update, 2026-07-19:** two follow-ups since this post. [One Metric, Three Rulebooks](/blog/comp-science/one-metric-three-rulebooks/) covers a specific architectural bug that pushed the project toward durable, queryable memory instead of one-off fixes. [Adding the 61st Bank](/blog/comp-science/adding-the-61st-bank/) covers what the whole pipeline looks like now — Claude Code doing the actual ingestion work, not just consuming pre-extracted metrics.
+
+---
+
+**Previous in the series:** [Not a Specification](/blog/comp-science/not-a-specification/)
+**Next in the series:** [One Metric, Three Rulebooks](/blog/comp-science/one-metric-three-rulebooks/)
+
+---
+
+## Full Series
+
+1. [Not a Specification](/blog/comp-science/not-a-specification/)
+2. **LLM Credit Paper Generator** (this post)
+3. [One Metric, Three Rulebooks](/blog/comp-science/one-metric-three-rulebooks/)
+4. [Two Numbers, Same Page](/blog/comp-science/two-numbers-same-page/) *(draft, unpublished)*
+5. [Adding the 61st Bank](/blog/comp-science/adding-the-61st-bank/)
+6. [Antidote for Large Liar Model](/blog/comp-science/antidote-for-large-liar-model/)
+7. [Post PDF](/blog/comp-science/post-pdf/)
+8. [Whose Bank Is This?](/blog/comp-science/whose-bank-is-this/)
+9. [Confirmed, Not Claimed](/blog/comp-science/confirmed-not-claimed/)
+10. [Audit the Neighbor Too](/blog/comp-science/audit-the-neighbor-too/)

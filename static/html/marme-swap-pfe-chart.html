@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marme Swaps — EE and PFE at Execution vs Actual Outcome</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background-color: #0f1117;
+    color: #e2e8f0;
+    font-family: 'Georgia', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+  .chart-container {
+    width: 100%;
+    max-width: 820px;
+    background: #1a1d2e;
+    border: 1px solid #2d3155;
+    border-radius: 4px;
+    padding: 28px 28px 20px 28px;
+  }
+  h2 {
+    font-size: 1.05rem;
+    font-weight: normal;
+    color: #c8d0e0;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-family: 'Georgia', serif;
+  }
+  .subtitle {
+    font-size: 0.78rem;
+    color: #6b7a9e;
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+  }
+  canvas { display: block; }
+  .source-note {
+    font-size: 0.68rem;
+    color: #4a556b;
+    margin-top: 12px;
+    text-align: right;
+  }
+  .annotation {
+    font-size: 0.72rem;
+    color: #7b8aaa;
+    margin-top: 8px;
+    text-align: center;
+    font-style: italic;
+  }
+  .stats-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+  }
+  .stat-pill {
+    background: #12152a;
+    border: 1px solid #2a2f52;
+    border-radius: 3px;
+    padding: 6px 14px;
+    font-size: 0.72rem;
+    color: #8898aa;
+    letter-spacing: 0.03em;
+  }
+  .stat-pill span {
+    color: #c8d0e0;
+    font-size: 0.82rem;
+  }
+</style>
+</head>
+<body>
+<div class="chart-container">
+  <h2>Marme Swaps — Exposure Modelled at Execution vs Actual Outcome</h2>
+  <p class="subtitle">Exposure to the bank (€m) &nbsp;|&nbsp; Vasicek short-rate model, calibrated 12 Sep 2008 &nbsp;|&nbsp; €1.575bn aggregate notional</p>
+  <div class="stats-row" id="statsRow"></div>
+  <canvas id="pfeChart" height="360"></canvas>
+  <p class="annotation">Actual termination liability (Nov 2014, ~€710.7m) sits far above the 99th-percentile PFE envelope modelled at execution — and above even the model's own worst point across the full 15-year life.</p>
+  <p class="source-note">Illustrative reconstruction, not the banks' disclosed models &nbsp;|&nbsp; Termination figures: [2019] EWHC 366 (Comm)</p>
+</div>
+
+<script>
+// ── Precomputed from a Vasicek short-rate model of 3M EURIBOR ─────────────
+// dr = kappa(theta - r)dt + sigma dW, kappa=0.35, theta=4.5%, sigma=1.10%/yr, r0=4.96%
+// MTM(t) valued via flat-extrapolation of r(t) against the stepped fixed leg
+// (3.3030% -> 6.7635%, linear annual steps), flat 4% discount rate.
+const labels = ['Y1','Y2','Y3','Y4','Y5','Y6','Y7','Y8','Y9','Y10','Y11','Y12','Y13','Y14','Y15'];
+const EE    = [52.2, 95.9, 120.4, 136.0, 145.7, 151.0, 152.3, 149.9, 143.6, 133.5, 119.3, 100.8, 77.9, 50.2, 17.7];
+const PFE95 = [208.6, 333.3, 383.2, 402.6, 405.3, 397.4, 381.4, 358.8, 330.2, 295.7, 255.4, 209.3, 157.2, 99.0, 34.3];
+const PFE99 = [292.5, 451.3, 508.7, 526.2, 523.0, 507.1, 482.0, 449.5, 410.4, 364.9, 313.2, 255.2, 190.6, 119.4, 41.3];
+
+// Actual outcome: swaps terminated Nov 2014 (~6.15 years post-execution)
+// Model-implied MTM using the real 3M EURIBOR fixing that month (0.085%): ~€670.1m
+// Court-disclosed actual termination liability: ~€710.7m
+const actualPoint = { x: 6, model: 670.1, disclosed: 710.7 };
+
+const statsRow = document.getElementById('statsRow');
+[
+  ['Peak EE (whole life)', '€152.3m'],
+  ['Peak PFE 99th (whole life)', '€526.2m'],
+  ['Actual @ termination (Y6)', '€710.7m'],
+  ['Actual vs peak PFE 99th', '+35%'],
+].forEach(([label, val]) => {
+  statsRow.innerHTML += `<div class="stat-pill">${label}: <span>${val}</span></div>`;
+});
+
+const ctx = document.getElementById('pfeChart').getContext('2d');
+function sendHeight() {
+  var el = document.querySelector('.chart-container');
+  if (el) {
+    var h = Math.ceil(el.getBoundingClientRect().bottom) + 20;
+    window.parent.postMessage({ iframeHeight: h }, '*');
+  }
+}
+setTimeout(sendHeight, 150);
+window.addEventListener('resize', sendHeight);
+
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels,
+    datasets: [
+      {
+        label: '99th Percentile PFE',
+        data: PFE99,
+        borderColor: '#5c7cfa',
+        backgroundColor: 'rgba(92,124,250,0.14)',
+        borderWidth: 2.5,
+        pointRadius: 3,
+        pointHoverRadius: 6,
+        pointBackgroundColor: '#5c7cfa',
+        tension: 0.3,
+        fill: 'origin'
+      },
+      {
+        label: '95th Percentile PFE',
+        data: PFE95,
+        borderColor: '#4ecdc4',
+        backgroundColor: 'rgba(78,205,196,0.10)',
+        borderWidth: 2,
+        borderDash: [5, 4],
+        pointRadius: 3,
+        pointHoverRadius: 6,
+        pointBackgroundColor: '#4ecdc4',
+        tension: 0.3,
+        fill: 'origin'
+      },
+      {
+        label: 'Expected Exposure (EE)',
+        data: EE,
+        borderColor: '#8FAC59',
+        backgroundColor: 'rgba(143,172,89,0.16)',
+        borderWidth: 2.5,
+        pointRadius: 3,
+        pointHoverRadius: 6,
+        pointBackgroundColor: '#8FAC59',
+        tension: 0.3,
+        fill: 'origin'
+      },
+      {
+        label: 'Actual outcome (Nov 2014 termination)',
+        data: labels.map((l, i) => i === actualPoint.x ? actualPoint.disclosed : null),
+        borderColor: '#ff6b6b',
+        backgroundColor: '#ff6b6b',
+        borderWidth: 0,
+        pointRadius: 7,
+        pointHoverRadius: 9,
+        pointStyle: 'triangle',
+        showLine: false
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: {
+        display: true,
+        position: 'top',
+        labels: {
+          color: '#a0aec0',
+          font: { size: 11, family: 'Georgia' },
+          padding: 12,
+          boxWidth: 14,
+          usePointStyle: true
+        }
+      },
+      tooltip: {
+        backgroundColor: '#1e2130',
+        borderColor: '#3d4570',
+        borderWidth: 1,
+        titleColor: '#c8d0e0',
+        bodyColor: '#8898aa',
+        callbacks: {
+          label: ctx => ctx.parsed.y == null ? '' : ` ${ctx.dataset.label}: €${ctx.parsed.y.toFixed(1)}m`
+        }
+      }
+    },
+    scales: {
+      x: {
+        grid: { color: '#1e2335', lineWidth: 1 },
+        ticks: { color: '#6b7a9e', font: { size: 11, family: 'Georgia' } },
+        title: {
+          display: true,
+          text: 'Years from swap execution (12 Sep 2008)',
+          color: '#4a556b',
+          font: { size: 11 }
+        }
+      },
+      y: {
+        grid: { color: '#1e2335', lineWidth: 1 },
+        ticks: {
+          color: '#6b7a9e',
+          font: { size: 11, family: 'Georgia' },
+          callback: v => '€' + v.toFixed(0) + 'm'
+        },
+        title: {
+          display: true,
+          text: 'Exposure to the bank (€m)',
+          color: '#4a556b',
+          font: { size: 11 }
+        },
+        min: 0,
+        max: 750
+      }
+    }
+  }
+});
+</script>
+</body>
+</html>

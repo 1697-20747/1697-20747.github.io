@@ -6,8 +6,15 @@
     <description>Recent content in Credit Risk on [1697, 20747]</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 05 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 09:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/credit-risk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Derived Derivative</title>
+      <link>http://localhost:1313/blog/credit-risk/derived-derivative/</link>
+      <pubDate>Fri, 17 Jul 2026 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/credit-risk/derived-derivative/</guid>
+      <description>A Spanish SPV hedged a €1.575bn acquisition loan with stepped 15-year swaps on 12 September 2008 — three days before Lehman collapsed. By 2014 the swaps had produced termination liabilities of roughly €710 million, a scale of move that no pre-crisis PFE or EE model would have flagged as anything but a tail scenario.</description>
+    </item>
     <item>
       <title>WeWork: The Floor Worth More Than the Building</title>
       <link>http://localhost:1313/blog/credit-risk/wework-valuation-scandal/</link>

@@ -15,6 +15,10 @@ cover:
 
 ## The Problem
 
+*Third post in a series — start with [Not a Specification](/blog/comp-science/not-a-specification/)
+for the problem statement, or [LLM Credit Paper Generator](/blog/comp-science/llm-credit-paper-generator/)
+for how the metrics pipeline this bug lives in came to be.*
+
 I'm building a 59-bank credit-analysis corpus — UK, EU, US, Australian, Canadian, Swiss, Japanese — with a fixed set of metric keys per bank per year: CET1 ratio, leverage, NIM, and so on. One of those keys is `stage3_ratio`, the IFRS9 "Stage 3" credit-impaired loan ratio.
 
 A correction came through on a US bank: `stage3_ratio` had a real number sitting in it — 1.12% — except it wasn't a Stage 3 ratio at all. It was that bank's allowance-for-credit-losses coverage ratio, extracted by a pattern that matched on the shape of the sentence rather than the accounting concept behind it. Fixed the row, moved on.
@@ -59,3 +63,27 @@ And because a live pipeline had already been extracting values under the old sin
 - The pair you never re-checked is exactly where the next surprise lives.
 - "Numerically comparable" and "the same metric" are different claims. A shared name asserts the second one whether you meant to or not.
 - When you leave a gap deliberately, say so in the same place someone would look for the answer — a flagged gap is a decision; a silent one is a future bug report.
+
+---
+
+**Update, 2026-07-19:** the shift described above — from ad-hoc fixes toward durable, queryable memory — kept going. See [Adding the 61st Bank](/blog/comp-science/adding-the-61st-bank/) for how the whole ingestion pipeline looks now, Claude Code's actual role in it, and what happens end to end when a new bank joins the corpus.
+
+---
+
+**Previous in the series:** [LLM Credit Paper Generator](/blog/comp-science/llm-credit-paper-generator/)
+**Next in the series:** [Two Numbers, Same Page](/blog/comp-science/two-numbers-same-page/)
+
+---
+
+## Full Series
+
+1. [Not a Specification](/blog/comp-science/not-a-specification/)
+2. [LLM Credit Paper Generator](/blog/comp-science/llm-credit-paper-generator/)
+3. **One Metric, Three Rulebooks** (this post)
+4. [Two Numbers, Same Page](/blog/comp-science/two-numbers-same-page/) *(draft, unpublished)*
+5. [Adding the 61st Bank](/blog/comp-science/adding-the-61st-bank/)
+6. [Antidote for Large Liar Model](/blog/comp-science/antidote-for-large-liar-model/)
+7. [Post PDF](/blog/comp-science/post-pdf/)
+8. [Whose Bank Is This?](/blog/comp-science/whose-bank-is-this/)
+9. [Confirmed, Not Claimed](/blog/comp-science/confirmed-not-claimed/)
+10. [Audit the Neighbor Too](/blog/comp-science/audit-the-neighbor-too/)
