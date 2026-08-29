@@ -4,7 +4,7 @@ date: 2026-08-29T00:00:00Z
 draft: true
 categories: ["credit-risk"]
 tags: ["credit-risk", "history", "corporate-failure", "index"]
-description: "The condensed version — corporate and institutional defaults, not sovereign ones. Tulip mania to 2026, in a scannable timeline."
+description: "The condensed version — corporate and institutional defaults, not sovereign ones. Rome (33 AD) to 2026, in a scannable timeline."
 showToc: true
 tocopen: true
 cover:
@@ -13,19 +13,22 @@ cover:
   caption: ""
 ---
 
-*This is a draft. It's a companion to the full list post ("A History Of Credit Risk: The List") — same underlying research, condensed to a scannable timeline for readers who want the shape of the pattern without the full write-up on each entry. Scope is deliberately narrower than the full list: this version keeps corporate and institutional defaults front and centre and drops or de-emphasises events that were really sovereign-debt or currency crises (the Asian Financial Crisis of 1997 is omitted here for that reason — see the full list post). Japan's asset-price bubble is kept in, despite being macro in scale, because the mechanism underneath it was private bank and corporate lending and valuation decisions, not sovereign policy. Where an entry already has a full post on this site, that's noted.*
+*This is a draft. It's a companion to the full list post ("A History Of Credit Risk: The List") and the data companion ("Default Rates By The Numbers") — same underlying research, condensed to a scannable timeline for readers who want the shape of the pattern without the full write-up on each entry. Scope is deliberately narrower than the full list: this version keeps corporate and institutional defaults front and centre and drops or de-emphasises events that were really sovereign-debt or currency crises (the Asian Financial Crisis of 1997 is omitted here for that reason — see the full list post). Japan's asset-price bubble is kept in, despite being macro in scale, because the mechanism underneath it was private bank and corporate lending and valuation decisions, not sovereign policy. Where an entry already has a full post on this site, that's noted.*
 
 ## The shape of it, before the dates
 
-Pushed back far enough, almost every entry on this timeline is the same story: a period of easy credit or easy confidence lets leverage or concentration build up somewhere in the system, a promoter or manager decides the good times are structural rather than cyclical, and a control function — an auditor, a risk desk, a regulator, a board — that could have said "this is too much" either isn't asked, is ignored, or doesn't exist. The instrument changes (tulip bulbs, railway bonds, mortgage securities, crypto tokens); the failure of judgment underneath it does not.
+Pushed back far enough, almost every entry on this timeline is the same story: a period of easy credit or easy confidence lets leverage or concentration build up somewhere in the system, a promoter or manager decides the good times are structural rather than cyclical, and a control function — an auditor, a risk desk, a regulator, a board — that could have said "this is too much" either isn't asked, is ignored, or doesn't exist. The instrument changes (Roman land, tulip bulbs, railway bonds, mortgage securities, crypto tokens); the failure of judgment underneath it does not.
 
 ## Big-picture early problems (pre-1700)
 
+There is one entry earlier than tulip mania that fits this timeline's corporate/institutional frame better than almost anything after it — a private credit crunch, not a state default, complete with a bailout. It's included below despite predating tulip mania by roughly 1,600 years.
+
 | Date | Event | What went wrong |
 |---|---|---|
-| 1636–37 | **Tulip mania** (Dutch Republic) | Contracts for future tulip-bulb delivery were bought and resold on credit at prices with no relationship to any plausible end-use value; when buyers at the top of the chain stopped paying, the market for the contracts themselves collapsed. Often cited as the earliest well-documented speculative bubble — the template the rest of this timeline keeps re-running.((International Banker, [A Brief History of Financial Crises](https://internationalbanker.com/history-of-financial-crises/history-of-financial-crises/), for general framing; primary tulip-mania scholarship is contested on the scale of real economic damage.)) |
+| 33 AD | **Roman financial crisis** (Rome) | Senators jockeying for advantage weaponized a long-dormant 49 BC usury law against political rivals — only to find nearly the entire senatorial lending class, themselves included, was in violation. Tacitus records their panicked petition to Tiberius: "alarmed since from this guilt none was exempt." The eighteen-month grace period he granted backfired: lenders rushed to call in loans and dump land to comply immediately, prices collapsed in the resulting fire sale, and Tiberius ultimately had to inject 100 million sesterces in interest-free, land-collateralized loans to stop the spiral — arguably the first documented central-bank-style liquidity bailout.((Wikipedia, [Financial crisis of 33](https://en.wikipedia.org/wiki/Financial_crisis_of_33); The Tontine Coffee-House, [Financial Crisis of AD 33](https://tontinecoffeehouse.com/2021/12/06/financial-crisis-of-ad-33/).)) A rule quietly ignored for eight decades, weaponized selectively, then bailed out by the same political class that had spent those eight decades not enforcing it on itself. |
+| 1636–37 | **Tulip mania** (Dutch Republic) | Contracts for future tulip-bulb delivery were bought and resold on credit at prices with no relationship to any plausible end-use value; when buyers at the top of the chain stopped paying, the market for the contracts themselves collapsed. Often cited as the earliest well-documented speculative *bubble* — the Roman crisis above is a credit-crunch story rather than a mania/bubble one, so the two aren't quite the same species of event, but both are the template the rest of this timeline keeps re-running.((International Banker, [A Brief History of Financial Crises](https://internationalbanker.com/history-of-financial-crises/history-of-financial-crises/), for general framing; primary tulip-mania scholarship is contested on the scale of real economic damage.)) |
 
-Nothing earlier than tulip mania makes this list on the same terms — earlier crises (currency debasements, city-state bank failures) tend to be state or sovereign actions rather than private corporate or institutional over-extension, which is the throughline this timeline is tracing.
+Nothing earlier than the Roman crisis makes this list on the same terms — earlier events (currency debasements, city-state bank failures) tend to be pure state/sovereign actions rather than private lending or corporate over-extension, which is the throughline this timeline is tracing.
 
 ## Getting more specific: 1700 onward
 
@@ -40,7 +43,7 @@ Nothing earlier than tulip mania makes this list on the same terms — earlier c
 
 | Date | Event | What went wrong | Status |
 |---|---|---|---|
-| 1873 | **Jay Cooke & Co. / Panic of 1873** | America's leading investment bank over-committed as both promoter and lender to the Northern Pacific Railway, a line built ahead of demand; its collapse triggered a five-year depression. | Not yet covered |
+| 1873 | **Jay Cooke & Co. / Panic of 1873** | America's leading investment bank over-committed as both promoter and lender to the Northern Pacific Railway, a line built ahead of demand; its collapse triggered a five-year depression. 1874, the following year, set the all-time record for the worst annual US corporate bond default rate (~16.3%) in the 150-year dataset that tracks this — see the data companion post. | Not yet covered |
 | 1890 | **Barings Crisis** | Baring Brothers concentrated heavily in Argentine bonds it had itself underwritten, holding £8.3 million of them against only £4 million of capital; the Bank of England organised a rescue. | Not yet covered |
 
 ## 1900s–1990s
@@ -57,12 +60,12 @@ Nothing earlier than tulip mania makes this list on the same terms — earlier c
 
 | Date | Event | What went wrong | Status |
 |---|---|---|---|
-| 2001 | **Enron** | Off-balance-sheet entities and mark-to-market accounting hid losses and manufactured profits; collapsed from ~$90 to under $1 a share within a year, taking auditor Arthur Andersen down with it. | [Covered](/blog/credit-risk/enron-a-look-back/) |
+| 2001 | **Enron** | Off-balance-sheet entities and mark-to-market accounting hid losses and manufactured profits; collapsed from ~$90 to under $1 a share within a year, taking auditor Arthur Andersen down with it. 2001–02 together form the second-largest real-dollar default cluster in S&P's rated-universe data since 1981 — see the data companion post. | [Covered](/blog/credit-risk/enron-a-look-back/) |
 | 2002 | **WorldCom** | Reclassified billions in ordinary operating costs as capital expenditure to fabricate profit; bankruptcy exceeded even Enron's. | Not yet covered |
 | 2003 | **Parmalat** | Forged a bank statement claiming ~€3.95 billion that didn't exist, to hide a decade of losses and insider looting; became "Europe's Enron." | Not yet covered |
-| 2008 | **Lehman Brothers** | Owned subprime originators outright and ran high leverage against real-estate-heavy assets it had itself helped inflate the value of; its bankruptcy (still the largest in US history) froze global interbank lending overnight. | Not yet covered on the live site (drafted separately as part of a two-part subprime series) |
+| 2008 | **Lehman Brothers** | Owned subprime originators outright and ran high leverage against real-estate-heavy assets it had itself helped inflate the value of; its bankruptcy (still the largest in US history) froze global interbank lending overnight. 2008–09 is the largest default cluster on record in S&P's data by every measure — nominal, count, and real dollars. | Not yet covered on the live site (drafted separately as part of a two-part subprime series) |
 | 2011 | **MF Global** | Jon Corzine pushed a $6.3 billion bet on distressed European sovereign bonds over the board's objections; the firm collapsed within days, and ~$1.6 billion in segregated customer funds went missing in the process. Not the same firm as "MFS" (2026, below) — similar name, unrelated company, 15 years apart. | Not yet covered |
-| 2020 | **Wirecard** | Fabricated ~€1.9 billion in cash its own auditor never independently verified; CEO Markus Braun's fraud trial in Munich is still ongoing as of this draft. | Not yet covered |
+| 2020 | **Wirecard** | Fabricated ~€1.9 billion in cash its own auditor never independently verified; CEO Markus Braun's fraud trial in Munich is still ongoing as of this draft. (2020 itself is the third-largest default cluster in the S&P data, COVID-driven — not specifically about Wirecard.) | Not yet covered |
 | 2022 | **FTX** | An exchange and its affiliated trading firm shared leadership and no real wall between them; customer deposits were used to cover trading losses, leaving an $8 billion hole. Founder sentenced to 25 years. | Not yet covered |
 | 2023 | **Silicon Valley Bank** | Unhedged long-duration bonds funded by a heavily concentrated, mostly uninsured deposit base — with the CRO seat vacant for most of the run-up — became insolvent in days once depositors coordinated a bank run. | Not yet covered |
 | 2023 | **Credit Suisse** | Two years of concentrated-counterparty risk failures (Archegos, Greensill) left no reserve of market confidence when the SVB-triggered March 2023 turmoil hit; UBS took it over for $3.25 billion. | Not yet covered |
@@ -71,7 +74,7 @@ Nothing earlier than tulip mania makes this list on the same terms — earlier c
 
 ## What's deliberately left off this version
 
-The full list post additionally covers the 1907 Panic (trust-company runs), the 1920 Ponzi scheme, the 1929 crash, the 1989 Savings & Loan crisis, the 1997 Asian Financial Crisis, the 2000 dotcom bust, the 2008 Madoff fraud, and the 2008 Volkswagen–Porsche short squeeze — all real and all worth covering eventually, but trimmed here to keep this version to the corporate-default throughline. See the full list post for those — and for a further, non-chronological list of one-off corporate-default case studies already live on this site (the Gherkin, the Chrysler Building, Centro/New Plan Excel, WeWork, and a Spanish SPV's post-Lehman swap litigation) that don't fit neatly into a "major named crisis" timeline but belong to the same body of work.
+The full list post additionally covers the 1907 Panic (trust-company runs), the 1920 Ponzi scheme, the 1929 crash, the 1989 Savings & Loan crisis, the 1997 Asian Financial Crisis, the 2000 dotcom bust, the 2008 Madoff fraud, and the 2008 Volkswagen–Porsche short squeeze — all real and all worth covering eventually, but trimmed here to keep this version to the corporate-default throughline. See the full list post for those — and for a further, non-chronological list of one-off corporate-default case studies already live on this site (the Gherkin, the Chrysler Building, Centro/New Plan Excel, WeWork, and a Spanish SPV's post-Lehman swap litigation) that don't fit neatly into a "major named crisis" timeline but belong to the same body of work. See the data companion post ("Default Rates By The Numbers") for the full year-by-year S&P count and dollar-volume table underneath several of the entries above.
 
 ---
 
@@ -81,6 +84,8 @@ Same source set as the full list post — see its Sources section for the comple
 
 - International Banker — [A Brief History of Financial Crises](https://internationalbanker.com/history-of-financial-crises/history-of-financial-crises/)
 - Wikipedia — [Japanese asset price bubble](https://en.wikipedia.org/wiki/Japanese_asset_price_bubble) (source for the Tokyo Imperial Palace / California comparison and the bubble's lending/cross-shareholding mechanics)
+- Wikipedia — [Financial crisis of 33](https://en.wikipedia.org/wiki/Financial_crisis_of_33)
+- The Tontine Coffee-House — [Financial Crisis of AD 33](https://tontinecoffeehouse.com/2021/12/06/financial-crisis-of-ad-33/)
 - This site — [Enron: A Look Back](/blog/credit-risk/enron-a-look-back/), [Mfs Collapse](/blog/credit-risk/mfs-collapse/), [Experience Matters](/blog/credit-risk/experience-matters/)
 
 *Editorial note (draft): the pre-1700 entries (Mississippi Company, South Sea Bubble, Amsterdam 1763, Ayr Bank) are drawn from well-established general economic history rather than a single fetched primary source the way the rest of this site's posts have been sourced — worth a dedicated research pass with proper citations before this goes live. Tulip mania's economic-damage scale is genuinely disputed in the scholarly literature — worth a caveat sentence if this section gets expanded into a full post. The MFS entry (2026) describes live, unresolved litigation with allegations against a named living person (Paresh Raja) who denies intentional fraud — worth the same defamation/fairness discipline applied to the subprime posts before this goes live. Set to draft pending review.*
