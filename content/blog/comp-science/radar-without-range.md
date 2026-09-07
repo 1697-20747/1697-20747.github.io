@@ -1,7 +1,7 @@
 ---
 title: "Radar Without Range"
 date: 2026-08-08T09:12:51Z
-draft: true
+draft: false
 categories: ["comp-science"]
 tags: [robotics, computer-vision, donkeycar, raspberry-pi, stereo-vision, dashboards]
 description: "First post in a build log for APEX-DC, an autonomous RC vehicle project. Today: turning a single-camera live stream into a dashboard with two HUD-overlay feeds, a live object table, and two top-down maps — one of them deliberately not to scale."
@@ -13,6 +13,12 @@ cover:
   alt: ""
   caption: ""
 ---
+
+***Disclaimer: this series is AI-heavy — each post is produced off the back
+of a lengthy programming session, written up from that session's own work.
+The point is to track project progress efficiently and record how the
+approach to the problem changed and why, not to serve as a personal opinion
+piece.***
 
 *This is the first post in a build log for APEX-DC, an autonomous RC
 vehicle project running DonkeyCar on a Raspberry Pi 5. Hardware just
@@ -72,3 +78,8 @@ later.
 3. [From Static Overlay to Object Oriented Widget HUD](/blog/comp-science/from-static-overlay-to-object-oriented-widget-hud/)
 4. [Stay On, Then Smooth, Then Fast](/blog/comp-science/stay-on-then-smooth-then-fast/)
 5. [The Later That Came Early](/blog/comp-science/the-later-that-came-early/)
+6. [Same Shape, Different Paper](/blog/comp-science/same-shape-different-paper/)
+7. [What the Arduino Was Actually Doing](/blog/comp-science/what-the-arduino-was-actually-doing/)
+8. [Fast, But Undecoded](/blog/comp-science/fast-but-undecoded/)
+9. [Locked In, Never Measured](/blog/comp-science/locked-in-never-measured/)
+10. [Not Every Pixel Needs an Answer](/blog/comp-science/not-every-pixel-needs-an-answer/)

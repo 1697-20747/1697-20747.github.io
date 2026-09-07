@@ -1,7 +1,7 @@
 ---
 title: "Stay On, Then Smooth, Then Fast"
 date: 2026-08-14T08:29:03Z
-draft: true
+draft: false
 categories: ["comp-science"]
 tags: [robotics, donkeycar, raspberry-pi, reinforcement-learning, simulation, ros2]
 description: "Fourth post in a build log for APEX-DC, an autonomous RC vehicle project. Today: reshaping the reinforcement-learning reward so staying on the track always outranks driving smoothly or driving fast, and a look ahead at where the software might go next."
@@ -129,3 +129,8 @@ Widget HUD](/blog/comp-science/from-static-overlay-to-object-oriented-widget-hud
 3. [From Static Overlay to Object Oriented Widget HUD](/blog/comp-science/from-static-overlay-to-object-oriented-widget-hud/)
 4. **Stay On, Then Smooth, Then Fast** (this post)
 5. [The Later That Came Early](/blog/comp-science/the-later-that-came-early/)
+6. [Same Shape, Different Paper](/blog/comp-science/same-shape-different-paper/)
+7. [What the Arduino Was Actually Doing](/blog/comp-science/what-the-arduino-was-actually-doing/)
+8. [Fast, But Undecoded](/blog/comp-science/fast-but-undecoded/)
+9. [Locked In, Never Measured](/blog/comp-science/locked-in-never-measured/)
+10. [Not Every Pixel Needs an Answer](/blog/comp-science/not-every-pixel-needs-an-answer/)

@@ -1,7 +1,7 @@
 ---
 title: "The Later That Came Early"
 date: 2026-08-22T09:00:00Z
-draft: true
+draft: false
 categories: ["comp-science"]
 tags: [robotics, donkeycar, ros2, raspberry-pi, software-architecture]
 description: "Fifth post in the APEX build log (formerly APEX-DC). Today: the whole software stack moves off DonkeyCar and onto ROS 2 -- earlier than planned -- and why the swap was cheap because of a decision made months ago."
@@ -108,7 +108,7 @@ change you didn't plan for still has somewhere to land.
 
 **Previous in the series:** [Stay On, Then Smooth, Then
 Fast](/blog/comp-science/stay-on-then-smooth-then-fast/)
-**Next in the series:** — to be written
+**Next in the series:** [Same Shape, Different Paper](/blog/comp-science/same-shape-different-paper/)
 
 ---
 
@@ -119,3 +119,8 @@ Fast](/blog/comp-science/stay-on-then-smooth-then-fast/)
 3. [From Static Overlay to Object Oriented Widget HUD](/blog/comp-science/from-static-overlay-to-object-oriented-widget-hud/)
 4. [Stay On, Then Smooth, Then Fast](/blog/comp-science/stay-on-then-smooth-then-fast/)
 5. **The Later That Came Early** (this post)
+6. [Same Shape, Different Paper](/blog/comp-science/same-shape-different-paper/)
+7. [What the Arduino Was Actually Doing](/blog/comp-science/what-the-arduino-was-actually-doing/)
+8. [Fast, But Undecoded](/blog/comp-science/fast-but-undecoded/)
+9. [Locked In, Never Measured](/blog/comp-science/locked-in-never-measured/)
+10. [Not Every Pixel Needs an Answer](/blog/comp-science/not-every-pixel-needs-an-answer/)

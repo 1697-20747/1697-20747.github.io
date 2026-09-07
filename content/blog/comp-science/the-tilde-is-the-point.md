@@ -1,7 +1,7 @@
 ---
 title: "The Tilde Is the Point"
 date: 2026-08-08T16:20:00Z
-draft: true
+draft: false
 categories: ["comp-science"]
 tags: [robotics, computer-vision, donkeycar, raspberry-pi, monocular-vision, hud]
 description: "Second post in the APEX-DC build log. Today: a distance estimate for the one camera that can't actually measure distance — and why the number is printed with a tilde in front of it."
@@ -78,3 +78,8 @@ character.
 3. [From Static Overlay to Object Oriented Widget HUD](/blog/comp-science/from-static-overlay-to-object-oriented-widget-hud/)
 4. [Stay On, Then Smooth, Then Fast](/blog/comp-science/stay-on-then-smooth-then-fast/)
 5. [The Later That Came Early](/blog/comp-science/the-later-that-came-early/)
+6. [Same Shape, Different Paper](/blog/comp-science/same-shape-different-paper/)
+7. [What the Arduino Was Actually Doing](/blog/comp-science/what-the-arduino-was-actually-doing/)
+8. [Fast, But Undecoded](/blog/comp-science/fast-but-undecoded/)
+9. [Locked In, Never Measured](/blog/comp-science/locked-in-never-measured/)
+10. [Not Every Pixel Needs an Answer](/blog/comp-science/not-every-pixel-needs-an-answer/)
