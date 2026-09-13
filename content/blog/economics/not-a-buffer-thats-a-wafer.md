@@ -43,7 +43,7 @@ That gilt is the **3¾% Treasury Gilt 2038** (ISIN GB00BQC4R999), maturing 29 Ja
 
 ## Nine entry points, one sale price
 
-Reprice the 3¾% 2038's remaining cash flows off the same curve as the chart above, and it comes out to **£86.27 clean today** (£86.74 dirty), equivalent to a flat yield of 5.37% — modified duration is about 8.9 years at that level. Every one of the nine tranches gets marked to that same exit price, because it's the same bond; the only thing that differs between tranches is what an investor originally paid to get in.
+An **entry point**, here, just means one of the nine separate occasions — one syndication and eight ordinary "outright" auctions, 9 November 2022 through 20 November 2024 — on which an investor could actually buy this gilt when it was issued, each at its own price and yield. Reprice the 3¾% 2038's remaining cash flows off the same curve as the chart above, and it comes out to **£86.27 clean today** (£86.74 dirty), equivalent to a flat yield of 5.37% — modified duration is about 8.9 years at that level. Every one of the nine tranches gets marked to that same exit price, because it's the same bond; the only thing that differs between entry points is what an investor originally paid to get in.
 
 {{< figure src="/images/economics/fiscal-outlook-2038-gilt-tranche-returns.png" caption="If sold today off the current curve: capital return, interest received, and CPI-real return, by 2022–24 issuance tranche of the 3¾% Treasury Gilt 2038 (GB00BQC4R999)" >}}
 

@@ -73,7 +73,7 @@ for xi, r, t in zip(x, res['real_pct'], res['total_pct']):
 ax.axhline(0, color=TEXT_COL, linewidth=1.1, zorder=4)
 ax.set_xticks(x)
 ax.set_xticklabels(labels, fontsize=8.8)
-ax.set_xlabel('Tranche issue date and yield at issue', fontsize=11)
+ax.set_xlabel('Entry point: date and yield of each issuance tranche (1 syndication + 8 outright auctions)', fontsize=10.5)
 ax.set_ylabel('Cumulative return if sold today, per £100 nominal (%)', fontsize=11)
 ax.set_title('One Gilt, Nine Entry Points — 3¾% Treasury Gilt 2038 (GB00BQC4R999)\nSold today (13 Sep 2026) off the current curve, not held to maturity: capital vs. interest vs. CPI-real',
              fontsize=12.1, fontweight='bold', pad=14)
@@ -82,12 +82,14 @@ ax.grid(axis='y', alpha=0.35)
 ax.set_xlim(-0.6, len(res) - 0.3)
 ax.set_ylim(-17.5, 19)
 
-note = ("Note: this gilt is still outstanding (matures 29 Jan 2038, ~11.4 yrs left) — unlike this post's earlier reference bond,\n"
-        "which had already matured. “Sold today” means marked to market off the same curve as the chart above: £86.27 clean\n"
-        "(5.37% flat-yield equivalent), down from issue prices of £88.56–£96.63. Capital return = (today's clean price − issue\n"
-        "price)/issue price — negative for every tranche, since every one was issued at a lower yield than today's curve implies.\n"
-        "Interest = coupons actually paid from issue to today, summed (no reinvestment). Real return deflates nominal total\n"
-        "return by ONS CPI (all items, 2015=100) from the tranche's own issue month to Jun 2026 (142.5, latest published).")
+note = ("Note: each labelled point is one \"entry point\" — a separate auction/syndication at which this gilt was issued (1 syndication\n"
+        "+ 8 outright auctions, 9 Nov 2022–20 Nov 2024), each at its own price/yield. Still outstanding today (matures 29 Jan 2038,\n"
+        "~11.4 yrs left) — unlike this post's earlier reference bond, which had already matured. “Sold today” means marked to\n"
+        "market off the same curve as the chart above: £86.27 clean (5.37% flat-yield equivalent), down from issue prices of\n"
+        "£88.56–£96.63. Capital return = (today's clean price − issue price)/issue price — negative for every tranche, since every\n"
+        "one was issued at a lower yield than today's curve implies. Interest = coupons actually paid from issue to today, summed\n"
+        "(no reinvestment). Real return deflates nominal total return by ONS CPI (all items, 2015=100) from the tranche's own\n"
+        "issue month to Jun 2026 (142.5, latest published).")
 ax.text(0.012, 0.015, note, transform=ax.transAxes, fontsize=7.3, color=MUTED,
         va='bottom', ha='left', bbox=dict(boxstyle='round,pad=0.45', facecolor=DARK_AXES, edgecolor=GRID_COL, alpha=0.92))
 
