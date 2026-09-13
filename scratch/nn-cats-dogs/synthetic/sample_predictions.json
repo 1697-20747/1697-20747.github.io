@@ -1,0 +1,42 @@
+[
+  {
+    "path": "/Users/bruceschultz/Documents/blog/169720747/scratch/nn-cats-dogs/synthetic/data/test/cats/cat_0044.png",
+    "true": "cat",
+    "pred": "dog"
+  },
+  {
+    "path": "/Users/bruceschultz/Documents/blog/169720747/scratch/nn-cats-dogs/synthetic/data/test/cats/cat_0047.png",
+    "true": "cat",
+    "pred": "dog"
+  },
+  {
+    "path": "/Users/bruceschultz/Documents/blog/169720747/scratch/nn-cats-dogs/synthetic/data/test/cats/cat_0004.png",
+    "true": "cat",
+    "pred": "cat"
+  },
+  {
+    "path": "/Users/bruceschultz/Documents/blog/169720747/scratch/nn-cats-dogs/synthetic/data/test/cats/cat_0055.png",
+    "true": "cat",
+    "pred": "cat"
+  },
+  {
+    "path": "/Users/bruceschultz/Documents/blog/169720747/scratch/nn-cats-dogs/synthetic/data/test/cats/cat_0026.png",
+    "true": "cat",
+    "pred": "cat"
+  },
+  {
+    "path": "/Users/bruceschultz/Documents/blog/169720747/scratch/nn-cats-dogs/synthetic/data/test/dogs/dog_0004.png",
+    "true": "dog",
+    "pred": "dog"
+  },
+  {
+    "path": "/Users/bruceschultz/Documents/blog/169720747/scratch/nn-cats-dogs/synthetic/data/test/dogs/dog_0013.png",
+    "true": "dog",
+    "pred": "dog"
+  },
+  {
+    "path": "/Users/bruceschultz/Documents/blog/169720747/scratch/nn-cats-dogs/synthetic/data/test/cats/cat_0010.png",
+    "true": "cat",
+    "pred": "cat"
+  }
+]

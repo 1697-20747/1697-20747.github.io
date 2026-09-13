@@ -1,0 +1,19 @@
+{
+  "n_train": 7270,
+  "n_test": 120,
+  "n_features": 12288,
+  "img_size": 64,
+  "kernel": "linear",
+  "test_accuracy": 0.4666666666666667,
+  "confusion_matrix": [
+    [
+      22,
+      38
+    ],
+    [
+      26,
+      34
+    ]
+  ],
+  "classification_report": "              precision    recall  f1-score   support\n\n         cat       0.46      0.37      0.41        60\n         dog       0.47      0.57      0.52        60\n\n    accuracy                           0.47       120\n   macro avg       0.47      0.47      0.46       120\nweighted avg       0.47      0.47      0.46       120\n"
+}

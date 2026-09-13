@@ -110,6 +110,16 @@ denominator for — is the obvious next check once that's done.
 
 ---
 
+**Update, 2026-09-12:** a new, separate series has started, about the
+operational side of running this same verification pipeline at scale
+rather than the generator itself. [Expensive On Purpose](/blog/comp-science/expensive-on-purpose/)
+covers why the audit work described in this post costs as much as it does
+in raw tokens, why that cost is buying something a keyword search
+structurally cannot, and why the workload might actually suit a smaller
+model running on-prem better than a metered API.
+
+---
+
 **Previous in the series:** [Confirmed, Not Claimed](/blog/comp-science/confirmed-not-claimed/)
 **Next in the series:** — this is the latest post
 

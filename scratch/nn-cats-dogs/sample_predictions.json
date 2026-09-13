@@ -1,0 +1,42 @@
+[
+  {
+    "path": "/Users/bruceschultz/Documents/blog/169720747/scratch/nn-cats-dogs/data/test/cats/Ragdoll_147.jpg",
+    "true": "cat",
+    "pred": "dog"
+  },
+  {
+    "path": "/Users/bruceschultz/Documents/blog/169720747/scratch/nn-cats-dogs/data/test/cats/Ragdoll_40.jpg",
+    "true": "cat",
+    "pred": "dog"
+  },
+  {
+    "path": "/Users/bruceschultz/Documents/blog/169720747/scratch/nn-cats-dogs/data/test/cats/Bengal_103.jpg",
+    "true": "cat",
+    "pred": "cat"
+  },
+  {
+    "path": "/Users/bruceschultz/Documents/blog/169720747/scratch/nn-cats-dogs/data/test/cats/Siamese_14.jpg",
+    "true": "cat",
+    "pred": "dog"
+  },
+  {
+    "path": "/Users/bruceschultz/Documents/blog/169720747/scratch/nn-cats-dogs/data/test/cats/Egyptian_Mau_136.jpg",
+    "true": "cat",
+    "pred": "cat"
+  },
+  {
+    "path": "/Users/bruceschultz/Documents/blog/169720747/scratch/nn-cats-dogs/data/test/dogs/basset_hound_16.jpg",
+    "true": "dog",
+    "pred": "dog"
+  },
+  {
+    "path": "/Users/bruceschultz/Documents/blog/169720747/scratch/nn-cats-dogs/data/test/dogs/english_cocker_spaniel_184.jpg",
+    "true": "dog",
+    "pred": "dog"
+  },
+  {
+    "path": "/Users/bruceschultz/Documents/blog/169720747/scratch/nn-cats-dogs/data/test/cats/Bengal_37.jpg",
+    "true": "cat",
+    "pred": "dog"
+  }
+]

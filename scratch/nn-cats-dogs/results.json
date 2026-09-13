@@ -1,0 +1,29 @@
+{
+  "n_train": 6179,
+  "n_val": 1091,
+  "n_test": 120,
+  "n_features": 6912,
+  "epochs_run": 25,
+  "max_iter": 400,
+  "converged_before_max_iter": true,
+  "final_training_loss": 0.0596974373036925,
+  "validation_accuracy": 0.6636113657195234,
+  "test_accuracy": 0.55,
+  "confusion_matrix": [
+    [
+      16,
+      44
+    ],
+    [
+      10,
+      50
+    ]
+  ],
+  "classification_report": "              precision    recall  f1-score   support\n\n         cat       0.62      0.27      0.37        60\n         dog       0.53      0.83      0.65        60\n\n    accuracy                           0.55       120\n   macro avg       0.57      0.55      0.51       120\nweighted avg       0.57      0.55      0.51       120\n",
+  "hidden_layer_sizes": [
+    128,
+    64
+  ],
+  "n_layers_total": 4,
+  "n_parameters": 893185
+}

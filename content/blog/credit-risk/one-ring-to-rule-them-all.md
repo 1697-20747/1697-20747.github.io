@@ -27,14 +27,14 @@ This means we will need to resolve the trickier aspects outside of limited core 
 * A level 1 must have a data field or edge that joins it to the level 0.
 * This is the same concept for a level 2 that is connected to a level 1
 * Each entity needs a domicile attribute, being country.
-* * Each entity needs an address.
+* Each entity needs an address.
 * Each entity needs a city, to be defined by the address.
 
 Now a primer on what is going on here, why its a genuine problem, and shock horror, some data science. If you know me, you will have heard this lecture a few times now, so apologies dear readers who have suffered this lecture previously. Read the book, refer book review for **Alien Phenomenology What It Means to Be a Thing** especially if you are new to networks, or the concept of object oriented programming and data. We are also going to cover the basis of statistics, and stratification. Bad luck if you don’t want to.
 
 ### The Wrong Way
 
-Back to the basics. Imagine you have two friends, Bob and Jane. Bob and Jane live somewhere. You are tasked with crating some kind of relational system, why is irrelevant for now. After some thought, you decide to assemble the relational system, which later we will correctly call a network. Without much effort, you construct your system of an entity for Bob, and Entity for Jane, and to cover off where they live an Address for Bob and Jane, and an entity for their house, bob_house and jane_house. From this you create your basic network and off you go. Now there is a presumption of scale here, our example of two is implied to reflect the reality of thousands. Scale matters as we will so, so get your design right.
+Back to the basics. Imagine you have two friends, Bob and Jane. Bob and Jane live somewhere. You are tasked with creating some kind of relational system, why is irrelevant for now. After some thought, you decide to assemble the relational system, which later we will correctly call a network. Without much effort, you construct your system of an entity for Bob, and Entity for Jane, and to cover off where they live an Address for Bob and Jane, and an entity for their house, bob_house and jane_house. From this you create your basic network and off you go. Now there is a presumption of scale here, our example of two is implied to reflect the reality of thousands. Scale matters as we will so, so get your design right.
 
 IRL shall mean In Real Life for the rest of this post, and the rest of the site. This means the realistic parts of life that cannot be assumed away. In general you will have oversimplified something, removing elements that are essential but inconveniently complex, and as a result your system is crap and stops working as intended.
 
@@ -42,7 +42,7 @@ All is well, you are happy. Then sometime later, Bob goes and moves, and your da
 
 ### The Right Way
 
-IRL there is one, and only one instance of you. Even if you are a biological identical twin, genes and environment will have forged you in to a genetically identical, but biologically tweaked version of you. So the sample size of ‘you’ defined by all possible attributes is n=1.
+IRL there is one, and only one instance of you. Even if you are a biological identical twin, genes and environment will have forged you into a genetically identical, but biologically tweaked version of you. So the sample size of ‘you’ defined by all possible attributes is n=1.
 
 So there is one of you.
 
@@ -69,7 +69,7 @@ https://huggingface.co/SIH/penguin-classifier-sklearn
 
 
 
-A Primer on Ring Fencing concepts is appended if you have not crossed paths with this. Its sort of essential for this piece of work.
+A Primer on Ring Fencing concepts is appended if you have not crossed paths with this. It's sort of essential for this piece of work.
 
 So, ‘you’ means just you. Great. How many instances of you are there in the world? Biologically, one. If you have a bank account, then there is one KYC for you in every bank you deal with. There is one of you for whatever memberships you have. Leases, property titles, streaming services, library card, etc, etc. IRL there are possibly thousands of instances of ‘you’ in hundreds and hundreds of systems. Not all will be correct. So we are at many instances of classifiers where ‘you’ needs to be just you. This is a classic many to many entity relationship problem. Thankfully there are ways of dealing with this. Intelligently.
 
@@ -89,9 +89,9 @@ Bogost says we should be ‘Writing code that mimics how an object interacts wit
 ---
 ## The Problem Statement Restated
 
-Before moving onto solution paths, its worth reallty digging into the gritty details of the problem. I want this to be crystal clear. The broad idea is superordinance. The specifics we are going to dig into is just where and what we should apply the concept to. The answer is not where you first think.
+Before moving onto solution paths, it's worth really digging into the gritty details of the problem. I want this to be crystal clear. The broad idea is superordinance. The specifics we are going to dig into is just where and what we should apply the concept to. The answer is not where you first think.
 
-To strip things back to basics here is a simplified netwrok diagram of just 5 of the legal entities. For simplicity sake they have a notional 100 loan to each other.
+To strip things back to basics here is a simplified network diagram of just 5 of the legal entities. For simplicity sake they have a notional 100 loan to each other.
 
 ![£100 loan network — 5 entities](/images/network_mini_loan.png)
 
@@ -101,14 +101,14 @@ Forgetting about code. Any exposure from Bank Co down to the non UK domiciled en
 
 This is why we want to leave legal entities as they are.
 
-For the single loan it (lentity - exposure - entity) is NON CORE. That is fine. Now the Market Co lending to the Corp Co, that has to be a different CRR treatment. But wait, we have the Corp Co in NON CORE. But it cannot be that from the perspective of the Market Co. Conundrum! I know, I will create a new group name that is not a legal entity level. This will mirror Corp Co. So one instance of Corp Co for the NON CORE book of exposures, and then another instance of Corp Co for anthing that crosses the ring fence perimiter. I guess we can do that for each instance where we have a product from one legal entity to multiple other legal entities, some of which will map the exposure into different CRR buckets.
+For the single loan it (lentity - exposure - entity) is NON CORE. That is fine. Now the Market Co lending to the Corp Co, that has to be a different CRR treatment. But wait, we have the Corp Co in NON CORE. But it cannot be that from the perspective of the Market Co. Conundrum! I know, I will create a new group name that is not a legal entity level. This will mirror Corp Co. So one instance of Corp Co for the NON CORE book of exposures, and then another instance of Corp Co for anything that crosses the ring fence perimeter. I guess we can do that for each instance where we have a product from one legal entity to multiple other legal entities, some of which will map the exposure into different CRR buckets.
 
 You can appreciate that in doing this you will:
 
 * have a lot of duplications
 * have lost the integrity of you legal entity structure
 * run the risk of manual op errors in creating and linking the duplications
-* probably go mad eventually wit the mess you have made....
+* probably go mad eventually with the mess you have made....
 
 ---
 
@@ -119,7 +119,7 @@ So how best to avoid the traps laid out? Apply the concept of superordinance of 
 ---
 ## The Right Problem Statement
 
-Or the less wrong one if you want. We want to be able to answer question about our portfolio, about the legal structure, and regulatory aspects, and exposures, and often all three at once. Therefor the correct problem statement is something like ‘what is the minimum data and attribute set that will permit investigation of the portfolio across the legal and regulatory landscape to fulfil regulatory report requirements together with portfolio management obligations’. Bit of a word salad, but you get the drift. To do the job, what do I need as the minimum viable data set. Of which other bits I can derive later.
+Or the less wrong one if you want. We want to be able to answer questions about our portfolio, about the legal structure, and regulatory aspects, and exposures, and often all three at once. Therefor the correct problem statement is something like ‘what is the minimum data and attribute set that will permit investigation of the portfolio across the legal and regulatory landscape to fulfil regulatory report requirements together with portfolio management obligations’. Bit of a word salad, but you get the drift. To do the job, what do I need as the minimum viable data set. Of which other bits I can derive later.
 
 CRR waiver letters, over simplified will list legal entities that extend exposure, and a list of all legal entities that said exposure can have the noted CRR waivers in the letter applied to. What they really are in intent is two fold; (i) they identify what the new rules shall apply to; and (ii) the afford permission to apply 'different' regulatory treatment where permitted. This is probably why they are actually titled Permission letters IRL. The what, in the case of the letter is the identified 'firm/s', or legal entities. From which exposures to any listed subsidiaries may receive the diminished CRR treatment. At no point do the letters tell you there cannot be other exposures, or how to go about applying the reduced CRR regulations.
 
@@ -127,7 +127,7 @@ CRR waiver letters, over simplified will list legal entities that extend exposur
 
 As per bobs_house, the mistake is that you abuse your legal entity structure by switching a legal aggregation level at L1 out for a regulatory classifier. Eg make up a name inside_ring_fence, and presumable outside_ring_fence. Then hey presto you can slice your portfolio by ring fencing attribute! Done. No, actually.
 
-You have taken a legal entity attribute, and swapped if for a regulatory alignment attribute. Your portfolio of things now uses one type, legal entity, for two different things. This will break things down the track. DO NOT DO THIS. Its just lazy, or a constraint applied my management that won’t work. You have given up the coherence of your entity data. Nothing good can come from this, even as you might be tempted for this quick fix.
+You have taken a legal entity attribute, and swapped it for a regulatory alignment attribute. Your portfolio of things now uses one type, legal entity, for two different things. This will break things down the track. DO NOT DO THIS. It's just lazy, or a constraint applied by management that won’t work. You have given up the coherence of your entity data. Nothing good can come from this, even as you might be tempted for this quick fix.
 
 ## The doing
 
@@ -145,7 +145,7 @@ The off the shelf IT system that will do this to your exact needs and data is; t
 
 Hence the fix must be applied outside of the core system (whatever it is). Unless you are feeling brave and someone is going to let you fix the code base properly. Which would be fine, but good luck with getting that approved.
 
-To start with we are going to adopt a fairly standard legal entity hierarchy, Level 0 of L0 is ultimate parent. Then on down to L6. That is sufficent for most structures as L6 and below can be flattened as required. This is all populated with made up entities and structures, but it is a rough proxy for what you get IRL. Its good enough for the purpose at hand, I don't want to burn the hours to re model an existing bank in all its glory. Yes, its ugly, but it is limited. IRL large domestic banks run to several hundred legal entities. The brings enough scale for later, when we add (pretend) products, limits and exposures:
+To start with we are going to adopt a fairly standard legal entity hierarchy, Level 0 of L0 is ultimate parent. Then on down to L6. That is sufficient for most structures as L6 and below can be flattened as required. This is all populated with made up entities and structures, but it is a rough proxy for what you get IRL. It's good enough for the purpose at hand, I don't want to burn the hours to re model an existing bank in all its glory. Yes, its ugly, but it is limited. IRL large domestic banks run to several hundred legal entities. The brings enough scale for later, when we add (pretend) products, limits and exposures:
 
 ![Legal entity structure](/images/legal_entity_structure.png)
 
@@ -172,7 +172,7 @@ Now this is an abstraction of the IRL rules. But, all the actual CRR rules could
 
 This results in the decision tree as shown:
 
-
+![CRR treatment decision tree](/images/crr_decision_tree.png)
 
 Now to complete our pretend Bank we are going to add a bunch of random exposures across the entities. The products, limits and types will be as follows. This is of course grossly over simplified.
 
@@ -188,49 +188,103 @@ Now to complete our pretend Bank we are going to add a bunch of random exposures
 
 ---
 
-![CRR treatment decision tree](/images/crr_decision_tree.png)
+*Update: an earlier version of this section showed only the leaf-level `crr_treatment` function and waved at "the equivalent of recursive SQL techniques" for the ancestor walk without actually showing it. Fair enough to skip it for a first pass, less fair to leave readers with no way to run the thing. Below is the full, working recursion — two genuinely recursive functions, both plugged straight into the same `crr_treatment` — verified against the actual exposure data at the bottom of this post: it reproduces all 300 records exactly.*
 
----
+The two recursive pieces are:
 
-The basics of the code snippet setting CRR treatment are below:
+- **`subtree(root)`** — descendant enumeration. Base case: no children. Recursive case: union of every child's own subtree. This is how `bank_subtree` (everything under Bank Co) gets built.
+- **`get_group_ancestor(entity_id)`** — the parent-chain walk. This is the Python equivalent of a recursive SQL CTE: an anchor case (no parent, or the parent is a branch head) plus a recursive step that re-references the previous result, run until it terminates. You walk back up from wherever the exposure sits — say an L6 subsidiary — until you hit the entity's "L2" group node (the ancestor that is a direct child of its own L1 branch head: Bank Co, Property Co, Wealth Co, or Market Co). Same idea as walking a family tree back to find someone's parents, and the same idea as a CTE that keeps re-joining against the previous result set until a step returns nothing.
 
-```
+One nuance worth being precise about: most SQL engines evaluate a recursive CTE *iteratively* — repeatedly re-running the recursive member against the newest rows until none arrive — rather than via literal call-stack recursion. Same self-referential structure, different execution mechanism to what Python does below.
+
+The other thing the original snippet skipped: real legacy hierarchy data occasionally has a cycle in it — a bad migration, a fat-fingered `parent_id` that points back into its own ancestor chain. A naive walk-up loops forever on that. `get_group_ancestor` below guards against it explicitly, and is memoised so a large exposure table doesn't repeatedly re-walk the same chain — computed once per entity, O(n) overall rather than O(n × depth).
+
+```python
+from collections import defaultdict
+from functools import lru_cache
+
+# emap[id] = {"name":..., "level":..., "parent":..., "rf":...}
+# parent[id] = parent_id or None
+# — both built from df_legal_entity.csv; see the full script linked below
+# for the loading step.
+
+ROOT = 'E000'       # Group Co — ultimate parent
+BANK_ROOT = 'E001'  # Bank Co — the ring-fenced sub-group head
+
+children = defaultdict(list)
+for eid, p in parent.items():
+    if p:
+        children[p].append(eid)
+
+def subtree(root):
+    """Recursive descendant enumeration: base case = no children,
+    recursive case = union of every child's subtree."""
+    nodes = {root}
+    for c in children.get(root, []):
+        nodes |= subtree(c)
+    return nodes
+
+bank_subtree = subtree(BANK_ROOT)
+
+@lru_cache(maxsize=None)
+def get_group_ancestor(entity_id, _seen=frozenset()):
+    """Recursive ancestor walk with cycle guard — the Python equivalent
+    of a recursive SQL CTE. Returns the ancestor of entity_id that is a
+    direct child of entity_id's own L1 branch head, or None if entity_id
+    IS a branch head (or the root itself)."""
+    if entity_id in _seen:
+        raise ValueError(f"cycle detected in parent chain at {entity_id}")
+    p = parent.get(entity_id)
+    if p is None or p == ROOT:
+        return None
+    grandp = parent.get(p)
+    if grandp == ROOT:
+        return entity_id
+    return get_group_ancestor(p, _seen | {entity_id})
+
 def crr_treatment(cred_id, deb_id):
     """
     Derive CRR regulatory treatment for a bilateral exposure.
 
     Rules (applied in order):
-      RFB_X        : creditor inside Bank sub-group, debtor outside
-      NRFB_X       : creditor outside Bank sub-group, debtor inside
-      [L2]_CORE    : both in same L2 sub-group, L2 is CORE (UK-domiciled RFB)
-      [L2]_NON_CORE: both in same L2 sub-group, L2 is NON CORE (non-UK RFB)
-      RFB_INTERNAL : both inside Bank sub-group, different L2 sub-groups
-      NRFB_CROSS   : both outside Bank sub-group, different L2 sub-groups
+      RFB_X          : creditor inside Bank sub-group, debtor outside
+      NRFB_X         : creditor outside Bank sub-group, debtor inside
+      [group]_CORE     : both share a group ancestor that is CORE (UK-domiciled RFB)
+      [group]_NON_CORE : both share a group ancestor that is NON CORE (non-UK RFB)
+      [group]_NRFB     : both share a group ancestor outside the ring-fenced bank
+      RFB_INTERNAL   : both inside Bank sub-group, different group ancestors
+      NRFB_CROSS     : both outside Bank sub-group, no shared group ancestor
     """
     cr_in_bank = cred_id in bank_subtree
     de_in_bank = deb_id  in bank_subtree
-    cr_l2      = get_l2_ancestor(cred_id)
-    de_l2      = get_l2_ancestor(deb_id)
 
     if cr_in_bank and not de_in_bank:
         return 'RFB_X'
-
     if not cr_in_bank and de_in_bank:
         return 'NRFB_X'
 
-    if cr_l2 and de_l2 and cr_l2 == de_l2:
-        l2 = emap[cr_l2]
-        if l2['rf'] == 'CORE':     return f"{l2['name']}_CORE"
-        if l2['rf'] == 'NON CORE': return f"{l2['name']}_NON_CORE"
+    cr_grp = get_group_ancestor(cred_id)
+    de_grp = get_group_ancestor(deb_id)
+    if cr_grp and de_grp and cr_grp == de_grp:
+        grp = emap[cr_grp]
+        if grp['rf'] == 'CORE':     return f"{grp['name']}_CORE"
+        if grp['rf'] == 'NON CORE': return f"{grp['name']}_NON_CORE"
+        return f"{grp['name']}_NRFB"
 
     if cr_in_bank and de_in_bank:
         return 'RFB_INTERNAL'
-
     return 'NRFB_CROSS'
 ```
-No, its not all the code, just the simplified part. To do the whole thing you need to deploy the equivalent of recursive SQL techniques. This lets you walk back up from the exposure at whatever subsidiary, to the relevant grouping. This is akin to figuring who someone's parents are from family data. Common use cases of this technique include counting sequences and finding family tree ancestors using common table expressions (CTEs). In this manner say you started at an L6 subsidiary. You walk back up the hierarchy until you run out of options, or more eloquantly apply common table expression (CTE) as a query that continuously references a previous result until it returns an empty result. You can use panda's dataframes for this, or you can tell your favourite AI to use that tool suite. Code is irrelevant, concept is important.
 
-As an aside, don't knock old school SQL. It was invented in the 1970's to solve real world problems. If you write a bit of code or small language and someone is using it 60 years later, you probably did something smart. You also probably did it with pencil and paper. Development tools were largely no existant then. These people really were geniuses in their day. Que Ted Codd reference ....
+Note the `[group]_NRFB` branch: the original simplified version of this function only grouped entities *inside* the Bank Co sub-group (giving them a CORE/NON_CORE label) and collapsed everyone else to a flat `NRFB_CROSS`. The dataset behind this post actually applies the same group-ancestor logic to every branch — two entities that share a common group ancestor under Property Co, Wealth Co, or Market Co get labelled `{ancestor name}_NRFB` rather than being flattened. The function above now does that too, uniformly, via the same recursive walk — which is also just a tidier way to write it than special-casing Bank Co.
+
+The `l1_group` and `crr_aggregation` columns in the published CSVs, and the equivalent fields baked into the JS widget's data, are the *cached output* of this script — computed once and stored, not recomputed live by the widget. That's a completely normal pattern (compute once, cache, refresh on change) but it's worth naming as a cache rather than a derivation: if the entity hierarchy ever changes, something has to re-run this script and refresh those columns, or they go stale. Consider it the automatable version of the "derive it, don't hand-add it" principle from earlier in this post.
+
+For anything past this toy L0–L6 example — deeper or messier real hierarchies, hundreds of thousands of exposures rather than 300 — two things to reach for: `networkx` instead of hand-rolled recursion (`nx.ancestors()` etc. give you a tested, cycle-aware graph API for the same problem), and be aware Python's default recursion limit (~1000) and lack of tail-call optimisation mean a very deep or genuinely cyclic chain would raise `RecursionError` before an iterative stack-based walk would fail. Not a real risk at six levels, but worth knowing if this pattern gets reused somewhere deeper. Pandas has no built-in recursive-ancestor primitive either way — "use pandas for this" still means hand-rolling a loop very like the one above.
+
+The full script — entity loading, both recursive functions, and a self-check that validates it against `df_limits_exposures.csv` — is linked at the bottom of this post under Data Files. Running it directly reproduces a 300/300 (100%) match against the published exposure data.
+
+As an aside, don't knock old school SQL. It was invented in the 1970's to solve real world problems. If you write a bit of code or small language and someone is using it 60 years later, you probably did something smart. You also probably did it with pencil and paper. Development tools were largely nonexistent then. These people really were geniuses in their day. Cue Ted Codd reference ....
 
 Read about the crazy early days here if you have the interest:
 
@@ -370,6 +424,12 @@ The trick is thinking it all the way through first. No junior software developer
 
 ## References
 
+- Ian Bogost — *Alien Phenomenology, or What It's Like to Be a Thing* (object-oriented ontology; the "different types vs. different configurations" framing used above)
+- Mary Beard — *Laughter in Ancient Rome: On Joking, Tickling, and Cracking Up* (Sather Classical Lectures: 71) — source of the Roman identity joke quoted above
+- Computer History Museum — [oral history transcript covering Ted Codd and the early days of the relational model (PDF)](https://archive.computerhistory.org/resources/access/text/2013/05/102702562-05-01-acc.pdf)
+- SIH — [penguin classifier (scikit-learn) on Hugging Face](https://huggingface.co/SIH/penguin-classifier-sklearn) — the classic ML classification example referenced above
+- HM Treasury / UK legislation — [Financial Services and Markets Act 2000, ring-fencing statutory instruments (PDF)](https://www.legislation.gov.uk/uksi/2025/30/pdfs/uksiod_20250030_en_001.pdf) — source for the Ring Fencing Primer appendix
+
 ---
 
 ## Appendix — Ring Fencing Primer
@@ -422,3 +482,4 @@ I mean they are all made up nonsense and you can see the content in the widget, 
 - [Legal entities](/data/df_legal_entity.csv)
 - [Limit types](/data/df_limit_type.csv)
 - [Limits and exposures](/data/df_limits_exposures.csv)
+- [CRR treatment classifier — full recursive Python source, with a self-check against the CSVs above](/data/crr_treatment.py)

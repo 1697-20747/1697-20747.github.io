@@ -1,0 +1,51 @@
+[
+  {
+    "n_train": 300,
+    "n_cats": 97,
+    "n_dogs": 203,
+    "epochs_run": 17,
+    "test_accuracy": 0.44166666666666665
+  },
+  {
+    "n_train": 500,
+    "n_cats": 161,
+    "n_dogs": 339,
+    "epochs_run": 26,
+    "test_accuracy": 0.5583333333333333
+  },
+  {
+    "n_train": 1000,
+    "n_cats": 322,
+    "n_dogs": 678,
+    "epochs_run": 18,
+    "test_accuracy": 0.55
+  },
+  {
+    "n_train": 2000,
+    "n_cats": 644,
+    "n_dogs": 1356,
+    "epochs_run": 32,
+    "test_accuracy": 0.6083333333333333
+  },
+  {
+    "n_train": 4000,
+    "n_cats": 1287,
+    "n_dogs": 2713,
+    "epochs_run": 33,
+    "test_accuracy": 0.6
+  },
+  {
+    "n_train": 6000,
+    "n_cats": 1931,
+    "n_dogs": 4069,
+    "epochs_run": 24,
+    "test_accuracy": 0.6
+  },
+  {
+    "n_train": 7270,
+    "n_cats": 2340,
+    "n_dogs": 4930,
+    "epochs_run": 23,
+    "test_accuracy": 0.575
+  }
+]

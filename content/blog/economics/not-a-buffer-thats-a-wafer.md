@@ -1,7 +1,7 @@
 ---
 title: "Not a Buffer, That Is a Wafer: The Lords on the UK Fiscal Outlook"
 date: 2026-09-13T00:00:00Z
-draft: true
+draft: false
 categories: ["economics"]
 tags: ["gilts", "yield-curve", "uk-fiscal-policy", "duration", "interest-rates"]
 description: "The Lords' 10 September fiscal outlook debate, a current UK gilt discount curve built from today's benchmark yields, and what selling a still-outstanding 3¾% gilt at today's curve does to nine different 2022-24 buyers — split into capital return, interest, and inflation-adjusted real return."
@@ -12,6 +12,24 @@ cover:
   alt: ""
   caption: ""
 ---
+
+## The context:
+
+As at writing it is the 13th of September, 2026. A hard left government is in place in the UK, a legacy of covid impacts where the not very centre right Conservatives, or Tory's, were unceremoniously dumped at the last election. Quite right too, shame about the alternative though. This, with a cabinet stacked with an absence of economic literacy to an extent not seen for decades. What could go wrong?
+
+Fiscal ineptitude is what.
+
+Debt levels in the UK are high and getting higher. The yield curve is back to normal, the point of this discussion. The UK is not Japan, we don't own our own debt. The MMT theorist are disappearing back under their rock to hide from reality. Hopefully they stay there.
+
+Debt is rising because government spending is rising past growth. End of story. Where is said spending going? Welfare in the main. Thank goodness for the last bastions of democracy. One, the vigilante bond market; and two Lord Bridges. There are noted other sane voices on the centre right, but no one on the left is listening. Yet.
+
+The yield curve is gravity. Don't jump off a cliff and expect to win a fight against gravity. It rules you, your delusions don't rule it. The main point here is that the benchmark by which all is valued is the yield curve. The impacts of this are laid out by choosing a government bond, or gilt. There is return of capital, and return on capital. Gilts are relatively risk free, in terms of return of capital. You will get your 100 cents in the dollar, so to speak at maturity. That won't stop you losing money though. The math is laid in plain terms. The higher the yield curve versus the initial point of purchase, the lower the value.
+
+Moving on from bonds, if you bought hard assets, say property at a 3.00 capitalization rate back in the day, good for you. You get to keep the rent up until now. And also the maintenance capex bill. But you cannot have an asset valued at a 3 cap rate when long term rates at at a 6 or 6 handle once you add credit margin. That is impossible. So the world has to end, economy crash, and a recession occurs for rates to drop. Or your book value of your asset is a fiction. Pick your poison, there are no free rides out of a debt trap.
+
+This government, or the next, will eventually trim spending, drop taxes to a saner level, lowering the state back closer to 30% of the economy. Less would be better, but there are additional reasons why no one would ever vote for me. It will probably be the next, as only a true fiscal crisis will prompt the current left block to consider reality. Until then, delusion will remain the state of mind.
+
+Rates hit zero. Upwards on all asset values. The rich got richer. If this yield curve sticks around, reality will trike and values must tumble. PV math does not lie. At zero rates, the indebted won. In a debt trap with rate reversal, the indebted suffer. Some to extinction. Perhaps there is a fiscal god after all.......
 
 ## The debate: "not a buffer, that is a wafer"
 
@@ -64,6 +82,7 @@ A few things worth being explicit about before anyone treats these numbers as mo
 - No accrued-interest adjustment is made at purchase; the exit price is on a clean-price basis with accrued interest handled separately (£0.47 as of 13 September 2026, on the last 22 Apr/22 Oct-style coupon cycle — see the discounting detail in the curve section).
 - Real returns use ONS CPI (all items, 2015=100) as the deflator, with each tranche's own issue month as the base, per the earlier framing in this post. CPI is only published with a lag — June 2026 (142.5) is the latest available reading as of writing, not September 2026 itself, so the real-return figures above are very slightly understated if inflation has continued since June. RPI or CPIH would also give marginally different numbers; CPI is the Bank of England's own target measure, which is the more defensible choice for a UK rates post.
 - Two further tranches of this gilt (16 July 2024 and 15 April 2025) are excluded from the chart: the DMO's issuance history records their nominal amounts but not a separately published clean price or yield, so a capital-return figure for them can't be built from this dataset alone.
+- As SVB found out, you can get cleaned out holding a riskless asset if you don't understand duration.
 
 ---
 
@@ -77,4 +96,4 @@ A few things worth being explicit about before anyone treats these numbers as mo
 - giltsyield.com — [Conventional gilts in issue](https://giltsyield.com/bond/)
 - Hargreaves Lansdown — [UK gilt price list](https://www.hl.co.uk/shares/corporate-bonds-gilts/bond-prices/uk-gilts)
 
-*Editorial note (draft): all return/inflation-adjustment figures above are author calculations from the DMO's published issuance history and ONS's published CPI series, not a market data terminal — worth a spot-check of the per-tranche coupon-count assumptions and the CPI index values against the ONS series directly before this goes live. Set to draft pending review.*
+*Editorial note (draft): all return/inflation-adjustment figures above are author calculations from the DMO's published issuance history and ONS's published CPI series, not a market data terminal — worth a spot-check of the per-tranche coupon-count assumptions and the CPI index values against the ONS series directly before this goes live. Numbers are good enough to make the point, do your own math.
