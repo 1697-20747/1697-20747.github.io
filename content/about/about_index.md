@@ -6,23 +6,25 @@ ShowBreadCrumbs: false
 hidemeta: true
 ---
 
-This is a personal site. The writing here covers economics, data analytics, computer science, credit risk, philosophy, and whatever else earns a place. The posts are notes made public — working through ideas, not finished arguments.
+This is a personal site. The writing here covers economics, data analytics, computer science, credit risk, philosophy, book notes, BJJ, and whatever else earns a place. The posts are notes made public — working through ideas, not finished arguments.
 
 ## The day job
 
-Finance. Primarily credit — analysis, structure, the forensics of how things fail to enable an effective fiter for what good looks like. If you have spent time reading financial statements with genuine scepticism rather than confirmation bias, you will find some common ground here.
+Finance. Primarily credit — analysis, structure, the forensics of how things fail. Understanding failure is what builds an effective filter for what good looks like. If you have spent time reading financial statements with genuine scepticism rather than confirmation bias, you will find some common ground here.
 
 ## The rest of the time
 
-Low-level programming on small devices. Embedded systems, constrained hardware, the kind of work where the use of every byte is a negotiation. Some of this requires a working understanding of machine learning, which means most of the comp science writing here sits at that intersection — the plumbing beneath the tools everyone else uses without thinking about. I have spent a lot of time on machine learning in the last few years. None of the comp science is the day job. It is personal time, chosen freely. That distinction matters.
+Low-level programming on small devices. Embedded systems, constrained hardware, the kind of work where every byte is a negotiation. Most of the comp-science writing here sits at the intersection of that and machine learning — the plumbing beneath the tools everyone else uses without a second thought. None of this is the day job. It is personal time, chosen freely, and that distinction matters.
 
 ## On writing style
 
-The text, thought process and commentary in the main is not AI generated. The informal phrasing is deliberate — clarity does not require formality, and pretension is its own form of obscurity. If a sentence is clumsy it is because the thought behind it was still being worked out, not because a language model hallucinated it into existence. But, a caveat. For boiler plate analysis bits I am using AI more now, it saves a lot of pain. For example file naming conventions for corpus for LLM training. File names on the internet are generally awful. Getting AI to write a quick python script to apply naming conventions for a few hundred files is a joy. Compared to the alternative. I'll have to ponder an honest way to flag AI wording, eg one paragraph article summary and the like.
+The text, thought process and commentary in the main is not AI generated. The informal phrasing is deliberate — clarity does not require formality, and pretension is its own form of obscurity. If a sentence is clumsy, it is because the thought behind it was still being worked out, not because a language model hallucinated it into existence.
+
+A caveat, though: for boilerplate analysis work I use AI more now — it saves a lot of pain. Naming conventions for an LLM training corpus, for example. File names on the internet are generally awful, and getting AI to write a quick Python script to apply naming conventions across a few hundred files is a joy compared to the alternative. I still need to work out an honest way to flag AI-assisted wording — a one-paragraph summary, say.
 
 ## On social media
 
-No. This is it. I post nonsense is a very small number of WhatsApp groups, and that is the full extent of it. If you want to get in touch, LinkedIn is in the footer. But I am not particularly interested. There is no comments section here, that is not the intended purpose.
+No. This is it. I post nonsense in a very small number of WhatsApp groups, and that is the full extent of it. If you want to get in touch, LinkedIn is in the footer. But I am not particularly interested. There is no comments section here — that is not the intended purpose.
 
 ## The name
 
@@ -32,9 +34,11 @@ A tokenizer output. Run the name through a BPE tokenizer — GPT-family, if you 
 
 ## Why?
 
-As stated elsewhere, don't do anything without a problem statement that has been developed. There are a couple of reasons why for this site. One is a repository to use, much later, to post train a smaller LLM. It requires structured text, so by default I can scrape this site to use for curated training data. Second, a reminder for myself. Third, the discipline of writing things down. Clear writing requires clear thinking. Shame about my writing, I am not too horrible on the thinking aspect. Fourth, it serves a practical purpose. With a varied background, I have always struggled with have a CV that actually covers my skill set. This site acts as a very expanded skill set description. You can infer what I am good at, or not, from the contents, in a manner impossible in a short form CV. Lastly, in some manner for my kids. Hopefully some life lessons buried in here somewhere. They have heard them all, but it might be a reminder one day. Books, as much as I love them, are not for everyone. This is in essence a book, split across a few subjects. But easier to contain.
+As stated elsewhere: don't do anything without a developed problem statement. There are a few reasons for this site.
 
-I hope the traditional CV dies, and gets replaced with actual skills framework. I have a lot of respect for those who can do the doing.
+One, a repository to draw on much later for a variety of projects — it's structured text, so by default I can scrape it for curated training data. Two, a reminder to myself. Three, the discipline of writing things down: clear writing requires clear thinking. (Shame about my writing — I'm not too bad on the thinking.) Four, a practical purpose. With a varied background, I have always struggled to have a CV that actually covers my skill set; this site works as a much-expanded version of one. You can infer what I am good at, and not, from the contents, in a way a short-form CV can't manage. Lastly, in some manner, for my kids. Hopefully there are a few life lessons buried in here. They have heard them all already, but it might serve as a reminder one day. Books, much as I love them, are not for everyone — this is in essence a book, split across a few subjects, but easier to contain.
+
+I hope the traditional CV dies and gets replaced by an actual skills framework. I have a lot of respect for people who can do the doing. Going back for a PhD would be a waste of time for me — I don't fancy poverty wages for a few years. (I mean, I do, but I can't afford that choice. If I win the lottery, different story.) In the interim, I am doing one anyway, minus the piece of paper and the credibility.
 
 I hope something here is useful to someone.
 
@@ -122,24 +126,13 @@ I hope something here is useful to someone.
 
 ---
 
-As for context, this is broadly how I do it. I generate a new post in bash, with the basics, then edit actual content later. Usually in VS Code, but often just in nano. The simpler the better. Its very basic markdown, with some code blocks. I used Hugo re render it, and manually set up the file structure.
+## Workflow
 
-## Some Bash I Use
+As for context, this is broadly how I work. I generate a new post in bash with the basic frontmatter, then do a brain dump of the post's essence, and edit for quality later. Usually in VS Code, sometimes just in nano — the simpler the better. It's basic markdown with the odd code block. Hugo renders it, and the file structure is set up by hand. Other than VS Code, no Microsoft tools are involved — open source, all the way. Hopefully they don't ruin VS Code any time soon.
 
-Short description of what this does.
-```bash
-#!/bin/bash
-echo "hello world"
-```
+## A Worked Example
 
-Another block if you want multiple examples.
-```bash
-for f in *.csv; do
-    echo "Processing $f"
-done
-```
-
-Here is actual example for new blank post for a book:
+Here's an actual example — a blank post for a new book note:
 
 ```
 cat > "content/books/the-signal-and-the-noise.md" << 'EOF'
@@ -161,57 +154,63 @@ Worth reading alongside *Quality of Earnings* — both books are ultimately abou
 EOF
 ```
 
-I tend to use a lot of bash files for my work. So for say historical fx analysis from a csv file, I will take a look manually in VS Studio or Pycharm until I have a feel for the shape of the data. Then, lets say I want a basic stats dashboard, I will almost always set up the workings in a stand alone bash file, all the code contained, all libraries referenced in a requirements file. Slow is fast. It is easier to go back to, cleaner. And faster, as if you need to you can just change the csv or other file with fresh data, then re run the analysis on one go by running the same bash.sh file, with no changes. If you are careful with your work and content in the bash scripts, I find it very helpful. Also, you back track to edit out errors. Good luck with that using AI. To be clear, I often use AI for methods within the bash files, but I keep the work in manner that I can replicate it as needs be. AI for writing slabs of python? Yes. Running the numbers, bash scripts in the main. It gives you repeatability with no hallucination risk. A lot of these larger post are iterations, they won't be finished for perhaps years as I get through the backlog.
+I use a lot of standalone scripts for this kind of work. Say, historical FX analysis from a CSV file: I'll take a manual look in VS Code or PyCharm until I have a feel for the shape of the data. Then, if I want a basic stats dashboard, I'll set up the workings in a standalone script — all the code contained, all libraries pinned in a requirements file. Slow is fast. It's easier to go back to, cleaner, and faster too: swap in a fresh CSV and re-run the same script, unchanged. Careful, self-contained scripts pay for themselves. You can also step back through them to find where an error crept in — good luck doing that with an AI chat log. To be clear, I often use AI for the methods inside those scripts, but I keep the work in a form I can replicate on demand. AI for writing slabs of Python? Yes. Running the numbers? Scripts, in the main — it gives you repeatability with no hallucination risk. Many of these longer posts are iterations; they won't be finished for years as I work through the backlog.
 
+---
+
+## AI and Agents
+
+You have to move with the times. AI tools are better at writing than I am, so I run posts through a review pass to clean them up and make them more readable. For coding sessions — say, at the end of a long one — I'll use AI to generate a full summary. This applies to larger projects (months-long) and gives me a record of the solution path over time, which shifts as the project goes.
+
+For coding, agents are getting better by the month — interrogating a codebase, writing smoke tests, and more are all now firmly in scope for them. I use whatever tools work, on-prem where possible. But as of 2026 the cost of a proper standalone AI box is still absurd, so I use paid-for tooling to make up for the lack of local compute. If that changes, I'll stump up for a top-tier Mac. Given I also do a lot of work on edge devices and small-compute hardware, it's not too much of a restriction either way.
+
+Hopefully, in a few years, the projects built here will be of wider use. We'll see.
 
 ---
 
 ## File Structure
 
-Here is the file structure of the page if you are looking to replicate the concept. I find basic web pages run this way are easy to manage, as you can edit file however you like. I do not like auto generators, you lose control very quickly. Its not fancy, but it works. I can strip out that data quite easily afterwards. The site refreshes when you run hugo. There is back up shell script so that it copies (for the last 10 runs) each update. This can help you catch any errors.
+Here is the file structure, if you are looking to replicate the concept. Basic sites built this way are easy to manage — you can edit files however you like. I don't like auto-generators; you lose control very quickly. It's not fancy, but it works, and I can strip out any given piece of data quite easily afterwards. The site rebuilds when you run Hugo. A backup shell script copies each update (keeping the last 10 runs), which helps catch errors.
 
 ```
 .
 ├── archetypes
 ├── assets
-│   └── css
+│   └── css
 ├── content
-│   ├── about
-│   └── blog
+│   ├── about
+│   └── blog
 ├── layouts
-│   ├── blog
-│   ├── partials
-│   └── shortcodes
+│   ├── blog
+│   ├── partials
+│   └── shortcodes
 ├── public
-│   ├── about
-│   ├── assets
-│   ├── blog
-│   ├── books
-│   ├── categories
-│   ├── css
-│   ├── data
-│   ├── economics
-│   ├── images
-│   ├── js
-│   ├── New Folder With Items
-│   ├── page
-│   ├── tags
-│   └── tools
+│   ├── about
+│   ├── assets
+│   ├── blog
+│   ├── books
+│   ├── categories
+│   ├── css
+│   ├── data
+│   ├── economics
+│   ├── images
+│   ├── js
+│   ├── New Folder With Items
+│   ├── page
+│   ├── tags
+│   └── tools
 ├── resources
-│   └── _gen
+│   └── _gen
 ├── static
-│   ├── css
-│   ├── data
-│   ├── images
-│   ├── js
-│   └── tools
+│   ├── css
+│   ├── data
+│   ├── images
+│   ├── js
+│   └── tools
 └── themes
     └── PaperMod
 
 ```
----
-
-
 
 ---
 
