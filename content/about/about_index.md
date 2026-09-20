@@ -18,9 +18,9 @@ Low-level programming on small devices. Embedded systems, constrained hardware, 
 
 ## On writing style
 
-The text, thought process and commentary in the main is not AI generated. The informal phrasing is deliberate — clarity does not require formality, and pretension is its own form of obscurity. If a sentence is clumsy, it is because the thought behind it was still being worked out, not because a language model hallucinated it into existence.
+The analysis, thought process and commentary here are mine. Take the Enron piece: the read on what went wrong and why comes from my own experience, not a model's. What AI increasingly does is the drafting — tightening sentences, cutting the flab, making an argument read more coherently. Think of it as an editor's pass, not authorship. The informal phrasing is still a choice I keep control of — clarity does not require formality, and pretension is its own form of obscurity.
 
-A caveat, though: for boilerplate analysis work I use AI more now — it saves a lot of pain. Naming conventions for an LLM training corpus, for example. File names on the internet are generally awful, and getting AI to write a quick Python script to apply naming conventions across a few hundred files is a joy compared to the alternative. I still need to work out an honest way to flag AI-assisted wording — a one-paragraph summary, say.
+For boilerplate work I lean on AI more heavily still — it saves a lot of pain. Naming conventions for an LLM training corpus, for example: file names on the internet are generally awful, and getting AI to write a quick Python script to apply naming conventions across a few hundred files is a joy compared to the alternative.
 
 ## On social media
 
@@ -160,9 +160,9 @@ I use a lot of standalone scripts for this kind of work. Say, historical FX anal
 
 ## AI and Agents
 
-You have to move with the times. AI tools are better at writing than I am, so I run posts through a review pass to clean them up and make them more readable. For coding sessions — say, at the end of a long one — I'll use AI to generate a full summary. This applies to larger projects (months-long) and gives me a record of the solution path over time, which shifts as the project goes.
+You have to move with the times. For coding sessions — say, at the end of a long one — I'll use AI to generate a full summary. This applies to larger projects (months-long) and gives me a record of the solution path over time, which shifts as the project goes.
 
-For coding, agents are getting better by the month — interrogating a codebase, writing smoke tests, and more are all now firmly in scope for them. I use whatever tools work, on-prem where possible. But as of 2026 the cost of a proper standalone AI box is still absurd, so I use paid-for tooling to make up for the lack of local compute. If that changes, I'll stump up for a top-tier Mac. Given I also do a lot of work on edge devices and small-compute hardware, it's not too much of a restriction either way.
+For coding, agents are getting better by the month — interrogating a codebase, writing smoke tests, and more are all now firmly in scope for them. Claude Code specifically has been instrumental for deep dives into a codebase — a fair bit of the apex_ros build log owes to it. I use whatever tools work, on-prem where possible. But as of 2026 the cost of a proper standalone AI box is still absurd, so I use paid-for tooling to make up for the lack of local compute. If that changes, I'll stump up for a top-tier Mac. Given I also do a lot of work on edge devices and small-compute hardware, it's not too much of a restriction either way.
 
 Hopefully, in a few years, the projects built here will be of wider use. We'll see.
 
