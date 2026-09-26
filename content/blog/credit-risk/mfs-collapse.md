@@ -13,6 +13,8 @@ cover:
   caption: ""
 ---
 
+*This is Part 1 of a series. [Part 2: Recovering Pennies](/blog/credit-risk/mfs-collapse-part-2/) follows up on administrator recoveries and lender losses as at September 2026.*
+
 # Market Financial Solutions (MFS) — Collapse Summary Report
 
 
