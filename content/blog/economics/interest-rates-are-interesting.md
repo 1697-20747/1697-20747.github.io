@@ -121,7 +121,26 @@ The Bank Rate is the short end of the curve, this sets near term rates. In theor
 </iframe>
 
 
-The source of this data is the Bank of England. Now sadly its a zip file and no one has thought to put it up accessible via API (go on, please do this is important data for research!), but at least the data is there. Its also quite messy, I will put the combined cleaned up csv file in resources section. But it does the job of showing the changes over time. As at 02 Apr 2026 when I did this. I'll try and update periodically.
+The source of this data is the Bank of England. Now sadly its a zip file and no one has thought to put it up accessible via API (go on, please do this is important data for research!), but at least the data is there. Its also quite messy, I will put the combined cleaned up csv file in resources section. But it does the job of showing the changes over time. Originally run to 31 Mar 2026 (02 Apr 2026). Updated 28 Sep 2026 to the 28 Aug 2026 month end, see below. I'll try and update periodically.
+
+
+### Update — 28 Sep 2026
+
+Data now runs to the 28 Aug 2026 month end (latest BoE month end release). Animation and player rebuilt: 227 quarterly frames, the faint trailing line is the curve a year earlier, and the last frame holds for a few seconds. Also found and fixed a gap, Jan 2025 had been dropped in the original merge.
+
+Since the original post the whole curve has moved up, and the long end did most of the work:
+
+| Maturity | 31 Mar 2026 | 28 Aug 2026 | Change |
+|----------|-------------|-------------|--------|
+| 0.5yr    | 4.00%       | 4.05%       | +0.05  |
+| 2yr      | 4.28%       | 4.32%       | +0.04  |
+| 5yr      | 4.41%       | 4.60%       | +0.19  |
+| 10yr     | 4.94%       | 5.14%       | +0.20  |
+| 30yr     | 5.63%       | 5.91%       | +0.28  |
+
+A few things stand out. The front end has barely moved, so this is not the central bank doing its thing at the short end. It looks like term premium, the market wanting more to lend long, though the data alone can't prove the why. 10yr spot at 5.14% is the highest month end since Jun 2008. 20yr at 5.82% was last seen in Feb 1998. The 30yr at 5.91% is the highest in the BoE 30yr series (which only runs from 2016, so treat that with care).
+
+Note also the step change in March 2026 itself, 10yr went from 4.35% to 4.94% in one month. The curve is positively sloped again (5yr − 0.5yr at +0.55%), but the shape is the "high and humped" long end, not the steep upward curves of the 1970s and 1990s. The curve peaks around 26 years and rolls over after that.
 
 
 [Bank of England – What are interest rates?](https://www.bankofengland.co.uk/explainers/what-are-interest-rates)
