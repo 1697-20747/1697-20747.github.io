@@ -15,8 +15,8 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.normpath(os.path.join(HERE, "../../images/economics"))
-os.makedirs(OUT, exist_ok=True)
+_REPO_IMG = os.path.normpath(os.path.join(HERE, "../../images/economics"))
+OUT = _REPO_IMG if os.path.isdir(_REPO_IMG) else HERE   # standalone copy: write PNGs next to the script
 BG, AX, GRID, TXT, MUTED = "#0d1117", "#161b22", "#30363d", "#e6edf3", "#8b949e"
 BLUE, ORANGE, GREEN, PURPLE, AMBER, PINK = "#58a6ff", "#f78166", "#3fb950", "#d2a8ff", "#ffa657", "#ff79c6"
 plt.rcParams.update({"font.family": "DejaVu Sans", "text.color": TXT, "axes.labelcolor": TXT,

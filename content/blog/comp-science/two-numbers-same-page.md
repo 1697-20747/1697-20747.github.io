@@ -72,3 +72,4 @@ None of this is exotic. It's the same lesson twice, at two different scales: a s
 8. [Whose Bank Is This?](/blog/comp-science/whose-bank-is-this/)
 9. [Confirmed, Not Claimed](/blog/comp-science/confirmed-not-claimed/)
 10. [Audit the Neighbor Too](/blog/comp-science/audit-the-neighbor-too/)
+11. [No Two Banks Say It the Same Way](/blog/comp-science/no-two-banks-say-it-the-same-way/)

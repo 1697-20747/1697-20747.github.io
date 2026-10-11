@@ -87,3 +87,4 @@ And because a live pipeline had already been extracting values under the old sin
 8. [Whose Bank Is This?](/blog/comp-science/whose-bank-is-this/)
 9. [Confirmed, Not Claimed](/blog/comp-science/confirmed-not-claimed/)
 10. [Audit the Neighbor Too](/blog/comp-science/audit-the-neighbor-too/)
+11. [No Two Banks Say It the Same Way](/blog/comp-science/no-two-banks-say-it-the-same-way/)

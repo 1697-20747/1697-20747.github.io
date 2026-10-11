@@ -125,3 +125,4 @@ something independent checked, and can be asked to check again.
 8. [Whose Bank Is This?](/blog/comp-science/whose-bank-is-this/)
 9. **Confirmed, Not Claimed** (this post)
 10. [Audit the Neighbor Too](/blog/comp-science/audit-the-neighbor-too/)
+11. [No Two Banks Say It the Same Way](/blog/comp-science/no-two-banks-say-it-the-same-way/)

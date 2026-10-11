@@ -217,6 +217,7 @@ survivable rather than reckless. More entries to follow as the corpus grows.
 
 *See also, from the project's original series:* [LLM Credit Paper Generator](/blog/comp-science/llm-credit-paper-generator/),
 [Confirmed, Not Claimed](/blog/comp-science/confirmed-not-claimed/), and
-[Audit the Neighbor Too](/blog/comp-science/audit-the-neighbor-too/) — all
+[Audit the Neighbor Too](/blog/comp-science/audit-the-neighbor-too/) and
+[No Two Banks Say It the Same Way](/blog/comp-science/no-two-banks-say-it-the-same-way/) — all
 about the same verification database this post's token-cost numbers came
 from.

@@ -121,7 +121,7 @@ model running on-prem better than a metered API.
 ---
 
 **Previous in the series:** [Confirmed, Not Claimed](/blog/comp-science/confirmed-not-claimed/)
-**Next in the series:** — this is the latest post
+**Next in the series:** [No Two Banks Say It the Same Way](/blog/comp-science/no-two-banks-say-it-the-same-way/)
 
 ---
 
@@ -137,3 +137,4 @@ model running on-prem better than a metered API.
 8. [Whose Bank Is This?](/blog/comp-science/whose-bank-is-this/)
 9. [Confirmed, Not Claimed](/blog/comp-science/confirmed-not-claimed/)
 10. **Audit the Neighbor Too** (this post)
+11. [No Two Banks Say It the Same Way](/blog/comp-science/no-two-banks-say-it-the-same-way/)

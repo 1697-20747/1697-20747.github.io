@@ -1,610 +1,528 @@
 ---
 title: "How Neural Networks Learn to Tell a Cat From a Dog"
 date: 2026-09-13T09:00:00Z
+lastmod: 2026-10-11T15:00:00Z
 draft: false
 categories: ["comp-science"]
-tags: [neural-networks, machine-learning, python, scikit-learn, image-classification, computer-vision, SVM, YOLO, object-detection]
-description: "A from-scratch scikit-learn MLP learns to tell cats from dogs, then gets tested against a linear SVM, a learning-curve experiment, and a pretrained YOLO26n CNN -- first on a synthetic dataset, then on 7,390 real Oxford-IIIT Pet photographs."
+tags: [neural-networks, machine-learning, python, scikit-learn, pytorch, image-classification, computer-vision, YOLO]
+description: "The same 25,000 Kaggle cat and dog photos, four ways: a scikit-learn neural network, the identical network in PyTorch, a small convolutional network, and a pretrained YOLOv8 -- every number from code you can run."
 showToc: true
 tocopen: false
 cover:
-  image: "/images/comp-science/nn-cats-dogs-real-photo-collage.png"
-  alt: "Grid of 25 real cat photos beside 25 real dog photos from the Oxford-IIIT Pet Dataset"
-  caption: "50 real photos from the dataset this post's models were actually tested against."
+  image: "/images/comp-science/nn-cats-dogs-kaggle-collage.jpg"
+  alt: "Grid of 16 cat photos and 16 dog photos from the Kaggle Dogs vs. Cats test set used in this post"
+  caption: "32 of the 120 held-out photos every model below was scored on."
 ---
 
-*Scope note up front, because the request behind this post used the phrase "object detection" loosely, the way most people do: what's built and run below is image **classification** -- one label per image, "cat" or "dog" -- not detection in the formal computer-vision sense (drawing a box around *where* the animal is in a larger scene). Cats-vs-dogs classification is the standard "hello world" for how neural networks process image data at all, and it's the right first step before detection, which bolts a localization step on top of the same underlying machinery. The post is explicit about that boundary throughout, and closes with a short, carefully-scoped section on how real detection systems (YOLO, SSD, and similar) extend this -- including a direct run of one, YOLO26n, against this project's own images, later in the post.*
+*Rewritten 11 October 2026: one dataset (Kaggle Dogs vs. Cats), shorter, and with a
+PyTorch run added. Every number below comes from running the code shown, as written.*
 
-*Second scope note: everything below runs twice, on purpose. A synthetic, procedurally-drawn dataset first -- fully reproducible, no network access required, isolates the network's mechanics from any real-world photo weirdness -- then the identical code again against all 7,390 real Oxford-IIIT Pet Dataset photographs, plus a linear-SVM baseline, a learning-curve experiment, and a pretrained YOLO26n comparison, all run against those same real photos. None of it is hypothetical; every number in this post came from actually executing the script next to it.*
+Telling a cat photo from a dog photo is the "hello world" of image classification:
+one label per image. (Object *detection* -- drawing a box around where the animal is
+-- builds on the same machinery, and comes up at the end.) This post trains three
+networks from scratch and tests one pretrained network, all on the same photos, to
+show what actually makes the difference.
 
-## What this post actually builds
+## The data
 
-A neural network that looks at a small image and outputs "cat" or "dog," built two ways at once: as a working explanation of the mechanics (what a neuron is, what a weight is, what "training" actually updates), and as a runnable Python script using scikit-learn's own workflow conventions. Every number quoted below -- accuracy, loss values, epoch counts -- came from actually executing the script, not from a textbook.
+Kaggle's **Dogs vs. Cats** competition (2013) used 25,000 labelled photos from the
+Asirra dataset that Microsoft Research built with Petfinder.com: 12,500 cats and 12,500
+dogs, named `cat.0.jpg`, `dog.0.jpg` and so on. Download `train.zip` from Kaggle (a free
+account is needed, and you accept the competition rules once); this post used the
+*Dogs vs. Cats Redux* edition's copy.
 
-## The classic example, and where it came from
-
-"Cats vs. dogs" isn't an arbitrary teaching example. It's a specific, well-documented dataset with an unusual origin: Microsoft Research's **Asirra** ("Animal Species Image Recognition for Restricting Access") project used it as a CAPTCHA -- a 2007 paper describes asking users to pick out the cats from a grid of 12 cat-and-dog photos, something humans got right 99.6% of the time in under 30 seconds but which was, at the time, hard for a computer. The images came from a partnership between Microsoft and Petfinder.com, drawn from a pool of roughly three million annotated adoption photos.((MachineLearningMastery, [How to Develop a Convolutional Neural Network to Classify Photos of Dogs and Cats](https://machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-to-classify-photos-of-dogs-and-cats/), summarizing the Asirra paper and Kaggle competition details.)) In 2013, Kaggle turned it into a public competition -- 25,000 labeled training photos, 12,500 unlabeled test photos -- and it's been the standard first project for image classification ever since. The winner that year, using convolutional networks, hit roughly 98.9% accuracy; today it's genuinely a "hello world," with hand-built models comfortably clearing 80% and transfer learning pushing past 90%.((Same source as above.))
-
-That history matters for scope: the task was captioned as a *classification* problem from day one -- "which of these two categories is this whole photo" -- not a detection problem. This post inherits that framing on purpose.
-
-## Following scikit-learn's method
-
-The request behind this post was to follow the workflow at scikit-learn's [Supervised learning](https://scikit-learn.org/stable/supervised_learning.html) guide, which walks through roughly twenty families of algorithm (linear models, SVMs, trees, ensembles, and so on) using the same shape of code each time. Section 1.17 of that guide, [Neural network models (supervised)](https://scikit-learn.org/stable/modules/neural_networks_supervised.html), covers exactly one architecture: the **multi-layer perceptron** (MLP) -- a plain, fully-connected feed-forward network trained by backpropagation, exposed as `sklearn.neural_network.MLPClassifier`. That's the network built and trained below.
-
-The shape of the code that scikit-learn's guide uses everywhere, MLP included, is the same five steps:
-
-1. Load data into a 2-D array `X` (rows = samples, columns = features) and a label vector `y`.
-2. Split into training and test sets with `train_test_split`, so the model is graded on data it never saw.
-3. Wrap preprocessing and the estimator together in a `Pipeline`, most commonly a `StandardScaler` feeding the classifier.
-4. Call `.fit(X_train, y_train)`.
-5. Call `.predict(X_test)` and score it -- `classification_report`, `confusion_matrix`, `accuracy_score`.
-
-Every one of those five steps appears, in order, in `train_nn.py` below. The only thing specific to *images* is what goes into `X` before step 1: pixel values, flattened into one long row per image.
-
-## What an MLP does with an image (and what it can't)
-
-An `MLPClassifier` has no idea it's looking at a picture. Step one of the pipeline is `img.flatten()` -- a 48×48 pixel image with 3 colour channels becomes a single row of 48×48×3 = 6,912 numbers, in a fixed order, and every spatial relationship between neighbouring pixels is thrown away as far as the network's architecture is concerned. The pixel at the top-left corner and the pixel at the bottom-right are just feature #1 and feature #6,912 -- adjacent columns in a spreadsheet, no more related to each other structurally than columns 1 and 500 of any other dataset scikit-learn might ingest.
-
-This is the honest limitation to state plainly: a real object-detection or image-classification system almost always uses a **convolutional** neural network (CNN) instead, precisely because convolution preserves spatial structure. A CNN slides a small learned filter (say 3×3 pixels) across the image and computes a weighted sum at each position, producing a "feature map" that says *where* an edge, a blob of colour, or a texture pattern occurs. Stacking convolution layers lets the network build up a hierarchy -- edges, then textures, then shapes like "ear" or "paw," then whole-object patterns -- while pooling layers between them progressively shrink the map and make the detections more tolerant of the object shifting a few pixels left or right. Real detection networks (YOLO, SSD, Faster R-CNN and similar) bolt a second stage onto that same convolutional backbone: instead of one label for the whole image, they output a grid of candidate boxes, each with its own class score and four numbers describing a bounding box.
-
-`sklearn.neural_network` doesn't implement convolution at all -- it's out of scope for that module, which is why the guide's neural-network section is a page, not a chapter. What it *can* do, and does well, is show every other piece of the puzzle with total transparency: forward pass, activation functions, loss, backpropagation, gradient descent, all in plain matrix multiplication you can inspect line by line. That trade-off -- give up spatial awareness, keep everything else inspectable -- is exactly why this is the right *first* network to build by hand, and the wrong one to ship in production for real photographs.
-
-## About the images
-
-The code below expects a folder of PNGs at `data/train/cats/`, `data/train/dogs/`, `data/test/cats/`, `data/test/dogs/` -- the same layout the real Kaggle and Oxford-IIIT Pet datasets use once unzipped. In an ordinary environment with internet access, that folder should simply *be* one of those real photo sets (see "Using real photographs" below for the two lines that change).
-
-This post's code was originally built and executed inside a sandboxed environment with a locked-down egress allowlist -- direct attempts to reach `storage.googleapis.com`, `download.microsoft.com`, and `www.robots.ox.ac.uk` (the usual homes of the standard cats-vs-dogs photo sets) all came back `403 Forbidden` at the network layer, policy denials rather than the sites being down. Rather than fabricate results against a dataset that was never actually loaded, `generate_dataset.py` below procedurally draws 640 small, stylised cat and dog silhouettes with Pillow -- randomised pose, colour, and size, plus Gaussian pixel noise standing in for camera sensor noise -- and every number in the Results section further down is the real, reproducible output of training on exactly those images. The two templates are deliberately imperfect analogues (rounded body + triangular ears + whiskers + a tail flick for "cat"; a flatter body + a floppy ear lobe + a snout nub for "dog"), not photographs, and the post says so wherever it shows one.
-
-### Using real photographs instead
-
-Two changes are needed, and neither touches the network itself:
+`prepare_data.py` holds back 60 cats and 60 dogs as a test set that no model ever
+trains on, shrinks every photo to 48 x 48 pixels, and saves the pixels once so the
+training scripts start quickly:
 
 ```python
-# 1. Get real photos into the same folder layout the script already expects:
-#    - Kaggle "Dogs vs. Cats": https://www.kaggle.com/c/dogs-vs-cats/data
-#      (free Kaggle account required; unzip, then sort train/cat.*.jpg and
-#      train/dog.*.jpg into data/train/cats/ and data/train/dogs/)
-#    - or the Oxford-IIIT Pet Dataset: https://www.robots.ox.ac.uk/~vgg/data/pets/
-#      (37 breeds, cat vs dog derivable from the breed name in each filename)
-#
-# 2. Skip generate_dataset.py entirely -- train_nn.py doesn't care whether
-#    the PNGs/JPGs under data/train/cats/ were drawn by Pillow or shot on a
-#    camera. Only the class balance and image count will change the exact
-#    accuracy figure; the pipeline code is identical either way.
-```
+"""Split Kaggle's Dogs vs. Cats train.zip and cache every photo as 48x48 pixels.
 
-Expect materially lower accuracy on real photographs than the number in this post: real cat and dog photos vary in pose, lighting, occlusion and background in ways a 640-image synthetic set does not, and a flattened MLP (see the limitation above) has no way to become invariant to any of that. Machine Learning Mastery's writeup of this exact dataset puts a hand-built CNN around 80% and transfer learning above 90%((Same source as the Asirra history above.)) -- a plain flattened MLP on raw pixels, with no convolution at all, should be expected to land well below both.
-
-That prediction is no longer a prediction. "Real photographs: what actually happens," below, is exactly this code run against 7,390 real Oxford-IIIT Pet photographs once the network restriction cleared -- same `train_nn.py`, same architecture, real numbers.
-
-## The dataset generator: `generate_dataset.py`
-
-Uses only Pillow (`PIL`), the open-source Python Imaging Library fork, for every drawing operation.
-
-```python
+Usage: python prepare_data.py path/to/train.zip
+Writes test_photos/{cats,dogs}/ (the 120 held-out photos, for YOLOv8 later)
+and pets48.npz (pixel arrays + labels for training and testing).
 """
-generate_dataset.py
---------------------
-Builds a small, fully-reproducible "cats vs dogs" image folder using only
-Pillow (the open-source Python Imaging Library fork). Every image is a
-procedurally-drawn silhouette, not a photograph -- see the blog post's
-"About the images" section for why, and for the two-line swap to real
-photographs instead.
-"""
-import os
+import io
 import random
+import sys
+import zipfile
+from pathlib import Path
+
 import numpy as np
-from PIL import Image, ImageDraw
+from PIL import Image
 
-RNG_SEED = 42
-IMG_SIZE = 48          # pixels, square, RGB
-N_TRAIN_PER_CLASS = 260
-N_TEST_PER_CLASS = 60
-OUT_DIR = os.path.join(os.path.dirname(__file__), "data")
+IMG_SIZE = 48
+TEST_PER_CLASS = 60
+SEED = 42
 
-
-def _jitter(value, spread):
-    return value + random.uniform(-spread, spread)
-
-
-def draw_cat(draw, size):
-    cx, cy = size / 2, size * 0.58
-    body_w, body_h = size * 0.5, size * 0.42
-    colour = random.choice([(60, 60, 60), (120, 90, 60), (200, 170, 110), (30, 30, 30)])
-    colour = tuple(int(np.clip(_jitter(c, 15), 0, 255)) for c in colour)
-
-    head_r = size * random.uniform(0.22, 0.27)
-    hx, hy = _jitter(cx, 3), _jitter(size * 0.32, 3)
-    draw.ellipse([hx - head_r, hy - head_r, hx + head_r, hy + head_r], fill=colour)
-
-    # ears: triangular, pointy, sit on top of the head
-    ear_h = head_r * random.uniform(0.9, 1.3)
-    for side in (-1, 1):
-        ex = hx + side * head_r * 0.55
-        ey = hy - head_r * 0.5
-        draw.polygon(
-            [
-                (ex - head_r * 0.28, ey + head_r * 0.15),
-                (ex + head_r * 0.28, ey + head_r * 0.15),
-                (ex + side * head_r * 0.12, ey - ear_h * 0.7),
-            ],
-            fill=colour,
-        )
-
-    # body: shorter, rounder than a dog's
-    draw.ellipse(
-        [cx - body_w / 2, cy - body_h / 2, cx + body_w / 2, cy + body_h / 2],
-        fill=colour,
-    )
-
-    # tail: thin curved-ish line to one side
-    tail_side = random.choice([-1, 1])
-    tx0, ty0 = cx + tail_side * body_w * 0.45, cy + body_h * 0.1
-    tx1 = tx0 + tail_side * size * 0.18
-    ty1 = ty0 - size * 0.18
-    draw.line([(tx0, ty0), (tx1, ty1)], fill=colour, width=max(2, int(size * 0.03)))
-
-    # whiskers: thin light lines from the head
-    whisker_colour = (min(255, colour[0] + 120),) * 3
-    for i in range(3):
-        yoff = hy + head_r * (0.05 * i - 0.05)
-        draw.line([(hx - head_r * 0.9, yoff), (hx - head_r * 1.6, yoff - 3)], fill=whisker_colour, width=1)
-        draw.line([(hx + head_r * 0.9, yoff), (hx + head_r * 1.6, yoff - 3)], fill=whisker_colour, width=1)
+archive = zipfile.ZipFile(sys.argv[1])
+names = sorted(n for n in archive.namelist() if n.endswith(".jpg"))
+cats = [n for n in names if Path(n).name.startswith("cat.")]
+dogs = [n for n in names if Path(n).name.startswith("dog.")]
+random.Random(SEED).shuffle(cats)
+random.Random(SEED).shuffle(dogs)
+print(f"{len(cats)} cat photos, {len(dogs)} dog photos")
 
 
-def draw_dog(draw, size):
-    cx, cy = size / 2, size * 0.58
-    body_w, body_h = size * 0.6, size * 0.36
-    colour = random.choice([(150, 110, 60), (90, 60, 30), (210, 190, 150), (70, 70, 70)])
-    colour = tuple(int(np.clip(_jitter(c, 15), 0, 255)) for c in colour)
-
-    head_r = size * random.uniform(0.20, 0.26)
-    hx, hy = _jitter(cx, 3), _jitter(size * 0.30, 3)
-
-    # ears: floppy (rounded, not pointy) blobs, positioned above the head
-    ear_w, ear_h = head_r * 0.6, head_r * 1.1
-    for side in (-1, 1):
-        ex = hx + side * head_r * 0.6
-        ey = hy - head_r * 0.65
-        draw.ellipse([ex - ear_w / 2, ey - ear_h * 0.3, ex + ear_w / 2, ey + ear_h * 0.7], fill=colour)
-
-    # head
-    draw.ellipse([hx - head_r, hy - head_r, hx + head_r, hy + head_r], fill=colour)
-
-    # snout: protrudes sideways from the head, at head height -- the key
-    # geometric difference from the cat template
-    snout_side = random.choice([-1, 1])
-    snout_len, snout_h = head_r * 0.7, head_r * 0.55
-    sx0 = hx + snout_side * head_r * 0.7
-    sx1 = hx + snout_side * (head_r * 0.7 + snout_len)
-    x_lo, x_hi = sorted([sx0, sx1])
-    draw.rectangle([x_lo, hy - snout_h / 2, x_hi, hy + snout_h / 2], fill=colour)
-
-    # body: longer, flatter than a cat's
-    draw.ellipse(
-        [cx - body_w / 2, cy - body_h / 2, cx + body_w / 2, cy + body_h / 2],
-        fill=colour,
-    )
-
-    # tail: short and thick, wagging up
-    tail_side = random.choice([-1, 1])
-    tx0, ty0 = cx + tail_side * body_w * 0.48, cy
-    tx1 = tx0 + tail_side * size * 0.10
-    ty1 = ty0 - size * 0.14
-    draw.line([(tx0, ty0), (tx1, ty1)], fill=colour, width=max(3, int(size * 0.045)))
+def pixels(name):
+    img = Image.open(io.BytesIO(archive.read(name))).convert("RGB")
+    return np.asarray(img.resize((IMG_SIZE, IMG_SIZE), Image.BILINEAR))
 
 
-def make_image(label, size=IMG_SIZE):
-    bg = tuple(random.randint(200, 245) for _ in range(3))
-    img = Image.new("RGB", (size, size), color=bg)
-    draw = ImageDraw.Draw(img)
-    (draw_cat if label == "cat" else draw_dog)(draw, size)
+splits = {"train": ([], []), "test": ([], [])}
+for label, (cls, pool) in enumerate([("cats", cats), ("dogs", dogs)]):
+    for i, name in enumerate(pool):
+        split = "test" if i < TEST_PER_CLASS else "train"
+        splits[split][0].append(pixels(name))
+        splits[split][1].append(label)  # 0 = cat, 1 = dog
+        if split == "test":  # keep the full-size test photos for YOLOv8
+            out = Path("test_photos") / cls / Path(name).name
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_bytes(archive.read(name))
 
-    arr = np.asarray(img).astype(np.int16)
-    noise = np.random.normal(0, 8, arr.shape)          # camera-sensor-noise stand-in
-    arr = np.clip(arr + noise, 0, 255).astype(np.uint8)
-    return Image.fromarray(arr)
-
-
-def build_dataset():
-    random.seed(RNG_SEED)
-    np.random.seed(RNG_SEED)
-    for split, n in (("train", N_TRAIN_PER_CLASS), ("test", N_TEST_PER_CLASS)):
-        for label in ("cats", "dogs"):
-            folder = os.path.join(OUT_DIR, split, label)
-            os.makedirs(folder, exist_ok=True)
-            singular = "cat" if label == "cats" else "dog"
-            for i in range(n):
-                make_image(singular).save(os.path.join(folder, f"{singular}_{i:04d}.png"))
-    print("Dataset written to", OUT_DIR)
-
-
-if __name__ == "__main__":
-    build_dataset()
+np.savez_compressed(
+    "pets48.npz",
+    X_train=np.stack(splits["train"][0]), y_train=np.array(splits["train"][1]),
+    X_test=np.stack(splits["test"][0]), y_test=np.array(splits["test"][1]),
+)
+print(f"train: {len(splits['train'][1])} photos, test: {len(splits['test'][1])} photos -> pets48.npz")
 ```
 
-Sample output -- four cats, four dogs, straight out of this script:
+Setup (Python 3.10 or newer) and the first step:
 
-![Sample synthetic cat and dog images](/images/comp-science/nn-cats-dogs-sample-dataset.png)
+```bash
+python3 -m venv venv && source venv/bin/activate
+pip install numpy pillow scikit-learn torch ultralytics matplotlib
+python prepare_data.py ~/Downloads/train.zip
+```
 
-## The training script: `train_nn.py`
+That gives 24,880 training photos and the 120 test photos, in about 25 seconds.
 
-This is the file that actually follows scikit-learn's supervised-learning method end to end. Image loading uses `skimage.io` (scikit-image, another open-source library) purely to read pixels into a numpy array -- no computer-vision logic of its own; everything past that line is five-step scikit-learn boilerplate.
+## 1. A neural network in scikit-learn
+
+The simplest neural network is a **multi-layer perceptron** (MLP). It doesn't see an
+image at all: each 48 x 48 colour photo is flattened into one row of 6,912 numbers
+(48 x 48 x 3), and every number connects to every neuron in the first layer. Two
+hidden layers (128 and 64 neurons) feed one output: cat or dog. Training adjusts the
+893,000 connection weights to reduce the error, a batch of 32 photos at a time, and
+stops once accuracy on a held-back 15% of the training photos stops improving.
 
 ```python
-"""
-train_nn.py
-------------
-Trains a feed-forward neural network (an sklearn MLPClassifier, i.e. a
-Multi-Layer Perceptron with backpropagation) from scratch -- random
-initial weights, no pretrained model -- to tell cat images from dog
-images.
+"""A fully connected neural network (MLP) in scikit-learn, trained from scratch.
 
-Follows the workflow scikit-learn's own "Supervised learning" guide uses
-throughout (https://scikit-learn.org/stable/supervised_learning.html),
-whose neural-network section is
-https://scikit-learn.org/stable/modules/neural_networks_supervised.html:
-
-    1. load data as a flat (n_samples, n_features) array + a label vector
-    2. train_test_split
-    3. wrap preprocessing + estimator in a Pipeline
-    4. StandardScaler to zero-mean/unit-variance the features
-    5. fit the estimator
-    6. predict on held-out data and score it with classification_report /
-       confusion_matrix
+Every 48x48 photo is flattened into one row of 6,912 numbers (48*48*3):
+the network never sees the image as a grid. Needs pets48.npz from
+prepare_data.py.
 """
-import os
-import json
 import numpy as np
-from skimage.io import imread
-from skimage.transform import resize
-from sklearn.model_selection import train_test_split
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.neural_network import MLPClassifier
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
-IMG_SIZE = 48  # must match generate_dataset.py
-RANDOM_STATE = 42
+data = np.load("pets48.npz")
+X_train = data["X_train"].reshape(len(data["X_train"]), -1).astype(np.float32) / 255
+X_test = data["X_test"].reshape(len(data["X_test"]), -1).astype(np.float32) / 255
+y_train, y_test = data["y_train"], data["y_test"]
 
+model = make_pipeline(
+    StandardScaler(),
+    MLPClassifier(
+        hidden_layer_sizes=(128, 64),  # two hidden layers
+        alpha=1e-4,                    # L2 weight penalty
+        batch_size=32,
+        learning_rate_init=1e-3,       # Adam optimiser (the default solver)
+        early_stopping=True,           # holds back 15% of training data,
+        validation_fraction=0.15,      # stops when its accuracy stalls
+        n_iter_no_change=10,
+        max_iter=200,
+        random_state=42,
+    ),
+)
+model.fit(X_train, y_train)
 
-def load_split(split):
-    """Read every PNG under data/<split>/{cats,dogs}/ into (X, y)."""
-    X, y, paths = [], [], []
-    for label, class_id in (("cats", 0), ("dogs", 1)):
-        folder = os.path.join(DATA_DIR, split, label)
-        for fname in sorted(os.listdir(folder)):
-            path = os.path.join(folder, fname)
-            img = imread(path)                                          # (H, W, 3) uint8
-            img = resize(img, (IMG_SIZE, IMG_SIZE), anti_aliasing=True)  # -> float [0, 1]
-            X.append(img.flatten())                                     # 1-D feature vector
-            y.append(class_id)
-            paths.append(path)
-    return np.array(X), np.array(y), paths
+pred = model.predict(X_test)
+mlp = model[-1]
+print(f"epochs: {mlp.n_iter_}, best validation accuracy: {mlp.best_validation_score_:.3f}")
+print(f"test accuracy: {accuracy_score(y_test, pred):.3f}")
+print("confusion matrix (rows = true cat/dog, columns = predicted cat/dog):")
+print(confusion_matrix(y_test, pred))
+```
 
+```text
+$ python sklearn_mlp.py
+epochs: 25, best validation accuracy: 0.670
+test accuracy: 0.692
+confusion matrix (rows = true cat/dog, columns = predicted cat/dog):
+[[44 16]
+ [21 39]]
+```
 
-def main():
-    print("Loading images with skimage.io.imread ...")
-    X_train_full, y_train_full, _ = load_split("train")
-    X_test, y_test, test_paths = load_split("test")
+**69.2%** on the test photos: better than a coin flip, but it misses almost a third.
+It has to learn "ear" separately at every pixel position an ear could appear in.
 
-    print(f"Train pool: {X_train_full.shape[0]} images, "
-          f"{X_train_full.shape[1]} features each "
-          f"({IMG_SIZE}x{IMG_SIZE}x3 flattened)")
-    print(f"Held-out test set: {X_test.shape[0]} images")
+## 2. The same network in PyTorch
 
-    X_train, X_val, y_train, y_val = train_test_split(
-        X_train_full, y_train_full,
-        test_size=0.15, random_state=RANDOM_STATE, stratify=y_train_full,
+scikit-learn's `MLPClassifier` is a fixed design. **PyTorch**, the open-source
+deep-learning framework started at Meta and now run by the PyTorch Foundation, lets
+you build any network layer by layer, and runs it on a GPU (here the Mac's, via
+`mps`). It's also what most modern vision models are built on, including YOLOv8 in
+step 4.
+
+To check that the framework isn't what matters, `torch_models.py mlp` rebuilds the
+scikit-learn network exactly -- 6,912 -> 128 -> 64 -> 2, ReLU, Adam, the same learning
+rate, weight penalty, batch size and early-stopping rule -- on the same photos:
+
+```python
+"""The same task in PyTorch: the scikit-learn MLP rebuilt, then a small CNN.
+
+Same photos, same 48x48 size, same held-out test set, same optimiser
+settings as sklearn_mlp.py. Needs pets48.npz from prepare_data.py.
+Usage: python torch_models.py mlp   or   python torch_models.py cnn
+"""
+import sys
+
+import numpy as np
+import torch
+from torch import nn
+from sklearn.metrics import accuracy_score, confusion_matrix
+from sklearn.model_selection import train_test_split
+
+torch.manual_seed(42)
+device = "mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu"
+
+data = np.load("pets48.npz")
+# PyTorch wants images as (count, channels, height, width), values 0-1
+X = torch.tensor(data["X_train"]).permute(0, 3, 1, 2).float() / 255
+X_test = torch.tensor(data["X_test"]).permute(0, 3, 1, 2).float() / 255
+y = torch.tensor(data["y_train"])
+y_test = data["y_test"]
+# hold back 15% for early stopping, like scikit-learn's early_stopping=True
+i_train, i_val = train_test_split(np.arange(len(y)), test_size=0.15, random_state=42, stratify=y)
+mean, std = X[i_train].mean(dim=(0, 2, 3), keepdim=True), X[i_train].std(dim=(0, 2, 3), keepdim=True)
+X, X_test = (X - mean) / std, (X_test - mean) / std  # standardise, like StandardScaler
+
+if sys.argv[1:] == ["mlp"]:
+    # scikit-learn's MLPClassifier(hidden_layer_sizes=(128, 64)), layer for layer
+    model = nn.Sequential(
+        nn.Flatten(),
+        nn.Linear(48 * 48 * 3, 128), nn.ReLU(),
+        nn.Linear(128, 64), nn.ReLU(),
+        nn.Linear(64, 2),
     )
+else:
+    # a small convolutional network: it keeps the image as a grid and
+    # learns small filters that slide over it
+    def block(c_in, c_out):
+        return nn.Sequential(nn.Conv2d(c_in, c_out, 3, padding=1), nn.BatchNorm2d(c_out),
+                             nn.ReLU(), nn.MaxPool2d(2))
+    model = nn.Sequential(
+        block(3, 32), block(32, 64), block(64, 128),  # 48 -> 24 -> 12 -> 6 pixels
+        nn.Flatten(), nn.Dropout(0.3),
+        nn.Linear(128 * 6 * 6, 128), nn.ReLU(), nn.Linear(128, 2),
+    )
+model = model.to(device)
+print(f"{sum(p.numel() for p in model.parameters()):,} parameters on {device}")
 
-    clf = Pipeline([
-        ("scaler", StandardScaler()),
-        ("mlp", MLPClassifier(
-            hidden_layer_sizes=(128, 64),
-            activation="relu",
-            solver="adam",
-            alpha=1e-4,
-            batch_size=32,
-            learning_rate_init=1e-3,
-            max_iter=400,
-            early_stopping=True,
-            n_iter_no_change=15,
-            validation_fraction=0.15,
-            random_state=RANDOM_STATE,
-        )),
-    ])
-
-    print("Training MLPClassifier ...")
-    clf.fit(X_train, y_train)
-
-    mlp = clf.named_steps["mlp"]
-    print(f"Stopped after {mlp.n_iter_} epochs (converged={mlp.n_iter_ < mlp.max_iter})")
-
-    val_acc = accuracy_score(y_val, clf.predict(X_val))
-    y_pred = clf.predict(X_test)
-    test_acc = accuracy_score(y_test, y_pred)
-
-    print(f"\nValidation accuracy: {val_acc:.3f}")
-    print(f"Test accuracy:       {test_acc:.3f}\n")
-    print(classification_report(y_test, y_pred, target_names=["cat", "dog"]))
-    print("Confusion matrix [[TN, FP], [FN, TP]] (0=cat, 1=dog):")
-    print(confusion_matrix(y_test, y_pred))
+optimiser = torch.optim.Adam(model.parameters(), lr=1e-3, weight_decay=1e-4)
+loss_fn = nn.CrossEntropyLoss()
 
 
-if __name__ == "__main__":
-    main()
+def predict(images):
+    model.eval()
+    with torch.no_grad():
+        return torch.cat([model(images[i:i + 512].to(device)).argmax(1).cpu()
+                          for i in range(0, len(images), 512)]).numpy()
+
+
+best, best_state, stale = 0.0, None, 0
+for epoch in range(1, 201):
+    model.train()
+    for batch in torch.randperm(len(i_train)).split(32):
+        idx = i_train[batch.numpy()]
+        optimiser.zero_grad()
+        loss = loss_fn(model(X[idx].to(device)), y[idx].to(device))
+        loss.backward()
+        optimiser.step()
+    val_acc = accuracy_score(y[i_val].numpy(), predict(X[i_val]))
+    print(f"epoch {epoch}: validation accuracy {val_acc:.3f}")
+    if val_acc > best:
+        best, stale = val_acc, 0
+        best_state = {k: v.clone() for k, v in model.state_dict().items()}
+    else:
+        stale += 1
+        if stale == 10:  # same stopping rule as n_iter_no_change=10
+            break
+
+model.load_state_dict(best_state)
+pred = predict(X_test)
+print(f"best validation accuracy: {best:.3f}")
+print(f"test accuracy: {accuracy_score(y_test, pred):.3f}")
+print("confusion matrix (rows = true cat/dog, columns = predicted cat/dog):")
+print(confusion_matrix(y_test, pred))
+# save the trained network (and the standardisation it expects) for gradcam.py
+torch.save({"weights": best_state, "mean": mean, "std": std},
+           "mlp.pt" if sys.argv[1:] == ["mlp"] else "cnn.pt")
 ```
 
-*(The version actually executed for this post additionally writes `results.json`, the loss curve, and the confusion matrix array to disk so the figures below could be generated from real numbers rather than redrawn by hand -- trimmed here for readability; the full file with that bookkeeping is included with the other project files.)*
-
-## Exactly what happens when you run it
-
-Step by step, in the order the code executes:
-
-**1. Image loading (`skimage.io.imread`).** Each PNG is read into a NumPy array of shape `(48, 48, 3)` -- height, width, and three colour channels (red, green, blue), each an integer 0-255.
-
-**2. Resize (`skimage.transform.resize`).** Every image is forced to exactly 48×48 so every feature vector has the same length; `resize` also converts to floating-point values in `[0, 1]` as a side effect, which is why the input has already left 0-255 integer space before scaling ever runs.
-
-**3. Flatten.** `.flatten()` reshapes the `(48, 48, 3)` array into a single row of 6,912 numbers, in a fixed raster order (row 0's red, green, blue, then pixel 1's red, green, blue, and so on). This row is the entire input the network will ever see for that image -- one row per image, stacked into the `X` matrix scikit-learn expects.
-
-**4. Train/validation split (`train_test_split`).** 15% of the 520-image training pool (78 images) is set aside as a validation set the optimiser watches but never trains on directly -- used only to decide when to stop (step 7).
-
-**5. Scaling (`StandardScaler`).** For each of the 6,912 pixel-channel features, subtract that feature's mean across the training set and divide by its standard deviation. Raw pixel values sit in a narrow, always-positive 0-1 range; gradient descent converges faster and more reliably when every input feature is centred around zero with comparable spread, which is why this step exists in almost every scikit-learn pipeline, image data or not.
-
-**6. Forward pass.** For a single training image, its scaled 6,912-number vector is multiplied by a 6,912×128 weight matrix (plus a bias per hidden unit) to produce 128 numbers -- one per first-hidden-layer neuron. Each of those 128 numbers is passed through the ReLU activation function, `f(x) = max(0, x)`, which zeroes out negative values and passes positive ones through unchanged; this non-linearity is what lets the network represent more than a straight line through pixel space. The resulting 128 activated numbers are multiplied by a second, 128×64 weight matrix into the second hidden layer, ReLU'd again, and finally multiplied by a 64×2 weight matrix into two raw output scores, one for "cat" and one for "dog." A softmax function converts those two raw scores into two probabilities that sum to 1.
-
-**7. Loss and backpropagation.** The network's two output probabilities are compared against the true label using cross-entropy loss (high when the model was confident and wrong, low when it was confident and right). Backpropagation then computes, via the chain rule, exactly how much each of the roughly 893,000 individual weights and biases in the network contributed to that error. The `adam` solver uses those gradients to nudge every weight slightly in the direction that would have reduced the error, scaled by the learning rate.
-
-**8. Epochs and early stopping.** Steps 6-7 repeat over the whole training set, in shuffled batches of 32 images, once per epoch. After each epoch, accuracy on the held-out validation slice from step 4 is checked; because `early_stopping=True`, training stops once 15 consecutive epochs (`n_iter_no_change`) pass without that validation score improving, rather than always running the full `max_iter=400`. In the actual run behind this post, that happened at epoch 17.
-
-**9. Prediction and scoring.** Once training stops, the exact same scaling learned in step 5 (never refit) is applied to the untouched 120-image test set, a forward pass (step 6 only, no more weight updates) produces a probability for each image, and the higher of the two probabilities becomes the predicted label. `classification_report` and `confusion_matrix` compare those predictions against the true labels the network never saw during training.
-
-## The network's parameters, and what each one controls
-
-| Parameter | Value used | What it controls |
-|---|---|---|
-| `hidden_layer_sizes` | `(128, 64)` | Two hidden layers, 128 neurons then 64. More neurons/layers can represent more complex functions but risk overfitting a dataset this small. |
-| `activation` | `relu` | The non-linearity applied after each hidden layer's weighted sum. Without one, stacking layers would collapse to a single linear function no matter how many layers there are. |
-| `solver` | `adam` | The optimisation algorithm that turns gradients into weight updates. Adam adapts its effective step size per-parameter and is scikit-learn's own recommended default for anything beyond toy-sized data. |
-| `alpha` | `0.0001` | L2 regularisation strength -- a penalty added to the loss proportional to the sum of squared weights, discouraging any single weight from growing very large and overfitting. |
-| `batch_size` | `32` | Number of images averaged into a single gradient estimate before each weight update, rather than updating after every single image (noisy) or the whole dataset at once (slow, memory-heavy). |
-| `learning_rate_init` | `0.001` | The initial size of each weight update step. Too large and training diverges or oscillates; too small and it takes forever to converge. |
-| `max_iter` | `400` | The hard cap on training epochs, reached only if early stopping doesn't trigger first. |
-| `early_stopping` / `n_iter_no_change` / `validation_fraction` | `True` / `15` / `0.15` | Reserves 15% of the training data purely to monitor progress, and halts training once 15 straight epochs produce no improvement on it -- the mechanism described in step 8 above. |
-| `random_state` | `42` | Fixes every source of randomness (initial weights, batch shuffling, the validation split) so the run is exactly reproducible. |
-
-Total learnable parameters: 6,912×128 + 128 (first layer weights + biases) + 128×64 + 64 (second layer) + 64×2 + 2 (output layer) = **893,185** individual numbers, every one of them tuned by nothing but the backpropagation loop above, starting from random values.
-
-## Results, from the actual run
-
+```text
+$ python torch_models.py mlp
+893,250 parameters on mps
+epoch 1: validation accuracy 0.630
+...
+epoch 40: validation accuracy 0.659
+best validation accuracy: 0.672
+test accuracy: 0.633
+confusion matrix (rows = true cat/dog, columns = predicted cat/dog):
+[[38 22]
+ [22 38]]
 ```
-Train pool: 520 images, 6912 features each (48x48x3 flattened)
-Held-out test set: 120 images
-Training MLPClassifier ...
-Stopped after 17 epochs (converged=True)
 
-Validation accuracy (held out of the training pool): 0.962
-Test accuracy (never seen during training):           0.933
+**63.3%** on test, against 69.2% for scikit-learn. That gap is noise, not a
+difference between frameworks: their validation accuracy, measured on 3,732 photos, is
+practically identical (67.2% against 67.0%). With only 120 test photos, one standard
+error is about four percentage points either way. Same network, same result.
 
-              precision    recall  f1-score   support
+## 3. Change the network, not the framework: a small CNN
 
-         cat       0.98      0.88      0.93        60
-         dog       0.89      0.98      0.94        60
+`python torch_models.py cnn` swaps the MLP for a small **convolutional neural
+network** (CNN) -- same data, same training rules. A CNN keeps the photo as a grid
+and learns small 3 x 3 filters that slide across the whole image, so a pattern learned
+in one place (an edge, an eye, fur texture) is recognised anywhere. Three blocks of
+filters shrink the image from 48 to 24, 12, then 6 pixels while building up from edges
+to textures to parts.
 
-    accuracy                           0.93       120
-   macro avg       0.94      0.93      0.93       120
-weighted avg       0.94      0.93      0.93       120
-
-Confusion matrix [[TN, FP], [FN, TP]] (0=cat, 1=dog):
+```text
+$ python torch_models.py cnn
+683,906 parameters on mps
+epoch 1: validation accuracy 0.790
+...
+epoch 32: validation accuracy 0.880
+best validation accuracy: 0.886
+test accuracy: 0.908
+confusion matrix (rows = true cat/dog, columns = predicted cat/dog):
 [[53  7]
- [ 1 59]]
+ [ 4 56]]
 ```
 
-93.3% test accuracy on 120 images the network never trained on -- 112 correct, 8 wrong, all 8 errors in one direction (7 cats called dogs, 1 dog called a cat). That asymmetry is a real, inspectable fact about this run, not noise to explain away: the confusion matrix and the sample images below both point to the same cause, which the loss curve rules out as an under-training problem.
+**90.8%** -- with *fewer* parameters than the MLP (684,000 against 893,000). It
+took about 8 minutes on an M2 Pro. The architecture made the difference, not the
+size and not the framework.
 
-![Confusion matrix, 120 held-out test images](/images/comp-science/nn-cats-dogs-confusion-matrix.png)
+### What the CNN looked at
 
-![Training loss falling over 17 epochs](/images/comp-science/nn-cats-dogs-loss-curve.png)
+Here is, for each class, the brightest test photo the CNN classified correctly with
+at least 99% confidence, with the parts it used kept bright and the rest dimmed:
 
-The loss curve drops from roughly 0.5 to under 0.01 within the first six epochs and keeps flattening after that -- the network fits this training set comfortably; the errors above are a generalisation gap (mostly one cat colour variant it saw too few examples of), not a sign it never learned the pattern at all.
+![Two test photos with the regions the CNN used kept bright: two kittens classified as cat at 100%, with the evidence on their faces and ears; a beagle classified as dog at 100%, with the evidence running from its head and ear down to its chest](/images/comp-science/nn-cats-dogs-kaggle-gradcam.png)
 
-Eight of the actual test images, with the network's real predictions -- including both wrong answers, not just the flattering ones:
+**How it reached its answer (inference):**
 
-![Eight test images with true and predicted labels](/images/comp-science/nn-cats-dogs-sample-predictions.png)
+1. The photo is shrunk to 48 x 48 pixels, scaled to 0-1 and standardised with the
+   training photos' mean and spread -- exactly as in training.
+2. Three convolution blocks run over it: 32, then 64, then 128 learned 3 x 3 filters,
+   each block followed by pooling, so the 48 x 48 image becomes 24 x 24, 12 x 12, then
+   6 x 6 grids of increasingly abstract features (edges, then textures, then parts).
+3. The final 6 x 6 x 128 grid is flattened into 4,608 numbers and passed through two
+   fully connected layers to give **Y**: one score for cat, one for dog. The bigger
+   score is the answer; softmax turns the pair into a probability. The kittens scored
+   Y = [3.98, -4.92] (100% cat); the beagle Y = [-5.30, 5.41] (100% dog).
 
-Both mistakes are the same colour of cat mis-called a dog -- worth a second look at the two wrong panels above: at 48×48 with the noise added, a light-coloured cat silhouette and a light-coloured dog silhouette really do share more raw pixel statistics (overall brightness, colour palette) than a flattened, no-convolution network has any way to see past. That is the limitation from "What an MLP does with an image" above, showing up as a concrete, visible failure mode rather than an abstract caveat.
+**How the picture was made (Grad-CAM):** take the winning score in Y and work out how
+much each of the 128 feature maps at the 12 x 12 stage pushed it up (its gradient),
+weight each map by that, add them, and keep only the positive evidence. That 12 x 12
+map is stretched back over the photo: brighter means it counted more. For the kittens,
+the strongest cells are their faces and ears; the blanket and cushion barely count.
+For the beagle, the evidence runs down a column from its head and ear to its chest,
+while the wall and floor are dimmed. (Not every photo is this clean: on some, a
+network this small also leans on the background.)
 
-## Graphical explanation: how one image actually moves through the network
+```python
+"""Which parts of a photo did the CNN use for its answer? (Grad-CAM)
 
-![Diagram: pixels flatten into the input layer, then flow through two hidden layers to two output probabilities](/images/comp-science/nn-cats-dogs-network-architecture.png)
+The CNN's output Y is two scores, one for cat and one for dog; the bigger one
+is the answer, and softmax turns the pair into a probability. Grad-CAM traces
+the winning score back to the last convolutional block -- 128 feature maps on
+a 12 x 12 grid over the photo -- weights each map by how much it pushed the
+score up, and keeps the positive evidence. Needs cnn.pt from
+`python torch_models.py cnn` and test_photos/ from prepare_data.py.
+Usage: python gradcam.py [photo.jpg ...]   (default: for each class, the
+brightest test photo it classifies correctly with at least 99% confidence)
+"""
+import sys
+from pathlib import Path
 
-Reading the diagram left to right, mapped onto the code above: the small coloured grid on the far left is one real input image, downsampled to a coarse 8×8 preview purely so individual pixels are visible at this scale -- the actual network takes in every pixel of the full 48×48 image. That image "unrolls" into the input layer, one node per pixel-channel value (6,912 of them; the diagram only draws a handful to keep the picture legible, marked with `...`). Every line crossing from one layer to the next is one learned weight -- 6,912×128 of them between the input and the first hidden layer alone, drawn faint because at full density they would be solid grey. Each hidden-layer node performs the weighted-sum-then-ReLU computation from step 6 above; the two output nodes on the right are `P(cat)` and `P(dog)`, the two numbers softmax produces, which is what actually gets compared to the true label and what the confusion matrix above is built from.
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import numpy as np
+import torch
+from torch import nn
+from PIL import Image
 
-## Real photographs: what actually happens
 
-The network restriction described in "About the images" was specific to that original sandboxed environment, not universal -- a plain Terminal session, run directly rather than through a governed device bridge, reached `www.robots.ox.ac.uk` without issue. `prepare_real_dataset.py`, a small companion script, downloads the Oxford-IIIT Pet Dataset (Parkhi et al., 2012, University of Oxford VGG group)((O. M. Parkhi, A. Vedaldi, A. Zisserman, C. V. Jawahar, "Cats and Dogs," IEEE Conference on Computer Vision and Pattern Recognition, 2012. Dataset: https://www.robots.ox.ac.uk/~vgg/data/pets/)) -- 37 cat and dog breeds, ~200 photos each, real animals in real poses, real backgrounds, real lighting -- and sorts it into the exact `data/train/{cats,dogs}/`, `data/test/{cats,dogs}/` layout `train_nn.py` already expects, using the dataset's own filename convention (breed name capitalized for the 12 cat breeds, lowercase for the 25 dog breeds) to assign each photo a label. 7,390 photographs in total: 2,400 cats, 4,990 dogs, split into a 7,270-image training pool and the same 60-cats/60-dogs held-out test shape used throughout this post.
+def block(c_in, c_out):  # the same CNN as torch_models.py
+    return nn.Sequential(nn.Conv2d(c_in, c_out, 3, padding=1), nn.BatchNorm2d(c_out),
+                         nn.ReLU(), nn.MaxPool2d(2))
 
-![Collage of 50 real Oxford-IIIT Pet Dataset photos: a 5x5 grid of 25 random cats beside a 5x5 grid of 25 random dogs, showing the real variation in pose, crop, lighting and background](/images/comp-science/nn-cats-dogs-real-photo-collage.png)
 
-Fifty of those photographs, chosen at random rather than curated for how well they'd make the point -- 25 cats, 25 dogs, every breed pool eligible, no cherry-picking. This is the honest contrast with the synthetic sample grid earlier in this post: fixed pose, fixed framing, plain background, only colour and minor jitter varying, versus close crops and full bodies, indoor and outdoor, studio-lit and phone-camera-lit, a hand in frame here, a collar or a bed sheet there. Nothing in a flattened pixel vector is built to shrug that off.
+model = nn.Sequential(
+    block(3, 32), block(32, 64), block(64, 128),
+    nn.Flatten(), nn.Dropout(0.3),
+    nn.Linear(128 * 6 * 6, 128), nn.ReLU(), nn.Linear(128, 2),
+)
+saved = torch.load("cnn.pt", map_location="cpu")
+model.load_state_dict(saved["weights"])
+model.eval()
 
-`train_nn.py` needed exactly two small fixes to run against real photos at all, neither touching the network itself. First, a newer `skimage.transform.resize` refuses to resize a 3-channel colour image using a 2-D `(48, 48)` target shape -- harmless against 640 uniformly-generated PNGs, but real photographs are not uniform: some load as grayscale, some carry a fourth alpha channel, so every image is now explicitly normalised to RGB before resizing. Second, 6 of the 7,270 training photos decoded as 4-D arrays with a spurious leading dimension -- an artifact of how those particular source files happen to be encoded -- which silently produced a wrong-length flattened vector instead of raising an error, until that dimension was squeezed off. Both are the ordinary mess of real data that a hand-built 640-image synthetic set, by construction, never has any reason to contain.
+features = {}  # the third block's ReLU output: 128 maps of 12 x 12
+model[2][2].register_forward_hook(lambda module, inp, out: features.update(maps=out))
 
-With those two fixes in, the identical pipeline -- same `hidden_layer_sizes=(128, 64)`, same scaler, same everything -- was run again:
+def explain(path):
+    """Run one photo through the CNN; return its scores Y, answer, probability, evidence map."""
+    photo = Image.open(path).convert("RGB")
+    x = torch.tensor(np.asarray(photo.resize((48, 48), Image.BILINEAR))).permute(2, 0, 1)[None].float() / 255
+    x = (x - saved["mean"].cpu()) / saved["std"].cpu()
+    y = model(x)[0]                       # Y: [cat score, dog score]
+    answer = int(y.argmax())
+    maps = features["maps"]
+    maps.retain_grad()
+    y[answer].backward()                  # how does each feature change the winning score?
+    weights = maps.grad.mean(dim=(2, 3), keepdim=True)
+    cam = torch.relu((weights * maps).sum(1))[0].detach()   # 12 x 12 evidence map
+    return photo, y.detach(), answer, torch.softmax(y, 0)[answer].item(), cam / cam.max()
 
-```
-Train pool: 7270 images, 6912 features each (48x48x3 flattened)
-Held-out test set: 120 images
-Training MLPClassifier ...
-Stopped after 25 epochs (converged=True)
 
-Validation accuracy (held out of the training pool): 0.664
-Test accuracy (never seen during training):           0.550
+if sys.argv[1:]:
+    photos = [Path(p) for p in sys.argv[1:]]
+else:  # per class: the brightest photo it gets right with at least 99% confidence
+    photos = []
+    for folder, label in (("cats", 0), ("dogs", 1)):
+        sure = [p for p in sorted(Path("test_photos", folder).glob("*.jpg"))
+                if explain(p)[2] == label and explain(p)[3] >= 0.99]
+        photos.append(max(sure, key=lambda p: np.asarray(Image.open(p).convert("L")).mean()))
 
-              precision    recall  f1-score   support
+fig, axes = plt.subplots(1, len(photos), figsize=(3.6 * len(photos), 3.9))
+for ax, path in zip(np.atleast_1d(axes), photos):
+    photo, y, answer, prob, cam = explain(path)
+    label = ["cat", "dog"][answer]
+    print(f"\n{path.name}: Y = [cat {y[0]:.2f}, dog {y[1]:.2f}] -> {label} ({prob:.0%})")
+    cell_w, cell_h = photo.width / 12, photo.height / 12
+    top = torch.topk(cam.flatten(), 3).indices
+    share = cam.flatten()[top] / cam.sum()
+    for rank, (i, s) in enumerate(zip(top.tolist(), share.tolist()), 1):
+        r, c = divmod(i, 12)
+        print(f"  #{rank} grid cell row {r}, col {c}: pixels x {c * cell_w:.0f}-{(c + 1) * cell_w:.0f}, "
+              f"y {r * cell_h:.0f}-{(r + 1) * cell_h:.0f} ({s:.0%} of the evidence)")
 
-         cat       0.62      0.27      0.37        60
-         dog       0.53      0.83      0.65        60
+    # spotlight: keep what the network used, dim what it ignored
+    heat = np.asarray(Image.fromarray(np.uint8(cam.numpy() * 255)).resize(photo.size, Image.BILINEAR)) / 255
+    ax.imshow(np.asarray(photo) / 255 * (0.4 + 0.6 * heat[..., None]))
+    ax.set_title(f"{path.name}: {label} {prob:.0%}", fontsize=10)
+    ax.axis("off")
 
-    accuracy                           0.55       120
-   macro avg       0.57      0.55      0.51       120
-weighted avg       0.57      0.55      0.51       120
-
-Confusion matrix [[TN, FP], [FN, TP]] (0=cat, 1=dog):
-[[16 44]
- [10 50]]
-```
-
-55.0% test accuracy -- barely above the 50% a coin flip would get, and a long way down from the synthetic set's 93.3%. The confusion matrix shows exactly what "barely above chance" looks like in practice: the network calls "dog" on 44 of the 60 cat photos, correctly finding only 16. It has effectively learned "predict dog most of the time" (dogs are also the majority class in the training pool, 4,930 of 7,270) rather than anything resembling "what a cat looks like."
-
-This is the limitation from "What an MLP does with an image" showing up at full strength rather than as a mild handicap. The synthetic dataset's silhouettes are drawn at a fixed size, fixed pose, centred in frame, against a plain light background, with only colour and minor jitter varying -- exactly the kind of narrow, low-variance input a flattened pixel vector can still separate reasonably well, because "which pixels are dark" genuinely does correlate with the label when every image is framed the same way. Real photographs have none of that consistency: a cat can be curled up, mid-stride, close-up on just a face, photographed outdoors or on a couch, in any lighting. Flattening throws away spatial structure regardless of the input, but it's only against that real variation that the cost of doing so becomes visible as a number rather than a caveat.
-
-## A linear SVM baseline, for comparison
-
-A natural follow-up question: is this a property of the MLP specifically, or of flattened raw pixels generally? [SCT_ML_3](https://github.com/codewithRakz/SCT_ML_3), a small public repo, takes the same "flatten pixels, skip convolution" approach with a different classical model -- a Support Vector Machine with a *linear* kernel, images resized to 64×64 with OpenCV, no feature scaling -- and reports roughly 80% accuracy on a 463-cats/463-dogs subset of the Kaggle Dogs vs Cats dataset.
-
-Replicating that exact recipe (`SVC(kernel="linear")`, 64×64, OpenCV's `cv2.imread` + `cv2.resize` + `.flatten()`, no `StandardScaler`) against the same Oxford-IIIT Pet train/test split used above -- so the comparison is apples-to-apples against the MLP's 55.0% -- gives:
-
-```
-Train pool: 7270 images, 12288 features each (64x64x3 flattened)
-Held-out test set: 120 images
-Training linear-kernel SVC ...
-
-Test accuracy (never seen during training): 0.467
-
-              precision    recall  f1-score   support
-
-         cat       0.46      0.37      0.41        60
-         dog       0.47      0.57      0.52        60
-
-    accuracy                           0.47       120
-   macro avg       0.47      0.47      0.46       120
-weighted avg       0.47      0.47      0.46       120
-
-Confusion matrix [[TN, FP], [FN, TP]] (0=cat, 1=dog):
-[[22 38]
- [26 34]]
-```
-
-46.7% -- worse than the MLP, and worse than guessing the majority class every time. The gap between that number and SCT_ML_3's reported ~80% is almost certainly the dataset, not the code: 463 images per class, hand-capped at under a thousand total, is small enough that a particular random split can land on a subset where raw pixel brightness and colour happen to separate the two classes reasonably well by luck of the sample. The full Oxford-IIIT Pet pool -- 37 breeds, thousands of images, wide pose and background variation, and a 2:1 dog-to-cat class imbalance the linear SVM has no `class_weight` correction for -- doesn't offer that same luck. Two different classical models, two different libraries, the same underlying weakness: raw pixels without convolution or real feature extraction (HOG, colour histograms, and similar) just don't carry a robust cat/dog signal once the images stop being small and curated.
-
-## Does more data help? A learning-curve experiment
-
-Both results above used the entire available training pool. The obvious next question is whether that pool is simply too small -- whether the same flatten-into-an-MLP approach would close most of the gap to the synthetic set's 93.3% given enough real photographs, the way more data closes the gap for plenty of other machine-learning problems.
-
-The Oxford-IIIT Pet dataset caps that experiment at the images actually available (7,390 total, 7,270 after holding out the test set) -- there's no way to test "the same approach with 10,000 real photos" without sourcing a different, larger dataset (Kaggle's Dogs vs Cats, at 25,000 images, is the standard next step up). What *is* directly testable with what's on disk is the shape of the curve up to that ceiling: retrain the identical MLP pipeline on stratified subsamples of increasing size -- 300, 500, 1,000, 2,000, 4,000, 6,000, and the full 7,270 -- always scoring against the same untouched 120-image test set, and see whether accuracy is still climbing when the data runs out.
-
-| Training images | Test accuracy |
-|---|---|
-| 300 | 44.2% |
-| 500 | 55.8% |
-| 1,000 | 55.0% |
-| 2,000 | 60.8% |
-| 4,000 | 60.0% |
-| 6,000 | 60.0% |
-| 7,270 (full pool) | 57.5% |
-
-![Line chart: test accuracy vs. training set size on a log scale, rising from 44% at 300 images to roughly 60% by 2,000 and flattening -- even dipping slightly -- out to the full 7,270-image pool](/images/comp-science/nn-cats-dogs-learning-curve.png)
-
-The curve is not still climbing. Accuracy rises sharply in the first stretch -- 300 to 2,000 images -- and then flattens into a band between roughly 55% and 61% for every size from 2,000 onward, including the full pool. Going from 2,000 images to 7,270, a 3.6x increase in training data, produced *no* net improvement; the full-pool run (57.5%) actually scored slightly below the 2,000-, 4,000-, and 6,000-image runs (60.8%, 60.0%, 60.0%). That's noise around a flat ceiling, not a downward trend worth reading into on its own, but it's also clearly not the shape a data-starved model produces -- a model that's actually short on examples keeps climbing as more arrive.
-
-That's the direct answer to "would 10,000 images do better": almost certainly not by much, and this dataset can't test past 7,270 to find out for certain. The more useful answer is *why* the curve flattens where it does, and it's the same reason named throughout this post: flattening an image throws away which pixels are next to which. A cat's ear two pixels to the left is a completely different set of input features to a fully-connected layer, no matter how many additional photographs of ears two pixels to the left get added to the training set. More data reduces *variance* -- it helps a model that's overfitting noise in a too-small sample generalise better. It does nothing for *bias* -- a ceiling set by the model's own inability to represent the relevant pattern at all, which is exactly the trade-off `sklearn.neural_network`'s lack of convolution locks in from step one. A CNN, given the same 7,270 photos, would be expected to keep benefiting well past this dataset's ceiling, because its convolutional filters can generalise a learned edge or texture detector across every position in the image instead of memorising pixel positions one at a time; that's a claim for a future follow-up to actually measure, not this post's raw-pixel MLP.
-
-## A real CNN, zero training on this data: YOLO26n
-
-Every number so far comes from a model that started with random weights and learned exclusively from this project's own images -- that was the point, following scikit-learn's "supervised learning from scratch" recipe honestly. The natural last comparison is the opposite extreme: a real convolutional network, already trained by someone else on a large, general-purpose dataset, asked to do the same cat/dog call with zero additional training on Oxford-IIIT Pet photos at all.
-
-`yolo26n` is exactly that network, and it isn't a hypothetical pick for this post -- it's the same model already running, in production, doing object detection on the `apex_ros` build's Raspberry Pi 5, cited earlier in "Practical application." Ultralytics ships it pretrained on **COCO**((T.-Y. Lin et al., "Microsoft COCO: Common Objects in Context," ECCV 2014. https://cocodataset.org/)) -- roughly 330,000 images, 1.5 million labelled object instances, 80 everyday object categories including, conveniently, `cat` (class 15) and `dog` (class 16). Running it against this project's images needed no training loop at all: `yolo_classify.py` downloads `yolo26n.pt`'s COCO weights once, then calls `model.predict()` on every one of the 7,390 real photographs -- the full train and test pools combined, no subsampling, a stricter version of "the same image sets" than any earlier section in this post used -- and reads off whichever of the two relevant classes the detector is most confident about in each image.
-
-```
-Loading pretrained yolo26n.pt (COCO weights, no fine-tuning) ...
-COCO class ids -- cat: 15, dog: 16
-Running zero-shot detection on 7390 images (train+test pools combined, full set) ...
-
---- Held-out 120-image test set only (comparable to MLP/SVM numbers) (n=120) ---
-Coverage (detector found a cat or dog at all): 0.950 (114/120)
-Accuracy among detected only:                  0.965
-Accuracy overall (no-detection counted wrong): 0.917
-
-              precision    recall  f1-score   support
-
-         cat       0.89      0.95      0.92        60
-         dog       0.95      0.88      0.91        60
-
-    accuracy                           0.92       120
-   macro avg       0.92      0.92      0.92       120
-weighted avg       0.92      0.92      0.92       120
-
-Confusion matrix [[TN, FP], [FN, TP]] (0=cat, 1=dog), no-detection counted wrong:
-[[57  3]
- [ 7 53]]
+fig.tight_layout()
+fig.savefig("gradcam.png", dpi=150)
+print("\nsaved gradcam.png")
 ```
 
-91.7% -- scored the strict way, treating the 6 images where the detector found no cat or dog box at all as wrong, exactly the same way a missed prediction would count against the MLP or the SVM. Restricting to only the images where it actually detected something, accuracy climbs to 96.5%. Run against the full 7,390-image pool rather than just the 120-image test slice, the number barely moves -- 91.7% again, 96.0% among detected -- which is itself informative: unlike the MLP and the SVM, there's no train/test gap to speak of, because this model was never fit to any of these photographs in the first place. Every one of the 7,390 images is equally "held out" from its perspective.
+```text
+$ python gradcam.py
 
-![Bar chart comparing test accuracy across three models on the same 120 held-out photos: linear SVM 46.7%, MLP 55.0%, YOLO26n 91.7%](/images/comp-science/nn-cats-dogs-model-comparison.png)
+cat.2161.jpg: Y = [cat 3.98, dog -4.92] -> cat (100%)
+  #1 grid cell row 6, col 10: pixels x 416-457, y 188-219 (3% of the evidence)
+  #2 grid cell row 2, col 3: pixels x 125-166, y 62-94 (3% of the evidence)
+  #3 grid cell row 2, col 2: pixels x 83-125, y 62-94 (3% of the evidence)
 
-Laid against the two from-scratch models on the identical 120-image test set, the gap is not subtle: linear SVM 46.7%, MLP 55.0%, YOLO26n 91.7%. Both from-scratch methods sit close to a coin flip; the pretrained CNN sits close to solved.
+dog.2161.jpg: Y = [cat -5.30, dog 5.41] -> dog (100%)
+  #1 grid cell row 4, col 4: pixels x 117-146, y 103-128 (8% of the evidence)
+  #2 grid cell row 3, col 4: pixels x 117-146, y 77-103 (7% of the evidence)
+  #3 grid cell row 8, col 4: pixels x 117-146, y 205-231 (6% of the evidence)
 
-**Why it's different, precisely, not just "it's a CNN so it's better":**
-
-1. **Convolution preserves the exact thing flattening destroys.** Section one of this post, "What an MLP does with an image," named the core limitation: `.flatten()` turns a `(48, 48, 3)` array into 6,912 independent numbers with no encoded relationship between neighbours. YOLO26n's backbone never does that. Its convolutional layers slide small learned filters across the image, so a feature detector that fires on "curved pointed ear against sky" fires the same way whether that ear sits in the top-left corner or dead centre -- translation invariance the MLP and the linear SVM structurally cannot have, no matter how they're trained or how much data they see (the exact ceiling the learning-curve experiment measured directly).
-
-2. **It never had to learn cats and dogs from 7,270 images -- it already knew.** COCO's 330,000 images cover a huge sweep of poses, lighting, occlusion, and background that this project's entire real-photo training pool is a rounding error against. The convolutional filters in a network trained at that scale have already learned a general-purpose visual vocabulary -- edges, fur texture, ear and snout shapes, four-legged-animal silhouettes -- before ever seeing a single Oxford-IIIT Pet photo. Asking it to tell a cat from a dog is asking it to apply knowledge it already has, not to construct that knowledge from this project's comparatively tiny sample. This is **transfer learning**, and it's the same trade-off named as out of scope back in "About the images" and "Does more data help?" -- deliberately excluded from the from-scratch sections of this post on purpose, and deliberately included here for exactly this contrast.
-
-3. **Coverage, not just accuracy, is a real cost worth naming.** 6 of 120 test photos produced no cat/dog detection at all -- typically a very close crop, unusual angle, or an animal occupying most of the frame in a way that doesn't match COCO's typical framing of pets as one object among several in a wider scene. A classifier like the MLP or the SVM never has this failure mode -- forced to flatten pixels into a fixed-length vector, it always outputs *some* answer, however uninformed. A detector's "I don't see either class here" is a more honest failure than a confident wrong guess, but it's a different kind of error entirely, and any deployment built on a detector-as-classifier needs to decide what to do when coverage, not accuracy, is the thing that fails.
-
-That third point is worth sitting with, because it's the one place this comparison *isn't* simply "convolution wins." A detector's job is finding and localising objects it recognises, not guaranteeing an answer for every input -- which is exactly why "From here to real object detection," next, matters as more than a coda: it's the same architecture responsible for both this section's 91.7% and its 5% blind spot.
-
-## From here to real object detection
-
-Everything above answers "is this whole image a cat or a dog," which is the necessary first half of understanding how neural networks process visual data, and deliberately not the whole of what "object detection" means. A real detection system built on these same ideas differs in three specific ways, each worth naming precisely rather than gesturing at:
-
-1. **Convolution instead of flattening.** Instead of throwing away pixel adjacency in step 3 above, a convolutional layer slides a small filter (learned, not hand-designed) across the image and produces a feature map that preserves *where* a pattern occurred. Stacking several such layers, usually with pooling layers shrinking the map in between, builds up from edges to textures to object parts to whole objects -- the hierarchy sketched earlier in "What an MLP does with an image."
-2. **Many predictions per image, not one.** A classifier like the one above outputs exactly one label for the entire image. A detector divides the image into a grid (or proposes candidate regions) and produces a separate class score *and* a bounding box for each cell or region, so an image with three dogs and a cat in it can report all four, each with its own location.
-3. **A second loss term for location.** Training a classifier only ever penalises a wrong label. Training a detector additionally penalises a badly-placed box -- typically via something like Intersection-over-Union between the predicted and true boxes -- so the network is optimised for *where*, not only *what*.
-
-The scikit-learn `neural_network` module used throughout this post implements none of the three; that's a deliberate design boundary of the library, not an oversight, and it's why frameworks with GPU-accelerated convolution (PyTorch, TensorFlow/Keras) are where real detection work happens. This post's pipeline -- load, flatten, scale, fit, predict, score -- is still the right skeleton to have internalised first: a real detector's training loop is the same five scikit-learn steps at heart, with a convolutional feature extractor swapped in for the flatten step and a second, location-aware loss term added to the first.
-
-## Practical application: this same idea, in a real navigation stack
-
-The theory above isn't confined to sorting pet photos, and there's a live, running example of the next step up rather than a hypothetical one: `apex_ros`, an autonomous RC vehicle build (ROS 2, previously DonkeyCar-based as APEX-DC) documented in this site's own comp-science build log. Swap "cat vs. dog" for "what's on the track ahead," and the same shape of problem applies -- a CNN backbone doing what this post's flattening step deliberately doesn't (preserving spatial position), feeding a detection head that outputs boxes and classes rather than one whole-image label, so the vehicle knows not just *what* it's looking at but *where*.
-
-As of the most recent build-log entries, that detection step is real and running -- `yolo26n` performing object detection directly on the Raspberry Pi 5's own CPU -- not a future plan. What *is* still an open, explicitly-parked question in that same log is almost exactly the "why not just use a bigger network" trade-off this post raises: running detection on the Pi 5's general-purpose cores competes with everything else the robot's software needs those same four cores for. The option under consideration is offloading detection entirely onto a small, cheap companion board built for nothing else -- a Luckfox Pico Ultra, a Rockchip RV1106-based Linux board with its own small NPU (1 TOPS INT8) -- so the Pi 5 receives only finished detections and positions rather than paying for the inference itself. It's parked rather than shipped for a concrete, checkable reason, not a vague one: the RV1106 is INT8-only, and the current YOLO26-to-RKNN export path has an open, unresolved bug (the newer YOLO26 architecture drops the DFL+NMS postprocessing older YOLO versions shipped with, and that conversion currently segfaults at inference, while the equivalent YOLOv8/v11 export works). Same underlying idea as the "flatten vs. convolve" trade-off in this post -- pick the right tool for what the hardware actually needs to do -- playing out with real silicon and a real, still-open bug report attached, rather than settled in the abstract.((`apex_ros` build log, this site -- [Same Shape, Different Paper](https://1697-20747.github.io/blog/comp-science/same-shape-different-paper/) for the current architecture (`yolo26n` object detection is labeled "planned" as of that post, three posts before it went live); [Not Every Pixel Needs an Answer](https://1697-20747.github.io/blog/comp-science/not-every-pixel-needs-an-answer/) for the Luckfox Pico Ultra option and the specific RKNN/YOLO26 export blocker, both as of that post's date.))
-
-## Running it yourself
-
-```bash
-pip install numpy pillow scikit-image scikit-learn matplotlib
-python generate_dataset.py   # writes data/train/{cats,dogs}/, data/test/{cats,dogs}/
-python train_nn.py           # trains the MLP, prints the metrics shown above
+saved gradcam.png
 ```
 
-Every random source is seeded (`RANDOM_STATE = 42` throughout), so re-running this exact code should reproduce the exact numbers in this post, epoch count and confusion matrix included.
+## 4. YOLOv8 is PyTorch too
 
-To reproduce the real-photograph numbers in "Real photographs: what actually happens" instead, on a machine with an ordinary (non-sandboxed) internet connection:
+**YOLOv8**, Ultralytics' family of detection and classification models, is
+implemented in PyTorch: load one and its `model` attribute is an ordinary
+`torch.nn.Module`. The classification version, `yolov8n-cls`, was pretrained on
+ImageNet's 1,000 classes, which include 118 dog breeds and five kinds of domestic
+cat. With **no training on these photos at all**, adding up its probabilities for
+the cat classes and for the dog classes gives a cat-or-dog answer:
 
-```bash
-pip install numpy pillow scikit-image scikit-learn matplotlib requests opencv-python ultralytics
-python prepare_real_dataset.py   # downloads the Oxford-IIIT Pet Dataset (~800MB), sorts it into the same folder layout
-python train_nn.py               # same script, same architecture, run against real photos
-python svm_model.py              # the linear-SVM comparison
-python learning_curve.py         # the learning-curve experiment
-python yolo_classify.py          # the pretrained YOLO26n comparison (downloads yolo26n.pt on first run)
+```python
+"""YOLOv8 is a PyTorch model: run Ultralytics' pretrained YOLOv8n classifier
+on the same 120 held-out photos, with no training on this data at all.
+
+It was trained on ImageNet's 1,000 classes, which include 118 dog breeds
+(class ids 151-268) and 5 domestic cats (281-285). For each photo, its
+probabilities are added up over all the cat classes and all the dog
+classes, and the bigger total wins. Needs test_photos/ from prepare_data.py.
+"""
+from pathlib import Path
+
+import torch
+from ultralytics import YOLO
+
+model = YOLO("yolov8n-cls.pt")  # downloads the weights on first use
+print("underlying model is a PyTorch module:", isinstance(model.model, torch.nn.Module))
+
+correct = total = 0
+for true_label in ("cats", "dogs"):
+    for photo in sorted(Path("test_photos", true_label).glob("*.jpg")):
+        p = model(photo, verbose=False)[0].probs.data  # 1,000 class probabilities
+        guess = "dogs" if p[151:269].sum() > p[281:286].sum() else "cats"
+        total += 1
+        correct += guess == true_label
+print(f"test accuracy: {correct / total:.3f} ({correct}/{total})")
 ```
 
----
+```text
+$ python yolov8_check.py
+underlying model is a PyTorch module: True
+test accuracy: 0.867 (104/120)
+```
+
+**86.7%** without seeing a single training photo from this dataset -- what it learned
+from ImageNet's 1.2 million photos transfers. Fine-tuning it on the 24,880 Kaggle
+photos (not done here) would push it higher.
+
+## Results
+
+![Bar chart of test accuracy on the same 120 held-out Kaggle photos: scikit-learn MLP 69.2%, PyTorch same MLP 63.3%, PyTorch small CNN 90.8%, YOLOv8n pretrained with no training 86.7%](/images/comp-science/nn-cats-dogs-kaggle-results.png)
+
+| Model | Trained on these photos? | Parameters | Test accuracy | Time (M2 Pro) |
+|---|---|---|---|---|
+| scikit-learn MLP | yes, from scratch | 893,185 | 69.2% | 54 s (CPU) |
+| PyTorch MLP (same network) | yes, from scratch | 893,250 | 63.3% | 65 s (GPU) |
+| PyTorch small CNN | yes, from scratch | 683,906 | **90.8%** | 7.8 min (GPU) |
+| YOLOv8n-cls (PyTorch) | no, ImageNet only | about 2.7 million | 86.7% | 11 s |
+
+- **The framework doesn't decide accuracy.** scikit-learn and PyTorch train the same
+  MLP to the same level.
+- **The architecture does.** Keeping the image as a grid -- a CNN -- is worth over 20
+  percentage points here, with fewer parameters.
+- **Pretrained knowledge transfers.** A small model trained on a different, much
+  larger dataset gets most of the way with no training on this one.
+- **120 test photos is a small sample.** Treat differences under about 8 points as
+  unproven.
+
+## From classification to detection
+
+Classification gives one label per photo. Detection -- the YOLO family's main job --
+also says *where* each object is, as a box, and can find many objects in one frame. The
+same Ultralytics package does detection with `YOLO("yolov8n.pt")`; under the hood it's
+a CNN like step 3, with a box-predicting head on top. A YOLOv8n detector exported from
+PyTorch is what runs on the small NPU in the
+[Luckfox build log](/blog/comp-science/the-vendor-stack-was-the-fix/).
 
 ### Sources
 
-- MachineLearningMastery -- [How to Develop a Convolutional Neural Network to Classify Photos of Dogs and Cats](https://machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-to-classify-photos-of-dogs-and-cats/) (Asirra/Petfinder/Microsoft origin story, 2013 Kaggle competition numbers and winning accuracy, benchmark CNN/transfer-learning accuracy figures)
-- scikit-learn -- [Supervised learning](https://scikit-learn.org/stable/supervised_learning.html) (the guide this post's code structure follows)
-- scikit-learn -- [Neural network models (supervised)](https://scikit-learn.org/stable/modules/neural_networks_supervised.html) (MLPClassifier documentation: architecture, parameters, defaults)
-- All accuracy/loss/confusion-matrix figures in this post: this project's own `train_nn.py`, actually executed against the synthetic dataset described in "About the images"
-- O. M. Parkhi, A. Vedaldi, A. Zisserman, C. V. Jawahar, "Cats and Dogs," CVPR 2012 -- the Oxford-IIIT Pet Dataset, [www.robots.ox.ac.uk/~vgg/data/pets](https://www.robots.ox.ac.uk/~vgg/data/pets/), source of every real-photograph number in "Real photographs: what actually happens" and "Does more data help?"
-- [SCT_ML_3](https://github.com/codewithRakz/SCT_ML_3) (codewithRakz) -- the linear-kernel SVM recipe replicated in "A linear SVM baseline, for comparison"
-- T.-Y. Lin et al., "Microsoft COCO: Common Objects in Context," ECCV 2014, [cocodataset.org](https://cocodataset.org/) -- the dataset `yolo26n.pt`'s pretrained weights were trained on, source of "A real CNN, zero training on this data" section
-- Ultralytics -- [YOLO documentation](https://docs.ultralytics.com/) (`yolo26n.pt` weights and the `ultralytics` Python package used to run it)
-- `apex_ros` build log, this site -- [Same Shape, Different Paper](https://1697-20747.github.io/blog/comp-science/same-shape-different-paper/) and [Not Every Pixel Needs an Answer](https://1697-20747.github.io/blog/comp-science/not-every-pixel-needs-an-answer/) (source for the "Practical application" section's navigation example)
+- Kaggle -- [Dogs vs. Cats](https://www.kaggle.com/c/dogs-vs-cats) and [Dogs vs. Cats Redux: Kernels Edition](https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition) (the 25,000 labelled training photos)
+- J. Elson, J. Douceur, J. Howell, J. Saul, "Asirra: A CAPTCHA that Exploits Interest-Aligned Manual Image Categorization," ACM CCS 2007 (Microsoft Research and Petfinder.com; origin of the photos)
+- scikit-learn -- [Neural network models (supervised)](https://scikit-learn.org/stable/modules/neural_networks_supervised.html) (`MLPClassifier`)
+- PyTorch -- [pytorch.org](https://pytorch.org/) and the [PyTorch Foundation](https://pytorch.org/foundation)
+- Ultralytics -- [YOLOv8 documentation](https://docs.ultralytics.com/models/yolov8/) and [image classification](https://docs.ultralytics.com/tasks/classify/) (`yolov8n-cls.pt`, pretrained on ImageNet)
+- O. Russakovsky et al., "ImageNet Large Scale Visual Recognition Challenge," IJCV 2015 (the 1,000 classes `yolov8n-cls` was trained on)
+- Tested with Python 3.14.5, scikit-learn 1.9.1, PyTorch 2.14.1 and Ultralytics 8.4.175 on an Apple M2 Pro
