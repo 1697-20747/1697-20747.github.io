@@ -123,3 +123,43 @@ camera-restart hang all along.
 
 The frame rate barely moves because the NPU is now the bottleneck. The real win is
 a quarter of the CPU back.
+
+## Next: Spending the NPU Budget
+
+With the NPU as the limit, the next question is what it spends its 63 ms on.
+The camera frame is 16:9 (960x540), but the model takes a square 640x640
+input. The picture is shrunk to 640x360 and padded with 280 blank rows, so 44%
+of the NPU's work goes on padding.
+
+Each frame's time today:
+
+| Stage | Time | Runs on |
+|---|---|---|
+| YOLOv8n inference | **63.5 ms** | NPU |
+| Camera read + colour conversion | 15 ms | CPU |
+| Downscale to 640x640 | 10 ms | CPU |
+| Quantise to int8 | 6 ms | CPU |
+| HUD drawing | 4 ms | CPU |
+| JPEG (hardware, with CPU colour conversion) | 12 ms | CPU + encoder |
+
+Re-converting the model for a 16:9 input removes the padding. That leaves a
+choice between speed and detail. YOLO input sides must be multiples of 32;
+these are estimates, scaled from the measured 640x640 time by pixel count:
+
+| Model input | Pixels | NPU per frame | Frame-rate ceiling | Detail vs today |
+|---|---|---|---|---|
+| 640x384 | 246k | ~38 ms | ~26 fps | same |
+| 640x640 padded (today) | 410k | 63.5 ms (measured) | 15.7 fps (14.7 actual) | 1x |
+| **800x448** | 358k | ~56 ms | ~18 fps | **1.25x** |
+| 960x544 (full frame) | 522k | ~81 ms | ~12 fps | 1.5x |
+
+- **640x384** is the speed option. It sees exactly what the model sees today,
+  about 40% faster, and around 20 fps once the CPU becomes the limit.
+- **960x544** is the range option. Every camera pixel reaches the model, so
+  objects are 1.5 times larger in pixels and get picked up at roughly 1.5 times
+  the distance. The cost is about 12 fps.
+- **800x448** is the one going on the board next. It gives 1.25 times today's
+  detail and should still be slightly faster than today, with no padding wasted.
+
+The estimates assume NPU time scales with pixel count; the real numbers come
+next post.
