@@ -134,3 +134,4 @@ Widget HUD](/blog/comp-science/from-static-overlay-to-object-oriented-widget-hud
 8. [Fast, But Undecoded](/blog/comp-science/fast-but-undecoded/)
 9. [Locked In, Never Measured](/blog/comp-science/locked-in-never-measured/)
 10. [Not Every Pixel Needs an Answer](/blog/comp-science/not-every-pixel-needs-an-answer/)
+11. [The Vendor Stack Was the Fix](/blog/comp-science/the-vendor-stack-was-the-fix/)
