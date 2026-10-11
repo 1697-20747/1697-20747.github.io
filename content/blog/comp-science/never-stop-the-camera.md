@@ -143,23 +143,27 @@ Each frame's time today:
 | JPEG (hardware, with CPU colour conversion) | 12 ms | CPU + encoder |
 
 Re-converting the model for a 16:9 input removes the padding. That leaves a
-choice between speed and detail. YOLO input sides must be multiples of 32;
-these are estimates, scaled from the measured 640x640 time by pixel count:
+choice between speed and detail. YOLO input sides must be multiples of 32.
+
+NPU time doesn't scale simply with pixel count. An earlier test at 512x512 had
+36% fewer pixels but ran only 25% faster: there's a fixed cost of about 20 ms
+per frame. Fitting both measurements (20 ms plus 0.115 ms per thousand pixels)
+gives these estimates:
 
 | Model input | Pixels | NPU per frame | Frame-rate ceiling | Detail vs today |
 |---|---|---|---|---|
-| 640x384 | 246k | ~38 ms | ~26 fps | same |
+| 640x384 | 246k | ~48 ms | ~21 fps | same |
 | 640x640 padded (today) | 410k | 63.5 ms (measured) | 15.7 fps (14.7 actual) | 1x |
-| **800x448** | 358k | ~56 ms | ~18 fps | **1.25x** |
-| 960x544 (full frame) | 522k | ~81 ms | ~12 fps | 1.5x |
+| **800x448** | 358k | ~61 ms | ~16 fps | **1.25x** |
+| 960x544 (full frame) | 522k | ~80 ms | ~12.5 fps | 1.5x |
 
 - **640x384** is the speed option. It sees exactly what the model sees today,
-  about 40% faster, and around 20 fps once the CPU becomes the limit.
+  about 25% faster.
 - **960x544** is the range option. Every camera pixel reaches the model, so
   objects are 1.5 times larger in pixels and get picked up at roughly 1.5 times
   the distance. The cost is about 12 fps.
 - **800x448** is the one going on the board next. It gives 1.25 times today's
-  detail and should still be slightly faster than today, with no padding wasted.
+  detail at about today's speed: the NPU time that went on padding goes on real
+  picture instead.
 
-The estimates assume NPU time scales with pixel count; the real numbers come
-next post.
+These are fitted estimates; the measured numbers come next post.
