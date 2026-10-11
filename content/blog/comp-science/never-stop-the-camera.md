@@ -128,8 +128,14 @@ a quarter of the CPU back.
 
 With the NPU as the limit, the next question is what it spends its 63 ms on.
 The camera frame is 16:9 (960x540), but the model takes a square 640x640
-input. The picture is shrunk to 640x360 and padded with 280 blank rows, so 44%
-of the NPU's work goes on padding.
+input. The server squeezes the frame to fit: 960 columns become 640, but 540
+rows are stretched up to 640. That costs twice:
+
+- **Wasted NPU work.** Only about 360 rows' worth of real detail survive the
+  horizontal squeeze, so roughly 44% of the input rows are duplicates.
+- **Distorted objects.** Every object reaches the model 1.78 times taller,
+  relative to its width, than in the images YOLO was trained on, which keep
+  their proportions. That likely costs some accuracy.
 
 Each frame's time today:
 
@@ -137,12 +143,12 @@ Each frame's time today:
 |---|---|---|
 | YOLOv8n inference | **63.5 ms** | NPU |
 | Camera read + colour conversion | 15 ms | CPU |
-| Downscale to 640x640 | 10 ms | CPU |
+| Squeeze to 640x640 | 10 ms | CPU |
 | Quantise to int8 | 6 ms | CPU |
 | HUD drawing | 4 ms | CPU |
 | JPEG (hardware, with CPU colour conversion) | 12 ms | CPU + encoder |
 
-Re-converting the model for a 16:9 input removes the padding. That leaves a
+Re-converting the model for a 16:9 input fixes both. That leaves a
 choice between speed and detail. YOLO input sides must be multiples of 32.
 
 NPU time doesn't scale simply with pixel count. An earlier test at 512x512 had
@@ -153,7 +159,7 @@ gives these estimates:
 | Model input | Pixels | NPU per frame | Frame-rate ceiling | Detail vs today |
 |---|---|---|---|---|
 | 640x384 | 246k | ~48 ms | ~21 fps | same |
-| 640x640 padded (today) | 410k | 63.5 ms (measured) | 15.7 fps (14.7 actual) | 1x |
+| 640x640 stretched (today) | 410k | 63.5 ms (measured) | 15.7 fps (14.7 actual) | 1x |
 | **800x448** | 358k | ~61 ms | ~16 fps | **1.25x** |
 | 960x544 (full frame) | 522k | ~80 ms | ~12.5 fps | 1.5x |
 
@@ -163,7 +169,8 @@ gives these estimates:
   objects are 1.5 times larger in pixels and get picked up at roughly 1.5 times
   the distance. The cost is about 12 fps.
 - **800x448** is the one going on the board next. It gives 1.25 times today's
-  detail at about today's speed: the NPU time that went on padding goes on real
-  picture instead.
+  detail at about today's speed, and its proportions match the camera's almost
+  exactly (scale 0.833 across, 0.830 down), so nothing is stretched or
+  duplicated.
 
 These are fitted estimates; the measured numbers come next post.
