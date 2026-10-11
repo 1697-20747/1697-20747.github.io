@@ -176,8 +176,7 @@ keeps up beats a dense, correct one that can't.
 
 **Previous in the series:** [Locked In, Never
 Measured](/blog/comp-science/locked-in-never-measured/)
-**Next in the series:** [The Vendor Stack Was the
-Fix](/blog/comp-science/the-vendor-stack-was-the-fix/)
+**Next in the series:** — to be written
 
 ---
 
@@ -193,4 +192,3 @@ Fix](/blog/comp-science/the-vendor-stack-was-the-fix/)
 8. [Fast, But Undecoded](/blog/comp-science/fast-but-undecoded/)
 9. [Locked In, Never Measured](/blog/comp-science/locked-in-never-measured/)
 10. **Not Every Pixel Needs an Answer** (this post)
-11. [The Vendor Stack Was the Fix](/blog/comp-science/the-vendor-stack-was-the-fix/)

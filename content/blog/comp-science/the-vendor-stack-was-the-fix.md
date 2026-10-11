@@ -4,7 +4,7 @@ date: 2026-10-11T10:30:00Z
 draft: false
 categories: ["comp-science"]
 tags: [robotics, embedded-linux, luckfox, rv1106, buildroot, computer-vision, performance]
-description: "Eleventh post in the APEX build log. Today: the Luckfox Pico Ultra detection board got a web UI, then a whole new operating system -- because every hard problem it had come down to running Rockchip's parts outside Rockchip's stack."
+description: "First post in the Luckfox build log. A Luckfox Pico Ultra (Rockchip RV1106) detection board got a web UI, then a whole new operating system -- because every hard problem it had come down to running Rockchip's parts outside Rockchip's stack."
 summary: "Gave the Luckfox detection board a plug-and-play web UI, found its camera had never had auto-exposure, moved it from Ubuntu to Luckfox's Buildroot image (built and flashed entirely from a Mac), switched to hardware JPEG, and ported the accelerometer back -- with live tilt instruments on the HUD. 5.4fps became 8.9fps along the way."
 showToc: true
 tocopen: false
@@ -14,18 +14,16 @@ cover:
   caption: ""
 ---
 
-*Eleventh post in a build log for an autonomous RC vehicle project, previously
-APEX-DC while it ran DonkeyCar, now APEX on ROS 2. Previous post: [Not Every
-Pixel Needs an Answer](/blog/comp-science/not-every-pixel-needs-an-answer/),
-or see the full series at the bottom of this post.*
+*First post in the Luckfox build log: real-time YOLO object detection on a
+Luckfox Pico Ultra, a small Rockchip RV1106 board with its own NPU. A project
+of its own, separate from the APEX robot build log.*
 
 ---
 
 ## What Changed Today
 
-The Luckfox Pico Ultra -- the small RV1106 board with a 1 TOPS NPU that was
-parked as a possible detection offload for the Pi 5 -- has been running
-YOLOv8n on its NPU and streaming a HUD over WiFi for a few weeks. Today it got
+The Luckfox Pico Ultra -- a small RV1106 board with a 1 TOPS NPU -- has been
+running YOLOv8n on its NPU and streaming a HUD over WiFi for a few weeks. Today it got
 a proper interface, and then, unexpectedly, a new operating system.
 
 ## A Web Page Instead of a Window
@@ -120,25 +118,3 @@ of the table: the camera finally sees something to detect, there's 40MB more
 memory free, and the hardware encoder took JPEG from 26ms to 13ms. Inference is
 now nearly the whole frame budget, which is the right place for the bottleneck
 to be on a board bought for its NPU.
-
----
-
-**Previous in the series:** [Not Every Pixel Needs an
-Answer](/blog/comp-science/not-every-pixel-needs-an-answer/)
-**Next in the series:** — to be written
-
----
-
-## Full Series
-
-1. [Radar Without Range](/blog/comp-science/radar-without-range/)
-2. [The Tilde Is the Point](/blog/comp-science/the-tilde-is-the-point/)
-3. [From Static Overlay to Object Oriented Widget HUD](/blog/comp-science/from-static-overlay-to-object-oriented-widget-hud/)
-4. [Stay On, Then Smooth, Then Fast](/blog/comp-science/stay-on-then-smooth-then-fast/)
-5. [The Later That Came Early](/blog/comp-science/the-later-that-came-early/)
-6. [Same Shape, Different Paper](/blog/comp-science/same-shape-different-paper/)
-7. [What the Arduino Was Actually Doing](/blog/comp-science/what-the-arduino-was-actually-doing/)
-8. [Fast, But Undecoded](/blog/comp-science/fast-but-undecoded/)
-9. [Locked In, Never Measured](/blog/comp-science/locked-in-never-measured/)
-10. [Not Every Pixel Needs an Answer](/blog/comp-science/not-every-pixel-needs-an-answer/)
-11. **The Vendor Stack Was the Fix** (this post)
