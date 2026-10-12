@@ -173,4 +173,54 @@ gives these estimates:
   exactly (scale 0.833 across, 0.830 down), so nothing is stretched or
   duplicated.
 
-These are fitted estimates; the measured numbers come next post.
+## Measured: 800x448 on the Board
+
+The 800x448 model went on the board the same night. The first try was slower,
+not faster:
+
+| Per frame | 640x640 | 800x448, first try | 800x448, fixed |
+|---|---|---|---|
+| NPU | 63.5 ms | 57.9 ms | 58.4 ms |
+| Decode + NMS (CPU) | 1.5 ms | 20.5 ms | **1.8 ms** |
+| Downscale (CPU) | 10 ms | 27.6 ms | **6.0 ms** |
+| Video with HUD | 15.2 fps | 11.2 fps | **16.2 fps** |
+| Navigation only | 15 Hz | | **16.7 Hz** |
+
+The NPU came in under the estimate (58 ms rather than about 61), but two CPU
+steps got much slower. Neither was the model's fault:
+
+- **The downscale lost a compiler shortcut.** With the size fixed at 640, the
+  compiler turned the per-pixel division into a multiply. With the size read
+  from the model at run time, it became a real hardware divide for every
+  pixel. A lookup table of source columns, computed once, fixed it.
+- **The decode lost its quick reject.** It skips a grid cell when a "score sum"
+  output says nothing there can pass the 0.25 threshold. On the new model's
+  finest grid, the no-object value of that sum is about 0.27: just 80 tiny
+  class probabilities added up. So every cell went on to a check of all 80
+  classes, each a `std::set` lookup against the six classes the server keeps.
+  That's 588,000 lookups per frame. Checking only those six scores, from a
+  plain array, fixed it.
+
+Getting there took four measurements, two of which proved my guesses wrong
+(padded output memory, then slow uncached reads). A thread-CPU-time counter
+finally showed the time was real work, not waiting.
+
+## Measured: Accuracy
+
+Speed is only half of it. Both int8 models ran in Rockchip's simulator on the
+same 40 frames of a busy street video, each fed the way the board feeds it.
+They were scored against full-precision YOLOv8n at 960 resolution, counting
+people, bikes, cars, motorbikes, buses and trucks:
+
+| | 640x640 stretched | 800x448 |
+|---|---|---|
+| Reference objects found (recall) | 552 of 910 (**61%**) | 768 of 910 (**84%**) |
+| Detections that were right (precision) | 94% | 92% |
+
+The 16:9 model finds 39% more of the objects at nearly the same precision. The
+reference ran at a higher resolution, which favours the higher-resolution model
+somewhat, but not by 24 points. Stretching the frame, and squeezing it to 640
+pixels across, had been costing far more detection than anyone had measured.
+
+So the board now runs 800x448 with hardware JPEG: faster, sharper, and
+restart-safe (30 of 30 restarts clean on the new build).
