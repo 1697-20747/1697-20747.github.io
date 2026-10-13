@@ -1,6 +1,7 @@
 ---
 title: "Teaching YOLO Your Own Objects"
 date: 2026-10-13T15:55:00Z
+author: "1697-20747"
 draft: false
 categories: ["comp-science"]
 tags: [luckfox, rv1106, yolo, machine-learning, computer-vision, guide]

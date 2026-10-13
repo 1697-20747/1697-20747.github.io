@@ -1,6 +1,7 @@
 ---
 title: "Never Stop the Camera"
 date: 2026-10-11T20:47:00Z
+author: "1697-20747"
 draft: false
 categories: ["comp-science"]
 tags: [embedded-linux, luckfox, rv1106, buildroot, computer-vision, debugging, reliability]

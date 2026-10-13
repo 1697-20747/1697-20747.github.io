@@ -1,6 +1,7 @@
 ---
 title: "Thirty Frames on One Core"
 date: 2026-10-13T15:30:00Z
+author: "1697-20747"
 draft: false
 categories: ["comp-science"]
 tags: [embedded-linux, luckfox, rv1106, computer-vision, performance, hardware-acceleration]

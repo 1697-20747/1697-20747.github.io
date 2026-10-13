@@ -1,6 +1,7 @@
 ---
 title: "The Vendor Stack Was the Fix"
 date: 2026-10-11T10:30:00Z
+author: "1697-20747"
 draft: false
 categories: ["comp-science"]
 tags: [robotics, embedded-linux, luckfox, rv1106, buildroot, computer-vision, performance]
