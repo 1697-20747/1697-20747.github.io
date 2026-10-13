@@ -224,3 +224,5 @@ pixels across, had been costing far more detection than anyone had measured.
 
 So the board now runs 800x448 with hardware JPEG: faster, sharper, and
 restart-safe (30 of 30 restarts clean on the new build).
+
+*Next in the Luckfox log: [Thirty Frames on One Core]({{< relref "thirty-frames-on-one-core.md" >}}).*
