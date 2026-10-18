@@ -1,229 +1,88 @@
 ---
-title: "Securitisation 101: Party Roles and Waterfall"
+title: "Securitisation 101 — Part 2: The Parties and the Waterfall"
 date: 2026-05-17T07:13:29Z
+lastmod: 2026-10-18
 draft: false
 categories: ["comp-science"]
 tags: [securitisation, tranching, RMBS, mortgages, finance]
-description: "Entity roles, responsibilities and payment waterfall mechanics in RMBS securitisation."
-summary: "Entity roles, responsibilities and payment waterfall mechanics in RMBS securitisation."
+series: ["Securitisation 101"]
+description: "Who does what in a UK RMBS, and how the cash moves through the revenue and principal waterfalls every month."
+summary: "Part 2 of 4: the parties to an RMBS and the priority of payments as the model runs it, with a stress-case month worked through."
 ShowToc: false
 disableAnchoredHeadings: true
 ---
 <!--more-->
 
-### Part 3: Entity Roles & Responsibilities (The Complete Picture)
-
-Now let us examine each entity's specific role, responsibilities, and relationships:
-
-#### The Nine Key Entities and Their Functions:
+## The parties
 
 ![RMBS Entity Roles](/images/comp-science/rmbs_entity_roles.png)
 
-#### Detailed Entity Roles:
+| Party | What it does |
+|---|---|
+| **Originator** | Makes the loans and sells them to the SPV. It gets its capital back to lend again. In a prime deal it often keeps the first-loss note (risk retention) |
+| **Issuer / SPV** | A bankruptcy-remote company that owns the pool and issues the notes. If the originator fails, the pool is protected |
+| **Servicer** | Collects borrower payments, handles arrears and repossessions, and reports performance |
+| **Trustee** | Holds the security for the noteholders and enforces the documents if anyone breaches them |
+| **Cash manager** | Runs the priority of payments each month and manages the reserve |
+| **Agent bank / paying agent** | Calculates and pays interest and principal to investors |
+| **Swap counterparty** | Swaps the fixed rates on the loans into Bank Rate, so fixed-rate loans can back floating-rate notes |
+| **Rating agencies** | Rate the notes at issue and monitor them afterwards |
 
-##### 1. Originator
-
-The originator creates the mortgages and initiates the securitization.
-
-**Key Responsibilities:**
-- Originates mortgages through traditional underwriting processes
-- Funds loans to qualified borrowers
-- Sells mortgages to the SPV and receives proceeds
-- May provide representations and warranties about loan quality
-
-**Why They Do This:**
-- Immediate capital recovery to continue lending
-- Risk transfer -- mortgages no longer on their balance sheet
-- Fee income from loan origination and servicing
-
-**In Our Example:**
-Together Financial Services originates 10,000 mortgages totalling GBP 733.1 million,
-sells the pool to TGT-RMBS Plc and receives proceeds to fund new originations.
-
-##### 2. Issuer / Special Purpose Vehicle (SPV)
-
-The SPV is the legal and financial centre of the securitization structure.
-
-**Key Responsibilities:**
-- Owns the mortgage pool (bankruptcy-remote entity)
-- Issues notes to raise capital for purchasing mortgages
-- Receives mortgage payments and distributes funds per the waterfall
-- Complies with all indenture agreements and regulatory requirements
-
-**In Our Example:**
-TGT-RMBS Plc purchases GBP 733.1 million of mortgages and issues GBP 744.3 million
-of notes (Classes A through Z) to fund the purchase and reserve.
-
-##### 3. Loan Servicer
-
-The servicer is the operational backbone, managing day-to-day mortgage servicing.
-
-**Key Responsibilities:**
-- Collects monthly payments from borrowers
-- Reports monthly performance metrics, delinquencies, and defaults
-- Manages loss mitigation and forbearance programs
-- Forwards all collections to the SPV
-
-**In Our Example:**
-SVC-TGT-001 services the 10,000 loans, collects approximately GBP 63.9 million
-monthly, and forwards collections to the SPV within 2 business days.
-
-##### 4. Master Loan Servicer
-
-Provides oversight and quality assurance for the loan servicer.
-
-**Key Responsibilities:**
-- Monitors servicer performance against required standards
-- Reviews servicer reports and audits for accuracy
-- Can substitute the servicer if performance deteriorates materially
-
-**In Our Example:**
-Independent Master Loan Servicer monitors SVC-TGT-001 and can replace them if
-they fail to perform.
-
-##### 5. Trustee (Mortgage Trustee)
-
-Holds the mortgages and represents investor interests in the underlying collateral.
-
-**Key Responsibilities:**
-- Holds legal title to the mortgages in trust for noteholders
-- Monitors SPV and servicer compliance with transaction terms
-- Takes enforcement action if either party breaches obligations
-- Maintains mortgage documents and records
-
-**In Our Example:**
-Trustee holds 10,000 mortgage notes and ensures servicer properly collects and
-remits payments.
-
-##### 6. Note Trustee (Indenture Trustee)
-
-Represents the interests of the noteholders and enforces the terms of the bonds.
-
-**Key Responsibilities:**
-- Enforces the terms of the notes and transaction documents
-- Collects payments from the issuer/SPV and distributes to investors
-- Takes enforcement action on behalf of noteholders if SPV defaults
-
-**In Our Example:**
-Note Trustee ensures TGT-RMBS Plc distributes funds to noteholders each month
-and acts if the SPV fails to pay investors.
-
-##### 7. Agent Bank (Paying Agent)
-
-Manages the logistics of payments and investor accounts.
-
-**Key Responsibilities:**
-- Distributes monthly interest and principal payments to investors
-- Prepares detailed account statements for each investor
-- Handles tax reporting information
-
-**In Our Example:**
-Agent Bank receives approximately GBP 63.9 million monthly from the SPV,
-calculates interest due to each class, and distributes accordingly.
-
-##### 8. Cash Manager
-
-Implements the priority of payments and manages reserves.
-
-**Key Responsibilities:**
-- Manages reserve accounts and maintains liquid funds
-- Implements the priority of payments (the waterfall) each month
-- Calculates interest and principal due to each tranche
-
-**Monthly Waterfall Process:**
-1. Receives collections from servicer via SPV
-2. Allocates funds in priority order: Class A interest, Class B, C, D, then principal
-3. Manages reserve accounts to ensure next month's interest is covered
-
-**In Our Example:**
-Manages reserve account of GBP 11.0 million (Moody's 1.5% minimum) and implements
-the monthly waterfall with approximately GBP 63.9 million in collections.
-
-##### 9. Rating Agencies
-
-Assess credit quality and monitor performance.
-
-**Key Responsibilities:**
-- Rate each note tranche based on credit analysis before issuance
-- Monitor pool performance quarterly
-- Issue surveillance updates and rating changes if performance deteriorates
-
-**In Our Example:**
-Rate the five classes (AAA for Class A through NR for Class Z), monitor monthly
-metrics, and flag if delinquencies exceed rating thresholds.
-
-#### Relationships Between Entities:
-
-**Originator -- Issuer/SPV:**
-Clean transfer of risk from originator to investors via the SPV.
-
-**Servicer -- Master Servicer:**
-Master Servicer oversees Servicer; can replace them if performance fails.
-
-**Trustee -- Note Trustee:**
-Dual structure protects investors: Mortgage Trustee holds collateral,
-Note Trustee enforces bond terms.
-
-**Agent Bank -- Cash Manager:**
-Cash Manager determines distribution amounts; Agent Bank executes them.
-
-**All Entities to Rating Agencies:**
-All entities provide performance data; rating changes signal market confidence.
-
-#### The Waterfall Priority (Cash Distribution Order):
-
-Monthly cash flows of approximately GBP 63.9 million are distributed as follows:
-
-**Step 1: Operating Expenses (~GBP 52k/month)**
-- Trustee fees: GBP 16,667/month
-- Servicer fees: GBP 25,000/month
-- Paying agent, legal, rating agency fees: GBP 10,000/month
-
-**Step 2: Interest Payments (~GBP 3.3m/month)**
-- Class A: ~GBP 2.1m (GBP 595.4m x 4.25% / 12)
-- Class B, C, D: ~GBP 735k each
-- Class Z: residual only
-
-**Step 3: Principal (remainder)**
-- Class A paid down first, then B, C, D, Z in order
-- In a stressed month: less principal available; Class Z receives almost nothing
-- In a severe loss event: losses cascade from Class Z upward
+The cash moves borrower → servicer → SPV → cash manager (the waterfall) → paying agent → investors.
 
 ---
 
-### Summary: The Complete Picture
+## The waterfall
 
-An RMBS transaction creates a structure designed to benefit originators by
-recovering capital immediately, protect investors through tranching and
-oversight, and transform illiquid mortgages into tradeable securities.
+Each month the cash is split into **revenue** (interest) and **principal**, and each runs down its own priority of payments. The model follows a UK prospectus structure:
 
-The legal structure accomplishes this through bankruptcy remoteness of the SPV,
-clear legal title held by the trustee, strict priority of payments protecting
-senior classes, and multiple layers of oversight from trustees, master servicers,
-and rating agencies.
+**Revenue priority of payments**
+1. Net swap payment
+2. Senior fees (servicer, trustee, cash manager)
+3. Class A interest, then each rated class's interest in turn. Each class's interest is followed by a cure of its principal deficiency ledger (PDL), which records losses not yet made good. A class that is not the most senior can defer unpaid interest; it accrues and is paid later.
+4. Reserve fund top-up
+5. Class Z PDL cure, then Class Z interest
+6. Class Z principal, but only once every rated class is repaid
+7. Anything left goes to the residual holder (a residual certificate, where the deal has one)
 
----
+**Principal priority of payments**: scheduled repayments, prepayments, recoveries and PDL cures repay the rated notes sequentially, A first. If revenue falls short, principal can cover it, with the amount debited to the PDL. Class Z is repaid last.
 
-## Key Takeaways
+**Credit enhancement**, in the order it absorbs losses:
+- excess spread (interest on the loans above what the notes cost);
+- the reserve fund;
+- subordination (every class below absorbs losses before the class above).
 
-- Securitisation allocates existing cash flow from the mortgage pool to investors based on risk/return profiles
-- The SPV is the legal linchpin isolating mortgages from the originator's creditors
-- Tranching creates multiple security classes where senior classes (AAA) are highly protected
-- Nine key entities each play critical roles in the securitization
-- The waterfall distributes monthly cash flows in strict priority: fees, interest senior to junior, then principal
-- Sources and uses must always reconcile -- what pays in must get paid out
+Losses hit Class Z first, then each class upwards. The deal also has an optional call at the step-up date, when the pool is bought back and every note is repaid.
 
----
-
-## Next Steps
-
-See [RMBS Technical Architecture & Implementation](/docs/rmbs-technical-architecture/)
-for complete documentation including architecture overview, Python files, API endpoints and deployment.
+**No cash is created.** The model checks that sources equal uses every month and over the whole life of the deal, against every note. The reserve is paid out at the end, so closing cash is zero.
 
 ---
 
-## References
+## A stress case, worked through
 
-- Bank of England, Credit Risk Directorate. Data tape standards for mortgage data submission
-- Rating agency methodologies (public domain)
-- Historical mortgage performance data
+The [stress-case waterfall](/html/stress_case_waterfall.html) takes the current sample deal and runs the worst of the AAA scenarios: front-loaded defaults, no prepayments, and Bank Rate rising to 9.75%.
+
+| | Month 1 | Month 43 (peak defaults) |
+|---|---|---|
+| Interest collected | £6.3m | £8.3m |
+| Swap receipt (net) | – | £1.6m |
+| Senior fees | £0.3m | £0.2m |
+| Class A interest | £4.8m | £8.5m |
+| Class Z PDL cure | £1.3m | £1.3m |
+| Defaults / losses | £0.3m / £0.1m | £9.6m / £2.7m |
+
+Over the life of this scenario, 38.6% of the pool defaults and 10.5% is lost. **Class Z loses all of its £187m. Class A loses nothing**, and that is exactly what it was sized for. Closing cash is £0.00.
+
+The day-1 position is on the [sources and uses](/html/sources_and_uses.html) page.
+
+---
+
+### Securitisation 101 series
+
+**Previous:** [Part 1: What It Is, and Why the Data Comes First](/blog/comp-science/securitisation-101/) · **Next:** [Part 3: Building the Deal](/blog/comp-science/securitisation-101-part-3/)
+
+**Full series**
+1. [Part 1: What It Is, and Why the Data Comes First](/blog/comp-science/securitisation-101/)
+2. Part 2: The Parties and the Waterfall (this post)
+3. [Part 3: Building the Deal](/blog/comp-science/securitisation-101-part-3/)
+4. [Part 4: Outputs, Assumptions and Limits](/blog/comp-science/securitisation-101-part-4/)

@@ -1,17 +1,27 @@
 ---
 title: "RMBS Documentation"
-description: "Complete technical documentation for RMBS modeling, reporting, and implementation"
+description: "Technical reference for the UK RMBS generation model behind the Securitisation 101 series."
+aliases:
+  - /docs/rmbs/api-reference/
+  - /docs/rmbs/api-setup/
+  - /docs/rmbs/dashboards-guide/
+  - /docs/rmbs/geographic-mortgage-map/
+  - /docs/rmbs/reporting-guide/
+  - /docs/rmbs/sample-mortgage-data/
 ---
 
-This section contains comprehensive technical documentation for the RMBS (Residential Mortgage-Backed Securities) system.
+Reference pages for the UK RMBS model described in the **Securitisation 101** series.
 
-## Documentation Pages
+## Pages
 
-- **[Technical Architecture](/docs/rmbs/technical-architecture/)** — Complete codebase, architecture, and integration guide
-- **[API Reference](/docs/rmbs/api-reference/)** — REST API endpoints and Python client library
-- **[Dashboard Guide](/docs/rmbs/dashboard-guide/)** — Interactive reporting dashboards
+- **[Technical Architecture](/docs/rmbs/rmbs-technical-architecture/):** how the model is built, the order of operations and the main modules and commands.
+- **[Sample Outputs](/docs/rmbs/sample-reports/):** the current sample deal's investor report, pitch deck, sources and uses, and stress-case waterfall.
 
-## Getting Started
+## The series
 
-Start with the [main blog post](/blog/securitisation-101/) for a learning-focused introduction, then explore the technical documentation for implementation details.
+1. [Part 1: What It Is, and Why the Data Comes First](/blog/comp-science/securitisation-101/)
+2. [Part 2: The Parties and the Waterfall](/blog/comp-science/securitisation-101-part-2/)
+3. [Part 3: Building the Deal](/blog/comp-science/securitisation-101-part-3/)
+4. [Part 4: Outputs, Assumptions and Limits](/blog/comp-science/securitisation-101-part-4/)
 
+The earlier API, dashboard, map and reporting-guide pages described tools that the model has since replaced. Their content now lives in the two pages above.
