@@ -59,6 +59,8 @@ The model uses one **generic calculated credit model**, built from public rating
 
 Each rating is run through the monthly waterfall under 16 scenarios: defaults front- or back-loaded × four prepayment speeds × Bank Rate up or down. There are blank slots for actual rating-agency approaches, so the generic model can be benchmarked against each one later.
 
+The intelligent next step is to reverse engineer each rating agency's approach from its published criteria. Each optimised pool could then be smoke-tested against every agency's process before issue, challenging the pool and structure before proceeding. That is not covered in this project; the slots are there for it.
+
 ---
 
 ## 4. Sizing the stack
