@@ -1,7 +1,7 @@
 ---
 title: "Securitisation 101 — Part 1: What It Is, and Why the Data Comes First"
 date: 2026-05-17T07:13:28Z
-lastmod: 2026-10-18
+lastmod: 2026-10-20
 draft: false
 categories: ["comp-science"]
 tags: [securitisation, tranching, RMBS, mortgages, finance]
@@ -79,12 +79,12 @@ The current sample deal from the model:
 
 | Item | Value |
 |---|---|
-| Pool | 10,000 UK mortgages, £1,449m (average £144,900) |
+| Pool | 9,951 UK mortgages, £1,449m (average £145,600) |
 | Credit profile | Prime proxy: 90% of balance still in an introductory fix, 2% with past adverse credit, 14% buy-to-let |
 | WA original LTV / interest rate | 72.7% / 5.24% |
-| Notes | Class A AAA £1,262m (Bank Rate + 70bp); Class Z first-loss note £187m, retained |
-| Class A credit enhancement | 12.9% subordination + 1.5% reserve = 14.4%, 1.6x its AAA stressed loss |
-| Excess spread after the swap | 108bp a year |
+| Notes | Class A Notes, AAA(sf), £1,351m (Bank Rate + 70bp); Class Z Notes, unrated first loss, £128m, retained |
+| Class A credit enhancement | 8.8% subordination + 1.5% reserve = 10.3%, 1.45x its AAA stressed loss |
+| Excess spread after the swap | 89bp a year |
 
 ![RMBS Legal Structure](/images/comp-science/rmbs_legal_structure.png)
 

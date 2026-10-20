@@ -24,11 +24,11 @@ Not published here:
 
 | Item | Value |
 |---|---|
-| Pool | 10,000 loans, £1,449m, WA rate 5.24%, WA original LTV 72.7% |
+| Pool | 9,951 loans, £1,449m, WA rate 5.24%, WA original LTV 72.7% |
 | Profile | Prime proxy, new issue: 90% in an introductory fix, 2% past adverse credit, 14% buy-to-let, about a fifth in London |
-| Stack | Prime master trust: Class A (AAA, Bank Rate + 70bp) £1,262m; Class Z first-loss note £187m, retained |
-| Class A enhancement | 12.9% subordination (10.3% stress test + 2.6% sensitivity cushion) + 1.5% reserve |
-| AAA credit coverage | 9.0% of pool (26.5% defaults × 33.9% severity); Class A covers it 1.6x |
-| Issuance economics | 108bp excess spread after the swap; tolerates a 1.4pp Bank Rate rise between warehouse and issue |
+| Stack | Prime master trust: Class A Notes (AAA(sf), Bank Rate + 70bp) £1,351m; unrated Class Z Notes, first loss, £128m, retained |
+| Class A enhancement | 8.8% subordination (7.2% stress test + 1.6% sensitivity cushion on the estimated parameters) + 1.5% reserve = 10.3% |
+| AAA credit coverage | 7.1% of pool (21.0% defaults × 33.7% severity); Class A covers it 1.45x; implied chance of any loss about 1.6bp against a 16bp AAA target |
+| Issuance economics | 89bp excess spread after the swap; tolerates a 1.1pp Bank Rate rise between warehouse and issue |
 
 Illustrative only: synthetic loans, public-domain parameters, not an offer of securities and not a rating.

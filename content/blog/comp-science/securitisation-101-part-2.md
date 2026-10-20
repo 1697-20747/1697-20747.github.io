@@ -1,7 +1,7 @@
 ---
 title: "Securitisation 101 — Part 2: The Parties and the Waterfall"
 date: 2026-05-17T07:13:29Z
-lastmod: 2026-10-18
+lastmod: 2026-10-20
 draft: false
 categories: ["comp-science"]
 tags: [securitisation, tranching, RMBS, mortgages, finance]
@@ -64,14 +64,14 @@ The [stress-case waterfall](/html/stress_case_waterfall.html) takes the current 
 
 | | Month 1 | Month 43 (peak defaults) |
 |---|---|---|
-| Interest collected | £6.3m | £8.3m |
-| Swap receipt (net) | – | £1.6m |
+| Interest collected | £6.3m | £8.7m |
+| Swap receipt (net) | – | £1.7m |
 | Senior fees | £0.3m | £0.2m |
-| Class A interest | £4.8m | £8.5m |
-| Class Z PDL cure | £1.3m | £1.3m |
-| Defaults / losses | £0.3m / £0.1m | £9.6m / £2.7m |
+| Class A interest | £5.0m | £9.2m |
+| Class Z PDL cure | £1.1m | £1.1m |
+| Defaults / losses | £0.2m / £0.1m | £7.6m / £2.1m |
 
-Over the life of this scenario, 38.6% of the pool defaults and 10.5% is lost. **Class Z loses all of its £187m. Class A loses nothing**, and that is exactly what it was sized for. Closing cash is £0.00.
+Over the life of this scenario, 30.6% of the pool defaults and 8.3% is lost. **Class Z loses all of its £128m. Class A loses nothing**, and that is exactly what it was sized for. Closing cash is £0.00.
 
 The day-1 position is on the [sources and uses](/html/sources_and_uses.html) page.
 
