@@ -1,7 +1,7 @@
 ---
 title: "Securitisation 101 — Part 1: What It Is, and Why the Data Comes First"
 date: 2026-05-17T07:13:28Z
-lastmod: 2026-10-20
+lastmod: 2026-10-23
 draft: false
 categories: ["comp-science"]
 tags: [securitisation, tranching, RMBS, mortgages, finance]
@@ -60,14 +60,14 @@ A mortgage is just that, a mortgage from a bank or building society. You can't r
 
 A rating agency reviews a securitisation **after** it has been tranched. This model works the other way round. It **creates** the deal from the warehouse, with the rating tests built in, so the finished deal should pass review without change:
 
-1. **Ingest and curate** loan and borrower data into the BoE template, with data-quality checks.
-2. **Ingest market data**: Bank Rate, mortgage rates, note margins, swap rates, house prices and costs.
+1. **Ingest and curate** loan and borrower data into the BoE template, with data-quality checks. The scope is the data: mortgage documents themselves and the systems that hold them are out, but the data in them (valuations, incomes, terms) is essential.
+2. **Ingest market data**: Bank Rate, mortgage rates, note margins, swap rates, house prices and costs. Every critical number sits in its own data set with its source, as-of date and owner, so any figure can be audited back to where it came from.
 3. **Select and price the pool** from the warehouse.
 4. **Create the securitisation**: notes, swap, reserve and day-1 costs, with sources equal to uses.
 5. **Freeze the static set**: the cut-off pool and its loan scores, fixed while the stresses run.
-6. **Stress and tranche**: run every rating-level stress through the monthly waterfall, size each class, and add a sensitivity cushion.
+6. **Stress and tranche**: run every rating-level stress through the monthly waterfall, size each class, and add a sensitivity cushion. Which tests run is set by a master test list per jurisdiction, so tests can be switched in, out or trialled, and every result records which ones produced it.
 7. **Issue the outputs**: BoE tape, investor report, pitch deck and a draft prospectus skeleton.
-8. **Report through the life of the deal**, to final redemption (still a placeholder).
+8. **Report through the life of the deal**, to final redemption: one pack per payment date from the servicer's performance file.
 
 Steps 3 to 6 loop until the deal is viable. If a market move makes it uneconomic before issue, the result is an *issuance failure*, flagged for manual assessment rather than forced through.
 
@@ -82,9 +82,9 @@ The current sample deal from the model:
 | Pool | 9,951 UK mortgages, £1,449m (average £145,600) |
 | Credit profile | Prime proxy: 90% of balance still in an introductory fix, 2% with past adverse credit, 14% buy-to-let |
 | WA original LTV / interest rate | 72.7% / 5.24% |
-| Notes | Class A Notes, AAA(sf), £1,351m (Bank Rate + 70bp); Class Z Notes, unrated first loss, £128m, retained |
-| Class A credit enhancement | 8.8% subordination + 1.5% reserve = 10.3%, 1.45x its AAA stressed loss |
-| Excess spread after the swap | 89bp a year |
+| Notes | Class A Notes, AAA(sf), £1,350m (Bank Rate + 70bp); Class Z Notes, unrated first loss, £129m, retained |
+| Class A credit enhancement | 8.9% subordination + 1.5% reserve = 10.4%, 1.45x its AAA stressed loss |
+| Excess spread after the swap | 90bp a year |
 
 ![RMBS Legal Structure](/images/comp-science/rmbs_legal_structure.png)
 

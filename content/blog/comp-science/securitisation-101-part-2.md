@@ -1,7 +1,7 @@
 ---
 title: "Securitisation 101 — Part 2: The Parties and the Waterfall"
 date: 2026-05-17T07:13:29Z
-lastmod: 2026-10-20
+lastmod: 2026-10-23
 draft: false
 categories: ["comp-science"]
 tags: [securitisation, tranching, RMBS, mortgages, finance]
@@ -45,7 +45,9 @@ Each month the cash is split into **revenue** (interest) and **principal**, and 
 6. Class Z principal, but only once every rated class is repaid
 7. Anything left goes to the residual holder (a residual certificate, where the deal has one)
 
-**Principal priority of payments**: scheduled repayments, prepayments, recoveries and PDL cures repay the rated notes sequentially, A first. If revenue falls short, principal can cover it, with the amount debited to the PDL. Class Z is repaid last.
+**Principal priority of payments**: scheduled repayments, prepayments, recoveries and PDL cures repay the rated notes sequentially, A first. If revenue falls short, principal can cover it, with the amount debited to the PDL. Once the rated notes are repaid, principal repays Class Z, and only then its unpaid interest. An earlier version had that order the wrong way round: leftover principal went to Class Z's interest first, so Class Z was never repaid at all.
+
+Specialist UK deals add more moving parts, and the model has each as an option (all off for this prime deal): a liquidity reserve funded from principal, excess-spread notes that pay the day-1 costs, a switch from sequential to pro-rata principal after two years, notes issued below par, and a revolving period.
 
 **Credit enhancement**, in the order it absorbs losses:
 - excess spread (interest on the loans above what the notes cost);
@@ -60,18 +62,18 @@ Losses hit Class Z first, then each class upwards. The deal also has an optional
 
 ## A stress case, worked through
 
-The [stress-case waterfall](/html/stress_case_waterfall.html) takes the current sample deal and runs the worst of the AAA scenarios: front-loaded defaults, no prepayments, and Bank Rate rising to 9.75%.
+The [stress-case waterfall](/html/stress_case_waterfall.html) takes the current sample deal and runs the worst of the AAA scenarios: front-loaded defaults, prepayments at 20% a year, and Bank Rate rising to 9.75%.
 
 | | Month 1 | Month 43 (peak defaults) |
 |---|---|---|
-| Interest collected | £6.3m | £8.7m |
-| Swap receipt (net) | – | £1.7m |
-| Senior fees | £0.3m | £0.2m |
-| Class A interest | £5.0m | £9.2m |
-| Class Z PDL cure | £1.1m | £1.1m |
+| Interest collected | £6.3m | £3.5m |
+| Swap receipt (net) | – | £0.7m |
+| Senior fees | £0.3m | £0.1m |
+| Class A interest | £5.0m | £3.8m |
+| Class Z PDL cure | £1.1m | £0.5m |
 | Defaults / losses | £0.2m / £0.1m | £7.6m / £2.1m |
 
-Over the life of this scenario, 30.6% of the pool defaults and 8.3% is lost. **Class Z loses all of its £128m. Class A loses nothing**, and that is exactly what it was sized for. Closing cash is £0.00.
+Over the life of this scenario, 29.7% of the pool defaults and 7.9% is lost. **Class Z loses £78.8m of its £129m (61%). Class A loses nothing**, and that is exactly what it was sized for. Closing cash is £0.00.
 
 The day-1 position is on the [sources and uses](/html/sources_and_uses.html) page.
 

@@ -1,14 +1,14 @@
 ---
 title: "Securitisation 101 — Part 3: Building the Deal"
 date: 2026-05-20T07:27:29Z
-lastmod: 2026-10-20
+lastmod: 2026-10-23
 draft: false
 categories: ["comp-science"]
 tags: ["RMBS", "securitisation", "optimisation", "python", "credit risk"]
 series: ["Securitisation 101"]
 aliases: ["/blog/comp-science/securitisation-pool-optomiser/"]
-description: "From warehouse to tranched deal: pool selection, the frozen static set, rating stresses, capital-stack sizing, a sensitivity cushion and issuance economics."
-summary: "Part 3 of 4: how the model selects the pool, stresses it at each rating level, sizes every class, adds a sensitivity cushion and checks the deal is economic to issue."
+description: "From warehouse to tranched deal: pool selection, the frozen static set, rating stresses, capital-stack sizing, a sensitivity cushion, challengers and issuance economics."
+summary: "Part 3 of 4: how the model selects the pool, stresses it at each rating level, sizes every class, adds a sensitivity cushion, challenges the result and checks the deal is economic to issue."
 ShowToc: true
 TocOpen: false
 ---
@@ -22,6 +22,8 @@ warehouse ─► select & price pool ─► create deal ─► freeze static set
                  └──────────────── no: re-select pool ◄──────────────────────────────────────┘
 ```
 
+Which tests run inside that loop is not hard-coded. A master test list, itself an assumption file, says which stresses, sizing methods, gates and reports apply for a jurisdiction and a named run. Mandatory tests (cash conservation, the rating stresses, the optimiser) cannot be switched off, so no one can drop a test to make a deal pass. Every build records the tests it ran.
+
 ---
 
 ## 1. Selecting the pool
@@ -31,9 +33,7 @@ The warehouse holds more loans than the deal needs. Picking the subset is a comb
 - **Pre-filter** (`pre_filter.py`): one deterministic pass removes ineligible loans (defaulted, redeemed or repurchased, LTV above the cap, zero balance or rate) and flags concentrations (buy-to-let, interest-only, region). It also checks the pool can pay the notes before any search starts.
 - **Search** (`rl_pool_selector.py`): a greedy warm start, then simulated annealing (add / remove / swap loans), rewarding the senior notes and penalising breaches of the concentration caps.
 - **In the loop:** the first round takes every eligible loan. If a round fails, the next one searches again with the failure as a penalty: the loans with the highest expected loss after a credit failure, the lowest-yielding after a spread failure.
-- **Whole groups only:** loans on the same property or to the same borrower stay together, in or out.
-
-Simulated annealing needs no training data and every step is visible, which matters when there is no corpus of past warehouse pools to learn from.
+- **Whole groups only:** loans on the same property or to the same borrower stay together, in or out. A reviewer can also reject loans one by one before the build.
 
 The sample pool is built to look like a **UK prime new issue**:
 - loans 3–30 months old (17 months on average);
@@ -57,36 +57,25 @@ The model uses one **generic calculated credit model**, built from public rating
 
 - a credit score per loan → a pool PD → a rating-level default rate (a Vasicek model, at the default probability a rating allows over the pool's life);
 - times loss severity per loan (house-price falls, forced-sale discount, costs, with floors);
-- giving **credit coverage**: the stressed loss each rating level must survive. For the sample pool, AAA coverage is 21.0% defaults × 33.7% severity = 7.1% of the pool.
+- giving **credit coverage**: the stressed loss each rating level must survive. For the sample pool, AAA coverage is 21.1% defaults × 34.1% severity = 7.2% of the pool.
 
-The originator score matters here. It is a judgement from the operational review, on a 1–10 scale where 1–3 is a high-street prime lender. The sample pool is built as prime, so it is set at 2. An earlier version left it at 5 (a near-prime lender), which nearly doubled the expected PD, from 2.6% to 4.7%.
+Some loans need more than the published scoring captures. Loans already in arrears at cut-off start closer to default (three times the hazard). Flats and homes worth over £1m fall further in a downturn (10% and 15% more). Regional add-ons, a remortgage effect and a seasoning credit are in place but neutral until calibrated. Each of these is labelled an estimate.
 
-Each rating is run through the monthly waterfall under 16 scenarios: defaults front- or back-loaded × four prepayment speeds × Bank Rate up or down. There are blank slots for actual rating-agency approaches, so the generic model can be benchmarked against each one later.
+The originator score matters most. It is a judgement from the operational review, on a 1–10 scale where 1–3 is a high-street prime lender. The sample pool is built as prime, so it is set at 2. An earlier version left it at 5 (a near-prime lender), which nearly doubled the expected PD.
 
-The intelligent next step is to reverse engineer each rating agency's approach from its published criteria. Each optimised pool could then be smoke-tested against every agency's process before issue, challenging the pool and structure before proceeding. That is not covered in this project; the slots are there for it.
+Each rating is run through the monthly waterfall under 16 scenarios: defaults front- or back-loaded × four prepayment speeds × Bank Rate up or down.
 
 ---
 
 ## 4. Sizing the stack
 
-Every class, including Class Z, is sized from the stresses. Each class's attachment is searched by bisection, between the highest level where it loses in its rating's scenarios and the lowest where it does not, down to a floor (Class Z must at least fund the reserve and the day-1 costs). For the sample deal, Class A loses at 7.1% subordination and survives at **7.2%**: that is the stress-test level.
+Every class, including Class Z, is sized from the stresses. Each class's attachment is searched by bisection, between the highest level where it loses in its rating's scenarios and the lowest where it does not, down to a floor (Class Z must at least fund the reserve and the day-1 costs). For the sample deal, Class A loses at 7.2% subordination and survives at **7.3%**: that is the stress-test level.
 
-An earlier version stopped too soon. If the starting structure passed, the search never went lower, because Class Z, which is repaid from revenue, is never repaid in the harshest scenario, and its whole balance fed back as the "requirement". The requirement simply equalled the starting size. The search now always tests downwards.
-
-Classes follow the convention of issued UK notes: lettered from the most senior, each one rating category below the class above, with an unrated first-loss Class Z. Ratings are shown as, for example, AAA(sf). Three stack designs are built in:
-
-- **Prime master trust** (default): Class A (AAA) over a first-loss Class Z. The Class Z note, retained by the originator, plus the reserve is all of Class A's credit enhancement.
-- **Sequential**: Classes A (AAA), B (AA), C (A) and D (BBB) over Class Z, with minimum sizes so the mezzanine notes can actually be sold.
-- **Full sequential**: Classes A to F (AAA down to B) over Class Z, as on issued UK specialist deals.
+Classes follow the convention of issued UK notes: lettered from the most senior, each one rating category below the class above, with an unrated first-loss Class Z. Ratings are shown as, for example, AAA(sf). Three stacks are built in: prime master trust (A + Z, the default), sequential (A to D + Z) and full sequential (A to F + Z).
 
 ### The sensitivity cushion
 
-The stress test assumes the central assumptions are right. The sensitivity step adds room for them being wrong, but only where the model has had to guess:
-
-- **In the cushion:** the estimated parameters, which no methodology publishes (score calibration, originator score, the payment shock when a fixed rate ends, the LGD score weight and the size of the rate stress).
-- **Reported only:** the published parameters (house-price falls, sale discounts, costs, recovery lag, asset correlation, prepayment speeds). The rating stresses already apply them at each rating level, so cushioning them again would count them twice. Market inputs and deal terms are reported only too.
-
-Each estimate is shocked to its adverse value and the attachment is **re-solved**: the bisection runs again under the shocked assumption. The rises combine by root-sum-square, treating the estimates as independent:
+The stress test assumes the central assumptions are right. The cushion adds room for them being wrong, but only where the model has had to guess. Published parameters (house-price falls, sale discounts, costs, asset correlation) are already in the rating stresses, so they are reported, not cushioned. Each estimate is shocked to its adverse value and the attachment is **re-solved**:
 
 | Estimate (adverse side) | Class A break-even rises by |
 |---|---|
@@ -96,19 +85,38 @@ Each estimate is shocked to its adverse value and the attachment is **re-solved*
 | Size of the rate stress (+25%) | 0.5pp |
 | LGD score weight | 0.1pp |
 
-That gives a cushion of **1.6%**, so Class A attaches at **8.8%**. With the 1.5% reserve its enhancement is **10.3%**, close to the public pattern for UK prime master trusts (about 10%). On the pool's own loss distribution, the chance that Class A takes any loss is about 1.6bp, against about 16bp allowed for AAA: roughly ten times inside the target.
+Combined by root-sum-square, that is a **1.6%** cushion, so Class A attaches at **8.9%**. With the 1.5% reserve its enhancement is **10.4%**, close to the public pattern for UK prime master trusts (about 10%). On the pool's own loss distribution, the chance that Class A takes any loss is about 1.6bp, against about 16bp allowed for AAA.
 
-The ranking also says which real data to chase first: the operational review, then real reversion behaviour.
+A joint check moves all five estimates together, each by 1/√5 of its shock (the same overall size as one full shock); the cushioned structure passes. Every estimate at full size at once is a reverse stress, reported but never required: Class A would then need 12.9%.
 
-**Joint check.** The cushion assumes the estimates are independent, so the model tests that too. It moves all five together, each by 1/√5 of its shock, which is the same overall size as one full shock in root-sum-square terms. If the cushioned structure loses there, the estimates compound more than the cushion assumes.
+### Challenging the result
 
-**Reverse stress.** Every estimate at its full adverse value at once is far more remote than the AAA stress the structure is sized to. It is reported, never required. It shows how fragile the deal is at the extreme: expected PD doubles, defaults reach about half the pool, and Class A's interest at the stressed Bank Rate is paid out of its own principal for years.
+The sizing is PD-based: each class must take no loss in its rating's deterministic stresses. Several challengers report beside it.
+
+- **Break-even.** On its worst scenario, Class A first loses when defaults reach 27.2% of the pool (1.29× the AAA rate), or the market value decline reaches 41.2% (1.33×).
+- **An EL-based view** sizes each class to a target expected loss instead. It would give Class A only 2.5%, because a thick senior class loses so little when it loses at all. Here the EL view is far less conservative, so it is reported, not used.
+- **Monte Carlo.** Correlated paths run through the waterfall, with defaults and house prices driven by one systematic draw, and importance sampling pushes the paths into the AAA tail. Class A never loses, even at 6.3 standard deviations. That is not comfort: it says the behavioural default model is a placeholder far milder than the AAA stress, and the challenger cannot bite until it is calibrated to real performance.
+- **Swap termination.** If the swap ended at month 12 and the issuer stayed unhedged through the rates-up scenarios, Class A would need 10.2%, more than it has. Counterparty rules (collateral or replacement on a downgrade) normally remove that risk; the report makes it visible.
+
+### Prepayment
+
+UK borrowers rarely repay inside their fixed rate, because early repayment charges apply, and then most remortgage within a few months of it ending. The model prepays loan by loan on that pattern: low while the charge applies, a spike after the fix ends, then a rate driven by each loan's age and its incentive against today's mortgage rates. The sample pool prepays at about 15% in year 1, 22% in year 2 and 35% as the five-year fixes end.
+
+| Prepayment | Class A WAL (to call / maturity) | Class Z yield |
+|---|---|---|
+| Slow (half speed) | 3.3 / 4.9 years | 8.0% |
+| Base | 2.7 / 3.0 years | 6.5% |
+| Fast (×1.75) | 2.3 / 2.3 years | 5.6% |
+
+Slow prepayment extends the senior notes; fast prepayment runs the excess spread off and costs Class Z. Without the call, Class A is repaid by month 130 instead of 61.
 
 ### Is it worth issuing?
 
-The swap is struck at the market rate on the issue date. The loans' fixed rates, though, were locked when they went into the warehouse. If Bank Rate rises in between, the swap and the notes cost more while the loans pay the same. The sample deal earns 89bp of excess spread after the swap and can absorb a **1.1pp** rise before it is uneconomic.
+The swap is struck at the market rate on the issue date. The loans' fixed rates, though, were locked when they went into the warehouse. If Bank Rate rises in between, the swap and the notes cost more while the loans pay the same. The sample deal earns 90bp of excess spread after the swap and can absorb a **1.1pp** rise before it is uneconomic. If a 1pp rise did happen before issue, the deal re-sized on the new rates would need Class A at 8.6%, still inside the 8.9% it has.
 
-A bigger move is an **issuance failure**: the deal is not issued at those terms. The model does not force a fix. It stops and flags it for manual assessment: reprice, hold the loans in the warehouse, or re-select the pool. This is a real path under a very adverse market shift.
+A bigger move is an **issuance failure**: the deal is not issued at those terms. The model does not force a fix. It stops and flags it for manual assessment: reprice, hold the loans in the warehouse, or re-select the pool.
+
+On a prime pool, the first-loss note is retained by the issuer. Selling it at a market yield (12% here) does not work: Class Z is paid only from excess spread, and even at a 1,200bp margin it yields 6.7%.
 
 ---
 
