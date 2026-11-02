@@ -1,13 +1,13 @@
 ---
 title: "Securitisation 101 — Part 1: What It Is, and Why the Data Comes First"
 date: 2026-05-17T07:13:28Z
-lastmod: 2026-10-23
+lastmod: 2026-11-01
 draft: false
 categories: ["comp-science"]
 tags: [securitisation, tranching, RMBS, mortgages, finance]
 series: ["Securitisation 101"]
 description: "What securitisation is, how a UK RMBS is generated end to end from a warehouse of loans, and a worked sample deal."
-summary: "Part 1 of 4: securitisation in plain terms, the cradle-to-grave process, and a worked sample deal from the current model."
+summary: "Part 1 of 6: securitisation in plain terms, the cradle-to-grave process, and a worked sample deal from the current model."
 ShowToc: false
 disableAnchoredHeadings: true
 cover:
@@ -23,7 +23,7 @@ This is about the dark art of securitisation (securitization?!): what it is, the
 
 A few notes before we proceed:
 - It is based on real processes and actual credit concepts, done at scale.
-- The data set is made up, of course, but the loans are realistic: a synthetic pool built to look like a UK prime new issue.
+- The data set is made up, of course, but the loans are realistic: a synthetic warehouse of UK prime mortgages, from which the model selects the pool.
 - The loan data follows the Bank of England loan-level template, and the model produces a BoE-compliant data tape.
 - The code generates the pool, projects every loan month by month, runs the cash through the waterfall, stress-tests it at each rating level and sizes the notes. It then produces the reporting.
 - Everything runs from stand-alone bash and Python scripts from the command line, with no IDE needed.
@@ -61,11 +61,11 @@ A mortgage is just that, a mortgage from a bank or building society. You can't r
 A rating agency reviews a securitisation **after** it has been tranched. This model works the other way round. It **creates** the deal from the warehouse, with the rating tests built in, so the finished deal should pass review without change:
 
 1. **Ingest and curate** loan and borrower data into the BoE template, with data-quality checks. The scope is the data: mortgage documents themselves and the systems that hold them are out, but the data in them (valuations, incomes, terms) is essential.
-2. **Ingest market data**: Bank Rate, mortgage rates, note margins, swap rates, house prices and costs. Every critical number sits in its own data set with its source, as-of date and owner, so any figure can be audited back to where it came from.
+2. **Ingest market data**: Bank Rate, the Bank of England's OIS (SONIA) curve, note margins and deal terms from public UK prime issues, house prices and costs. Every critical number sits in its own dated data set with its source and owner, so any figure can be audited back to where it came from. A build is priced **as of its issue date** (the pool cut-off plus the usual time to close), and every data set is taken as it stood that day.
 3. **Select and price the pool** from the warehouse.
-4. **Create the securitisation**: notes, swap, reserve and day-1 costs, with sources equal to uses.
+4. **Create the securitisation**: notes, a swap sized to the fixed-rate exposure, the reserve and day-1 costs, with sources equal to uses.
 5. **Freeze the static set**: the cut-off pool and its loan scores, fixed while the stresses run.
-6. **Stress and tranche**: run every rating-level stress through the monthly waterfall, size each class, and add a sensitivity cushion. Which tests run is set by a master test list per jurisdiction, so tests can be switched in, out or trialled, and every result records which ones produced it.
+6. **Stress and tranche**: run every rating-level stress through the monthly waterfall, size each class, and add a sensitivity cushion. Then check the deal's terms against public deals issued by the same date. Which tests run is set by a master test list per jurisdiction, so tests can be switched in, out or trialled, and every result records which ones produced it.
 7. **Issue the outputs**: BoE tape, investor report, pitch deck and a draft prospectus skeleton.
 8. **Report through the life of the deal**, to final redemption: one pack per payment date from the servicer's performance file.
 
@@ -79,16 +79,17 @@ The current sample deal from the model:
 
 | Item | Value |
 |---|---|
-| Pool | 9,951 UK mortgages, £1,449m (average £145,600) |
-| Credit profile | Prime proxy: 90% of balance still in an introductory fix, 2% with past adverse credit, 14% buy-to-let |
-| WA original LTV / interest rate | 72.7% / 5.24% |
-| Notes | Class A Notes, AAA(sf), £1,350m (Bank Rate + 70bp); Class Z Notes, unrated first loss, £129m, retained |
-| Class A credit enhancement | 8.9% subordination + 1.5% reserve = 10.4%, 1.45x its AAA stressed loss |
-| Excess spread after the swap | 90bp a year |
+| Pool | 5,366 UK owner-occupied mortgages, £999.8m (average £186,300), selected from a 50,000-loan warehouse |
+| Credit profile | Prime proxy: 91% of balance still in a fixed-rate period, 0.1% with past adverse credit, seasoned 31 months on average |
+| WA original LTV / interest rate | 75.2% / 4.82% |
+| Dates | Cut-off 30 April 2025; priced as of the issue date, 19 July 2025 |
+| Notes | Class A Notes, AAA(sf), £923.2m (Bank Rate + 50bp, the median margin over SONIA on public prime Class A notes then); Class Z Notes, unrated first loss, £97.0m, retained, index flat |
+| Class A credit enhancement | 9.7% subordination + 1.5% reserve = 11.2%, 1.70x its AAA stressed loss |
+| Excess spread after the swap | 83bp a year |
 
 ![RMBS Legal Structure](/images/comp-science/rmbs_legal_structure.png)
 
-Day-1 [sources and uses](/html/sources_and_uses.html) reconcile to the penny: the cash raised from the notes buys the pool, funds the reserve and pays the costs. Part 2 walks through the parties and the waterfall.
+Day-1 [sources and uses](/html/sources_and_uses.html) reconcile to the penny: the cash raised from the notes buys the pool, funds the reserve and pays the costs. Part 2 walks through the parties and the waterfall, and Part 5 takes the credit enhancement apart.
 
 ---
 
@@ -101,3 +102,5 @@ Day-1 [sources and uses](/html/sources_and_uses.html) reconcile to the penny: th
 2. [Part 2: The Parties and the Waterfall](/blog/comp-science/securitisation-101-part-2/)
 3. [Part 3: Building the Deal](/blog/comp-science/securitisation-101-part-3/)
 4. [Part 4: Outputs, Assumptions and Limits](/blog/comp-science/securitisation-101-part-4/)
+5. [Part 5: Credit Enhancement, Mechanism and Design](/blog/comp-science/securitisation-101-part-5/)
+6. [Part 6: The Bank of England Data Tape](/blog/comp-science/securitisation-101-part-6/)

@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1180" width="960" height="1180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title>Credit enhancement calculation engine</title>
+  <desc>Process: inputs as of the issue date feed a frozen static set; a credit model per rating gives stressed defaults and severity; sixteen scenarios per rating run through the monthly cash-flow waterfall; each class attachment is found by bisection; a sensitivity cushion is added by re-solving each estimate; challengers and market checks report; the deal is issued or the pool is re-selected.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9ca3af"/>
+    </marker>
+    <style>
+      .bg { fill: #1d1e20; }
+      .input { fill: #1e2a38; stroke: #4a9eff; stroke-width: 1.2; }
+      .core { fill: #1f2d24; stroke: #4edc78; stroke-width: 1.3; }
+      .check { fill: #33291a; stroke: #f7b731; stroke-width: 1.2; }
+      .out { fill: #2a2140; stroke: #c084fc; stroke-width: 1.3; }
+      .t { fill: #f3f4f6; font-size: 15px; font-weight: 650; }
+      .s { fill: #d1d5db; font-size: 12.5px; }
+      .n { fill: #9ca3af; font-size: 11.5px; font-style: italic; }
+      .step { fill: #111111; font-size: 12px; font-weight: 700; }
+      .line { stroke: #9ca3af; stroke-width: 1.6; fill: none; }
+      .loop { stroke: #f59e0b; stroke-width: 1.6; fill: none; stroke-dasharray: 6 4; }
+      .lbl { fill: #f59e0b; font-size: 12px; font-weight: 600; }
+      .h { fill: #ffffff; font-size: 20px; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="960" height="1180" rx="14"/>
+  <text class="h" x="40" y="44">Credit enhancement calculation engine</text>
+  <text class="n" x="40" y="66">Sample deal figures in brackets (warehouse deal, issue date 19 Jul 2025). Generic model built on public concepts; not an agency model.</text>
+
+  <!-- 1 Inputs -->
+  <g>
+    <rect class="input" x="40" y="88" width="270" height="118" rx="10"/>
+    <text class="t" x="56" y="112">Market data as of issue date</text>
+    <text class="s" x="56" y="134">OIS curve, Bank Rate, note margins,</text>
+    <text class="s" x="56" y="152">deal terms of public prime issues</text>
+    <text class="n" x="56" y="176">each a dated data set; versions in</text>
+    <text class="n" x="56" y="192">force on the date are used</text>
+
+    <rect class="input" x="345" y="88" width="270" height="118" rx="10"/>
+    <text class="t" x="361" y="112">Static set (frozen pool)</text>
+    <text class="s" x="361" y="134">cut-off balances, loan scores and</text>
+    <text class="s" x="361" y="152">segments, PD and LGD inputs</text>
+    <text class="n" x="361" y="176">(5,366 loans, £999.8m; selected</text>
+    <text class="n" x="361" y="192">from a 50,000-loan warehouse)</text>
+
+    <rect class="input" x="650" y="88" width="270" height="118" rx="10"/>
+    <text class="t" x="666" y="112">Parameters</text>
+    <text class="s" x="666" y="134">published: house-price falls, sale</text>
+    <text class="s" x="666" y="152">discounts, costs, correlation</text>
+    <text class="s" x="666" y="170">estimates: originator score, payment</text>
+    <text class="s" x="666" y="188">shock, score calibration, rate stress size</text>
+  </g>
+
+  <path class="line" d="M175 206 V236 H785 V206"/>
+    <path class="line" d="M480 206 V252" marker-end="url(#arrow)"/>
+
+  <!-- 2 Credit model -->
+  <rect class="core" x="140" y="256" width="680" height="104" rx="10"/>
+  <circle cx="166" cy="282" r="13" fill="#4edc78"/><text class="step" x="161.5" y="286.5">1</text>
+  <text class="t" x="188" y="287">Credit model, per rating level</text>
+  <text class="s" x="188" y="309">loan score → pool PD → rating default rate (Vasicek, at the PD a rating allows)</text>
+  <text class="s" x="188" y="327">× loan severity (market value decline, forced-sale discount, costs, floors)</text>
+  <text class="n" x="188" y="348">= credit coverage, the loss each rating must survive (AAA: 19.3% defaults × 34.1% severity = 6.6% of pool)</text>
+
+  <path class="line" d="M480 360 V392" marker-end="url(#arrow)"/>
+
+  <!-- 3 Scenarios -->
+  <rect class="core" x="140" y="396" width="680" height="86" rx="10"/>
+  <circle cx="166" cy="422" r="13" fill="#4edc78"/><text class="step" x="161.5" y="426.5">2</text>
+  <text class="t" x="188" y="427">Scenario grid, per rating: 16 deterministic paths</text>
+  <text class="s" x="188" y="449">defaults front- or back-loaded × prepayment 0 / 5 / 10 / 20% × Bank Rate up or down</text>
+  <text class="n" x="188" y="470">fixed loan rates never reprice; the stressed Bank Rate path moves SVR loans, the swap and the notes</text>
+
+  <path class="line" d="M480 482 V514" marker-end="url(#arrow)"/>
+
+  <!-- 4 Cash flow engine -->
+  <rect class="core" x="140" y="518" width="680" height="128" rx="10"/>
+  <circle cx="166" cy="544" r="13" fill="#4edc78"/><text class="step" x="161.5" y="548.5">3</text>
+  <text class="t" x="188" y="549">Monthly loan-level waterfall, for a candidate stack</text>
+  <text class="s" x="188" y="571">revenue: net swap, fees, class interest, PDL cures, reserve top-up, Class Z</text>
+  <text class="s" x="188" y="589">principal: sequential, A first; principal covers revenue shortfalls via the PDL</text>
+  <text class="s" x="188" y="607">enhancement used in order: excess spread, reserve (amortises), subordination</text>
+  <text class="n" x="188" y="630">sources = uses every month and over life; swap on its issue-date schedule (no break payments)</text>
+
+  <path class="line" d="M480 646 V678" marker-end="url(#arrow)"/>
+
+  <!-- 5 Bisection -->
+  <rect class="core" x="140" y="682" width="680" height="86" rx="10"/>
+  <circle cx="166" cy="708" r="13" fill="#4edc78"/><text class="step" x="161.5" y="712.5">4</text>
+  <text class="t" x="188" y="713">Size each class by bisection</text>
+  <text class="s" x="188" y="735">lowest attachment with no loss in any of its rating's 16 scenarios</text>
+  <text class="n" x="188" y="756">floor: Class Z funds the reserve and day-1 costs (Class A stress-test attachment 7.0%)</text>
+
+  <!-- loop back from waterfall to bisection: candidate stacks -->
+  <path class="line" d="M820 725 H862 V582 H826" marker-end="url(#arrow)"/>
+  <text class="n" x="868" y="650" transform="rotate(90 868 650)">next candidate</text>
+
+  <path class="line" d="M480 768 V800" marker-end="url(#arrow)"/>
+
+  <!-- 6 Cushion -->
+  <rect class="core" x="140" y="804" width="680" height="86" rx="10"/>
+  <circle cx="166" cy="830" r="13" fill="#4edc78"/><text class="step" x="161.5" y="834.5">5</text>
+  <text class="t" x="188" y="835">Sensitivity cushion on the estimates only</text>
+  <text class="s" x="188" y="857">each estimate to its adverse value, attachment re-solved; root-sum-square of the rises</text>
+  <text class="n" x="188" y="878">(+2.66pp, so Class A attaches at 9.7%; with the 1.5% reserve, 11.2% enhancement)</text>
+
+  <path class="line" d="M480 890 V922" marker-end="url(#arrow)"/>
+
+  <!-- 7 Checks -->
+  <rect class="check" x="40" y="926" width="430" height="138" rx="10"/>
+  <circle cx="66" cy="952" r="13" fill="#f7b731"/><text class="step" x="61.5" y="956.5">6</text>
+  <text class="t" x="88" y="957">Challengers (report, never loosen)</text>
+  <text class="s" x="56" y="980">joint adverse check (must pass); reverse stress</text>
+  <text class="s" x="56" y="998">break-even defaults and value decline</text>
+  <text class="s" x="56" y="1016">EL-based view; Monte Carlo (off by default)</text>
+  <text class="s" x="56" y="1034">swap ends at month 12; rate move before issue</text>
+  <text class="n" x="56" y="1054">implied tranche PD vs the rating's target</text>
+
+  <rect class="check" x="490" y="926" width="430" height="138" rx="10"/>
+  <circle cx="516" cy="952" r="13" fill="#f7b731"/><text class="step" x="511.5" y="956.5">7</text>
+  <text class="t" x="538" y="957">Issue tests and market terms</text>
+  <text class="s" x="506" y="980">excess spread after the swap above the minimum</text>
+  <text class="s" x="506" y="998">tolerance to a rate move before issue</text>
+  <text class="s" x="506" y="1016">terms against public deals issued by the date:</text>
+  <text class="s" x="506" y="1034">step-up, call, reserve, Class A share, enhancement</text>
+  <text class="n" x="506" y="1054">outside the range = flagged for review, not failed</text>
+
+  <path class="line" d="M255 1064 V1094 H480" />
+  <path class="line" d="M705 1064 V1094 H480" />
+  <path class="line" d="M480 1094 V1110" marker-end="url(#arrow)"/>
+
+  <!-- 8 Outcome -->
+  <rect class="out" x="300" y="1114" width="360" height="48" rx="10"/>
+  <text class="t" x="480" y="1144" text-anchor="middle">Viable: issue  ·  not viable: re-select the pool</text>
+
+  <!-- re-select loop -->
+  <path class="loop" d="M300 1138 H24 V78 H480 V86" marker-end="url(#arrow)"/>
+  <text class="lbl" x="15" y="640" text-anchor="middle" transform="rotate(-90 15 640)">not viable: re-select the pool and repeat</text>
+</svg>

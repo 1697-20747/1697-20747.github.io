@@ -1,14 +1,14 @@
 ---
 title: "Securitisation 101 — Part 4: Outputs, Assumptions and Limits"
 date: 2026-05-20T07:28:00Z
-lastmod: 2026-10-23
+lastmod: 2026-11-01
 draft: false
 categories: ["comp-science"]
 tags: ["RMBS", "securitisation", "reporting", "python", "data"]
 series: ["Securitisation 101"]
 aliases: ["/blog/comp-science/securitisation-pool-optomiser-part-2/"]
 description: "What the model produces (BoE tape, investor report, pitch deck, draft prospectus), what is still a placeholder, and the limits of a public-data build."
-summary: "Part 4 of 4: the outputs generated on command for the sample deal, the assumptions that matter most, and what needs real data."
+summary: "Part 4 of 6: the outputs generated on command for the sample deal, the assumptions that matter most, and what needs real data."
 ShowToc: true
 TocOpen: false
 ---
@@ -20,7 +20,7 @@ Once the deal is built, each output is generated on its own with `./generate_out
 
 | Command | Output | Sample deal |
 |---|---|---|
-| `tape` | BoE loan-level data tape (CSV, TXT or single-sheet XLSX) and cover sheet. Header = BoE field codes only; validated before it is written | 9,951 loans × the template fields |
+| `tape` | BoE loan-level data tape (CSV, TXT or single-sheet XLSX) and cover sheet. Validated before it is written, then read back and tested against every rule ([Part 6](/blog/comp-science/securitisation-101-part-6/)) | 5,366 loans × 233 fields; 27 rules pass |
 | `investor` | Investor report: one dynamic page with asset-level detail | [open](/html/rmbs-investor-report.html) |
 | `deck` | Investor pitch deck (HTML slides; arrow keys, P to print) | [open](/html/rmbs-investor-deck.html) |
 | `sources` | Day-1 sources and uses | [open](/html/sources_and_uses.html) |
@@ -37,7 +37,7 @@ The investor report covers:
 - the life-of-deal cash reconciliation;
 - stratification charts;
 - a loan map;
-- a sortable, searchable table of all 9,951 loans.
+- a sortable, searchable table of all 5,366 loans.
 
 Every output carries a run footer: the run id, code version, a hash of the configuration and of the data, the seed, the pool fingerprint and the test run, so any figure can be traced back to the build that made it.
 
@@ -52,7 +52,7 @@ Each month the servicer's performance file (defaults, prepayments, losses, inter
 - an HTML report with note factors, arrears at 30, 60 and 90+ days, the priority of payments, the reserve and the triggers;
 - a refreshed BoE tape with its cover sheet, a data-quality report and the changes since last month.
 
-There is no real servicer data here, so the sample uses a synthetic file and says so on every page. After 12 months the pool is £1,173m, Class A has paid down to 79% of its face, and every month reconciles.
+There is no real servicer data here, so the sample uses a synthetic file and says so on every page. After 12 payment dates the pool is £720.1m, Class A has paid down to 69% of its face, and every month reconciles. Each month's refreshed tape goes through the same post-generation tests as the deal tape.
 
 ### A console to drive it
 
@@ -70,7 +70,7 @@ It runs on the user's own machine only, behind a login, with every action writte
 
 ## Assumptions are placeholders
 
-Every behavioural, market and structural assumption is a placeholder: plausible, public-average, and documented in an assumptions register with the real input that should replace it. The sensitivity tornado from Part 3 says which matter most for the senior notes:
+Every assumption is identified: it lives in a config file or a data set, with its source and the real input that should replace it, so it can be updated as markets and rules change. Many are still placeholders. The sensitivity tornado says which matter most for the senior notes:
 
 1. the originator score (an operational review input);
 2. the payment shock when a fixed rate ends;
@@ -80,7 +80,14 @@ All three are estimates no methodology publishes, and they make up most of the s
 
 Every critical number sits in its own data set, grouped as market data, calibrations, published methodology parameters or the model's own estimates. Each set carries its source, as-of date, status and owner. A data register lists them with a fingerprint of each, the build records which ones it used, and a check fails the build if anything is unreferenced or undocumented. Where no as-of date was ever recorded, the register says so rather than guessing.
 
-**Calibrated to public data:** BoE Bank Rate, HM Land Registry house prices (including the range of regional falls, from -15% to -27%, behind the house-price shock), and BoE mortgage lending statistics (MLAR) for LTV, loan-to-income and purpose mix. Public-average note margins and costs are used too. Comparable deals are used only as unnamed ranges: no transaction, rating agency or lender is named.
+**Sourced from public data:**
+- Bank of England: Bank Rate (every change since 1975), the OIS (SONIA) curve month by month since 2016, the SONIA–Bank Rate basis, and the rate model fitted to ten years of that curve;
+- HM Land Registry house prices, including the range of regional falls (−15% to −27%) behind the house-price shock;
+- BoE / FCA mortgage lending statistics (MLAR) for LTV, loan-to-income and purpose mix;
+- public UK prime prospectuses, for Class A margins, the time from cut-off to closing, step-ups, calls, reserve sizing and the first-loss note's terms;
+- the Bank's loan-level template, for every field and every tape rule.
+
+Each sourced set is dated, so a build for a given issue date uses the version in force then. Comparable deals are used only as unnamed ranges: no transaction, rating agency or lender is named.
 
 ---
 
@@ -88,12 +95,13 @@ Every critical number sits in its own data set, grouped as market data, calibrat
 
 - **Synthetic pool.** The loans are realistic but made up. A real warehouse tape replaces them.
 - **Not an agency model.** The generic credit model uses public rating concepts; slots for actual agency approaches are left blank for benchmarking later.
-- **Not modelled:** a CCC-rated class (no public parameters for it), two agencies' ratings side by side (one calculated model, by design) and multiple master-trust series. The legal prospectus stays with counsel.
+- **Not modelled:** a CCC-rated class (no public parameters for it), two agencies' ratings side by side (one calculated model, by design), multiple master-trust series, quarterly payment dates (the engine is monthly) and swap termination payments for mark-to-market (excluded from the stresses). The legal prospectus stays with counsel.
+- **Currency.** The design allows other currencies, but the model works only in GBP for now, and refuses a pool that is not.
 - **The synthetic servicer file and tape refresh.** Monthly reporting works end to end, but on made-up performance; a real servicer's loan-level file replaces it.
 - **The behavioural model is benign.** The Monte Carlo challenger cannot bite until defaults, prepayments and recoveries are calibrated to real history.
 - **Do not use in production.** See Part 1: the last 10% needs real data, judgement and an independent review.
 
-What needs real data now, in order: an operational review of the originator (the originator score), a performance history to calibrate defaults, prepayments and recoveries, the Bank of England's SONIA curve and market note spreads on the issue date, and real deals to validate against.
+What needs real data now, in order: an operational review of the originator (the originator score), a performance history to calibrate defaults, prepayments and recoveries, a published agency approach to replicate, and real deals to validate against.
 
 ---
 
@@ -111,10 +119,12 @@ What needs real data now, in order: an operational review of the originator (the
 
 ### Securitisation 101 series
 
-**Previous:** [Part 3: Building the Deal](/blog/comp-science/securitisation-101-part-3/)
+**Previous:** [Part 3: Building the Deal](/blog/comp-science/securitisation-101-part-3/) · **Next:** [Part 5: Credit Enhancement, Mechanism and Design](/blog/comp-science/securitisation-101-part-5/)
 
 **Full series**
 1. [Part 1: What It Is, and Why the Data Comes First](/blog/comp-science/securitisation-101/)
 2. [Part 2: The Parties and the Waterfall](/blog/comp-science/securitisation-101-part-2/)
 3. [Part 3: Building the Deal](/blog/comp-science/securitisation-101-part-3/)
 4. Part 4: Outputs, Assumptions and Limits (this post)
+5. [Part 5: Credit Enhancement, Mechanism and Design](/blog/comp-science/securitisation-101-part-5/)
+6. [Part 6: The Bank of England Data Tape](/blog/comp-science/securitisation-101-part-6/)

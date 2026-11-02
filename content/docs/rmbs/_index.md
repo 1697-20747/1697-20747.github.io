@@ -23,5 +23,7 @@ Reference pages for the UK RMBS model described in the **Securitisation 101** se
 2. [Part 2: The Parties and the Waterfall](/blog/comp-science/securitisation-101-part-2/)
 3. [Part 3: Building the Deal](/blog/comp-science/securitisation-101-part-3/)
 4. [Part 4: Outputs, Assumptions and Limits](/blog/comp-science/securitisation-101-part-4/)
+5. [Part 5: Credit Enhancement, Mechanism and Design](/blog/comp-science/securitisation-101-part-5/)
+6. [Part 6: The Bank of England Data Tape](/blog/comp-science/securitisation-101-part-6/)
 
 The earlier API, dashboard, map and reporting-guide pages described tools that the model has since replaced. Their content now lives in the two pages above.
