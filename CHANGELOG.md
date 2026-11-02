@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-02 (Securitisation 101: update, Parts 5 and 6)
+- Updated Parts 1-4, `content/docs/rmbs/*` to the current RMBS build (issue-date pricing, sourced market data, swap sized to the hedged exposure, amortising reserve, Class Z index flat, market-terms check, pool modes, currency integrity; sample deal Class A 9.7%).
+- New: `securitisation-101-part-5.md` (credit enhancement mechanism and design), `securitisation-101-part-6.md` (BoE loan-level data tape and testing regime); diagrams `static/images/comp-science/ce_engine_process.svg`, `boe_tape_process.svg` (dark).
+- Sample outputs in `static/html/` regenerated.
+
 ## 2026-10-03 (Economics: Twenty Letters)
 - New (draft): `content/blog/economics/twenty-letters.md` — UK CPI Dec 2019→Aug 2026 vs 2% target (+32.4%, 4.29%/yr compound vs 2%; price level 16.0% above 2% path; 26/80 months inside 1–3%); reconciliation with BoE inflation calculator (£1,330.14 / 33.0% / 3.83% — 2019 annual-avg base, ~7.7yr annualisation); table + phase summary of all 20 Governor→Chancellor CPI open letters (Jun 2020–Sep 2026); critique (exogenous-cause framing, forecast-miss table, asymmetry, accountability, counter-arguments); M4 vs CPI 2000–2026 section; Sept 2026 MPC 6–3 split (hold 3.75%: Bailey, Breeden, Dhingra, Lombardelli, Ramsden, Taylor; hike to 4%: Greene, Mann, Pill) + unanimous QT-to-zero-by-2034 decision.
 - New: `static/data/economics/uk_cpi_m4_monthly_1999-2026.csv` (ONS D7BT, D7G7; BoE IADB LPMAUYN, LPMVQJW; fetched 2026-10-03), `static/data/economics/inflation_since_2019_charts.py`.
