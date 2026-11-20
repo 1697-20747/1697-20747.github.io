@@ -1,675 +1,93 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="dark">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>One Ring to Rule them All.... | [1697, 20747]</title>
-<meta name="keywords" content="">
-<meta name="description" content="Mapping CRR exposures against legal entity hierarchy from legacy systems. A dynamic overlay approach to maintain full data integrity">
-<meta name="author" content="Your Name">
-<link rel="canonical" href="http://localhost:1313/blog/credit-risk/one-ring-to-rule-them-all/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.f273a0a148ced2c91d9a82b403256857857989e003078cc5f50355c29d83f569.css" integrity="sha256-8nOgoUjO0skdmoK0AyVoV4V5ieADB4zF9QNVwp2D9Wk=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/images/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/credit-risk/one-ring-to-rule-them-all/">
-<noscript>
-    <style>
+<!doctype html><html lang=en dir=auto data-theme=dark><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>One Ring to Rule them All.... | [1697, 20747]</title><meta name=keywords content><meta name=description content="Mapping CRR exposures against legal entity hierarchy from legacy systems. A dynamic overlay approach to maintain full data integrity"><meta name=author content="Your Name"><link rel=canonical href=https://1697-20747.github.io/blog/credit-risk/one-ring-to-rule-them-all/><link crossorigin=anonymous href=/assets/css/stylesheet.f273a0a148ced2c91d9a82b403256857857989e003078cc5f50355c29d83f569.css integrity="sha256-8nOgoUjO0skdmoK0AyVoV4V5ieADB4zF9QNVwp2D9Wk=" rel="preload stylesheet" as=style><link rel=icon href=https://1697-20747.github.io/images/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://1697-20747.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://1697-20747.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://1697-20747.github.io/apple-touch-icon.png><link rel=mask-icon href=https://1697-20747.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://1697-20747.github.io/blog/credit-risk/one-ring-to-rule-them-all/><noscript><style>
         #theme-toggle,
         .top-link {
             display: none;
         }
 
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "light") {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script>
-</head>
-<body id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-    <a href="http://localhost:1313/">
-        <img src="/images/avatar.png" width="32" height="32" 
-             style="border-radius:50%;margin-right:8px;vertical-align:middle">
-    </a>
-            <a href="http://localhost:1313/" accesskey="h" title="[1697, 20747] (Alt + H)">[1697, 20747]</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="http://localhost:1313/blog/economics/" title="Economics">
-                    <span>Economics</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/data-analytics/" title="Data Analytics">
-                    <span>Data Analytics</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/comp-science/" title="Comp Science">
-                    <span>Comp Science</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/credit-risk/" title="Credit Risk">
-                    <span>Credit Risk</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/other/" title="Other">
-                    <span>Other</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/philosophy/" title="Philosophy">
-                    <span>Philosophy</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/bjj/" title="BJJ">
-                    <span>BJJ</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/unhelpful-advice/" title="Unhelpful Advice">
-                    <span>Unhelpful Advice</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/books/" title="Books">
-                    <span>Books</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
-                    <span>Search</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/about/" title="About">
-                    <span>About</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/blog/">Blog</a>&nbsp;»&nbsp;<a href="http://localhost:1313/blog/credit-risk/">Credit Risk</a></div>
-    <h1 class="post-title entry-hint-parent">
-      One Ring to Rule them All....
-    </h1>
-    <div class="post-description">
-      Mapping CRR exposures against legal entity hierarchy from legacy systems. A dynamic overlay approach to maintain full data integrity
-    </div>
-    <div class="post-meta">
-<div class="post-meta"><span title='2026-03-21 22:07:39 +0000 UTC'>March 21, 2026</span>&nbsp;·&nbsp;29 min</div>
-
-
-</div>
-  </header> <div class="toc">
-    <details >
-        <summary accesskey="c" title="(Alt + C)">
-            <span class="details">Table of Contents</span>
-        </summary>
-
-        <div class="inner"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#the-problem">The Problem</a>
-      <ul>
-        <li><a href="#assumptions">Assumptions</a></li>
-        <li><a href="#the-wrong-way">The Wrong Way</a></li>
-        <li><a href="#the-right-way">The Right Way</a></li>
-        <li><a href="#one-ring-to-rule-them-all">One Ring to Rule them All</a></li>
-      </ul>
-    </li>
-    <li><a href="#the-problem-statement-restated">The Problem Statement Restated</a></li>
-    <li><a href="#the-right-problem-statement">The Right Problem Statement</a></li>
-    <li><a href="#the-doing">The doing</a></li>
-    <li><a href="#the-solution">The solution</a></li>
-    <li><a href="#regulatory-treatment--100-loan-matrix-5-entities">Regulatory Treatment — £100 Loan Matrix (5 Entities)</a>
-      <ul>
-        <li><a href="#nrfb_cross--both-parties-outside-bank-sub-group-2-records">NRFB_CROSS — both parties outside Bank sub-group (2 records)</a></li>
-        <li><a href="#nrfb_x--creditor-outside-bank-sub-group--debtor-inside-6-records">NRFB_X — creditor outside Bank sub-group → debtor inside (6 records)</a></li>
-        <li><a href="#rfb_x--creditor-inside-bank-sub-group--debtor-outside-6-records">RFB_X — creditor inside Bank sub-group → debtor outside (6 records)</a></li>
-        <li><a href="#rfb_internal--both-inside-bank-sub-group-cross-l2-boundary-6-records">RFB_INTERNAL — both inside Bank sub-group, cross L2 boundary (6 records)</a></li>
-        <li><a href="#how-the-widget-works">How the Widget Works</a></li>
-      </ul>
-    </li>
-    <li><a href="#said-widget">Said widget</a></li>
-    <li><a href="#static-networks">Static Networks</a></li>
-    <li><a href="#closing-comments">Closing comments</a></li>
-    <li><a href="#references">References</a></li>
-    <li><a href="#appendix--ring-fencing-primer">Appendix — Ring Fencing Primer</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-    <li><a href="#data-files">Data Files</a></li>
-  </ul>
-</nav>
-        </div>
-    </details>
-</div>
-
-  <div class="post-content"><h2 id="the-problem">The Problem<a hidden class="anchor" aria-hidden="true" href="#the-problem">#</a></h2>
-<p>This is a combined overview of credit, entity relationships, object oriented data sciences, all aligned to regulatory objectives. All items included are made up and functional, with the broad structure reflecting actual real world problems. The relevant bits of code will be provided, but this is about understanding the problem, defining the problem statement (properly), and learning the wrong ways so you don’t make mistakes.</p>
-<h3 id="assumptions">Assumptions<a hidden class="anchor" aria-hidden="true" href="#assumptions">#</a></h3>
-<p>Available systems are probably limited in scope, are circa 1990’s, and are designed around single instances.
-This means we will need to resolve the trickier aspects outside of limited core systems.</p>
-<ul>
-<li>Assume corporate structure featuring level 0 through level 6.</li>
-<li>Each corporate thing is an entity. It must have a unique data identifier.</li>
-<li>Level 0 is the parent company.</li>
-<li>Level 1 is a subsidiary of level 0, and so on.</li>
-<li>A level 1 must have a data field or edge that joins it to the level 0.</li>
-<li>This is the same concept for a level 2 that is connected to a level 1</li>
-<li>Each entity needs a domicile attribute, being country.</li>
-<li>
-<ul>
-<li>Each entity needs an address.</li>
-</ul>
-</li>
-<li>Each entity needs a city, to be defined by the address.</li>
-</ul>
-<p>Now a primer on what is going on here, why its a genuine problem, and shock horror, some data science. If you know me, you will have heard this lecture a few times now, so apologies dear readers who have suffered this lecture previously. Read the book, refer book review for <strong>Alien Phenomenology What It Means to Be a Thing</strong> especially if you are new to networks, or the concept of object oriented programming and data. We are also going to cover the basis of statistics, and stratification. Bad luck if you don’t want to.</p>
-<h3 id="the-wrong-way">The Wrong Way<a hidden class="anchor" aria-hidden="true" href="#the-wrong-way">#</a></h3>
-<p>Back to the basics. Imagine you have two friends, Bob and Jane. Bob and Jane live somewhere. You are tasked with crating some kind of relational system, why is irrelevant for now. After some thought, you decide to assemble the relational system, which later we will correctly call a network. Without much effort, you construct your system of an entity for Bob, and Entity for Jane, and to cover off where they live an Address for Bob and Jane, and an entity for their house, bob_house and jane_house. From this you create your basic network and off you go. Now there is a presumption of scale here, our example of two is implied to reflect the reality of thousands. Scale matters as we will so, so get your design right.</p>
-<p>IRL shall mean In Real Life for the rest of this post, and the rest of the site. This means the realistic parts of life that cannot be assumed away. In general you will have oversimplified something, removing elements that are essential but inconveniently complex, and as a result your system is crap and stops working as intended.</p>
-<p>All is well, you are happy. Then sometime later, Bob goes and moves, and your data goes to crap. Because you didn’t do it properly. The entity bob_house no longer applies, as Bob has gone and moved. So you delete it and create a new one bob2_house. Now you lose chunks of your network, and downstream history and data for bob_house. Because you screwed up.</p>
-<h3 id="the-right-way">The Right Way<a hidden class="anchor" aria-hidden="true" href="#the-right-way">#</a></h3>
-<p>IRL there is one, and only one instance of you. Even if you are a biological identical twin, genes and environment will have forged you in to a genetically identical, but biologically tweaked version of you. So the sample size of ‘you’ defined by all possible attributes is n=1.</p>
-<p>So there is one of you.</p>
-<p>This leads to a couple of immediate questions. Who are you? As in how, in data are we going to adequately define you. Stated properly this is ‘how are you to be adequately defined using a combination of observable and deducible attributes?’. The presumption here is that you know the end use of your system. There is a lot of thinking required to get the problem statement correct here, as there will be inherent conflicts in all of these choices. For our purposes, a key requirement is going to be driven by KYC legislation, or Know Your Client. Over simplified, this means there can only be one instance of you, or as we move forward, the relevant legal entity.</p>
-<blockquote>
-<p>A lot of the jokes play on the obviously quite problematic idea in Roman times of knowing who you are. Another &ldquo;identity&rdquo; joke sees a man meet an acquaintance and say &ldquo;it&rsquo;s funny, I was told you were dead&rdquo;. He says &ldquo;well, you can see I&rsquo;m still alive.&rdquo; But the first man disputes this on the grounds that &ldquo;the man who told me you were dead is much more reliable than you”. — Classicist Mary Beard,  <em>Laughter in Ancient Rome: On Joking, Tickling, and Cracking Up (Sather Classical Lectures): 71</em></p>
-</blockquote>
-<p>Who knew the Roman’s were into data science?</p>
-<p>Now, if you have ever suffered the experience of dealing with any government department of immigration (and suffering is the precise word to use), you will have deep experience of understanding that it does not matter that you know who ‘you’ are, ALL that matters is what the system thinks ‘you’ are. This is why the joke above resonates so much in the modern world. The presumed ‘reliable’ source of information is the ‘system’. No government employee is empowered to use sanity, logic or reasonableness. If the ‘system’ version of you is wrong, you are screwed.</p>
-<h3 id="one-ring-to-rule-them-all">One Ring to Rule them All<a hidden class="anchor" aria-hidden="true" href="#one-ring-to-rule-them-all">#</a></h3>
-<p>Romans to Tolkien, quite the journey. Back to data science soon. Promise. This is concept of super ordinance at play, and how choosing your path to it is rather important. Seriously read the book.</p>
-<blockquote>
-<p>superordinate (or hypernym) is a general, umbrella term that encompasses the meanings of more specific words, known as hyponyms. It acts as a higher-level category in hierarchical relationships (e.g., &ldquo;bird&rdquo; is the superordinate of &ldquo;robin&rdquo; or “pigeon”). Thanks AI…..</p>
-</blockquote>
-<p>In statistics, when you have a multi dimensional population, stratification or classification models are a common approach to resolving the population into coherent sets for a particular purpose. If you have a population of say one thousand people, there are very many, but not infinite ways you can objectively classify them. Height, biological sex, pre and post puberty, colour, eye colour, etc, etc. There are potentially infinite ways to subjectively classify them. The strata or classes don’t really matter, what does matter is the that for each n in the population, it can belong in one and ONLY ONE classification. Lets go with a picture of flora, and we want to classify it into tree’s and bushes. For what ever reason. This requires you going down the rabbit hole and explicitly defining what is a tree, and what is a bush. Answer cannot be either or, not sure, or both. This usually requires you expanding your data fields until you get to an answer. One Ring to Rule them means a definitive classifier. Back to the problem, this means a superordinate way to classify for the purpose at hand. This means you might need more than one.</p>
-<p>There are two ways of doing this, subjective, deciding and adding a yes no attribute for whatever the strata is. Or much better, you can derive that attribute from the data. So the subject element is laying the logic rules for class-action X, and then running the data through a classifier, and adding the new data field to the data.
+    </style></noscript><script>localStorage.getItem("pref-theme")==="light"&&(document.querySelector("html").dataset.theme="light")</script><meta property="og:url" content="https://1697-20747.github.io/blog/credit-risk/one-ring-to-rule-them-all/"><meta property="og:site_name" content="[1697, 20747]"><meta property="og:title" content="One Ring to Rule them All...."><meta property="og:description" content="Mapping CRR exposures against legal entity hierarchy from legacy systems. A dynamic overlay approach to maintain full data integrity"><meta property="og:locale" content="en-gb"><meta property="og:type" content="article"><meta property="article:section" content="blog"><meta property="article:published_time" content="2026-03-21T22:07:39+00:00"><meta property="article:modified_time" content="2026-03-21T22:07:39+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="One Ring to Rule them All...."><meta name=twitter:description content="Mapping CRR exposures against legal entity hierarchy from legacy systems. A dynamic overlay approach to maintain full data integrity"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://1697-20747.github.io/blog/"},{"@type":"ListItem","position":2,"name":"Credit Risk","item":"https://1697-20747.github.io/blog/credit-risk/"},{"@type":"ListItem","position":3,"name":"One Ring to Rule them All....","item":"https://1697-20747.github.io/blog/credit-risk/one-ring-to-rule-them-all/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"One Ring to Rule them All....","name":"One Ring to Rule them All....","description":"Mapping CRR exposures against legal entity hierarchy from legacy systems. A dynamic overlay approach to maintain full data integrity","keywords":[],"articleBody":"The Problem This is a combined overview of credit, entity relationships, object oriented data sciences, all aligned to regulatory objectives. All items included are made up and functional, with the broad structure reflecting actual real world problems. The relevant bits of code will be provided, but this is about understanding the problem, defining the problem statement (properly), and learning the wrong ways so you don’t make mistakes.\nAssumptions Available systems are probably limited in scope, are circa 1990’s, and are designed around single instances. This means we will need to resolve the trickier aspects outside of limited core systems.\nAssume corporate structure featuring level 0 through level 6. Each corporate thing is an entity. It must have a unique data identifier. Level 0 is the parent company. Level 1 is a subsidiary of level 0, and so on. A level 1 must have a data field or edge that joins it to the level 0. This is the same concept for a level 2 that is connected to a level 1 Each entity needs a domicile attribute, being country. Each entity needs an address. Each entity needs a city, to be defined by the address. Now a primer on what is going on here, why its a genuine problem, and shock horror, some data science. If you know me, you will have heard this lecture a few times now, so apologies dear readers who have suffered this lecture previously. Read the book, refer book review for Alien Phenomenology What It Means to Be a Thing especially if you are new to networks, or the concept of object oriented programming and data. We are also going to cover the basis of statistics, and stratification. Bad luck if you don’t want to.\nThe Wrong Way Back to the basics. Imagine you have two friends, Bob and Jane. Bob and Jane live somewhere. You are tasked with creating some kind of relational system, why is irrelevant for now. After some thought, you decide to assemble the relational system, which later we will correctly call a network. Without much effort, you construct your system of an entity for Bob, and Entity for Jane, and to cover off where they live an Address for Bob and Jane, and an entity for their house, bob_house and jane_house. From this you create your basic network and off you go. Now there is a presumption of scale here, our example of two is implied to reflect the reality of thousands. Scale matters as we will so, so get your design right.\nIRL shall mean In Real Life for the rest of this post, and the rest of the site. This means the realistic parts of life that cannot be assumed away. In general you will have oversimplified something, removing elements that are essential but inconveniently complex, and as a result your system is crap and stops working as intended.\nAll is well, you are happy. Then sometime later, Bob goes and moves, and your data goes to crap. Because you didn’t do it properly. The entity bob_house no longer applies, as Bob has gone and moved. So you delete it and create a new one bob2_house. Now you lose chunks of your network, and downstream history and data for bob_house. Because you screwed up.\nThe Right Way IRL there is one, and only one instance of you. Even if you are a biological identical twin, genes and environment will have forged you into a genetically identical, but biologically tweaked version of you. So the sample size of ‘you’ defined by all possible attributes is n=1.\nSo there is one of you.\nThis leads to a couple of immediate questions. Who are you? As in how, in data are we going to adequately define you. Stated properly this is ‘how are you to be adequately defined using a combination of observable and deducible attributes?’. The presumption here is that you know the end use of your system. There is a lot of thinking required to get the problem statement correct here, as there will be inherent conflicts in all of these choices. For our purposes, a key requirement is going to be driven by KYC legislation, or Know Your Client. Over simplified, this means there can only be one instance of you, or as we move forward, the relevant legal entity.\nA lot of the jokes play on the obviously quite problematic idea in Roman times of knowing who you are. Another “identity” joke sees a man meet an acquaintance and say “it’s funny, I was told you were dead”. He says “well, you can see I’m still alive.” But the first man disputes this on the grounds that “the man who told me you were dead is much more reliable than you”. — Classicist Mary Beard, Laughter in Ancient Rome: On Joking, Tickling, and Cracking Up (Sather Classical Lectures): 71\nWho knew the Roman’s were into data science?\nNow, if you have ever suffered the experience of dealing with any government department of immigration (and suffering is the precise word to use), you will have deep experience of understanding that it does not matter that you know who ‘you’ are, ALL that matters is what the system thinks ‘you’ are. This is why the joke above resonates so much in the modern world. The presumed ‘reliable’ source of information is the ‘system’. No government employee is empowered to use sanity, logic or reasonableness. If the ‘system’ version of you is wrong, you are screwed.\nOne Ring to Rule them All Romans to Tolkien, quite the journey. Back to data science soon. Promise. This is concept of super ordinance at play, and how choosing your path to it is rather important. Seriously read the book.\nsuperordinate (or hypernym) is a general, umbrella term that encompasses the meanings of more specific words, known as hyponyms. It acts as a higher-level category in hierarchical relationships (e.g., “bird” is the superordinate of “robin” or “pigeon”). Thanks AI…..\nIn statistics, when you have a multi dimensional population, stratification or classification models are a common approach to resolving the population into coherent sets for a particular purpose. If you have a population of say one thousand people, there are very many, but not infinite ways you can objectively classify them. Height, biological sex, pre and post puberty, colour, eye colour, etc, etc. There are potentially infinite ways to subjectively classify them. The strata or classes don’t really matter, what does matter is the that for each n in the population, it can belong in one and ONLY ONE classification. Lets go with a picture of flora, and we want to classify it into tree’s and bushes. For what ever reason. This requires you going down the rabbit hole and explicitly defining what is a tree, and what is a bush. Answer cannot be either or, not sure, or both. This usually requires you expanding your data fields until you get to an answer. One Ring to Rule them means a definitive classifier. Back to the problem, this means a superordinate way to classify for the purpose at hand. This means you might need more than one.\nThere are two ways of doing this, subjective, deciding and adding a yes no attribute for whatever the strata is. Or much better, you can derive that attribute from the data. So the subject element is laying the logic rules for class-action X, and then running the data through a classifier, and adding the new data field to the data. If you study machine learning, you will be sick to death of this. And you will know a lot about pigeons and penguins. Go and do it. Source: https://huggingface.co/SIH/penguin-classifier-sklearn\nA Primer on Ring Fencing concepts is appended if you have not crossed paths with this. It’s sort of essential for this piece of work.\nSo, ‘you’ means just you. Great. How many instances of you are there in the world? Biologically, one. If you have a bank account, then there is one KYC for you in every bank you deal with. There is one of you for whatever memberships you have. Leases, property titles, streaming services, library card, etc, etc. IRL there are possibly thousands of instances of ‘you’ in hundreds and hundreds of systems. Not all will be correct. So we are at many instances of classifiers where ‘you’ needs to be just you. This is a classic many to many entity relationship problem. Thankfully there are ways of dealing with this. Intelligently.\nWarning: There is no magic system solution. You are going to have to DIY it to do it properly. And very likely outside of whatever crap core system you use for you job. Layered solution is probably the only way forward. This means you need a brain, you need a back end to your core system data, and you need the ability to run code on something, on a server, outside of said core system. Easy on a desktop if you are a decent programmer, and have some basic tools. Come back in five years if you need a robust enterprise wide system solution. Oh, and get approval for a lot of money. That no one senior who is not a programmer will ever want to give you. Consider giving up now is my advice. Or write a blog about it.\nBased on the above nonsense, you should get the broad idea now. A bit more philosophy, then into the doing it part.\nBogost argues that everything that exists—humans, animals, machines, objects—has its own way of being, and we should try to take those non-human perspectives seriously. This approach is part of a broader philosophical movement called. Object-Oriented Ontology (OOO). That sounds a lot like object oriented programming, because it is a lot like that. So you don’t have 10,000 objects representing trees. You have a class of objects. Of which some are trees, and some are bushes. The key mental part here is:\nIn strict class hierarchies → they are different types In flexible systems → they are different configurations To sort out this mess, we will need both of the above.\nBogost says we should be ‘Writing code that mimics how an object interacts with others’. Could not agree more, and we are about to do all of that. The context of which will be the interaction of legal entities within a banking structure, layering on the multi dimensional aspects of regulatory treatment. The end game is being able to compressive answer ‘what is the…..’ type questions across the legal entity and regulatory credit risk landscape. Which needs a network data landscape that one on is going to give you, that aligns with the regulatory landscape in ways no one who designed KYC systems ever bothered to think about. To be fair, they could have, but someone would have cheaped out and not wanted to pay for it back in the day. This is the problem of someone who does not know what they are doing being pushed into making a decision they shouldn’t make.\nThe Problem Statement Restated Before moving onto solution paths, it’s worth really digging into the gritty details of the problem. I want this to be crystal clear. The broad idea is superordinance. The specifics we are going to dig into is just where and what we should apply the concept to. The answer is not where you first think.\nTo strip things back to basics here is a simplified network diagram of just 5 of the legal entities. For simplicity sake they have a notional 100 loan to each other.\nForgetting about code. Any exposure from Bank Co down to the non UK domiciled entity, for CRR has to be NON CORE.\nThe legal entity is just that, there is no CRR treatment for just the one entity. It is the relationship between two entities, across a credit product, that drives CRR treatment.\nThis is why we want to leave legal entities as they are.\nFor the single loan it (lentity - exposure - entity) is NON CORE. That is fine. Now the Market Co lending to the Corp Co, that has to be a different CRR treatment. But wait, we have the Corp Co in NON CORE. But it cannot be that from the perspective of the Market Co. Conundrum! I know, I will create a new group name that is not a legal entity level. This will mirror Corp Co. So one instance of Corp Co for the NON CORE book of exposures, and then another instance of Corp Co for anything that crosses the ring fence perimeter. I guess we can do that for each instance where we have a product from one legal entity to multiple other legal entities, some of which will map the exposure into different CRR buckets.\nYou can appreciate that in doing this you will:\nhave a lot of duplications have lost the integrity of you legal entity structure run the risk of manual op errors in creating and linking the duplications probably go mad eventually with the mess you have made…. So how best to avoid the traps laid out? Apply the concept of superordinance of course! But…. apply it to each exposure, not the legal entities.\nThe Right Problem Statement Or the less wrong one if you want. We want to be able to answer questions about our portfolio, about the legal structure, and regulatory aspects, and exposures, and often all three at once. Therefor the correct problem statement is something like ‘what is the minimum data and attribute set that will permit investigation of the portfolio across the legal and regulatory landscape to fulfil regulatory report requirements together with portfolio management obligations’. Bit of a word salad, but you get the drift. To do the job, what do I need as the minimum viable data set. Of which other bits I can derive later.\nCRR waiver letters, over simplified will list legal entities that extend exposure, and a list of all legal entities that said exposure can have the noted CRR waivers in the letter applied to. What they really are in intent is two fold; (i) they identify what the new rules shall apply to; and (ii) the afford permission to apply ‘different’ regulatory treatment where permitted. This is probably why they are actually titled Permission letters IRL. The what, in the case of the letter is the identified ‘firm/s’, or legal entities. From which exposures to any listed subsidiaries may receive the diminished CRR treatment. At no point do the letters tell you there cannot be other exposures, or how to go about applying the reduced CRR regulations.\nWhat the letter does not stipulate is that the legal entities may only have exposure to the listed entities. It says only the listed one’s can benefit from the CRR waivers listed In other words, the same legal entities at the top can, and probably do have many different exposures to other non listed legal entities. This is both necessary and expected for the group to function as whole. You just won’t get the same CRR waiver or RWA adjustments. It is this critical aspect that tilts the logic of the solution away from treatment of the legal entity arrangement, to treatment of the exposures themselves. The path to the solution at this point should drive you away from static excel files of any kind.\nAs per bobs_house, the mistake is that you abuse your legal entity structure by switching a legal aggregation level at L1 out for a regulatory classifier. Eg make up a name inside_ring_fence, and presumable outside_ring_fence. Then hey presto you can slice your portfolio by ring fencing attribute! Done. No, actually.\nYou have taken a legal entity attribute, and swapped it for a regulatory alignment attribute. Your portfolio of things now uses one type, legal entity, for two different things. This will break things down the track. DO NOT DO THIS. It’s just lazy, or a constraint applied by management that won’t work. You have given up the coherence of your entity data. Nothing good can come from this, even as you might be tempted for this quick fix.\nThe doing Enough nonsense, lets lay out a basic approach, using made up but realistic data set. And actually work through the problems. I am going to do this in python, but you can use whatever you like or have. At enterprise scale level it won’t be python, but you could probably set up a parallel reporting system that would work quite well.\nAs laid out above, we are going to establish a pretend bank, add some made up data, and then figure out a way to present the portfolio from BOTH a legal entity basis with no loss of coherence, as well as from a regulatory risk exposure perspective. Then, because we did not screw up the data, you can interrogate the portfolio however you like. Subsidiary to Group, Ring Fenced to Not Ring Fenced, trade or product level. Who cares, its up to you once you get the data stack right. Output is multidimensional portfolio query. Why???\nYou’re trying to:\nOptimise a portfolio under multiple dimensions of data, constraints, and uncertainty\nThe off the shelf IT system that will do this to your exact needs and data is; there isn’t ever one. Every constraint you add also breaks your existing approach. There is one more critical assumption that underpins this approach:\nAcross the entire group, a decision made many years ago was that each functional business would share the same IT architecture. So for KYC, the same shared system operates across each sub group. Separate instances of systems, e.g. independent installation and data, are NOT implemented at each sub group level.\nHence the fix must be applied outside of the core system (whatever it is). Unless you are feeling brave and someone is going to let you fix the code base properly. Which would be fine, but good luck with getting that approved.\nTo start with we are going to adopt a fairly standard legal entity hierarchy, Level 0 of L0 is ultimate parent. Then on down to L6. That is sufficient for most structures as L6 and below can be flattened as required. This is all populated with made up entities and structures, but it is a rough proxy for what you get IRL. It’s good enough for the purpose at hand, I don’t want to burn the hours to re model an existing bank in all its glory. Yes, its ugly, but it is limited. IRL large domestic banks run to several hundred legal entities. The brings enough scale for later, when we add (pretend) products, limits and exposures:\nIn database problems, sometimes there is a unique ID challenge. Instead of renaming everything and fundamentally changing tables, you can create a unique ID by combining individual attributes in a unique fashion. For our pretend back, we are going to start with just the legal entity structure, and then we are going to add some deductive reasoning to be derive ways in which we can strata the data based on regulatory approach.\nSee data, files at bottom. Now I did the initial set up the hard way for a small sample structure, then used AI (Claude) to expand the data set to what you see in the python file. I am not lazy, but there are limits.\nThe basic model being adopted here is (i) Legal Entity data; (ii) Limit and Product Data; then (iii) Product and exposure data applied across the structure. We have preserved all original content from legacy system on legal entity. Then the important attributes, which boils down to RWA CRR treatment, will be derived and linked. The end game is a dynamic portfolio view that reflects all data, and reports as required for CRR reporting.\nI know this seems a bit painful, there is a reason why. Approaching the problem this way means you can apply n rules, or change the rules, without destroying the data. So no deleting bobs_house when bob moves. If CRR rules change, fine. Adapt the dynamic model. Slow now, fast later.\nHere is the data model as an image:\nThe following rules will be applied to the data:\nThe Bank entity is an RFB entity. So are all of its directly held subsidiaries. These will be deemed to be RFB. Of the RFB entities, all UK domiciled entities will be deemed to be CORE. All non UK domiciled entities will deemed to be NON CORE. Now, this is a bit of a hack, but to be honest it is very close to how the CRR legislation is actually applied. Good enough for now. The Group entity, and all other non Bank subs will be deemed to be outside the RFB, and will be characterised as NRFB. Now this is an abstraction of the IRL rules. But, all the actual CRR rules could be applied. Too much work for this mini project, but it is achievable.\nThis results in the decision tree as shown:\nNow to complete our pretend Bank we are going to add a bunch of random exposures across the entities. The products, limits and types will be as follows. This is of course grossly over simplified.\nLimit Type Limit Sub Type Product Hard Traded FX Forward Hard Traded Committed Repo Hard Lending Committed Loan Hard Lending Overdraft Hard Traded Bond Borrow Hard Traded Xccy Swap Soft Settlement Payment Intraday Update: an earlier version of this section showed only the leaf-level crr_treatment function and waved at “the equivalent of recursive SQL techniques” for the ancestor walk without actually showing it. Fair enough to skip it for a first pass, less fair to leave readers with no way to run the thing. Below is the full, working recursion — two genuinely recursive functions, both plugged straight into the same crr_treatment — verified against the actual exposure data at the bottom of this post: it reproduces all 300 records exactly.\nThe two recursive pieces are:\nsubtree(root) — descendant enumeration. Base case: no children. Recursive case: union of every child’s own subtree. This is how bank_subtree (everything under Bank Co) gets built. get_group_ancestor(entity_id) — the parent-chain walk. This is the Python equivalent of a recursive SQL CTE: an anchor case (no parent, or the parent is a branch head) plus a recursive step that re-references the previous result, run until it terminates. You walk back up from wherever the exposure sits — say an L6 subsidiary — until you hit the entity’s “L2” group node (the ancestor that is a direct child of its own L1 branch head: Bank Co, Property Co, Wealth Co, or Market Co). Same idea as walking a family tree back to find someone’s parents, and the same idea as a CTE that keeps re-joining against the previous result set until a step returns nothing. One nuance worth being precise about: most SQL engines evaluate a recursive CTE iteratively — repeatedly re-running the recursive member against the newest rows until none arrive — rather than via literal call-stack recursion. Same self-referential structure, different execution mechanism to what Python does below.\nThe other thing the original snippet skipped: real legacy hierarchy data occasionally has a cycle in it — a bad migration, a fat-fingered parent_id that points back into its own ancestor chain. A naive walk-up loops forever on that. get_group_ancestor below guards against it explicitly, and is memoised so a large exposure table doesn’t repeatedly re-walk the same chain — computed once per entity, O(n) overall rather than O(n × depth).\nfrom collections import defaultdict from functools import lru_cache # emap[id] = {\"name\":..., \"level\":..., \"parent\":..., \"rf\":...} # parent[id] = parent_id or None # — both built from df_legal_entity.csv; see the full script linked below # for the loading step. ROOT = 'E000' # Group Co — ultimate parent BANK_ROOT = 'E001' # Bank Co — the ring-fenced sub-group head children = defaultdict(list) for eid, p in parent.items(): if p: children[p].append(eid) def subtree(root): \"\"\"Recursive descendant enumeration: base case = no children, recursive case = union of every child's subtree.\"\"\" nodes = {root} for c in children.get(root, []): nodes |= subtree(c) return nodes bank_subtree = subtree(BANK_ROOT) @lru_cache(maxsize=None) def get_group_ancestor(entity_id, _seen=frozenset()): \"\"\"Recursive ancestor walk with cycle guard — the Python equivalent of a recursive SQL CTE. Returns the ancestor of entity_id that is a direct child of entity_id's own L1 branch head, or None if entity_id IS a branch head (or the root itself).\"\"\" if entity_id in _seen: raise ValueError(f\"cycle detected in parent chain at {entity_id}\") p = parent.get(entity_id) if p is None or p == ROOT: return None grandp = parent.get(p) if grandp == ROOT: return entity_id return get_group_ancestor(p, _seen | {entity_id}) def crr_treatment(cred_id, deb_id): \"\"\" Derive CRR regulatory treatment for a bilateral exposure. Rules (applied in order): RFB_X : creditor inside Bank sub-group, debtor outside NRFB_X : creditor outside Bank sub-group, debtor inside [group]_CORE : both share a group ancestor that is CORE (UK-domiciled RFB) [group]_NON_CORE : both share a group ancestor that is NON CORE (non-UK RFB) [group]_NRFB : both share a group ancestor outside the ring-fenced bank RFB_INTERNAL : both inside Bank sub-group, different group ancestors NRFB_CROSS : both outside Bank sub-group, no shared group ancestor \"\"\" cr_in_bank = cred_id in bank_subtree de_in_bank = deb_id in bank_subtree if cr_in_bank and not de_in_bank: return 'RFB_X' if not cr_in_bank and de_in_bank: return 'NRFB_X' cr_grp = get_group_ancestor(cred_id) de_grp = get_group_ancestor(deb_id) if cr_grp and de_grp and cr_grp == de_grp: grp = emap[cr_grp] if grp['rf'] == 'CORE': return f\"{grp['name']}_CORE\" if grp['rf'] == 'NON CORE': return f\"{grp['name']}_NON_CORE\" return f\"{grp['name']}_NRFB\" if cr_in_bank and de_in_bank: return 'RFB_INTERNAL' return 'NRFB_CROSS' Note the [group]_NRFB branch: the original simplified version of this function only grouped entities inside the Bank Co sub-group (giving them a CORE/NON_CORE label) and collapsed everyone else to a flat NRFB_CROSS. The dataset behind this post actually applies the same group-ancestor logic to every branch — two entities that share a common group ancestor under Property Co, Wealth Co, or Market Co get labelled {ancestor name}_NRFB rather than being flattened. The function above now does that too, uniformly, via the same recursive walk — which is also just a tidier way to write it than special-casing Bank Co.\nThe l1_group and crr_aggregation columns in the published CSVs, and the equivalent fields baked into the JS widget’s data, are the cached output of this script — computed once and stored, not recomputed live by the widget. That’s a completely normal pattern (compute once, cache, refresh on change) but it’s worth naming as a cache rather than a derivation: if the entity hierarchy ever changes, something has to re-run this script and refresh those columns, or they go stale. Consider it the automatable version of the “derive it, don’t hand-add it” principle from earlier in this post.\nFor anything past this toy L0–L6 example — deeper or messier real hierarchies, hundreds of thousands of exposures rather than 300 — two things to reach for: networkx instead of hand-rolled recursion (nx.ancestors() etc. give you a tested, cycle-aware graph API for the same problem), and be aware Python’s default recursion limit (~1000) and lack of tail-call optimisation mean a very deep or genuinely cyclic chain would raise RecursionError before an iterative stack-based walk would fail. Not a real risk at six levels, but worth knowing if this pattern gets reused somewhere deeper. Pandas has no built-in recursive-ancestor primitive either way — “use pandas for this” still means hand-rolling a loop very like the one above.\nThe full script — entity loading, both recursive functions, and a self-check that validates it against df_limits_exposures.csv — is linked at the bottom of this post under Data Files. Running it directly reproduces a 300/300 (100%) match against the published exposure data.\nAs an aside, don’t knock old school SQL. It was invented in the 1970’s to solve real world problems. If you write a bit of code or small language and someone is using it 60 years later, you probably did something smart. You also probably did it with pencil and paper. Development tools were largely nonexistent then. These people really were geniuses in their day. Cue Ted Codd reference ….\nRead about the crazy early days here if you have the interest:\nhttps://archive.computerhistory.org/resources/access/text/2013/05/102702562-05-01-acc.pdf\nBest quote:\nTed looked at what was going on out there and saw what I like the call “higgledy-piggledy” systems. There was no abstraction; there was no mathematics. It was just write code and hope it works.\nSome things really don’t change. The original vibe coders…… Now I will shut up or I’ll have to move this to the Comp Science section, and I cannot be bothered.\nThe solution Now we have our standing assumptions. We have run the rules over the data to create the tables shown above. And if the rules change, we can change the tables of derived attributes as needed. That part is buried in the python. The tables used for below are static, as in the rules set out applied to the made up structure, with made up products and limits applied at subsidiary level. Note that aggregation is permitted. So at L3, exposure is all of the exposure at L4 and below aggregated.\nBrief pause, IRL there will be netting, and subadditivity problems all over the place. I am aware, but don’t want this project to get out of control for scope. As presented is good enough, but its not complete or accurate to the nth degree.\nNow, wrapping the data tables up in a little widget, we now have a dynamic reporting tool. Anything you like in combination. If we had made the decision to have lost say L3 and used that as the regulatory bucket aggregator (eg NON CORE), then that would be a set aggregator. You could sum for that, but noting else. You would also have lost the ability to aggregate at L4 group for any other reason. By keeping the legal entity data pure, we have avoided that problem all together.\nIt is harder to establish regulatory risk attributes by applying a suite of rules at the product exposure level, but not as hard you might think. Once done, its set and forget until the position runs off. But the trouble is rewarded, as you can then report any entity, to any entity (or group), with or without the CRR lens applied.\nLets take our subset of the portfolio from the above image, and lay it out in table form. Same rules have been applied, nothing manual has been adjusted.\nRegulatory Treatment — £100 Loan Matrix (5 Entities) NRFB_CROSS — both parties outside Bank sub-group (2 records) Creditor Domicile Debtor Domicile Limit GBP Exposure GBP Group Co UK Market Co UK £100 £100 Market Co UK Group Co UK £100 £100 NRFB_X — creditor outside Bank sub-group → debtor inside (6 records) Creditor Domicile Debtor Domicile Limit GBP Exposure GBP Group Co UK Bank Co UK £100 £100 Group Co UK Retail Co UK £100 £100 Group Co UK Corp Co AU £100 £100 Market Co UK Bank Co UK £100 £100 Market Co UK Retail Co UK £100 £100 Market Co UK Corp Co AU £100 £100 RFB_X — creditor inside Bank sub-group → debtor outside (6 records) Creditor Domicile Debtor Domicile Limit GBP Exposure GBP Bank Co UK Group Co UK £100 £100 Bank Co UK Market Co UK £100 £100 Retail Co UK Group Co UK £100 £100 Retail Co UK Market Co UK £100 £100 Corp Co AU Group Co UK £100 £100 Corp Co AU Market Co UK £100 £100 RFB_INTERNAL — both inside Bank sub-group, cross L2 boundary (6 records) CORE → CORE Creditor Domicile Debtor Domicile Limit GBP Exposure GBP Bank Co UK Retail Co UK £100 £100 Retail Co UK Bank Co UK £100 £100 CORE → NON CORE Creditor Domicile Debtor Domicile Limit GBP Exposure GBP Bank Co UK Corp Co AU £100 £100 Retail Co UK Corp Co AU £100 £100 NON CORE → CORE Creditor Domicile Debtor Domicile Limit GBP Exposure GBP Corp Co AU Bank Co UK £100 £100 Corp Co AU Retail Co UK £100 £100 Note that RFB_INTERNAL covers cross-boundary flows within the Bank sub-group — Bank Co ↔ Retail Co and Bank Co ↔ Corp Co, as well as Retail Co ↔ Corp Co. These are intra-RFB but cross different L2 sub-groups, which is precisely the consolidation elimination problem the post is about: same ring fence, different legal entity, £100 each way that nets to zero at the group level but needs to be tracked individually at the entity level.\nHow the Widget Works The widget is a self-contained interactive data application built entirely in vanilla HTML, CSS and JavaScript — no frameworks, no external dependencies beyond the world map fetch.\nData model Three normalised JavaScript arrays mirror the three CSV dataframes exactly:\nENTITIES — 62 legal entities with all attributes LIMIT_TYPES — 7 product taxonomy entries LIMITS_EXP — 300 bilateral limit and exposure records (all made up!)\nThese are stored in legal-entity-widget.js and loaded as a static file. The JS builds two lookup maps on startup — EMAP (entity by ID) and LTMAP (limit type by product name) — which act as the join keys, replicating what pandas.merge() does in the Python model.\nYes, I cheated a bit here. I laid it out, did some of the basic setups in python as proof on concept. Made sure the geographic part worked. Then I had Claude clean up my messy files and join it all to render in the one window. It did not work right off the bat though, there were a lot of fixes required to get it to render properly. I’ll add the js file below. You can take the concept and morph the basic approach into anything you like. I spent quite some time on this as I will recycle the concept in other posts.\nSaid widget Group Co — Legal Entity Structure df_legal_entity (62) · df_limit_type (7) · df_limits_exposures (300) Legal entities Limit types Limits \u0026 exposures Geographic map Entity structure df_legal_entity — schema \u0026 joins PK: entity_id · Self-join: parent_id → entity_id · Referenced by: df_limits_exposures.creditor_entity_id / debtor_entity_id All levels0123456 All domicilesUKFRUSSGJPDEAUCABRHK All RFIRFBNRFB All ring fenceCORENON CORENRFB All L1 groupsBank CoProperty CoWealth CoMarket Co entity_idnamelevelparent_idl1_groupcountrycityrfi_statusring_fence_statuscrr_aggregationaddress df_limit_type — schema \u0026 joins PK: product · Referenced by: df_limits_exposures.product productlimit_typelimit_sub_type df_limits_exposures — schema \u0026 joins PK: record_id · product → df_limit_type.product · creditor_entity_id → df_legal_entity.entity_id · debtor_entity_id → df_legal_entity.entity_id All typesHardSoft All sub-typesTradedLendingSettlement All productsFX ForwardCommitted RepoCommitted LoanOverdraftBond BorrowXccy SwapPayment Intraday All CRR treatments Creditor level0123456 Debtor level0123456 All exposuresPositive onlyNegative only record_idproductlimit_typelimit_sub_type creditor_entity_idcreditor namecr. level debtor_entity_iddebtor namedr. level limit_gbp exposure_gbp utilisation crr_reg_treatment Bubble size reflects entity count per city. Click a bubble to filter the entity table. Full legal hierarchy. Colour encodes level. Click any node to search the entity table. Data model: df_legal_entity (PK: entity_id) · df_limit_type (PK: product) · df_limits_exposures (PK: record_id; FK: product, creditor_entity_id, debtor_entity_id). Ring-fencing: UK Banking Reform Act 2013 / PRA rules. CRR reg treatment applied per limit line. Source taxonomy: limit_types.csv. Static Networks Some static views of the legal structure, shown as network node diagrams. Because the data was random and made up, it does not make for a very interesting output. IRL this would be more informative. The point here I suppose is that the best way of thinking about exposures across a large bank IRL is as a network node diagram. Then you can make the edges what you want, eg CRR regulatory exposures, etc, etc.\nFor completeness, here are the static png files.\nClosing comments The lesson here is that while yes, legacy systems suck, computer science has moved on a long way. There are a lot of ways to build out reporting using additional tooling outside of said legacy systems. Really all you need is a back end data access (ssh, api, sql, whatever) and then some brains. You can do pretty much the whole lot without resorting to licensed products. Python and java and some related libraries are all very useful things. Experiment like crazy, and when you love what you have, go spend the bucks to get an enterprise version.\nThe trick is thinking it all the way through first. No junior software developer is going to know what the data means, and how it should be used. Now ideally you are a very experienced finance professional and also really good at comp science. Good luck with that.\nWe started with a legacy system setup, preventing multiple instances of KYC entities across the group structure. We duplicated the entity structure outside of the existing data. We did not give up a level in the legal entity structure to achieve regulatory reporting, we kept our data intact. We added dynamic regulatory attributes calculated on a rules based approach that broadly mapped the IRL approaches. We ran our reporting system as an external overlay, tied to legacy data. We did this using java scripted widget, as an example that approaching the problem properly with a bit of thought resulted in a more flexible and intelligent outcome. We considered the view of a single entity to any other (one to many), we considered the reverse of all limits to any entity (many to one). We considered the entire portfolio (many to many). We enabled any combination of exposures from any entity, to any other or many others, based on regulatory approach. We did not break existing infrastructure doing this. A lot more could be done on the logic to improve things. More would be needed for proper IRL solution. But this was an afternoons work. Yes, I cheated and used AI to do the network node diagrams. If the data was not made up nonsense it would work better. Slow is fast and fast is slow.\nReferences Ian Bogost — Alien Phenomenology, or What It’s Like to Be a Thing (object-oriented ontology; the “different types vs. different configurations” framing used above) Mary Beard — Laughter in Ancient Rome: On Joking, Tickling, and Cracking Up (Sather Classical Lectures: 71) — source of the Roman identity joke quoted above Computer History Museum — oral history transcript covering Ted Codd and the early days of the relational model (PDF) SIH — penguin classifier (scikit-learn) on Hugging Face — the classic ML classification example referenced above HM Treasury / UK legislation — Financial Services and Markets Act 2000, ring-fencing statutory instruments (PDF) — source for the Ring Fencing Primer appendix Appendix — Ring Fencing Primer Ring fencing, like it says on the tin, is an approach to corralling (lets stick with the fence metaphor) the parts of the bank that do deposit taking, from the rest of the bank of group. Key details are below, but in essence the pre crisis banks were (i) run too thin on capital; and (ii) run by self serving morons in the main who did not know where their ability ended. That a bit sharp, but without government intervention, a lot more banks would have failed. Governments don’t like bailing out banks. But its quite hard to have an economy without functional banks for some complex reasons we will get into later. For now Bank is an authorised deposit taking institution, and Shadow Bank means something that does lending minus the deposit part. That is a long story for another time.\nBackground Following the Global Financial Crisis (GFC) of 2007-08, HM Treasury, on the recommendation of the Independent Commission on Banking (ICB), established a ring-fencing regime for large banks in the UK. The regime was legislated for in the Financial Services (Banking Reform) Act 2013. The regime came into full effect on 1 January 2019. The government made two Orders under the Financial Services and Markets Act (FSMA) 2000, which set the detailed calibration of the ring- fence: i. The Financial Services and Markets Act 2000 (Ring-fenced Bodies and Core Activities) Order ii. (CAO) 20141; and The Financial Services and Markets Act 2000 (Excluded Activities and Prohibitions) Order (EAPO) 2014.2\nThe regime’s objectives, as outlined by the ICB, are to “make it easier to sort out both ring-fenced banks and non-ring-fenced banks which get into trouble, without the provision of taxpayer-funded solvency support” and to “insulate vital banking services on which households and SMEs depend from problems elsewhere in the financial system”.3 Ring-fencing requires the largest UK banks to separate core retail banking from investment banking in order to support financial stability by making banking groups simpler and easier to ‘resolve’.\nParameters The key parameters of the ring-fence, as set in the Core Activities Order and Excluded Activities and Prohibitions Order, are:\nScope: Banking groups with more than £25bn of “core deposits”, defined as UK or EEA retail and SME deposits, must comply with the regime. They are required to separate their retail and investment banking activities into a ring-fenced body (RFB) and a non-ring-fenced body (NRFB) and hold core deposits within the RFB. Excluded Activities: RFBs are prohibited from dealing in investments and commodities as principal, with the exceptions of dealing in investments to manage their own risks and to sell simple derivatives to their customers. Prohibitions: RFBs cannot have exposures to “relevant financial institutions” (RFIs), such as NRFBs, investment firms, globally systemically important insurers (GSIIs), and investment funds. They can provide specified products including trade finance products. They are largely prohibited from operating outside the EEA. Source for above is : https://www.legislation.gov.uk/uksi/2025/30/pdfs/uksiod_20250030_en_001.pdf\nData Files I mean they are all made up nonsense and you can see the content in the widget, but hey, why not.\nLegal entities Limit types Limits and exposures CRR treatment classifier — full recursive Python source, with a self-check against the CSVs above ","wordCount":"6952","inLanguage":"en","datePublished":"2026-03-21T22:07:39Z","dateModified":"2026-03-21T22:07:39Z","author":{"@type":"Person","name":"Your Name"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://1697-20747.github.io/blog/credit-risk/one-ring-to-rule-them-all/"},"publisher":{"@type":"Organization","name":"[1697, 20747]","logo":{"@type":"ImageObject","url":"https://1697-20747.github.io/images/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=https://1697-20747.github.io/><img src=/images/avatar.png width=32 height=32 style=border-radius:50%;margin-right:8px;vertical-align:middle>
+</a><a href=https://1697-20747.github.io/ accesskey=h title="[1697, 20747] (Alt + H)">[1697, 20747]</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://1697-20747.github.io/blog/economics/ title=Economics><span>Economics</span></a></li><li><a href=https://1697-20747.github.io/blog/data-analytics/ title="Data Analytics"><span>Data Analytics</span></a></li><li><a href=https://1697-20747.github.io/blog/comp-science/ title="Comp Science"><span>Comp Science</span></a></li><li><a href=https://1697-20747.github.io/blog/credit-risk/ title="Credit Risk"><span>Credit Risk</span></a></li><li><a href=https://1697-20747.github.io/blog/other/ title=Other><span>Other</span></a></li><li><a href=https://1697-20747.github.io/blog/philosophy/ title=Philosophy><span>Philosophy</span></a></li><li><a href=https://1697-20747.github.io/blog/bjj/ title=BJJ><span>BJJ</span></a></li><li><a href=https://1697-20747.github.io/blog/unhelpful-advice/ title="Unhelpful Advice"><span>Unhelpful Advice</span></a></li><li><a href=https://1697-20747.github.io/blog/books/ title=Books><span>Books</span></a></li><li><a href=https://1697-20747.github.io/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://1697-20747.github.io/about/ title=About><span>About</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://1697-20747.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://1697-20747.github.io/blog/>Blog</a>&nbsp;»&nbsp;<a href=https://1697-20747.github.io/blog/credit-risk/>Credit Risk</a></div><h1 class="post-title entry-hint-parent">One Ring to Rule them All....</h1><div class=post-description>Mapping CRR exposures against legal entity hierarchy from legacy systems. A dynamic overlay approach to maintain full data integrity</div><div class=post-meta><div class=post-meta><span title='2026-03-21 22:07:39 +0000 UTC'>March 21, 2026</span>&nbsp;·&nbsp;33 min</div></div></header><div class=toc><details><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><nav id=TableOfContents><ul><li><a href=#the-problem>The Problem</a><ul><li><a href=#assumptions>Assumptions</a></li><li><a href=#the-wrong-way>The Wrong Way</a></li><li><a href=#the-right-way>The Right Way</a></li><li><a href=#one-ring-to-rule-them-all>One Ring to Rule them All</a></li></ul></li><li><a href=#the-problem-statement-restated>The Problem Statement Restated</a></li><li><a href=#the-right-problem-statement>The Right Problem Statement</a></li><li><a href=#the-doing>The doing</a></li><li><a href=#the-solution>The solution</a></li><li><a href=#regulatory-treatment--100-loan-matrix-5-entities>Regulatory Treatment — £100 Loan Matrix (5 Entities)</a><ul><li><a href=#nrfb_cross--both-parties-outside-bank-sub-group-2-records>NRFB_CROSS — both parties outside Bank sub-group (2 records)</a></li><li><a href=#nrfb_x--creditor-outside-bank-sub-group--debtor-inside-6-records>NRFB_X — creditor outside Bank sub-group → debtor inside (6 records)</a></li><li><a href=#rfb_x--creditor-inside-bank-sub-group--debtor-outside-6-records>RFB_X — creditor inside Bank sub-group → debtor outside (6 records)</a></li><li><a href=#rfb_internal--both-inside-bank-sub-group-cross-l2-boundary-6-records>RFB_INTERNAL — both inside Bank sub-group, cross L2 boundary (6 records)</a></li><li><a href=#how-the-widget-works>How the Widget Works</a></li></ul></li><li><a href=#said-widget>Said widget</a></li><li><a href=#static-networks>Static Networks</a></li><li><a href=#closing-comments>Closing comments</a></li><li><a href=#references>References</a></li><li><a href=#appendix--ring-fencing-primer>Appendix — Ring Fencing Primer</a><ul><li></li></ul></li><li><a href=#data-files>Data Files</a></li></ul></nav></div></details></div><div class=post-content><h2 id=the-problem>The Problem<a hidden class=anchor aria-hidden=true href=#the-problem>#</a></h2><p>This is a combined overview of credit, entity relationships, object oriented data sciences, all aligned to regulatory objectives. All items included are made up and functional, with the broad structure reflecting actual real world problems. The relevant bits of code will be provided, but this is about understanding the problem, defining the problem statement (properly), and learning the wrong ways so you don’t make mistakes.</p><h3 id=assumptions>Assumptions<a hidden class=anchor aria-hidden=true href=#assumptions>#</a></h3><p>Available systems are probably limited in scope, are circa 1990’s, and are designed around single instances.
+This means we will need to resolve the trickier aspects outside of limited core systems.</p><ul><li>Assume corporate structure featuring level 0 through level 6.</li><li>Each corporate thing is an entity. It must have a unique data identifier.</li><li>Level 0 is the parent company.</li><li>Level 1 is a subsidiary of level 0, and so on.</li><li>A level 1 must have a data field or edge that joins it to the level 0.</li><li>This is the same concept for a level 2 that is connected to a level 1</li><li>Each entity needs a domicile attribute, being country.</li><li>Each entity needs an address.</li><li>Each entity needs a city, to be defined by the address.</li></ul><p>Now a primer on what is going on here, why its a genuine problem, and shock horror, some data science. If you know me, you will have heard this lecture a few times now, so apologies dear readers who have suffered this lecture previously. Read the book, refer book review for <strong>Alien Phenomenology What It Means to Be a Thing</strong> especially if you are new to networks, or the concept of object oriented programming and data. We are also going to cover the basis of statistics, and stratification. Bad luck if you don’t want to.</p><h3 id=the-wrong-way>The Wrong Way<a hidden class=anchor aria-hidden=true href=#the-wrong-way>#</a></h3><p>Back to the basics. Imagine you have two friends, Bob and Jane. Bob and Jane live somewhere. You are tasked with creating some kind of relational system, why is irrelevant for now. After some thought, you decide to assemble the relational system, which later we will correctly call a network. Without much effort, you construct your system of an entity for Bob, and Entity for Jane, and to cover off where they live an Address for Bob and Jane, and an entity for their house, bob_house and jane_house. From this you create your basic network and off you go. Now there is a presumption of scale here, our example of two is implied to reflect the reality of thousands. Scale matters as we will so, so get your design right.</p><p>IRL shall mean In Real Life for the rest of this post, and the rest of the site. This means the realistic parts of life that cannot be assumed away. In general you will have oversimplified something, removing elements that are essential but inconveniently complex, and as a result your system is crap and stops working as intended.</p><p>All is well, you are happy. Then sometime later, Bob goes and moves, and your data goes to crap. Because you didn’t do it properly. The entity bob_house no longer applies, as Bob has gone and moved. So you delete it and create a new one bob2_house. Now you lose chunks of your network, and downstream history and data for bob_house. Because you screwed up.</p><h3 id=the-right-way>The Right Way<a hidden class=anchor aria-hidden=true href=#the-right-way>#</a></h3><p>IRL there is one, and only one instance of you. Even if you are a biological identical twin, genes and environment will have forged you into a genetically identical, but biologically tweaked version of you. So the sample size of ‘you’ defined by all possible attributes is n=1.</p><p>So there is one of you.</p><p>This leads to a couple of immediate questions. Who are you? As in how, in data are we going to adequately define you. Stated properly this is ‘how are you to be adequately defined using a combination of observable and deducible attributes?’. The presumption here is that you know the end use of your system. There is a lot of thinking required to get the problem statement correct here, as there will be inherent conflicts in all of these choices. For our purposes, a key requirement is going to be driven by KYC legislation, or Know Your Client. Over simplified, this means there can only be one instance of you, or as we move forward, the relevant legal entity.</p><blockquote><p>A lot of the jokes play on the obviously quite problematic idea in Roman times of knowing who you are. Another &ldquo;identity&rdquo; joke sees a man meet an acquaintance and say &ldquo;it&rsquo;s funny, I was told you were dead&rdquo;. He says &ldquo;well, you can see I&rsquo;m still alive.&rdquo; But the first man disputes this on the grounds that &ldquo;the man who told me you were dead is much more reliable than you”. — Classicist Mary Beard, <em>Laughter in Ancient Rome: On Joking, Tickling, and Cracking Up (Sather Classical Lectures): 71</em></p></blockquote><p>Who knew the Roman’s were into data science?</p><p>Now, if you have ever suffered the experience of dealing with any government department of immigration (and suffering is the precise word to use), you will have deep experience of understanding that it does not matter that you know who ‘you’ are, ALL that matters is what the system thinks ‘you’ are. This is why the joke above resonates so much in the modern world. The presumed ‘reliable’ source of information is the ‘system’. No government employee is empowered to use sanity, logic or reasonableness. If the ‘system’ version of you is wrong, you are screwed.</p><h3 id=one-ring-to-rule-them-all>One Ring to Rule them All<a hidden class=anchor aria-hidden=true href=#one-ring-to-rule-them-all>#</a></h3><p>Romans to Tolkien, quite the journey. Back to data science soon. Promise. This is concept of super ordinance at play, and how choosing your path to it is rather important. Seriously read the book.</p><blockquote><p>superordinate (or hypernym) is a general, umbrella term that encompasses the meanings of more specific words, known as hyponyms. It acts as a higher-level category in hierarchical relationships (e.g., &ldquo;bird&rdquo; is the superordinate of &ldquo;robin&rdquo; or “pigeon”). Thanks AI…..</p></blockquote><p>In statistics, when you have a multi dimensional population, stratification or classification models are a common approach to resolving the population into coherent sets for a particular purpose. If you have a population of say one thousand people, there are very many, but not infinite ways you can objectively classify them. Height, biological sex, pre and post puberty, colour, eye colour, etc, etc. There are potentially infinite ways to subjectively classify them. The strata or classes don’t really matter, what does matter is the that for each n in the population, it can belong in one and ONLY ONE classification. Lets go with a picture of flora, and we want to classify it into tree’s and bushes. For what ever reason. This requires you going down the rabbit hole and explicitly defining what is a tree, and what is a bush. Answer cannot be either or, not sure, or both. This usually requires you expanding your data fields until you get to an answer. One Ring to Rule them means a definitive classifier. Back to the problem, this means a superordinate way to classify for the purpose at hand. This means you might need more than one.</p><p>There are two ways of doing this, subjective, deciding and adding a yes no attribute for whatever the strata is. Or much better, you can derive that attribute from the data. So the subject element is laying the logic rules for class-action X, and then running the data through a classifier, and adding the new data field to the data.
 If you study machine learning, you will be sick to death of this. And you will know a lot about pigeons and penguins. Go and do it. Source:
-<a href="https://huggingface.co/SIH/penguin-classifier-sklearn">https://huggingface.co/SIH/penguin-classifier-sklearn</a></p>
-<p>A Primer on Ring Fencing concepts is appended if you have not crossed paths with this. Its sort of essential for this piece of work.</p>
-<p>So, ‘you’ means just you. Great. How many instances of you are there in the world? Biologically, one. If you have a bank account, then there is one KYC for you in every bank you deal with. There is one of you for whatever memberships you have. Leases, property titles, streaming services, library card, etc, etc. IRL there are possibly thousands of instances of ‘you’ in hundreds and hundreds of systems. Not all will be correct. So we are at many instances of classifiers where ‘you’ needs to be just you. This is a classic many to many entity relationship problem. Thankfully there are ways of dealing with this. Intelligently.</p>
-<blockquote>
-<p>Warning: There is no magic system solution. You are going to have to DIY it to do it properly. And very likely outside of whatever crap core system you use for you job. Layered solution is probably the only way forward. This means you need a brain, you need a back end to your core system data, and you need the ability to run code on something, on a server, outside of said core system. Easy on a desktop if you are a decent programmer, and have some basic tools. Come back in five years if you need a robust enterprise wide system solution. Oh, and get approval for a lot of money. That no one senior who is not a programmer will ever want to give you. Consider giving up now is my advice. Or write a blog about it.</p>
-</blockquote>
-<p>Based on the above nonsense, you should get the broad idea now. A bit more philosophy, then into the doing it part.</p>
-<p>Bogost argues that everything that exists—humans, animals, machines, objects—has its own way of being, and we should try to take those non-human perspectives seriously. This approach is part of a broader philosophical movement called. Object-Oriented Ontology (OOO). That sounds a lot like object oriented programming, because it is a lot like that. So you don’t have 10,000 objects representing trees. You have a class of objects. Of which some are trees, and some are bushes.  The key mental part here is:</p>
-<ul>
-<li>In strict class hierarchies → they are different types
-In flexible systems → they are different configurations</li>
-</ul>
-<p>To sort out this mess, we will need both of the above.</p>
-<p>Bogost says we should be ‘Writing code that mimics how an object interacts with others’. Could not agree more, and we are about to do all of that. The context of which will be the interaction of legal entities within a banking structure, layering on the multi dimensional aspects of regulatory treatment. The end game is being able to compressive answer ‘what is the…..’ type questions across the legal entity and regulatory credit risk landscape. Which needs a network data landscape that one on is going to give you, that aligns with the regulatory landscape in ways no one who designed KYC systems ever bothered to think about. To be fair, they could have, but someone would have cheaped out and not wanted to pay for it back in the day. This is the problem of someone who does not know what they are doing being pushed into making a decision they shouldn’t make.</p>
-<hr>
-<h2 id="the-problem-statement-restated">The Problem Statement Restated<a hidden class="anchor" aria-hidden="true" href="#the-problem-statement-restated">#</a></h2>
-<p>Before moving onto solution paths, its worth reallty digging into the gritty details of the problem. I want this to be crystal clear. The broad idea is superordinance. The specifics we are going to dig into is just where and what we should apply the concept to. The answer is not where you first think.</p>
-<p>To strip things back to basics here is a simplified netwrok diagram of just 5 of the legal entities. For simplicity sake they have a notional 100 loan to each other.</p>
-<p><img alt="£100 loan network — 5 entities" loading="lazy" src="/images/network_mini_loan.png"></p>
-<p>Forgetting about code. Any exposure from Bank Co down to the non UK domiciled entity, for CRR has to be NON CORE.</p>
-<blockquote>
-<p>The legal entity is just that, there is no CRR treatment for just the one entity. It is the relationship between two entities, across a credit product, that drives CRR treatment.</p>
-</blockquote>
-<p>This is why we want to leave legal entities as they are.</p>
-<p>For the single loan it (lentity - exposure - entity) is NON CORE. That is fine. Now the Market Co lending to the Corp Co, that has to be a different CRR treatment. But wait, we have the Corp Co in NON CORE. But it cannot be that from the perspective of the Market Co. Conundrum! I know, I will create a new group name that is not a legal entity level. This will mirror Corp Co. So one instance of Corp Co for the NON CORE book of exposures, and then another instance of Corp Co for anthing that crosses the ring fence perimiter. I guess we can do that for each instance where we have a product from one legal entity to multiple other legal entities, some of which will map the exposure into different CRR buckets.</p>
-<p>You can appreciate that in doing this you will:</p>
-<ul>
-<li>have a lot of duplications</li>
-<li>have lost the integrity of you legal entity structure</li>
-<li>run the risk of manual op errors in creating and linking the duplications</li>
-<li>probably go mad eventually wit the mess you have made&hellip;.</li>
-</ul>
-<hr>
-<p>So how best to avoid the traps laid out? Apply the concept of superordinance of course! But&hellip;. apply it to each exposure, <strong>not</strong> the legal entities.</p>
-<hr>
-<h2 id="the-right-problem-statement">The Right Problem Statement<a hidden class="anchor" aria-hidden="true" href="#the-right-problem-statement">#</a></h2>
-<p>Or the less wrong one if you want. We want to be able to answer question about our portfolio, about the legal structure, and regulatory aspects, and exposures, and often all three at once. Therefor the correct problem statement is something like ‘what is the minimum data and attribute set that will permit investigation of the portfolio across the legal and regulatory landscape to fulfil regulatory report requirements together with portfolio management obligations’. Bit of a word salad, but you get the drift. To do the job, what do I need as the minimum viable data set. Of which other bits I can derive later.</p>
-<p>CRR waiver letters, over simplified will list legal entities that extend exposure, and a list of all legal entities that said exposure can have the noted CRR waivers in the letter applied to. What they really are in intent is two fold; (i) they identify what the new rules shall apply to; and (ii) the afford permission to apply &lsquo;different&rsquo; regulatory treatment where permitted. This is probably why they are actually titled Permission letters IRL. The what, in the case of the letter is the identified &lsquo;firm/s&rsquo;, or legal entities. From which exposures to any listed subsidiaries may receive the diminished CRR treatment. At no point do the letters tell you there cannot be other exposures, or how to go about applying the reduced CRR regulations.</p>
-<p><strong>What the letter does not stipulate is that the legal entities may only have exposure to the listed entities. It says only the listed one&rsquo;s can benefit from the CRR waivers listed</strong> In other words, the same legal entities at the top can, and probably do have many different exposures to other non listed legal entities. This is both necessary and expected for the group to function as whole. You just won&rsquo;t get the same CRR waiver or RWA adjustments. It is this critical aspect that tilts the logic of the solution away from treatment of the legal entity arrangement, to treatment of the exposures themselves. The path to the solution at this point should drive you away from static excel files of any kind.</p>
-<p>As per bobs_house, the mistake is that you abuse your legal entity structure by switching a legal aggregation level at L1 out for a regulatory classifier. Eg make up a name inside_ring_fence, and presumable outside_ring_fence. Then hey presto you can slice your portfolio by ring fencing attribute! Done. No, actually.</p>
-<p>You have taken a legal entity attribute, and swapped if for a regulatory alignment attribute. Your portfolio of things now uses one type, legal entity, for two different things. This will break things down the track. DO NOT DO THIS. Its just lazy, or a constraint applied my management that won’t work. You have given up the coherence of your entity data. Nothing good can come from this, even as you might be tempted for this quick fix.</p>
-<h2 id="the-doing">The doing<a hidden class="anchor" aria-hidden="true" href="#the-doing">#</a></h2>
-<p>Enough nonsense, lets lay out a basic approach, using made up but realistic data set. And actually work through the problems. I am going to do this in python, but you can use whatever you like or have. At enterprise scale level it won’t be python, but you could probably set up a parallel reporting system that would work quite well.</p>
-<p>As laid out above, we are going to establish a pretend bank, add some made up data, and then figure out a way to present the portfolio from BOTH a legal entity basis with no loss of coherence, as well as from a regulatory risk exposure perspective. Then, because we did not screw up the data, you can interrogate the portfolio however you like. Subsidiary to Group, Ring Fenced to Not Ring Fenced, trade or product level. Who cares, its up to you once you get the data stack right. Output is multidimensional portfolio query. Why???</p>
-<p>You’re trying to:</p>
-<blockquote>
-<p>Optimise a portfolio under multiple dimensions of data, constraints, and uncertainty</p>
-</blockquote>
-<p>The off the shelf IT system that will do this to your exact needs and data is; there isn’t ever one. Every constraint you add also breaks your existing approach. There is one more critical assumption that underpins this approach:</p>
-<blockquote>
-<p>Across the entire group, a decision made many years ago was that each functional business would share the same IT architecture. So for KYC, the same shared system operates across each sub group. Separate instances of systems, e.g. independent installation and data, are NOT implemented at each sub group level.</p>
-</blockquote>
-<p>Hence the fix must be applied outside of the core system (whatever it is). Unless you are feeling brave and someone is going to let you fix the code base properly. Which would be fine, but good luck with getting that approved.</p>
-<p>To start with we are going to adopt a fairly standard legal entity hierarchy, Level 0 of L0 is ultimate parent. Then on down to L6. That is sufficent for most structures as L6 and below can be flattened as required. This is all populated with made up entities and structures, but it is a rough proxy for what you get IRL. Its good enough for the purpose at hand, I don&rsquo;t want to burn the hours to re model an existing bank in all its glory. Yes, its ugly, but it is limited. IRL large domestic banks run to several hundred legal entities. The brings enough scale for later, when we add (pretend) products, limits and exposures:</p>
-<p><img alt="Legal entity structure" loading="lazy" src="/images/legal_entity_structure.png"></p>
-<p>In database problems, sometimes there is a unique ID challenge. Instead of renaming everything and fundamentally changing tables, you can create a unique ID by combining individual attributes in a unique fashion. For our pretend back, we are going to start with just the legal entity structure, and then we are going to add some deductive reasoning to be derive ways in which we can strata the data based on regulatory approach.</p>
-<p>See data, files at bottom. Now I did the initial set up the hard way for a small sample structure, then used AI (Claude) to expand the data set to what you see in the python file. I am not lazy, but there are limits.</p>
-<p>The basic model being adopted here is (i) Legal Entity data; (ii) Limit and Product Data; then (iii) Product and exposure data applied across the structure. We have preserved all original content from legacy system on legal entity. Then the important attributes, which boils down to RWA CRR treatment, will be derived and linked. The end game is a dynamic portfolio view that reflects all data, and reports as required for CRR reporting.</p>
-<p>I know this seems a bit painful, there is a reason why. Approaching the problem this way means you can apply n rules, or change the rules, without destroying the data. So no deleting bobs_house when bob moves. If CRR rules change, fine. Adapt the dynamic model. Slow now, fast later.</p>
-<p>Here is the data model as an image:</p>
-<p><img alt="Data model overview" loading="lazy" src="/images/data_model_overview.png"></p>
-<p>The following rules will be applied to the data:</p>
-<ul>
-<li>The Bank entity is an RFB entity. So are all of its directly held subsidiaries. These will be deemed to be RFB.</li>
-<li>Of the RFB entities, all UK domiciled entities will be deemed to be CORE.</li>
-<li>All non UK domiciled entities will deemed to be NON CORE. Now, this is a bit of a hack, but to be honest it is very close to how the CRR legislation is actually applied. Good enough for now.</li>
-<li>The Group entity, and all other non Bank subs will be deemed to be outside the RFB, and will be characterised as NRFB.</li>
-</ul>
-<p>Now this is an abstraction of the IRL rules. But, all the actual CRR rules could be applied. Too much work for this mini project, but it is achievable.</p>
-<p>This results in the decision tree as shown:</p>
-<p>Now to complete our pretend Bank we are going to add a bunch of random exposures across the entities. The products, limits and types will be as follows. This is of course grossly over simplified.</p>
-<table>
-  <thead>
-      <tr>
-          <th>Limit Type</th>
-          <th>Limit Sub Type</th>
-          <th>Product</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Hard</td>
-          <td>Traded</td>
-          <td>FX Forward</td>
-      </tr>
-      <tr>
-          <td>Hard</td>
-          <td>Traded</td>
-          <td>Committed Repo</td>
-      </tr>
-      <tr>
-          <td>Hard</td>
-          <td>Lending</td>
-          <td>Committed Loan</td>
-      </tr>
-      <tr>
-          <td>Hard</td>
-          <td>Lending</td>
-          <td>Overdraft</td>
-      </tr>
-      <tr>
-          <td>Hard</td>
-          <td>Traded</td>
-          <td>Bond Borrow</td>
-      </tr>
-      <tr>
-          <td>Hard</td>
-          <td>Traded</td>
-          <td>Xccy Swap</td>
-      </tr>
-      <tr>
-          <td>Soft</td>
-          <td>Settlement</td>
-          <td>Payment Intraday</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<p><img alt="CRR treatment decision tree" loading="lazy" src="/images/crr_decision_tree.png"></p>
-<hr>
-<p>The basics of the code snippet setting CRR treatment are below:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">def crr_treatment(cred_id, deb_id):
-</span></span><span class="line"><span class="cl">    &#34;&#34;&#34;
-</span></span><span class="line"><span class="cl">    Derive CRR regulatory treatment for a bilateral exposure.
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    Rules (applied in order):
-</span></span><span class="line"><span class="cl">      RFB_X        : creditor inside Bank sub-group, debtor outside
-</span></span><span class="line"><span class="cl">      NRFB_X       : creditor outside Bank sub-group, debtor inside
-</span></span><span class="line"><span class="cl">      [L2]_CORE    : both in same L2 sub-group, L2 is CORE (UK-domiciled RFB)
-</span></span><span class="line"><span class="cl">      [L2]_NON_CORE: both in same L2 sub-group, L2 is NON CORE (non-UK RFB)
-</span></span><span class="line"><span class="cl">      RFB_INTERNAL : both inside Bank sub-group, different L2 sub-groups
-</span></span><span class="line"><span class="cl">      NRFB_CROSS   : both outside Bank sub-group, different L2 sub-groups
-</span></span><span class="line"><span class="cl">    &#34;&#34;&#34;
-</span></span><span class="line"><span class="cl">    cr_in_bank = cred_id in bank_subtree
-</span></span><span class="line"><span class="cl">    de_in_bank = deb_id  in bank_subtree
-</span></span><span class="line"><span class="cl">    cr_l2      = get_l2_ancestor(cred_id)
-</span></span><span class="line"><span class="cl">    de_l2      = get_l2_ancestor(deb_id)
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    if cr_in_bank and not de_in_bank:
-</span></span><span class="line"><span class="cl">        return &#39;RFB_X&#39;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    if not cr_in_bank and de_in_bank:
-</span></span><span class="line"><span class="cl">        return &#39;NRFB_X&#39;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    if cr_l2 and de_l2 and cr_l2 == de_l2:
-</span></span><span class="line"><span class="cl">        l2 = emap[cr_l2]
-</span></span><span class="line"><span class="cl">        if l2[&#39;rf&#39;] == &#39;CORE&#39;:     return f&#34;{l2[&#39;name&#39;]}_CORE&#34;
-</span></span><span class="line"><span class="cl">        if l2[&#39;rf&#39;] == &#39;NON CORE&#39;: return f&#34;{l2[&#39;name&#39;]}_NON_CORE&#34;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    if cr_in_bank and de_in_bank:
-</span></span><span class="line"><span class="cl">        return &#39;RFB_INTERNAL&#39;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    return &#39;NRFB_CROSS&#39;
-</span></span></code></pre></div><p>No, its not all the code, just the simplified part. To do the whole thing you need to deploy the equivalent of recursive SQL techniques. This lets you walk back up from the exposure at whatever subsidiary, to the relevant grouping. This is akin to figuring who someone&rsquo;s parents are from family data. Common use cases of this technique include counting sequences and finding family tree ancestors using common table expressions (CTEs). In this manner say you started at an L6 subsidiary. You walk back up the hierarchy until you run out of options, or more eloquantly apply common table expression (CTE) as a query that continuously references a previous result until it returns an empty result. You can use panda&rsquo;s dataframes for this, or you can tell your favourite AI to use that tool suite. Code is irrelevant, concept is important.</p>
-<p>As an aside, don&rsquo;t knock old school SQL. It was invented in the 1970&rsquo;s to solve real world problems. If you write a bit of code or small language and someone is using it 60 years later, you probably did something smart. You also probably did it with pencil and paper. Development tools were largely no existant then. These people really were geniuses in their day. Que Ted Codd reference &hellip;.</p>
-<p>Read about the crazy early days here if you have the interest:</p>
-<p><a href="https://archive.computerhistory.org/resources/access/text/2013/05/102702562-05-01-acc.pdf">https://archive.computerhistory.org/resources/access/text/2013/05/102702562-05-01-acc.pdf</a></p>
-<p>Best quote:</p>
-<blockquote>
-<p>Ted looked at what was going on out there and saw what I like the call “higgledy-piggledy” systems. There was no abstraction; there was no mathematics. It was just write code and hope it works.</p>
-</blockquote>
-<p>Some things really don&rsquo;t change. The original vibe coders&hellip;&hellip; Now I will shut up or I&rsquo;ll have to move this to the Comp Science section, and I cannot be bothered.</p>
-<hr>
-<h2 id="the-solution">The solution<a hidden class="anchor" aria-hidden="true" href="#the-solution">#</a></h2>
-<p>Now we have our standing assumptions. We have run the rules over the data to create the tables shown above. And if the rules change, we can change the tables of derived attributes as needed. That part is buried in the python. The tables used for below are static, as in the rules set out applied to the made up structure, with made up products and limits applied at subsidiary level. Note that aggregation is permitted. So at L3, exposure is all of the exposure at L4 and below aggregated.</p>
-<p>Brief pause, IRL there will be netting, and subadditivity problems all over the place. I am aware, but don&rsquo;t want this project to get out of control for scope. As presented is good enough, but its not complete or accurate to the nth degree.</p>
-<p>Now, wrapping the data tables up in a little widget, we now have a dynamic reporting tool. Anything you like in combination. If we had made the decision to have lost say L3 and used that as the regulatory bucket aggregator (eg NON CORE), then that would be a set aggregator. You could sum for that, but noting else. You would also have lost the ability to aggregate at L4 group for any other reason. By keeping the legal entity data pure, we have avoided that problem all together.</p>
-<p>It is harder to establish regulatory risk attributes by applying a suite of rules at the product exposure level, but not as hard you might think. Once done, its set and forget until the position runs off. But the trouble is rewarded, as you can then report any entity, to any entity (or group), with or without the CRR lens applied.</p>
-<hr>
-<p>Lets take our subset of the portfolio from the above image, and lay it out in table form. Same rules have been applied, nothing manual has been adjusted.</p>
-<h2 id="regulatory-treatment--100-loan-matrix-5-entities">Regulatory Treatment — £100 Loan Matrix (5 Entities)<a hidden class="anchor" aria-hidden="true" href="#regulatory-treatment--100-loan-matrix-5-entities">#</a></h2>
-<hr>
-<h3 id="nrfb_cross--both-parties-outside-bank-sub-group-2-records">NRFB_CROSS — both parties outside Bank sub-group (2 records)<a hidden class="anchor" aria-hidden="true" href="#nrfb_cross--both-parties-outside-bank-sub-group-2-records">#</a></h3>
-<table>
-  <thead>
-      <tr>
-          <th>Creditor</th>
-          <th>Domicile</th>
-          <th>Debtor</th>
-          <th>Domicile</th>
-          <th style="text-align: right">Limit GBP</th>
-          <th style="text-align: right">Exposure GBP</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Group Co</td>
-          <td>UK</td>
-          <td>Market Co</td>
-          <td>UK</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-      <tr>
-          <td>Market Co</td>
-          <td>UK</td>
-          <td>Group Co</td>
-          <td>UK</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<h3 id="nrfb_x--creditor-outside-bank-sub-group--debtor-inside-6-records">NRFB_X — creditor outside Bank sub-group → debtor inside (6 records)<a hidden class="anchor" aria-hidden="true" href="#nrfb_x--creditor-outside-bank-sub-group--debtor-inside-6-records">#</a></h3>
-<table>
-  <thead>
-      <tr>
-          <th>Creditor</th>
-          <th>Domicile</th>
-          <th>Debtor</th>
-          <th>Domicile</th>
-          <th style="text-align: right">Limit GBP</th>
-          <th style="text-align: right">Exposure GBP</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Group Co</td>
-          <td>UK</td>
-          <td>Bank Co</td>
-          <td>UK</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-      <tr>
-          <td>Group Co</td>
-          <td>UK</td>
-          <td>Retail Co</td>
-          <td>UK</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-      <tr>
-          <td>Group Co</td>
-          <td>UK</td>
-          <td>Corp Co</td>
-          <td>AU</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-      <tr>
-          <td>Market Co</td>
-          <td>UK</td>
-          <td>Bank Co</td>
-          <td>UK</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-      <tr>
-          <td>Market Co</td>
-          <td>UK</td>
-          <td>Retail Co</td>
-          <td>UK</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-      <tr>
-          <td>Market Co</td>
-          <td>UK</td>
-          <td>Corp Co</td>
-          <td>AU</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<h3 id="rfb_x--creditor-inside-bank-sub-group--debtor-outside-6-records">RFB_X — creditor inside Bank sub-group → debtor outside (6 records)<a hidden class="anchor" aria-hidden="true" href="#rfb_x--creditor-inside-bank-sub-group--debtor-outside-6-records">#</a></h3>
-<table>
-  <thead>
-      <tr>
-          <th>Creditor</th>
-          <th>Domicile</th>
-          <th>Debtor</th>
-          <th>Domicile</th>
-          <th style="text-align: right">Limit GBP</th>
-          <th style="text-align: right">Exposure GBP</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Bank Co</td>
-          <td>UK</td>
-          <td>Group Co</td>
-          <td>UK</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-      <tr>
-          <td>Bank Co</td>
-          <td>UK</td>
-          <td>Market Co</td>
-          <td>UK</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-      <tr>
-          <td>Retail Co</td>
-          <td>UK</td>
-          <td>Group Co</td>
-          <td>UK</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-      <tr>
-          <td>Retail Co</td>
-          <td>UK</td>
-          <td>Market Co</td>
-          <td>UK</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-      <tr>
-          <td>Corp Co</td>
-          <td>AU</td>
-          <td>Group Co</td>
-          <td>UK</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-      <tr>
-          <td>Corp Co</td>
-          <td>AU</td>
-          <td>Market Co</td>
-          <td>UK</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<h3 id="rfb_internal--both-inside-bank-sub-group-cross-l2-boundary-6-records">RFB_INTERNAL — both inside Bank sub-group, cross L2 boundary (6 records)<a hidden class="anchor" aria-hidden="true" href="#rfb_internal--both-inside-bank-sub-group-cross-l2-boundary-6-records">#</a></h3>
-<h4 id="core--core">CORE → CORE<a hidden class="anchor" aria-hidden="true" href="#core--core">#</a></h4>
-<table>
-  <thead>
-      <tr>
-          <th>Creditor</th>
-          <th>Domicile</th>
-          <th>Debtor</th>
-          <th>Domicile</th>
-          <th style="text-align: right">Limit GBP</th>
-          <th style="text-align: right">Exposure GBP</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Bank Co</td>
-          <td>UK</td>
-          <td>Retail Co</td>
-          <td>UK</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-      <tr>
-          <td>Retail Co</td>
-          <td>UK</td>
-          <td>Bank Co</td>
-          <td>UK</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-  </tbody>
-</table>
-<h4 id="core--non-core">CORE → NON CORE<a hidden class="anchor" aria-hidden="true" href="#core--non-core">#</a></h4>
-<table>
-  <thead>
-      <tr>
-          <th>Creditor</th>
-          <th>Domicile</th>
-          <th>Debtor</th>
-          <th>Domicile</th>
-          <th style="text-align: right">Limit GBP</th>
-          <th style="text-align: right">Exposure GBP</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Bank Co</td>
-          <td>UK</td>
-          <td>Corp Co</td>
-          <td>AU</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-      <tr>
-          <td>Retail Co</td>
-          <td>UK</td>
-          <td>Corp Co</td>
-          <td>AU</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-  </tbody>
-</table>
-<h4 id="non-core--core">NON CORE → CORE<a hidden class="anchor" aria-hidden="true" href="#non-core--core">#</a></h4>
-<table>
-  <thead>
-      <tr>
-          <th>Creditor</th>
-          <th>Domicile</th>
-          <th>Debtor</th>
-          <th>Domicile</th>
-          <th style="text-align: right">Limit GBP</th>
-          <th style="text-align: right">Exposure GBP</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Corp Co</td>
-          <td>AU</td>
-          <td>Bank Co</td>
-          <td>UK</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-      <tr>
-          <td>Corp Co</td>
-          <td>AU</td>
-          <td>Retail Co</td>
-          <td>UK</td>
-          <td style="text-align: right">£100</td>
-          <td style="text-align: right">£100</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<p>Note that RFB_INTERNAL covers cross-boundary flows within the Bank sub-group — Bank Co ↔ Retail Co and Bank Co ↔ Corp Co, as well as Retail Co ↔ Corp Co. These are intra-RFB but cross different L2 sub-groups, which is precisely the consolidation elimination problem the post is about: same ring fence, different legal entity, £100 each way that nets to zero at the group level but needs to be tracked individually at the entity level.</p>
-<hr>
-<h3 id="how-the-widget-works">How the Widget Works<a hidden class="anchor" aria-hidden="true" href="#how-the-widget-works">#</a></h3>
-<p>The widget is a self-contained interactive data application built entirely in vanilla HTML, CSS and JavaScript — no frameworks, no external dependencies beyond the world map fetch.</p>
-<h4 id="data-model">Data model<a hidden class="anchor" aria-hidden="true" href="#data-model">#</a></h4>
-<p>Three normalised JavaScript arrays mirror the three CSV dataframes exactly:</p>
-<p>ENTITIES — 62 legal entities with all attributes
+<a href=https://huggingface.co/SIH/penguin-classifier-sklearn>https://huggingface.co/SIH/penguin-classifier-sklearn</a></p><p>A Primer on Ring Fencing concepts is appended if you have not crossed paths with this. It&rsquo;s sort of essential for this piece of work.</p><p>So, ‘you’ means just you. Great. How many instances of you are there in the world? Biologically, one. If you have a bank account, then there is one KYC for you in every bank you deal with. There is one of you for whatever memberships you have. Leases, property titles, streaming services, library card, etc, etc. IRL there are possibly thousands of instances of ‘you’ in hundreds and hundreds of systems. Not all will be correct. So we are at many instances of classifiers where ‘you’ needs to be just you. This is a classic many to many entity relationship problem. Thankfully there are ways of dealing with this. Intelligently.</p><blockquote><p>Warning: There is no magic system solution. You are going to have to DIY it to do it properly. And very likely outside of whatever crap core system you use for you job. Layered solution is probably the only way forward. This means you need a brain, you need a back end to your core system data, and you need the ability to run code on something, on a server, outside of said core system. Easy on a desktop if you are a decent programmer, and have some basic tools. Come back in five years if you need a robust enterprise wide system solution. Oh, and get approval for a lot of money. That no one senior who is not a programmer will ever want to give you. Consider giving up now is my advice. Or write a blog about it.</p></blockquote><p>Based on the above nonsense, you should get the broad idea now. A bit more philosophy, then into the doing it part.</p><p>Bogost argues that everything that exists—humans, animals, machines, objects—has its own way of being, and we should try to take those non-human perspectives seriously. This approach is part of a broader philosophical movement called. Object-Oriented Ontology (OOO). That sounds a lot like object oriented programming, because it is a lot like that. So you don’t have 10,000 objects representing trees. You have a class of objects. Of which some are trees, and some are bushes. The key mental part here is:</p><ul><li>In strict class hierarchies → they are different types
+In flexible systems → they are different configurations</li></ul><p>To sort out this mess, we will need both of the above.</p><p>Bogost says we should be ‘Writing code that mimics how an object interacts with others’. Could not agree more, and we are about to do all of that. The context of which will be the interaction of legal entities within a banking structure, layering on the multi dimensional aspects of regulatory treatment. The end game is being able to compressive answer ‘what is the…..’ type questions across the legal entity and regulatory credit risk landscape. Which needs a network data landscape that one on is going to give you, that aligns with the regulatory landscape in ways no one who designed KYC systems ever bothered to think about. To be fair, they could have, but someone would have cheaped out and not wanted to pay for it back in the day. This is the problem of someone who does not know what they are doing being pushed into making a decision they shouldn’t make.</p><hr><h2 id=the-problem-statement-restated>The Problem Statement Restated<a hidden class=anchor aria-hidden=true href=#the-problem-statement-restated>#</a></h2><p>Before moving onto solution paths, it&rsquo;s worth really digging into the gritty details of the problem. I want this to be crystal clear. The broad idea is superordinance. The specifics we are going to dig into is just where and what we should apply the concept to. The answer is not where you first think.</p><p>To strip things back to basics here is a simplified network diagram of just 5 of the legal entities. For simplicity sake they have a notional 100 loan to each other.</p><p><img alt="£100 loan network — 5 entities" loading=lazy src=/images/network_mini_loan.png></p><p>Forgetting about code. Any exposure from Bank Co down to the non UK domiciled entity, for CRR has to be NON CORE.</p><blockquote><p>The legal entity is just that, there is no CRR treatment for just the one entity. It is the relationship between two entities, across a credit product, that drives CRR treatment.</p></blockquote><p>This is why we want to leave legal entities as they are.</p><p>For the single loan it (lentity - exposure - entity) is NON CORE. That is fine. Now the Market Co lending to the Corp Co, that has to be a different CRR treatment. But wait, we have the Corp Co in NON CORE. But it cannot be that from the perspective of the Market Co. Conundrum! I know, I will create a new group name that is not a legal entity level. This will mirror Corp Co. So one instance of Corp Co for the NON CORE book of exposures, and then another instance of Corp Co for anything that crosses the ring fence perimeter. I guess we can do that for each instance where we have a product from one legal entity to multiple other legal entities, some of which will map the exposure into different CRR buckets.</p><p>You can appreciate that in doing this you will:</p><ul><li>have a lot of duplications</li><li>have lost the integrity of you legal entity structure</li><li>run the risk of manual op errors in creating and linking the duplications</li><li>probably go mad eventually with the mess you have made&mldr;.</li></ul><hr><p>So how best to avoid the traps laid out? Apply the concept of superordinance of course! But&mldr;. apply it to each exposure, <strong>not</strong> the legal entities.</p><hr><h2 id=the-right-problem-statement>The Right Problem Statement<a hidden class=anchor aria-hidden=true href=#the-right-problem-statement>#</a></h2><p>Or the less wrong one if you want. We want to be able to answer questions about our portfolio, about the legal structure, and regulatory aspects, and exposures, and often all three at once. Therefor the correct problem statement is something like ‘what is the minimum data and attribute set that will permit investigation of the portfolio across the legal and regulatory landscape to fulfil regulatory report requirements together with portfolio management obligations’. Bit of a word salad, but you get the drift. To do the job, what do I need as the minimum viable data set. Of which other bits I can derive later.</p><p>CRR waiver letters, over simplified will list legal entities that extend exposure, and a list of all legal entities that said exposure can have the noted CRR waivers in the letter applied to. What they really are in intent is two fold; (i) they identify what the new rules shall apply to; and (ii) the afford permission to apply &lsquo;different&rsquo; regulatory treatment where permitted. This is probably why they are actually titled Permission letters IRL. The what, in the case of the letter is the identified &lsquo;firm/s&rsquo;, or legal entities. From which exposures to any listed subsidiaries may receive the diminished CRR treatment. At no point do the letters tell you there cannot be other exposures, or how to go about applying the reduced CRR regulations.</p><p><strong>What the letter does not stipulate is that the legal entities may only have exposure to the listed entities. It says only the listed one&rsquo;s can benefit from the CRR waivers listed</strong> In other words, the same legal entities at the top can, and probably do have many different exposures to other non listed legal entities. This is both necessary and expected for the group to function as whole. You just won&rsquo;t get the same CRR waiver or RWA adjustments. It is this critical aspect that tilts the logic of the solution away from treatment of the legal entity arrangement, to treatment of the exposures themselves. The path to the solution at this point should drive you away from static excel files of any kind.</p><p>As per bobs_house, the mistake is that you abuse your legal entity structure by switching a legal aggregation level at L1 out for a regulatory classifier. Eg make up a name inside_ring_fence, and presumable outside_ring_fence. Then hey presto you can slice your portfolio by ring fencing attribute! Done. No, actually.</p><p>You have taken a legal entity attribute, and swapped it for a regulatory alignment attribute. Your portfolio of things now uses one type, legal entity, for two different things. This will break things down the track. DO NOT DO THIS. It&rsquo;s just lazy, or a constraint applied by management that won’t work. You have given up the coherence of your entity data. Nothing good can come from this, even as you might be tempted for this quick fix.</p><h2 id=the-doing>The doing<a hidden class=anchor aria-hidden=true href=#the-doing>#</a></h2><p>Enough nonsense, lets lay out a basic approach, using made up but realistic data set. And actually work through the problems. I am going to do this in python, but you can use whatever you like or have. At enterprise scale level it won’t be python, but you could probably set up a parallel reporting system that would work quite well.</p><p>As laid out above, we are going to establish a pretend bank, add some made up data, and then figure out a way to present the portfolio from BOTH a legal entity basis with no loss of coherence, as well as from a regulatory risk exposure perspective. Then, because we did not screw up the data, you can interrogate the portfolio however you like. Subsidiary to Group, Ring Fenced to Not Ring Fenced, trade or product level. Who cares, its up to you once you get the data stack right. Output is multidimensional portfolio query. Why???</p><p>You’re trying to:</p><blockquote><p>Optimise a portfolio under multiple dimensions of data, constraints, and uncertainty</p></blockquote><p>The off the shelf IT system that will do this to your exact needs and data is; there isn’t ever one. Every constraint you add also breaks your existing approach. There is one more critical assumption that underpins this approach:</p><blockquote><p>Across the entire group, a decision made many years ago was that each functional business would share the same IT architecture. So for KYC, the same shared system operates across each sub group. Separate instances of systems, e.g. independent installation and data, are NOT implemented at each sub group level.</p></blockquote><p>Hence the fix must be applied outside of the core system (whatever it is). Unless you are feeling brave and someone is going to let you fix the code base properly. Which would be fine, but good luck with getting that approved.</p><p>To start with we are going to adopt a fairly standard legal entity hierarchy, Level 0 of L0 is ultimate parent. Then on down to L6. That is sufficient for most structures as L6 and below can be flattened as required. This is all populated with made up entities and structures, but it is a rough proxy for what you get IRL. It&rsquo;s good enough for the purpose at hand, I don&rsquo;t want to burn the hours to re model an existing bank in all its glory. Yes, its ugly, but it is limited. IRL large domestic banks run to several hundred legal entities. The brings enough scale for later, when we add (pretend) products, limits and exposures:</p><p><img alt="Legal entity structure" loading=lazy src=/images/legal_entity_structure.png></p><p>In database problems, sometimes there is a unique ID challenge. Instead of renaming everything and fundamentally changing tables, you can create a unique ID by combining individual attributes in a unique fashion. For our pretend back, we are going to start with just the legal entity structure, and then we are going to add some deductive reasoning to be derive ways in which we can strata the data based on regulatory approach.</p><p>See data, files at bottom. Now I did the initial set up the hard way for a small sample structure, then used AI (Claude) to expand the data set to what you see in the python file. I am not lazy, but there are limits.</p><p>The basic model being adopted here is (i) Legal Entity data; (ii) Limit and Product Data; then (iii) Product and exposure data applied across the structure. We have preserved all original content from legacy system on legal entity. Then the important attributes, which boils down to RWA CRR treatment, will be derived and linked. The end game is a dynamic portfolio view that reflects all data, and reports as required for CRR reporting.</p><p>I know this seems a bit painful, there is a reason why. Approaching the problem this way means you can apply n rules, or change the rules, without destroying the data. So no deleting bobs_house when bob moves. If CRR rules change, fine. Adapt the dynamic model. Slow now, fast later.</p><p>Here is the data model as an image:</p><p><img alt="Data model overview" loading=lazy src=/images/data_model_overview.png></p><p>The following rules will be applied to the data:</p><ul><li>The Bank entity is an RFB entity. So are all of its directly held subsidiaries. These will be deemed to be RFB.</li><li>Of the RFB entities, all UK domiciled entities will be deemed to be CORE.</li><li>All non UK domiciled entities will deemed to be NON CORE. Now, this is a bit of a hack, but to be honest it is very close to how the CRR legislation is actually applied. Good enough for now.</li><li>The Group entity, and all other non Bank subs will be deemed to be outside the RFB, and will be characterised as NRFB.</li></ul><p>Now this is an abstraction of the IRL rules. But, all the actual CRR rules could be applied. Too much work for this mini project, but it is achievable.</p><p>This results in the decision tree as shown:</p><p><img alt="CRR treatment decision tree" loading=lazy src=/images/crr_decision_tree.png></p><p>Now to complete our pretend Bank we are going to add a bunch of random exposures across the entities. The products, limits and types will be as follows. This is of course grossly over simplified.</p><table><thead><tr><th>Limit Type</th><th>Limit Sub Type</th><th>Product</th></tr></thead><tbody><tr><td>Hard</td><td>Traded</td><td>FX Forward</td></tr><tr><td>Hard</td><td>Traded</td><td>Committed Repo</td></tr><tr><td>Hard</td><td>Lending</td><td>Committed Loan</td></tr><tr><td>Hard</td><td>Lending</td><td>Overdraft</td></tr><tr><td>Hard</td><td>Traded</td><td>Bond Borrow</td></tr><tr><td>Hard</td><td>Traded</td><td>Xccy Swap</td></tr><tr><td>Soft</td><td>Settlement</td><td>Payment Intraday</td></tr></tbody></table><hr><p><em>Update: an earlier version of this section showed only the leaf-level <code>crr_treatment</code> function and waved at &ldquo;the equivalent of recursive SQL techniques&rdquo; for the ancestor walk without actually showing it. Fair enough to skip it for a first pass, less fair to leave readers with no way to run the thing. Below is the full, working recursion — two genuinely recursive functions, both plugged straight into the same <code>crr_treatment</code> — verified against the actual exposure data at the bottom of this post: it reproduces all 300 records exactly.</em></p><p>The two recursive pieces are:</p><ul><li><strong><code>subtree(root)</code></strong> — descendant enumeration. Base case: no children. Recursive case: union of every child&rsquo;s own subtree. This is how <code>bank_subtree</code> (everything under Bank Co) gets built.</li><li><strong><code>get_group_ancestor(entity_id)</code></strong> — the parent-chain walk. This is the Python equivalent of a recursive SQL CTE: an anchor case (no parent, or the parent is a branch head) plus a recursive step that re-references the previous result, run until it terminates. You walk back up from wherever the exposure sits — say an L6 subsidiary — until you hit the entity&rsquo;s &ldquo;L2&rdquo; group node (the ancestor that is a direct child of its own L1 branch head: Bank Co, Property Co, Wealth Co, or Market Co). Same idea as walking a family tree back to find someone&rsquo;s parents, and the same idea as a CTE that keeps re-joining against the previous result set until a step returns nothing.</li></ul><p>One nuance worth being precise about: most SQL engines evaluate a recursive CTE <em>iteratively</em> — repeatedly re-running the recursive member against the newest rows until none arrive — rather than via literal call-stack recursion. Same self-referential structure, different execution mechanism to what Python does below.</p><p>The other thing the original snippet skipped: real legacy hierarchy data occasionally has a cycle in it — a bad migration, a fat-fingered <code>parent_id</code> that points back into its own ancestor chain. A naive walk-up loops forever on that. <code>get_group_ancestor</code> below guards against it explicitly, and is memoised so a large exposure table doesn&rsquo;t repeatedly re-walk the same chain — computed once per entity, O(n) overall rather than O(n × depth).</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>from</span> <span class=nn>collections</span> <span class=kn>import</span> <span class=n>defaultdict</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>functools</span> <span class=kn>import</span> <span class=n>lru_cache</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># emap[id] = {&#34;name&#34;:..., &#34;level&#34;:..., &#34;parent&#34;:..., &#34;rf&#34;:...}</span>
+</span></span><span class=line><span class=cl><span class=c1># parent[id] = parent_id or None</span>
+</span></span><span class=line><span class=cl><span class=c1># — both built from df_legal_entity.csv; see the full script linked below</span>
+</span></span><span class=line><span class=cl><span class=c1># for the loading step.</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>ROOT</span> <span class=o>=</span> <span class=s1>&#39;E000&#39;</span>       <span class=c1># Group Co — ultimate parent</span>
+</span></span><span class=line><span class=cl><span class=n>BANK_ROOT</span> <span class=o>=</span> <span class=s1>&#39;E001&#39;</span>  <span class=c1># Bank Co — the ring-fenced sub-group head</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>children</span> <span class=o>=</span> <span class=n>defaultdict</span><span class=p>(</span><span class=nb>list</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>eid</span><span class=p>,</span> <span class=n>p</span> <span class=ow>in</span> <span class=n>parent</span><span class=o>.</span><span class=n>items</span><span class=p>():</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>p</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>children</span><span class=p>[</span><span class=n>p</span><span class=p>]</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>eid</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>subtree</span><span class=p>(</span><span class=n>root</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;Recursive descendant enumeration: base case = no children,
+</span></span></span><span class=line><span class=cl><span class=s2>    recursive case = union of every child&#39;s subtree.&#34;&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=n>nodes</span> <span class=o>=</span> <span class=p>{</span><span class=n>root</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>c</span> <span class=ow>in</span> <span class=n>children</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>root</span><span class=p>,</span> <span class=p>[]):</span>
+</span></span><span class=line><span class=cl>        <span class=n>nodes</span> <span class=o>|=</span> <span class=n>subtree</span><span class=p>(</span><span class=n>c</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>nodes</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>bank_subtree</span> <span class=o>=</span> <span class=n>subtree</span><span class=p>(</span><span class=n>BANK_ROOT</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nd>@lru_cache</span><span class=p>(</span><span class=n>maxsize</span><span class=o>=</span><span class=kc>None</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>get_group_ancestor</span><span class=p>(</span><span class=n>entity_id</span><span class=p>,</span> <span class=n>_seen</span><span class=o>=</span><span class=nb>frozenset</span><span class=p>()):</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;Recursive ancestor walk with cycle guard — the Python equivalent
+</span></span></span><span class=line><span class=cl><span class=s2>    of a recursive SQL CTE. Returns the ancestor of entity_id that is a
+</span></span></span><span class=line><span class=cl><span class=s2>    direct child of entity_id&#39;s own L1 branch head, or None if entity_id
+</span></span></span><span class=line><span class=cl><span class=s2>    IS a branch head (or the root itself).&#34;&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>entity_id</span> <span class=ow>in</span> <span class=n>_seen</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>raise</span> <span class=ne>ValueError</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;cycle detected in parent chain at </span><span class=si>{</span><span class=n>entity_id</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>p</span> <span class=o>=</span> <span class=n>parent</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>entity_id</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>p</span> <span class=ow>is</span> <span class=kc>None</span> <span class=ow>or</span> <span class=n>p</span> <span class=o>==</span> <span class=n>ROOT</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=kc>None</span>
+</span></span><span class=line><span class=cl>    <span class=n>grandp</span> <span class=o>=</span> <span class=n>parent</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>p</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>grandp</span> <span class=o>==</span> <span class=n>ROOT</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>entity_id</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>get_group_ancestor</span><span class=p>(</span><span class=n>p</span><span class=p>,</span> <span class=n>_seen</span> <span class=o>|</span> <span class=p>{</span><span class=n>entity_id</span><span class=p>})</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>crr_treatment</span><span class=p>(</span><span class=n>cred_id</span><span class=p>,</span> <span class=n>deb_id</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;
+</span></span></span><span class=line><span class=cl><span class=s2>    Derive CRR regulatory treatment for a bilateral exposure.
+</span></span></span><span class=line><span class=cl><span class=s2>
+</span></span></span><span class=line><span class=cl><span class=s2>    Rules (applied in order):
+</span></span></span><span class=line><span class=cl><span class=s2>      RFB_X          : creditor inside Bank sub-group, debtor outside
+</span></span></span><span class=line><span class=cl><span class=s2>      NRFB_X         : creditor outside Bank sub-group, debtor inside
+</span></span></span><span class=line><span class=cl><span class=s2>      [group]_CORE     : both share a group ancestor that is CORE (UK-domiciled RFB)
+</span></span></span><span class=line><span class=cl><span class=s2>      [group]_NON_CORE : both share a group ancestor that is NON CORE (non-UK RFB)
+</span></span></span><span class=line><span class=cl><span class=s2>      [group]_NRFB     : both share a group ancestor outside the ring-fenced bank
+</span></span></span><span class=line><span class=cl><span class=s2>      RFB_INTERNAL   : both inside Bank sub-group, different group ancestors
+</span></span></span><span class=line><span class=cl><span class=s2>      NRFB_CROSS     : both outside Bank sub-group, no shared group ancestor
+</span></span></span><span class=line><span class=cl><span class=s2>    &#34;&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=n>cr_in_bank</span> <span class=o>=</span> <span class=n>cred_id</span> <span class=ow>in</span> <span class=n>bank_subtree</span>
+</span></span><span class=line><span class=cl>    <span class=n>de_in_bank</span> <span class=o>=</span> <span class=n>deb_id</span>  <span class=ow>in</span> <span class=n>bank_subtree</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>cr_in_bank</span> <span class=ow>and</span> <span class=ow>not</span> <span class=n>de_in_bank</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=s1>&#39;RFB_X&#39;</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=ow>not</span> <span class=n>cr_in_bank</span> <span class=ow>and</span> <span class=n>de_in_bank</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=s1>&#39;NRFB_X&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>cr_grp</span> <span class=o>=</span> <span class=n>get_group_ancestor</span><span class=p>(</span><span class=n>cred_id</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>de_grp</span> <span class=o>=</span> <span class=n>get_group_ancestor</span><span class=p>(</span><span class=n>deb_id</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>cr_grp</span> <span class=ow>and</span> <span class=n>de_grp</span> <span class=ow>and</span> <span class=n>cr_grp</span> <span class=o>==</span> <span class=n>de_grp</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>grp</span> <span class=o>=</span> <span class=n>emap</span><span class=p>[</span><span class=n>cr_grp</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=n>grp</span><span class=p>[</span><span class=s1>&#39;rf&#39;</span><span class=p>]</span> <span class=o>==</span> <span class=s1>&#39;CORE&#39;</span><span class=p>:</span>     <span class=k>return</span> <span class=sa>f</span><span class=s2>&#34;</span><span class=si>{</span><span class=n>grp</span><span class=p>[</span><span class=s1>&#39;name&#39;</span><span class=p>]</span><span class=si>}</span><span class=s2>_CORE&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=n>grp</span><span class=p>[</span><span class=s1>&#39;rf&#39;</span><span class=p>]</span> <span class=o>==</span> <span class=s1>&#39;NON CORE&#39;</span><span class=p>:</span> <span class=k>return</span> <span class=sa>f</span><span class=s2>&#34;</span><span class=si>{</span><span class=n>grp</span><span class=p>[</span><span class=s1>&#39;name&#39;</span><span class=p>]</span><span class=si>}</span><span class=s2>_NON_CORE&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=sa>f</span><span class=s2>&#34;</span><span class=si>{</span><span class=n>grp</span><span class=p>[</span><span class=s1>&#39;name&#39;</span><span class=p>]</span><span class=si>}</span><span class=s2>_NRFB&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>cr_in_bank</span> <span class=ow>and</span> <span class=n>de_in_bank</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=s1>&#39;RFB_INTERNAL&#39;</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=s1>&#39;NRFB_CROSS&#39;</span>
+</span></span></code></pre></div><p>Note the <code>[group]_NRFB</code> branch: the original simplified version of this function only grouped entities <em>inside</em> the Bank Co sub-group (giving them a CORE/NON_CORE label) and collapsed everyone else to a flat <code>NRFB_CROSS</code>. The dataset behind this post actually applies the same group-ancestor logic to every branch — two entities that share a common group ancestor under Property Co, Wealth Co, or Market Co get labelled <code>{ancestor name}_NRFB</code> rather than being flattened. The function above now does that too, uniformly, via the same recursive walk — which is also just a tidier way to write it than special-casing Bank Co.</p><p>The <code>l1_group</code> and <code>crr_aggregation</code> columns in the published CSVs, and the equivalent fields baked into the JS widget&rsquo;s data, are the <em>cached output</em> of this script — computed once and stored, not recomputed live by the widget. That&rsquo;s a completely normal pattern (compute once, cache, refresh on change) but it&rsquo;s worth naming as a cache rather than a derivation: if the entity hierarchy ever changes, something has to re-run this script and refresh those columns, or they go stale. Consider it the automatable version of the &ldquo;derive it, don&rsquo;t hand-add it&rdquo; principle from earlier in this post.</p><p>For anything past this toy L0–L6 example — deeper or messier real hierarchies, hundreds of thousands of exposures rather than 300 — two things to reach for: <code>networkx</code> instead of hand-rolled recursion (<code>nx.ancestors()</code> etc. give you a tested, cycle-aware graph API for the same problem), and be aware Python&rsquo;s default recursion limit (~1000) and lack of tail-call optimisation mean a very deep or genuinely cyclic chain would raise <code>RecursionError</code> before an iterative stack-based walk would fail. Not a real risk at six levels, but worth knowing if this pattern gets reused somewhere deeper. Pandas has no built-in recursive-ancestor primitive either way — &ldquo;use pandas for this&rdquo; still means hand-rolling a loop very like the one above.</p><p>The full script — entity loading, both recursive functions, and a self-check that validates it against <code>df_limits_exposures.csv</code> — is linked at the bottom of this post under Data Files. Running it directly reproduces a 300/300 (100%) match against the published exposure data.</p><p>As an aside, don&rsquo;t knock old school SQL. It was invented in the 1970&rsquo;s to solve real world problems. If you write a bit of code or small language and someone is using it 60 years later, you probably did something smart. You also probably did it with pencil and paper. Development tools were largely nonexistent then. These people really were geniuses in their day. Cue Ted Codd reference &mldr;.</p><p>Read about the crazy early days here if you have the interest:</p><p><a href=https://archive.computerhistory.org/resources/access/text/2013/05/102702562-05-01-acc.pdf>https://archive.computerhistory.org/resources/access/text/2013/05/102702562-05-01-acc.pdf</a></p><p>Best quote:</p><blockquote><p>Ted looked at what was going on out there and saw what I like the call “higgledy-piggledy” systems. There was no abstraction; there was no mathematics. It was just write code and hope it works.</p></blockquote><p>Some things really don&rsquo;t change. The original vibe coders&mldr;&mldr; Now I will shut up or I&rsquo;ll have to move this to the Comp Science section, and I cannot be bothered.</p><hr><h2 id=the-solution>The solution<a hidden class=anchor aria-hidden=true href=#the-solution>#</a></h2><p>Now we have our standing assumptions. We have run the rules over the data to create the tables shown above. And if the rules change, we can change the tables of derived attributes as needed. That part is buried in the python. The tables used for below are static, as in the rules set out applied to the made up structure, with made up products and limits applied at subsidiary level. Note that aggregation is permitted. So at L3, exposure is all of the exposure at L4 and below aggregated.</p><p>Brief pause, IRL there will be netting, and subadditivity problems all over the place. I am aware, but don&rsquo;t want this project to get out of control for scope. As presented is good enough, but its not complete or accurate to the nth degree.</p><p>Now, wrapping the data tables up in a little widget, we now have a dynamic reporting tool. Anything you like in combination. If we had made the decision to have lost say L3 and used that as the regulatory bucket aggregator (eg NON CORE), then that would be a set aggregator. You could sum for that, but noting else. You would also have lost the ability to aggregate at L4 group for any other reason. By keeping the legal entity data pure, we have avoided that problem all together.</p><p>It is harder to establish regulatory risk attributes by applying a suite of rules at the product exposure level, but not as hard you might think. Once done, its set and forget until the position runs off. But the trouble is rewarded, as you can then report any entity, to any entity (or group), with or without the CRR lens applied.</p><hr><p>Lets take our subset of the portfolio from the above image, and lay it out in table form. Same rules have been applied, nothing manual has been adjusted.</p><h2 id=regulatory-treatment--100-loan-matrix-5-entities>Regulatory Treatment — £100 Loan Matrix (5 Entities)<a hidden class=anchor aria-hidden=true href=#regulatory-treatment--100-loan-matrix-5-entities>#</a></h2><hr><h3 id=nrfb_cross--both-parties-outside-bank-sub-group-2-records>NRFB_CROSS — both parties outside Bank sub-group (2 records)<a hidden class=anchor aria-hidden=true href=#nrfb_cross--both-parties-outside-bank-sub-group-2-records>#</a></h3><table><thead><tr><th>Creditor</th><th>Domicile</th><th>Debtor</th><th>Domicile</th><th style="text-align: right">Limit GBP</th><th style="text-align: right">Exposure GBP</th></tr></thead><tbody><tr><td>Group Co</td><td>UK</td><td>Market Co</td><td>UK</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr><tr><td>Market Co</td><td>UK</td><td>Group Co</td><td>UK</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr></tbody></table><hr><h3 id=nrfb_x--creditor-outside-bank-sub-group--debtor-inside-6-records>NRFB_X — creditor outside Bank sub-group → debtor inside (6 records)<a hidden class=anchor aria-hidden=true href=#nrfb_x--creditor-outside-bank-sub-group--debtor-inside-6-records>#</a></h3><table><thead><tr><th>Creditor</th><th>Domicile</th><th>Debtor</th><th>Domicile</th><th style="text-align: right">Limit GBP</th><th style="text-align: right">Exposure GBP</th></tr></thead><tbody><tr><td>Group Co</td><td>UK</td><td>Bank Co</td><td>UK</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr><tr><td>Group Co</td><td>UK</td><td>Retail Co</td><td>UK</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr><tr><td>Group Co</td><td>UK</td><td>Corp Co</td><td>AU</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr><tr><td>Market Co</td><td>UK</td><td>Bank Co</td><td>UK</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr><tr><td>Market Co</td><td>UK</td><td>Retail Co</td><td>UK</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr><tr><td>Market Co</td><td>UK</td><td>Corp Co</td><td>AU</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr></tbody></table><hr><h3 id=rfb_x--creditor-inside-bank-sub-group--debtor-outside-6-records>RFB_X — creditor inside Bank sub-group → debtor outside (6 records)<a hidden class=anchor aria-hidden=true href=#rfb_x--creditor-inside-bank-sub-group--debtor-outside-6-records>#</a></h3><table><thead><tr><th>Creditor</th><th>Domicile</th><th>Debtor</th><th>Domicile</th><th style="text-align: right">Limit GBP</th><th style="text-align: right">Exposure GBP</th></tr></thead><tbody><tr><td>Bank Co</td><td>UK</td><td>Group Co</td><td>UK</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr><tr><td>Bank Co</td><td>UK</td><td>Market Co</td><td>UK</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr><tr><td>Retail Co</td><td>UK</td><td>Group Co</td><td>UK</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr><tr><td>Retail Co</td><td>UK</td><td>Market Co</td><td>UK</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr><tr><td>Corp Co</td><td>AU</td><td>Group Co</td><td>UK</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr><tr><td>Corp Co</td><td>AU</td><td>Market Co</td><td>UK</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr></tbody></table><hr><h3 id=rfb_internal--both-inside-bank-sub-group-cross-l2-boundary-6-records>RFB_INTERNAL — both inside Bank sub-group, cross L2 boundary (6 records)<a hidden class=anchor aria-hidden=true href=#rfb_internal--both-inside-bank-sub-group-cross-l2-boundary-6-records>#</a></h3><h4 id=core--core>CORE → CORE<a hidden class=anchor aria-hidden=true href=#core--core>#</a></h4><table><thead><tr><th>Creditor</th><th>Domicile</th><th>Debtor</th><th>Domicile</th><th style="text-align: right">Limit GBP</th><th style="text-align: right">Exposure GBP</th></tr></thead><tbody><tr><td>Bank Co</td><td>UK</td><td>Retail Co</td><td>UK</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr><tr><td>Retail Co</td><td>UK</td><td>Bank Co</td><td>UK</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr></tbody></table><h4 id=core--non-core>CORE → NON CORE<a hidden class=anchor aria-hidden=true href=#core--non-core>#</a></h4><table><thead><tr><th>Creditor</th><th>Domicile</th><th>Debtor</th><th>Domicile</th><th style="text-align: right">Limit GBP</th><th style="text-align: right">Exposure GBP</th></tr></thead><tbody><tr><td>Bank Co</td><td>UK</td><td>Corp Co</td><td>AU</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr><tr><td>Retail Co</td><td>UK</td><td>Corp Co</td><td>AU</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr></tbody></table><h4 id=non-core--core>NON CORE → CORE<a hidden class=anchor aria-hidden=true href=#non-core--core>#</a></h4><table><thead><tr><th>Creditor</th><th>Domicile</th><th>Debtor</th><th>Domicile</th><th style="text-align: right">Limit GBP</th><th style="text-align: right">Exposure GBP</th></tr></thead><tbody><tr><td>Corp Co</td><td>AU</td><td>Bank Co</td><td>UK</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr><tr><td>Corp Co</td><td>AU</td><td>Retail Co</td><td>UK</td><td style="text-align: right">£100</td><td style="text-align: right">£100</td></tr></tbody></table><hr><p>Note that RFB_INTERNAL covers cross-boundary flows within the Bank sub-group — Bank Co ↔ Retail Co and Bank Co ↔ Corp Co, as well as Retail Co ↔ Corp Co. These are intra-RFB but cross different L2 sub-groups, which is precisely the consolidation elimination problem the post is about: same ring fence, different legal entity, £100 each way that nets to zero at the group level but needs to be tracked individually at the entity level.</p><hr><h3 id=how-the-widget-works>How the Widget Works<a hidden class=anchor aria-hidden=true href=#how-the-widget-works>#</a></h3><p>The widget is a self-contained interactive data application built entirely in vanilla HTML, CSS and JavaScript — no frameworks, no external dependencies beyond the world map fetch.</p><h4 id=data-model>Data model<a hidden class=anchor aria-hidden=true href=#data-model>#</a></h4><p>Three normalised JavaScript arrays mirror the three CSV dataframes exactly:</p><p>ENTITIES — 62 legal entities with all attributes
 LIMIT_TYPES — 7 product taxonomy entries
-LIMITS_EXP — 300 bilateral limit and exposure records (all made up!)</p>
-<p>These are stored in legal-entity-widget.js and loaded as a static file. The JS builds two lookup maps on startup — EMAP (entity by ID) and LTMAP (limit type by product name) — which act as the join keys, replicating what pandas.merge() does in the Python model.</p>
-<p>Yes, I cheated a bit here. I laid it out, did some of the basic setups in python as proof on concept. Made sure the geographic part worked. Then I had Claude clean up my messy files and join it all to render in the one window. It did not work right off the bat though, there were a lot of fixes required to get it to render properly. I&rsquo;ll add the js file below. You can take the concept and morph the basic approach into anything you like. I spent quite some time on this as I will recycle the concept in other posts.</p>
-<h2 id="said-widget">Said widget<a hidden class="anchor" aria-hidden="true" href="#said-widget">#</a></h2>
-<div class="legal-widget-wrap">
-<style>
+LIMITS_EXP — 300 bilateral limit and exposure records (all made up!)</p><p>These are stored in legal-entity-widget.js and loaded as a static file. The JS builds two lookup maps on startup — EMAP (entity by ID) and LTMAP (limit type by product name) — which act as the join keys, replicating what pandas.merge() does in the Python model.</p><p>Yes, I cheated a bit here. I laid it out, did some of the basic setups in python as proof on concept. Made sure the geographic part worked. Then I had Claude clean up my messy files and join it all to render in the one window. It did not work right off the bat though, there were a lot of fixes required to get it to render properly. I&rsquo;ll add the js file below. You can take the concept and morph the basic approach into anything you like. I spent quite some time on this as I will recycle the concept in other posts.</p><h2 id=said-widget>Said widget<a hidden class=anchor aria-hidden=true href=#said-widget>#</a></h2><div class=legal-widget-wrap><style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 .legal-widget-wrap{
   --bg:#0d1117;--bg2:#161b22;--bg3:#21262d;
@@ -733,143 +151,36 @@ tbody tr:last-child td{border-bottom:none}tbody tr:hover td{background:var(--bg2
 .join-key{background:#EEEDFE;color:#3C3489;padding:1px 6px;border-radius:3px}
 .join-arrow{color:var(--text3)}
 .widget-footer{padding:10px 20px;background:var(--bg2);border-top:0.5px solid var(--border);font-size:11px;color:var(--text3)}
-</style>
-</head>
-<body>
-<div class="widget">
-<div class="widget-header">
-  <div class="widget-title">Group Co — Legal Entity Structure
-    <span>df_legal_entity (62) · df_limit_type (7) · df_limits_exposures (300)</span>
-  </div>
-  <div class="tabs">
-    <button class="tab active" onclick="show('entity')">Legal entities</button>
-    <button class="tab" onclick="show('limtype')">Limit types</button>
-    <button class="tab" onclick="show('lim')">Limits &amp; exposures</button>
-    <button class="tab" onclick="show('map')">Geographic map</button>
-    <button class="tab" onclick="show('tree')">Entity structure</button>
-  </div>
-</div>
-
-
-<div class="panel active" id="pf-entity">
-  <details class="schema-box">
-    <summary>df_legal_entity — schema &amp; joins</summary>
-    <div style="margin-top:6px;line-height:1.9">
-      <strong>PK:</strong> <span class="join-key">entity_id</span> &nbsp;·&nbsp;
-      <strong>Self-join:</strong> <span class="join-key">parent_id</span> <span class="join-arrow">→</span> <span class="join-key">entity_id</span>
-      &nbsp;·&nbsp; <strong>Referenced by:</strong> df_limits_exposures.<span class="join-key">creditor_entity_id</span> / <span class="join-key">debtor_entity_id</span>
-    </div>
-  </details>
-  <div class="filter-row">
-    <select id="f-level" onchange="renderEntities()"><option value="">All levels</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
-    <select id="f-dom" onchange="renderEntities()"><option value="">All domiciles</option><option>UK</option><option>FR</option><option>US</option><option>SG</option><option>JP</option><option>DE</option><option>AU</option><option>CA</option><option>BR</option><option>HK</option></select>
-    <select id="f-rfi" onchange="renderEntities()"><option value="">All RFI</option><option>RFB</option><option>NRFB</option></select>
-    <select id="f-rf" onchange="renderEntities()"><option value="">All ring fence</option><option>CORE</option><option>NON CORE</option><option>NRFB</option></select>
-    <select id="f-l1e" onchange="renderEntities()"><option value="">All L1 groups</option><option>Bank Co</option><option>Property Co</option><option>Wealth Co</option><option>Market Co</option></select>
-    <input id="f-esearch" placeholder="Search name / ID…" oninput="renderEntities()" style="width:150px">
-    <span class="rcount" id="ecount"></span>
-  </div>
-  <div class="table-wrap">
-    <table><thead><tr><th>entity_id</th><th>name</th><th>level</th><th>parent_id</th><th>l1_group</th><th>country</th><th>city</th><th>rfi_status</th><th>ring_fence_status</th><th>crr_aggregation</th><th>address</th></tr></thead>
-    <tbody id="etbody"></tbody></table>
-  </div>
-</div>
-
-
-<div class="panel" id="pf-limtype">
-  <details class="schema-box">
-    <summary>df_limit_type — schema &amp; joins</summary>
-    <div style="margin-top:6px;line-height:1.9">
-      <strong>PK:</strong> <span class="join-key">product</span> &nbsp;·&nbsp;
-      <strong>Referenced by:</strong> df_limits_exposures.<span class="join-key">product</span>
-    </div>
-  </details>
-  <div class="table-wrap" style="max-height:320px">
-    <table><thead><tr><th>product</th><th>limit_type</th><th>limit_sub_type</th></tr></thead>
-    <tbody id="lttbody"></tbody></table>
-  </div>
-</div>
-
-
-<div class="panel" id="pf-lim">
-  <details class="schema-box">
-    <summary>df_limits_exposures — schema &amp; joins</summary>
-    <div style="margin-top:6px;line-height:1.9">
-      <strong>PK:</strong> <span class="join-key">record_id</span>
-      &nbsp;·&nbsp;
-      <span class="join-key">product</span> <span class="join-arrow">→</span> df_limit_type.<span class="join-key">product</span>
-      &nbsp;·&nbsp;
-      <span class="join-key">creditor_entity_id</span> <span class="join-arrow">→</span> df_legal_entity.<span class="join-key">entity_id</span>
-      &nbsp;·&nbsp;
-      <span class="join-key">debtor_entity_id</span> <span class="join-arrow">→</span> df_legal_entity.<span class="join-key">entity_id</span>
-    </div>
-  </details>
-  <div class="stat-cards" id="stat-cards"></div>
-  <div class="filter-row">
-    <select id="lf-lt" onchange="renderLimits()"><option value="">All types</option><option>Hard</option><option>Soft</option></select>
-    <select id="lf-lst" onchange="renderLimits()"><option value="">All sub-types</option><option>Traded</option><option>Lending</option><option>Settlement</option></select>
-    <select id="lf-prod" onchange="renderLimits()"><option value="">All products</option><option>FX Forward</option><option>Committed Repo</option><option>Committed Loan</option><option>Overdraft</option><option>Bond Borrow</option><option>Xccy Swap</option><option>Payment Intraday</option></select>
-    <select id="lf-crr" onchange="renderLimits()"><option value="">All CRR treatments</option></select>
-    <select id="lf-crl" onchange="renderLimits()"><option value="">Creditor level</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
-    <select id="lf-del" onchange="renderLimits()"><option value="">Debtor level</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
-    <select id="lf-sign" onchange="renderLimits()"><option value="">All exposures</option><option value="pos">Positive only</option><option value="neg">Negative only</option></select>
-    <input id="lf-search" placeholder="Search entity / product / CRR…" oninput="renderLimits()" style="width:200px">
-    <span class="rcount" id="lcount"></span>
-  </div>
-  <div class="table-wrap">
-    <table><thead><tr>
-      <th>record_id</th><th>product</th><th>limit_type</th><th>limit_sub_type</th>
-      <th>creditor_entity_id</th><th>creditor name</th><th>cr. level</th>
-      <th>debtor_entity_id</th><th>debtor name</th><th>dr. level</th>
-      <th style="text-align:right">limit_gbp</th>
-      <th style="text-align:right">exposure_gbp</th>
-      <th>utilisation</th>
-      <th>crr_reg_treatment</th>
-    </tr></thead>
-    <tbody id="ltbody"></tbody></table>
-  </div>
-</div>
-
-
-<div class="panel" id="pf-map">
-  <div class="info-bar">Bubble size reflects entity count per city. Click a bubble to filter the entity table.</div>
-  <svg id="mapsvg" viewBox="0 0 680 400"></svg>
-  <div class="map-legend" id="map-legend"></div>
-</div>
-
-
-<div class="panel" id="pf-tree">
-  <div class="info-bar">Full legal hierarchy. Colour encodes level. Click any node to search the entity table.</div>
-  <div id="tree-wrap"><svg id="treesvg"></svg></div>
-</div>
-
-<div class="widget-footer">
-  Data model: <strong>df_legal_entity</strong> (PK: entity_id) · <strong>df_limit_type</strong> (PK: product) · <strong>df_limits_exposures</strong> (PK: record_id; FK: product, creditor_entity_id, debtor_entity_id).
-  Ring-fencing: UK Banking Reform Act 2013 / PRA rules. CRR reg treatment applied per limit line. Source taxonomy: limit_types.csv.
-</div>
-</div>
-<script src="/js/legal-entity-widget.js"></script>
-
-</div>
-<h2 id="static-networks">Static Networks<a hidden class="anchor" aria-hidden="true" href="#static-networks">#</a></h2>
-<p>Some static views of the legal structure, shown as network node diagrams. Because the data was random and made up, it does not make for a very interesting output. IRL this would be more informative. The point here I suppose is that the best way of thinking about exposures across a large bank IRL is as a network node diagram. Then you can make the edges what you want, eg CRR regulatory exposures, etc, etc.</p>
-<p>For completeness, here are the static png files.</p>
-<p><img alt="Exposure network — full portfolio" loading="lazy" src="/images/network_full.png"></p>
-<p><img alt="Exposure network — L3 aggregated" loading="lazy" src="/images/network_l3_tree.png"></p>
-<p><img alt="Exposure network — L2 aggregated" loading="lazy" src="/images/network_l2_tree.png"></p>
-<h2 id="closing-comments">Closing comments<a hidden class="anchor" aria-hidden="true" href="#closing-comments">#</a></h2>
-<p>The lesson here is that while yes, legacy systems suck, computer science has moved on a long way. There are a lot of ways to build out reporting using additional tooling outside of said legacy systems. Really all you need is a back end data access (ssh, api, sql, whatever) and then some brains. You can do pretty much the whole lot without resorting to licensed products. Python and java and some related libraries are all very useful things. Experiment like crazy, and when you love what you have, go spend the bucks to get an enterprise version.</p>
-<p>The trick is thinking it all the way through first. No junior software developer is going to know what the data means, and how it should be used. Now ideally you are a very experienced finance professional and also really good at comp science. Good luck with that.</p>
-<blockquote>
-<p>We started with a legacy system setup, preventing multiple instances of KYC entities across the group structure. We duplicated the entity structure outside of the existing data. We did not give up a level in the legal entity structure to achieve regulatory reporting, we kept our data intact. We added dynamic regulatory attributes calculated on a rules based approach that broadly mapped the IRL approaches. We ran our reporting system as an external overlay, tied to legacy data. We did this using java scripted widget, as an example that approaching the problem properly with a bit of thought resulted in a more flexible and intelligent outcome. We considered the view of a single entity to any other (one to many), we considered the reverse of all limits to any entity (many to one). We considered the entire portfolio (many to many). We enabled any combination of exposures from any entity, to any other or many others, based on regulatory approach. We did not break existing infrastructure doing this. A lot more could be done on the logic to improve things. More would be needed for proper IRL solution. But this was an afternoons work. Yes, I cheated and used AI to do the network node diagrams. If the data was not made up nonsense it would work better. Slow is fast and fast is slow.</p>
-</blockquote>
-<hr>
-<h2 id="references">References<a hidden class="anchor" aria-hidden="true" href="#references">#</a></h2>
-<hr>
-<h2 id="appendix--ring-fencing-primer">Appendix — Ring Fencing Primer<a hidden class="anchor" aria-hidden="true" href="#appendix--ring-fencing-primer">#</a></h2>
-<p>Ring fencing, like it says on the tin, is an approach to corralling (lets stick with the fence metaphor) the parts of the bank that do deposit taking, from the rest of the bank of group. Key details are below, but in essence the pre crisis banks were (i) run too thin on capital; and (ii) run by self serving morons in the main who did not know where their ability ended. That a bit sharp, but without government intervention, a lot more banks would have failed. Governments don’t like bailing out banks. But its quite hard to have an economy without functional banks for some complex reasons we will get into later. For now Bank is an authorised deposit taking institution, and Shadow Bank means something that does lending minus the deposit part. That is a long story for another time.</p>
-<h4 id="background">Background<a hidden class="anchor" aria-hidden="true" href="#background">#</a></h4>
-<p>Following the Global Financial Crisis (GFC) of 2007-08, HM Treasury, on the recommendation of
+</style></head><body><div class=widget><div class=widget-header><div class=widget-title>Group Co — Legal Entity Structure
+<span>df_legal_entity (62) · df_limit_type (7) · df_limits_exposures (300)</span></div><div class=tabs><button class="tab active" onclick='show("entity")'>Legal entities</button>
+<button class=tab onclick='show("limtype")'>Limit types</button>
+<button class=tab onclick='show("lim")'>Limits & exposures</button>
+<button class=tab onclick='show("map")'>Geographic map</button>
+<button class=tab onclick='show("tree")'>Entity structure</button></div></div><div class="panel active" id=pf-entity><details class=schema-box><summary>df_legal_entity — schema & joins</summary><div style=margin-top:6px;line-height:1.9><strong>PK:</strong> <span class=join-key>entity_id</span> &nbsp;·&nbsp;
+<strong>Self-join:</strong> <span class=join-key>parent_id</span> <span class=join-arrow>→</span> <span class=join-key>entity_id</span>
+&nbsp;·&nbsp; <strong>Referenced by:</strong> df_limits_exposures.<span class=join-key>creditor_entity_id</span> / <span class=join-key>debtor_entity_id</span></div></details><div class=filter-row><select id=f-level onchange=renderEntities()><option value>All levels</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+<select id=f-dom onchange=renderEntities()><option value>All domiciles</option><option>UK</option><option>FR</option><option>US</option><option>SG</option><option>JP</option><option>DE</option><option>AU</option><option>CA</option><option>BR</option><option>HK</option></select>
+<select id=f-rfi onchange=renderEntities()><option value>All RFI</option><option>RFB</option><option>NRFB</option></select>
+<select id=f-rf onchange=renderEntities()><option value>All ring fence</option><option>CORE</option><option>NON CORE</option><option>NRFB</option></select>
+<select id=f-l1e onchange=renderEntities()><option value>All L1 groups</option><option>Bank Co</option><option>Property Co</option><option>Wealth Co</option><option>Market Co</option></select>
+<input id=f-esearch placeholder="Search name / ID…" oninput=renderEntities() style=width:150px>
+<span class=rcount id=ecount></span></div><div class=table-wrap><table><thead><tr><th>entity_id</th><th>name</th><th>level</th><th>parent_id</th><th>l1_group</th><th>country</th><th>city</th><th>rfi_status</th><th>ring_fence_status</th><th>crr_aggregation</th><th>address</th></tr></thead><tbody id=etbody></tbody></table></div></div><div class=panel id=pf-limtype><details class=schema-box><summary>df_limit_type — schema & joins</summary><div style=margin-top:6px;line-height:1.9><strong>PK:</strong> <span class=join-key>product</span> &nbsp;·&nbsp;
+<strong>Referenced by:</strong> df_limits_exposures.<span class=join-key>product</span></div></details><div class=table-wrap style=max-height:320px><table><thead><tr><th>product</th><th>limit_type</th><th>limit_sub_type</th></tr></thead><tbody id=lttbody></tbody></table></div></div><div class=panel id=pf-lim><details class=schema-box><summary>df_limits_exposures — schema & joins</summary><div style=margin-top:6px;line-height:1.9><strong>PK:</strong> <span class=join-key>record_id</span>
+&nbsp;·&nbsp;
+<span class=join-key>product</span> <span class=join-arrow>→</span> df_limit_type.<span class=join-key>product</span>
+&nbsp;·&nbsp;
+<span class=join-key>creditor_entity_id</span> <span class=join-arrow>→</span> df_legal_entity.<span class=join-key>entity_id</span>
+&nbsp;·&nbsp;
+<span class=join-key>debtor_entity_id</span> <span class=join-arrow>→</span> df_legal_entity.<span class=join-key>entity_id</span></div></details><div class=stat-cards id=stat-cards></div><div class=filter-row><select id=lf-lt onchange=renderLimits()><option value>All types</option><option>Hard</option><option>Soft</option></select>
+<select id=lf-lst onchange=renderLimits()><option value>All sub-types</option><option>Traded</option><option>Lending</option><option>Settlement</option></select>
+<select id=lf-prod onchange=renderLimits()><option value>All products</option><option>FX Forward</option><option>Committed Repo</option><option>Committed Loan</option><option>Overdraft</option><option>Bond Borrow</option><option>Xccy Swap</option><option>Payment Intraday</option></select>
+<select id=lf-crr onchange=renderLimits()><option value>All CRR treatments</option></select>
+<select id=lf-crl onchange=renderLimits()><option value>Creditor level</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+<select id=lf-del onchange=renderLimits()><option value>Debtor level</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+<select id=lf-sign onchange=renderLimits()><option value>All exposures</option><option value=pos>Positive only</option><option value=neg>Negative only</option></select>
+<input id=lf-search placeholder="Search entity / product / CRR…" oninput=renderLimits() style=width:200px>
+<span class=rcount id=lcount></span></div><div class=table-wrap><table><thead><tr><th>record_id</th><th>product</th><th>limit_type</th><th>limit_sub_type</th><th>creditor_entity_id</th><th>creditor name</th><th>cr. level</th><th>debtor_entity_id</th><th>debtor name</th><th>dr. level</th><th style=text-align:right>limit_gbp</th><th style=text-align:right>exposure_gbp</th><th>utilisation</th><th>crr_reg_treatment</th></tr></thead><tbody id=ltbody></tbody></table></div></div><div class=panel id=pf-map><div class=info-bar>Bubble size reflects entity count per city. Click a bubble to filter the entity table.</div><svg id="mapsvg" viewBox="0 0 680 400"/><div class=map-legend id=map-legend></div></div><div class=panel id=pf-tree><div class=info-bar>Full legal hierarchy. Colour encodes level. Click any node to search the entity table.</div><div id=tree-wrap><svg id="treesvg"/></div></div><div class=widget-footer>Data model: <strong>df_legal_entity</strong> (PK: entity_id) · <strong>df_limit_type</strong> (PK: product) · <strong>df_limits_exposures</strong> (PK: record_id; FK: product, creditor_entity_id, debtor_entity_id).
+Ring-fencing: UK Banking Reform Act 2013 / PRA rules. CRR reg treatment applied per limit line. Source taxonomy: limit_types.csv.</div></div><script src=/js/legal-entity-widget.js></script></div><h2 id=static-networks>Static Networks<a hidden class=anchor aria-hidden=true href=#static-networks>#</a></h2><p>Some static views of the legal structure, shown as network node diagrams. Because the data was random and made up, it does not make for a very interesting output. IRL this would be more informative. The point here I suppose is that the best way of thinking about exposures across a large bank IRL is as a network node diagram. Then you can make the edges what you want, eg CRR regulatory exposures, etc, etc.</p><p>For completeness, here are the static png files.</p><p><img alt="Exposure network — full portfolio" loading=lazy src=/images/network_full.png></p><p><img alt="Exposure network — L3 aggregated" loading=lazy src=/images/network_l3_tree.png></p><p><img alt="Exposure network — L2 aggregated" loading=lazy src=/images/network_l2_tree.png></p><h2 id=closing-comments>Closing comments<a hidden class=anchor aria-hidden=true href=#closing-comments>#</a></h2><p>The lesson here is that while yes, legacy systems suck, computer science has moved on a long way. There are a lot of ways to build out reporting using additional tooling outside of said legacy systems. Really all you need is a back end data access (ssh, api, sql, whatever) and then some brains. You can do pretty much the whole lot without resorting to licensed products. Python and java and some related libraries are all very useful things. Experiment like crazy, and when you love what you have, go spend the bucks to get an enterprise version.</p><p>The trick is thinking it all the way through first. No junior software developer is going to know what the data means, and how it should be used. Now ideally you are a very experienced finance professional and also really good at comp science. Good luck with that.</p><blockquote><p>We started with a legacy system setup, preventing multiple instances of KYC entities across the group structure. We duplicated the entity structure outside of the existing data. We did not give up a level in the legal entity structure to achieve regulatory reporting, we kept our data intact. We added dynamic regulatory attributes calculated on a rules based approach that broadly mapped the IRL approaches. We ran our reporting system as an external overlay, tied to legacy data. We did this using java scripted widget, as an example that approaching the problem properly with a bit of thought resulted in a more flexible and intelligent outcome. We considered the view of a single entity to any other (one to many), we considered the reverse of all limits to any entity (many to one). We considered the entire portfolio (many to many). We enabled any combination of exposures from any entity, to any other or many others, based on regulatory approach. We did not break existing infrastructure doing this. A lot more could be done on the logic to improve things. More would be needed for proper IRL solution. But this was an afternoons work. Yes, I cheated and used AI to do the network node diagrams. If the data was not made up nonsense it would work better. Slow is fast and fast is slow.</p></blockquote><hr><h2 id=references>References<a hidden class=anchor aria-hidden=true href=#references>#</a></h2><ul><li>Ian Bogost — <em>Alien Phenomenology, or What It&rsquo;s Like to Be a Thing</em> (object-oriented ontology; the &ldquo;different types vs. different configurations&rdquo; framing used above)</li><li>Mary Beard — <em>Laughter in Ancient Rome: On Joking, Tickling, and Cracking Up</em> (Sather Classical Lectures: 71) — source of the Roman identity joke quoted above</li><li>Computer History Museum — <a href=https://archive.computerhistory.org/resources/access/text/2013/05/102702562-05-01-acc.pdf>oral history transcript covering Ted Codd and the early days of the relational model (PDF)</a></li><li>SIH — <a href=https://huggingface.co/SIH/penguin-classifier-sklearn>penguin classifier (scikit-learn) on Hugging Face</a> — the classic ML classification example referenced above</li><li>HM Treasury / UK legislation — <a href=https://www.legislation.gov.uk/uksi/2025/30/pdfs/uksiod_20250030_en_001.pdf>Financial Services and Markets Act 2000, ring-fencing statutory instruments (PDF)</a> — source for the Ring Fencing Primer appendix</li></ul><hr><h2 id=appendix--ring-fencing-primer>Appendix — Ring Fencing Primer<a hidden class=anchor aria-hidden=true href=#appendix--ring-fencing-primer>#</a></h2><p>Ring fencing, like it says on the tin, is an approach to corralling (lets stick with the fence metaphor) the parts of the bank that do deposit taking, from the rest of the bank of group. Key details are below, but in essence the pre crisis banks were (i) run too thin on capital; and (ii) run by self serving morons in the main who did not know where their ability ended. That a bit sharp, but without government intervention, a lot more banks would have failed. Governments don’t like bailing out banks. But its quite hard to have an economy without functional banks for some complex reasons we will get into later. For now Bank is an authorised deposit taking institution, and Shadow Bank means something that does lending minus the deposit part. That is a long story for another time.</p><h4 id=background>Background<a hidden class=anchor aria-hidden=true href=#background>#</a></h4><p>Following the Global Financial Crisis (GFC) of 2007-08, HM Treasury, on the recommendation of
 the Independent Commission on Banking (ICB), established a ring-fencing regime for large banks in the UK. The regime was legislated for in the Financial Services (Banking Reform) Act 2013. The
 regime came into full effect on 1 January 2019. The government made two Orders under the
 Financial Services and Markets Act (FSMA) 2000, which set the detailed calibration of the ring-
@@ -877,99 +188,27 @@ fence:
 i. The Financial Services and Markets Act 2000 (Ring-fenced Bodies and Core Activities) Order
 ii. (CAO) 20141; and
 The Financial Services and Markets Act 2000 (Excluded Activities and Prohibitions) Order
-(EAPO) 2014.2</p>
-<p>The regime’s objectives, as outlined by the ICB, are to “make it easier to sort out both ring-fenced
+(EAPO) 2014.2</p><p>The regime’s objectives, as outlined by the ICB, are to “make it easier to sort out both ring-fenced
 banks and non-ring-fenced banks which get into trouble, without the provision of taxpayer-funded
 solvency support” and to “insulate vital banking services on which households and SMEs depend
 from problems elsewhere in the financial system”.3 Ring-fencing requires the largest UK banks to
 separate core retail banking from investment banking in order to support financial stability by
-making banking groups simpler and easier to ‘resolve’.</p>
-<h4 id="parameters">Parameters<a hidden class="anchor" aria-hidden="true" href="#parameters">#</a></h4>
-<p>The key parameters of the ring-fence, as set in the Core Activities Order and Excluded Activities
-and Prohibitions Order, are:</p>
-<ul>
-<li>Scope: Banking groups with more than £25bn of “core deposits”, defined as UK or EEA retail
+making banking groups simpler and easier to ‘resolve’.</p><h4 id=parameters>Parameters<a hidden class=anchor aria-hidden=true href=#parameters>#</a></h4><p>The key parameters of the ring-fence, as set in the Core Activities Order and Excluded Activities
+and Prohibitions Order, are:</p><ul><li>Scope: Banking groups with more than £25bn of “core deposits”, defined as UK or EEA retail
 and SME deposits, must comply with the regime. They are required to separate their retail and
 investment banking activities into a ring-fenced body (RFB) and a non-ring-fenced body (NRFB)
-and hold core deposits within the RFB.</li>
-<li>Excluded Activities: RFBs are prohibited from dealing in investments and commodities as
+and hold core deposits within the RFB.</li><li>Excluded Activities: RFBs are prohibited from dealing in investments and commodities as
 principal, with the exceptions of dealing in investments to manage their own risks and to sell
-simple derivatives to their customers.</li>
-<li>Prohibitions: RFBs cannot have exposures to “relevant financial institutions” (RFIs), such as
+simple derivatives to their customers.</li><li>Prohibitions: RFBs cannot have exposures to “relevant financial institutions” (RFIs), such as
 NRFBs, investment firms, globally systemically important insurers (GSIIs), and investment funds.
 They can provide specified products including trade finance products. They are largely
-prohibited from operating outside the EEA.</li>
-</ul>
-<p>Source for above is :
-<a href="https://www.legislation.gov.uk/uksi/2025/30/pdfs/uksiod_20250030_en_001.pdf">https://www.legislation.gov.uk/uksi/2025/30/pdfs/uksiod_20250030_en_001.pdf</a></p>
-<hr>
-<h2 id="data-files">Data Files<a hidden class="anchor" aria-hidden="true" href="#data-files">#</a></h2>
-<p>I mean they are all made up nonsense and you can see the content in the widget, but hey, why not.</p>
-<ul>
-<li><a href="/data/df_legal_entity.csv">Legal entities</a></li>
-<li><a href="/data/df_limit_type.csv">Limit types</a></li>
-<li><a href="/data/df_limits_exposures.csv">Limits and exposures</a></li>
-</ul>
-
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-    </ul>
-<nav class="paginav">
-  <a class="prev" href="http://localhost:1313/blog/unhelpful-advice/wrong-general/">
-    <span class="title">« Prev</span>
-    <br>
-    <span>Wrong General</span>
-  </a>
-  <a class="next" href="http://localhost:1313/blog/books/quality-of-earnings/">
-    <span class="title">Next »</span>
-    <br>
-    <span>Quality of Earnings</span>
-  </a>
-</nav>
-
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">[1697, 20747]</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a><script>
-function highlightMenu() {
-    const path = window.location.pathname;
-    document.querySelectorAll("#menu a").forEach(function (link) {
-        const href = link.getAttribute("href");
-        if (!href) return;
-        const linkPath = new URL(href).pathname;
-        if (linkPath !== "/" && path.startsWith(linkPath)) {
-            const span = link.querySelector("span");
-            if (span) {
-                span.style.color = "#8FAC59";
-                span.style.fontWeight = "600";
-            }
-        }
-    });
-}
-
-setTimeout(highlightMenu, 200);
-</script>
-
-
-<div id="avatar-lightbox" style="
-    display:none;
+prohibited from operating outside the EEA.</li></ul><p>Source for above is :
+<a href=https://www.legislation.gov.uk/uksi/2025/30/pdfs/uksiod_20250030_en_001.pdf>https://www.legislation.gov.uk/uksi/2025/30/pdfs/uksiod_20250030_en_001.pdf</a></p><hr><h2 id=data-files>Data Files<a hidden class=anchor aria-hidden=true href=#data-files>#</a></h2><p>I mean they are all made up nonsense and you can see the content in the widget, but hey, why not.</p><ul><li><a href=/data/df_legal_entity.csv>Legal entities</a></li><li><a href=/data/df_limit_type.csv>Limit types</a></li><li><a href=/data/df_limits_exposures.csv>Limits and exposures</a></li><li><a href=/data/crr_treatment.py>CRR treatment classifier — full recursive Python source, with a self-check against the CSVs above</a></li></ul></div><footer class=post-footer><ul class=post-tags></ul><nav class=paginav><a class=prev href=https://1697-20747.github.io/blog/unhelpful-advice/wrong-general/><span class=title>« Prev</span><br><span>Wrong General</span>
+</a><a class=next href=https://1697-20747.github.io/blog/books/quality-of-earnings/><span class=title>Next »</span><br><span>Quality of Earnings</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2026 <a href=https://1697-20747.github.io/>[1697, 20747]</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>function highlightMenu(){const e=window.location.pathname;document.querySelectorAll("#menu a").forEach(function(t){const n=t.getAttribute("href");if(!n)return;const s=new URL(n).pathname;if(s!=="/"&&e.startsWith(s)){const e=t.querySelector("span");e&&(e.style.color="#8FAC59",e.style.fontWeight="600")}})}setTimeout(highlightMenu,200)</script><div id=avatar-lightbox style="display:none;
     position:fixed;
     inset:0;
     background:rgba(0,0,0,0.9);
@@ -980,204 +219,28 @@ setTimeout(highlightMenu, 200);
     gap:1.5rem;
     cursor:pointer;
     overflow-y:scroll;
-    padding:2rem 2rem 4rem 2rem;
-" onclick="this.style.display='none'">
-
-    
-    <img src="/images/avatar.png" style="
-        width:220px;
+    padding:2rem 2rem 4rem 2rem;" onclick='this.style.display="none"'><img src=/images/avatar.png style="width:220px;
         height:220px;
         border-radius:50%;
         border:3px solid #8FAC59;
-        box-shadow:0 0 40px rgba(143,172,89,0.3);
-    ">
-
-    
-    <p style="
-        color:#e2e8f0;
+        box-shadow:0 0 40px rgba(143,172,89,0.3);"><p style="color:#e2e8f0;
         font-family:'Syne',sans-serif;
         font-size:1rem;
         text-align:center;
         max-width:480px;
         line-height:1.7;
-        padding:0 1rem;
-    ">
-        I use this image as my avatar, or if you like a visual nom de plume of sorts.<br>
-        It was a photo taken by myself, near the bridge crossing the Thames to go to Kew Gardens.<br>
-        At the time taken, it was residing under a Banksy art piece, of a mountain goat perched on a ledge, from 2024. 
-        This Ibex mountain goat in London perches on a plinth with falling rocks beneath it - a CCTV camera pointing up towards the goat. <br>
-        The Banksy is gone, but I hope the Bruce Lee image is still with us, which it is on Google maps. I'd love to know if it is your art!
-    </p>
-
-    
-    <img src="/images/IMG_3300_full.png" style="
-        width:320px;
+        padding:0 1rem;">I use this image as my avatar, or if you like a visual nom de plume of sorts.<br>It was a photo taken by myself, near the bridge crossing the Thames to go to Kew Gardens.<br>At the time taken, it was residing under a Banksy art piece, of a mountain goat perched on a ledge, from 2024.
+This Ibex mountain goat in London perches on a plinth with falling rocks beneath it - a CCTV camera pointing up towards the goat.<br>The Banksy is gone, but I hope the Bruce Lee image is still with us, which it is on Google maps. I'd love to know if it is your art!</p><img src=/images/IMG_3300_full.png style="width:320px;
         border-radius:8px;
-        border:1px solid #8FAC59;
-    ">
-
-    
-    <p style="
-        color:var(--secondary);
+        border:1px solid #8FAC59;"><p style="color:var(--secondary);
         font-family:'DM Mono',monospace;
         font-size:0.8rem;
         text-align:center;
-        max-width:400px;
-    ">
-        The full image, I suspect its an electrical junction cabinet. Regardless, its a great piece of art. 
-        Based on the Banksy images, it looks like the goat arrived first.
-    </p>
-
-   
-    <div onclick="event.stopPropagation()" style="
-        width:100%;
+        max-width:400px;">The full image, I suspect its an electrical junction cabinet. Regardless, its a great piece of art.
+Based on the Banksy images, it looks like the goat arrived first.</p><div onclick=event.stopPropagation() style="width:100%;
         max-width:480px;
         border-radius:8px;
         overflow:hidden;
-        border:1px solid #8FAC59;
-    ">
-        <iframe
-            width="100%"
-            height="300"
-            frameborder="0"
-            style="border:0;display:block"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.2970%2C51.4824%2C-0.2771%2C51.4884&layer=mapnik&marker=51.4854%2C-0.2871"
-            allowfullscreen>
-        </iframe>
-    </div>
-    </div>
-
-    <p style="
-        color:#8FAC59;
+        border:1px solid #8FAC59;"><iframe width=100% height=300 frameborder=0 style=border:0;display:block src="https://www.openstreetmap.org/export/embed.html?bbox=-0.2970%2C51.4824%2C-0.2771%2C51.4884&layer=mapnik&marker=51.4854%2C-0.2871" allowfullscreen></iframe></div></div><p style="color:#8FAC59;
         font-family:'DM Mono',monospace;
-        font-size:0.75rem;
-    ">click outside map to close</p>
-
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const avatarLink = document.querySelector('.logo a img');
-    if (avatarLink) {
-        avatarLink.style.cursor = 'pointer';
-        avatarLink.parentElement.addEventListener('click', function(e) {
-            e.preventDefault();
-            const lb = document.getElementById('avatar-lightbox');
-            lb.style.display = 'flex';
-        });
-    }
-});
-</script>
-
-
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
-</script>
-</body>
-
-</html>
+        font-size:0.75rem;">click outside map to close</p></div><script>document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".logo a img");e&&(e.style.cursor="pointer",e.parentElement.addEventListener("click",function(e){e.preventDefault();const t=document.getElementById("avatar-lightbox");t.style.display="flex"}))})</script><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>

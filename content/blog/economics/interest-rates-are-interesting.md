@@ -115,13 +115,42 @@ The Bank Rate is the short end of the curve, this sets near term rates. In theor
 <iframe 
   src="/tools/yield_curve_player.html"
   width="100%" 
-  height="650" 
+  height="960" 
   style="border:none;"
   loading="lazy">
 </iframe>
 
 
-The source of this data is the Bank of England. Now sadly its a zip file and no one has thought to put it up accessible via API (go on, please do this is important data for research!), but at least the data is there. Its also quite messy, I will put the combined cleaned up csv file in resources section. But it does the job of showing the changes over time. Originally run to 31 Mar 2026 (02 Apr 2026). Updated 28 Sep 2026 to the 28 Aug 2026 month end, see below. I'll try and update periodically.
+The source of this data is the Bank of England. Now sadly its a zip file and no one has thought to put it up accessible via API (go on, please do this is important data for research!), but at least the data is there. Its also quite messy, I will put the combined cleaned up csv file in resources section. But it does the job of showing the changes over time. Originally run to 31 Mar 2026 (02 Apr 2026). Updated 28 Sep 2026 to the 28 Aug 2026 month end, and again 20 Nov 2026 to the 30 Oct 2026 month end, see below. I'll try and update periodically.
+
+
+### Update — 20 Nov 2026
+
+Data now runs to the 30 Oct 2026 month end (latest BoE release). The player now has three dials across the top, Bank Rate, 5yr gilt and 10yr gilt, each showing the rate at that frame as a % of its historical high. 100% means the highest it has ever been. The dials move with the animation, so you can watch 1979 pin the Bank Rate needle at 100% and then watch everything drift back down to the zero bound.
+
+The highs used:
+
+| Series | Historical high | When |
+|--------|-----------------|------|
+| BoE Bank Rate | 17.00% | Nov 1979 |
+| 5yr gilt (spot) | 15.54% | Dec 1981 |
+| 10yr gilt (spot) | 15.93% | Dec 1974 |
+
+Bank Rate history is the BoE's own record (back to 1694, the 17% of 1979 is the highest ever). The gilt highs are the highest month end in the BoE spot curve series, which starts in 1970.
+
+Where it stands now:
+
+| Maturity | 28 Aug 2026 | 30 Oct 2026 | Change |
+|----------|-------------|-------------|--------|
+| 0.5yr    | 4.05%       | 4.22%       | +0.17  |
+| 2yr      | 4.32%       | 4.68%       | +0.36  |
+| 5yr      | 4.60%       | 4.90%       | +0.30  |
+| 10yr     | 5.14%       | 5.28%       | +0.14  |
+| 30yr     | 5.91%       | 5.72%       | −0.18  |
+
+On the dials at 30 Oct 2026: Bank Rate 3.75% is 22% of its high, 5yr 4.90% is 32%, 10yr 5.28% is 33%. So in historical terms rates are high for this century, but nowhere near the 1970s and 80s.
+
+This time the front end did the moving. The 2yr rose +0.36% and the 30yr actually fell, which is the market pricing a rate rise. The MPC then delivered one: Bank Rate went from 3.75% to 4.00% on 5 Nov 2026, after the last data point, so the final frame still shows 3.75% (4.00% would put the dial at 24%). The 10yr spot hit 5.40% at the end of September, the highest month end since Jan 2000, before easing back in October. Curve is still positively sloped, 5yr − 0.5yr at +0.68%.
 
 
 ### Update — 28 Sep 2026

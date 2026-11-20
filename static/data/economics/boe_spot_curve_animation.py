@@ -5,10 +5,14 @@ Inputs : BoE_Spot_Curve_Master.csv (existing master)
          new_rows.csv  (Excel-serial date, 80 spot yields 0.5y..40y) extracted from
          'GLC Nominal month end data_2025 to present.xlsx', sheet '4. spot curve'
          (https://www.bankofengland.co.uk/statistics/yield-curves)
+         bank_rate.csv (Date,BankRate change dates; BoE 'HISTORICAL SINCE 1694' sheet of
+         https://www.bankofengland.co.uk/-/media/boe/files/monetary-policy/baserate.xls)
 Outputs: BoE_Spot_Curve_Master.csv (updated), 10_spot_curve_animation.gif,
-         yield_curve_player.html (frames re-embedded)
+         yield_curve_player.html (frames + dial data re-embedded)
+
+Usage: python3 boe_spot_curve_animation.py <master.csv> <new_rows.csv> <old_player.html> <outdir> <bank_rate.csv>
 """
-import base64, io, re, sys
+import base64, io, json, re, sys
 import numpy as np
 import pandas as pd
 import matplotlib
@@ -16,7 +20,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from PIL import Image
 
-MASTER, NEW, OLD_PLAYER, OUT = sys.argv[1:5]
+MASTER, NEW, OLD_PLAYER, OUT, BANK_RATE = sys.argv[1:6]
 
 DARK_BG, DARK_AXES, GRID_COL, TEXT_COL = '#0d1117', '#161b22', '#30363d', '#e6edf3'
 GREEN, RED, GOLD = '#3fb950', '#f78166', '#FFD700'
@@ -106,6 +110,30 @@ html = open(OLD_PLAYER).read()
 i = html.find('const frames = ['); j = html.find('];', i)
 html = html[:i] + 'const frames = [' + ','.join(f'"{s}"' for s in b64) + html[j:]
 n = len(b64)
+
+# Dial data: each series as % of its historical high (Bank Rate: all-time since records;
+# gilts: highest month-end spot yield in the BoE series from 1970).
+br = pd.read_csv(BANK_RATE, parse_dates=['Date']).set_index('Date')['BankRate'].sort_index()
+br_hi_d = br.idxmax()
+def hi(col):
+    s = spot[col].dropna(); return float(s.max()), s.idxmax()
+g5_hi, g5_hi_d = hi('5.0'); g10_hi, g10_hi_d = hi('10.0')
+dial = {
+    'meta': [
+        {'name': 'BoE Bank Rate', 'max': float(br.max()), 'maxDate': br_hi_d.strftime('%b %Y')},
+        {'name': '5yr gilt (spot)', 'max': g5_hi, 'maxDate': g5_hi_d.strftime('%b %Y')},
+        {'name': '10yr gilt (spot)', 'max': g10_hi, 'maxDate': g10_hi_d.strftime('%b %Y')},
+    ],
+    'frames': [[d.strftime('%d %b %Y'),
+                round(float(br[:d].iloc[-1]), 4),
+                None if pd.isna(row['5.0']) else round(float(row['5.0']), 4),
+                None if pd.isna(row['10.0']) else round(float(row['10.0']), 4)]
+               for d, row in q.iterrows()],
+}
+i = html.find('const dialData = '); j = html.find(';\n', i)
+html = html[:i] + 'const dialData = ' + json.dumps(dial, separators=(',', ':')) + html[j:]
+print('Dial highs:', [(m['name'], m['max'], m['maxDate']) for m in dial['meta']])
+print('Latest frame:', dial['frames'][-1])
 html = re.sub(r'(id="scrubber" min="0" max=")\d+(")', rf'\g<1>{n-1}\2', html)
 html = re.sub(r'Frame 1 / \d+', f'Frame 1 / {n}', html)
 html = html.replace('Source: Bank of England Archive yield curve data', SOURCE_NOTE)

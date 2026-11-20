@@ -1,340 +1,35 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="dark">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>Credit-Risk | [1697, 20747]</title>
-<meta name="keywords" content="">
-<meta name="description" content="Writing on Economics, Data Analytics, Computer Science &amp; more.">
-<meta name="author" content="Your Name">
-<link rel="canonical" href="http://localhost:1313/categories/credit-risk/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.bbc53d26841701c4af3d09bafa77484c9cbb7a4f2d84cfabf43a9a8dbe1fa590.css" integrity="sha256-u8U9JoQXAcSvPQm6&#43;ndITJy7ek8thM&#43;r9Dqajb4fpZA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/images/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/credit-risk/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/categories/credit-risk/">
-<noscript>
-    <style>
+<!doctype html><html lang=en dir=auto data-theme=dark><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Credit-Risk | [1697, 20747]</title><meta name=keywords content><meta name=description content="Writing on Economics, Data Analytics, Computer Science & more."><meta name=author content="Your Name"><link rel=canonical href=https://1697-20747.github.io/categories/credit-risk/><link crossorigin=anonymous href=/assets/css/stylesheet.f273a0a148ced2c91d9a82b403256857857989e003078cc5f50355c29d83f569.css integrity="sha256-8nOgoUjO0skdmoK0AyVoV4V5ieADB4zF9QNVwp2D9Wk=" rel="preload stylesheet" as=style><link rel=icon href=https://1697-20747.github.io/images/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://1697-20747.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://1697-20747.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://1697-20747.github.io/apple-touch-icon.png><link rel=mask-icon href=https://1697-20747.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://1697-20747.github.io/categories/credit-risk/index.xml title=rss><link rel=alternate hreflang=en href=https://1697-20747.github.io/categories/credit-risk/><noscript><style>
         #theme-toggle,
         .top-link {
             display: none;
         }
 
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "light") {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script>
-</head>
-<body class="list" id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-    <a href="http://localhost:1313/">
-        <img src="/images/avatar.png" width="32" height="32" 
-             style="border-radius:50%;margin-right:8px;vertical-align:middle">
-    </a>
-            <a href="http://localhost:1313/" accesskey="h" title="[1697, 20747] (Alt + H)">[1697, 20747]</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="http://localhost:1313/blog/economics/" title="Economics">
-                    <span>Economics</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/data-analytics/" title="Data Analytics">
-                    <span>Data Analytics</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/comp-science/" title="Comp Science">
-                    <span>Comp Science</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/credit-risk/" title="Credit Risk">
-                    <span>Credit Risk</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/other/" title="Other">
-                    <span>Other</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/philosophy/" title="Philosophy">
-                    <span>Philosophy</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/bjj/" title="BJJ">
-                    <span>BJJ</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/unhelpful-advice/" title="Unhelpful Advice">
-                    <span>Unhelpful Advice</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/books/" title="Books">
-                    <span>Books</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
-                    <span>Search</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/about/" title="About">
-                    <span>About</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/categories/">Categories</a></div>
-  <h1>
-    Credit-Risk
-  </h1>
-</header>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">WeWork: The Floor Worth More Than the Building
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>The Floor Worth More Than the Building NYU Stern professor and entrepreneur Scott Galloway ran the numbers during what he came to call his “WeWTF” research series — a set of analyses published between 2017 and 2019 — and found something that should have stopped the whole circus cold.
+    </style></noscript><script>localStorage.getItem("pref-theme")==="light"&&(document.querySelector("html").dataset.theme="light")</script><meta property="og:url" content="https://1697-20747.github.io/categories/credit-risk/"><meta property="og:site_name" content="[1697, 20747]"><meta property="og:title" content="Credit-Risk"><meta property="og:description" content="Writing on Economics, Data Analytics, Computer Science & more."><meta property="og:locale" content="en-gb"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="Credit-Risk"><meta name=twitter:description content="Writing on Economics, Data Analytics, Computer Science & more."></head><body class=list id=top><header class=header><nav class=nav><div class=logo><a href=https://1697-20747.github.io/><img src=/images/avatar.png width=32 height=32 style=border-radius:50%;margin-right:8px;vertical-align:middle>
+</a><a href=https://1697-20747.github.io/ accesskey=h title="[1697, 20747] (Alt + H)">[1697, 20747]</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://1697-20747.github.io/blog/economics/ title=Economics><span>Economics</span></a></li><li><a href=https://1697-20747.github.io/blog/data-analytics/ title="Data Analytics"><span>Data Analytics</span></a></li><li><a href=https://1697-20747.github.io/blog/comp-science/ title="Comp Science"><span>Comp Science</span></a></li><li><a href=https://1697-20747.github.io/blog/credit-risk/ title="Credit Risk"><span>Credit Risk</span></a></li><li><a href=https://1697-20747.github.io/blog/other/ title=Other><span>Other</span></a></li><li><a href=https://1697-20747.github.io/blog/philosophy/ title=Philosophy><span>Philosophy</span></a></li><li><a href=https://1697-20747.github.io/blog/bjj/ title=BJJ><span>BJJ</span></a></li><li><a href=https://1697-20747.github.io/blog/unhelpful-advice/ title="Unhelpful Advice"><span>Unhelpful Advice</span></a></li><li><a href=https://1697-20747.github.io/blog/books/ title=Books><span>Books</span></a></li><li><a href=https://1697-20747.github.io/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://1697-20747.github.io/about/ title=About><span>About</span></a></li></ul></nav></header><main class=main><header class=page-header><div class=breadcrumbs><a href=https://1697-20747.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://1697-20747.github.io/categories/>Categories</a></div><h1>Credit-Risk</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>MFS Collapse — Part 2: Recovering Pennies</h2></header><div class=entry-content><p>This is Part 2 of a series on the collapse of Market Financial Solutions (MFS). Part 1: MFS Collapse covers the background, the double-pledging allegations, the creditor list, the accountant, and the position as at 28 April 2026. This post picks up from there and focuses on recoveries.
+A note on allegations. The allegations in this post come from court filings by the MFS administrators and from reporting of those filings. They have not been tested at trial. Mr Raja denies them and says there was no fraud or dishonesty. A freezing order is an interim measure to preserve assets while a claim is decided. It is not a finding of wrongdoing. Nothing here should be read as a statement that any individual has committed any offence.
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-09-26 00:00:00 +0000 UTC'>September 26, 2026</span>&nbsp;·&nbsp;12 min</div></footer><a class=entry-link aria-label="post link to MFS Collapse — Part 2: Recovering Pennies" href=https://1697-20747.github.io/blog/credit-risk/mfs-collapse-part-2/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>Experience Matters</h2></header><div class=entry-content><p>Overview Leopold Aschenbrenner was 22 when he wrote “Situational Awareness: The Decade Ahead” in June 2024, a widely read essay arguing that AGI was closer than markets priced and that whoever controlled the compute build-out would control the century. He’d just left OpenAI’s superalignment team, reportedly after a dispute over leaked information. He turned the essay into a fund, seeded with $225 million, named it after the essay, and set about betting his own thesis with other people’s money. Apparently, I don’t know, I have never read it. Good luck to him.
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-08-22 09:00:00 +0000 UTC'>August 22, 2026</span>&nbsp;·&nbsp;9 min</div></footer><a class=entry-link aria-label="post link to Experience Matters" href=https://1697-20747.github.io/blog/credit-risk/experience-matters/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>Derived Derivative</h2></header><div class=entry-content><p>Overview Marme Inversiones 2007 SL v NatWest Markets Plc and Others [2019] EWHC 366 (Comm) is the substantive trial judgment behind a jurisdictional skirmish decided three years earlier ([2016] EWHC 1570 (Comm)). Picken J’s 2019 judgment is where the real facts live: a Spanish SPV bought Santander’s Madrid headquarters in September 2008, hedged the acquisition debt with stepped interest rate swaps three days before Lehman Brothers filed for bankruptcy, and by the time the banks terminated those swaps in November 2014, Marme owed them roughly €710 million.
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-07-17 09:00:00 +0000 UTC'>July 17, 2026</span>&nbsp;·&nbsp;17 min</div></footer><a class=entry-link aria-label="post link to Derived Derivative" href=https://1697-20747.github.io/blog/credit-risk/derived-derivative/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>WeWork: The Floor Worth More Than the Building</h2></header><div class=entry-content><p>The Floor Worth More Than the Building NYU Stern professor and entrepreneur Scott Galloway ran the numbers during what he came to call his “WeWTF” research series — a set of analyses published between 2017 and 2019 — and found something that should have stopped the whole circus cold.
 In several WeWork buildings, the single floor WeWork leased was, based on the company’s implied enterprise valuation, worth more than the entire building that contained it.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2026-07-05 00:00:00 +0000 UTC'>July 5, 2026</span>&nbsp;·&nbsp;13 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to WeWork: The Floor Worth More Than the Building" href="http://localhost:1313/blog/credit-risk/wework-valuation-scandal/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Round 5: Training a 7B Credit Analyst
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>The Experiment Round 5 of fine-tuning Qwen2.5-7B for CAMELS bank credit analysis completed on 20 June 2026. The goal: teach a 7-billion-parameter model to write structured credit assessments that cite their sources correctly, interpret financial ratios in the right direction, and refuse to fabricate figures when data is missing.
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-07-05 00:00:00 +0000 UTC'>July 5, 2026</span>&nbsp;·&nbsp;13 min</div></footer><a class=entry-link aria-label="post link to WeWork: The Floor Worth More Than the Building" href=https://1697-20747.github.io/blog/credit-risk/wework-valuation-scandal/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>Round 5: Training a 7B Credit Analyst</h2></header><div class=entry-content><p>The Experiment Round 5 of fine-tuning Qwen2.5-7B for CAMELS bank credit analysis completed on 20 June 2026. The goal: teach a 7-billion-parameter model to write structured credit assessments that cite their sources correctly, interpret financial ratios in the right direction, and refuse to fabricate figures when data is missing.
 The model trained on 6,359 instruction-response pairs for 3 epochs on a rented NVIDIA A100 80GB GPU via Vast.ai. Total cost: approximately $8. Total runtime: 8.1 hours.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2026-06-20 12:00:00 +0000 UTC'>June 20, 2026</span>&nbsp;·&nbsp;6 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to Round 5: Training a 7B Credit Analyst" href="http://localhost:1313/blog/credit-risk/round-5-training/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/credit-risk/gherkin_img.png" alt="30 St Mary Axe (The Gherkin)">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Gherkins Leave Sour Taste
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Overview If you want a textbook example of an asset-liability mismatch, the Gherkin is it. Not a failing building. Not empty floors. Not even particularly reckless leverage by the standards of 2007. What killed it was a currency bet hiding inside a capital structure — one that got dramatically worse every time the Swiss franc strengthened, which, post-2008, it did with depressing regularity.
-This is a story about a £600 million building that was 99% occupied, collecting rent from blue-chip tenants, and still ended up in receivership. The building didn’t fail. The financing did.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2026-06-07 08:28:14 +0000 UTC'>June 7, 2026</span>&nbsp;·&nbsp;12 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to Gherkins Leave Sour Taste" href="http://localhost:1313/blog/credit-risk/gherkins-leave-sour-taste/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Plan For A New Plan
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Overview There is a particular kind of financial disaster where everything at the bottom of the structure keeps working exactly as intended, and everything at the top falls apart anyway. Centro Properties Group is a good example of this
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-06-20 12:00:00 +0000 UTC'>June 20, 2026</span>&nbsp;·&nbsp;6 min</div></footer><a class=entry-link aria-label="post link to Round 5: Training a 7B Credit Analyst" href=https://1697-20747.github.io/blog/credit-risk/round-5-training/></a></article><article class="post-entry tag-entry"><figure class=entry-cover><img loading=lazy src=https://1697-20747.github.io/images/credit-risk/gherkin_img.png alt="30 St Mary Axe (The Gherkin)"></figure><header class=entry-header><h2 class=entry-hint-parent>Gherkins Leave Sour Taste</h2></header><div class=entry-content><p>Overview If you want a textbook example of an asset-liability mismatch, the Gherkin is it. Not a failing building. Not empty floors. Not even particularly reckless leverage by the standards of 2007. What killed it was a currency bet hiding inside a capital structure — one that got dramatically worse every time the Swiss franc strengthened, which, post-2008, it did with depressing regularity. Well, depressing if you are Swiss watch maker protecting your export market. Helpful is you are Swiss and actually want your wealth protected and your currency not debased. It is all about perspective, really.
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-06-07 08:28:14 +0000 UTC'>June 7, 2026</span>&nbsp;·&nbsp;12 min</div></footer><a class=entry-link aria-label="post link to Gherkins Leave Sour Taste" href=https://1697-20747.github.io/blog/credit-risk/gherkins-leave-sour-taste/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>Plan For A New Plan</h2></header><div class=entry-content><p>Overview There is a particular kind of financial disaster where everything at the bottom of the structure keeps working exactly as intended, and everything at the top falls apart anyway. Centro Properties Group is a good example of this
 Centro, an experienced owner operator of commercial real estate assets, acquired New Plan Excel Realty Trust (“NXL”) in 2007 for approximately US$6.2 billion. NXL owned a large portfolio of grocery-anchored US shopping centres — high occupancy, stable rents, conservative leverage, the kind of assets that were supposed to be boring. They were boring. They kept paying their mortgages throughout the crisis. The problem was that the cash they generated could not get from where it was to where it needed to be.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2026-06-02 18:35:43 +0000 UTC'>June 2, 2026</span>&nbsp;·&nbsp;23 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to Plan For A New Plan" href="http://localhost:1313/blog/credit-risk/plan-for-a-new-plan/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">EBITDA Or EBITDont
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Overview Below is a now classic paper on EBITDA. I would love to put actual paper here, but its not mine. It is quite easy to find though if you search on the title. It is appropriate that it is now famous, and deserves to be widely held in the public domain. A follow up by same authors would be amazing now the GFC is well past us.
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-06-02 18:35:43 +0000 UTC'>June 2, 2026</span>&nbsp;·&nbsp;23 min</div></footer><a class=entry-link aria-label="post link to Plan For A New Plan" href=https://1697-20747.github.io/blog/credit-risk/plan-for-a-new-plan/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>EBITDA Or EBITDont</h2></header><div class=entry-content><p>Overview Below is a now classic paper on EBITDA. I would love to put actual paper here, but its not mine. It is quite easy to find though if you search on the title. It is appropriate that it is now famous, and deserves to be widely held in the public domain. A follow up by same authors would be amazing now the GFC is well past us.
 Have we really learned the lessons? I suspect EBITDA is still used with purpose to overstate earnings and hide some leverage. Very much on purpose.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2026-05-19 14:33:03 +0000 UTC'>May 19, 2026</span>&nbsp;·&nbsp;3 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to EBITDA Or EBITDont" href="http://localhost:1313/blog/credit-risk/ebitda-or-ebitdont/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Mfs Collapse
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Market Financial Solutions (MFS) — Collapse Summary Report 1. Overview Market Financial Solutions Ltd (MFS) was a Mayfair-based specialist mortgage lender providing short-term bridge loans and buy-to-let finance. Founded in 2006 by Paresh Raja, the firm grew to report a loan book of approximately £2.4 billion and record turnover of £71 million by 2024. It positioned itself as one of the UK’s largest providers of bridging finance, serving property investors who could not meet the criteria of mainstream banks.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2026-04-28 19:36:06 +0000 UTC'>April 28, 2026</span>&nbsp;·&nbsp;13 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to Mfs Collapse" href="http://localhost:1313/blog/credit-risk/mfs-collapse/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Details Matter
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Overview Underwriting is time consuming, difficult, and sometimes mindless. It is also essential to prevent the destruction of capital.
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-05-19 14:33:03 +0000 UTC'>May 19, 2026</span>&nbsp;·&nbsp;3 min</div></footer><a class=entry-link aria-label="post link to EBITDA Or EBITDont" href=https://1697-20747.github.io/blog/credit-risk/ebitda-or-ebitdont/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>Mfs Collapse</h2></header><div class=entry-content><p>This is Part 1 of a series. Part 2: Recovering Pennies follows up on administrator recoveries and lender losses as at September 2026.
+Market Financial Solutions (MFS) — Collapse Summary Report 1. Overview Market Financial Solutions Ltd (MFS) was a Mayfair-based specialist mortgage lender providing short-term bridge loans and buy-to-let finance. Founded in 2006 by Paresh Raja, the firm grew to report a loan book of approximately £2.4 billion and record turnover of £71 million by 2024. It positioned itself as one of the UK’s largest providers of bridging finance, serving property investors who could not meet the criteria of mainstream banks.
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-04-28 19:36:06 +0000 UTC'>April 28, 2026</span>&nbsp;·&nbsp;13 min</div></footer><a class=entry-link aria-label="post link to Mfs Collapse" href=https://1697-20747.github.io/blog/credit-risk/mfs-collapse/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>Details Matter</h2></header><div class=entry-content><p>Overview Underwriting is time consuming, difficult, and sometimes mindless. It is also essential to prevent the destruction of capital.
 Sellers are at best honest participants who don’t disclose all relevant facts, and at worst liars. Buyers are sometimes fools. Often some combination of all three. This is a story about too much money, not enough sense, and the high cost of being blinded by an icon.
 The Building The Chrysler Building is an icon of industry and Art Deco design — but this is not about the building as architecture. It is about the building as a mechanism for losing money.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2026-04-25 09:10:22 +0000 UTC'>April 25, 2026</span>&nbsp;·&nbsp;13 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to Details Matter" href="http://localhost:1313/blog/credit-risk/details-matter/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Un consolidating Consolidated Accounting, or a day trip to the Casino
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Overview This is a deep dive into a widely known problem credit. In particular this will cover the root causes of one of the key problems in all its gory details. After this, you should never get caught by this nonsense again. If you do, more fool you.
-“Don’t worry, on a consolidated basis the debt service coverage is absolutely fine…”
-Foolish words never to be listened to other than in very particular circumstances.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2026-03-22 11:16:02 +0000 UTC'>March 22, 2026</span>&nbsp;·&nbsp;18 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to Un consolidating Consolidated Accounting, or a day trip to the Casino" href="http://localhost:1313/blog/credit-risk/un-consolidating-consolidated-accounting/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">One Ring to Rule them All....
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>The Problem This is a combined overview of credit, entity relationships, object oriented data sciences, all aligned to regulatory objectives. All items included are made up and functional, with the broad structure reflecting actual real world problems. The relevant bits of code will be provided, but this is about understanding the problem, defining the problem statement (properly), and learning the wrong ways so you don’t make mistakes.
-Assumptions Available systems are probably limited in scope, are circa 1990’s, and are designed around single instances. This means we will need to resolve the trickier aspects outside of limited core systems.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2026-03-21 22:07:39 +0000 UTC'>March 21, 2026</span>&nbsp;·&nbsp;29 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to One Ring to Rule them All...." href="http://localhost:1313/blog/credit-risk/one-ring-to-rule-them-all/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Enron: A Look Back
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>The Setup By the late 1990s, Enron was widely regarded as one of the most innovative companies in America. Fortune named it “America’s Most Innovative Company” six years in a row. Its stock price compounded at extraordinary rates. Analysts fell over themselves with buy ratings. The investment banks queued up for fees. The auditors signed off. The board nodded along.
-In December 2001, it filed for the largest bankruptcy in US history at the time. From investment grade to default in a matter of weeks. The speed alone should tell you something.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2024-03-01 00:00:00 +0000 UTC'>March 1, 2024</span>&nbsp;·&nbsp;21 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to Enron: A Look Back" href="http://localhost:1313/blog/credit-risk/enron-a-look-back/"></a>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">[1697, 20747]</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a><script>
-function highlightMenu() {
-    const path = window.location.pathname;
-    document.querySelectorAll("#menu a").forEach(function (link) {
-        const href = link.getAttribute("href");
-        if (!href) return;
-        const linkPath = new URL(href).pathname;
-        if (linkPath !== "/" && path.startsWith(linkPath)) {
-            const span = link.querySelector("span");
-            if (span) {
-                span.style.color = "#8FAC59";
-                span.style.fontWeight = "600";
-            }
-        }
-    });
-}
-
-setTimeout(highlightMenu, 200);
-</script>
-
-
-<div id="avatar-lightbox" style="
-    display:none;
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-04-25 09:10:22 +0000 UTC'>April 25, 2026</span>&nbsp;·&nbsp;13 min</div></footer><a class=entry-link aria-label="post link to Details Matter" href=https://1697-20747.github.io/blog/credit-risk/details-matter/></a></article><footer class=page-footer><nav class=pagination><a class=next href=https://1697-20747.github.io/categories/credit-risk/page/2/>Next&nbsp;&nbsp;»</a></nav></footer></main><footer class=footer><span>&copy; 2026 <a href=https://1697-20747.github.io/>[1697, 20747]</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>function highlightMenu(){const e=window.location.pathname;document.querySelectorAll("#menu a").forEach(function(t){const n=t.getAttribute("href");if(!n)return;const s=new URL(n).pathname;if(s!=="/"&&e.startsWith(s)){const e=t.querySelector("span");e&&(e.style.color="#8FAC59",e.style.fontWeight="600")}})}setTimeout(highlightMenu,200)</script><div id=avatar-lightbox style="display:none;
     position:fixed;
     inset:0;
     background:rgba(0,0,0,0.9);
@@ -345,157 +40,28 @@ setTimeout(highlightMenu, 200);
     gap:1.5rem;
     cursor:pointer;
     overflow-y:scroll;
-    padding:2rem 2rem 4rem 2rem;
-" onclick="this.style.display='none'">
-
-    
-    <img src="/images/avatar.png" style="
-        width:220px;
+    padding:2rem 2rem 4rem 2rem;" onclick='this.style.display="none"'><img src=/images/avatar.png style="width:220px;
         height:220px;
         border-radius:50%;
         border:3px solid #8FAC59;
-        box-shadow:0 0 40px rgba(143,172,89,0.3);
-    ">
-
-    
-    <p style="
-        color:#e2e8f0;
+        box-shadow:0 0 40px rgba(143,172,89,0.3);"><p style="color:#e2e8f0;
         font-family:'Syne',sans-serif;
         font-size:1rem;
         text-align:center;
         max-width:480px;
         line-height:1.7;
-        padding:0 1rem;
-    ">
-        I use this image as my avatar, or if you like a visual nom de plume of sorts.<br>
-        It was a photo taken by myself, near the bridge crossing the Thames to go to Kew Gardens.<br>
-        At the time taken, it was residing under a Banksy art piece, of a mountain goat perched on a ledge, from 2024. 
-        This Ibex mountain goat in London perches on a plinth with falling rocks beneath it - a CCTV camera pointing up towards the goat. <br>
-        The Banksy is gone, but I hope the Bruce Lee image is still with us, which it is on Google maps. I'd love to know if it is your art!
-    </p>
-
-    
-    <img src="/images/IMG_3300_full.png" style="
-        width:320px;
+        padding:0 1rem;">I use this image as my avatar, or if you like a visual nom de plume of sorts.<br>It was a photo taken by myself, near the bridge crossing the Thames to go to Kew Gardens.<br>At the time taken, it was residing under a Banksy art piece, of a mountain goat perched on a ledge, from 2024.
+This Ibex mountain goat in London perches on a plinth with falling rocks beneath it - a CCTV camera pointing up towards the goat.<br>The Banksy is gone, but I hope the Bruce Lee image is still with us, which it is on Google maps. I'd love to know if it is your art!</p><img src=/images/IMG_3300_full.png style="width:320px;
         border-radius:8px;
-        border:1px solid #8FAC59;
-    ">
-
-    
-    <p style="
-        color:var(--secondary);
+        border:1px solid #8FAC59;"><p style="color:var(--secondary);
         font-family:'DM Mono',monospace;
         font-size:0.8rem;
         text-align:center;
-        max-width:400px;
-    ">
-        The full image, I suspect its an electrical junction cabinet. Regardless, its a great piece of art. 
-        Based on the Banksy images, it looks like the goat arrived first.
-    </p>
-
-   
-    <div onclick="event.stopPropagation()" style="
-        width:100%;
+        max-width:400px;">The full image, I suspect its an electrical junction cabinet. Regardless, its a great piece of art.
+Based on the Banksy images, it looks like the goat arrived first.</p><div onclick=event.stopPropagation() style="width:100%;
         max-width:480px;
         border-radius:8px;
         overflow:hidden;
-        border:1px solid #8FAC59;
-    ">
-        <iframe
-            width="100%"
-            height="300"
-            frameborder="0"
-            style="border:0;display:block"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.2970%2C51.4824%2C-0.2771%2C51.4884&layer=mapnik&marker=51.4854%2C-0.2871"
-            allowfullscreen>
-        </iframe>
-    </div>
-    </div>
-
-    <p style="
-        color:#8FAC59;
+        border:1px solid #8FAC59;"><iframe width=100% height=300 frameborder=0 style=border:0;display:block src="https://www.openstreetmap.org/export/embed.html?bbox=-0.2970%2C51.4824%2C-0.2771%2C51.4884&layer=mapnik&marker=51.4854%2C-0.2871" allowfullscreen></iframe></div></div><p style="color:#8FAC59;
         font-family:'DM Mono',monospace;
-        font-size:0.75rem;
-    ">click outside map to close</p>
-
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const avatarLink = document.querySelector('.logo a img');
-    if (avatarLink) {
-        avatarLink.style.cursor = 'pointer';
-        avatarLink.parentElement.addEventListener('click', function(e) {
-            e.preventDefault();
-            const lb = document.getElementById('avatar-lightbox');
-            lb.style.display = 'flex';
-        });
-    }
-});
-</script>
-
-
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
+        font-size:0.75rem;">click outside map to close</p></div><script>document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".logo a img");e&&(e.style.cursor="pointer",e.parentElement.addEventListener("click",function(e){e.preventDefault();const t=document.getElementById("avatar-lightbox");t.style.display="flex"}))})</script><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>

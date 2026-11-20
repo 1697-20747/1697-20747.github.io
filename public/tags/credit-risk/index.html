@@ -1,258 +1,35 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="dark">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>Credit-Risk | [1697, 20747]</title>
-<meta name="keywords" content="">
-<meta name="description" content="Writing on Economics, Data Analytics, Computer Science &amp; more.">
-<meta name="author" content="Your Name">
-<link rel="canonical" href="http://localhost:1313/tags/credit-risk/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.bbc53d26841701c4af3d09bafa77484c9cbb7a4f2d84cfabf43a9a8dbe1fa590.css" integrity="sha256-u8U9JoQXAcSvPQm6&#43;ndITJy7ek8thM&#43;r9Dqajb4fpZA=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/images/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/credit-risk/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/credit-risk/">
-<noscript>
-    <style>
+<!doctype html><html lang=en dir=auto data-theme=dark><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Credit Risk | [1697, 20747]</title><meta name=keywords content><meta name=description content="Writing on Economics, Data Analytics, Computer Science & more."><meta name=author content="Your Name"><link rel=canonical href=https://1697-20747.github.io/tags/credit-risk/><link crossorigin=anonymous href=/assets/css/stylesheet.f273a0a148ced2c91d9a82b403256857857989e003078cc5f50355c29d83f569.css integrity="sha256-8nOgoUjO0skdmoK0AyVoV4V5ieADB4zF9QNVwp2D9Wk=" rel="preload stylesheet" as=style><link rel=icon href=https://1697-20747.github.io/images/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://1697-20747.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://1697-20747.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://1697-20747.github.io/apple-touch-icon.png><link rel=mask-icon href=https://1697-20747.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://1697-20747.github.io/tags/credit-risk/index.xml title=rss><link rel=alternate hreflang=en href=https://1697-20747.github.io/tags/credit-risk/><noscript><style>
         #theme-toggle,
         .top-link {
             display: none;
         }
 
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "light") {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script>
-</head>
-<body class="list" id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-    <a href="http://localhost:1313/">
-        <img src="/images/avatar.png" width="32" height="32" 
-             style="border-radius:50%;margin-right:8px;vertical-align:middle">
-    </a>
-            <a href="http://localhost:1313/" accesskey="h" title="[1697, 20747] (Alt + H)">[1697, 20747]</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="http://localhost:1313/blog/economics/" title="Economics">
-                    <span>Economics</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/data-analytics/" title="Data Analytics">
-                    <span>Data Analytics</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/comp-science/" title="Comp Science">
-                    <span>Comp Science</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/credit-risk/" title="Credit Risk">
-                    <span>Credit Risk</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/other/" title="Other">
-                    <span>Other</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/philosophy/" title="Philosophy">
-                    <span>Philosophy</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/bjj/" title="BJJ">
-                    <span>BJJ</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/unhelpful-advice/" title="Unhelpful Advice">
-                    <span>Unhelpful Advice</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/blog/books/" title="Books">
-                    <span>Books</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
-                    <span>Search</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/about/" title="About">
-                    <span>About</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/tags/">Tags</a></div>
-  <h1>
-    Credit-Risk
-  </h1>
-</header>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">WeWork: The Floor Worth More Than the Building
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>The Floor Worth More Than the Building NYU Stern professor and entrepreneur Scott Galloway ran the numbers during what he came to call his “WeWTF” research series — a set of analyses published between 2017 and 2019 — and found something that should have stopped the whole circus cold.
-In several WeWork buildings, the single floor WeWork leased was, based on the company’s implied enterprise valuation, worth more than the entire building that contained it.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2026-07-05 00:00:00 +0000 UTC'>July 5, 2026</span>&nbsp;·&nbsp;13 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to WeWork: The Floor Worth More Than the Building" href="http://localhost:1313/blog/credit-risk/wework-valuation-scandal/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">LLM Credit Paper Generator
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Overview This is a project to generate bank credit papers using AI. Easier said than done. Project teams trying this with off-the-shelf LLMs tend to get stuck in a rut, and not without reason — generic LLMs do not know what a CAMELS analysis is, do not know what regulatory thresholds matter, do not cite source pages, and freely invent peer figures that sound plausible.
-The honest version of this story has two acts. The first act was building a data pipeline and fine-tuning a Qwen2.5-7B model on 6,623 curated training pairs. The second act was throwing the fine-tuned model away after it failed to outperform the base model with structured prompting, and shipping the structured prompting approach instead. The data pipeline survived. The fine-tuning did not.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2026-05-25 18:02:38 +0000 UTC'>May 25, 2026</span>&nbsp;·&nbsp;14 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to LLM Credit Paper Generator" href="http://localhost:1313/blog/comp-science/llm-credit-paper-generator/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Its Lonely At The Bottom
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> “Never be wrong on your own”
-John Maynard Keynes
-Except of course that he probably never said it, or if he did it was not recorded as a direct quote. What he did say was below. The motto of Bankers everywhere. We should not be churlish about this, its good advice. In theory the odds of a colossal mistake should diminish with the more eyes looking at the problem. Eventually someone who knows what they are doing should figure out the problem. The challenge here is group think, where the bias rules the day.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2026-05-09 07:51:37 +0000 UTC'>May 9, 2026</span>&nbsp;·&nbsp;1 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to Its Lonely At The Bottom" href="http://localhost:1313/blog/unhelpful-advice/its-lonely-at-the-bottom/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Un consolidating Consolidated Accounting, or a day trip to the Casino
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Overview This is a deep dive into a widely known problem credit. In particular this will cover the root causes of one of the key problems in all its gory details. After this, you should never get caught by this nonsense again. If you do, more fool you.
-“Don’t worry, on a consolidated basis the debt service coverage is absolutely fine…”
-Foolish words never to be listened to other than in very particular circumstances.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2026-03-22 11:16:02 +0000 UTC'>March 22, 2026</span>&nbsp;·&nbsp;18 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to Un consolidating Consolidated Accounting, or a day trip to the Casino" href="http://localhost:1313/blog/credit-risk/un-consolidating-consolidated-accounting/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Enron: A Look Back
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>The Setup By the late 1990s, Enron was widely regarded as one of the most innovative companies in America. Fortune named it “America’s Most Innovative Company” six years in a row. Its stock price compounded at extraordinary rates. Analysts fell over themselves with buy ratings. The investment banks queued up for fees. The auditors signed off. The board nodded along.
-In December 2001, it filed for the largest bankruptcy in US history at the time. From investment grade to default in a matter of weeks. The speed alone should tell you something.
-...</p>
-  </div>
-  <footer class="entry-footer">
-<div class="post-meta"><span title='2024-03-01 00:00:00 +0000 UTC'>March 1, 2024</span>&nbsp;·&nbsp;21 min</div>
-</footer>
-  <a class="entry-link" aria-label="post link to Enron: A Look Back" href="http://localhost:1313/blog/credit-risk/enron-a-look-back/"></a>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">[1697, 20747]</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a><script>
-function highlightMenu() {
-    const path = window.location.pathname;
-    document.querySelectorAll("#menu a").forEach(function (link) {
-        const href = link.getAttribute("href");
-        if (!href) return;
-        const linkPath = new URL(href).pathname;
-        if (linkPath !== "/" && path.startsWith(linkPath)) {
-            const span = link.querySelector("span");
-            if (span) {
-                span.style.color = "#8FAC59";
-                span.style.fontWeight = "600";
-            }
-        }
-    });
-}
-
-setTimeout(highlightMenu, 200);
-</script>
-
-
-<div id="avatar-lightbox" style="
-    display:none;
+    </style></noscript><script>localStorage.getItem("pref-theme")==="light"&&(document.querySelector("html").dataset.theme="light")</script><meta property="og:url" content="https://1697-20747.github.io/tags/credit-risk/"><meta property="og:site_name" content="[1697, 20747]"><meta property="og:title" content="Credit Risk"><meta property="og:description" content="Writing on Economics, Data Analytics, Computer Science & more."><meta property="og:locale" content="en-gb"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="Credit Risk"><meta name=twitter:description content="Writing on Economics, Data Analytics, Computer Science & more."></head><body class=list id=top><header class=header><nav class=nav><div class=logo><a href=https://1697-20747.github.io/><img src=/images/avatar.png width=32 height=32 style=border-radius:50%;margin-right:8px;vertical-align:middle>
+</a><a href=https://1697-20747.github.io/ accesskey=h title="[1697, 20747] (Alt + H)">[1697, 20747]</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://1697-20747.github.io/blog/economics/ title=Economics><span>Economics</span></a></li><li><a href=https://1697-20747.github.io/blog/data-analytics/ title="Data Analytics"><span>Data Analytics</span></a></li><li><a href=https://1697-20747.github.io/blog/comp-science/ title="Comp Science"><span>Comp Science</span></a></li><li><a href=https://1697-20747.github.io/blog/credit-risk/ title="Credit Risk"><span>Credit Risk</span></a></li><li><a href=https://1697-20747.github.io/blog/other/ title=Other><span>Other</span></a></li><li><a href=https://1697-20747.github.io/blog/philosophy/ title=Philosophy><span>Philosophy</span></a></li><li><a href=https://1697-20747.github.io/blog/bjj/ title=BJJ><span>BJJ</span></a></li><li><a href=https://1697-20747.github.io/blog/unhelpful-advice/ title="Unhelpful Advice"><span>Unhelpful Advice</span></a></li><li><a href=https://1697-20747.github.io/blog/books/ title=Books><span>Books</span></a></li><li><a href=https://1697-20747.github.io/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://1697-20747.github.io/about/ title=About><span>About</span></a></li></ul></nav></header><main class=main><header class=page-header><div class=breadcrumbs><a href=https://1697-20747.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://1697-20747.github.io/tags/>Tags</a></div><h1>Credit Risk</h1></header><article class="post-entry tag-entry"><figure class=entry-cover><img loading=lazy src=https://1697-20747.github.io/images/comp-science/ce_engine_process.svg alt="Credit enhancement calculation engine: inputs, credit model, scenarios, waterfall, bisection, cushion, checks"></figure><header class=entry-header><h2 class=entry-hint-parent>Securitisation 101 — Part 5: Credit Enhancement, Mechanism and Design</h2></header><div class=entry-content><p>Part 5 of 6: the credit enhancement engine step by step, the design choices behind each layer, and how the result compares with recent public UK prime deals....</p></div><footer class=entry-footer><div class=post-meta><span title='2026-11-01 09:00:00 +0000 UTC'>November 1, 2026</span>&nbsp;·&nbsp;10 min</div></footer><a class=entry-link aria-label="post link to Securitisation 101 — Part 5: Credit Enhancement, Mechanism and Design" href=https://1697-20747.github.io/blog/comp-science/securitisation-101-part-5/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>No Two Banks Say It the Same Way</h2></header><div class=entry-content><p>Eleventh post in a series about building a local, offline credit-analysis pipeline — start with Not a Specification for the problem statement. The companion post Expensive On Purpose covered what agentic verification costs. This one covers why nothing cheaper worked.
+Eight Years of a Number That Was Never There UniCredit’s annual reports carried a net interest margin in the project’s database for every year from 2018 to 2025. 1.92%, 1.43%, 0.77%, 0.75%, 4.66%, 0.83%, 0.89%, 0.53%. Each one had been extracted automatically, passed a sanity-range check, and been promoted to verified=1.
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-09-28 09:00:00 +0000 UTC'>September 28, 2026</span>&nbsp;·&nbsp;25 min</div></footer><a class=entry-link aria-label="post link to No Two Banks Say It the Same Way" href=https://1697-20747.github.io/blog/comp-science/no-two-banks-say-it-the-same-way/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>Expensive On Purpose</h2></header><div class=entry-content><p>Two Numbers Closing out UBS’s remaining metric gaps in the LLM Credit Paper Generator project’s verification database — 199 missing cells, each one requiring a real page number and a real quote from a real filing before it could be written — cost about 486,000 tokens across 251 tool calls. A comparable pass on MUFG, 339 cells plus a full re-confirmation of which document belonged to which fiscal year, cost about 483,000 tokens across 238 calls.
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-09-12 09:00:00 +0000 UTC'>September 12, 2026</span>&nbsp;·&nbsp;9 min</div></footer><a class=entry-link aria-label="post link to Expensive On Purpose" href=https://1697-20747.github.io/blog/comp-science/expensive-on-purpose/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>Audit the Neighbor Too</h2></header><div class=entry-content><p>Tenth post in a series about building a local, offline credit-analysis pipeline. Start with Not a Specification, or see Confirmed, Not Claimed for the verification argument this post turns out to be a second instance of — one layer down, in a metric’s value instead of a document’s identity.
+In Use, Never Checked total_deposits_bn had been sitting in the corpus for a while — 361 rows across 34 banks, most written verified=1 by an early bulk-extraction pass, most with no source_page or source_quote at all. It had simply never been added to the schema files (SANITY_RANGES, the metric dictionary, the data dictionary) that every other metric goes through before being trusted. A basic bank number, present, plausible-looking, never the subject of its own dedicated audit.
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-08-04 09:00:00 +0000 UTC'>August 4, 2026</span>&nbsp;·&nbsp;4 min</div></footer><a class=entry-link aria-label="post link to Audit the Neighbor Too" href=https://1697-20747.github.io/blog/comp-science/audit-the-neighbor-too/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>Confirmed, Not Claimed</h2></header><div class=entry-content><p>Ninth post in a series about building a local, offline credit-analysis pipeline. Start with Not a Specification, or see the full series at the bottom of this post.
+Two Days, Wrong, Looking Fine A filing’s entity fields said legal_entity_name: ING Groep N.V., entity_scope: group_consolidated. Both populated. Both plausible. Both sitting there for two days after being written during a routine backfill.
+The actual PDF’s own cover page said “ING Bank Annual Report 2021” — a different, narrower entity than the one the database claimed. Nothing caught it, because nothing was checking. The backfill that wrote those fields never re-opened the file to confirm; it just filled in a reasonable-looking value and moved on, the same way any of the wrong- entity bugs this project has found started — Truist, NatWest, a Barclays Pillar 3 report, a Société Générale filing that was secretly a duplicate of something else entirely. What made this one different is that it was caught only by accident, because a later pass happened to re-check.
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-07-22 18:00:00 +0000 UTC'>July 22, 2026</span>&nbsp;·&nbsp;4 min</div></footer><a class=entry-link aria-label="post link to Confirmed, Not Claimed" href=https://1697-20747.github.io/blog/comp-science/confirmed-not-claimed/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>Whose Bank Is This?</h2></header><div class=entry-content><p>Eighth post in a series about building a local, offline credit-analysis pipeline. Start with Not a Specification, or see the full series at the bottom of this post.
+The Question Nothing Was Asking A Pillar 3 filing sat in this corpus, correctly formatted, internally consistent, every number plausible. Thirty-five metrics extracted cleanly. Nothing about it looked wrong.
+It was the wrong bank. Not a different company — the same banking group, but a ring-fenced retail subsidiary’s own disclosure, not the group’s. Total assets off by a factor of five. Every ratio technically real, technically sourced, technically describing a real regulated entity — just not the one the corpus intended.
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-07-19 23:00:00 +0000 UTC'>July 19, 2026</span>&nbsp;·&nbsp;5 min</div></footer><a class=entry-link aria-label="post link to Whose Bank Is This?" href=https://1697-20747.github.io/blog/comp-science/whose-bank-is-this/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>Post PDF</h2></header><div class=entry-content><p>Seventh post in a series about building a local, offline credit-analysis pipeline. Start with Not a Specification, or see the full series list at the bottom of this post. This one’s a placeholder — a marker for where the project goes once a precondition outside its control is met, not a finished post. Expand later.
+The Placeholder Almost everything described so far in this series — the metric dictionary, the verified tiers, the page-citation discipline, Claude Code doing direct document reads, the entire quality layer — exists to compensate for one underlying fact: bank disclosure is still mostly published as PDF.
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-07-19 22:20:00 +0000 UTC'>July 19, 2026</span>&nbsp;·&nbsp;3 min</div></footer><a class=entry-link aria-label="post link to Post PDF" href=https://1697-20747.github.io/blog/comp-science/post-pdf/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>Antidote for Large Liar Model</h2></header><div class=entry-content><p>Sixth post in a series about building a local, offline credit-analysis pipeline. Start with Not a Specification for the problem statement, or see the full series at the bottom of this post.
+The Large Liar Model Problem Ask a base language model to write a bank’s credit paper and it will. Fluent structure, correct-sounding vocabulary, plausible numbers, a confident tone throughout — and some fraction of those numbers will be invented. Not maliciously. An LLM doesn’t know the difference between recalling a fact and generating a plausible continuation of a sentence that looks like a fact — that’s not a bug in one particular model, it’s what the architecture does by design. Qwen2.5-7B will do it. So will everything else in its weight class. The earlier post in this series has a real example: asked for peer context without grounded data, a model invented a specific-sounding figure — a named bank’s statutory profit, quoted to the nearest million — that was simply not true, delivered with exactly the same confidence as the true numbers around it.
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-07-19 22:00:00 +0000 UTC'>July 19, 2026</span>&nbsp;·&nbsp;10 min</div></footer><a class=entry-link aria-label="post link to Antidote for Large Liar Model" href=https://1697-20747.github.io/blog/comp-science/antidote-for-large-liar-model/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>Not a Specification</h2></header><div class=entry-content><p>This is the first post in a series about building a local, offline credit-analysis pipeline — written last, but the part that should be read first. See the full series list at the bottom of this post. This one’s short deliberately — an outline, not a full post. It matters more than its length suggests, so it’ll get expanded later.
+The Brief Wasn’t the Problem “Write a bank’s credit paper” is a sentence, not a specification. It names an output without naming a single one of the decisions that produce it. It’s an aspiration — the kind of brief that sounds achievable right up until you try to decompose it into things a machine could actually do deterministically.
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-07-19 21:15:00 +0000 UTC'>July 19, 2026</span>&nbsp;·&nbsp;5 min</div></footer><a class=entry-link aria-label="post link to Not a Specification" href=https://1697-20747.github.io/blog/comp-science/not-a-specification/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>Adding the 61st Bank</h2></header><div class=entry-content><p>Overview This is the fifth post in an accidental series about building a local, offline credit-analysis pipeline. The first post laid out the actual problem statement — why “write a bank’s credit paper” was an aspiration, not a specification, and why the metrics layer turned out to be the load-bearing piece. The second was about the fine-tuning journey and why structured prompting beat a trained model. The third was about one specific architectural bug — a metric that couldn’t exist under a given accounting regime, and what it takes to stop rediscovering the same fact one bank at a time.
+...</p></div><footer class=entry-footer><div class=post-meta><span title='2026-07-19 20:30:00 +0000 UTC'>July 19, 2026</span>&nbsp;·&nbsp;13 min</div></footer><a class=entry-link aria-label="post link to Adding the 61st Bank" href=https://1697-20747.github.io/blog/comp-science/adding-the-61st-bank/></a></article><footer class=page-footer><nav class=pagination><a class=next href=https://1697-20747.github.io/tags/credit-risk/page/2/>Next&nbsp;&nbsp;»</a></nav></footer></main><footer class=footer><span>&copy; 2026 <a href=https://1697-20747.github.io/>[1697, 20747]</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>function highlightMenu(){const e=window.location.pathname;document.querySelectorAll("#menu a").forEach(function(t){const n=t.getAttribute("href");if(!n)return;const s=new URL(n).pathname;if(s!=="/"&&e.startsWith(s)){const e=t.querySelector("span");e&&(e.style.color="#8FAC59",e.style.fontWeight="600")}})}setTimeout(highlightMenu,200)</script><div id=avatar-lightbox style="display:none;
     position:fixed;
     inset:0;
     background:rgba(0,0,0,0.9);
@@ -263,157 +40,28 @@ setTimeout(highlightMenu, 200);
     gap:1.5rem;
     cursor:pointer;
     overflow-y:scroll;
-    padding:2rem 2rem 4rem 2rem;
-" onclick="this.style.display='none'">
-
-    
-    <img src="/images/avatar.png" style="
-        width:220px;
+    padding:2rem 2rem 4rem 2rem;" onclick='this.style.display="none"'><img src=/images/avatar.png style="width:220px;
         height:220px;
         border-radius:50%;
         border:3px solid #8FAC59;
-        box-shadow:0 0 40px rgba(143,172,89,0.3);
-    ">
-
-    
-    <p style="
-        color:#e2e8f0;
+        box-shadow:0 0 40px rgba(143,172,89,0.3);"><p style="color:#e2e8f0;
         font-family:'Syne',sans-serif;
         font-size:1rem;
         text-align:center;
         max-width:480px;
         line-height:1.7;
-        padding:0 1rem;
-    ">
-        I use this image as my avatar, or if you like a visual nom de plume of sorts.<br>
-        It was a photo taken by myself, near the bridge crossing the Thames to go to Kew Gardens.<br>
-        At the time taken, it was residing under a Banksy art piece, of a mountain goat perched on a ledge, from 2024. 
-        This Ibex mountain goat in London perches on a plinth with falling rocks beneath it - a CCTV camera pointing up towards the goat. <br>
-        The Banksy is gone, but I hope the Bruce Lee image is still with us, which it is on Google maps. I'd love to know if it is your art!
-    </p>
-
-    
-    <img src="/images/IMG_3300_full.png" style="
-        width:320px;
+        padding:0 1rem;">I use this image as my avatar, or if you like a visual nom de plume of sorts.<br>It was a photo taken by myself, near the bridge crossing the Thames to go to Kew Gardens.<br>At the time taken, it was residing under a Banksy art piece, of a mountain goat perched on a ledge, from 2024.
+This Ibex mountain goat in London perches on a plinth with falling rocks beneath it - a CCTV camera pointing up towards the goat.<br>The Banksy is gone, but I hope the Bruce Lee image is still with us, which it is on Google maps. I'd love to know if it is your art!</p><img src=/images/IMG_3300_full.png style="width:320px;
         border-radius:8px;
-        border:1px solid #8FAC59;
-    ">
-
-    
-    <p style="
-        color:var(--secondary);
+        border:1px solid #8FAC59;"><p style="color:var(--secondary);
         font-family:'DM Mono',monospace;
         font-size:0.8rem;
         text-align:center;
-        max-width:400px;
-    ">
-        The full image, I suspect its an electrical junction cabinet. Regardless, its a great piece of art. 
-        Based on the Banksy images, it looks like the goat arrived first.
-    </p>
-
-   
-    <div onclick="event.stopPropagation()" style="
-        width:100%;
+        max-width:400px;">The full image, I suspect its an electrical junction cabinet. Regardless, its a great piece of art.
+Based on the Banksy images, it looks like the goat arrived first.</p><div onclick=event.stopPropagation() style="width:100%;
         max-width:480px;
         border-radius:8px;
         overflow:hidden;
-        border:1px solid #8FAC59;
-    ">
-        <iframe
-            width="100%"
-            height="300"
-            frameborder="0"
-            style="border:0;display:block"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.2970%2C51.4824%2C-0.2771%2C51.4884&layer=mapnik&marker=51.4854%2C-0.2871"
-            allowfullscreen>
-        </iframe>
-    </div>
-    </div>
-
-    <p style="
-        color:#8FAC59;
+        border:1px solid #8FAC59;"><iframe width=100% height=300 frameborder=0 style=border:0;display:block src="https://www.openstreetmap.org/export/embed.html?bbox=-0.2970%2C51.4824%2C-0.2771%2C51.4884&layer=mapnik&marker=51.4854%2C-0.2871" allowfullscreen></iframe></div></div><p style="color:#8FAC59;
         font-family:'DM Mono',monospace;
-        font-size:0.75rem;
-    ">click outside map to close</p>
-
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const avatarLink = document.querySelector('.logo a img');
-    if (avatarLink) {
-        avatarLink.style.cursor = 'pointer';
-        avatarLink.parentElement.addEventListener('click', function(e) {
-            e.preventDefault();
-            const lb = document.getElementById('avatar-lightbox');
-            lb.style.display = 'flex';
-        });
-    }
-});
-</script>
-
-
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
+        font-size:0.75rem;">click outside map to close</p></div><script>document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".logo a img");e&&(e.style.cursor="pointer",e.parentElement.addEventListener("click",function(e){e.preventDefault();const t=document.getElementById("avatar-lightbox");t.style.display="flex"}))})</script><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>

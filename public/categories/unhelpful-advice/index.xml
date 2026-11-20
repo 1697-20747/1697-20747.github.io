@@ -1,268 +1,124 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Unhelpful-Advice on [1697, 20747]</title>
-    <link>http://localhost:1313/categories/unhelpful-advice/</link>
-    <description>Recent content in Unhelpful-Advice on [1697, 20747]</description>
-    <generator>Hugo -- 0.156.0</generator>
-    <language>en-gb</language>
-    <lastBuildDate>Mon, 06 Jul 2026 06:40:16 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/unhelpful-advice/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Feynman On Understanding</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/feynman-on-understanding/</link>
-      <pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/feynman-on-understanding/</guid>
-      <description>&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Unhelpful-Advice on [1697, 20747]</title><link>https://1697-20747.github.io/categories/unhelpful-advice/</link><description>Recent content in Unhelpful-Advice on [1697, 20747]</description><generator>Hugo -- 0.156.0</generator><language>en-gb</language><lastBuildDate>Sat, 12 Sep 2026 09:17:54 +0000</lastBuildDate><atom:link href="https://1697-20747.github.io/categories/unhelpful-advice/index.xml" rel="self" type="application/rss+xml"/><item><title>Feynman On Understanding</title><link>https://1697-20747.github.io/blog/unhelpful-advice/feynman-on-understanding/</link><pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/feynman-on-understanding/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;What I cannot create, I do not understand.&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;— Richard Feynman, Nobel Laureate in Physics (1965), found written on his blackboard at the time of his death in 1988. Feynman received the prize for his work developing quantum electrodynamics.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Win To Lose</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/win-to-lose/</link>
-      <pubDate>Mon, 06 Jul 2026 06:40:16 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/win-to-lose/</guid>
-      <description>one right does make at least one wrong</description>
-    </item>
-    <item>
-      <title>Carry The Stone Alone</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/carry-the-stone-alone/</link>
-      <pubDate>Sat, 13 Jun 2026 18:42:57 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/carry-the-stone-alone/</guid>
-      <description>Die on the hill alone or play the team sport</description>
-    </item>
-    <item>
-      <title>Its Lonely At The Bottom</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/its-lonely-at-the-bottom/</link>
-      <pubDate>Sat, 09 May 2026 07:51:37 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/its-lonely-at-the-bottom/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Billion Here</title><link>https://1697-20747.github.io/blog/unhelpful-advice/billion-here/</link><pubDate>Sat, 12 Sep 2026 09:17:54 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/billion-here/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;A billion here, a billion there, and pretty soon you&amp;rsquo;re talking real money.&amp;rdquo; — popularly attributed to US Senator Everett Dirksen.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;No record of him actually saying it survives in his papers or recorded speeches; quote researchers regard it as apocryphal. Still the canonical line for how casually large numbers get thrown around budgets.&lt;/p&gt;</description></item><item><title>Disease Of Dogs</title><link>https://1697-20747.github.io/blog/unhelpful-advice/disease-of-dogs/</link><pubDate>Sat, 12 Sep 2026 09:17:54 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/disease-of-dogs/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Gratitude is a disease of dogs.&amp;rdquo; — attributed to Joseph Stalin, via Milovan Djilas&amp;rsquo;s memoir &lt;em&gt;Conversations with Stalin&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Not independently verified beyond Djilas&amp;rsquo;s account, but consistent with the source.&lt;/p&gt;</description></item><item><title>Fall To Training</title><link>https://1697-20747.github.io/blog/unhelpful-advice/fall-to-training/</link><pubDate>Sat, 12 Sep 2026 09:17:54 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/fall-to-training/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;You don&amp;rsquo;t rise to the level of your expectations, you fall to the level of your training.&amp;rdquo; — popularly attributed to the ancient Greek poet Archilochus.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Near-certainly a modern saying with no ancient source; it circulates in military and Navy SEAL training culture long before anyone traced it to a 7th-century-BC poet. In a competition, you don&amp;rsquo;t rise to the level of your competition — you fall to the level of your training, whoever first said so.&lt;/p&gt;</description></item><item><title>Lotus In The Mud</title><link>https://1697-20747.github.io/blog/unhelpful-advice/lotus-in-the-mud/</link><pubDate>Sat, 12 Sep 2026 09:17:54 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/lotus-in-the-mud/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;The lotus blossoms in the mud, untainted; it interacts with the world yet remains unstained.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A recurring metaphor across Buddhist scripture (the Buddha compares himself to a lotus, born in the water and rising above it unsoiled, in the Anguttara Nikaya) rather than a single traceable sutra line — the image, not a specific verse, is the point.&lt;/p&gt;</description></item><item><title>Men Make Their Own History</title><link>https://1697-20747.github.io/blog/unhelpful-advice/men-make-their-own-history/</link><pubDate>Sat, 12 Sep 2026 09:17:54 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/men-make-their-own-history/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Men make their own history, but they do not make it just as they please; they do not make it under circumstances chosen by themselves, but under circumstances directly encountered, given and transmitted from the past.&amp;rdquo; — Karl Marx, &lt;em&gt;The Eighteenth Brumaire of Louis Bonaparte&lt;/em&gt; (1852).&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Never Too Late Eliot</title><link>https://1697-20747.github.io/blog/unhelpful-advice/never-too-late-eliot/</link><pubDate>Sat, 12 Sep 2026 09:17:54 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/never-too-late-eliot/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;It&amp;rsquo;s never too late to be who you ought to have been.&amp;rdquo; — commonly attributed to George Eliot.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Except she probably never wrote it. Quote Investigator traces this one to greeting cards and inspirational-poster circulation, not to Middlemarch or anything else in Eliot&amp;rsquo;s actual output. Doesn&amp;rsquo;t make it bad advice, though.&lt;/p&gt;</description></item><item><title>One Way Rifle Range</title><link>https://1697-20747.github.io/blog/unhelpful-advice/one-way-rifle-range/</link><pubDate>Sat, 12 Sep 2026 09:17:54 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/one-way-rifle-range/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;No one gets a medal of valour from time on the one way rifle range. Best not be a tyrant, as one day you will end up on the two way range, and your subordinates will very likely aim with intent. As they should.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Ran Out Of Stones</title><link>https://1697-20747.github.io/blog/unhelpful-advice/ran-out-of-stones/</link><pubDate>Sat, 12 Sep 2026 09:17:54 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/ran-out-of-stones/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;The Stone Age didn&amp;rsquo;t end because we ran out of stones.&amp;rdquo; — commonly attributed to Sheikh Ahmed Zaki Yamani, former Saudi oil minister.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Widely repeated, thinly sourced — energy-policy figures from Yamani to Steven Chu get credited with versions of this line. Good line regardless of who coined it first.&lt;/p&gt;</description></item><item><title>Thought Spoken Is A Lie</title><link>https://1697-20747.github.io/blog/unhelpful-advice/thought-spoken-is-a-lie/</link><pubDate>Sat, 12 Sep 2026 09:17:54 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/thought-spoken-is-a-lie/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;A thought once uttered is a lie.&amp;rdquo; — Fyodor Tyutchev, from the poem &amp;ldquo;Silentium!&amp;rdquo; (1830).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Usually passed around as an anonymous &amp;ldquo;Russian proverb&amp;rdquo; — it isn&amp;rsquo;t, it&amp;rsquo;s a specific poet&amp;rsquo;s line, and a much better one for knowing its source.&lt;/p&gt;</description></item><item><title>Whoever Was Driving</title><link>https://1697-20747.github.io/blog/unhelpful-advice/whoever-was-driving/</link><pubDate>Sat, 12 Sep 2026 09:17:54 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/whoever-was-driving/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;Asked in 1990 who would succeed Margaret Thatcher if she were run over by a bus, Willie Whitelaw reputedly replied: &amp;ldquo;Whoever was driving the bus.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A much-repeated Westminster anecdote — the exact primary transcript has proven elusive, so treat it as folklore with a very high truth-ring rather than a verified quotation.&lt;/p&gt;</description></item><item><title>Draw Your Sword</title><link>https://1697-20747.github.io/blog/unhelpful-advice/draw-your-sword/</link><pubDate>Sat, 12 Sep 2026 09:17:32 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/draw-your-sword/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;When you meet a swordsman, draw your sword; do not recite poetry to one who is not a poet.&amp;rdquo; — traditional Zen saying.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Fall Into Line</title><link>https://1697-20747.github.io/blog/unhelpful-advice/fall-into-line/</link><pubDate>Sat, 12 Sep 2026 09:17:32 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/fall-into-line/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;The markets will have to fall into line.&amp;rdquo; — Paula Barker, Labour MP for Liverpool Wavertree, September 2026, responding to a question on how investors would react to a prospective Andy Burnham-led Labour government.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Much Wisdom Much Grief</title><link>https://1697-20747.github.io/blog/unhelpful-advice/much-wisdom-much-grief/</link><pubDate>Sat, 12 Sep 2026 09:17:32 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/much-wisdom-much-grief/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;For in much wisdom is much grief: and he that increaseth knowledge increaseth sorrow.&amp;rdquo; — Ecclesiastes 1:18 (KJV), traditionally attributed to Solomon.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>No Counterfactual</title><link>https://1697-20747.github.io/blog/unhelpful-advice/no-counterfactual/</link><pubDate>Sat, 12 Sep 2026 09:17:32 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/no-counterfactual/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;The counterfactual case never exists.&amp;rdquo; — Bruce Schultz.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Problems That Didnt Exist</title><link>https://1697-20747.github.io/blog/unhelpful-advice/problems-that-didnt-exist/</link><pubDate>Sat, 12 Sep 2026 09:17:32 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/problems-that-didnt-exist/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;We had an HR team, and that HR team was creating problems that didn&amp;rsquo;t exist. Those problems disappeared when I let them go.&amp;rdquo; — Ryan Breslow, CEO of Bolt, Fortune, 19 May 2026.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Special Place In Hell</title><link>https://1697-20747.github.io/blog/unhelpful-advice/special-place-in-hell/</link><pubDate>Sat, 12 Sep 2026 09:17:32 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/special-place-in-hell/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;There is a special place in hell for women who don&amp;rsquo;t help other women.&amp;rdquo; — Madeleine Albright.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Steins Law</title><link>https://1697-20747.github.io/blog/unhelpful-advice/steins-law/</link><pubDate>Sat, 12 Sep 2026 09:17:32 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/steins-law/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;If something cannot go on forever, it will stop.&amp;rdquo; — Herbert Stein, economist, Chairman of the Council of Economic Advisers (Stein&amp;rsquo;s Law).&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Tree Falls Monkeys Scatter</title><link>https://1697-20747.github.io/blog/unhelpful-advice/tree-falls-monkeys-scatter/</link><pubDate>Sat, 12 Sep 2026 09:17:32 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/tree-falls-monkeys-scatter/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;When the great tree falls, the monkeys scatter.&amp;rdquo; (树倒猢狲散) — Chinese proverb.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Validation Vs Purpose</title><link>https://1697-20747.github.io/blog/unhelpful-advice/validation-vs-purpose/</link><pubDate>Sat, 12 Sep 2026 09:17:32 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/validation-vs-purpose/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;I don&amp;rsquo;t need validation, I do want purpose.&amp;rdquo; — Bruce Schultz.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Welfare Of The Citizen</title><link>https://1697-20747.github.io/blog/unhelpful-advice/welfare-of-the-citizen/</link><pubDate>Sat, 12 Sep 2026 09:17:32 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/welfare-of-the-citizen/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Salus populi suprema lex esto&amp;rdquo; — &amp;ldquo;The welfare of the people shall be the supreme law.&amp;rdquo; — Cicero, &lt;em&gt;De Legibus&lt;/em&gt;, Book III.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>What It Costs Us</title><link>https://1697-20747.github.io/blog/unhelpful-advice/what-it-costs-us/</link><pubDate>Sat, 12 Sep 2026 09:17:32 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/what-it-costs-us/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;The value of a thing sometimes lies not in what one attains with it, but in what one pays for it — what it costs us.&amp;rdquo; — Friedrich Nietzsche.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Army You Have</title><link>https://1697-20747.github.io/blog/unhelpful-advice/army-you-have/</link><pubDate>Sat, 12 Sep 2026 09:17:15 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/army-you-have/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;You go to war with the Army you have, not the Army you might want or wish to have at a later time.&amp;rdquo; — Donald Rumsfeld, press conference, Camp Buehring, Kuwait, 8 December 2004.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It&amp;rsquo;s a fool who builds his battle plan on the army he wished he had, instead of the one he&amp;rsquo;s actually got.&lt;/p&gt;</description></item><item><title>Balance Sheet Buffett</title><link>https://1697-20747.github.io/blog/unhelpful-advice/balance-sheet-buffett/</link><pubDate>Sat, 12 Sep 2026 09:17:15 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/balance-sheet-buffett/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;It&amp;rsquo;s something we&amp;rsquo;ve never really talked about publicly, but I actually spend more time looking at balance sheets than income statements. Wall Street often focuses on income statements, but I like to study balance sheets — ideally over an 8 to 10-year period — before I even glance at the income statement. You can&amp;rsquo;t hide as much on the balance sheet. It&amp;rsquo;s harder to manipulate than earnings figures.&amp;rdquo; — Warren Buffett, Berkshire Hathaway Annual Shareholders Meeting, 3 May 2025.&lt;/p&gt;</description></item><item><title>Feather Beds</title><link>https://1697-20747.github.io/blog/unhelpful-advice/feather-beds/</link><pubDate>Sat, 12 Sep 2026 09:17:15 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/feather-beds/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;We may not look at our pleasure to go to heaven in feather beds; it is not the way, for our Lord himself went thither with great pain, and by many tribulations, which was the path wherein he walked thither.&amp;rdquo; — Thomas More, recorded in William Roper&amp;rsquo;s &lt;em&gt;The Life of Sir Thomas More&lt;/em&gt; (1556). Often shortened to &amp;ldquo;We cannot go to heaven in featherbeds.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Foolish Prices</title><link>https://1697-20747.github.io/blog/unhelpful-advice/foolish-prices/</link><pubDate>Sat, 12 Sep 2026 09:17:15 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/foolish-prices/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;It&amp;rsquo;s crucial to understand that stocks often trade at truly foolish prices, both high and low. &amp;lsquo;Efficient&amp;rsquo; markets exist only in textbooks.&amp;rdquo; — Warren Buffett, Berkshire Hathaway 2022 Shareholder Letter.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Mercy To The Guilty</title><link>https://1697-20747.github.io/blog/unhelpful-advice/mercy-to-the-guilty/</link><pubDate>Sat, 12 Sep 2026 09:17:15 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/mercy-to-the-guilty/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Mercy to the guilty is cruelty to the innocent.&amp;rdquo; — Adam Smith, &lt;em&gt;The Theory of Moral Sentiments&lt;/em&gt;, Part II, Section II, Chapter III.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Nail That Sticks Out</title><link>https://1697-20747.github.io/blog/unhelpful-advice/nail-that-sticks-out/</link><pubDate>Sat, 12 Sep 2026 09:17:15 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/nail-that-sticks-out/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;The nail that sticks up gets hammered down.&amp;rdquo; (出る杭は打たれる) — Japanese proverb. Sometimes rendered &amp;ldquo;the stake that sticks out gets hammered down&amp;rdquo; — same idea either way.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Nothing Like Looking</title><link>https://1697-20747.github.io/blog/unhelpful-advice/nothing-like-looking/</link><pubDate>Sat, 12 Sep 2026 09:17:15 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/nothing-like-looking/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;There is nothing like looking, if you want to find something. You certainly usually find something, if you look, but it is not always quite the something you were after.&amp;rdquo; — Thorin Oakenshield, in J.R.R. Tolkien&amp;rsquo;s &lt;em&gt;The Hobbit&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Prepare To Lose</title><link>https://1697-20747.github.io/blog/unhelpful-advice/prepare-to-lose/</link><pubDate>Sat, 12 Sep 2026 09:17:15 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/prepare-to-lose/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;Want to be a winner? Prepare to lose 10,000 times. Probably in a row. Welcome to jiu jitsu.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Ship Of Theseus</title><link>https://1697-20747.github.io/blog/unhelpful-advice/ship-of-theseus/</link><pubDate>Sat, 12 Sep 2026 09:17:15 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/ship-of-theseus/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;The ship wherein Theseus and the youth of Athens returned from Crete had thirty oars, and was preserved by the Athenians down even to the time of Demetrius Phalereus, for they took away the old planks as they decayed, putting in new and stronger timber in their places, insomuch that this ship became a standing example among the philosophers, for the logical question of things that grow; one side holding that the ship remained the same, and the other contending that it was not the same.&amp;rdquo; — Plutarch, &lt;em&gt;Life of Theseus&lt;/em&gt; (trans. John Dryden).&lt;/p&gt;</description></item><item><title>Win To Lose</title><link>https://1697-20747.github.io/blog/unhelpful-advice/win-to-lose/</link><pubDate>Mon, 06 Jul 2026 06:40:16 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/win-to-lose/</guid><description>one right does make at least one wrong</description></item><item><title>Carry The Stone Alone</title><link>https://1697-20747.github.io/blog/unhelpful-advice/carry-the-stone-alone/</link><pubDate>Sat, 13 Jun 2026 18:42:57 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/carry-the-stone-alone/</guid><description>Die on the hill alone or play the team sport</description></item><item><title>Its Lonely At The Bottom</title><link>https://1697-20747.github.io/blog/unhelpful-advice/its-lonely-at-the-bottom/</link><pubDate>Sat, 09 May 2026 07:51:37 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/its-lonely-at-the-bottom/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;Never be wrong on your own&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;John Maynard Keynes&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Except of course that he probably never said it, or if he did it was not recorded as a direct quote. What he did say was below. The motto of Bankers everywhere. We should not be churlish about this, its good advice. In theory the odds of a colossal mistake should diminish with the more eyes looking at the problem. Eventually someone who knows what they are doing should figure out the problem. The challenge here is group think, where the bias rules the day.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hokusai On Mastery</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/hokusai-on-mastery/</link>
-      <pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/hokusai-on-mastery/</guid>
-      <description>&lt;blockquote&gt;
+&lt;p&gt;Except of course that he probably never said it, or if he did it was not recorded as a direct quote. What he did say was below. The motto of Bankers everywhere. We should not be churlish about this, its good advice. In theory the odds of a colossal mistake should diminish with the more eyes looking at the problem. Eventually someone who knows what they are doing should figure out the problem. The challenge here is group think, where the bias rules the day.&lt;/p&gt;</description></item><item><title>Hokusai On Mastery</title><link>https://1697-20747.github.io/blog/unhelpful-advice/hokusai-on-mastery/</link><pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/hokusai-on-mastery/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;From the age of six I had a mania for drawing the forms of things. By the time I was fifty I had published a universe of designs, but all that I have produced before the age of seventy is not worth taking into account.&lt;/p&gt;
 &lt;p&gt;At seventy-three I partially understood the structure of birds, animals, insects, and fishes, and the life of grasses and plants.&lt;/p&gt;
-&lt;p&gt;Therefore, at eighty-six I shall have progressed further; at ninety I shall penetrate even further their secret meaning, and at one hundred I may perhaps truly have reached the level of the marvelous and divine.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Equality</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/equality/</link>
-      <pubDate>Wed, 06 May 2026 19:20:14 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/equality/</guid>
-      <description>&lt;blockquote&gt;
+&lt;p&gt;Therefore, at eighty-six I shall have progressed further; at ninety I shall penetrate even further their secret meaning, and at one hundred I may perhaps truly have reached the level of the marvelous and divine.&lt;/p&gt;</description></item><item><title>Equality</title><link>https://1697-20747.github.io/blog/unhelpful-advice/equality/</link><pubDate>Wed, 06 May 2026 19:20:14 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/equality/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;“A society that puts equality…ahead of freedom will end up with neither equality nor freedom…a society that puts freedom first will, as a happy by product, end up with both greater freedom and greater equality.” - Milton Friedman&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>To Fade</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/to-fade/</link>
-      <pubDate>Tue, 05 May 2026 20:41:50 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/to-fade/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>To Fade</title><link>https://1697-20747.github.io/blog/unhelpful-advice/to-fade/</link><pubDate>Tue, 05 May 2026 20:41:50 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/to-fade/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;露と落ち&lt;br&gt;露と消えにし&lt;br&gt;我身かな&lt;br&gt;難波のことも&lt;br&gt;夢のまた夢&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;Appearing like dew,&lt;br&gt; Vanishing like dew&lt;br&gt;Such is my life.&lt;br&gt; All of Naniwa&lt;br&gt; Is a dream within a dream.&amp;rdquo; - Toyotomi Hideyoshi, the 16th-century Japanese samurai&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Its Not Research</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/its-not-research/</link>
-      <pubDate>Tue, 05 May 2026 20:15:24 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/its-not-research/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Its Not Research</title><link>https://1697-20747.github.io/blog/unhelpful-advice/its-not-research/</link><pubDate>Tue, 05 May 2026 20:15:24 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/its-not-research/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;If we knew what it was we were doing, it would not be called research, would it?&amp;rdquo; - Albert Einstein. Except it wasn&amp;rsquo;t. Neither are a lot more attributed to him. But it is pith life advice in a way.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>No Great Mystery</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/no-great-mystery/</link>
-      <pubDate>Mon, 04 May 2026 21:20:41 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/no-great-mystery/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;“There is no great mystery behind why some nations are wealthy and others are not. The policy mix varies very little and is well understood. Countries with lower, neutral tax systems, minimal regulations, the rule of law and openness to international trade and foreign investment are wealthier than countries with higher taxes, more complicated regulations, and which are closed off to the world. Economies are the sum of the countless decisions made by people on what to buy or sell, where to invest, or where to work.”&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hard Power</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/hard-power/</link>
-      <pubDate>Sun, 12 Apr 2026 12:22:15 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/hard-power/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>No Great Mystery</title><link>https://1697-20747.github.io/blog/unhelpful-advice/no-great-mystery/</link><pubDate>Mon, 04 May 2026 21:20:41 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/no-great-mystery/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;“There is no great mystery behind why some nations are wealthy and others are not. The policy mix varies very little and is well understood. Countries with lower, neutral tax systems, minimal regulations, the rule of law and openness to international trade and foreign investment are wealthier than countries with higher taxes, more complicated regulations, and which are closed off to the world. Economies are the sum of the countless decisions made by people on what to buy or sell, where to invest, or where to work.”&lt;/p&gt;</description></item><item><title>Hard Power</title><link>https://1697-20747.github.io/blog/unhelpful-advice/hard-power/</link><pubDate>Sun, 12 Apr 2026 12:22:15 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/hard-power/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;“Before you step out of that circle give me a reply to lay before the senate” - Gaius Popillius Laenas, Consul of Rome&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Roman consul, Gaius Popillius Laenas drew the veritable line in the sand. That line being a circle. It was circa 168 BCE, and Antiochus IV Epiphanes was advancing on Alexandria, threatening to conquer Egypt. Rome was not impressed. One single man, with a small retinue, standing in front of an entire army, delivered quite the message. Antiochus IV pondered, and caved to the credible threat of Rome. He placed in his hand the Roman decree, or senatus-consultum ordering him to put an end at once to the war with Ptolemy, before stating the ultimatum as above. Source: Polybius, Greek historian. He was a contemporary of the time.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Power Absolute</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/power-absolute/</link>
-      <pubDate>Sun, 12 Apr 2026 12:02:21 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/power-absolute/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;I cannot accept your canon that we are to judge Pope and King unlike other men, with a favourable presumption that they did no wrong. If there is any presumption it is the other way against holders of power, increasing as the power increases. Historic responsibility has to make up for the want of legal responsibility. Power tends to corrupt and absolute power corrupts absolutely. Great men are almost always bad men, even when they exercise influence and not authority: still more when you superadd the tendency or the certainty of corruption by authority. There is no worse heresy than that the office sanctifies the holder of it. That is the point at which the negation of Catholicism and the negation of Liberalism meet and keep high festival, and the end learns to justify the means. You would hang a man of no position, like Ravaillac; but if what one hears is true, then Elizabeth asked the gaoler to murder Mary, and William III ordered his Scots minister to extirpate a clan. Here are the greater names coupled with the greater crimes. You would spare these criminals, for some mysterious reason. I would hang them, higher than Haman, for reasons of quite obvious justice; still more, still higher, for the sake of historical science.&amp;rdquo; - John Emerich Edward Dalberg, aka Lord Acton.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Self Wareness</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/self-wareness/</link>
-      <pubDate>Sun, 12 Apr 2026 10:37:22 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/self-wareness/</guid>
-      <description>&lt;blockquote&gt;
+&lt;p&gt;Roman consul, Gaius Popillius Laenas drew the veritable line in the sand. That line being a circle. It was circa 168 BCE, and Antiochus IV Epiphanes was advancing on Alexandria, threatening to conquer Egypt. Rome was not impressed. One single man, with a small retinue, standing in front of an entire army, delivered quite the message. Antiochus IV pondered, and caved to the credible threat of Rome. He placed in his hand the Roman decree, or senatus-consultum ordering him to put an end at once to the war with Ptolemy, before stating the ultimatum as above. Source: Polybius, Greek historian. He was a contemporary of the time.&lt;/p&gt;</description></item><item><title>Power Absolute</title><link>https://1697-20747.github.io/blog/unhelpful-advice/power-absolute/</link><pubDate>Sun, 12 Apr 2026 12:02:21 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/power-absolute/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;I cannot accept your canon that we are to judge Pope and King unlike other men, with a favourable presumption that they did no wrong. If there is any presumption it is the other way against holders of power, increasing as the power increases. Historic responsibility has to make up for the want of legal responsibility. Power tends to corrupt and absolute power corrupts absolutely. Great men are almost always bad men, even when they exercise influence and not authority: still more when you superadd the tendency or the certainty of corruption by authority. There is no worse heresy than that the office sanctifies the holder of it. That is the point at which the negation of Catholicism and the negation of Liberalism meet and keep high festival, and the end learns to justify the means. You would hang a man of no position, like Ravaillac; but if what one hears is true, then Elizabeth asked the gaoler to murder Mary, and William III ordered his Scots minister to extirpate a clan. Here are the greater names coupled with the greater crimes. You would spare these criminals, for some mysterious reason. I would hang them, higher than Haman, for reasons of quite obvious justice; still more, still higher, for the sake of historical science.&amp;rdquo; - John Emerich Edward Dalberg, aka Lord Acton.&lt;/p&gt;</description></item><item><title>Self Wareness</title><link>https://1697-20747.github.io/blog/unhelpful-advice/self-wareness/</link><pubDate>Sun, 12 Apr 2026 10:37:22 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/self-wareness/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;Bond, this may be too much for a blunt instrument to understand but arrogance and self awareness seldom go hand in hand.&amp;rdquo; - M to Bond. Casino Royale (2006). 24 m mark. The one with Daniel Craig as the new Bond in the gritty black and white opening scenes.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Agents Of Chaos</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/agents-of-chaos/</link>
-      <pubDate>Mon, 06 Apr 2026 10:24:12 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/agents-of-chaos/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;So I think the industry just has to reconfigure in so many ways that its like the customer is not the human any more.  Its like gents who are acting on behalf of humans, and this industry refactoring may be substantial.&amp;rdquo; Andrej Karpathy. Source: &lt;a href=&#34;https://youtu.be/kwSVtQ7dziU?si=TfZ3UdUDkt3J_8C&#34;&gt;https://youtu.be/kwSVtQ7dziU?si=TfZ3UdUDkt3J_8C&lt;/a&gt;_ Timestamp: 14m12s&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Canonical Failure</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/canonical-failure/</link>
-      <pubDate>Mon, 06 Apr 2026 10:10:35 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/canonical-failure/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;“…&amp;hellip;.if that process goes wrong - if the implementation of a burst of investment opportunities in some sectors is not matched by a holding back of investment in other sectors and by restraint in current consumption by households and the government - too much spending will be brought forward from the future. Future spending will be insufficient to rake up all the output of the newly installed capital when the investment boom has subsided. &amp;quot; - Bernard Connolly. Source: Authors: Bernard Connolly Year Published: 2023 Country of Publication: United Kingdom Format: Hardback ISBN: 9781911397410 Number of Pages: 528 Publication Date: 07/09/2023. Page 20.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Final Sin</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/final-sin/</link>
-      <pubDate>Mon, 06 Apr 2026 10:07:17 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/final-sin/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Agents Of Chaos</title><link>https://1697-20747.github.io/blog/unhelpful-advice/agents-of-chaos/</link><pubDate>Mon, 06 Apr 2026 10:24:12 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/agents-of-chaos/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;So I think the industry just has to reconfigure in so many ways that its like the customer is not the human any more. Its like gents who are acting on behalf of humans, and this industry refactoring may be substantial.&amp;rdquo; Andrej Karpathy. Source: &lt;a href="https://youtu.be/kwSVtQ7dziU?si=TfZ3UdUDkt3J_8C"&gt;https://youtu.be/kwSVtQ7dziU?si=TfZ3UdUDkt3J_8C&lt;/a&gt;_ Timestamp: 14m12s&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Canonical Failure</title><link>https://1697-20747.github.io/blog/unhelpful-advice/canonical-failure/</link><pubDate>Mon, 06 Apr 2026 10:10:35 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/canonical-failure/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;“…&amp;hellip;.if that process goes wrong - if the implementation of a burst of investment opportunities in some sectors is not matched by a holding back of investment in other sectors and by restraint in current consumption by households and the government - too much spending will be brought forward from the future. Future spending will be insufficient to rake up all the output of the newly installed capital when the investment boom has subsided. &amp;quot; - Bernard Connolly. Source: Authors: Bernard Connolly Year Published: 2023 Country of Publication: United Kingdom Format: Hardback ISBN: 9781911397410 Number of Pages: 528 Publication Date: 07/09/2023. Page 20.&lt;/p&gt;</description></item><item><title>Final Sin</title><link>https://1697-20747.github.io/blog/unhelpful-advice/final-sin/</link><pubDate>Mon, 06 Apr 2026 10:07:17 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/final-sin/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;In a world of thieves, the only final sin is stupidity.&amp;rdquo; Chris B&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Its A Game</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/its-a-game/</link>
-      <pubDate>Sat, 04 Apr 2026 12:10:09 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/its-a-game/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;You are not in a fight at all really. The only person you are fighting is yourself, not your opponent. It isn’t even a fight, it’s a game. The game is positional advantage. Incrementally improve your with every movement or engagement, and never give it up. Then you will have your opponent controlled and in position to apply a submission.&amp;rdquo; - Gabriel Rainho, renown Jiu Jitsu coach and competitor, comment made to me Nov 2025, post grading. Check him out for more tips, words of wisdom and some amazing submission! &lt;a href=&#34;https://www.instagram.com/gabrielrainhobjj/&#34;&gt;Gabriel Rainho Instagram&lt;/a&gt;. For some more wise words, and a nasty sub: &lt;a href=&#34;https://www.instagram.com/p/DWqQHJZCMaU/&#34;&gt;https://www.instagram.com/p/DWqQHJZCMaU/&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Life Is Tough</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/life-is-tough/</link>
-      <pubDate>Sat, 04 Apr 2026 10:46:35 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/life-is-tough/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Its A Game</title><link>https://1697-20747.github.io/blog/unhelpful-advice/its-a-game/</link><pubDate>Sat, 04 Apr 2026 12:10:09 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/its-a-game/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;You are not in a fight at all really. The only person you are fighting is yourself, not your opponent. It isn’t even a fight, it’s a game. The game is positional advantage. Incrementally improve your with every movement or engagement, and never give it up. Then you will have your opponent controlled and in position to apply a submission.&amp;rdquo; - Gabriel Rainho, renown Jiu Jitsu coach and competitor, comment made to me Nov 2025, post grading. Check him out for more tips, words of wisdom and some amazing submission! &lt;a href="https://www.instagram.com/gabrielrainhobjj/"&gt;Gabriel Rainho Instagram&lt;/a&gt;. For some more wise words, and a nasty sub: &lt;a href="https://www.instagram.com/p/DWqQHJZCMaU/"&gt;https://www.instagram.com/p/DWqQHJZCMaU/&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Life Is Tough</title><link>https://1697-20747.github.io/blog/unhelpful-advice/life-is-tough/</link><pubDate>Sat, 04 Apr 2026 10:46:35 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/life-is-tough/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;Such is life and life is such and after all it isn&amp;rsquo;t much. First a cradle. Then a hearse. It might have been better, but it could have been worse.&amp;rdquo; Norman Wisdom, UK comic.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Ppppppp</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/ppppppp/</link>
-      <pubDate>Sat, 04 Apr 2026 10:39:37 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/ppppppp/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;“It&amp;rsquo;s certainly not a war for which they prepared. I think it illustrates one of the important themes of my work with Stephen Broadberry, which is that the people who go into war often underestimate the range of options open to the adversary. You know, they think they&amp;rsquo;re going to win a crushing victory in a few weeks, but they don&amp;rsquo;t take into account that the incentive for the adversary is always to think outside the box, and that&amp;rsquo;s what Iranian leaders have done.” Source: From The Economics Show: Economic warfare: lessons from history, with Mark Harrison, 2 Apr 2026 &lt;a href=&#34;https://podcasts.apple.com/ca/podcast/the-economics-show/id1746352576?i=1000758774803&amp;amp;r=295&#34;&gt;https://podcasts.apple.com/ca/podcast/the-economics-show/id1746352576?i=1000758774803&amp;amp;r=295&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Lemons</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/lemons/</link>
-      <pubDate>Sat, 04 Apr 2026 10:36:43 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/lemons/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;“If you then learn there is a lemon – it’s called a failure – you lose confidence in the whole system, because you say, ‘There are more lemons in there than I thought, more weak companies in there than I thought, and I don’t know where they are’,” Bailey said, referring to the loss of confidence in the lead-up to the 2008 crisis - Andrew Baily BoE Governor. Source: &lt;a href=&#34;https://www.reuters.com/sustainability/boards-policy-regulation/boes-bailey-invokes-2008-lessons-amid-private-credit-scrutiny-2026-04-01/#:~:text=Summary,Sign%20up%20here&#34;&gt;https://www.reuters.com/sustainability/boards-policy-regulation/boes-bailey-invokes-2008-lessons-amid-private-credit-scrutiny-2026-04-01/#:~:text=Summary,Sign%20up%20here&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>To Fail Is To Fail</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/to-fail-is-to-fail/</link>
-      <pubDate>Sat, 04 Apr 2026 10:24:55 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/to-fail-is-to-fail/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Ppppppp</title><link>https://1697-20747.github.io/blog/unhelpful-advice/ppppppp/</link><pubDate>Sat, 04 Apr 2026 10:39:37 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/ppppppp/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;“It&amp;rsquo;s certainly not a war for which they prepared. I think it illustrates one of the important themes of my work with Stephen Broadberry, which is that the people who go into war often underestimate the range of options open to the adversary. You know, they think they&amp;rsquo;re going to win a crushing victory in a few weeks, but they don&amp;rsquo;t take into account that the incentive for the adversary is always to think outside the box, and that&amp;rsquo;s what Iranian leaders have done.” Source: From The Economics Show: Economic warfare: lessons from history, with Mark Harrison, 2 Apr 2026 &lt;a href="https://podcasts.apple.com/ca/podcast/the-economics-show/id1746352576?i=1000758774803&amp;amp;r=295"&gt;https://podcasts.apple.com/ca/podcast/the-economics-show/id1746352576?i=1000758774803&amp;amp;r=295&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Lemons</title><link>https://1697-20747.github.io/blog/unhelpful-advice/lemons/</link><pubDate>Sat, 04 Apr 2026 10:36:43 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/lemons/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;“If you then learn there is a lemon – it’s called a failure – you lose confidence in the whole system, because you say, ‘There are more lemons in there than I thought, more weak companies in there than I thought, and I don’t know where they are’,” Bailey said, referring to the loss of confidence in the lead-up to the 2008 crisis - Andrew Baily BoE Governor. Source: &lt;a href="https://www.reuters.com/sustainability/boards-policy-regulation/boes-bailey-invokes-2008-lessons-amid-private-credit-scrutiny-2026-04-01/#:~:text=Summary,Sign%20up%20here"&gt;https://www.reuters.com/sustainability/boards-policy-regulation/boes-bailey-invokes-2008-lessons-amid-private-credit-scrutiny-2026-04-01/#:~:text=Summary,Sign%20up%20here&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>To Fail Is To Fail</title><link>https://1697-20747.github.io/blog/unhelpful-advice/to-fail-is-to-fail/</link><pubDate>Sat, 04 Apr 2026 10:24:55 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/to-fail-is-to-fail/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;Ist der Ruf erst ruiniert, lebt es sich ganz ungeniert.&amp;rdquo;. Or roughly &amp;ldquo;Once (you have f@@@ed up soooo badly that) your reputation is ruined, you can live without any inhibitions.&amp;rdquo; - You know who you are, thanks for the great quote! Probably need to get this as tattoo somewhere.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Careful What You Measure Ptii</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/careful-what-you-measure-ptii/</link>
-      <pubDate>Fri, 03 Apr 2026 09:45:34 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/careful-what-you-measure-ptii/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;When a measure becomes a target, it ceases to be a good measure.” - Charles Goodhurst. Goodhart, C.A.E. (1984). Problems of Monetary Management: The UK Experience. In: Monetary Theory and Practice. Palgrave, London. &lt;a href=&#34;https://doi.org/10.1007/978-1-349-17295-5_4&#34;&gt;https://doi.org/10.1007/978-1-349-17295-5_4&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Careful What You Measure</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/careful-what-you-measure/</link>
-      <pubDate>Wed, 01 Apr 2026 16:57:44 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/careful-what-you-measure/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Careful What You Measure Ptii</title><link>https://1697-20747.github.io/blog/unhelpful-advice/careful-what-you-measure-ptii/</link><pubDate>Fri, 03 Apr 2026 09:45:34 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/careful-what-you-measure-ptii/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;When a measure becomes a target, it ceases to be a good measure.” - Charles Goodhurst. Goodhart, C.A.E. (1984). Problems of Monetary Management: The UK Experience. In: Monetary Theory and Practice. Palgrave, London. &lt;a href="https://doi.org/10.1007/978-1-349-17295-5_4"&gt;https://doi.org/10.1007/978-1-349-17295-5_4&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Careful What You Measure</title><link>https://1697-20747.github.io/blog/unhelpful-advice/careful-what-you-measure/</link><pubDate>Wed, 01 Apr 2026 16:57:44 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/careful-what-you-measure/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;The more any quantitative social indicator is used for social decision-making, the more subject it will be to corruption pressures and the more apt it will be to distort and corrupt the social processes it is intended to monitor&amp;rdquo; - Source: Campbell&amp;rsquo;s Law (American social scientist Donald T Campbell), circa 9171. Just switch social science for government or corporate policy and you will have the gist of it.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Its A You Problem</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/its-a-you-problem/</link>
-      <pubDate>Sun, 29 Mar 2026 11:16:09 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/its-a-you-problem/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Its A You Problem</title><link>https://1697-20747.github.io/blog/unhelpful-advice/its-a-you-problem/</link><pubDate>Sun, 29 Mar 2026 11:16:09 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/its-a-you-problem/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;In the British Army, there are no good battalions and no bad battalions, no good regiments and no bad regiments. There are only good and bad officers.&amp;rdquo; - General Slim. Defeat into Victory is an account of the retaking of Burma by Allied forces during the Second World War by the British Field Marshal William Slim.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;This is the same as the Napoleon quote of &amp;ldquo;No poor soldiers, only poor officers&amp;rdquo;, which is the same concept of only poor workers blame their tools. The wider extrapolation here is that if it goes wrong, you have to own it. It is, quite literally, a &amp;lsquo;you&amp;rsquo; problem. Even if the staff are incompetent, it can only be so because you tolerated incompetence or you hired the incompetent.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Approxmimately Right</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/approxmimately-right/</link>
-      <pubDate>Fri, 27 Mar 2026 16:59:03 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/approxmimately-right/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;It&amp;rsquo;s better to be approximately right than precisely wrong.&amp;rdquo; - Warren Buffet. Keynes? Many people over time. Warren made it stick though. Original source is 1898 book by Carveth Read, a British author in philosophy and logic, Logic: Deductive and Inductive (1898 – first edition). In chapter 22 the author writes: “It is better to be vaguely right than exactly wrong” (Read, 1898, p. 351). It&amp;rsquo;s there, I checked. I can also spell (mostly), the title is to make the point. &lt;a href=&#34;https://www.gutenberg.org/files/18440/18440-h/18440-h.htm&#34;&gt;https://www.gutenberg.org/files/18440/18440-h/18440-h.htm&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The Cold Never Lasts</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/the-cold-never-lasts/</link>
-      <pubDate>Fri, 27 Mar 2026 16:48:30 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/the-cold-never-lasts/</guid>
-      <description>&lt;blockquote&gt;
+&lt;p&gt;This is the same as the Napoleon quote of &amp;ldquo;No poor soldiers, only poor officers&amp;rdquo;, which is the same concept of only poor workers blame their tools. The wider extrapolation here is that if it goes wrong, you have to own it. It is, quite literally, a &amp;lsquo;you&amp;rsquo; problem. Even if the staff are incompetent, it can only be so because you tolerated incompetence or you hired the incompetent.&lt;/p&gt;</description></item><item><title>Approxmimately Right</title><link>https://1697-20747.github.io/blog/unhelpful-advice/approxmimately-right/</link><pubDate>Fri, 27 Mar 2026 16:59:03 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/approxmimately-right/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;It&amp;rsquo;s better to be approximately right than precisely wrong.&amp;rdquo; - Warren Buffet. Keynes? Many people over time. Warren made it stick though. Original source is 1898 book by Carveth Read, a British author in philosophy and logic, Logic: Deductive and Inductive (1898 – first edition). In chapter 22 the author writes: “It is better to be vaguely right than exactly wrong” (Read, 1898, p. 351). It&amp;rsquo;s there, I checked. I can also spell (mostly), the title is to make the point. &lt;a href="https://www.gutenberg.org/files/18440/18440-h/18440-h.htm"&gt;https://www.gutenberg.org/files/18440/18440-h/18440-h.htm&lt;/a&gt;&lt;/p&gt;</description></item><item><title>The Cold Never Lasts</title><link>https://1697-20747.github.io/blog/unhelpful-advice/the-cold-never-lasts/</link><pubDate>Fri, 27 Mar 2026 16:48:30 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/the-cold-never-lasts/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;The cold never lasts, my darling. It just teaches the heart how to burn&amp;rdquo;. - Raye. Click Clack Symphony from the albumn This Music May Contain Hope. 2026.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Dont Start What You Cant Finish</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/dont-start-what-you-cant-finish/</link>
-      <pubDate>Thu, 26 Mar 2026 07:35:14 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/dont-start-what-you-cant-finish/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;The guerrilla wins if he does not lose. The conventional army loses if he does not win&amp;rdquo;. Henry Kissinger, 1969 Foriegn Affairs. Beware the asymetry of non conventional conflicts. Don&amp;rsquo;t start what you haven&amp;rsquo;t the stomach to see through to the better end. War should be an all or nothing committment. Nothing is a good choice most of the time. But in between may lie intelligent battles to ensure the attrition of the capacity of your enemy.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Not All Relationships Are Positive</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/not-all-relationships-are-positive/</link>
-      <pubDate>Wed, 25 Mar 2026 18:01:03 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/not-all-relationships-are-positive/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Dont Start What You Cant Finish</title><link>https://1697-20747.github.io/blog/unhelpful-advice/dont-start-what-you-cant-finish/</link><pubDate>Thu, 26 Mar 2026 07:35:14 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/dont-start-what-you-cant-finish/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;The guerrilla wins if he does not lose. The conventional army loses if he does not win&amp;rdquo;. Henry Kissinger, 1969 Foriegn Affairs. Beware the asymetry of non conventional conflicts. Don&amp;rsquo;t start what you haven&amp;rsquo;t the stomach to see through to the better end. War should be an all or nothing committment. Nothing is a good choice most of the time. But in between may lie intelligent battles to ensure the attrition of the capacity of your enemy.&lt;/p&gt;</description></item><item><title>Not All Relationships Are Positive</title><link>https://1697-20747.github.io/blog/unhelpful-advice/not-all-relationships-are-positive/</link><pubDate>Wed, 25 Mar 2026 18:01:03 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/not-all-relationships-are-positive/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;“high genetic homozygosity,” is probably a bad thing. Consider adjusting your life plans aligned to this.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>The Rise Of The Machine</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/the-rise-of-the-machine/</link>
-      <pubDate>Wed, 25 Mar 2026 17:57:33 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/the-rise-of-the-machine/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;You are only what the system says you are. Beware the rise of the machine. I write this reading an article on a UK born and bred midwife, facing immigration expulsion from Canada on grounds of a technical problem with the confirmation of her English language test. Yes, this is insane. Doubly so for forcing her to take the test in the first place. When no sane person within the system argues against blindly following &amp;ldquo;the rules&amp;rdquo;, we are all doomed. &amp;ldquo;We are sorry you are dissatisfied with our service today, the system says you are scheduled for Euthanasia. Your complaint is now set to &amp;lsquo;resolved&amp;rsquo;. Please enjoy your day.&amp;rdquo;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cult Of Personality</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/cult-of-personality/</link>
-      <pubDate>Wed, 25 Mar 2026 17:55:01 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/cult-of-personality/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>The Rise Of The Machine</title><link>https://1697-20747.github.io/blog/unhelpful-advice/the-rise-of-the-machine/</link><pubDate>Wed, 25 Mar 2026 17:57:33 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/the-rise-of-the-machine/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;You are only what the system says you are. Beware the rise of the machine. I write this reading an article on a UK born and bred midwife, facing immigration expulsion from Canada on grounds of a technical problem with the confirmation of her English language test. Yes, this is insane. Doubly so for forcing her to take the test in the first place. When no sane person within the system argues against blindly following &amp;ldquo;the rules&amp;rdquo;, we are all doomed. &amp;ldquo;We are sorry you are dissatisfied with our service today, the system says you are scheduled for Euthanasia. Your complaint is now set to &amp;lsquo;resolved&amp;rsquo;. Please enjoy your day.&amp;rdquo;&lt;/p&gt;</description></item><item><title>Cult Of Personality</title><link>https://1697-20747.github.io/blog/unhelpful-advice/cult-of-personality/</link><pubDate>Wed, 25 Mar 2026 17:55:01 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/cult-of-personality/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;Neon lights, a Nobel prize
 When a mirror speaks, the reflection lies
 You won&amp;rsquo;t have to follow me
@@ -273,196 +129,46 @@ Oh, I&amp;rsquo;m the cult of personality&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Source: Cult of Personality, Living Colour. 2026, we live in the era of the cult.&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>Never Trust A Spreadsheet</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/never-trust-a-spreadsheet/</link>
-      <pubDate>Sun, 22 Mar 2026 20:10:32 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/never-trust-a-spreadsheet/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/ul&gt;</description></item><item><title>Never Trust A Spreadsheet</title><link>https://1697-20747.github.io/blog/unhelpful-advice/never-trust-a-spreadsheet/</link><pubDate>Sun, 22 Mar 2026 20:10:32 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/never-trust-a-spreadsheet/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;The only function of economic forecasting is to make astrology look respectable. - John Kenneth Galbraith. Thanks for the tip Roger Bootle.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Bowie On Work</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/bowie-on-work/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/bowie-on-work/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;Games are a series of interesting choices. Never play to the gallery, but you never learn that until much later on. Never work for other people. Always remember that the reason you initially started working was that there was something inside yourself that you felt that if you could manifest it in some way, you would understand more about yourself and how you coexist with the rest of society. It is terribly dangerous for an artist to fulfil other people&amp;rsquo;s expectations. They generally produce their worst work when they do that. — David Bowie&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Constrained Distribution</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/constrained-distribution/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/constrained-distribution/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Bowie On Work</title><link>https://1697-20747.github.io/blog/unhelpful-advice/bowie-on-work/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/bowie-on-work/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;Games are a series of interesting choices. Never play to the gallery, but you never learn that until much later on. Never work for other people. Always remember that the reason you initially started working was that there was something inside yourself that you felt that if you could manifest it in some way, you would understand more about yourself and how you coexist with the rest of society. It is terribly dangerous for an artist to fulfil other people&amp;rsquo;s expectations. They generally produce their worst work when they do that. — David Bowie&lt;/p&gt;</description></item><item><title>Constrained Distribution</title><link>https://1697-20747.github.io/blog/unhelpful-advice/constrained-distribution/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/constrained-distribution/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;You need a constrained distribution before you can manage risk. You can manage risk if you work at a casino. The rest of us are simply risk takers, trying to game fragility.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Curiosity Credit</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/curiosity-credit/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/curiosity-credit/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Curiosity Credit</title><link>https://1697-20747.github.io/blog/unhelpful-advice/curiosity-credit/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/curiosity-credit/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;Curiosity may have killed the cat, but it has saved the skin of many a credit analyst.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Define The Problem</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/define-the-problem/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/define-the-problem/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Define The Problem</title><link>https://1697-20747.github.io/blog/unhelpful-advice/define-the-problem/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/define-the-problem/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;To solve your perception of a stated problem you must define the actual problem statement. You should expect this task to be difficult.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Duration Folly</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/duration-folly/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/duration-folly/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Duration Folly</title><link>https://1697-20747.github.io/blog/unhelpful-advice/duration-folly/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/duration-folly/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;I am increasingly uncomfortable with what I am paying on long term yields for my debt. &amp;lsquo;I know, I&amp;rsquo;ll shorten the duration to save money, then spend the difference! Problem solved.&amp;rsquo; Said nobody whose brain was bigger than a peanut. Given how often this game has been played.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Duty</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/duty/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/duty/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Duty</title><link>https://1697-20747.github.io/blog/unhelpful-advice/duty/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/duty/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;Duty. A cloak that covers many sins and secret inclinations.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Geniuses In Command</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/geniuses-in-command/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/geniuses-in-command/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Geniuses In Command</title><link>https://1697-20747.github.io/blog/unhelpful-advice/geniuses-in-command/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/geniuses-in-command/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;We are all just doing what the geniuses in command tell us. — Harry Bosch.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Goats And Sticks</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/goats-and-sticks/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/goats-and-sticks/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Goats And Sticks</title><link>https://1697-20747.github.io/blog/unhelpful-advice/goats-and-sticks/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/goats-and-sticks/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;You heard goats with a stick, you do not lead men with one.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Hindsight</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/hindsight/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/hindsight/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Hindsight</title><link>https://1697-20747.github.io/blog/unhelpful-advice/hindsight/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/hindsight/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;Hindsight. Fuel for hubris, or humility. You choose. Thereafter the consequences will choose for you.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Josephus On Drills</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/josephus-on-drills/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/josephus-on-drills/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Josephus On Drills</title><link>https://1697-20747.github.io/blog/unhelpful-advice/josephus-on-drills/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/josephus-on-drills/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;Their drills are bloodless battles, and their battles bloody drills.&amp;rdquo; — Josephus, The Jewish War, 3.5.1. Their military exercises differ not at all from the real use of their arms, but every soldier is every day exercised, and that with great diligence, as if it were in time of war, which is the reason why they bear the fatigue of battles so easily.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Kafka On Soul</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/kafka-on-soul/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/kafka-on-soul/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Kafka On Soul</title><link>https://1697-20747.github.io/blog/unhelpful-advice/kafka-on-soul/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/kafka-on-soul/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;Don&amp;rsquo;t bend; don&amp;rsquo;t water it down; don&amp;rsquo;t try to make it logical; don&amp;rsquo;t edit your own soul according to the fashion. Rather, follow your most intense obsessions mercilessly.&amp;rdquo; — Franz Kafka&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>La Geografia Manda</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/la-geografia-manda/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/la-geografia-manda/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>La Geografia Manda</title><link>https://1697-20747.github.io/blog/unhelpful-advice/la-geografia-manda/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/la-geografia-manda/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&amp;lsquo;La geografia manda.&amp;rsquo; Spanish proverb: geography rules everything. Best considered with some care before kicking off conflicts on the two way rifle range.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Morale And Material</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/morale-and-material/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/morale-and-material/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Morale And Material</title><link>https://1697-20747.github.io/blog/unhelpful-advice/morale-and-material/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/morale-and-material/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;Morale is to material as ten is to one. Morals are to corporations as one is to ten. A person has the capacity for moral choice. A corporation does not, it is a conscienceless entity by its nature.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Rifle Vs War</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/rifle-vs-war/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/rifle-vs-war/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Rifle Vs War</title><link>https://1697-20747.github.io/blog/unhelpful-advice/rifle-vs-war/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/rifle-vs-war/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;A private suffers harsher punishment for losing his rifle than does a general for losing a war.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Sack Of Shite</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/sack-of-shite/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/sack-of-shite/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Sack Of Shite</title><link>https://1697-20747.github.io/blog/unhelpful-advice/sack-of-shite/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/sack-of-shite/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;One day it is likely your life will turn into a sack of shite. When this happens, reflect back on how you treated others. Hopefully with a clear conscience.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>The Meek</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/the-meek/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/the-meek/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>The Meek</title><link>https://1697-20747.github.io/blog/unhelpful-advice/the-meek/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/the-meek/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;The meek will not inherit the earth, or anything else. Ever. You will get screwed over. The strong and humble can walk the earth with peace in their heart.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Things Must Change</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/things-must-change/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/things-must-change/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Things Must Change</title><link>https://1697-20747.github.io/blog/unhelpful-advice/things-must-change/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/things-must-change/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;If you want things to stay the same, things must change.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>War Is Sweet</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/war-is-sweet/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/war-is-sweet/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>War Is Sweet</title><link>https://1697-20747.github.io/blog/unhelpful-advice/war-is-sweet/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/war-is-sweet/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;War is sweet to the untried. An experienced warrior fears it with all his heart.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>What You Would Not</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/what-you-would-not/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/what-you-would-not/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>What You Would Not</title><link>https://1697-20747.github.io/blog/unhelpful-advice/what-you-would-not/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/what-you-would-not/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;Never send someone else to do what you would not. Note not what you could not do, but what you would not do. We all have mixed skills and experiences. Your credibility rests on the point of courage. No one respects a REMF.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Wrong General</title>
-      <link>http://localhost:1313/blog/unhelpful-advice/wrong-general/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unhelpful-advice/wrong-general/</guid>
-      <description>&lt;blockquote&gt;
+&lt;/blockquote&gt;</description></item><item><title>Wrong General</title><link>https://1697-20747.github.io/blog/unhelpful-advice/wrong-general/</link><pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate><guid>https://1697-20747.github.io/blog/unhelpful-advice/wrong-general/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;No point being a right private in an argument with a wrong general.&amp;rdquo; - Anonymous&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;This is akin to the arguing with an idiot makes you an idiot too, meme.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;p&gt;This is akin to the arguing with an idiot makes you an idiot too, meme.&lt;/p&gt;</description></item></channel></rss>

@@ -3,11 +3,13 @@
 ## BoE yield curve post (interest-rates-are-interesting)
 - Source: https://www.bankofengland.co.uk/statistics/yield-curves → "Monthly government liability curve (nominal): archive data" (glcnominalmonthedata.zip); use "GLC Nominal month end data_2025 to present.xlsx", sheet "4. spot curve".
 - Update: extract new rows (Excel serial date + 80 maturities 0.5–40y) to CSV, then
-  `python3 static/data/economics/boe_spot_curve_animation.py <master.csv> <new_rows.csv> <old player.html> <outdir>`
-  → writes master CSV, GIF, player HTML to outdir.
+  `python3 static/data/economics/boe_spot_curve_animation.py <master.csv> <new_rows.csv> <old player.html> <outdir> static/data/economics/BoE_Bank_Rate_changes.csv`
+  → writes master CSV, GIF, player HTML (frames + dial data) to outdir. Copy outputs to BOTH static/ and public/ (tools/, data/economics/, images/economics/).
+- Dials (added 2026-11-20): Bank Rate / 5yr / 10yr as % of historical high, synced to frames via `const dialData` in the player. Bank Rate CSV parsed from BoE baserate.xls sheet "HISTORICAL SINCE 1694" (https://www.bankofengland.co.uk/-/media/boe/files/monetary-policy/baserate.xls); highs 17.00% Nov 1979, 5yr 15.54% Dec 1981, 10yr 15.93% Dec 1974.
+- Python deps (openpyxl/pandas/matplotlib/pillow) aren't in system python; use a throwaway venv. Both BoE URLs download fine with curl + browser UA.
 - Gotcha: 2025+ workbook has no blank row after the "years:" header; original loader (`boe_yield_curve_analysis.py`, `mat_row + 2`) dropped Jan 2025.
 - 30yr series only starts 2016. GIF is commented out in the post; the iframe player is what renders.
-- Last update: 2026-09-28, data to 2026-08-28.
+- Last update: 2026-11-20, data to 2026-10-30 (Bank Rate 4.00% from 5 Nov 2026 not yet in a frame). Post iframe height 960.
 
 ## LLM Credit series (content/blog/comp-science/)
 - Main LLM Credit series (anchored on llm-credit-paper-generator): not-a-specification (1) → … → audit-the-neighbor-too (10) → no-two-banks-say-it-the-same-way (11, latest, 2026-09-28). Separate operational series: expensive-on-purpose (1, only post; cross-linked via see-also).
